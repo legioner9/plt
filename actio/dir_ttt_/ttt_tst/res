@@ -1,4 +1,5 @@
 [0;32m${g_args[@]}: [0m
+'/home/st/start/communis/Deploy_store/.qa/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/dir_ttt_/ttt_tst/./exec._tst'
 [0;32m$tst_dir = /home/st/REPOBARE/_repo/plt/actio/dir_ttt_/ttt_tst/[0m
 vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/dir_ttt_/ttt_tst//_flow_tst.sh
 vr0_cr_f_={file_path}
