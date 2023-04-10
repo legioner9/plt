@@ -1,0 +1,9 @@
+#? mm_scr_ ${num_flow} ${name_file}
+
+eval wrp2_ cp -v --_xxf ${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.tml/mm_scr_.tml --_xnf ${PPWD}/${name_file}.sh
+
+eval is_est_ ${file_path} -f
+
+eval cr_f_ ${file_path} --vi0 ${file_path} --vr0 {file_path}
+
+eval upg_path_ ${file_path}
