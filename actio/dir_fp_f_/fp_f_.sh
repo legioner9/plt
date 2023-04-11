@@ -65,7 +65,7 @@ fp_f_() {
     fi
     for int in 1 2 3 4; do
         if [ "_extst${int}" == "$1" ]; then
-            extst_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/exec._extst
+            extst_num_file=${FN_DIR}/dir_${FNN}/${FNN}extst/extst_1/ex${int}/exec._extst
             if [ -f ${extst_num_file} ]; then
                 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
                 . ${extst_num_file}
@@ -116,7 +116,7 @@ fp_f_() {
     for int in 1 2 3 4; do
         if [ "_exdeb${int}" == "$1" ]; then
             # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
-            exdeb_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/_flow_tst.sh
+            exdeb_num_file=${FN_DIR}/dir_${FNN}/${FNN}extst/extst_1/ex${int}/_flow_tst.sh
             if [ -f ${exdeb_num_file} ]; then
                 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
                 . ${exdeb_num_file}
@@ -144,8 +144,8 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTLS:
-required
-optional -verbose (not garg parsed, for echo main param function) 
+    required
+    optional -verbose (not garg parsed, for echo main param function) 
 CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
     _exdeb<num> exec ${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
     _extst<num> exec ${FNN}extst/extst_1/ex<num>_tst/exec._extst
@@ -153,8 +153,8 @@ CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else b
 CNTL develop: -_develop1, ... for special development mode, NOT to product
 TAGS: (fs|net|)
 IFS: (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
-FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
-RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+FLOW: (process | subprocess (no read pause only plt_err return \$errno ) | interpritator)
+RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ... )
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
 WARN: 
 DEBUG:
@@ -164,6 +164,9 @@ ${FNN} --_name_fn <name_fn> --_dir_fns <dir_fns> --_flow <num_flow>
     <num_flow>
         1 max like plt fns
         2 mid for fonsh
+ADDS: 
+    . fp_f_extst/extst_1/_gnr_dir_tst.sh 3 -> add ex3
+    . _gnr_dir_sys.sh ${FNN}_1 -> add ${FNN}_1_extst
 ${NORMAL}"
         return 0
     fi
@@ -304,6 +307,35 @@ ${NORMAL}"
     #{hints}
     # -----------------------------------------------------------------------------------------
     # ------------------------------------------
+
+    #? ARGS : name_fn_ dir_fns_flow_
+
+    if typeset -F | grep -w ${name_fn_}; then
+        plt_exit "${name_fn_} not unique"
+        return 1
+    fi
+
+    if [ -d ${dir_fns_} ]; then
+        cd ${dir_fns_}
+    else
+        plt_exit " --_dir_fns not exist dir: ${dir_fns_} "
+        return 1
+    fi
+
+    if ! is_num ${flow_}; then
+        plt_exit "--_flow not a number: ${flow_} "
+        return 1
+    fi
+
+    exl_ --list ${PLT_PATH}/.d/.mul/fo_f_/env/flow_env.exl
+
+    plt_pause "(${name_fn_}) create flow=${flow_} !!! in ($PWD/dir_${name_fn_}/) file (${name_fn_}.sh) dir (_${name_fn_}) ?"
+
+    # exl_ --list "${exl_file}"
+    # echo | . ${sh_file}
+
+    . ${sh_file}
+
     # ------------------------------------------
     # -----------------------------------------------------------------------------------------
     # altlinux_fp_f_() {

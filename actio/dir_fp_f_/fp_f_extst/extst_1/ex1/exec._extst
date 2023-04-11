@@ -4,7 +4,7 @@
 
 filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/exec._extst 
 
-# echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
+echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
 idir=$(pwd)
 
@@ -12,7 +12,8 @@ idir=$(pwd)
 
 dir=$(prs_f -d "$filename")
 cd "$dir" || plt_exit
-. "$dir"/_flow_tst.sh &>/dev/null
+# echo | . "$dir"/_flow_tst.sh &>/dev/null
+. "$dir"/_flow_tst.sh 1>/dev/null
 # . "$dir"/_flow_tst.sh &>res
 
 # cd "$dir"/use/ || qq_exit

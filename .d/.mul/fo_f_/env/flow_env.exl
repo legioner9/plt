@@ -1,11 +1,17 @@
 # eval tml_dir=${PATH_TML_DIR}/f_f_/${flow_}
-# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.tml
+# ${PLT_PATH}/.d/.mul/fo_f_/${flow_}/.tml
+eval tml_dir=${PLT_PATH}/.d/.mul/fo_f_/${flow_}/.tml
 
 # eval insert_dir=${PATH_INSERT_DIR}/f_f_/${flow_}
-# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/insert
+# ${PLT_PATH}/.d/.mul/fo_f_/1/.insert
+eval insert_dir=${PLT_PATH}/.d/.mul/fo_f_/${flow_}/.insert
 
 # eval exl_file=${PATH_EXL_DIR}/f_f_/${flow_}/cr.exl
-# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.exl/fo_f_.exl
+# ${PLT_PATH}/.d/.mul/fo_f_/1/.exl/fo_f_.exl
+eval exl_file=${PLT_PATH}/.d/.mul/fo_f_/${flow_}/.exl/fo_f_.exl
 
 # eval sh_file=${PATH_EXL_DIR}/f_f_/${flow_}/cr.sh
-# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.exl/fo_f_.sh
+# ${PLT_PATH}/.d/.mul/fo_f_/1/.exl/fo_f_.sh
+eval sh_file=${PLT_PATH}/.d/.mul/fo_f_/${flow_}/.exl/fo_f_.sh
+
+# ${PLT_PATH}/.d/.mul/fo_f_/env/flow_env.exl

@@ -38,7 +38,7 @@ plt_exit "$1 empty first arg mast be name dir (like namefn_extst_num) in ${rdir}
 return 1
 }
 #
-plt_pause "do that? create $1 (like namefn_extst_num) cr_tst_sys_ in ${rdir}"
+plt_pause "do that? create sys tst $1_extst dir (like namefn_<num>) cr_tst_sys_ in ${rdir}"
 #
 wrp2_ rm --_cxf ${rdir}/${gname}.tmp.exl
 #
