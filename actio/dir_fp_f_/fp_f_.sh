@@ -4,7 +4,7 @@
 # . "$HOME/.bashrc"
 #!
 
-filename="${PLT_PATH}/actio/dir_mm_scr_/mm_scr_.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 
@@ -12,7 +12,7 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 #up_lib_git
 
-mm_scr_() {
+fp_f_() {
 
     local FNN=${FUNCNAME[0]}
     # local ORIGO_DIR=$PATH_FN/dir_$FNN === ${FN_DIR}
@@ -63,6 +63,19 @@ mm_scr_() {
             return 1
         fi
     fi
+    for int in 1 2 3 4; do
+        if [ "_extst${int}" == "$1" ]; then
+            extst_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/exec._extst
+            if [ -f ${extst_num_file} ]; then
+                [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
+                . ${extst_num_file}
+                return 0
+            else
+                plt_exit "not exist file ${extst_num_file}"
+                return 1
+            fi
+        fi
+    done
     if [ "_extst" == "$1" ]; then
         local extst_file="${FN_DIR}/dir_$FNN/$FNN"extst/extst_1/start_exec.tst
         if [ -f ${tst_file} ]; then
@@ -100,7 +113,6 @@ mm_scr_() {
         . ${FN_CONT_DIR}/_default/default_deb.sh
         return 0
     fi
-
     for int in 1 2 3 4; do
         if [ "_exdeb${int}" == "$1" ]; then
             # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
@@ -115,21 +127,6 @@ mm_scr_() {
             fi
         fi
     done
-
-    for int in 1 2 3 4; do
-        if [ "_extst${int}" == "$1" ]; then
-            extst_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/exec._extst
-            if [ -f ${extst_num_file} ]; then
-                [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
-                . ${extst_num_file}
-                return 0
-            else
-                plt_exit "not exist file ${extst_num_file}"
-                return 1
-            fi
-        fi
-    done
-
     if [ "_mdeb" == "$1" ]; then
         [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
         ${FNN}mdeb
@@ -138,19 +135,20 @@ mm_scr_() {
     #{cntl_default}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: menu cr .sh like cr_sh_
+MAIN: gnr fs for functin.sh
 NAME: ${FNN}()
-WHERE?:(only in root dir)Y
+WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | 
 any stile path - if arg no rout full_path be pwd/$name , if name root name instead)
 ARGS: 
-\$1 <num_flow>
-    1 - min tml with {body_sh}
-\$2 <name_file> (without .ext)
+\$1
+[ ,\$2 num_menu ]
 CNTLS:
 required
 optional -verbose (not garg parsed, for echo main param function) 
 CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
+    _exdeb<num> exec ${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
+    _extst<num> exec ${FNN}extst/extst_1/ex<num>_tst/exec._extst
 CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ...
 CNTL develop: -_develop1, ... for special development mode, NOT to product
 TAGS: (fs|net|)
@@ -162,7 +160,10 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} -<>
+${FNN} --_name_fn <name_fn> --_dir_fns <dir_fns> --_flow <num_flow>
+    <num_flow>
+        1 max like plt fns
+        2 mid for fonsh
 ${NORMAL}"
         return 0
     fi
@@ -175,7 +176,7 @@ ${NORMAL}"
     #!function body===============================================
     #!function body======================
     #? amount_arg $# min_args max_args "in $FNN :: $*"
-    #? USE mm_scr_() -echo -deb
+    #? USE fp_f_() -echo -deb
     local echo_
     local debug_
     local verbose_
@@ -184,7 +185,7 @@ ${NORMAL}"
     local outmes_
     local ptr_if_
     local ptr_sem_
-    unset_autoargs_mm_scr_() {
+    unset_autoargs_fp_f_() {
         echo_=0
         debug_=0
         develop1_=0
@@ -195,7 +196,7 @@ ${NORMAL}"
         # any1_=0
         # unset any2_
     }
-    unset_autoargs_mm_scr_
+    unset_autoargs_fp_f_
     # [[ 1 -eq ${verbose} ]] || {
     #     garg_ ${FNN} $@
     # } && {
@@ -241,9 +242,9 @@ ${NORMAL}"
         echo "develop1 MODE in ${FNLOCK}"
     fi
     #{see_cntl}
-    exit_err_mm_scr_() { #* $1 error message
+    exit_err_fp_f_() { #* $1 error message
         local arg1="$1"
-        unset_autoargs_mm_scr_
+        unset_autoargs_fp_f_
         plt_pause "$1: be return ${arg1} <- Fail: message in ${FNLOCK}"
         echo "$1: be return ${arg1} <- Fail: message in ${FNLOCK}" 1>&2
         if [ -z "${arg1}" ]; then
@@ -255,9 +256,9 @@ ${NORMAL}"
             return 1
         fi
     }
-    exit_reg_mm_scr_() {
+    exit_reg_fp_f_() {
         local arg1="$1"
-        unset_autoargs_mm_scr_
+        unset_autoargs_fp_f_
         if [ -z "${arg1}" ]; then
             return 0
         fi
@@ -271,18 +272,18 @@ ${NORMAL}"
     #! strongly return 1 -> exit_err_ $1
     #! strongly return 0 -> exit_reg_
     #! treat error for inner functions
-    # >${FN_OUT_DIR}/com_mm_scr_.res
-    # COMMAND &>>${FN_OUT_DIR}/com_mm_scr_.res
+    # >${FN_OUT_DIR}/com_fp_f_.res
+    # COMMAND &>>${FN_OUT_DIR}/com_fp_f_.res
     # if [ $? -ne 0 ]; then
     #     if [ 1 -eq ${verbose} ]; then
-    #         cat ${FN_OUT_DIR}/com_mm_scr_.res
+    #         cat ${FN_OUT_DIR}/com_fp_f_.res
     #     fi
     #     #? runtime error allowed locally
     #     error_allowed_locall_string="STRING"
-    #     if cat ${FN_OUT_DIR}/COMMAND_mm_scr_.res | is_rl_siev_and ${error_allowed_locall_string}; then
+    #     if cat ${FN_OUT_DIR}/COMMAND_fp_f_.res | is_rl_siev_and ${error_allowed_locall_string}; then
     #         continue
     #     else
-    #         exit_err_mm_scr_ "runtime error:: COMMAND ${addr}"
+    #         exit_err_fp_f_ "runtime error:: COMMAND ${addr}"
     #     fi
     # fi
     #! amount args
@@ -303,41 +304,21 @@ ${NORMAL}"
     #{hints}
     # -----------------------------------------------------------------------------------------
     # ------------------------------------------
-
-    local num_flow=$1
-    local name_file=$2
-
-    plt_pause "do it? in ${PPWD} mm_scr_ ${num_flow} ${name_file}"
-
-    # exl_file=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.exl/mm_scr_.exl
-    # tml_file=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.tml/mm_scr_.tml
-    # dir_insert=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.insert
-
-    # file_path=${PPWD}/${name_file}.sh
-
-    env_file=${PLT_PATH}/.d/.mul/mm_scr_/env/mm_scr_.exl
-
-    exl_ --list "${env_file}"
-
-    #? exl_file define from env_file
-
-    exl_ --list "${exl_file}"
-
     # ------------------------------------------
     # -----------------------------------------------------------------------------------------
-    # altlinux_mm_scr_() {
+    # altlinux_fp_f_() {
     #     :
     # }
-    # fedora_mm_scr_() {
+    # fedora_fp_f_() {
     #     :
     # }
     # if [ $PLT_COGOS == "altlinux" ]; then
-    #     altlinux_mm_scr_
+    #     altlinux_fp_f_
     # fi
     # if [ $PLT_COGOS == "fedora" ]; then
-    #     fedora_mm_scr_
+    #     fedora_fp_f_
     # fi
-    unset_autoargs_mm_scr_
+    unset_autoargs_fp_f_
     #!function body======================
     #!function body===============================================
     #!function body===================================================================
@@ -346,6 +327,6 @@ ${NORMAL}"
 
 }
 
-# mm_scr_ @
+# fp_f_ @
 
 unset filename

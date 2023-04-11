@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename=${PLT_PATH}/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex1_tst/exec._extst 
+filename=${PLT_PATH}/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst//exec._ 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -12,7 +12,7 @@ idir=$(pwd)
 
 dir=$(prs_f -d "$filename")
 cd "$dir" || plt_exit
-echo | . "$dir"/_flow_tst.sh &>/dev/null
+. "$dir"/_flow_tst.sh &>/dev/null
 # . "$dir"/_flow_tst.sh &>res
 
 # cd "$dir"/use/ || qq_exit
@@ -22,7 +22,7 @@ echo | . "$dir"/_flow_tst.sh &>/dev/null
 #? if res, pre dirs -> diff -qr | diff -r
 
 flag=1
-if ! diff -q "$dir"/_deb/file_1.pre.sh "$dir"/_deb/file_1.pre.sh  >/dev/null; then
+if ! diff -q "$dir"/pre "$dir"/res >/dev/null; then
     flag=0
 fi
 

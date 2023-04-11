@@ -1,0 +1,11 @@
+# eval tml_dir=${PATH_TML_DIR}/f_f_/${flow_}
+# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.tml
+
+# eval insert_dir=${PATH_INSERT_DIR}/f_f_/${flow_}
+# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/insert
+
+# eval exl_file=${PATH_EXL_DIR}/f_f_/${flow_}/cr.exl
+# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.exl/fo_f_.exl
+
+# eval sh_file=${PATH_EXL_DIR}/f_f_/${flow_}/cr.sh
+# /home/st/REPOBARE/_repo/plt/.d/.mul/fo_f_/1/.exl/fo_f_.sh
