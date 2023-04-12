@@ -311,25 +311,25 @@ ${NORMAL}"
     #? ARGS : name_fn_ dir_fns_flow_
 
     if typeset -F | grep -w ${name_fn_}; then
-        plt_exit "${name_fn_} not unique"
+        plt_exit " not unique --_name_fn: ${name_fn_} "
         return 1
     fi
 
     if [ -d ${dir_fns_} ]; then
         cd ${dir_fns_}
     else
-        plt_exit " --_dir_fns not exist dir: ${dir_fns_} "
+        plt_exit " not exist dir --_dir_fns: ${dir_fns_} "
         return 1
     fi
 
     if ! is_num ${flow_}; then
-        plt_exit "--_flow not a number: ${flow_} "
+        plt_exit " not a number --_dir_fns: ${flow_} "
         return 1
     fi
 
     exl_ --list ${PLT_PATH}/.d/.mul/fo_f_/env/flow_env.exl
 
-    plt_pause "(${name_fn_}) create flow=${flow_} !!! in ($PWD/dir_${name_fn_}/) file (${name_fn_}.sh) dir (_${name_fn_}) ?"
+    plt_pause "(${name_fn_}) create flow=${flow_} !!! in ($PWD/dir_${name_fn_}/) ?"
 
     # exl_ --list "${exl_file}"
     # echo | . ${sh_file}

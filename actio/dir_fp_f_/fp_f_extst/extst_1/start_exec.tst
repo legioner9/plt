@@ -32,9 +32,11 @@ rdir="$(prs_f -d $filename)"
 up_err_ extst ${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/start_exec.list 1>/dev/null
 errno=$?
 if [ 1 -eq "${errno}" ]; then
-echo "ANY in file://$rdir fail" >&2
+    echo "ANY in file://$rdir fail" >&2
+    return 1
 else
-echo "ALL in file://$rdir true"
+    echo "ALL in file://$rdir true"
+    return 0
 fi
 #{body}
 #-------------------------------

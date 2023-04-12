@@ -23,13 +23,13 @@ echo | . "$dir"/_flow_tst.sh &>/dev/null
 #? if res, pre dirs -> diff -qr | diff -r
 
 flag=1
-if ! diff -q "$dir"/_deb/pre/dir_nnn2_ "$dir"/_deb/res/dir_nnn2_ >/dev/null; then
+if ! diff -qr "$dir"/_deb/pre/dir_nnn2_ "$dir"/_deb/res/dir_nnn2_ &>/dev/null; then
     flag=0
 fi
 
 if [ 0 -eq "$flag" ]; then
     echo "ANY in file://$dir fail" >&2
-    diff "$dir"/_deb/pre/dir_nnn2_ "$dir"/_deb/res/dir_nnn2_ >&2
+    diff -r "$dir"/_deb/pre/dir_nnn2_ "$dir"/_deb/res/dir_nnn2_ >&2
     return 1
 else
     echo "ALL in $dir true"
