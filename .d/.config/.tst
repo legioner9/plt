@@ -1,0 +1,15 @@
+${FONSH_PATH}/actio
+${PLT_PATH}/actio
+/home/st/start/communis/Deploy_store/.qa
+/home/st/start/communis/Deploy_store/.qa/.tst
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib
+/home/st/start/communis/Deploy_store/.qa/lib/_stl_tmp_4
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_debug
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_v.cplus
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Client_Server
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Lib_into_Lib
+#/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_exec
+/home/st/start/communis/Deploy_store/.qa/_Bash_Projects/_UpErrLevels/v3_up_2_level
