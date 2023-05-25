@@ -4,7 +4,7 @@
 # . "$HOME/.bashrc"
 #!
 
-filename="${PLT_PATH}/actio/dir_nom_f_/nom_f_.sh"
+filename="${PLT_PATH}/actio/dir_pth3d_/pth3d_.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 
@@ -12,7 +12,7 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 #up_lib_git
 
-nom_f_() {
+pth3d_() {
 
     local FNN=${FUNCNAME[0]}
     # local ORIGO_DIR=$PATH_FN/dir_$FNN === ${FN_DIR}
@@ -137,12 +137,11 @@ nom_f_() {
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 NAME: ${FNN}()
-WHERE?:(only in root dir)Y
+WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | 
 any stile path - if arg no rout full_path be pwd/$name , if name root name instead)
 ARGS: 
 \$1
- 
 [ ,\$2 num_menu ]
 CNTLS:
 required
@@ -174,7 +173,7 @@ ${NORMAL}"
     #!function body===============================================
     #!function body======================
     #? amount_arg $# min_args max_args "in $FNN :: $*"
-    #? USE nom_f_() -echo -deb
+    #? USE pth3d_() -echo -deb
     local echo_
     local debug_
     local verbose_
@@ -183,7 +182,7 @@ ${NORMAL}"
     local outmes_
     local ptr_if_
     local ptr_sem_
-    unset_autoargs_nom_f_() {
+    unset_autoargs_pth3d_() {
         echo_=0
         debug_=0
         develop1_=0
@@ -194,7 +193,7 @@ ${NORMAL}"
         # any1_=0
         # unset any2_
     }
-    unset_autoargs_nom_f_
+    unset_autoargs_pth3d_
     # [[ 1 -eq ${verbose} ]] || {
     #     garg_ ${FNN} $@
     # } && {
@@ -231,7 +230,7 @@ ${NORMAL}"
     #
     #{ptr_if}
     echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
-    if [ -n "${debug_}" ] && [ "${debug_}" -eq 1 ]; then
+    if [ -n ${debug_} ] && [ ${debug_} -eq 1 ]; then
         echo "DEBUG MODE in ${FNLOCK}"
         echo "\${errmes_}: ${errmes_}"
         echo "\${outmes_}: ${outmes_}"
@@ -240,9 +239,9 @@ ${NORMAL}"
         echo "develop1 MODE in ${FNLOCK}"
     fi
     #{see_cntl}
-    exit_err_nom_f_() { #* $1 error message
+    exit_err_pth3d_() { #* $1 error message
         local arg1="$1"
-        unset_autoargs_nom_f_
+        unset_autoargs_pth3d_
         plt_pause "$1: be return ${arg1} <- Fail: message in ${FNLOCK}"
         echo "$1: be return ${arg1} <- Fail: message in ${FNLOCK}" 1>&2
         if [ -z "${arg1}" ]; then
@@ -254,9 +253,9 @@ ${NORMAL}"
             return 1
         fi
     }
-    exit_reg_nom_f_() {
+    exit_reg_pth3d_() {
         local arg1="$1"
-        unset_autoargs_nom_f_
+        unset_autoargs_pth3d_
         if [ -z "${arg1}" ]; then
             return 0
         fi
@@ -270,18 +269,18 @@ ${NORMAL}"
     #! strongly return 1 -> exit_err_ $1
     #! strongly return 0 -> exit_reg_
     #! treat error for inner functions
-    # >${FN_OUT_DIR}/com_nom_f_.res
-    # COMMAND &>>${FN_OUT_DIR}/com_nom_f_.res
+    # >${FN_OUT_DIR}/com_pth3d_.res
+    # COMMAND &>>${FN_OUT_DIR}/com_pth3d_.res
     # if [ $? -ne 0 ]; then
     #     if [ 1 -eq ${verbose} ]; then
-    #         cat ${FN_OUT_DIR}/com_nom_f_.res
+    #         cat ${FN_OUT_DIR}/com_pth3d_.res
     #     fi
     #     #? runtime error allowed locally
     #     error_allowed_locall_string="STRING"
-    #     if cat ${FN_OUT_DIR}/COMMAND_nom_f_.res | is_rl_siev_and ${error_allowed_locall_string}; then
+    #     if cat ${FN_OUT_DIR}/COMMAND_pth3d_.res | is_rl_siev_and ${error_allowed_locall_string}; then
     #         continue
     #     else
-    #         exit_err_nom_f_ "runtime error:: COMMAND ${addr}"
+    #         exit_err_pth3d_ "runtime error:: COMMAND ${addr}"
     #     fi
     # fi
     #! amount args
@@ -303,23 +302,26 @@ ${NORMAL}"
     # -----------------------------------------------------------------------------------------
     # ------------------------------------------
 
+    echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+    echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+
     
 
     # ------------------------------------------
     # -----------------------------------------------------------------------------------------
-    # altlinux_nom_f_() {
+    # altlinux_pth3d_() {
     #     :
     # }
-    # fedora_nom_f_() {
+    # fedora_pth3d_() {
     #     :
     # }
     # if [ $PLT_COGOS == "altlinux" ]; then
-    #     altlinux_nom_f_
+    #     altlinux_pth3d_
     # fi
     # if [ $PLT_COGOS == "fedora" ]; then
-    #     fedora_nom_f_
+    #     fedora_pth3d_
     # fi
-    unset_autoargs_nom_f_
+    unset_autoargs_pth3d_
     #!function body======================
     #!function body===============================================
     #!function body===================================================================
@@ -328,6 +330,6 @@ ${NORMAL}"
 
 }
 
-# nom_f_ @
+# pth3d_ @
 
 unset filename
