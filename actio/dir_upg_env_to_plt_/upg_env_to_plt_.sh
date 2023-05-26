@@ -324,6 +324,24 @@ ${NORMAL}"
     for path in $(cat "${tmp_path}"); do
         unset y
         echo "$path"
+        _stringContain_() { [ -z "$1" ] || { [ -z "${2##*$1*}" ] && [ -n "$2" ]; }; }
+        # if _stringContain_ 'bcd' 'abcdef'; then echo yes; else echo no; fi
+
+        if _stringContain_ '/res' "$path"; then
+            {
+                echo /res
+                continue
+            }
+        fi
+
+        if _stringContain_ '/pre' "$path"; then
+            {
+                echo /pre
+                continue
+            }
+        fi
+
+        echo "$(basename "$path")"
         codium "$path"
 
         printf 'treat: ENTER - yes or any - n:\n'
