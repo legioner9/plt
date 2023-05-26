@@ -334,9 +334,37 @@ ${NORMAL}"
             }
         fi
 
+        if _stringContain_ '/_res' "$path"; then
+            {
+                echo /_res
+                continue
+            }
+        fi
+
+        if _stringContain_ '.res' "$path"; then
+            {
+                echo .res
+                continue
+            }
+        fi
+
         if _stringContain_ '/pre' "$path"; then
             {
                 echo /pre
+                continue
+            }
+        fi
+
+        if _stringContain_ '/_pre' "$path"; then
+            {
+                echo /_pre
+                continue
+            }
+        fi
+
+        if _stringContain_ '.pre' "$path"; then
+            {
+                echo .pre
                 continue
             }
         fi
