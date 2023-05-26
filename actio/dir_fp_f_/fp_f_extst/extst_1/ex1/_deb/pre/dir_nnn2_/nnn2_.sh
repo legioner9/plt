@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #! debag
-# . "$HOME/.bashrc"
+# . "${HOME}/.bashrc"
 #!
 
 filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/nnn2_.sh"

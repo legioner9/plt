@@ -49,6 +49,7 @@ PATH_TST_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.tst"
 PATH_VAR_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.var"
 PATH_VEXILLUM_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.vexillum"
 PATH_WARG_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.warg"
+PATH_IFS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.ifs"
 
 PATH_CURR_REPO="${HOME}/REPOBARE/_repo"
 

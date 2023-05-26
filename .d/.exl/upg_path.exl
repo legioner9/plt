@@ -8,6 +8,10 @@ eval cr_f_ ${path_file} --vi0 "${HOME}" --vr0 '\${HOME}'
 eval cr_f_ ${path_file} --vi0 "${PATH_COMMUNIS}" --vr0 '\${PATH_COMMUNIS}'
 eval cr_f_ ${path_file} --vi0 "${PATH_CURR_REPO}" --vr0 '\${PATH_CURR_REPO}'
 
+eval cr_f_ ${path_file} --vi0 "${HOME}" --vr0 '\$HOME'
+eval cr_f_ ${path_file} --vi0 "${PATH_COMMUNIS}" --vr0 '\$PATH_COMMUNIS'
+eval cr_f_ ${path_file} --vi0 "${PATH_CURR_REPO}" --vr0 '\$PATH_CURR_REPO'
+
 
 eval cr_f_ ${path_file} --vi0 '\${PLT_PATH}' --vr0 "${PLT_PATH}"
 eval cr_f_ ${path_file} --vi0 '\${FONSH_PATH}' --vr0 "${FONSH_PATH}"
@@ -30,6 +34,7 @@ eval cr_f_ ${path_file} --vi0 '\${PATH_TST_DIR}' --vr0 "${PATH_TST_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_VAR_DIR}' --vr0 "${PATH_VAR_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_VEXILLUM_DIR}' --vr0 "${PATH_VEXILLUM_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_WARG_DIR}' --vr0 "${PATH_WARG_DIR}"
+eval cr_f_ ${path_file} --vi0 '\${PATH_IFS_DIR}' --vr0 "${PATH_IFS_DIR}"
 
 
 eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 "${PATH_MAIN_REPO_FN_DIR}"

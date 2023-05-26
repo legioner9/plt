@@ -1,5 +1,5 @@
 #!/bin/bash
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/_nnn2_/_fn/nnn2_mdeb.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
