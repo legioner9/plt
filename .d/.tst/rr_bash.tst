@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/.tst/rr_bash.tst" 
+filename="${PATH_TST_DIR}/rr_bash.tst" 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -27,7 +27,7 @@ filename="$HOME/start/communis/Deploy_store/.qa/.tst/rr_bash.tst"
 
 if [ "$(rr_ 2>&1)" != "" ];then
 
-echo "FALSE bash: rr_ in $HOME/start/communis/Deploy_store/.qa/.tst/rr_bash.tst" >&2
+echo "FALSE bash: rr_ in ${PATH_TST_DIR}/rr_bash.tst" >&2
 else 
 echo "TRUE"
 fi

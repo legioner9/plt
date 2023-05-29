@@ -1,4 +1,4 @@
-file:///home/st/start/communis/Deploy_store/plt_bd/_exa_for_first_start/.bashrc_first_start :. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
+nfile:///home/st/start/communis/Deploy_store/plt_bd/_exa_for_first_start/.bashrc_first_start :. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
 file:///home/st/start/communis/Deploy_store/plt_bd/main_store/_arh_fs_struct_communis/.bashrc :. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
 
 file:///home/st/start/communis/Deploy_store/plt_bd/main_store/_arh_fs_struct_communis/.bios :. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"

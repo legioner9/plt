@@ -1,5 +1,5 @@
 #!/bin/bash
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 filename="${PLT_PATH}/actio/dir_nom_f_/_nom_f_/_fn/nom_f_mdeb.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
@@ -32,7 +32,7 @@ required
 optional 
 CNTL inspect : -h, _man, _go, _list
 TAGS: (fs|net|)
-IFS: (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
+IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
 FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )

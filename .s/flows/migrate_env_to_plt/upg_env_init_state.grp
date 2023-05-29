@@ -1,4 +1,4 @@
-/home/st/start/communis/Deploy_store/plt_bd/_exa_for_first_start/.bashrc_first_start:. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
+n/home/st/start/communis/Deploy_store/plt_bd/_exa_for_first_start/.bashrc_first_start:. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
 /home/st/start/communis/Deploy_store/plt_bd/main_store/_arh_fs_struct_communis/.bashrc:. "$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
 /home/st/start/communis/Deploy_store/plt_bd/main_store/_arh_fs_struct_communis/.gittag:# -> create start/communis/Deploy_store/.qa/.config/.tst with PATH for tst_flow .qa
 /home/st/start/communis/Deploy_store/plt_bd/main_store/_arh_fs_struct_communis/.gittag:# create start/communis/Deploy_store/.qa/.config/.tst with PATH for tst_flow .qa as tst_ and pre_push hooks

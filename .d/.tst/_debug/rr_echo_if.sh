@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/.tst/_debug/rr_echo_if.sh" 
+filename="${PATH_TST_DIR}/_debug/rr_echo_if.sh" 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -14,7 +14,7 @@ fn(){
 #    ls ~/ 
 #    return 1
 # set -e
-. "$HOME/start/communis/Deploy_store/.qa/.tst/_debug/file_with_err.sh"
+. "${PATH_TST_DIR}/_debug/file_with_err.sh"
 # set +e
 }
 
@@ -31,7 +31,7 @@ fn(){
 # echo "3333"
 # unset filename
 
-# . "$HOME/start/communis/Deploy_store/.qa/.tst/_debug/file_with_err.sh" && echo SUCCESS || echo FAIL
+# . "${PATH_TST_DIR}/_debug/file_with_err.sh" && echo SUCCESS || echo FAIL
 
  if [ "$(rr_ 2>&1)" != "" ];then
 

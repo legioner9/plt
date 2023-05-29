@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/.exl/git/_deb/start_deb_tgu.sh" 
+filename="${PATH_EXL_DIR}/git/_deb/start_deb_tgu.sh" 
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -21,9 +21,9 @@ name_repo="tgu"
 
 str_pushing_again="(e.g., 'git pull ...') before pushing again"
 
-cat /home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_gpush_/_gpush_/_out/str_pushing_again.res |  is_rl_siev_and "${str_pushing_again}"
+cat ${PATH_MAIN_REPO_FN_DIR}/dir_gpush_/_gpush_/_out/str_pushing_again.res |  is_rl_siev_and "${str_pushing_again}"
 echo $?
-cat /home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_gpush_/_gpush_/_out/str_pushing_again.res |  is_rl_siev_and "${str_pushing_again}"x
+cat ${PATH_MAIN_REPO_FN_DIR}/dir_gpush_/_gpush_/_out/str_pushing_again.res |  is_rl_siev_and "${str_pushing_again}"x
 echo $?
 
 # gpush_ --tml "${tml_file}" --name "${name_repo}" -verbose

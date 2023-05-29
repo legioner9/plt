@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/.tst/git_plane_check._tst" 
+filename="${PATH_TST_DIR}/git_plane_check._tst" 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 

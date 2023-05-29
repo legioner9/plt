@@ -1,5 +1,5 @@
 #>exl
-# /home/st/start/communis/Deploy_store/.qa/.exl/cr_tst_sys_/create_start_exec.exl
+# ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec.exl
 #? create /dir_1/start_exec._tst
 eval path_name=${root_dir}/${name_dir}/start_exec._tst
 eval tml=${PATH_TML_DIR}/cr_sh_/for_tst_1/sh_for_tst_1.tml

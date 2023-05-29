@@ -19,7 +19,7 @@ if [ "-h" == "$1" ]; then
         CNTL develop: -_develop1, ... for special development mode, NOT to product
         
         TAGS: (fs|net|)
-        IFS: (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
+        IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
         FLOW: (process | subprocess (no read pause only plt_err return \$errno) | interpritator)
         RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
         ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )

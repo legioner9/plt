@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #! debag
-# . "$HOME/.bashrc"
+# . "${HOME}/.bashrc"
 #!
 
 filename="${PLT_PATH}/actio/dir_mm_apt_/mm_apt_.sh"
@@ -152,7 +152,7 @@ _extst<num> exec ${FNN}extst/extst_1/ex<num>_tst/exec._extst
 CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ...
 CNTL develop: -_develop1, ... for special development mode, NOT to product
 TAGS: (fs|net|)
-IFS: (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
+IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
 FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
