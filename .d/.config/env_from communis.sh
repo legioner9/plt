@@ -22,10 +22,10 @@ PATH_TOSH=/run/media/${USER}/TOSH
 BASH_USER="${HOME}/start/communis/Deploy_store/.qa/lib/user"
 
 PATH_GIT="${HOME}/start/communis"
-PATH_TST_FILE="${PLT_PATH}"/.d/.config/.tst
-PATH_ENV_FILE="${PLT_PATH}"/.d/.config/env.sh
+PATH_TST_FILE="${PATH_COMMUNIS}/Deploy_store/.qa/.config/.tst"
+PATH_ENV_FILE="${PATH_COMMUNIS}/Deploy_store/.qa/.config/env.sh"
 
-LIST3_BCKP_GITPUSH="${PLT_PATH}"/.d/.lists/bckp_gitpush.list3
+LIST3_BCKP_GITPUSH="${PATH_COMMUNIS}/Deploy_store/.qa/.lists/bckp_gitpush.list3"
 
 CEXEC_PROJECT_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_exec"
 
@@ -34,22 +34,22 @@ MAINEDITOR="codium"
 PATH_MAIN_REPO_FN_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn"
 
 #? .args .canons  .config .exl .flumen_tempus .ifs .insert .lists .man .pullsh  .puml .tml  .tst  .var  .vexillum  .warg
-PATH_ARGS_DIR="${PLT_PATH}"/.d/.args
-PATH_CANONS_DIR="${PLT_PATH}"/.d/.canons
-PATH_CONFIG_DIR="${PLT_PATH}"/.d/.config
-PATH_EXL_DIR="${PLT_PATH}"/.d/.exl
-PATH_FLUMEN_TEMPUS_DIR="${PLT_PATH}"/.d/.flumen_tempus
-PATH_IFS_DIR="${PLT_PATH}"/.d/.ifs
-PATH_INSERT_DIR="${PLT_PATH}"/.d/.insert
-PATH_LISTS_DIR="${PLT_PATH}"/.d/.lists
-PATH_MAN_DIR="${PLT_PATH}"/.d/.man
-PATH_PULLSH_DIR="${PLT_PATH}"/.d/.pullsh
-PATH_PUML_DIR="${PLT_PATH}"/.d/.puml
-PATH_TML_DIR="${PLT_PATH}"/.d/.tml
-PATH_TST_DIR="${PLT_PATH}"/.d/.tst
-PATH_VAR_DIR="${PLT_PATH}"/.d/.var
-PATH_VEXILLUM_DIR="${PLT_PATH}"/.d/.vexillum
-PATH_WARG_DIR="${PLT_PATH}"/.d/.warg
+PATH_ARGS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.args"
+PATH_CANONS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.canons"
+PATH_CONFIG_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.config"
+PATH_EXL_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.exl"
+PATH_FLUMEN_TEMPUS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.flumen_tempus"
+PATH_IFS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.ifs"
+PATH_INSERT_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.insert"
+PATH_LISTS_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.lists"
+PATH_MAN_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.man"
+PATH_PULLSH_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.pullsh"
+PATH_PUML_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.puml"
+PATH_TML_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.tml"
+PATH_TST_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.tst"
+PATH_VAR_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.var"
+PATH_VEXILLUM_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.vexillum"
+PATH_WARG_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/.warg"
 
 PATH_CURR_REPO="${HOME}/REPOBARE/_repo"
 
