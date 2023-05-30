@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="${HOME}/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/_nnn2_/_debug/mdeb.sh"
+filename="/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/_nnn2_/_debug/mdeb.sh"
 
 ARGS=($@)
 NARGS=$#
