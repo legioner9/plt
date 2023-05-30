@@ -1,1 +1,0 @@
-## ###Pointer Arithmetic In C

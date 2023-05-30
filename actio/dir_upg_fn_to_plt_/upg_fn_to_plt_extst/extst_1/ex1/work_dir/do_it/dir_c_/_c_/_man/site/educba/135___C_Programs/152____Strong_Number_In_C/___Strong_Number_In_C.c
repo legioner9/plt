@@ -1,1 +1,0 @@
-## ###Strong Number In C

@@ -9,10 +9,9 @@ echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
 unset filename
 PATH_OS="${HOME}/start/communis/Deploy_store"
-PATH_FN="${PATH_OS}/.qa/main_repo_fn" # path to pln
+PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
-
 
 PATH_COMMUNIS=${HOME}/start/communis
 PATH_MY_ONE=/run/media/${USER}/MY_ONE
@@ -31,6 +30,7 @@ CEXEC_PROJECT_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_ex
 
 MAINEDITOR="codium"
 
+#? for rebase fn to plt; after copy to plt rename do that: PATH_MAIN_REPO_FN_DIR=${PLT_PATH}"/.d/actio
 PATH_MAIN_REPO_FN_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn"
 
 #? .args .canons  .config .exl .flumen_tempus .ifs .insert .lists .man .pullsh  .puml .tml  .tst  .var  .vexillum  .warg
@@ -60,6 +60,3 @@ RETURN_WITH_EXIT_1=4
 RETURN_1=5
 
 QQ_EXIT=0
-
-#? RPFN for migrate fn upg_fn_to_plt_ => 
-RPFN='/home/st/start/communis/Deploy_store/.qa/main_repo_fn'

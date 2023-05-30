@@ -1,1 +1,0 @@
- int mkdir_с(char *dir_path, mode_t mode, const char *file, const int line)

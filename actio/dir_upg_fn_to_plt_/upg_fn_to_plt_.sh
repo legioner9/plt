@@ -160,7 +160,7 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} -<>
+${FNN} --_dir ~/start/communis
 ${NORMAL}"
         return 0
     fi
@@ -320,7 +320,7 @@ ${NORMAL}"
 
     tmp_path="${HOME}/TMP/UPD_fn"
 
-    grep -rl '\.qa/\.' "${dir_}" >"${tmp_path}"
+    grep -rlE "\.qa/main_repo_fn|PATH_FN" "${dir_}" >"${tmp_path}"
     for path in $(cat "${tmp_path}"); do
         unset y
         echo "$path"
@@ -337,12 +337,14 @@ ${NORMAL}"
         echo "$(basename "$path")"
         codium "$path"
 
+
         printf 'treat: ENTER - yes or any - n:\n'
         read -r y
         echo "${y}"
 
         if [[ -z "${y}" ]]; then
             echo -e "${HIGHT}--- upg_path_ $path ---${NORMAL}" #sistem info mesage
+            path_file="${path}"
             exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 
         fi
     done

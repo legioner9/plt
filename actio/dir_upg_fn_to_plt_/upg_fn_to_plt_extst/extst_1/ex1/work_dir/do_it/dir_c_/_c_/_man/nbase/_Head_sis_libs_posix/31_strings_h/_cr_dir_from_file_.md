@@ -1,5 +1,0 @@
-strcasecmp
-strcasecmp_l
-strncasecmp
-strncasecmp_l
-

@@ -1,3 +1,0 @@
-failed in file main.c at line # 23
-from fopen_s path = 0, mode = z, errno = 22
-exit(errno) with: Invalid argument

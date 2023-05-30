@@ -1,1 +1,0 @@
-## ###Math Functions In C

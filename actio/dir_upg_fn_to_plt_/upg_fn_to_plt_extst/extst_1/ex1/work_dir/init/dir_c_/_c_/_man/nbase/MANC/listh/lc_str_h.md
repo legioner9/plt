@@ -1,3 +1,0 @@
-p@cp_str_lc_str
-p@unseal_cntchar_lc_str
-p@l2a_free_lc_str

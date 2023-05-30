@@ -1,4 +1,0 @@
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netinet/tcp.h>
-tcp_socket = socket(AF_INET, SOCK_STREAM, 0);

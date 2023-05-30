@@ -1,9 +1,0 @@
-p@imaxabs
-p@imaxdiv
-p@strtoimax
-p@strtoumax
-p@wcstoimax
-p@wcstoumax
-t@uintmax_t
-t@intmax_t
-t@imaxdiv_t

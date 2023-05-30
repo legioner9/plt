@@ -1,1 +1,0 @@
-## strcasecmp_l

@@ -1,2 +1,0 @@
-p@fstatvfs
-p@statvfs

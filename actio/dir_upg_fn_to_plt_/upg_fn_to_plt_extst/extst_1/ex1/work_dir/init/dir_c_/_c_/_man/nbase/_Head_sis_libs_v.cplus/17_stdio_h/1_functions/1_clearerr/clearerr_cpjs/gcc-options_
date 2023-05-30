@@ -1,1 +1,0 @@
--Wall -Wextra -Wfloat-equal -g -Os -ggdb -S
