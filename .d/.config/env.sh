@@ -60,3 +60,6 @@ RETURN_WITH_EXIT_1=4
 RETURN_1=5
 
 QQ_EXIT=0
+
+#? RPFN for migrate fn upg_fn_to_plt_ => 
+RPFN='/home/st/start/communis/Deploy_store/.qa/main_repo_fn'
