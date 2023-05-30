@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_sh/upd_lc_0.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_sh/upd_lc_0.sh"
 
 echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 

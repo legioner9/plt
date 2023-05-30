@@ -78,7 +78,7 @@ https://www.geeksforgeeks.org/input-output-system-calls-c-create-open-close-read
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/6_fcntl_h/3_open/suc_cpjs/open_c.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/6_fcntl_h/3_open/suc_cpjs/open_c.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

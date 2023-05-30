@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/site/educba/1___Basic/13____Command_Line_Arguments_In_C/1print_arg_env.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/educba/1___Basic/13____Command_Line_Arguments_In_C/1print_arg_env.sh"
 
 echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 
@@ -10,7 +10,7 @@ echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 
 #up_lib_git ${FUNCNAME[0]}
 
-cd_h /home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/faq/res_cpp
+cd_h ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/faq/res_cpp
 
 ./1print_arg_env.bexe 444 fvwedv 'vfdvdsaf vdfv 22'
 

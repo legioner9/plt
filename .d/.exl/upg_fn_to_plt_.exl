@@ -4,12 +4,17 @@
 eval cr_f_ ${path_file} --vi0 "${HOME}" --vr0 '\${HOME}'
 eval cr_f_ ${path_file} --vi0 "${PATH_COMMUNIS}" --vr0 '\${PATH_COMMUNIS}'
 eval cr_f_ ${path_file} --vi0 "${PATH_CURR_REPO}" --vr0 '\${PATH_CURR_REPO}'
+eval cr_f_ ${path_file} --vi0 "${PATH_OS}" --vr0 '\${PATH_OS}'
 
 eval cr_f_ ${path_file} --vi0 "${HOME}" --vr0 '\$HOME'
 eval cr_f_ ${path_file} --vi0 "${PATH_COMMUNIS}" --vr0 '\$PATH_COMMUNIS'
 eval cr_f_ ${path_file} --vi0 "${PATH_CURR_REPO}" --vr0 '\$PATH_CURR_REPO'
+eval cr_f_ ${path_file} --vi0 "${PATH_OS}" --vr0 '\$PATH_OS'
+
 
 eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 '\$PATH_FN'
 eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 '\${PATH_FN}'
 
 eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 '/home/st/start/communis/Deploy_store/.qa/main_repo_fn'
+
+eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 'start/communis/Deploy_store/.qa/main_repo_fn'

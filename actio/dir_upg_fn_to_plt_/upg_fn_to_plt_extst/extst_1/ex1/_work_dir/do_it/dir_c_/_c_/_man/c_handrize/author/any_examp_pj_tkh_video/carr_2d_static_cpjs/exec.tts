@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/functions/any_examp_pj_tkh_video/carr_2d_static_cpjs/exec.tts"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/functions/any_examp_pj_tkh_video/carr_2d_static_cpjs/exec.tts"
 
 # echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 

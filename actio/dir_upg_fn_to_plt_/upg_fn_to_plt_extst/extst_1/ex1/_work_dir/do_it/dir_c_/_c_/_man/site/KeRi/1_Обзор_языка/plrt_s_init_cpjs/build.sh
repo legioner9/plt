@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/plrt_s_init_cpjs/exec.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/plrt_s_init_cpjs/exec.sh"
 
 echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 

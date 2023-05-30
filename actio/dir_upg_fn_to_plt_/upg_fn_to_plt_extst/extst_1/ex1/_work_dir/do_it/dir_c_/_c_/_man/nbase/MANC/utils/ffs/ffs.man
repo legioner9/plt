@@ -82,7 +82,7 @@ https://chipenable.ru/index.php/programming-avr/item/4-uchebnyy-kurs-kak-rabotat
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_strings_h/5_ffs/study_cpjs/ffs.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_strings_h/5_ffs/study_cpjs/ffs.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

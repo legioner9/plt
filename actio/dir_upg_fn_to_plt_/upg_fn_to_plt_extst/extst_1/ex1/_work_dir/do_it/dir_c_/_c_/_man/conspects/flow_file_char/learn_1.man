@@ -1,4 +1,4 @@
-## FROM: start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_v.cplus/17_stdio_h/1_functions/18_ftell/ftell_cpjs
+## FROM: ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_v.cplus/17_stdio_h/1_functions/18_ftell/ftell_cpjs
 
 ### ftell [main.c.v2]
 

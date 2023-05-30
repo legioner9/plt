@@ -313,17 +313,19 @@ ${NORMAL}"
     fi
 
     _stringContain_() { [ -z "$1" ] || { [ -z "${2##*$1*}" ] && [ -n "$2" ]; }; }
-    
+
     # for item in $(grep -r '\.qa/\.' "${dir_}"); do
     #     echo "${item}"
     # done
+
+    local n=0
 
     tmp_path="${HOME}/TMP/UPD_fn"
 
     grep -rlE "\.qa/main_repo_fn|PATH_FN" "${dir_}" >"${tmp_path}"
     for path in $(cat "${tmp_path}"); do
-        unset y
-        echo "$path"
+        # unset y
+        # echo "$path"
 
         # if _stringContain_ 'bcd' 'abcdef'; then echo yes; else echo no; fi
 
@@ -334,19 +336,64 @@ ${NORMAL}"
             }
         fi
 
-        echo "$(basename "$path")"
-        codium "$path"
-
-
-        printf 'treat: ENTER - yes or any - n:\n'
-        read -r y
-        echo "${y}"
-
-        if [[ -z "${y}" ]]; then
-            echo -e "${HIGHT}--- upg_path_ $path ---${NORMAL}" #sistem info mesage
-            path_file="${path}"
-            exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 
+        if _stringContain_ '/_res' "$path"; then
+            {
+                echo /_res
+                continue
+            }
         fi
+
+        if _stringContain_ '.res' "$path"; then
+            {
+                echo .res
+                continue
+            }
+        fi
+
+        if _stringContain_ '/pre' "$path"; then
+            {
+                echo /pre
+                continue
+            }
+        fi
+
+        if _stringContain_ '/_pre' "$path"; then
+            {
+                echo /_pre
+                continue
+            }
+        fi
+
+        if _stringContain_ '.pre' "$path"; then
+            {
+                echo .pre
+                continue
+            }
+        fi
+
+        # echo "$(basename "$path")"
+        # codium "$path"
+
+        # printf 'treat: ENTER - yes or any - n:\n'
+        # read -r y
+        # echo "${y}"
+
+        # if [[ -z "${y}" ]]; then
+        #     echo -e "${HIGHT}--- upg_path_ $path ---${NORMAL}" #sistem info mesage
+        #     path_file="${path}"
+        #     exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl
+        # fi
+
+        local path_file="${path}"
+        ((n++))
+        echo -e "${GREEN}${n} file://$path_file${NORMAL}"                       #print variable
+        # echo -e "${ULINE}exl_ --list ${PATH_EXL_DIR}/upg_fn_to_plt_.exl${NORMAL}" #repit commands
+
+        exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 1>/dev/null
+
+        # exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 
+
+
     done
 
     # ------------------------------------------

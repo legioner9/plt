@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/tolower_pipe.sh" 
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/tolower_pipe.sh" 
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -10,7 +10,7 @@ echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
 #up_lib_git ${FUNCNAME[0]}
 
-# ! export PATH="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/res_cpp:$PATH"
+# ! export PATH="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/KeRi/1_Обзор_языка/res_cpp:$PATH"
 
 hello.bexe | filter_tolower.bexe
 

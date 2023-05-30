@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst/fib/exec.tts"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/_tst/fib/exec.tts"
 
 # echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 
 #e_exer "Questions? See far!" "$filename" "$LINENO"
 
 #up_lib_git ${FUNCNAME[0]}
-dir=$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst/fib/
+dir=${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/_tst/fib/
 cd "$dir" || qq_exit
 # . "$dir"/exec.sh
 
@@ -21,9 +21,9 @@ if ! diff -q ""$dir"/pre" ""$dir"/res" >/dev/null; then
 fi
 
 if [ 0 -eq "$flag" ]; then
-    echo "ANY in $HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst/fib/ fail" >&2
+    echo "ANY in ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/_tst/fib/ fail" >&2
 else
-    echo "ALL in $HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst/fib/ true"
+    echo "ALL in ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/_tst/fib/ true"
 fi
 
 unset filename

@@ -1,7 +1,7 @@
 	.file	"lc_num.c"
 	.text
 .Ltext0:
-	.file 0 "/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/lc_num.c"
+	.file 0 "${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/lc_num.c"
 	.globl	isDiv_01_lc_num
 	.type	isDiv_01_lc_num, @function
 isDiv_01_lc_num:
@@ -423,7 +423,7 @@ swap_lc_num:
 	.string	"isDiv_01_lc_num"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
+	.string	"${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
 .LASF0:
 	.string	"lib/lc_num.c"
 	.ident	"GCC: (GNU) 12.2.1 20220819 (Red Hat 12.2.1-1)"

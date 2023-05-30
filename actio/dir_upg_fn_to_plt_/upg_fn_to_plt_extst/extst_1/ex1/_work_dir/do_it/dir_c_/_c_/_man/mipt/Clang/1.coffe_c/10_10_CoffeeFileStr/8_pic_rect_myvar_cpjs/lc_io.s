@@ -1,7 +1,7 @@
 	.file	"lc_io.c"
 	.text
 .Ltext0:
-	.file 0 "/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/lc_io.c"
+	.file 0 "${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/lc_io.c"
 	.globl	i_str_lc_io
 	.type	i_str_lc_io, @function
 i_str_lc_io:
@@ -389,7 +389,7 @@ i_str_lc_io:
 	.string	"getchar"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
+	.string	"${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
 .LASF0:
 	.string	"lib/lc_io.c"
 	.ident	"GCC: (GNU) 12.2.1 20220819 (Red Hat 12.2.1-1)"

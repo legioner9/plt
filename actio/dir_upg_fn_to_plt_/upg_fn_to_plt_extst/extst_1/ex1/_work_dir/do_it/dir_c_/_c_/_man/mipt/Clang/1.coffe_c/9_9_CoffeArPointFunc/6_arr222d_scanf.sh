@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/9_9_CoffeArPointFunc/6_arr222d_scanf.sh" 
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/9_9_CoffeArPointFunc/6_arr222d_scanf.sh" 
 
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 

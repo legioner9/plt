@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/28_search_h/5_lsearch/study_cpjs/build.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/28_search_h/5_lsearch/study_cpjs/build.sh"
 
 echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 

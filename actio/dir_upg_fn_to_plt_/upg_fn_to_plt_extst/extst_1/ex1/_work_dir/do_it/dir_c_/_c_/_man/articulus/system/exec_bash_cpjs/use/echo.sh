@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/articulus/system/exec_bash_cpjs/use/echo.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/articulus/system/exec_bash_cpjs/use/echo.sh"
 
 echo -e "${HLIGHT}---start file://$filename with args: $@ ---${NORMAL}" # start file
 

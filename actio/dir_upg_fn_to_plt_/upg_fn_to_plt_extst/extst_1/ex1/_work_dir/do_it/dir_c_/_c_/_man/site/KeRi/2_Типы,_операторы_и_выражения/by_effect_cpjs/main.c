@@ -9,7 +9,7 @@
 #include <string.h>
 #include <math.h>
 
-// LIB FROM $HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib
+// LIB FROM ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib
 #include "lib/lc_0.h"
 #include "lib/lc_1.h"
 

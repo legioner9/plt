@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #! debag
-# . "$HOME/.bashrc"
+# . "/home/st/.bashrc"
 #!
 
-filename="$PATH_FN/dir_rbl_manc1_/rbl_manc1_.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_rbl_manc1_/rbl_manc1_.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
@@ -15,13 +15,13 @@ echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 rbl_manc1_() {
 
     local FNN=${FUNCNAME[0]}
-    local ORIGO_DIR=$PATH_FN/dir_$FNN
+    local ORIGO_DIR=${PATH_MAIN_REPO_FN_DIR}/dir_$FNN
     local PPWD=$PWD
     local FLN=$0
     local ARGS=($@)
 
     if [ "man" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/"$FNN".man
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/"$FNN".man
         return 0
     fi
 
@@ -31,12 +31,12 @@ rbl_manc1_() {
     fi
 
     if [ "lst" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/"$FNN".lst
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/"$FNN".lst
         return 0
     fi
 
     if [ "_go" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/
         return 0
     fi
 
@@ -178,12 +178,12 @@ rbl_manc1_() {
         # amount_arg $# x
 
         if [ "-d" == "$1" ]; then
-            cd_h "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
+            cd_h "/home/st"/${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/MAN1
             cr_man_h_unix_ -d
         fi
 
         rbl_isu_manc1_
-        cd_h "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
+        cd_h "/home/st"/${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/MAN1
         cr_man_h_unix_
 
         #!function body======================

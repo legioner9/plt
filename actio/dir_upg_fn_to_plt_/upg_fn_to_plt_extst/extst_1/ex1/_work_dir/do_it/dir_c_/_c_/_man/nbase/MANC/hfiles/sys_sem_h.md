@@ -73,7 +73,7 @@ https://manpages.debian.org/jessie-backports/manpages/ipc.5.en.html
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/38_sys_sem_h/2_semget/study_cpjs/sys_sem_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/38_sys_sem_h/2_semget/study_cpjs/sys_sem_h.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

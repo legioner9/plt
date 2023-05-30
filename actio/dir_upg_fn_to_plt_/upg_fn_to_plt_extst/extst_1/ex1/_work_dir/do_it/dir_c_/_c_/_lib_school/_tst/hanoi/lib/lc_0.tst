@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-# filename="$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/lc_0.tst"
+# filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/lc_0.tst"
 
 # echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 
@@ -14,7 +14,7 @@ unset filename
 
 flag=1
 
-for item in $(dr_a_stl $HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/_tst "tts"); do
+for item in $(dr_a_stl ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/_tst "tts"); do
 
     if [ ! "$(. "$item")" ]; then
         flag=0

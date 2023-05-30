@@ -75,7 +75,7 @@ https://github.com/LuaDist/libgdbm/blob/master/gdbm.info
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/10_1_gdbm_h/example/study_cpjs/gdbm_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/10_1_gdbm_h/example/study_cpjs/gdbm_h.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

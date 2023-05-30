@@ -16,7 +16,7 @@ adf_fn_() {
 
     local FNN=${FUNCNAME[0]}
     local ORIGO_DIR=${PATH_MAIN_REPO_FN_DIR}/dir_$FNN
-    local PPWD=$PWDF
+    local PPWD=$PWD
     local FLN=$0
     local ARGS=($@)
     # local NARGS=$#

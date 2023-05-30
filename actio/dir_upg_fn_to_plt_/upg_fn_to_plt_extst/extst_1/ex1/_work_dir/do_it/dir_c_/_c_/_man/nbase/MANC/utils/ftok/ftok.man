@@ -81,7 +81,7 @@ https://stackoverflow.com/questions/7358400/whats-is-purpose-ftok-in-message-que
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/38_sys_sem_h/2_semget/study_cpjs/ftok.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/38_sys_sem_h/2_semget/study_cpjs/ftok.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

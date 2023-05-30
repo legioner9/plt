@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "/home/st/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/functions/any_examp_pj_tkh_video/carr_2d_static_cpjs/exec.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/functions/any_examp_pj_tkh_video/carr_2d_static_cpjs/exec.sh"
 
 echo -e "${HLIGHT}---start file: $filename ---${NORMAL}" # start file
 
@@ -14,7 +14,7 @@ PD="$(prs_f -d "$filename")"
 
 c_to_h_ -u
 
-c_src=$HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/lc_0.c
+c_src=${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/lc_0.c
 c_dist=$PD/lib/lc_0.c
 
 if [ "$c_dist" -ot "$c_src" ]; then

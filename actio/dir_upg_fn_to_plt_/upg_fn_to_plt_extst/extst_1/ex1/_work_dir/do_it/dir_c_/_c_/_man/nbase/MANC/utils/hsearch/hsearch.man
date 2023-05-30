@@ -70,7 +70,7 @@
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/28_search_h/1_hcreate/study_cpjs/hsearch.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/28_search_h/1_hcreate/study_cpjs/hsearch.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

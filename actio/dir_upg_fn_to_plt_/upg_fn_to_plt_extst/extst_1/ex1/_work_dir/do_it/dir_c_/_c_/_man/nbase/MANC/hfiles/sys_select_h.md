@@ -73,9 +73,9 @@ https://ru.manpages.org/select/2
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_2_cpjs/sys_select_h.isu
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_3_cpjs/sys_select_h.isu
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_4_cpjs/sys_select_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_2_cpjs/sys_select_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_3_cpjs/sys_select_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/37_sys_select_h/example/study_4_cpjs/sys_select_h.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

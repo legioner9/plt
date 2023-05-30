@@ -78,7 +78,7 @@ https://manpages.debian.org/testing/manpages/ip.7.en.html
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/20_netinet_in_h/example/study_cpjs/netinet_in_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/20_netinet_in_h/example/study_cpjs/netinet_in_h.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

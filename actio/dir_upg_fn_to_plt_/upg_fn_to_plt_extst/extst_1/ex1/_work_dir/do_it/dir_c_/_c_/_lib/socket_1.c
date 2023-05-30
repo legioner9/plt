@@ -23,7 +23,7 @@
 #include <wchar.h>
 #include <wctype.h>
 
-// LIB FROM $HOME/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib
+// LIB FROM ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib
 // #include "lc_0.h"
 // #include "lc_1.h"
 // #include "l3p_1.h"
@@ -567,7 +567,7 @@
             }
 
             // https://gamedev.ru/code/articles/?id=4262&page=2
-            // file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Client_Server/Full_gd/1/2_Полное руководство по сетевом.pdf
+            // file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Client_Server/Full_gd/1/2_Полное руководство по сетевом.pdf
             // switch (errno)
             // {
             // case EPROTONOSUPPORT: // данный протокол не поддерживается в текущем домене

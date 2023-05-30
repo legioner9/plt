@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #! debag
-# . "$HOME/.bashrc"
+# . "/home/st/.bashrc"
 #!
 
-filename="$PATH_FN/dir_c_/c_.sh"
+filename="${PATH_MAIN_REPO_FN_DIR}/dir_c_/c_.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
@@ -19,13 +19,13 @@ c_() {
     # echo -e "${GREEN}file = $0${NORMAL}"             #print variable
     # echo -e "${GREEN}args = $@${NORMAL}"             #print variable
     local FNN=${FUNCNAME[0]}
-    local ORIGO_DIR=$PATH_FN/dir_$FNN
+    local ORIGO_DIR=${PATH_MAIN_REPO_FN_DIR}/dir_$FNN
     local PPWD=$PWD
     local FLN=$0
     local ARGS=($@)
 
     if [ "man" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/"$FNN".man
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/"$FNN".man
         return 0
     fi
 
@@ -35,12 +35,12 @@ c_() {
     fi
 
     if [ "lst" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/"$FNN".lst
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/"$FNN".lst
         return 0
     fi
 
     if [ "_go" == "$1" ]; then
-        edit_ "$PATH_FN"/dir_"$FNN"/
+        edit_ "${PATH_MAIN_REPO_FN_DIR}"/dir_"$FNN"/
         return 0
     fi
 
@@ -421,8 +421,8 @@ c_() {
             # rm "$(pwd)"/lc_0.c
             # rm "$(pwd)"/lc_0.h
 
-            cp "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/*.c "$(pwd)"
-            cp "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_lib/*.h "$(pwd)"
+            cp "/home/st"/${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/*.c "$(pwd)"
+            cp "/home/st"/${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib/*.h "$(pwd)"
 
             fltr_prefile_c_in_dir_
 

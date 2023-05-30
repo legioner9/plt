@@ -70,7 +70,7 @@
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/27_sched_h/6_sched_setparam/study_2_cpjs/sched_getscheduler.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/27_sched_h/6_sched_setparam/study_2_cpjs/sched_getscheduler.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

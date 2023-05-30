@@ -88,5 +88,5 @@ checked int : Chint
 
 int count_sort_lc_0_MxV_Ac_Ar(int max_num, int size_arr, int arr[])
 {
-    // start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/site/tkh_c_0/v_25/count_sort_spj/main.c
+    // ${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/tkh_c_0/v_25/count_sort_spj/main.c
 }

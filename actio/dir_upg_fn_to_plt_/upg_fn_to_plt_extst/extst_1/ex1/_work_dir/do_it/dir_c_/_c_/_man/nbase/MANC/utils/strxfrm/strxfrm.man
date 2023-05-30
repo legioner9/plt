@@ -81,7 +81,7 @@ https://en.cppreference.com/w/c/string/byte/strxfrm
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_1_string_h/32_strxfrm/study_cpjs/strxfrm.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_1_string_h/32_strxfrm/study_cpjs/strxfrm.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

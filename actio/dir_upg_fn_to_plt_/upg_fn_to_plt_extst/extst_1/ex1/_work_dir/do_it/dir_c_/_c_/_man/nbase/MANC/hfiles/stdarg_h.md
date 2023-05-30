@@ -79,7 +79,7 @@ https://learnc.info/c/vararg_functions.html
 
 ----------------------------------------------------- 
 -------------------------------------- 
-file:///home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_2_stdarg_h/example/study_cpjs/stdarg_h.isu
+file://${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/nbase/_Head_sis_libs_posix/31_2_stdarg_h/example/study_cpjs/stdarg_h.isu
 -------------------------------------- 
 ----------------------------------------------------- 
 <<ISU>>

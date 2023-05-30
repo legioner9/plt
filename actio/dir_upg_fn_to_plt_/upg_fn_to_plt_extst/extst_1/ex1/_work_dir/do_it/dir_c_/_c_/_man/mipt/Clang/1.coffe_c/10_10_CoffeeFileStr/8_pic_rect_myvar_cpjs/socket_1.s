@@ -1,7 +1,7 @@
 	.file	"socket_1.c"
 	.text
 .Ltext0:
-	.file 0 "/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/socket_1.c"
+	.file 0 "${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs" "lib/socket_1.c"
 	.section	.rodata
 	.align 8
 .LC0:
@@ -4165,7 +4165,7 @@ socket_с:
 	.string	"_IO_codecvt"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
+	.string	"${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/mipt/Clang/1.coffe_c/10_10_CoffeeFileStr/8_pic_rect_myvar_cpjs"
 .LASF0:
 	.string	"lib/socket_1.c"
 	.ident	"GCC: (GNU) 12.2.1 20220819 (Red Hat 12.2.1-1)"
