@@ -8,6 +8,7 @@ filename="$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
 unset filename
+NET_MAIN_GIT_REPO="github.com:legioner9"
 PATH_OS="${HOME}/start/communis/Deploy_store"
 PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
