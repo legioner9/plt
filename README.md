@@ -6,4 +6,4 @@
 
 ## [discriptions](.d/.lego)
     
-[about_structure_repo](.d/.lego/about_structure_repo)
+[about_structure_repo](.d/.lego/about_structure_repo.man)
