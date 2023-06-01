@@ -3,16 +3,14 @@
     pbln - [p]rimo [b]cp [l]ocal and [n]et
     pbl  - [p]rimo [b]cp [l]ocal
     obl  - [o]nce [b]cp [l]ocal 
-    mbln - [m]ane [b]cp [l]ocal and [n]et
-    mbl  - [m]ane [b]cp [l]ocal
+    mbln - [m]ain [b]cp [l]ocal and [n]et
+    mbl  - [m]ain [b]cp [l]ocal
 
 ## Bind files
 
-to abstract: -->
+mbl $\rightarrow{^{abstract}}\rightarrow$ <flow_name>
 
-mbl --> <flow_name>
-
-mbl.var --> <flow_name.ext>
+mbl.var $\rightarrow{^{abstract}}\rightarrow$ <flow_name.ext>
 
 [mbl.var](../../.d/.var/mm_git_/mbl.var)
 [pbl.var](../../.d/.var/mm_git_/pbl.var)
@@ -36,8 +34,9 @@ mbl.var --> <flow_name.ext>
 
 ### arguments
 
-### low_code 
+### inner function
 
+#### mm_git_via_list_
 
     for name_repo in $(f2e <flow_name.list>); do
 
@@ -45,6 +44,23 @@ mbl.var --> <flow_name.ext>
         exl_ --list "<flow_name.exl>"
 
     done
+
+#### mm_git_via_single_
+
+    PS3="eligendi actiones: "
+
+    select name_repo in $(f2e <flow_name.list>); do
+
+        dilectus=$item
+        break
+
+    done
+
+    arg_string="--tml <flow_name.var> --name <repo_name>"
+    exl_ --list "<flow_name.exl>"
+
+
+
 
 
 
