@@ -1,0 +1,12 @@
+## Abbreviatin
+
+pbln - [p]rimo [b]cp [l]ocal and [n]et 
+
+## Bind files
+
+[mbl.var](../../.d/.var/mm_git_/mbl.var)
+
+## Structure function
+
+### arguments
+
