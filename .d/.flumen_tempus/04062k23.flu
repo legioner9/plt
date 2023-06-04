@@ -16,3 +16,8 @@
     rm -r //main_repo_fn
     cp -r //_main_repo_fn //main_repo_fn
 
+## via_ 
+    - start from menu
+
+## wrp2_ 
+    - add --_xxx(_) postfix (_), mean that after that argument should not be taken into account in finally  

@@ -1,0 +1,7 @@
+# tst_this.exl
+eval echo "\$aaa=$aaa"
+eval echo "\$bbb=$bbb"
+eval echo "\$ccc=$ccc"
+eval echo "\$ddd=$ddd"
+eval echo "\$eee=$eee"
+
