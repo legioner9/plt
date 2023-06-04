@@ -1,0 +1,12 @@
+
+- file: /home/st/start/communis/Deploy_store/.qa/main_repo_fn => PATH_MAIN_REPO_FN_DIR, env: PATH_MAIN_REPO_FN_DIR=/home/st/start/communis/Deploy_store/.qa/main_repo_fn
+
+flow  :
+
+    - ${HOME}/start/communis/Deploy_store/.qa/main_repo_fn
+    - $HOME/start/communis/Deploy_store/.qa/main_repo_fn
+    - $PATH_FN
+    - ${PATH_FN}
+
+
+- cp file to /home/st/REPOBARE/_repo/plt/actio , env: PATH_MAIN_REPO_FN_DIR=/home/st/REPOBARE/_repo/plt/actio

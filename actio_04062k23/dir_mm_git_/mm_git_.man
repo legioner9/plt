@@ -1,0 +1,68 @@
+## Abbreviatin
+
+    pbln - [p]rimo [b]cp [l]ocal and [n]et
+    pbl  - [p]rimo [b]cp [l]ocal
+    obl  - [o]nce [b]cp [l]ocal 
+    mbln - [m]ain [b]cp [l]ocal and [n]et
+    mbl  - [m]ain [b]cp [l]ocal
+
+## Bind files
+
+mbl $\rightarrow{^{abstract}}\rightarrow$ <flow_name>
+
+mbl.var $\rightarrow{^{abstract}}\rightarrow$ <flow_name.ext>
+
+[mbl.var](../../.d/.var/mm_git_/mbl.var)
+[pbl.var](../../.d/.var/mm_git_/pbl.var)
+[obl.var](../../.d/.var/mm_git_/obl.var)
+[mbln.var](../../.d/.var/mm_git_/mbln.var)
+[mbl.var](../../.d/.var/mm_git_/mbl.var)
+
+[mbl.exl](../../.d/.exl/mm_git_/mbl.exl)
+[pbl.exl](../../.d/.exl/mm_git_/pbl.exl)
+[obl.exl](../../.d/.exl/mm_git_/obl.exl)
+[mbln.exl](../../.d/.exl/mm_git_/mbln.exl)
+[mbl.exl](../../.d/.exl/mm_git_/mbl.exl)
+
+[mbl.list](../../.d/.list/mm_git_/mbl.list)
+[pbl.list](../../.d/.list/mm_git_/pbl.list)
+[obl.list](../../.d/.list/mm_git_/obl.list)
+[mbln.list](../../.d/.var/mm_git_/mbln.list)
+[mbl.list](../../.d/.var/mm_git_/mbl.list)
+
+## Structure function
+
+### arguments
+
+### inner function
+
+#### mm_git_via_list_
+
+    for name_repo in $(f2e <flow_name.list>); do
+
+        arg_string="--tml <flow_name.var> --name <repo_name>"
+        exl_ --list "<flow_name.exl>"
+
+    done
+
+#### mm_git_via_single_
+
+    PS3="eligendi actiones: "
+
+    select name_repo in $(f2e <flow_name.list>); do
+
+        dilectus=$item
+        break
+
+    done
+
+    arg_string="--tml <flow_name.var> --name <repo_name>"
+    exl_ --list "<flow_name.exl>"
+
+
+
+
+
+
+
+

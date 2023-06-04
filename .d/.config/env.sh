@@ -31,7 +31,7 @@ CEXEC_PROJECT_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_ex
 
 MAINEDITOR="codium"
 
-#? for rebase fn to plt; after copy to plt rename do that: PATH_MAIN_REPO_FN_DIR=${PLT_PATH}"/.d/actio
+#? for rebase fn to plt; after copy to plt rename do that: PATH_MAIN_REPO_FN_DIR=${PLT_PATH}"/actio
 PATH_MAIN_REPO_FN_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn"
 
 #? .args .canons  .config .exl .flumen_tempus .ifs .insert .lists .man .pullsh  .puml .tml  .tst  .var  .vexillum  .warg
