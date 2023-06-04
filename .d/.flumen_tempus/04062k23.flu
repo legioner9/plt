@@ -20,4 +20,6 @@
     - start from menu
 
 ## wrp2_ 
-    - add --_xxx(_) postfix (_), mean that after that argument should not be taken into account in finally  
+    - ^ prefix to prevent add to exec string
+
+## to do far tst_ wrp2_ with ^
