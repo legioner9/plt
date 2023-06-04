@@ -144,7 +144,7 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTLS:
-required
+required: --_dir {root_dir} --_do {1 doit or 0 onlycheck}
 optional -verbose (not garg parsed, for echo main param function) 
 CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 _exdeb<num> exec ${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
@@ -160,7 +160,7 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} --_dir ~/start/communis
+${FNN} --_dir ~/start/communis/Deploy_store/.qa/main_repo_fn  --_do 0
 ${NORMAL}"
         return 0
     fi
@@ -329,6 +329,9 @@ ${NORMAL}"
     tmp_path="${HOME}/TMP/UPD_fn"
 
     grep -rlE "\.qa/main_repo_fn|PATH_FN" "${dir_}" >"${tmp_path}"
+    cat "${tmp_path}"
+    echo "see ${tmp_path} continue or ^C"
+    read 
     for path in $(cat "${tmp_path}"); do
 
         local path_file="${path}"
@@ -340,8 +343,8 @@ ${NORMAL}"
         if _stringContain_ '/res' "$path"; then
             {
                 echo /res
-                upg_fn_to_plt_in_pre_
-                continue
+            #   [ $do_ -eq 1 ]  upg_fn_to_plt_in_pre_
+            #     continue
             }
         fi
 
@@ -377,13 +380,13 @@ ${NORMAL}"
             }
         fi
 
-        if _stringContain_ '.pre' "$path"; then
-            {
-                echo .pre
-                upg_fn_to_plt_in_pre_
-                continue
-            }
-        fi
+        # if _stringContain_ '.pre' "$path"; then
+        #     {
+        #         echo .pre
+        #         upg_fn_to_plt_in_pre_
+        #         continue
+        #     }
+        # fi
 
         # echo "$(basename "$path")"
         # codium "$path"
