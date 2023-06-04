@@ -386,13 +386,12 @@ ${NORMAL}"
 
         local path_file="${path}"
         ((n++))
-        echo -e "${GREEN}${n} file://$path_file${NORMAL}"                       #print variable
+        echo -e "${GREEN}${n} file://$path_file${NORMAL}" #print variable
         # echo -e "${ULINE}exl_ --list ${PATH_EXL_DIR}/upg_fn_to_plt_.exl${NORMAL}" #repit commands
 
         exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 1>/dev/null
 
-        # exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl 
-
+        # exl_ --list "${PATH_EXL_DIR}"/upg_fn_to_plt_.exl
 
     done
 

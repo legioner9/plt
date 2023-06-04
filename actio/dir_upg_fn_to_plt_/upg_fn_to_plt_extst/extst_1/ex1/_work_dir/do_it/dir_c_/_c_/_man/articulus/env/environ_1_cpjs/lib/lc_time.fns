@@ -1,1 +1,0 @@
- int usleep_lc_time(useconds_t usec)

@@ -1,1 +1,0 @@
-## ###Conditional Operator In C

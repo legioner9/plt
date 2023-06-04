@@ -1,5 +1,0 @@
-_longjmp
-longjmp
-siglongjmp
-_setjmp
-sigsetjmp

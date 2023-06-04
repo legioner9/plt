@@ -1,8 +1,0 @@
-#include <time.h>
-struct tm *getdate(const char *string);
-
-extern int getdate_err;
-
-#include <time.h>
-
-int getdate_r(const char *string, struct tm *res);

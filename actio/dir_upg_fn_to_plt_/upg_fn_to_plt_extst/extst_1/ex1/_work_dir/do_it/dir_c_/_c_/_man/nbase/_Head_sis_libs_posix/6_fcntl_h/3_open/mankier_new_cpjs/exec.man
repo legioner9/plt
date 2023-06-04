@@ -1,2 +1,0 @@
-t fcntl::open_с
-t unistl::read_с

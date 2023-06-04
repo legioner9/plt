@@ -1,7 +1,0 @@
-eval exl_file=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.exl/mm_scr_.exl
-
-eval tml_file=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.tml/mm_scr_.tml
-
-eval dir_insert=${PLT_PATH}/.d/.mul/mm_scr_/${num_flow}/.insert
-
-eval file_path=${PPWD}/${name_file}.sh

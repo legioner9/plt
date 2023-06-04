@@ -1,1 +1,0 @@
-## ###Number Patterns In C

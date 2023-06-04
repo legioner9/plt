@@ -1,1 +1,0 @@
-## langinfo_h

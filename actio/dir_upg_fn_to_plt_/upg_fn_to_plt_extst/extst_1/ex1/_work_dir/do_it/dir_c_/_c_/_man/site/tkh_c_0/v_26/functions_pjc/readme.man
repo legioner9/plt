@@ -1,6 +1,0 @@
-## stack in after C()
-
-    C() (${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/tkh_c_0/v_26/functions_pjc/main.c:49)
-    B() (${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/tkh_c_0/v_26/functions_pjc/main.c:42)
-    A() (${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/tkh_c_0/v_26/functions_pjc/main.c:35)
-    main(int argc, char ** argv) (${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_man/site/tkh_c_0/v_26/functions_pjc/main.c:26)

@@ -1,2 +1,0 @@
-t unistd::lockf_с
-t unistd::lseek_с

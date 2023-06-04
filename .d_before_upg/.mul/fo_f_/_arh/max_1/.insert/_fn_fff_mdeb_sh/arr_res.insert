@@ -1,2 +1,0 @@
-arr+=("${FNN}_set_1:   ")
-res+=("${FNN}_set_1")

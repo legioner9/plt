@@ -1,1 +1,0 @@
-## ###Inline Function In C

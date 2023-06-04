@@ -1,1 +1,0 @@
-## strncasecmp_l

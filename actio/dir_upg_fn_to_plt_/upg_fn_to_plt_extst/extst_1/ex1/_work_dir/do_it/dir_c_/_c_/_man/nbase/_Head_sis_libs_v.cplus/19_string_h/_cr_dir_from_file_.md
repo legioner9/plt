@@ -1,3 +1,0 @@
-functions
-types
-macro constants

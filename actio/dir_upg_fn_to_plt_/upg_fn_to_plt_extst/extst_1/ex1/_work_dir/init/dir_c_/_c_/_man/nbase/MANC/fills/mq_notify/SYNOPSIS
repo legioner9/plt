@@ -1,3 +1,0 @@
-#include <mqueue.h>
-
-int mq_notify(mqd_t mqdes, const struct sigevent *sevp);

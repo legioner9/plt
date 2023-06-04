@@ -1,1 +1,0 @@
-name_repo=$(prs_f -n $(git config --get remote.origin.url))

@@ -1,2 +1,0 @@
-function validate(){var a=document.getElementById("s").value;if(a.replace(/^\s+(.*?)\s+$/,'$1')==''){alert('Ключевое слово поиска не может быть пустым.');return false;}}
-function pagedSearch(index){document.getElementById("curPage").value=index;document.getElementById("searchForm").submit();}

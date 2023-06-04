@@ -1,5 +1,0 @@
-## man lc_1 lib CLang
-
-### int npt_ArIntPt_lc_1(int *pt);
-
-exit(1) if ptr_arg == NULL , message : alloc FAILs
