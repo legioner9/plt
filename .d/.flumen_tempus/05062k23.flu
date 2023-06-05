@@ -1,0 +1,4 @@
+## wrp2_extst/extst_1/ex1/_flow_tst.sh
+
+    - nenci file --_(x|c)(x|n)d (/tmp|/tmpx)
+    - nenci file --_(x|c)(x|n)d (/tmp|/tmpx) --_(x|c)(x|n)d (^/etc|/^etcx)

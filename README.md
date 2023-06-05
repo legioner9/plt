@@ -7,3 +7,5 @@
 ## [discriptions](.d/.lego)
     
 [about_structure_repo](.d/.lego/about_structure_repo.man)
+
+[recommendation](.d/.lego/recommendation.man)
