@@ -1,1 +1,7 @@
-## {echo [str] >&2} -> {plt_exit [str]}
+## RCM_0:
+    {echo [str] >&2} -> {plt_exit [str]}
+
+## RCM_1
+not change ground function <name><n>_:
+    - create new in plt with <name><n+1>_
+    - mark <name><n>_ as deprecated 

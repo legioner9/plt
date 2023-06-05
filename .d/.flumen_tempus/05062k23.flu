@@ -2,3 +2,5 @@
 
     - nenci file --_(x|c)(x|n)d (/tmp|/tmpx)
     - nenci file --_(x|c)(x|n)d (/tmp|/tmpx) --_(x|c)(x|n)d (^/etc|/^etcx)
+
+## cancel is_est_ echo >&2;return 1 => plt_exit;return 1
