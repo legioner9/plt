@@ -47,6 +47,7 @@ PATH_MAN_DIR="${PLT_PATH}"/.d/.man
 PATH_PULLSH_DIR="${PLT_PATH}"/.d/.pullsh
 PATH_PUML_DIR="${PLT_PATH}"/.d/.puml
 PATH_TML_DIR="${PLT_PATH}"/.d/.tml
+PATH_MUL_DIR="${PLT_PATH}"/.d/.mul
 PATH_TST_DIR="${PLT_PATH}"/.d/.tst
 PATH_VAR_DIR="${PLT_PATH}"/.d/.var
 PATH_VEXILLUM_DIR="${PLT_PATH}"/.d/.vexillum

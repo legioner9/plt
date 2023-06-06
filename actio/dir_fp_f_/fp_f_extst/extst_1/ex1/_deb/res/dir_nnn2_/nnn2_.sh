@@ -40,7 +40,7 @@ local verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || {
 echo -e "${CYAN}---$FNN() ${ARGS[*]} ---${NORMAL}"                        #started functions
-echo -e "${GREEN}\${FN_DIR}/dir_${FNN} = ${FN_DIR}/dir_${FNN}${NORMAL}" #print variable
+echo -e "${GREEN}\${FN_DIR}/dir_\${FNN} = ${FN_DIR}/dir_${FNN}${NORMAL}" #print variable
 echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}"                               #print variable
 }
     #{def_const}

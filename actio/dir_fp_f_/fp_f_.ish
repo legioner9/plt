@@ -15,11 +15,11 @@
         return 1
     fi
 
-    exl_ --list ${PLT_PATH}/.d/.mul/fo_f_/env/flow_env.exl
+    exl_ --list ${PLT_PATH}/.d/.mul/fp_f_/env/flow_env.exl
 
     plt_pause "(${name_fn_}) create flow=${flow_} !!! in ($PWD/dir_${name_fn_}/) ?"
 
     # exl_ --list "${exl_file}"
     # echo | . ${sh_file}
 
-    . ${sh_file}
+    . ${main_sh}
