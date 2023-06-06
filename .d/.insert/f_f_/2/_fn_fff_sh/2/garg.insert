@@ -17,9 +17,11 @@ unset_autoargs_{name_fn_}() {
     unset ptr_if_
     unset ptr_sem_
 
-    # any1_=0
-    # unset any2_
+    #? 
+    #{prepear_args}
 }
+
+#? prepear variable space - unset and 0set
 
 unset_autoargs_{name_fn_}
 
@@ -28,6 +30,8 @@ unset_autoargs_{name_fn_}
 # } && {
 #     garg_ ${FNN} $@ 1>/dev/null
 # }
+
+#? validate ARGS
 
 if ! garg2e2_ "${ARGS[@]}" 1>/dev/null; then
     plt_exit " ${FNN} return 1: ${FNLOCK}"
@@ -38,9 +42,12 @@ fi
 local g_args=($(garg2e2_ "${ARGS[@]}"))
 #? e_args is {ARGS[\@]} without cntl and cmtl_value - as it's free
 local e_args=($(earg2e2_ "${ARGS[@]}"))
+#? {ARGS[\@]} without --_ -_ ^ prefix
+local f_args=($(farg2e2_ "${ARGS[@]}"))
 
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\\\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
 
+#? up local variable from ARGS
 for strex in $(garg2e2_ "${ARGS[@]}"); do
     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     eval local $strex

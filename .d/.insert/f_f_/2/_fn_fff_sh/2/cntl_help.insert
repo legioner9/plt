@@ -1,10 +1,12 @@
 if [ "-h" == "$1" ]; then
     echo -e "${CYAN} ${FNN}() help: 
+        AUTH:?legioner9@inbox.ru
+        DEPR:?(N|Y)
         MAIN: 
         NAME: ${FNN}()
         WHERE?:(only in root dir)Y/N
         WHAT?:(only abs path | only name file | 
-            any stile path - if arg no rout full_path be pwd/\$name , if name root name instead)
+            any stile path - if arg no rout full_path be pwd/\\\$name , if name root name instead)
         ARGS: 
         \\\$1
         [ ,\\\$2 num_menu ]
@@ -20,7 +22,7 @@ if [ "-h" == "$1" ]; then
         
         TAGS: (fs|net|)
         IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
-        FLOW: (process | subprocess (no read pause only plt_err return \$errno) | interpritator)
+        FLOW: (process | subprocess (no read pause only plt_err return \\\$errno) | interpritator)
         RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
         ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
         WARN: 
