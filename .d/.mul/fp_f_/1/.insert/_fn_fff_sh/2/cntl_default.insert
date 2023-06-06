@@ -2,7 +2,7 @@
 c_up "${FN_FN_DIR}" 1>/dev/null
 
 if [ "_man" == "$1" ]; then
-    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/"$FNN".man ---${NORMAL}" #start files
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
     edit_ ${FN_DIR}/dir_$FNN/"$FNN".man
     return 0
 fi
@@ -10,12 +10,40 @@ fi
 if [ "_tst" == "$1" ]; then
 
     local tst_file="${FN_DIR}/dir_$FNN/$FNN"tst/exec.tst
-    if [ -f ${tst_file} ]; then
-        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . "${tst_file}" ---${NORMAL}" #start files
+    if [ -f "${tst_file}" ]; then
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
         . "${tst_file}"
         return $?
     else
-        echo -e "${RED}--- not file: ${tst_file} ---${NORMAL}" #exit 1
+        plt_exit "not exist file: ${tst_file} " #exit 1
+        return 1
+    fi
+
+fi
+
+if [ "_puml" == "$1" ]; then
+
+    local puml_file=${FN_DIR}/${FNN}.puml
+    if [ -f "${puml_file}" ]; then
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- puml_ ${puml_file} -_drawing ---${NORMAL}" #start files
+        puml_ "${puml_file}" -_drawing
+        return $?
+    else
+        plt_exit "not exist file: ${puml_file} " #exit 1
+        return 1
+    fi
+
+fi
+
+if [ "_flw" == "$1" ]; then
+
+    local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
+    if [ -f "${flw_file}" ]; then
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
+        . "${flw_file}"
+        return $?
+    else
+        plt_exit "not exist file: ${flw_file} " #exit 1
         return 1
     fi
 
@@ -23,13 +51,27 @@ fi
 
 for int in 1 2 3 4; do
     if [ "_extst${int}" == "$1" ]; then
-        extst_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/exec._extst
-        if [ -f ${extst_num_file} ]; then
+        extst_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/exec.extst
+        if [ -f "${extst_num_file}" ]; then
             [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
             . ${extst_num_file}
             return 0
         else
-            plt_exit "not exist file ${extst_num_file}"
+            plt_exit "not exist file: ${extst_num_file} "
+            return 1
+        fi
+    fi
+done
+
+for int in 1 2 3 4; do
+    if [ "_exdeb${int}" == "$1" ]; then
+        exdeb_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/_flow_tst.sh
+        if [ -f "${exdeb_num_file}" ]; then
+            [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
+            . ${exdeb_num_file}
+            return 0
+        else
+            plt_exit "not exist file: ${exdeb_num_file} "
             return 1
         fi
     fi
@@ -37,27 +79,13 @@ done
 
 if [ "_extst" == "$1" ]; then
 
-    local extst_file="${FN_DIR}/dir_$FNN/$FNN"extst/extst_1/start_exec.tst
+    local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
-        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . "${extst_file}" ---${NORMAL}" #start files
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
         . "${extst_file}"
         return $?
     else
-        echo -e "${RED}--- not file: ${extst_file} ---${NORMAL}" #exit 1
-        return 1
-    fi
-
-fi
-
-if [ "_utst" == "$1" ]; then
-
-    local utst_file=${FN_DIR}/dir_$FNN/${FNN}extst/extst_1/start_exec.tst
-    if [ -f ${utst_file} ]; then
-        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . "${utst_file}" ---${NORMAL}" #start files
-        . "${utst_file}"
-        return $?
-    else
-        echo -e "${RED}--- not file: ${utst_file} ---${NORMAL}" #exit 1
+        plt_exit "not exist file: ${extst_file} " #exit 1
         return 1
     fi
 
@@ -65,32 +93,32 @@ fi
 
 if [ "_lst" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-    edit_ ${FN_DIR}/dir_${FNN}/${FNN}.lst
+    edit_ ${FN_DIR}/${FNN}.lst
     return 0
 fi
 
 if [ "_go" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
-    edit_ ${FN_DIR}/dir_${FNN}
+    edit_ ${FN_DIR}
     return 0
 fi
 
 if [ "_deb" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
-    . ${FN_CONT_DIR}/_default/default_deb.sh
+    . ${FN_DEFAULT_DIR}/default_deb.sh
     return 0
 fi
 
 for int in 1 2 3 4; do
     if [ "_exdeb${int}" == "$1" ]; then
         # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
-        exdeb_num_file=${FN_DIR}/dir_${FNN}/mm_scr_extst/extst_1/ex${int}_tst/_flow_tst.sh
-        if [ -f ${exdeb_num_file} ]; then
+        exdeb_num_file=${FN_DIR}/$FNNextst/extst_1/ex${int}_tst/_flow_tst.sh
+        if [ -f "${exdeb_num_file}" ]; then
             [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
             . ${exdeb_num_file}
             return 0
         else
-            plt_exit "not exist file ${exdeb_num_file}"
+            plt_exit "not exist file: ${exdeb_num_file} "
             return 1
         fi
     fi
