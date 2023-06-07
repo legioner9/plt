@@ -1,12 +1,12 @@
 @startuml rete
-garg2e2_ -> {name_fn_} 
-farg2e2_ -> {name_fn_}
-echo_deb_ -> {name_fn_}
-{name_fn_} -> {name_fn_}:is_num
-{name_fn_} -> {name_fn_}:exit_err_{name_fn_}
-{name_fn_} -> {name_fn_}:exit_reg_{name_fn_}
-{name_fn_} -> {name_fn_}:unset_autoargs_{name_fn_}
+garg2e2_ -> nnn2_ 
+farg2e2_ -> nnn2_
+echo_deb_ -> nnn2_
+nnn2_ -> nnn2_:is_num
+nnn2_ -> nnn2_:exit_err_nnn2_
+nnn2_ -> nnn2_:exit_reg_nnn2_
+nnn2_ -> nnn2_:unset_autoargs_nnn2_
 ' {wrap_fn}
-' fnn o-> {name_fn_}
+' fnn o-> nnn2_
 ' {body_fn}
 @enduml

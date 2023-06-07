@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/bash 
+#! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
 wrp2_ mkdir --_cnd "${PWD}/dir_${name_fn_}"
 

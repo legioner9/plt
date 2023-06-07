@@ -1,10 +1,13 @@
-## RCM_0:
+## RCM_PLT_EXIT:
     {echo [str] >&2} -> {plt_exit [str]}
 
-## RCM_1
+## RCM_NOTCH_DOCR
 not change ground function <name><n>_:
     - create new in plt with <name><n+1>_
     - mark <name><n>_ as deprecated 
 
 ## RCM_ISH
 mayst use .ish
+
+## RCM_UPG_PATH
+allways upg_path_ after create file
