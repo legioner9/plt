@@ -161,9 +161,11 @@ if [ "-h" == "$1" ]; then
 echo -e "${CYAN} ${FNN}() help: 
 .        MAIN: 
 .        NAME: ${FNN}()
-.        WHERE?:(only in root dir)Y/N
-.        WHAT?:(only abs path | only name file | 
-.            any stile path - if arg no rout full_path be pwd/$name , if name root name instead)
+.        WHERE:?(only in root dir)Y/N
+.        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
+.            if arg no rout full_path be pwd/<name_file_with_head_path> , if name root name instead
+.        AUTH:?legioner9@inbox.ru
+.        DEPR:?(Y|N)
 .        ARGS: 
 .        \$1
 .        [ ,\$2 num_menu ]
@@ -171,8 +173,10 @@ echo -e "${CYAN} ${FNN}() help:
 .            required
 .            optional -verbose (not garg parsed, for echo main param function) 
 .        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
+.                -h : this 
 .                _go : edit_ ${FN_DIR}
 .                _list : edit_ ${FN_DIR}/${FNN}.list
+.            manual 
 .                _man : edit_ ${FN_DIR}/${FNN}.man
 .                _puml : puml_ ${FN_DIR}/${FNN}.puml -_drawing
 .            tst single mane :

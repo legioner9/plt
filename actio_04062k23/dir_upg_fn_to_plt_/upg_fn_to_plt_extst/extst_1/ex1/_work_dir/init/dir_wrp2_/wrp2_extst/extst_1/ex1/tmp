@@ -1,3 +1,0 @@
-file /tmp/
-/tmp/: sticky, directory // now
-/tmp: sticky directory   // old
