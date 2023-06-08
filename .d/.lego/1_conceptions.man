@@ -1,0 +1,4 @@
+## WRAP_LOGIC
+standart_wrap_file contane ancor to logical_file
+## NOT_CHANGE_BUT_REBUILD
+change standart_file only may be rebuild as: FRAME_FILE, rebuild_process, environment_rebuild_process_FOR_FRAME_FILE

@@ -11,3 +11,6 @@ mayst use .ish
 
 ## RCM_UPG_PATH
 allways upg_path_ after create file
+
+## RCM_TST_BASH
+test bash (as file!) utils, use try not use return value and current std - only exist std (as diff)
