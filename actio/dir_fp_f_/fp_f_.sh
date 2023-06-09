@@ -46,7 +46,11 @@ fp_f_() {
     #{def_const}
 
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- c_up "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
-    c_up "${FN_FN_DIR}" 1>/dev/null
+
+    #? c_up module
+    # c_up "${FN_FN_DIR}" 1>/dev/null
+    # c_up "${FN_FN_DIR}"/.cntl 1>/dev/null
+
     if [ "_man" == "$1" ]; then
         [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/"$FNN".man ---${NORMAL}" #start files
         edit_ ${FN_DIR}/dir_$FNN/"$FNN".man
@@ -335,7 +339,7 @@ ${NORMAL}"
     # # echo | . ${sh_file}
 
     # . ${sh_file}
-    
+
     . ${FN_DIR}/dir_${FNN}/${FNN}.ish
 
     # ------------------------------------------
