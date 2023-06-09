@@ -1,1 +1,5 @@
-## like 1 flow but NFAA design in lex/
+## dot files fp_f_ with NFAA 
+
+create in dir:
+
+    fp_f_ --_name_fn lll2_ --_dir_fns ${PATH_CURR_REPO}/lex/_fo_f_/NFAA_1 --_flow 2

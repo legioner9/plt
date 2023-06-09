@@ -22,7 +22,7 @@
 #? insert to main ${name_fn_}.sh
 src_fn_file=${PWD}/dir_${name_fn_}/${name_fn_}.sh
 
-${_is_est_} ${src_fn_file} -f
+is_est_ ${src_fn_file} -f
 
 cr_f_dir_insert_ --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
 
