@@ -1,13 +1,15 @@
 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- c_up "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
 c_up "${FN_FN_DIR}" 1>/dev/null
 
-if [ "_man" == "$1" ]; then
+#? _ef editfile _ed editdir _tf treatfile _xf start file
+
+if [ "_ef_man" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
     edit_ ${FN_DIR}/dir_$FNN/"$FNN".man
     return 0
 fi
 
-if [ "_tst" == "$1" ]; then
+if [ "_xf_tst" == "$1" ]; then
 
     local tst_file="${FN_DIR}/dir_$FNN/$FNN"tst/exec.tst
     if [ -f "${tst_file}" ]; then
@@ -21,7 +23,7 @@ if [ "_tst" == "$1" ]; then
 
 fi
 
-if [ "_puml" == "$1" ]; then
+if [ "_tf_puml" == "$1" ]; then
 
     local puml_file=${FN_DIR}/${FNN}.puml
     if [ -f "${puml_file}" ]; then
@@ -35,7 +37,7 @@ if [ "_puml" == "$1" ]; then
 
 fi
 
-if [ "_flw" == "$1" ]; then
+if [ "_ef_flw" == "$1" ]; then
 
     local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
     if [ -f "${flw_file}" ]; then
@@ -50,7 +52,7 @@ if [ "_flw" == "$1" ]; then
 fi
 
 for int in 1 2 3 4; do
-    if [ "_extst${int}" == "$1" ]; then
+    if [ "_xf_extst${int}" == "$1" ]; then
         extst_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/exec.extst
         if [ -f "${extst_num_file}" ]; then
             [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
@@ -64,11 +66,11 @@ for int in 1 2 3 4; do
 done
 
 for int in 1 2 3 4; do
-    if [ "_exdeb${int}" == "$1" ]; then
-        exdeb_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/_flow_tst.sh
-        if [ -f "${exdeb_num_file}" ]; then
-            [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-            . ${exdeb_num_file}
+    if [ "_xf_exflw${int}" == "$1" ]; then
+       local exflw_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/_flow_tst.sh
+        if [ -f "${exflw_num_file}" ]; then
+            [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exflw_num_file} ---${NORMAL}" #start files
+            . ${exflw_num_file}
             return 0
         else
             plt_exit "not exist file: ${exdeb_num_file} "
@@ -77,7 +79,7 @@ for int in 1 2 3 4; do
     fi
 done
 
-if [ "_extst" == "$1" ]; then
+if [ "_xf_extst" == "$1" ]; then
 
     local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
@@ -100,6 +102,12 @@ fi
 if [ "_go" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
     edit_ ${FN_DIR}
+    return 0
+fi
+
+if [ "_gomdeb" == "$1" ]; then
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
+    edit_ ${FN_DIR}/dir_${FNN}/_${FNN}/_mdeb
     return 0
 fi
 
@@ -127,5 +135,11 @@ done
 if [ "_mdeb" == "$1" ]; then
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
     ${FNN}mdeb
+    return 0
+fi
+
+if [ "_head" == "$1" ]; then
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+    echo "this is ${FNN} _head - short -help"
     return 0
 fi

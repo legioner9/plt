@@ -12,4 +12,5 @@
 
 P.S.
 
-    .s/Debag/git_short.sh - start short git plt
+    - .s/Debag/git_short.sh - start short git plt
+    - in .d/.mul/fp_f_/2/.insert/_fn_fff_sh/2: add fn_to_mdeb.sh file at _{FNN}/_mdeb and auto add to {FNN}_mdeb fumction menu

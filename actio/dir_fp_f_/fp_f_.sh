@@ -112,6 +112,11 @@ fp_f_() {
         edit_ ${FN_DIR}/dir_${FNN}
         return 0
     fi
+    if [ "_gomdeb" == "$1" ]; then
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
+        edit_ ${FN_DIR}/dir_${FNN}/_${FNN}/_mdeb
+        return 0
+    fi
     if [ "_deb" == "$1" ]; then
         [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
         . ${FN_CONT_DIR}/_default/default_deb.sh

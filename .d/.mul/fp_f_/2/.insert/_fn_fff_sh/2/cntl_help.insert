@@ -26,8 +26,10 @@ if [ "-h" == "$1" ]; then
 .                _deb : . ${FN_CONT_DIR}/_default/default_deb.sh
 .            steps tst single mane :
 .                _flw : . ${FN_DIR}/${FNN}tst/_flow_tst.sh
-.            menu for deb
+.            menu for deb:
 .                _mdeb : . ${FN_DEBUG_DIR}/mdeb.sh
+.            edit dir with _mdeb - work with debug ${FNN}:
+.                _gomdeb : edit_ ${FN_DIR}/dir_${FNN}/_${FNN}/_mdeb
 .            tst all . exec.extst in ${FN_DIR}/${FNN}extst/extst_1
 .                _extst : . ${FN_DIR}/${FNN}extst/extst_1/start_exec.tst
 .            tst <num> (exec.extst)
