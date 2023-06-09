@@ -1,0 +1,19 @@
+#!/bin/bash
+
+local_list=${PLT_PATH}/.d/.tst/local.list
+
+if wrp2_ up_err_ tst --_xxf ${local_list} 1>/dev/null; then
+    echo -e "${BLUE}---INIT0 patch in ${local_list} with EXIT 0---${NORMAL}" #sistem info mesage
+    # exit 0
+    # return 0
+else
+    plt_exit "---INIT0 patch in ${local_list} with EXIT 1" >&2 #sistem info mesage
+    # exit 1
+    return 1
+fi
+
+ cd ${PLT_PATH}
+
+git add .
+
+git commit

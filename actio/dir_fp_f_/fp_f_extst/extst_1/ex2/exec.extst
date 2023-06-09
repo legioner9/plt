@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "${HOME}/.bashrc"
+#. "$HOME/.bashrc"
 
-filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex2//exec._extst 
+filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex2/exec._extst 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -22,6 +22,7 @@ cd "$dir" || plt_exit
 #? if res, pre dirs -> diff -qr | diff -r
 
 flag=1
+diff_="$(diff "$dir"/pre "$dir"/res)"
 if ! diff -q "$dir"/pre "$dir"/res >/dev/null; then
     flag=0
 fi

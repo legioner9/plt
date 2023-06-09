@@ -35,16 +35,18 @@ fi
 
 wrp2_ cd --_xxd "${rdir}" 1>/dev/null
 
-if is_gindir_ "${rdir}" 1>/dev/null; then
+if ! is_gindir_ "${rdir}" 1>/dev/null; then
     plt_exit "${rdir} not under git" 1>/dev/null
     return 1
 fi
 
-wrp2_ cp -fu --_xxf .d/.tst/pre-commit --_xxd .git/hooks 1>/dev/null
+#! copy 
+# wrp2_ cp -fu --_xxf .d/.tst/pre-commit --_xxd .git/hooks 1>/dev/null
+# chmod +x .git/hooks/pre-commit
 
 local_list=.d/.tst/local.list
 
-if wrp2_ up_err_ tst --_xx ${local_list} 1>/dev/null; then
+if wrp2_ up_err_ tst --_xxf ${local_list} 1>/dev/null; then
     echo -e "${BLUE}---INIT0 patch in ${local_list} with EXIT 0---${NORMAL}" #sistem info mesage
     # exit 0
     return 0

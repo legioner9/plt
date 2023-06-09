@@ -1,0 +1,1 @@
+## short git flow ${PLT_PATH}/.s/Debag/git_short.sh
