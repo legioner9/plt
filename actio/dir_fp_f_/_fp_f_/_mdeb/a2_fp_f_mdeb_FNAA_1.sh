@@ -73,6 +73,12 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
+
+    wrp2_ rm -rfv --_cxd ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/dir_lll2_
+
+    echo | fp_f_ --_name_fn lll2_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1 --_flow 2
+
+
 }
 
 cd "${idir}"
