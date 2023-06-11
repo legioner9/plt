@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/a2_fp_f_mdeb_FNAA_1.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/a3_fp_f_mdeb_1_main_to_store_tmp.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a2_fp_f_mdeb_FNAA_1() {
+a3_fp_f_mdeb_1_main_to_store_tmp() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a2_fp_f_mdeb_FNAA_1() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/a2_fp_f_mdeb_FNAA_1.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/a3_fp_f_mdeb_1_main_to_store_tmp.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -56,13 +56,16 @@ ${NORMAL}"
         edit_ "${d_name}/${FNN}".lst
         return 0
     fi
+
+    #! _head must be able
+
+    if [ "_head" == "$1" ]; then
+        echo "a3_fp_f_mdeb_1_main_to_store_tmp: try fp_f_ 1 to _fp_f_/_mdeb/.store/FNAA_1/tmp"
+        return 0
+    fi
     if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
         plt_exit " ${FNN} return 1: ${FNLOCK}"
         return 1
-    fi
-    if [ "_head" == "$1" ]; then
-        echo "a2_fp_f_mdeb_FNAA_1 first deb FNAA"
-        return 0
     fi
     g_args=($(garg2e_ "${ARGS[@]}"))
     [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
@@ -74,27 +77,10 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    read -p "${PLT_PATH}/.d/.mul/fp_f_/1 copy to ${PLT_PATH}/.d/.mul/fp_f_/3 and add FNAA?"
-
     local fnaa_path="${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1"
 
-    wrp2_ rm -rf --_cxd "${fnaa_path}"/res/dir_nnn2_
-    wrp2_ rm -rf --_cxd "${fnaa_path}"/pre/dir_nnn2_
-
-    echo | fp_f_ --_name_fn nnn2_ --_dir_fns "${fnaa_path}"/res --_flow 1
-    wrp2_ cp -rf --_xxd "${fnaa_path}"/res/. --_xxd "${fnaa_path}"/pre
-    wrp2_ rm -rf --_xxd "${fnaa_path}"/res/dir_nnn2_
-    echo | fp_f_ --_name_fn nnn2_ --_dir_fns "${fnaa_path}"/res --_flow 3
-
-    #? compare FNAA with standart nnn2_ - FNAA mast equivalent without FNAA be add
-   local diff_str="diff -r ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/res/dir_nnn2_/ ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/pre/dir_nnn2_/"
-    echo -e "${HLIGHT}--- $diff_str ---${NORMAL}" #start files
-    eval "${diff_str}"
-    # . ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/dir_lll2_/lll2_.sh
-
-    # lll2_
-
-    # lll2_mdeb 2
+    "${_wrp2_}" rm -rf --_cxd "${fnaa_path}"/tmp/dir_lll2_
+    "${_fp_f_}" --_name_fn lll2_ --_dir_fns "${fnaa_path}"/tmp --_flow 1
 
 }
 

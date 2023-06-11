@@ -12,10 +12,10 @@ else
     return 1
 fi
 
- cd ${PLT_PATH}
+cd ${PLT_PATH}
 
 git add .
 
 git commit
 
-git push origin master 
+git push origin master

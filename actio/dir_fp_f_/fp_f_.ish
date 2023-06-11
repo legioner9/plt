@@ -15,7 +15,7 @@
         return 1
     fi
 
-    exl_ --list ${PLT_PATH}/.d/.mul/fp_f_/env/flow_env.exl
+    ${_exl_} --list ${PLT_PATH}/.d/.mul/fp_f_/env/flow_env.exl
 
     plt_pause "(${name_fn_}) create flow=${flow_} !!! in ($PWD/dir_${name_fn_}/) ?"
 
