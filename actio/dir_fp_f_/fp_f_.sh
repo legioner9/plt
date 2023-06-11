@@ -219,11 +219,11 @@ ${NORMAL}"
         return 1
     fi
     #? g_args with cntl=value
-    local g_args=($(garg2e2_ "${ARGS[@]}"))
+    local g_args=($("${_garg2e2_}" "${ARGS[@]}"))
     #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-    local e_args=($(earg2e2_ "${ARGS[@]}"))
+    local e_args=($(${_earg2e2_} "${ARGS[@]}"))
     [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e2_ "${ARGS[@]}"); do
+    for strex in $(${_garg2e2_} "${ARGS[@]}"); do
         [[ 1 -eq ${verbose} ]] || echo "local $strex"
         eval local $strex
     done
