@@ -1,3 +1,5 @@
 #!/bin/bash
 
 _is_est_="is_est_"
+_wrp2_="wrp2_"
+_upg_path_="upg_path_"

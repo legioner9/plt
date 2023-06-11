@@ -87,10 +87,9 @@ ${NORMAL}"
     echo | fp_f_ --_name_fn nnn2_ --_dir_fns "${fnaa_path}"/res --_flow 3
 
     #? compare FNAA with standart nnn2_ - FNAA mast equivalent without FNAA be add
-    diff_str="diff -r ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/res/dir_nnn2_/ \
-${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/pre/dir_nnn2_/"
+    diff_str="diff -r ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/res/dir_nnn2_/ ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/pre/dir_nnn2_/"
     echo -e "${HLIGHT}--- $diff_str ---${NORMAL}" #start files
-    diff -r ${diff_str}
+    eval "${diff_str}"
     # . ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/dir_lll2_/lll2_.sh
 
     # lll2_

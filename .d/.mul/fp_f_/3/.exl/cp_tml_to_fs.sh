@@ -1,7 +1,7 @@
 #!/bin/bash 
 #! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
-wrp2_ mkdir --_cnd "${PWD}/dir_${name_fn_}"
+${_wrp2_} mkdir --_cnd "${PWD}/dir_${name_fn_}"
 
 wrp2_ cp -rf --_xxf "${tml_dir}/f_f_" --_xnf "${PWD}/dir_${name_fn_}/${name_fn_}.sh"
 

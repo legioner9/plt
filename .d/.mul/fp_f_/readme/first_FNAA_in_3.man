@@ -1,0 +1,27 @@
+## init
+
+    diff -r /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/1 /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3
+        diff -r /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/1/.exl/cp_tml_to_fs.sh /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3/.exl/cp_tml_to_fs.sh
+        4c4
+        < wrp2_ mkdir --_cnd "${PWD}/dir_${name_fn_}"
+        ---
+        > ${_wrp2_} mkdir --_cnd "${PWD}/dir_${name_fn_}"
+        diff -r /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/1/.exl/ins_main_fn_puml.sh /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3/.exl/ins_main_fn_puml.sh
+        6c6
+        < is_est_ "${src_puml_file}" -f
+        ---
+        > "${_is_est_}" "${src_puml_file}" -f
+        diff -r /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/1/.exl/main.sh /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3/.exl/main.sh
+        37c37
+        < upg_path_ ${src_fn_file}
+        ---
+        > ${_upg_path_} ${src_fn_file}
+
+    cat '/home/st/REPOBARE/_repo/plt/.d/.frc/a.frc'
+        #!/bin/bash
+        
+        _is_est_="is_est_"
+        _wrp2_="wrp2_"
+        _upg_path_="upg_path_"
+
+## result successe
