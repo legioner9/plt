@@ -3,11 +3,11 @@
 
 ${_wrp2_} mkdir --_cnd "${PWD}/dir_${name_fn_}"
 
-wrp2_ cp -rf --_xxf "${tml_dir}/f_f_" --_xnf "${PWD}/dir_${name_fn_}/${name_fn_}.sh"
+${_wrp2_} cp -rf --_xxf "${tml_dir}/f_f_" --_xnf "${PWD}/dir_${name_fn_}/${name_fn_}.sh"
 
-wrp2_ cp -rf --_xxf "${tml_dir}/file.man" --_xnf "$PWD/dir_${name_fn_}/${name_fn_}.man"
+${_wrp2_} cp -rf --_xxf "${tml_dir}/file.man" --_xnf "$PWD/dir_${name_fn_}/${name_fn_}.man"
 
-wrp2_ cp -rf --_xxf "${tml_dir}/file.lst" --_xnf "$PWD/dir_${name_fn_}/${name_fn_}.lst"
+${_wrp2_} cp -rf --_xxf "${tml_dir}/file.lst" --_xnf "$PWD/dir_${name_fn_}/${name_fn_}.lst"
 
 wrp2_ cp -rf --_xxf "${tml_dir}/file.puml" --_xnf "$PWD/dir_${name_fn_}/${name_fn_}.puml"
 

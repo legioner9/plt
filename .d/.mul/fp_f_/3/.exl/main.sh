@@ -24,9 +24,9 @@ src_fn_file=${PWD}/dir_${name_fn_}/${name_fn_}.sh
 
 ${_is_est_} ${src_fn_file} -f
 
-cr_f_dir_insert_ --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
+${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
 
-cr_f_dir_insert_ --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/2
+${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/2
 
 # name_fn_
 ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_}
@@ -111,7 +111,7 @@ ${_cr_tst_dir_} --name_dir "${name_fn_}"tst --ext tst
 #* work in extst <<<<<<<<<<
 
 #? cr_shgnr_ 2 dir_sys in nearly ${name_fn_}.sh
-eval wrp2_ cd --_xxd ${dir_fns_}/dir_${name_fn_}
+${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
 
 ${_cr_shgnr_} 2 dir_sys
 

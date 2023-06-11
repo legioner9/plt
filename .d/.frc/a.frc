@@ -13,7 +13,7 @@ _plt_exit="plt_exit"
 _plt_info="plt_info"
 
 #? ${_cr_sh_} ${_cr_f_} ${_cr_f_dir_insert_} ${_cr_shfn_} ${_cr_shgnr_} ${_cr_tst_dir_}
-#? ${_cr_tst_sys_} ${} ${}
+#? ${_cr_tst_sys_} ${_cr_f_dir_insert_} ${} ${} ${} ${}
 _cr_sh_="cr_sh_"
 _cr_f_="cr_f_"
 _cr_f_dir_insert_="cr_f_dir_insert_"
@@ -21,8 +21,9 @@ _cr_shfn_="cr_shfn_"
 _cr_shgnr_="cr_shgnr_"
 _cr_tst_dir_="cr_tst_dir_"
 _cr_tst_sys_="cr_tst_sys_"
+_cr_f_dir_insert_="cr_f_dir_insert_"
 
-#? ${_garg2e2_}  ${_farg2e2_} ${_earg2e2_} ${}
+#? ${_garg2e2_}  ${_farg2e2_} ${_earg2e2_} ${} ${} ${} ${}
 _garg2e2_="garg2e2_"
 _farg2e2_="farg2e2_"
 _earg2e2_="earg2e2_"
