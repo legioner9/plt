@@ -214,7 +214,7 @@ ${NORMAL}"
     # } && {
     #     garg_ ${FNN} $@ 1>/dev/null
     # }
-    if ! garg2e2_ "${ARGS[@]}" 1>/dev/null; then
+    if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
         plt_exit " ${FNN} return 1: ${FNLOCK}"
         return 1
     fi

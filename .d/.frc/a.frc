@@ -5,3 +5,13 @@ _wrp2_="wrp2_"
 _upg_path_="upg_path_"
 _exl_="exl_"
 _fp_f_="fp_f_"
+
+_plt_pause="plt_pause"
+_plt_exit="plt_exit"
+_plt_info="plt_info"
+
+_garg2e2_="garg2e2_"
+_farg2e2_="farg2e2_"
+_earg2e2_="earg2e2_"
+
+_prs_f="prs_f"
