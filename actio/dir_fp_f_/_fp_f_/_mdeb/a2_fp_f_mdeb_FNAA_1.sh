@@ -74,10 +74,28 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    wrp2_ rm -rfv --_cxd ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/dir_lll2_
+    read -p "${PLT_PATH}/.d/.mul/fp_f_/1 copy to ${PLT_PATH}/.d/.mul/fp_f_/3 and add FNAA?"
 
-    echo | fp_f_ --_name_fn lll2_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1 --_flow 2
+    fnaa_path="${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1"
 
+    wrp2_ rm -rf --_cxd "${fnaa_path}"/res/dir_nnn2_
+    wrp2_ rm -rf --_cxd "${fnaa_path}"/pre/dir_nnn2_
+
+    echo | fp_f_ --_name_fn nnn2_ --_dir_fns "${fnaa_path}"/res --_flow 1
+    wrp2_ cp -rf --_xxd "${fnaa_path}"/res/. --_xxd "${fnaa_path}"/pre
+    wrp2_ rm -rf --_xxd "${fnaa_path}"/res/dir_nnn2_
+    echo | fp_f_ --_name_fn nnn2_ --_dir_fns "${fnaa_path}"/res --_flow 3
+
+    #? compare FNAA with standart nnn2_ - FNAA mast equivalent without FNAA be add
+    diff_str="diff -r ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/res/dir_nnn2_/ \
+${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/pre/dir_nnn2_/"
+    echo -e "${HLIGHT}--- $diff_str ---${NORMAL}" #start files
+    diff -r ${diff_str}
+    # . ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_mdeb/.store/FNAA_1/dir_lll2_/lll2_.sh
+
+    # lll2_
+
+    # lll2_mdeb 2
 
 }
 

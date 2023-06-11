@@ -1,0 +1,7 @@
+# dir is:
+## .d/.mul/fp_f_/1 stable
+## .d/.mul/fp_f_/2 fiches for 1
+## .d/.mul/fp_f_/3 FNAA for 1 
+    - copy 1 to 2
+    - add any FNAA fiches
+    - compare work 1 with 2

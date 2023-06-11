@@ -2,4 +2,4 @@
 
 create in dir:
 
-fp_f_ --_name_fn lll2_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_debug/NFAA_1 --_flow 2
+fp_f_ --_name_fn lll2_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/_fp_f_/_debug/NFAA_1 --_flow 3

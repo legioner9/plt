@@ -77,7 +77,7 @@ ${NORMAL}"
     arr=()
     res=()
 
-    c_up "$(pwd)" >/dev/null
+    wrp2_ c_up --_xxd "$(pwd)"
 
     for res_ in *; do
         # echo -e "${GREEN}\$arr_ = $arr_${NORMAL}" #print variable
