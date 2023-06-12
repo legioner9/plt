@@ -8,6 +8,7 @@ _exl_="exl_"
 _fp_f_="fp_f_"
 _obs_quis_="obs_quis_"
 
+#? ${_plt_pause} ${_plt_exit} ${_plt_info} ${}
 _plt_pause="plt_pause"
 _plt_exit="plt_exit"
 _plt_info="plt_info"
@@ -28,6 +29,12 @@ _garg2e2_="garg2e2_"
 _farg2e2_="farg2e2_"
 _earg2e2_="earg2e2_"
 
-#? ${_prs_f} ${_edit_} ${} ${} ${} ${} ${} ${}
+#? ${_prs_f} ${_edit_} ${_c_up} ${_is_num} ${_abs_path} ${_is_amount_arg} ${_puml_}
+#? ${} ${} ${} ${} ${} 
 _prs_f="prs_f"
 _edit_="edit_"
+_c_up="c_up"
+_is_num="is_num"
+_abs_path="abs_path"
+_is_amount_arg="is_amount_arg"
+_puml_="puml_"

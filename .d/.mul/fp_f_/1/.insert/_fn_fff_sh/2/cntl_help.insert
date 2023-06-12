@@ -15,10 +15,10 @@ if [ "-h" == "$1" ]; then
 .            optional -verbose (not garg parsed, for echo main param function) 
 .        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 .                -h : this 
-.                _go : edit_ ${FN_DIR}
-.                _list : edit_ ${FN_DIR}/${FNN}.list
+.                _go : ${_edit_} ${FN_DIR}
+.                _list : ${_edit_} ${FN_DIR}/${FNN}.list
 .            manual 
-.                _man : edit_ ${FN_DIR}/${FNN}.man
+.                _man : ${_edit_} ${FN_DIR}/${FNN}.man
 .                _puml : puml_ ${FN_DIR}/${FNN}.puml -_drawing
 .            tst single mane :
 .                _tst : . ${FN_DIR}/${FNN}tst/exec.tst

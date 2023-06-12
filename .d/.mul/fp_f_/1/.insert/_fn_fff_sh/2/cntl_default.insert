@@ -1,9 +1,9 @@
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- c_up "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
-c_up "${FN_FN_DIR}" 1>/dev/null
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_c_up} "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
+${_c_up} "${FN_FN_DIR}" 1>/dev/null
 
 if [ "_man" == "$1" ]; then
-    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
-    edit_ ${FN_DIR}/dir_$FNN/"$FNN".man
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
+    ${_edit_} ${FN_DIR}/dir_$FNN/"$FNN".man
     return 0
 fi
 
@@ -15,7 +15,7 @@ if [ "_tst" == "$1" ]; then
         . "${tst_file}"
         return $?
     else
-        plt_exit "not exist file: ${tst_file} " #exit 1
+        ${_plt_exit} "not exist file: ${tst_file} " #exit 1
         return 1
     fi
 
@@ -29,7 +29,7 @@ if [ "_puml" == "$1" ]; then
         puml_ "${puml_file}" -_drawing
         return $?
     else
-        plt_exit "not exist file: ${puml_file} " #exit 1
+        ${_plt_exit} "not exist file: ${puml_file} " #exit 1
         return 1
     fi
 
@@ -43,7 +43,7 @@ if [ "_flw" == "$1" ]; then
         . "${flw_file}"
         return $?
     else
-        plt_exit "not exist file: ${flw_file} " #exit 1
+        ${_plt_exit} "not exist file: ${flw_file} " #exit 1
         return 1
     fi
 
@@ -57,7 +57,7 @@ for int in 1 2 3 4; do
             . ${extst_num_file}
             return 0
         else
-            plt_exit "not exist file: ${extst_num_file} "
+            ${_plt_exit} "not exist file: ${extst_num_file} "
             return 1
         fi
     fi
@@ -71,7 +71,7 @@ for int in 1 2 3 4; do
             . ${exdeb_num_file}
             return 0
         else
-            plt_exit "not exist file: ${exdeb_num_file} "
+            ${_plt_exit} "not exist file: ${exdeb_num_file} "
             return 1
         fi
     fi
@@ -85,21 +85,21 @@ if [ "_extst" == "$1" ]; then
         . "${extst_file}"
         return $?
     else
-        plt_exit "not exist file: ${extst_file} " #exit 1
+        ${_plt_exit} "not exist file: ${extst_file} " #exit 1
         return 1
     fi
 
 fi
 
 if [ "_lst" == "$1" ]; then
-    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-    edit_ ${FN_DIR}/${FNN}.lst
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
+    ${_edit_} ${FN_DIR}/${FNN}.lst
     return 0
 fi
 
 if [ "_go" == "$1" ]; then
-    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
-    edit_ ${FN_DIR}
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
+    ${_edit_} ${FN_DIR}
     return 0
 fi
 
@@ -118,7 +118,7 @@ for int in 1 2 3 4; do
             . ${exdeb_num_file}
             return 0
         else
-            plt_exit "not exist file: ${exdeb_num_file} "
+            ${_plt_exit} "not exist file: ${exdeb_num_file} "
             return 1
         fi
     fi

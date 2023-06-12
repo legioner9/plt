@@ -45,11 +45,11 @@ echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}"                               #print v
 }
     #{def_const}
 
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- c_up "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
-c_up "${FN_FN_DIR}" 1>/dev/null
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_c_up} "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
+${_c_up} "${FN_FN_DIR}" 1>/dev/null
 if [ "_man" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
-edit_ ${FN_DIR}/dir_$FNN/"$FNN".man
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
+${_edit_} ${FN_DIR}/dir_$FNN/"$FNN".man
 return 0
 fi
 if [ "_tst" == "$1" ]; then
@@ -59,7 +59,7 @@ if [ -f "${tst_file}" ]; then
 . "${tst_file}"
 return $?
 else
-plt_exit "not exist file: ${tst_file} " #exit 1
+${_plt_exit} "not exist file: ${tst_file} " #exit 1
 return 1
 fi
 fi
@@ -70,7 +70,7 @@ if [ -f "${puml_file}" ]; then
 puml_ "${puml_file}" -_drawing
 return $?
 else
-plt_exit "not exist file: ${puml_file} " #exit 1
+${_plt_exit} "not exist file: ${puml_file} " #exit 1
 return 1
 fi
 fi
@@ -81,7 +81,7 @@ if [ -f "${flw_file}" ]; then
 . "${flw_file}"
 return $?
 else
-plt_exit "not exist file: ${flw_file} " #exit 1
+${_plt_exit} "not exist file: ${flw_file} " #exit 1
 return 1
 fi
 fi
@@ -93,7 +93,7 @@ if [ -f "${extst_num_file}" ]; then
 . ${extst_num_file}
 return 0
 else
-plt_exit "not exist file: ${extst_num_file} "
+${_plt_exit} "not exist file: ${extst_num_file} "
 return 1
 fi
 fi
@@ -106,7 +106,7 @@ if [ -f "${exdeb_num_file}" ]; then
 . ${exdeb_num_file}
 return 0
 else
-plt_exit "not exist file: ${exdeb_num_file} "
+${_plt_exit} "not exist file: ${exdeb_num_file} "
 return 1
 fi
 fi
@@ -118,18 +118,18 @@ if [ -f ${tst_file} ]; then
 . "${extst_file}"
 return $?
 else
-plt_exit "not exist file: ${extst_file} " #exit 1
+${_plt_exit} "not exist file: ${extst_file} " #exit 1
 return 1
 fi
 fi
 if [ "_lst" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-edit_ ${FN_DIR}/${FNN}.lst
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
+${_edit_} ${FN_DIR}/${FNN}.lst
 return 0
 fi
 if [ "_go" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- edit_ ${FN_DIR}/ ---${NORMAL}" #start files
-edit_ ${FN_DIR}
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
+${_edit_} ${FN_DIR}
 return 0
 fi
 if [ "_deb" == "$1" ]; then
@@ -146,7 +146,7 @@ if [ -f "${exdeb_num_file}" ]; then
 . ${exdeb_num_file}
 return 0
 else
-plt_exit "not exist file: ${exdeb_num_file} "
+${_plt_exit} "not exist file: ${exdeb_num_file} "
 return 1
 fi
 fi
@@ -174,10 +174,10 @@ echo -e "${CYAN} ${FNN}() help:
 .            optional -verbose (not garg parsed, for echo main param function) 
 .        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 .                -h : this 
-.                _go : edit_ ${FN_DIR}
-.                _list : edit_ ${FN_DIR}/${FNN}.list
+.                _go : ${_edit_} ${FN_DIR}
+.                _list : ${_edit_} ${FN_DIR}/${FNN}.list
 .            manual 
-.                _man : edit_ ${FN_DIR}/${FNN}.man
+.                _man : ${_edit_} ${FN_DIR}/${FNN}.man
 .                _puml : puml_ ${FN_DIR}/${FNN}.puml -_drawing
 .            tst single mane :
 .                _tst : . ${FN_DIR}/${FNN}tst/exec.tst
@@ -214,7 +214,7 @@ fi
     #{ctrl_args}
 
 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- wrp_fifs1_ cd $PPWD -d1 1>/dev/null ---${NORMAL}" #start files
-wrp_fifs1_ cd "$PPWD" -d1 1>/dev/null
+${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
 #!function body===================================================================
 #!function body===============================================
 #!function body======================
@@ -245,16 +245,16 @@ unset_autoargs_nnn2_
 # } && {
 #     garg_ ${FNN} $@ 1>/dev/null
 # }
-if ! garg2e2_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
 #? g_args with cntl=value
-local g_args=($(garg2e2_ "${ARGS[@]}"))
+local g_args=($(${_garg2e2_} "${ARGS[@]}"))
 #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-local e_args=($(earg2e2_ "${ARGS[@]}"))
+local e_args=($(${_earg2e2_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e2_ "${ARGS[@]}"); do
+for strex in $(${_garg2e2_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done
@@ -267,7 +267,7 @@ done
 # start ---------------------------- if ptr block-------------------------------------------
 local ptr_value=${ptr_if_}
 if [[ -n ${ptr_value} ]] && [[ ${ptr_value} -ne 1 ]]; then
-if [ -n ${develop1_} ] && [ ${develop1_} -eq 1 ]; then
+if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
 echo -e "${RED}--- $FNN() $* be ignored ---${NORMAL}" #started functions
 fi
 return 0
@@ -276,24 +276,24 @@ fi
 #
 #{ptr_if}
 echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
-if [ -n ${debug_} ] && [ ${debug_} -eq 1 ]; then
+if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
 echo "DEBUG MODE in ${FNLOCK}"
 echo "\${errmes_}: ${errmes_}"
 echo "\${outmes_}: ${outmes_}"
 fi
-if [ -n ${develop1_} ] && [ ${develop1_} -eq 1 ]; then
+if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
 echo "develop1 MODE in ${FNLOCK}"
 fi
 #{see_cntl}
 exit_err_nnn2_() { #* $1 error message
 local arg1="$1"
 unset_autoargs_nnn2_
-plt_pause "$1: be return ${arg1} <- Fail: message in ${FNLOCK}"
+${_plt_pause} "$1: be return ${arg1} <- Fail: message in ${FNLOCK}"
 echo "$1: be return ${arg1} <- Fail: message in ${FNLOCK}" 1>&2
 if [ -z "${arg1}" ]; then
 return 1
 fi
-if is_num "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 1 ]; then
+if ${_is_num} "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 1 ]; then
 return "${arg1}"
 else
 return 1
@@ -305,7 +305,7 @@ unset_autoargs_nnn2_
 if [ -z "${arg1}" ]; then
 return 0
 fi
-if is_num "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 0 ]; then
+if ${_is_num} "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 0 ]; then
 return "${arg1}"
 else
 return 0
@@ -330,17 +330,17 @@ fi
 #     fi
 # fi
 #! amount args
-# is_amount_arg ${NARGS} min_equ max_equ
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
 # if [ $? -ne 0 ]; then
-#     plt_pause "is_amount_arg:: be return 1 <- Fail: ${FNLOCK}"
+#     plt_pause "${_is_amount_arg}:: be return 1 <- Fail: ${FNLOCK}"
 #     return 1
 # fi
 #! normalize ptr_path -> absolut path
 # ptr_path=$1
-# ptr_path=$(abs_path $PPWD "ptr_path") #ptr args
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 #! variables for cr_f_dir_insert_
-# fn_name=$(prs_f -n ${arg_path})
-# root_path=$(prs_f -d ${arg_path})
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
 #! search in array
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
@@ -365,7 +365,7 @@ unset_autoargs_nnn2_
 #!function body======================
 #!function body===============================================
 #!function body===================================================================
-wrp_fifs1_ cd "$PPWD" -d1 1>/dev/null
+${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
     #{init_body}
 
 }
