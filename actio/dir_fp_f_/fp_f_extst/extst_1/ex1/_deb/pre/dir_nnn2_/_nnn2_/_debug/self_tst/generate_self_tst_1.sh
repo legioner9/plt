@@ -43,10 +43,10 @@ echo -e "# in deb_1.sh
 ## create start_check_distst.sh in dir_1" >whatshappenig.man
 #rr_
 #wrp_fifs1_ rm -rf dir_1 -cd1
-wrp_fifs1_ mkdir dir_1 -cnd1
-wrp_fifs1_ cd dir_1 -d1
-cr_tst_dir_ --name_dir dis --ext distst
-cr_tst_dir_ --name_dir dis2 --ext distst
+${_wrp2_} mkdir --_cnd dir_1
+${_wrp2_} cd --_xxd dir_1
+${_cr_tst_dir_} --name_dir dis --ext distst
+${_cr_tst_dir_} --name_dir dis2 --ext distst
 #{body}
 #-------------------------------
 #-------------------------------------
