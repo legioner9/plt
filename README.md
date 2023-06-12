@@ -12,11 +12,26 @@
 
 # P.S.
 
-    - .s/Debag/git_short.sh - start short git plt
-    - in .d/.mul/fp_f_/2/.insert/_fn_fff_sh/2: add fn_to_mdeb.sh file at _{FNN}/_mdeb and auto add to {FNN}_mdeb fumction menu
-    - fp_f_mdeb_ 2 fiches future and FNAA      
-    - _head must be able in any fn
+- .s/Debag/git_short.sh - start short git plt
+- in .d/.mul/fp_f_/2/.insert/_fn_fff_sh/2: add fn_to_mdeb.sh file at _{FNN}/_mdeb and auto add to {FNN}_mdeb fumction menu
+- fp_f_mdeb_ 2 fiches future and FNAA      
+- _head must be able in any fn
 
 # bags 
-    - fail Deploy_store/.qa/main_repo_fn/dir_cr_shgnr_/cr_shgnr_tst/_flow_tst.sh
-    - ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
+
+- fail Deploy_store/.qa/main_repo_fn/dir_cr_shgnr_/cr_shgnr_tst/_flow_tst.sh
+- ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
+
+# plans
+
+- nnn2_ like fp_f_ in /secundo (uxix+/primus) or /mall flow 1
+- lll2_ like lib/user (uxix) in /primus flow 5
+- jjj2_ like lib/user (user mini simple utils) in /mall2 flow 7
+- flow 2 - for fiches
+- flow 3 - for update before copy to flow 1
+- flow 4 - for update before copy to flow 5
+- flow 6 - for update before copy to flow 7
+
+# plans B
+
+- nginx, sites, mediawiki ...
