@@ -25,8 +25,8 @@ if [ "_puml" == "$1" ]; then
 
     local puml_file=${FN_DIR}/${FNN}.puml
     if [ -f "${puml_file}" ]; then
-        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- puml_ ${puml_file} -_drawing ---${NORMAL}" #start files
-        puml_ "${puml_file}" -_drawing
+        [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
+        ${_puml_} "${puml_file}" -_drawing
         return $?
     else
         ${_plt_exit} "not exist file: ${puml_file} " #exit 1

@@ -66,8 +66,8 @@ fi
 if [ "_puml" == "$1" ]; then
 local puml_file=${FN_DIR}/${FNN}.puml
 if [ -f "${puml_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- puml_ ${puml_file} -_drawing ---${NORMAL}" #start files
-puml_ "${puml_file}" -_drawing
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
+${_puml_} "${puml_file}" -_drawing
 return $?
 else
 ${_plt_exit} "not exist file: ${puml_file} " #exit 1
@@ -266,7 +266,7 @@ done
 #?}
 # start ---------------------------- if ptr block-------------------------------------------
 local ptr_value=${ptr_if_}
-if [[ -n ${ptr_value} ]] && [[ ${ptr_value} -ne 1 ]]; then
+if [[ -n "${ptr_value}" ]] && [[ ${ptr_value} -ne 1 ]]; then
 if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
 echo -e "${RED}--- $FNN() $* be ignored ---${NORMAL}" #started functions
 fi
