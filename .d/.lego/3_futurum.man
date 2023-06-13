@@ -1,5 +1,5 @@
 ## plt - enter point 
-### contane [/actio] {acfn} (using {lifn}, {prfn}, {sefn}) [[pull_bcp_push_, ...]]
+### containe [/actio] {acfn} (using {lifn}, {prfn}, {sefn}) [[pull_bcp_push_, ...]]
     - env
     - function up_level 
 
@@ -7,7 +7,11 @@
     - elementary function [/primus] {prfn} (using only bash and linux utils {lifn}) [[f2e, ...]]
     - secundo function [/secundo] {sefn} (using {lifn}, {prfn}) [[wrp<num> ...]]
 
-## plt/actio/primus plt_sys_primus for care to fonsh (depend inly unix utils)
-## plt/actio/secundo plt_sys_secundo for care to fonsh (depend inly unix, primus utils)
-## plt/actio/mall user utils (depend inly unix, primus utils)
-## plt/actio/mall2 user utils (depend inly unix, primus, mall utils)
+## higt for care to fonsh
+### /prim pst_unix 
+### /secu pst_prim
+
+## shor for care to plt
+### /mall pst_secu (after secu)
+### /raqu min_mall (min mall)
+### /auge pst_mall (after mall)

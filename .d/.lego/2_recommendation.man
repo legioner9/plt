@@ -7,10 +7,20 @@ not change ground function <name><n>_:
     - mark <name><n>_ as deprecated 
 
 ## RCM_ISH
-mayst use .ish
+mayst use .ish - inner exec files in .sh
 
 ## RCM_UPG_PATH
 allways upg_path_ after create file
 
 ## RCM_TST_BASH
 test bash (as file!) utils, use try not use return value and current std - only exist std (as diff)
+
+## RCM_DOT_DD
+discribe dir content 
+
+    .dd
+    ├── causa.man - wtwy - what why that exsist?
+    └── sruct.man
+
+## RCM_FNAA 
+for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/a.frc)

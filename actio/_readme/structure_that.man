@@ -1,3 +1,8 @@
-## /mall user utils
-## /primus plt_sys_primus for care to fonsh
-## /secundo plt_sys_secundo for care to fonsh 
+# what dirs
+## higt for care to fonsh
+### /prim after unix 
+### /secu after prim
+## shor for care to plt
+### /mall pst_secu (after secu)
+### /raqu min_mall (min mall)
+### /auge pst_mall (after mall)
