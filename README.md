@@ -24,6 +24,8 @@
 
 # plans
 
+- cr_dotdd_
+
 - nnn2_ like fp_f_ in /secundo (uxix+/primus) or /mall flow 1
 - lll2_ like lib/user (uxix) in /primus flow 5
 - jjj2_ like lib/user (user mini simple utils) in /mall2 flow 7
