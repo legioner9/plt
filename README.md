@@ -22,10 +22,19 @@
 - fail Deploy_store/.qa/main_repo_fn/dir_cr_shgnr_/cr_shgnr_tst/_flow_tst.sh
 - ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
 
+# update fp_f
+
+- --_flow <num> to --_mul <tail_path> --_dir/ whear .d/.mul/fp_f_/<tail_path> 
+
+  - whear 
+
 # plans
+
+## do fn
 
 - cr_dotdd_
 
+## plan dirs in /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_
 - nnn2_ like fp_f_ in /secundo (uxix+/primus) or /mall flow 1
 - lll2_ like lib/user (uxix) in /primus flow 5
 - jjj2_ like lib/user (user mini simple utils) in /mall2 flow 7

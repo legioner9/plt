@@ -33,6 +33,8 @@ fp_f_() {
     local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug       #? dir with fn's free debug flow
     local FN_CONFIG_DIR=${FN_CONT_DIR}/_config     #? dir with fn's config
     local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default   #? dir with fn's default behavviour
+    local FN_DOTD_DIR=${FN_DIR}/dir_${FNN}/.d   #? dir with fn's default behavviour
+
     local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/dir_${FNN}/${FNN}.sh, line: $LINENO"
     # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
     # wrp_fifs1_ rm -f "${FN_ERR_FILE}" -cf1
@@ -345,7 +347,7 @@ ${NORMAL}"
 
     # . ${sh_file}
 
-    . ${FN_DIR}/dir_${FNN}/${FNN}.ish
+    ${_wrp2_} . --_xxf ${FN_DOTD_DIR}/.sal/${FNN}.i.sh
 
     # ------------------------------------------
     # -----------------------------------------------------------------------------------------
