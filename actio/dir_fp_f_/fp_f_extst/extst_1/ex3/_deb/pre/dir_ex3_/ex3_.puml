@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> ex3_ 
+farg2e2_ -> ex3_
+echo_deb_ -> ex3_
+ex3_ -> ex3_:is_num
+ex3_ -> ex3_:exit_err_ex3_
+ex3_ -> ex3_:exit_reg_ex3_
+ex3_ -> ex3_:unset_autoargs_ex3_
+' {wrap_fn}
+' fnn o-> ex3_
+' {body_fn}
+@enduml
