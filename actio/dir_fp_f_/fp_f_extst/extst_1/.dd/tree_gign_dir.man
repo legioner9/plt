@@ -1,0 +1,35 @@
+tree -a -L 2 in /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_extst/extst_1
+.
+├── .dd
+│   ├── causa.man
+│   ├── cr_tree_gign_dir.sh
+│   ├── sruct.man
+│   ├── textus.man
+│   └── tree_gign_dir.man
+├── ex1
+│   ├── dat
+│   ├── _deb
+│   ├── exec._extst
+│   ├── exec.extst
+│   ├── _flow_tst.sh
+│   ├── pre
+│   └── res
+├── ex2
+│   ├── dat
+│   ├── exec._extst
+│   ├── exec.extst
+│   ├── _flow_tst.sh
+│   ├── pre
+│   └── res
+├── ex3
+│   ├── dat
+│   ├── _deb
+│   ├── exec._extst
+│   ├── _flow_tst.sh
+│   ├── pre
+│   └── res
+├── _gnr_dir_tst.sh
+├── start_exec.list
+└── start_exec.tst
+
+6 directories, 25 files

@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="/home/st/REPOBARE/_repo/plt/.d/.fs_standarts/.dd/cr_tree_gign_dir.sh"
+filename="/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_extst/extst_1/.dd/cr_tree_gign_dir.sh"
 
 ARGS=($@)
 NARGS=$#

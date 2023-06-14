@@ -24,7 +24,10 @@
 
 # update fp_f
 
-- --_flow <num> to --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_main|2_fich|3_...) whear .d/.mul/fp_f_/${grad_}/${tail_}
+scae_relevance__possibility_of_using: veri prov absc
+scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
+
+ fs_compare, exec_compare
  
 - "unset" garg variable not need, ther allready local, but tst remove this fich
 
