@@ -45,43 +45,48 @@ echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}"                               #print v
 }
     #{def_const}
 
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_c_up} "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
-${_c_up} "${FN_FN_DIR}" 1>/dev/null
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_c_up} "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
+"${_c_up}" "${FN_FN_DIR}" 1>/dev/null
 if [ "_man" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/$FNN.man ---${NORMAL}" #start files
-${_edit_} ${FN_DIR}/dir_$FNN/"$FNN".man
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".man ---${NORMAL}" #start files
+"${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}"/.d/.sal/"$FNN".man
+return 0
+fi
+if [ "-h" == "$1" ]; then
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".h.sh ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${FN_DIR}"/.d/.sal/"$FNN".h.sh
 return 0
 fi
 if [ "_tst" == "$1" ]; then
-local tst_file="${FN_DIR}/dir_$FNN/$FNN"tst/exec.tst
+local tst_file="${FN_DIR}/${FNN}"tst/exec.tst
 if [ -f "${tst_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
-. "${tst_file}"
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${tst_file}"
 return $?
 else
-${_plt_exit} "not exist file: ${tst_file} " #exit 1
+"${_plt_exit}" "not exist file: ${tst_file} " #exit 1
 return 1
 fi
 fi
 if [ "_puml" == "$1" ]; then
-local puml_file=${FN_DIR}/${FNN}.puml
+local puml_file="${FN_DIR}/${FNN}".puml
 if [ -f "${puml_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
-${_puml_} "${puml_file}" -_drawing
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
+"${_wrp2_}" "${_puml_}" --_xxf "${puml_file}" -_drawing
 return $?
 else
-${_plt_exit} "not exist file: ${puml_file} " #exit 1
+"${_plt_exit}" "not exist file: ${puml_file} " #exit 1
 return 1
 fi
 fi
 if [ "_flw" == "$1" ]; then
 local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
 if [ -f "${flw_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
-. "${flw_file}"
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${flw_file}"
 return $?
 else
-${_plt_exit} "not exist file: ${flw_file} " #exit 1
+"${_plt_exit}" "not exist file: ${flw_file} " #exit 1
 return 1
 fi
 fi
@@ -89,11 +94,11 @@ for int in 1 2 3 4; do
 if [ "_extst${int}" == "$1" ]; then
 extst_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/exec.extst
 if [ -f "${extst_num_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
-. ${extst_num_file}
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${extst_num_file}"
 return 0
 else
-${_plt_exit} "not exist file: ${extst_num_file} "
+"${_plt_exit}" "not exist file: ${extst_num_file} "
 return 1
 fi
 fi
@@ -102,11 +107,11 @@ for int in 1 2 3 4; do
 if [ "_exdeb${int}" == "$1" ]; then
 exdeb_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/_flow_tst.sh
 if [ -f "${exdeb_num_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-. ${exdeb_num_file}
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${exdeb_num_file}"
 return 0
 else
-${_plt_exit} "not exist file: ${exdeb_num_file} "
+"${_plt_exit}" "not exist file: ${exdeb_num_file} "
 return 1
 fi
 fi
@@ -114,103 +119,50 @@ done
 if [ "_extst" == "$1" ]; then
 local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
 if [ -f ${tst_file} ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
-. "${extst_file}"
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${extst_file}"
 return $?
 else
-${_plt_exit} "not exist file: ${extst_file} " #exit 1
+"${_plt_exit}" "not exist file: ${extst_file} " #exit 1
 return 1
 fi
 fi
 if [ "_lst" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-${_edit_} ${FN_DIR}/${FNN}.lst
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
+"${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}/${FNN}".lst
 return 0
 fi
 if [ "_go" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
-${_edit_} ${FN_DIR}
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
+"${_wrp2_}" "${_edit_}" --_xxd ${FN_DIR}
 return 0
 fi
 if [ "_deb" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
-. ${FN_DEFAULT_DIR}/default_deb.sh
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf "${FN_DEFAULT_DIR}"/default_deb.sh
 return 0
 fi
 for int in 1 2 3 4; do
 if [ "_exdeb${int}" == "$1" ]; then
 # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
-exdeb_num_file=${FN_DIR}/$FNNextst/extst_1/ex${int}_tst/_flow_tst.sh
+exdeb_num_file="${FN_DIR}"/$FNNextst/extst_1/ex${int}_tst/_flow_tst.sh
 if [ -f "${exdeb_num_file}" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-. ${exdeb_num_file}
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
+"${_wrp2_}" . --_xxf ${exdeb_num_file}
 return 0
 else
-${_plt_exit} "not exist file: ${exdeb_num_file} "
+"${_plt_exit}" "not exist file: ${exdeb_num_file} "
 return 1
 fi
 fi
 done
 if [ "_mdeb" == "$1" ]; then
-[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+[[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
 ${FNN}mdeb
 return 0
 fi
 #{cntl_default}
-if [ "-h" == "$1" ]; then
-echo -e "${CYAN} ${FNN}() help: 
-.        MAIN: 
-.        NAME: ${FNN}()
-.        WHERE:?(only in root dir)Y/N
-.        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
-.            if arg no rout full_path be pwd/<name_file_with_head_path> , if name root name instead
-.        AUTH:?legioner9@inbox.ru
-.        DEPR:?(Y|N)
-.        ARGS: 
-.        \$1
-.        [ ,\$2 num_menu ]
-.        CNTLS:
-.            required
-.            optional -verbose (not garg parsed, for echo main param function) 
-.        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
-.                -h : this 
-.                _go : ${_edit_} ${FN_DIR}
-.                _list : ${_edit_} ${FN_DIR}/${FNN}.list
-.            manual 
-.                _man : ${_edit_} ${FN_DIR}/${FNN}.man
-.                _puml : puml_ ${FN_DIR}/${FNN}.puml -_drawing
-.            tst single mane :
-.                _tst : . ${FN_DIR}/${FNN}tst/exec.tst
-.            deb single mane 
-.                _deb : . ${FN_CONT_DIR}/_default/default_deb.sh
-.            steps tst single mane :
-.                _flw : . ${FN_DIR}/${FNN}tst/_flow_tst.sh
-.            menu for deb
-.                _mdeb : . ${FN_DEBUG_DIR}/mdeb.sh
-.            tst all . exec.extst in ${FN_DIR}/${FNN}extst/extst_1
-.                _extst : . ${FN_DIR}/${FNN}extst/extst_1/start_exec.tst
-.            tst <num> (exec.extst)
-.                _extst<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/exec.extst
-.            steps extst_1/ex<num>_tst
-.                _exdeb<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
-.
-.        CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ...
-.        CNTL develop: -_develop1, ... for special development mode, NOT to product
-.        
-.        TAGS: (fs|net|)
-.        IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
-.        FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
-.        RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
-.        ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
-.        WARN: 
-.        DEBUG:
-.            ${FNN} _deb, ${FNN} _mdeb
-.        EXAMP:
-.            ${FNN} -<>
-.            ${NORMAL}"
-return 0
-fi
-#{cntl_help}
+#{#cntl_help}
     #{ctrl_args}
 
 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- wrp_fifs1_ cd $PPWD -d1 1>/dev/null ---${NORMAL}" #start files
@@ -347,6 +299,8 @@ fi
 #{hints}
 # -----------------------------------------------------------------------------------------
 # ------------------------------------------
+"${_wrp2_}" . --_xxf "${FN_DOTD_DIR}"/.sal/"${FNN}".body.sh
+#{body_ax_fn}
 # ------------------------------------------
 # -----------------------------------------------------------------------------------------
 # altlinux_ex3_() {

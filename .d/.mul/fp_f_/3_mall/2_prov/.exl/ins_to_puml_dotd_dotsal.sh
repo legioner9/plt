@@ -1,7 +1,7 @@
 #!/bin/bash 
 #! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
-src_puml_file=${dir_fns_}/dir_${name_fn_}/${name_fn_}.puml
+src_puml_file=${dir_fns_}/dir_${name_fn_}/.d/.sal/${name_fn_}.puml
 
 "${_is_est_}" "${src_puml_file}" -f
 
