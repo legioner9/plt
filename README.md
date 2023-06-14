@@ -24,9 +24,9 @@
 
 # update fp_f
 
-- --_flow <num> to --_mul <tail_path> --_dir/ whear .d/.mul/fp_f_/<tail_path> 
-
-  - whear 
+- --_flow <num> to --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_main|2_fich|3_...) whear .d/.mul/fp_f_/${grad_}/${tail_}
+ 
+- "unset" garg variable not need, ther allready local, but tst remove this fich
 
 # plans
 

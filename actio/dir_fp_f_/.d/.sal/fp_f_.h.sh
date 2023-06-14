@@ -26,7 +26,7 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} --_name_fn <name_fn> --_dir_fns <dir_fns> --_flow <num_flow>
+${FNN} --_name_fn <name_fn> --_dir_fns <dir_fns> --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_veri|2_prov|3_absc|...)
     <num_flow>
         1 max like plt fns
         2 mid for fonsh
