@@ -1,0 +1,15 @@
+## textus: tree -a -L 2 >> textus.man with notes
+
+### close_extxt 
+### start all ex<num>: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/start_exec._tst
+
+- ex1 : do like fp_f_ diff ex3/_deb/pre ex3/_deb/res
+
+  - fp_f_ --_name_fn ex3_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res --_grad 3_mall --_tail 2_prov
+  - fs_compare: ex1/_deb/pre ex1/_deb/res
+
+- ex2
+  - exec_compare: ex1_ &>res;ex1_mdeb 2 &>res
+
+- ex3
+  - exec_compare: ex1_ -h > res

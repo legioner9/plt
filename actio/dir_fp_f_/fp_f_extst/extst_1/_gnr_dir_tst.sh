@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="$HOME/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_extst/extst_1/_gnr_dir_tst.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/_gnr_dir_tst.sh"
 
 ARGS=($@)
 NARGS=$#
