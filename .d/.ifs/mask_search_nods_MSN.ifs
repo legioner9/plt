@@ -1,0 +1,10 @@
+main: define masks for search nods
+exec:
+
+using global:
+    IFS_MSN=1 - all files in (ls -A) dirs without (., ..)    
+    IFS_MSN=2 - all files in (ls) dirs without (., .., .*)
+    IFS_MSN=3 - all files in (ls) dirs without (., .., .*, _*)
+parsing params:
+arg: 
+flow_chars: 

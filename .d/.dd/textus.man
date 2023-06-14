@@ -1,1 +1,35 @@
 ## textus: tree -a -L 2
+
+### .camp
+- lexicon: [camp]us  - поле, набор разных относящихся к одному
+- cat type_tst.camp
+
+        fs_compare
+        exec_compare
+
+### .frc
+- lexicon: [f]u[rc]a          - развилка, по именам функций
+- causa: ingect name function 
+- examp a.frc: 
+  
+        _wrp2_=wrp2_
+
+### .fs_standarts
+- lexicon: [f]ile [s]ystem [standarts]
+- causa: any standart fs not generated yet
+- contane fs dir for copy as "it's"
+- examp: .dd
+
+## .flumen_tempus
+- lexicon: flumen tempus - текущее речное время
+- causa: daily notes
+- examp: 04062k23.flu
+- cat 04062k23.flu
+
+    # do
+    # if fail
+
+## .ifs
+- lexicon: intefaces
+- causa: do standart interfaces
+- examp: 

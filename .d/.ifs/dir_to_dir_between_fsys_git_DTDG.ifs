@@ -1,0 +1,10 @@
+main: share fs nods between file system 
+exec: exl_flow during or before git push
+
+using global: 
+copy nods to dir with name:
+    up_to_<alias_file_system[plt|communis|MY_ONE]>
+    up_from_<alias_file_system[plt|communis|MY_ONE]>
+parsing params:
+arg: 
+flow_chars: 

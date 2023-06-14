@@ -1,0 +1,170 @@
+tree -a -L 2 in /home/st/REPOBARE/_repo/plt/.d
+.
+├── 0
+├── .args
+│   ├── 0
+│   └── l2exl_
+├── .bagreport
+│   └── 0
+├── .bagxfix
+│   └── 0
+├── .camp
+│   └── type_tst.camp
+├── .canons
+│   ├── .behaviourcheks.md
+│   ├── .bfnlist.md
+│   ├── .cfnlist.md
+│   ├── .exllist.md
+│   ├── .gitfnlist.md
+│   └── .pltopus.md
+├── .config
+│   ├── _arh
+│   ├── ascii.conf
+│   ├── env.sh
+│   ├── fonsh_fn.man
+│   └── .tst
+├── .dd
+│   ├── _arch
+│   ├── causa.man
+│   ├── cr_tree_gign_dir.sh
+│   ├── sruct.man
+│   ├── textus.man
+│   └── tree_gign_dir.man
+├── .exec
+│   └── 0
+├── .exl
+│   ├── _arh
+│   ├── bcp_to_tosh_usb_hard_u.exl
+│   ├── codium_bcp_dpl_alt
+│   ├── comm_prepull_bcp_ALT.exl
+│   ├── comm_prepull_bcp.exl
+│   ├── cr_dirs.exl
+│   ├── cr_fs_pj_j_simp.exl
+│   ├── cr_tst_dir_
+│   ├── cr_tst_sys_
+│   ├── free_functions
+│   ├── git
+│   ├── idea_bcp_uncp_steps
+│   ├── ls_root.exl
+│   ├── pipe_fs.exl
+│   ├── upg_fn_to_plt_
+│   ├── upg_path.exl
+│   └── use_exl_files
+├── .flumen_tempus
+│   ├── 04062k23.flu
+│   ├── 05062k23.flu
+│   ├── 20092k22.flu
+│   ├── 21092k22.flu
+│   └── 27092k22.flu
+├── .frc
+│   └── a.frc
+├── .fs_standarts
+│   ├── 0
+│   └── .dd
+├── .githooks
+│   ├── applypatch-msg.sample -> /usr/share/git-core/hooks/applypatch-msg
+│   ├── commit-msg.sample -> /usr/share/git-core/hooks/commit-msg
+│   ├── post-commit.sample -> /usr/share/git-core/hooks/post-commit
+│   ├── post-receive.sample -> /usr/share/git-core/hooks/post-receive
+│   ├── post-update.sample -> /usr/share/git-core/hooks/post-update
+│   ├── pre-applypatch.sample -> /usr/share/git-core/hooks/pre-applypatch
+│   ├── pre-commit
+│   ├── pre-commit.sample -> /usr/share/git-core/hooks/pre-commit
+│   ├── pre-merge-commit.sample -> /usr/share/git-core/hooks/pre-merge-commit
+│   ├── prepare-commit-msg.sample -> /usr/share/git-core/hooks/prepare-commit-msg
+│   ├── pre-push.sample -> /usr/share/git-core/hooks/pre-push
+│   ├── pre-rebase.sample -> /usr/share/git-core/hooks/pre-rebase
+│   ├── pre-receive.sample -> /usr/share/git-core/hooks/pre-receive
+│   ├── push-to-checkout.sample -> /usr/share/git-core/hooks/push-to-checkout
+│   └── update.sample -> /usr/share/git-core/hooks/update
+├── .ifs
+│   ├── const_sh.ifs
+│   ├── err_stile.ifs
+│   ├── exl_sh.ifs
+│   ├── fifs_sh.ifs
+│   ├── garg.ifs
+│   ├── _.ifs
+│   ├── mask_files.ifs
+│   ├── pipe_fs.ifs
+│   └── tst.ifs
+├── .insert
+│   ├── 0
+│   ├── _arh
+│   ├── cr_sh_
+│   ├── cr_shfn_
+│   ├── cr_shgnr_
+│   ├── .dd
+│   └── obs_quis_
+├── .issue
+│   ├── 0
+│   └── .dd
+├── .lego
+│   ├── 1_conceptions.man
+│   ├── 2_recommendation.man
+│   ├── 3_futurum.man
+│   ├── about_structure_this_repo.man
+│   ├── consillium.man
+│   ├── flumen.man
+│   └── futurum.man
+├── .list
+│   └── 0
+├── .lists
+│   ├── bckp_gitpush.list3
+│   ├── git
+│   └── is_est_
+├── .man
+│   ├── 0
+│   ├── nar
+│   └── standarts
+├── .mul
+│   ├── _
+│   ├── 0
+│   ├── fp_f_
+│   ├── mm_cr_repo_plt_
+│   └── mm_scr_
+├── .pullsh
+│   ├── 0
+│   ├── masks
+│   ├── point.list
+│   ├── sets
+│   └── tml.pullsh
+├── .puml
+│   ├── main_mode.puml
+│   ├── plt_fns.puml
+│   └── wrp2_.puml
+├── .scae
+│   ├── complexity_stucture_syll__ease_of_use.scae
+│   └── relevance__possibility_of_using.scae
+├── .str
+│   ├── 0
+│   ├── .dd
+│   └── mm_git_
+├── .stu
+│   ├── 0
+│   └── upg_fn_to_plt_
+├── .tml
+│   ├── 0
+│   ├── _arh
+│   ├── cr_sh_
+│   ├── cr_shfn_
+│   ├── cr_tst_dir_
+│   ├── dot_dir_for_any_repo
+│   └── obs_quis_
+├── .tst
+│   ├── _arh
+│   ├── local.list
+│   └── pre-commit
+├── .var
+│   ├── _0
+│   ├── git
+│   ├── is_est_
+│   ├── mm_git_
+│   ├── nod_
+│   └── tsf_sfs_
+├── .vexillum
+│   ├── exec._word
+│   └── name._cexa
+└── .warg
+    └── main.warg
+
+76 directories, 90 files
