@@ -36,7 +36,7 @@ echo -e "${CYAN} ${FNN}() help:
 .            steps extst_1/ex<num>_tst
 .                _exdeb<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
 .
-.        CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ...
+.        CNTL defaut: -_echo, -_debug
 .        CNTL develop: -_develop1, ... for special development mode, NOT to product
 .        
 .        TAGS: (fs|net|)

@@ -35,7 +35,7 @@
 .            steps extst_1/ex<num>_tst
 .                _exdeb<num> . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_extst/extst_1/ex<num>_tst/_flow_tst.sh
 .
-.        CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ...
+.        CNTL defaut: -_echo, -_debug
 .        CNTL develop: -_develop1, ... for special development mode, NOT to product
 .        
 .        TAGS: (fs|net|)

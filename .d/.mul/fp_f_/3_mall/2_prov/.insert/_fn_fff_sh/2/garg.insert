@@ -7,21 +7,6 @@ local outmes_
 local ptr_if_
 local ptr_sem_
 
-unset_autoargs_{name_fn_}() {
-    echo_=0
-    debug_=0
-    develop1_=0
-
-    unset errmes_
-    unset outmes_
-    unset ptr_if_
-    unset ptr_sem_
-
-    # any1_=0
-    # unset any2_
-}
-
-unset_autoargs_{name_fn_}
 
 # [[ 1 -eq ${verbose} ]] || {
 #     garg_ ${FNN} $@

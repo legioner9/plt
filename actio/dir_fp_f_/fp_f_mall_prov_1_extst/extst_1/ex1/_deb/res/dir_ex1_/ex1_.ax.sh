@@ -92,7 +92,7 @@ fi
 fi
 for int in 1 2 3 4; do
 if [ "_extst${int}" == "$1" ]; then
-extst_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/exec.extst
+local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
 if [ -f "${extst_num_file}" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
 "${_wrp2_}" . --_xxf "${extst_num_file}"
@@ -105,7 +105,7 @@ fi
 done
 for int in 1 2 3 4; do
 if [ "_exdeb${int}" == "$1" ]; then
-exdeb_num_file=${FN_DIR}/${FNN}extst/extst_1/ex${int}_tst/_flow_tst.sh
+local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
 if [ -f "${exdeb_num_file}" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
 "${_wrp2_}" . --_xxf "${exdeb_num_file}"
@@ -145,10 +145,10 @@ fi
 for int in 1 2 3 4; do
 if [ "_exdeb${int}" == "$1" ]; then
 # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
-exdeb_num_file="${FN_DIR}"/$FNNextst/extst_1/ex${int}_tst/_flow_tst.sh
+local exdeb_num_file="${FN_DIR}"/"${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
 if [ -f "${exdeb_num_file}" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-"${_wrp2_}" . --_xxf ${exdeb_num_file}
+"${_wrp2_}" . --_xxf "${exdeb_num_file}"
 return 0
 else
 "${_plt_exit}" "not exist file: ${exdeb_num_file} "
@@ -158,7 +158,7 @@ fi
 done
 if [ "_mdeb" == "$1" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-${FNN}mdeb
+"${FNN}mdeb"
 return 0
 fi
 #{cntl_default}
@@ -180,18 +180,6 @@ local errmes_
 local outmes_
 local ptr_if_
 local ptr_sem_
-unset_autoargs_ex1_() {
-echo_=0
-debug_=0
-develop1_=0
-unset errmes_
-unset outmes_
-unset ptr_if_
-unset ptr_sem_
-# any1_=0
-# unset any2_
-}
-unset_autoargs_ex1_
 # [[ 1 -eq ${verbose} ]] || {
 #     garg_ ${FNN} $@
 # } && {
@@ -216,16 +204,6 @@ done
 #?    read -p "$1: $1 not dir - enter for exit 1, ^C for interrapt in ${FNLOCK}"
 #?    exit 1
 #?}
-# start ---------------------------- if ptr block-------------------------------------------
-local ptr_value=${ptr_if_}
-if [[ -n "${ptr_value}" ]] && [[ ${ptr_value} -ne 1 ]]; then
-if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
-echo -e "${RED}--- $FNN() $* be ignored ---${NORMAL}" #started functions
-fi
-return 0
-fi
-# end ---------------------------- if ptr block-------------------------------------------
-#
 #{ptr_if}
 echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
 if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
@@ -237,32 +215,6 @@ if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
 echo "develop1 MODE in ${FNLOCK}"
 fi
 #{see_cntl}
-exit_err_ex1_() { #* $1 error message
-local arg1="$1"
-unset_autoargs_ex1_
-${_plt_pause} "$1: be return ${arg1} <- Fail: message in ${FNLOCK}"
-echo "$1: be return ${arg1} <- Fail: message in ${FNLOCK}" 1>&2
-if [ -z "${arg1}" ]; then
-return 1
-fi
-if ${_is_num} "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 1 ]; then
-return "${arg1}"
-else
-return 1
-fi
-}
-exit_reg_ex1_() {
-local arg1="$1"
-unset_autoargs_ex1_
-if [ -z "${arg1}" ]; then
-return 0
-fi
-if ${_is_num} "${arg1}" && [ "${arg1}" -lt 128 ] && [ "${arg1}" -ge 0 ]; then
-return "${arg1}"
-else
-return 0
-fi
-}
 #{def_exit}
 #! strongly return 1 -> exit_err_ $1
 #! strongly return 0 -> exit_reg_
