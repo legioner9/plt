@@ -9,28 +9,31 @@ ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cp_tml_to_fs.sh
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_puml_dotd_dotsal.sh
 
 #? insert to main ${name_fn_}.sh
-src_fn_file=${PWD}/dir_${name_fn_}/${name_fn_}.ax.sh
 
-${_is_est_} ${src_fn_file} -f
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_main.sh
 
-${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
+# src_fn_file=${PWD}/dir_${name_fn_}/${name_fn_}.ax.sh
 
-${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/2
+# ${_is_est_} ${src_fn_file} -f
 
-# name_fn_
-${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_}
+# ${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
 
-# dir_fns_
-${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_}
+# ${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/2
 
-${_upg_path_} ${src_fn_file}
+# # name_fn_
+# ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_}
+
+# # dir_fns_
+# ${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_}
+
+# ${_upg_path_} ${src_fn_file}
 
 #? ------------------------------------------------------------
 
 #* work in _debug >>>>>>>>>>
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/v1
 
-${_cr_sh_} deb_1.sh
+${_wrp2_} ${_cr_sh_} --_xxf deb_1.sh
 
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug
 
