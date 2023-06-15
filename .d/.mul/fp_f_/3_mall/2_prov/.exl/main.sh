@@ -33,7 +33,7 @@ ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_main.sh
 #* work in _debug >>>>>>>>>>
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/v1
 
-${_wrp2_} ${_cr_sh_} --_xxf deb_1.sh
+${_cr_sh_} deb_1.sh
 
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug
 

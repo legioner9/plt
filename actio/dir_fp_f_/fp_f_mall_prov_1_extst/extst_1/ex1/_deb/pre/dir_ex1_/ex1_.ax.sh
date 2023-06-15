@@ -204,7 +204,7 @@ done
 #?    read -p "$1: $1 not dir - enter for exit 1, ^C for interrapt in ${FNLOCK}"
 #?    exit 1
 #?}
-#{ptr_if}
+#{#ptr_if}
 echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
 if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
 echo "DEBUG MODE in ${FNLOCK}"
@@ -215,7 +215,7 @@ if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
 echo "develop1 MODE in ${FNLOCK}"
 fi
 #{see_cntl}
-#{def_exit}
+#{#def_exit}
 #! strongly return 1 -> exit_err_ $1
 #! strongly return 0 -> exit_reg_
 #! treat error for inner functions
