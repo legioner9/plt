@@ -49,3 +49,10 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 # plans B
 
 - nginx, sites, mediawiki ...
+- caelum progect - wiki in repo (pars .dd dirs)
+
+## any
+
+    - in .insert files to escape control characters
+    - in .md files '<>' red selection
+    - in .dd/textus.man main explanations

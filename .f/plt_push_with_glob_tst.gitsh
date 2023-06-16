@@ -1,6 +1,6 @@
 #!/bin/bash
 
-local_list=${PLT_PATH}/.d/.tst/local.list
+local_list=${PLT_PATH}/.d/.config/.tst
 
 if wrp2_ up_err_ tst --_xxf ${local_list} 1>/dev/null; then
     echo -e "${BLUE}---INIT0 patch in ${local_list} with EXIT 0---${NORMAL}" #sistem info mesage

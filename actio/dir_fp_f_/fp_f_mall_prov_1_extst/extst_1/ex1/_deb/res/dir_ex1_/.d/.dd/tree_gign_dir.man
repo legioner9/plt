@@ -1,0 +1,11 @@
+tree -a -L 2 in /home/st/REPOBARE/_repo/plt/.d/.fs_standarts
+.
+├── 0
+└── .dd
+    ├── causa.man
+    ├── cr_tree_gign_dir.sh
+    ├── sruct.man
+    ├── textus.man
+    └── tree_gign_dir.man
+
+1 directory, 6 files

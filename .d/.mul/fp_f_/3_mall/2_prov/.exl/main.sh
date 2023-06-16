@@ -4,43 +4,24 @@
 #? cp tml to fs
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cp_tml_to_fs.sh
 
-
 #? insert to puml dotsal dir_${name_fn_}/${name_fn_}.puml
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_puml_dotd_dotsal.sh
 
 #? insert to main ${name_fn_}.sh
-
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_main.sh
 
-# src_fn_file=${PWD}/dir_${name_fn_}/${name_fn_}.ax.sh
-
-# ${_is_est_} ${src_fn_file} -f
-
-# ${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/1
-
-# ${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh/2
-
-# # name_fn_
-# ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_}
-
-# # dir_fns_
-# ${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_}
-
-# ${_upg_path_} ${src_fn_file}
-
-#? ------------------------------------------------------------
-
 #* work in _debug >>>>>>>>>>
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/v1
+#? cr /_debug/v1/deb_1.sh
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_v1_deb_1.sh
 
-${_cr_sh_} deb_1.sh
-
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug
-
-${_cr_sh_} mdeb.sh
+#? cr /_debug/mdeb.sh
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_mdeb.sh
 
 #? _fn/${name_fn_}_mdeb.sh
 file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_fn/${name_fn_}mdeb.sh
+
+#? cr .d/.dd
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_dotd_dotdd.sh
 
 ${_cr_shfn_} ${file_path}
 

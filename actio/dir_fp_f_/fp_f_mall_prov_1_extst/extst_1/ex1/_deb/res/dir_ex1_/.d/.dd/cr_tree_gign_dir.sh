@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_debug/v1/deb_1.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd/cr_tree_gign_dir.sh"
 
 ARGS=($@)
 NARGS=$#
@@ -32,6 +32,11 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
+echo ${rdir}
+${_wrp2_} cd --_xxd ${rdir}
+cd ..
+${_wrp2_} tree -a -L 2 -o "$(pwd)"/.dd/tree_gign_dir.man --_xxd ^"$(pwd)"
+sed -i '1s|^|'"tree -a -L 2 in $(pwd)\n"'|' "$(pwd)"/.dd/tree_gign_dir.man
 #{body}
 #-------------------------------
 #-------------------------------------
