@@ -16,11 +16,13 @@
 - in .d/.mul/fp_f_/2/.insert/_fn_fff_sh/2: add fn_to_mdeb.sh file at _{FNN}/_mdeb and auto add to {FNN}_mdeb fumction menu
 - fp_f_mdeb_ 2 fiches future and FNAA      
 - _head must be able in any fn
+- use ${_is_est} as simple checking args without start exec string
 
 # bags 
 
-- fail Deploy_store/.qa/main_repo_fn/dir_cr_shgnr_/cr_shgnr_tst/_flow_tst.sh
 - ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
+- ${_wrp2_} not correct with string contane '>'
+
 
 # update fp_f
 
@@ -53,6 +55,6 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 
 ## any
 
-    - in .insert files to escape control characters
-    - in .md files '<>' red selection
-    - in .dd/textus.man main explanations
+- in .insert files to escape control characters
+- in .md files '<>' red selection
+- in .dd/textus.man main explanations

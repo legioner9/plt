@@ -1,6 +1,6 @@
 #!/bin/bash
 
-${_wrp2_} cp -rf --_xxd /home/st/REPOBARE/_repo/plt/.d/.fs_standarts/.dd --_xxd ${dir_fns_}/dir_${name_fn_}/.d
+${_wrp2_} cp -rf --_xxd ${PLT_PATH}/.d/.fs_standarts.ax/.dd --_xxd ${dir_fns_}/dir_${name_fn_}/.d
 
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/.d
 

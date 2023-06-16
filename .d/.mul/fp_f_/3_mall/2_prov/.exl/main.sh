@@ -17,11 +17,13 @@ ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_v1_deb_
 #? cr /_debug/mdeb.sh
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_mdeb.sh
 
-#? _fn/${name_fn_}_mdeb.sh
-file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_fn/${name_fn_}mdeb.sh
+
 
 #? cr .d/.dd
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_dotd_dotdd.sh
+
+#? _fn/${name_fn_}_mdeb.sh
+file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_fn/${name_fn_}mdeb.sh
 
 ${_cr_shfn_} ${file_path}
 

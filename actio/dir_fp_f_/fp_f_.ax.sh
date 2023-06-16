@@ -50,7 +50,7 @@ fp_f_() {
     [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- c_up "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
 
     #? c_up module
-    # c_up "${FN_FN_DIR}" 1>/dev/null
+    c_up "${FN_FN_DIR}" 1>/dev/null
     # c_up "${FN_FN_DIR}"/.cntl 1>/dev/null
 
     if [ "_man" == "$1" ]; then
