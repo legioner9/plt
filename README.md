@@ -8,7 +8,7 @@
     
 [about_structure_repo](.d/.lego/about_structure_this_repo.man)
 
-[recommendation](.d/.lego/recommendation.man)
+[recommendation](${HOME}/.d/.lego/2_recommendation.man)
 
 # P.S.
 
