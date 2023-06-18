@@ -17,6 +17,7 @@ local verbose=0
 [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
 local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_mdeb/.cntl/ex1_mdeb.sh)
 # wrp_fifs1_ cd ${d_name} -d
+${_wrp2_} cd --_xxd "${d_name}"
     #{intro_fn}
 if [ "-h" == "$1" ]; then
 echo -e "${CYAN} ${FNN}() help: 
@@ -72,6 +73,46 @@ eval local $strex
 done
     #{default_cntl_fn}
 # amount_arg $# 1 1
+echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+arr=()
+res=()
+arr+=("leave menu")
+res+=("echo bye)))")
+wrp2_ c_up --_xxd "$(pwd)"
+for res_ in *; do
+# echo -e "${GREEN}$arr_ = $arr_${NORMAL}" #print variable
+res_=$(prs_f -n "${res_}")
+arr_=$(${res_} _head)
+arr+=("${arr_}")
+res+=("${res_}")
+done
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+num_res=$(($1 - 1))
+${res[${num_res}]}
+return 0
+fi
+PS3="eligendi actiones: "
+select item in "${arr[@]}"; do
+for ((i = 0; i < 1000; i++)); do
+if [[ ${item} == ${arr[$i]} ]]; then
+${res[$i]}
+${FNN} $@
+fi
+if [[ ${item} == ${arr[0]} ]]; then
+${res[$i]}
+fi
+done
+done
+#{zzz20}
     #{body_fn}
 }
 
