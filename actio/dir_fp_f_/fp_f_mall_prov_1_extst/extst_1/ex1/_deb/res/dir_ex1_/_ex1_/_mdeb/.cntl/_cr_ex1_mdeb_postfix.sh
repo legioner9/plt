@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "$HOME/.bashrc"
+#. "${HOME}/.bashrc"
 
-filename="/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_mdeb/.cntl/_cr_ex1_mdeb_postfix.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_mdeb/.cntl/_cr_ex1_mdeb_postfix.sh"
 
 ARGS=($@)
 NARGS=$#
@@ -32,6 +32,12 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
+cd ..
+echo -e "${GREEN}$(pwd) = $(pwd)${NORMAL}" #print variable
+if [[ -z "$1" ]] || [[ -z "$2" ]] ; then
+plt_exit "dual args mast be exist and mean create a"$1"_fp_f_mdeb_"$2""
+fi
+cr_shfn_ a"$1"_fp_f_mdeb_"$2".sh
 #{body}
 #-------------------------------
 #-------------------------------------
