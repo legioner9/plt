@@ -56,6 +56,10 @@ if [ "_lst" == "$1" ]; then
 edit_ "${d_name}/${FNN}".lst
 return 0
 fi
+if [ "_head" == "$1" ]; then
+echo "_head fn: ${d_name}/${FNN}"
+return 0
+fi
 if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1

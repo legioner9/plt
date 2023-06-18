@@ -1,0 +1,67 @@
+#!/bin/bash
+
+#. "${HOME}/.bashrc"
+
+filename="${PLT_PATH}/.f/tst_this_repo.gitsh"
+
+ARGS=($@)
+NARGS=$#
+verbose=0
+[[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}---$filename $* ---${NORMAL}" #started functions
+idir=$(pwd)
+rdir="$(prs_f -d $filename)"
+gname="$(prs_f -n $filename)" # name without .ext
+wrp_fifs1_ cd "$(prs_f -d $filename)" -d1
+g_args=($(garg2e_ "${ARGS[@]}"))
+[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+for strex in $(garg2e_ "${ARGS[@]}"); do
+    [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    eval $strex
+done
+_() {
+    echo "empty _deb in $filename"
+    # . $filename" arg1 arg2
+}
+if [ "_deb" == "$1" ]; then
+    _
+    return 0
+fi
+#{header}
+
+#----------------------------------------------------------------------
+#-------------------------------------
+#-------------------------------
+
+wrp2_ cd --_xxd "${rdir}" 1>/dev/null
+
+if ! is_gindir_ "${rdir}" 1>/dev/null; then
+    plt_exit "${rdir} not under git" 1>/dev/null
+    return 1
+fi
+
+#! copy 
+# wrp2_ cp -fu --_xxf .d/.tst/pre-commit --_xxd .git/hooks 1>/dev/null
+# chmod +x .git/hooks/pre-commit
+
+local_list=.d/.tst/local.list
+
+if wrp2_ up_err_ tst --_xxf ${local_list} 1>/dev/null; then
+    echo -e "${BLUE}---INIT0 patch in ${local_list} with EXIT 0---${NORMAL}" #sistem info mesage
+    # exit 0
+    return 0
+else
+    echo -e "${RED}---INIT0 patch in ${local_list} with EXIT 1---${NORMAL}" >&2 #sistem info mesage
+    # exit 1
+    return 1
+fi
+
+
+#{body}
+#-------------------------------
+#-------------------------------------
+#----------------------------------------------------------------------
+
+cd "$idir"
+
+unset filename

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "${HOME}/.bashrc"
+#. "$HOME/.bashrc"
 
-filename="${PLT_PATH}/.gitrc"
+filename="/home/st/REPOBARE/_repo/plt/.d/.fs_standarts/.dd/cr_tree_gign_dir.sh"
 
 ARGS=($@)
 NARGS=$#
@@ -32,32 +32,20 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-
-wrp2_ cd --_xxd "${rdir}" 1>/dev/null
-
-if ! is_gindir_ "${rdir}" 1>/dev/null; then
-    plt_exit "${rdir} not under git" 1>/dev/null
-    return 1
-fi
-
-#! copy 
-# wrp2_ cp -fu --_xxf .d/.tst/pre-commit --_xxd .git/hooks 1>/dev/null
-# chmod +x .git/hooks/pre-commit
-
-local_list=.d/.tst/local.list
-
-if wrp2_ up_err_ tst --_xxf ${local_list} 1>/dev/null; then
-    echo -e "${BLUE}---INIT0 patch in ${local_list} with EXIT 0---${NORMAL}" #sistem info mesage
-    # exit 0
-    return 0
-else
-    echo -e "${RED}---INIT0 patch in ${local_list} with EXIT 1---${NORMAL}" >&2 #sistem info mesage
-    # exit 1
-    return 1
-fi
-
-
 #{body}
+echo ${rdir}
+${_wrp2_} cd --_xxd ${rdir}
+cd ..
+
+${_wrp2_} tree -a -L 2 -o "$(pwd)"/.dd/tree_gign_dir.man --_xxd ^"$(pwd)"
+
+sed -i '1s|^|'"tree -a -L 2 in $(pwd)\n"'|' "$(pwd)"/.dd/tree_gign_dir.man
+
+# tree -a -L 2 -o ~/TMP/tree.man
+# cat ~/TMP/tree.man
+
+# echo $(tree -a -L 2) > ${rdir}/tree_gign_dir.man
+
 #-------------------------------
 #-------------------------------------
 #----------------------------------------------------------------------

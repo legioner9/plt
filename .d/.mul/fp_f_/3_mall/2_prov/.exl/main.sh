@@ -17,7 +17,8 @@ ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_v1_deb_
 #? cr /_debug/mdeb.sh
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_debug_mdeb.sh
 
-
+#? cr _mdeb
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_mdeb.sh
 
 #? cr .d/.dd
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_dotd_dotdd.sh

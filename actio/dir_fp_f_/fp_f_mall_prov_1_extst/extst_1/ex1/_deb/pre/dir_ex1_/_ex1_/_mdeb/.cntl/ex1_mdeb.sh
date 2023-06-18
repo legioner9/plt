@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/_nnn2_/_fn/nnn2_mdeb_set_1.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_mdeb/.cntl/ex1_mdeb.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-nnn2_mdeb_set_1(){
+ex1_mdeb(){
 local FNN=${FUNCNAME[0]}
 local PPWD=$PWD
 local ARGS=($@)
@@ -15,7 +15,7 @@ local NARGS=$#
 local verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/_nnn2_/_fn/nnn2_mdeb_set_1.sh)
+local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_mdeb/.cntl/ex1_mdeb.sh)
 # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
 if [ "-h" == "$1" ]; then
@@ -72,7 +72,6 @@ eval local $strex
 done
     #{default_cntl_fn}
 # amount_arg $# 1 1
-echo -e "${BLUE}--- "this empty set_1" ---${NORMAL}" #sistem info mesage
     #{body_fn}
 }
 

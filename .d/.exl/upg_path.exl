@@ -35,6 +35,7 @@ eval cr_f_ ${path_file} --vi0 '\${PATH_TST_DIR}' --vr0 "${PATH_TST_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_VAR_DIR}' --vr0 "${PATH_VAR_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_VEXILLUM_DIR}' --vr0 "${PATH_VEXILLUM_DIR}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_WARG_DIR}' --vr0 "${PATH_WARG_DIR}"
+eval cr_f_ ${path_file} --vi0 '\${PATH_FS_STANDARTS_FX_DIR}' --vr0 "${PATH_FS_STANDARTS_FX_DIR}"
 
 eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 "${PATH_MAIN_REPO_FN_DIR}"
 
