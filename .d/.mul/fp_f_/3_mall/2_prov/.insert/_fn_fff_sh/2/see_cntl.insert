@@ -1,4 +1,4 @@
-echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
+${_echo_deb_} ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
 
 if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
     echo "DEBUG MODE in ${FNLOCK}"

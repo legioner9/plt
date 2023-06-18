@@ -1,12 +1,7 @@
-local echo_
-local debug_
-local verbose_
-local develop1_
-local errmes_
-local outmes_
-local ptr_if_
-local ptr_sem_
-
+local echo_=0
+local debug_=0
+local verbose_=0
+local develop1_=0
 
 # [[ 1 -eq ${verbose} ]] || {
 #     garg_ ${FNN} $@

@@ -28,24 +28,6 @@ ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
 # ------------------------------------------
 # -----------------------------------------------------------------------------------------
 
-# altlinux_{name_fn_}() {
-#     :
-# }
-
-# fedora_{name_fn_}() {
-#     :
-# }
-
-# if [ $PLT_COGOS == "altlinux" ]; then
-#     altlinux_{name_fn_}
-# fi
-
-# if [ $PLT_COGOS == "fedora" ]; then
-#     fedora_{name_fn_}
-# fi
-
-unset_autoargs_{name_fn_}
-
 #!function body======================
 #!function body===============================================
 #!function body===================================================================

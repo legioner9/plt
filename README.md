@@ -23,6 +23,9 @@
 - ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
 - ${_wrp2_} not correct with string contane '>'
 
+# raports
+
+
 
 # update fp_f
 
@@ -37,7 +40,7 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 
 ## do fn
 
-- cr_dotdd_
+- teach cr_sh_ and cr_shfn_ salent mode and do fp_f_mall_prov_1_extst/extst_1/ex5 res ONLY "that from zx"
 
 ## plan dirs in /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_
 - nnn2_ like fp_f_ in /secundo (uxix+/primus) or /mall flow 1

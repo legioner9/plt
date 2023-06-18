@@ -1,1 +1,1 @@
-${_wrp2_} cd --_xxd "${d_name}"
+${_wrp2_} cd --_xxd "${d_name}" >/dev/null

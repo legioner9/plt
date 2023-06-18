@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex2/_flow_tst.sh
+filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex5/_flow_tst.sh
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 PW=$(pwd)
 idir="$(dirname ${filename})"
@@ -9,10 +9,9 @@ cd "${idir}" || {
 }
 #?----------------------------------------------------
 #?-------------------------------------
-unset ex1_
-${_wrp2_} . --_xxf /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/ex1_.ax.sh
-ex1_ &>res
-ex1_mdeb 2 &>>res
+
+: >res
+ex1_mdeb 1 >res
 
 #{body_sh}
 #?-------------------------------------
