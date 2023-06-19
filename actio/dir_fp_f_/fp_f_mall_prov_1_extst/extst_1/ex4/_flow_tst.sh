@@ -11,9 +11,13 @@ cd "${idir}" || {
 #?-------------------------------------
 : >res
 
-${_wrp2_} . --_xxf ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd/cr_tree_gign_dir.sh
-${_is_est_} ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd/tree_gign_dir.man -f >${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex4/res
-cat ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd/tree_gign_dir.man >${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex4/res
+dir_dotdd="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd"
+
+${_wrp2_} . --_xxf ${dir_dotdd}/cr_tree_gign_dir.sh
+
+${_is_est_} ${dir_dotdd}/tree_gign_dir.man -f >${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex4/res
+
+cat ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.dd/tree_gign_dir.man >>${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex4/res
 
 #{body_sh}
 #?-------------------------------------

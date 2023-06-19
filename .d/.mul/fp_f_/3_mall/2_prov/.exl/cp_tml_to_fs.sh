@@ -7,6 +7,8 @@ ${_wrp2_} cp -rf --_xxf "${tml_dir}/file.ax.sh" --_xnf "${PWD}/dir_${name_fn_}/$
 
 # ${_wrp2_} cp -rf --_xxd "${tml_dir}/.d" --_xnd "${PWD}/dir_${name_fn_}/.d"
 
+${_wrp2_} cp -rf --_xxd "${tml_dir}/.d/.self_tst" --_xxd "${PWD}/dir_${name_fn_}/.d"
+
 ${_wrp2_} cp -rf --_xxf "${tml_dir}/.d/.sal/file.man" --_xnf "${PWD}/dir_${name_fn_}/.d/.sal/${name_fn_}.man"
 
 ${_wrp2_} cp -rf --_xxf "${tml_dir}/.d/.sal/file.lst" --_xnf "${PWD}/dir_${name_fn_}/.d/.sal/${name_fn_}.lst"
@@ -17,6 +19,6 @@ ${_wrp2_} cp -rf --_xxf "${tml_dir}/.d/.sal/file.body.sh" --_xnf "${PWD}/dir_${n
 
 ${_wrp2_} cp -rf --_xxf "${tml_dir}/.d/.sal/file.h.sh" --_xnf "${PWD}/dir_${name_fn_}/.d/.sal/${name_fn_}.h.sh"
 
-${_wrp2_} cp -rf --_xxd "${tml_dir}/_file" --_xnd "${PWD}/dir_${name_fn_}/_${name_fn_}"
+${_wrp2_} cp -rf --_xxd "${tml_dir}/_file/." --_xnd "${PWD}/dir_${name_fn_}/.d/.${name_fn_}"
 
 

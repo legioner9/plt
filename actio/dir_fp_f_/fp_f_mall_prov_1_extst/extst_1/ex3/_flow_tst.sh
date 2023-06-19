@@ -9,9 +9,8 @@ cd "${idir}" || {
 }
 #?----------------------------------------------------
 #?-------------------------------------
-unset ex1_
-${_wrp2_} . --_xxf /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/ex1_.ax.sh
-ex1_ -h > res
+
+. /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh 1 > res
 
 #{body_sh}
 #?-------------------------------------

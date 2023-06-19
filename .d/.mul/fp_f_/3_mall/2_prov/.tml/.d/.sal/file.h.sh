@@ -38,6 +38,13 @@ echo -e "${CYAN} ${FNN}() help:
 .
 .        CNTL defaut: -_echo, -_debug
 .        CNTL develop: -_develop1, ... for special development mode, NOT to product
+.
+.        DEMANDS for IFS wrp_fn:
+.           . dir_${FNN}/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+.           . dir_${FNN}/_gnr_dir_sys.sh create extst in dir_${FNN}
+.           . dir_${FNN}/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_${FNN}_mdeb <num>
+.           . dir_${FNN}/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_${FNN}_mdeb <num>
+.           
 .        
 .        TAGS: (fs|net|)
 .        IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}

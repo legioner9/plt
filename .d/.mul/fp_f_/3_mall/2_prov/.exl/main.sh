@@ -23,45 +23,26 @@ ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_mdeb.sh
 #? cr .d/.dd
 ${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_dotd_dotdd.sh
 
-# #? _fn/${name_fn_}_mdeb.sh
-# file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_fn/${name_fn_}mdeb.sh
+#? .d/.self_tst
+#! _${name_fn_}/_debug/self_tst -> .d/.self_tst
 
-# ${_cr_shfn_} ${file_path}
-
-# body_fn=${insert_dir}/_fn_fff_mdeb_sh/body_fn_mdeb.insert
-
-# ${_cr_f_} ${file_path} --fi0 ${body_fn} --fr0 {body_fn}
-
-# ${_obs_quis_} ${file_path}
-
-# #? insert to {zzz20} in _fn/${name_fn_}_mdeb.sh
-# arr_res=${insert_dir}/_fn_fff_mdeb_sh/arr_res.insert
-
-# ${_cr_f_} ${file_path} --fi0 ${arr_res} --fr0 {arr_res}
-
-# #? _fn/${name_fn_}_mdeb_set_1.sh
-# file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_fn/${name_fn_}mdeb_set_1.sh
-
-# ${_cr_shfn_} ${file_path}
-
-# body_fn=${insert_dir}/_fn_fff_mdeb_set_1_sh/body_mdeb_set_1.insert
-
-# ${_cr_f_} ${file_path} --fi0 ${body_fn} --fr0 {body_fn}
-
-#? _debug/self_tst/generate_self_tst_1.sh
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst
-
-${_cr_sh_} generate_self_tst_1.sh
-
-file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
-
-body=${insert_dir}/_fn_fff_self_tst_1/body_self_tst_1.insert
-
-${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body}
+${_wrp2_} . --_xxf ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cr_self_tst.sh
 
 ${_edit_} "${dir_fns_}/dir_${name_fn_}"
 
-. ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
+# ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst
+
+# ${_cr_sh_} generate_self_tst_1.sh
+
+# file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
+
+# body=${insert_dir}/_fn_fff_self_tst_1/body_self_tst_1.insert
+
+# ${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body}
+
+# ${_edit_} "${dir_fns_}/dir_${name_fn_}"
+
+# . ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
 #* work in _debug <<<<<<<<<<
 
 #* work in extst >>>>>>>>>>

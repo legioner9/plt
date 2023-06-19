@@ -32,7 +32,8 @@ local FN_FN_DIR=${FN_CONT_DIR}/_fn             #? dir with fn's subfunction
 local FN_TMP_DIR=${FN_CONT_DIR}/_tmp           #? dir with fn's tmp
 local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug       #? dir with fn's free debug flow
 local FN_CONFIG_DIR=${FN_CONT_DIR}/_config     #? dir with fn's config
-local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default   #? dir with fn's default behavviour
+local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
+local FN_DOTD_DIR=${FN_DIR}/.d
 local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
 # wrp_fifs1_ rm -f "${FN_ERR_FILE}" -cf1
@@ -158,7 +159,7 @@ fi
 done
 if [ "_mdeb" == "$1" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-"${FNN}mdeb"
+"${_wrp2_}" . "${FN_DIR}"/.d/.mdeb/.cntl/_start_${FNN}_mdeb.sh "$2"
 return 0
 fi
 #{cntl_default}
@@ -172,14 +173,10 @@ ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
 #!function body======================
 #? amount_arg $# min_args max_args "in $FNN :: $*"
 #? USE ex1_() -echo -deb
-local echo_
-local debug_
-local verbose_
-local develop1_
-local errmes_
-local outmes_
-local ptr_if_
-local ptr_sem_
+local echo_=0
+local debug_=0
+local verbose_=0
+local develop1_=0
 # [[ 1 -eq ${verbose} ]] || {
 #     garg_ ${FNN} $@
 # } && {
@@ -205,7 +202,7 @@ done
 #?    exit 1
 #?}
 #{#ptr_if}
-echo_deb_ ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
+${_echo_deb_} ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
 if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
 echo "DEBUG MODE in ${FNLOCK}"
 echo "\${errmes_}: ${errmes_}"
@@ -255,19 +252,6 @@ fi
 #{body_ax_fn}
 # ------------------------------------------
 # -----------------------------------------------------------------------------------------
-# altlinux_ex1_() {
-#     :
-# }
-# fedora_ex1_() {
-#     :
-# }
-# if [ $PLT_COGOS == "altlinux" ]; then
-#     altlinux_ex1_
-# fi
-# if [ $PLT_COGOS == "fedora" ]; then
-#     fedora_ex1_
-# fi
-unset_autoargs_ex1_
 #!function body======================
 #!function body===============================================
 #!function body===================================================================
