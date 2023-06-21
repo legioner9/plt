@@ -33,3 +33,8 @@
 - lexicon: intefaces
 - causa: do standart interfaces
 - examp: 
+
+## .fs_ifs
+- lexicon: [f]ile [s]ystem [i]nte[f]ace[s]
+- causa: do standart generate fs interfaces
+- examp: ifs_cr_sh for cr .sh files

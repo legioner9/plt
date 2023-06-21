@@ -1,0 +1,63 @@
+[1mexec: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.sal/ex1_.body.sh :end exec[0m
+[1mexec: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.sal/ex1_.h.sh :end exec[0m
+[0;36m wrp2_() help: 
+.        MAIN: 
+.        NAME: wrp2_()
+.        WHERE:?(only in root dir)Y/N
+.        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
+.            if arg no rout full_path be pwd/<name_file_with_head_path> , if name root name instead
+.        AUTH:?legioner9@inbox.ru
+.        DEPR:?(Y|N)
+.        ARGS: 
+.        \$1
+.        [ ,\$2 num_menu ]
+.        CNTLS:
+.            required
+.            optional -verbose (not garg parsed, for echo main param function) 
+.        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
+.                -h : this 
+.                _go : edit_ /home/st/start/communis/Deploy_store/.qa/main_repo_fn
+.                _list : edit_ /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_.list
+.            manual 
+.                _man : edit_ /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_.man
+.                _puml : puml_ /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_.puml -_drawing
+.            tst single mane :
+.                _tst : . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_tst/exec.tst
+.            deb single mane 
+.                _deb : . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_wrp2_/_wrp2_/_default/default_deb.sh
+.            steps tst single mane :
+.                _flw : . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_tst/_flow_tst.sh
+.            menu for deb
+.                _mdeb : . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/_ex1_/_debug/mdeb.sh
+.            tst all . exec.extst in /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_extst/extst_1
+.                _extst : . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_extst/extst_1/start_exec.tst
+.            tst <num> (exec.extst)
+.                _extst<num> . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_extst/extst_1/ex<num>_tst/exec.extst
+.            steps extst_1/ex<num>_tst
+.                _exdeb<num> . /home/st/start/communis/Deploy_store/.qa/main_repo_fn/wrp2_extst/extst_1/ex<num>_tst/_flow_tst.sh
+.
+.        CNTL defaut: -_echo, -_debug
+.        CNTL develop: -_develop1, ... for special development mode, NOT to product
+.
+.        DEMANDS for IFS wrp_fn:
+.           . dir_wrp2_/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+.           . dir_wrp2_/_gnr_dir_sys.sh create extst in dir_wrp2_
+.           . dir_wrp2_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_wrp2__mdeb <num>
+.           . dir_wrp2_/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_wrp2__mdeb <num>
+.           
+.        
+.        TAGS: (fs|net|)
+.        IFS: (fifs| exl| ...) - discribe in /home/st/REPOBARE/_repo/plt/.d/.ifs
+.        FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
+.        RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+.        ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
+.        WARN: 
+.        DEBUG:
+.            wrp2_ _deb, wrp2_ _mdeb
+.        EXAMP:
+.            wrp2_ -<>
+.            [0m
+[1mexec: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh 1 :end exec[0m
+[1m---start file:///home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/.d/.mdeb/.cntl/ex1_mdeb.sh ---[0m
+[0;34m--- exec ex1_mdeb (num_menu) ---[0m
+that from zx

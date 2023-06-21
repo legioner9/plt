@@ -13,7 +13,7 @@ unset ex1_
 ${_wrp2_} . --_xxf /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_deb/res/dir_ex1_/ex1_.ax.sh
 ex1_ >res
 ex1_ -h >> res
-ex1_ _mdeb 1 &>>res
+ex1_ _mdeb 1 >>res
 
 #{body_sh}
 #?-------------------------------------

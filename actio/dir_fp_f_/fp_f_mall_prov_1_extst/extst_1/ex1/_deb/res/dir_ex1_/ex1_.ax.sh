@@ -159,7 +159,7 @@ fi
 done
 if [ "_mdeb" == "$1" ]; then
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-"${_wrp2_}" . "${FN_DIR}"/.d/.mdeb/.cntl/_start_${FNN}_mdeb.sh "$2"
+"${_wrp2_}" . "${FN_DIR}"/.d/.mdeb/.cntl/_start_${FNN}mdeb.sh "$2"
 return 0
 fi
 #{cntl_default}

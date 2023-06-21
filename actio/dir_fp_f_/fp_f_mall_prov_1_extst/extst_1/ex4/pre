@@ -6,16 +6,38 @@ tree -a -L 2 in /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_ext
 │   ├── sruct.man
 │   ├── textus.man
 │   └── tree_gign_dir.man
+├── .ex1_
+│   ├── _config
+│   ├── _debug
+│   ├── _default
+│   ├── _exec
+│   ├── _exl
+│   ├── _fn
+│   ├── _insert
+│   ├── _list
+│   ├── _log
+│   ├── _man
+│   ├── _menu
+│   ├── _sh
+│   ├── _tml
+│   ├── _tmp
+│   └── _var
 ├── .mdeb
 │   ├── a1_fp_f_mdeb_zx.sh
 │   ├── .cntl
 │   ├── .store
 │   └── .tmp
-└── .sal
-    ├── ex1_.body.sh
-    ├── ex1_.h.sh
-    ├── ex1_.lst
-    ├── ex1_.man
-    └── ex1_.puml
+├── .sal
+│   ├── ex1_.body.sh
+│   ├── ex1_.h.sh
+│   ├── ex1_.lst
+│   ├── ex1_.man
+│   └── ex1_.puml
+└── .self_tst
+    ├── 0
+    ├── dir_1
+    ├── generate_self_tst_1.sh
+    ├── howuse.man
+    └── whatshappenig.man
 
-6 directories, 11 files
+24 directories, 15 files
