@@ -1,3 +1,3 @@
 #!/bin/bash
 
-#{init)body}
+#{init_body}

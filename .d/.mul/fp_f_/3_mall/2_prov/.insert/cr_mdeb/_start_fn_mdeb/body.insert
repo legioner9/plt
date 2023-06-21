@@ -1,3 +1,0 @@
-. {mdeb_cntl_dir}/{name_fn_}mdeb.sh
-
-{name_fn_}mdeb "$1"
