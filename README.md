@@ -55,7 +55,8 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 
 - nginx, sites, mediawiki ...
 - caelum progect - wiki in repo (pars .dd dirs)
-- do fn: install from tsf - codium, intellij ...
+- do fn: install from tsf - codium {before delit file .vscode-oss dir not created}, intellij ...
+- in mm_... include point start flow AND correct list .exl and other
 
 ## any
 

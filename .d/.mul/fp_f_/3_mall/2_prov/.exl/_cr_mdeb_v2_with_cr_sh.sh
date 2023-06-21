@@ -17,11 +17,7 @@ cd ${mdeb_cntl_dir}
 ${_cr_sh_} _cr_${name_fn_}mdeb_postfix.sh
 ${_cr_f_dir_insert_} --name _cr_${name_fn_}mdeb_postfix.sh --dir_insert ${cr_mdeb_insert}/cr_fn_mdeb_postfix
 
-# ${_cr_sh_} _start_${name_fn_}mdeb.sh
-#? cr_sh_ -> cr_f_
-${_cr_f_} _start_${name_fn_}mdeb.sh --tml ${PLT_PATH}/.d/.fs_standarts.ax/init_body.sh
-
-
+${_cr_sh_} _start_${name_fn_}mdeb.sh
 ${_cr_f_dir_insert_} --name _start_${name_fn_}mdeb.sh --dir_insert ${cr_mdeb_insert}/_start_fn_mdeb
 
 ${_cr_f_} _start_${name_fn_}mdeb.sh --vi0 ${name_fn_} --vr0 {name_fn_}

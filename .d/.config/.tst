@@ -1,6 +1,6 @@
 ${FONSH_PATH}/actio
 ${PLT_PATH}/actio
-# ${PATH_COMMUNIS}/Deploy_store/.qa
+${PATH_COMMUNIS}/Deploy_store/.qa
 # ${PATH_TST_DIR}
 #${PATH_MAIN_REPO_FN_DIR}/dir_c_/_c_/_lib
 # ${PATH_COMMUNIS}/Deploy_store/.qa/lib/_stl_tmp_4
