@@ -14,32 +14,24 @@ cr_mdeb_insert=${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.insert/cr_mdeb
 
 cd ${mdeb_cntl_dir}
 
-#? ${_cr_sh_} _cr_${name_fn_}mdeb_postfix.sh
-#? cr_sh_ -> cr_f_
-
-name_file_sh="_cr_${name_fn_}mdeb_postfix.sh"
-
-${_cr_sh_} ${name_file_sh}
-${_cr_f_dir_insert_} --name ${name_file_sh} --dir_insert ${cr_mdeb_insert}/cr_fn_mdeb_postfix
+${_cr_sh_} _cr_${name_fn_}mdeb_postfix.sh
+${_cr_f_dir_insert_} --name _cr_${name_fn_}mdeb_postfix.sh --dir_insert ${cr_mdeb_insert}/cr_fn_mdeb_postfix
 
 #? ${_cr_sh_} _start_${name_fn_}mdeb.sh
 #? cr_sh_ -> cr_f_
+${_cr_f_} _start_${name_fn_}mdeb.sh --tml ${PLT_PATH}/.d/.fs_standarts.ax/init_body.sh
 
-name_file_sh="_start_${name_fn_}mdeb.sh"
-
-${_cr_f_} ${name_file_sh} --tml ${PLT_PATH}/.d/.fs_standarts.ax/init_body.sh
-
-${_cr_f_dir_insert_} --name ${name_file_sh} --dir_insert ${PLT_PATH}/.d/.mul/fp_f_/3_mall/2_prov/.insert/cr_mdeb/_start_fn_mdeb/init_body
-${_cr_f_dir_insert_} --name ${name_file_sh} --dir_insert ${PLT_PATH}/.d/.mul/fp_f_/3_mall/2_prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1
+${_cr_f_dir_insert_} --name _start_${name_fn_}mdeb.sh --dir_insert ${PLT_PATH}/.d/.mul/fp_f_/3_mall/2_prov/.insert/cr_mdeb/_start_fn_mdeb/init_body
+${_cr_f_dir_insert_} --name _start_${name_fn_}mdeb.sh --dir_insert ${PLT_PATH}/.d/.mul/fp_f_/3_mall/2_prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1
 
 # --fi0 ${PLT_PATH}/.d/.mul/fp_f_/3_mall/2_prov/.insert/cr_mdeb/_start_fn_mdeb/init_body/init_body.insert \
 # --fr0 {init_body}
 
 # ${_cr_f_dir_insert_} --name _start_${name_fn_}mdeb.sh --dir_insert ${cr_mdeb_insert}/_start_fn_mdeb
 
-${_cr_f_} ${name_file_sh} --vi0 ${name_fn_} --vr0 {name_fn_}
-${_cr_f_} ${name_file_sh} --vi0 ${mdeb_cntl_dir} --vr0 {mdeb_cntl_dir}
-${_obs_quis_} ${name_file_sh}
+${_cr_f_} _start_${name_fn_}mdeb.sh --vi0 ${name_fn_} --vr0 {name_fn_}
+${_cr_f_} _start_${name_fn_}mdeb.sh --vi0 ${mdeb_cntl_dir} --vr0 {mdeb_cntl_dir}
+${_obs_quis_} _start_${name_fn_}mdeb.sh
 
 
 ${_cr_shfn_} ${name_fn_}mdeb.sh
