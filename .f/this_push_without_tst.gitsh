@@ -16,6 +16,8 @@ cd ${PLT_PATH}
 
 git add .
 
+echo "#lll" >> /home/st/REPOBARE/_repo/plt/.git/COMMIT_EDITMSG
+
 git commit
 
 git push origin master
