@@ -29,3 +29,6 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 - ext .ax 
   - in dir (freez rename or move exists files) name meam fs defend for move files but ther may be changed and add new files
   - in file name mean that any canged will be eliminated after next autocreate or rebuilding
+
+## RCM_NID_EXL
+- how work functions: exec exl file set (interor logics) in nidus (exterior api) 
