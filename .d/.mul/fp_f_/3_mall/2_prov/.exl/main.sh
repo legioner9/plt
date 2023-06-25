@@ -58,7 +58,7 @@ ${_cr_tst_sys_} --name_dir extst_1 --ext extst
 #? cr_shgnr_ 1 dir_tst in ${name_fn_}extst/extst_1
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/${name_fn_}extst/extst_1
 
-${_cr_shgnr_} 1 dir_tst
+# ${_cr_shgnr_} 1 dir_tst
 
 #! be created cr_tst_dir_ --name "${name_fn_}"tst --ext tst (wrp_fifs1_ cd ${dir_fns_}/dir_${name_fn_}/)
 ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}

@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> nid1_ 
+farg2e2_ -> nid1_
+echo_deb_ -> nid1_
+nid1_ -> nid1_:is_num
+nid1_ -> nid1_:exit_err_nid1_
+nid1_ -> nid1_:exit_reg_nid1_
+nid1_ -> nid1_:unset_autoargs_nid1_
+' {wrap_fn}
+' fnn o-> nid1_
+' {body_fn}
+@enduml
