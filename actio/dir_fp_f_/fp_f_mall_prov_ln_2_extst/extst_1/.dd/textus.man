@@ -1,0 +1,23 @@
+## textus: tree -a -L 2 >> textus.man with notes
+
+### close_extxt 
+### start all ex<num>: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/start_exec._tst
+
+- ex1 : do like nid1_ and cr_sh2_ flow
+  - main process: ${_fp_f_} --_name_fn ln1_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res --_grad 3_mall --_tail 2_prov --_tail 2_prov
+  - fs_compare: ex1/_deb/pre ex1/_deb/res
+  - create ex1_ step by step: /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_1_extst/extst_1/ex1/_flow_tst_without_echo.sh 
+
+- ex2
+  - main process: ex1
+  - exec_compare: ex1
+
+<!-- - ex3
+  - main process: ex1
+  - exec_compare: ex1_ -->
+
+<!-- - ex4 
+  - main process: ex1
+  - start process: . fp_f_mall_prov_1_extst/extst_1/.dd/cr_tree_gign_dir.sh
+  - exec_compare: cat fp_f_mall_prov_1_extst/extst_1/.dd/tree_gign_dir.man > res
+  - <NOTABENE>: ext4 write in dir ext1 => for copy res to pre in ex1 for tsting use proc without ext4 - optimale single fp_f_mall_prov_1_extst/extst_1/ex1/exec._extst -->
