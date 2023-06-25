@@ -65,17 +65,17 @@ nid1_() { #? $1 chaild function
         "${_c_up}" "${FN_FN_DIR}" 1>/dev/null
     fi
 
-    if [ "_man" == "${ARGS2}" ]; then
+    if [ "_man" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".man ---${NORMAL}" #start files
         "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}"/.d/.sal/"$FNN".man
         return 0
     fi
-    if [ "-h" == "${ARGS2}" ]; then
+    if [ "-h" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".h.sh ---${NORMAL}" #start files
         "${_wrp2_}" . --_xxf "${FN_DIR}"/.d/.sal/"$FNN".h.sh
         return 0
     fi
-    if [ "_tst" == "${ARGS2}" ]; then
+    if [ "_tst" == "$1" ]; then
         local tst_file="${FN_DIR}/${FNN}"tst/exec.tst
         if [ -f "${tst_file}" ]; then
             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
@@ -86,7 +86,7 @@ nid1_() { #? $1 chaild function
             return 1
         fi
     fi
-    if [ "_puml" == "${ARGS2}" ]; then
+    if [ "_puml" == "$1" ]; then
         local puml_file="${FN_DIR}/${FNN}".puml
         if [ -f "${puml_file}" ]; then
             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
@@ -97,7 +97,7 @@ nid1_() { #? $1 chaild function
             return 1
         fi
     fi
-    if [ "_flw" == "${ARGS2}" ]; then
+    if [ "_flw" == "$1" ]; then
         local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
         if [ -f "${flw_file}" ]; then
             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
@@ -109,7 +109,7 @@ nid1_() { #? $1 chaild function
         fi
     fi
     for int in 1 2 3 4; do
-        if [ "_extst${int}" == "${ARGS2}" ]; then
+        if [ "_extst${int}" == "$1" ]; then
             local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
             if [ -f "${extst_num_file}" ]; then
                 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
@@ -122,7 +122,7 @@ nid1_() { #? $1 chaild function
         fi
     done
     for int in 1 2 3 4; do
-        if [ "_exdeb${int}" == "${ARGS2}" ]; then
+        if [ "_exdeb${int}" == "$1" ]; then
             local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
             if [ -f "${exdeb_num_file}" ]; then
                 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
@@ -134,7 +134,7 @@ nid1_() { #? $1 chaild function
             fi
         fi
     done
-    if [ "_extst" == "${ARGS2}" ]; then
+    if [ "_extst" == "$1" ]; then
         local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
         if [ -f ${tst_file} ]; then
             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
@@ -145,23 +145,23 @@ nid1_() { #? $1 chaild function
             return 1
         fi
     fi
-    if [ "_lst" == "${ARGS2}" ]; then
+    if [ "_lst" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
         "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}/${FNN}".lst
         return 0
     fi
-    if [ "_go" == "${ARGS2}" ]; then
+    if [ "_go" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
         "${_wrp2_}" "${_edit_}" --_xxd ${FN_DIR}
         return 0
     fi
-    if [ "_deb" == "${ARGS2}" ]; then
+    if [ "_deb" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
         "${_wrp2_}" . --_xxf "${FN_DEFAULT_DIR}"/default_deb.sh
         return 0
     fi
     for int in 1 2 3 4; do
-        if [ "_exdeb${int}" == "${ARGS2}" ]; then
+        if [ "_exdeb${int}" == "$1" ]; then
             # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
             local exdeb_num_file="${FN_DIR}"/"${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
             if [ -f "${exdeb_num_file}" ]; then
@@ -174,7 +174,7 @@ nid1_() { #? $1 chaild function
             fi
         fi
     done
-    if [ "_mdeb" == "${ARGS2}" ]; then
+    if [ "_mdeb" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
         "${_wrp2_}" . "${FN_DIR}"/.d/.mdeb/.cntl/_start_${FNN}mdeb.sh "$2"
         return 0
@@ -183,51 +183,51 @@ nid1_() { #? $1 chaild function
     #{#cntl_help}
     #{ctrl_args}
 
-    # [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- wrp_fifs1_ cd $PPWD -d1 1>/dev/null ---${NORMAL}" #start files
-    # ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
-    # #!function body===================================================================
-    # #!function body===============================================
-    # #!function body======================
-    # #? amount_arg $# min_args max_args "in $FNN :: $*"
-    # #? USE nid1_() -echo -deb
-    # local echo_=0
-    # local debug_=0
-    # local verbose_=0
-    # local develop1_=0
-    # # [[ 1 -eq ${verbose} ]] || {
-    # #     garg_ ${FNN} $@
-    # # } && {
-    # #     garg_ ${FNN} $@ 1>/dev/null
-    # # }
-    # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
-    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
-    #     return 1
-    # fi
-    # #? g_args with cntl=value
-    # local g_args=($(${_garg2e2_} "${ARGS[@]}"))
-    # #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-    # local e_args=($(${_earg2e2_} "${ARGS[@]}"))
-    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    # for strex in $(${_garg2e2_} "${ARGS[@]}"); do
-    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    #     eval local $strex
-    # done
-    # #{garg}
-    # #
-    # #? cd "$1" || {
-    # #?    read -p "$1: $1 not dir - enter for exit 1, ^C for interrapt in ${FNLOCK}"
-    # #?    exit 1
-    # #?}
-    # #{#ptr_if}
-    # ${_echo_deb_} ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
-    # if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
-    #     echo "DEBUG MODE in ${FNLOCK}"
-    #     echo "\${errmes_}: ${errmes_}"
-    #     echo "\${outmes_}: ${outmes_}"
-    # fi
-    # if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
-    #     echo "develop1 MODE in ${FNLOCK}"
-    # fi
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- wrp_fifs1_ cd $PPWD -d1 1>/dev/null ---${NORMAL}" #start files
+    ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
+    #!function body===================================================================
+    #!function body===============================================
+    #!function body======================
+    #? amount_arg $# min_args max_args "in $FNN :: $*"
+    #? USE nid1_() -echo -deb
+    local echo_=0
+    local debug_=0
+    local verbose_=0
+    local develop1_=0
+    # [[ 1 -eq ${verbose} ]] || {
+    #     garg_ ${FNN} $@
+    # } && {
+    #     garg_ ${FNN} $@ 1>/dev/null
+    # }
+    if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+        plt_exit " ${FNN} return 1: ${FNLOCK}"
+        return 1
+    fi
+    #? g_args with cntl=value
+    local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+    #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+    local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+        [[ 1 -eq ${verbose} ]] || echo "local $strex"
+        eval local $strex
+    done
+    #{garg}
+    #
+    #? cd "$1" || {
+    #?    read -p "$1: $1 not dir - enter for exit 1, ^C for interrapt in ${FNLOCK}"
+    #?    exit 1
+    #?}
+    #{#ptr_if}
+    ${_echo_deb_} ${echo_} "cntl echo_deb_ mode in ${FNLOCK}"
+    if [ -n "${debug_}" ] && [ ${debug_} -eq 1 ]; then
+        echo "DEBUG MODE in ${FNLOCK}"
+        echo "\${errmes_}: ${errmes_}"
+        echo "\${outmes_}: ${outmes_}"
+    fi
+    if [ -n "${develop1_}" ] && [ ${develop1_} -eq 1 ]; then
+        echo "develop1 MODE in ${FNLOCK}"
+    fi
     #{see_cntl}
     #{#def_exit}
     #! strongly return 1 -> exit_err_ $1
