@@ -19,6 +19,9 @@
     local FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
     local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
     local FN_DOTD_DIR=${FN_DIR}/.d
+
+    local cntl_args=()
+
     local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
     # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
     # wrp_fifs1_ rm -f "${FN_ERR_FILE}" -cf1
@@ -38,11 +41,13 @@
         "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}"/.d/.sal/"$FNN".man
         return 0
     fi
+    cntl_args+=("_man")
     if [ "-h" == "$1" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".h.sh ---${NORMAL}" #start files
         "${_wrp2_}" . --_xxf "${FN_DIR}"/.d/.sal/"$FNN".h.sh
         return 0
     fi
+    cntl_args+=("_h")
     if [ "_tst" == "$1" ]; then
         local tst_file="${FN_DIR}/${FNN}"tst/exec.tst
         if [ -f "${tst_file}" ]; then
@@ -54,6 +59,7 @@
             return 1
         fi
     fi
+    cntl_args+=("_tst")
     if [ "_puml" == "$1" ]; then
         local puml_file="${FN_DIR}/${FNN}".puml
         if [ -f "${puml_file}" ]; then
@@ -231,3 +237,4 @@
     # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
     #! ${array[@]:1} all from 1 member arr
     #{hints}
+ 

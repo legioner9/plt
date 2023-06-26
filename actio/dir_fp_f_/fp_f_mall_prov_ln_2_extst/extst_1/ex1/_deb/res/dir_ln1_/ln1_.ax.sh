@@ -249,7 +249,7 @@ ln1_() {
     local FNN="ln1_"
     echo ". ${PLT_PATH}/.d/.nid/mall.nid"
     if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
-    ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
+        ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
         return 1
     fi
 
