@@ -73,8 +73,8 @@ done
     #{default_cntl_fn}
 # amount_arg $# 1 1
 echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
-arr=()
-res=()
+local arr=()
+local res=()
 arr+=("leave menu")
 res+=("echo bye)))")
 arr+=("${FNN}_set_1:   ")

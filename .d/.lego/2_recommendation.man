@@ -35,3 +35,6 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 
 ## RCM_CIR
 - any project mast .cir point to inject variables
+
+## RCM_DOTNSC
+-  ext .nsc do not change that nod

@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="/home/st/REPOBARE/_repo/plt/actio/dir_nid1_/.d/.self_tst/generate_self_tst_1.sh"
+filename="/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/default_deb.sh"
 
 ARGS=($@)
 NARGS=$#
@@ -32,21 +32,6 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-echo -e "# create tst flow at dis_tst and dis2_tst
-# rename exec._{ext} to exec.{ext}
-# . start_check_distst.sh for tst all files" >howuse.man
-echo -e "# in deb_1.sh
-## delete dir_1
-## create directory "dir_1/dis" with envariment for exec._distst process
-## create directory "dir_1/dis2" with envariment for exec._distst process
-## create check_distst.list in dir_1
-## create start_check_distst.sh in dir_1" >whatshappenig.man
-#rr_
-#wrp_fifs1_ rm -rf dir_1 -cd1
-${_wrp2_} mkdir --_cnd dir_1
-${_wrp2_} cd --_xxd dir_1
-${_cr_tst_dir_} --name_dir dis --ext distst
-${_cr_tst_dir_} --name_dir dis2 --ext distst
 #{body}
 #-------------------------------
 #-------------------------------------

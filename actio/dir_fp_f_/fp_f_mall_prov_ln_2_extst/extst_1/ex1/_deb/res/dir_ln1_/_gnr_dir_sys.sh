@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename="${PLT_PATH}/actio/dir_nid1_/.d/.dd/cr_tree_gign_dir.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/_gnr_dir_sys.sh"
 
 ARGS=($@)
 NARGS=$#
@@ -32,11 +32,28 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-echo ${rdir}
-${_wrp2_} cd --_xxd ${rdir}
-cd ..
-${_wrp2_} tree -a -L 2 -o "$(pwd)"/.dd/tree_gign_dir.man --_xxd ^"$(pwd)"
-sed -i '1s|^|'"tree -a -L 2 in $(pwd)\n"'|' "$(pwd)"/.dd/tree_gign_dir.man
+#? cr_tst_sys_ --name_dir extst_1 --ext extst"
+[ -z "$1" ] && {
+plt_exit "$1 empty first arg mast be name dir (like namefn_extst_num) in ${rdir}"
+return 1
+}
+#
+plt_pause "do that? create $1 (like namefn_extst_num) cr_tst_sys_ in ${rdir}"
+#
+wrp2_ rm --_cxf ${rdir}/${gname}.tmp.exl
+#
+echo -e "
+wrp2_ cd --_xxd ${rdir}
+#
+wrp2_ mkdir --_xnd ${rdir}/"$1"_extst
+#
+wrp2_ cd --_xxd ${rdir}/"$1"_extst
+#
+cr_tst_sys_ --name_dir extst_1 --ext extst" > ${rdir}/${gname}.tmp.exl
+#
+exl_ --list ${rdir}/${gname}.tmp.exl
+#
+wrp2_ rm --_cxf ${rdir}/${gname}.tmp.exl
 #{body}
 #-------------------------------
 #-------------------------------------
