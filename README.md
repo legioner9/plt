@@ -8,7 +8,7 @@
     
 [about_structure_repo](.d/.lego/about_structure_this_repo.man)
 
-[recommendation](${HOME}/.d/.lego/2_recommendation.man)
+[recommendation](.d/.lego/2_recommendation.man)
 
 # P.S.
 
@@ -37,6 +37,8 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 - "unset" garg variable not need, ther allready local, but tst remove this fich
 
 # plans
+
+## use global nid_nid, nid_body to inject to .d/.cir/p1.cir
 
 ## do fn
 

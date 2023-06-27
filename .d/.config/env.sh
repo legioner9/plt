@@ -63,3 +63,6 @@ RETURN_WITH_EXIT_1=4
 RETURN_1=5
 
 QQ_EXIT=0
+
+# nid_nid='${PLT_PATH}/.d/.nid/mall.nid'
+# nid_body='${FN_SAL_DIR}/${FNN}.body.sh'
