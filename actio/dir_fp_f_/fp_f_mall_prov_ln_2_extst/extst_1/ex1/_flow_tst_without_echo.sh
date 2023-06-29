@@ -9,8 +9,7 @@ cd "${idir}" || {
 }
 #?----------------------------------------------------
 #?-------------------------------------
-
-: >res
+unset ln1_
 
 ${_wrp2_} mkdir -p --_cnd ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/
 ${_wrp2_} mkdir -p --_cnd ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/pre/

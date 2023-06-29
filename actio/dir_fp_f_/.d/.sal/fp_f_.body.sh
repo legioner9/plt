@@ -20,6 +20,7 @@ fi
 #? --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_veri|2_prov|3_absc|...)
 #! far up name from fs: using number menu or name dir
 
+# . ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.sh
 ${_exl_} --_exl_list ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.exl
 
 ${_plt_pause} "(${name_fn_}) create grad=${grad_} tail=${tail_}  !!! in ($PWD/dir_${name_fn_}/) ?"

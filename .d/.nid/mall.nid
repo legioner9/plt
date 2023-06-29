@@ -12,11 +12,11 @@ local PPWD=$PWD
 local RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
 # $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
 
-local FN_DOTD_DIR=${FN_DIR}/.d
-local FN_SAL_DIR=${FN_DIR}/.d/.sal.ax #? dir with fn's any contant
-local FN_CIR_DIR=${FN_DIR}/.d/.cir    #? dir with fn's any contant
+local FN_DOTD_DIR=${FN_DIR}/.d.ax
+local FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
+local FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
 
-local FN_CONT_DIR=${FN_DIR}/.d/.${FNN}     #? dir with fn's any contant
+local FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}     #? dir with fn's any contant
 local FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
 local FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
 local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
