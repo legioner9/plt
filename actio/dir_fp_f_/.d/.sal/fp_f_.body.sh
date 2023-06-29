@@ -21,7 +21,9 @@ fi
 #! far up name from fs: using number menu or name dir
 
 # . ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.sh
-${_exl_} --_exl_list ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.exl
+# ${_exl_} --_exl_list ${PLT_PATH}/.d/.mul/fp_f_/3_mall/cir.ax/out.cir
+. ${PLT_PATH}/.d/.mul/fp_f_/3_mall/cir.ax/out.cir
+
 
 ${_plt_pause} "(${name_fn_}) create grad=${grad_} tail=${tail_}  !!! in ($PWD/dir_${name_fn_}/) ?"
 

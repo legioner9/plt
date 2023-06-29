@@ -7,9 +7,6 @@
 #? cp tml to fs
 . ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cp_tml_to_fs.sh
 
-#? cp tml to fs
-. ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/cp_tml_to_fs.sh
-
 #? insert to puml dotsal dir_${name_fn_}/${name_fn_}.puml
 . ${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/ins_to_puml_dotd_dotsal.sh
 
