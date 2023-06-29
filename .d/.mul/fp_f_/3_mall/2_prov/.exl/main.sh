@@ -54,17 +54,3 @@ ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
 echo -e "${HLIGHT}--- exec: ${_cr_shgnr_} 2 dir_sys ---${NORMAL}" #start files
 ${_cr_shgnr_} 2 dir_sys
 
-#* work in _default >>>>>>>>>>
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_default
-
-echo -e "${HLIGHT}--- exec: ${_cr_sh_} default_deb.sh ---${NORMAL}" #start files
-${_cr_sh_} default_deb.sh
-
-file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_default/default_deb.sh
-
-body=${insert_dir}/_fn_fff_default_deb/body_default_deb.insert
-
-echo -e "${HLIGHT}--- exec: ${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body ---${NORMAL}" #start files
-${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body}
-
-#* work in _default >>>>>>>>>>

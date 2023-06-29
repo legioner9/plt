@@ -18,18 +18,28 @@ ln1_() {
 
     #{ctrl_args}
 
-local FNN="ln1_"
-echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
-${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
-return 1
-fi
-echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
-if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
-${_plt_exit} "fail: . ${FN_SAL_DIR}/${FNN}.body.sh"
-return 1
-fi
-${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
+    local FNN="ln1_"
+    echo ". ${PLT_PATH}/.d/.nid/mall.nid"
+    if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
+        ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
+        return 1
+    fi
+
+
+    # [[ " ${cntl_args[*]} " =~ " ${ARGS1} " ]] && return 0
+
+    for value in ${cntl_args[*]}; do
+        if [ "${value}" = "${ARGS1}" ]; then
+            return 0
+        fi
+    done
+
+    echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
+    if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
+        ${_plt_exit} "fail: . ${FN_SAL_DIR}/${FNN}.body.sh"
+        return 1
+    fi
+    ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
     #{init_body}
 
 }

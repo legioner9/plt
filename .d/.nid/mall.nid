@@ -16,14 +16,14 @@ local FN_DOTD_DIR=${FN_DIR}/.d.ax
 local FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
 local FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
 
-local FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}     #? dir with fn's any contant
+local FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
 local FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
 local FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
 local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
 local FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
 local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
 
-local cntl_args=()
+cntl_args=( -h _man _tst _puml _flw _extst _deb _mdeb _lst _go _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4 )
 
 local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
@@ -40,17 +40,17 @@ local verbose=0
 [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_c_up} "${FN_FN_DIR}" 1>/dev/null ---${NORMAL}" #start files
 "${_c_up}" "${FN_FN_DIR}" 1>/dev/null
 if [ "_man" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".man ---${NORMAL}" #start files
-    "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}"/.d/.sal/"$FNN".man
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
+    "${_wrp2_}" "${_edit_}" --_xxf "${FN_SAL_DIR}"/"$FNN".man
     return 0
 fi
-cntl_args+=("_man")
+
 if [ "-h" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/.d/.sal/"$FNN".h.sh ---${NORMAL}" #start files
-    "${_wrp2_}" . --_xxf "${FN_DIR}"/.d/.sal/"$FNN".h.sh
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
+    "${_wrp2_}" . --_xxf "${FN_SAL_DIR}"/"$FNN".h.sh
     return 0
 fi
-cntl_args+=("_h")
+
 if [ "_tst" == "$1" ]; then
     local tst_file="${FN_DIR}/${FNN}"tst/exec.tst
     if [ -f "${tst_file}" ]; then
@@ -62,7 +62,7 @@ if [ "_tst" == "$1" ]; then
         return 1
     fi
 fi
-cntl_args+=("_tst")
+
 if [ "_puml" == "$1" ]; then
     local puml_file="${FN_DIR}/${FNN}".puml
     if [ -f "${puml_file}" ]; then
@@ -74,6 +74,7 @@ if [ "_puml" == "$1" ]; then
         return 1
     fi
 fi
+
 if [ "_flw" == "$1" ]; then
     local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
     if [ -f "${flw_file}" ]; then
@@ -85,6 +86,7 @@ if [ "_flw" == "$1" ]; then
         return 1
     fi
 fi
+
 for int in 1 2 3 4; do
     if [ "_extst${int}" == "$1" ]; then
         local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
@@ -98,6 +100,7 @@ for int in 1 2 3 4; do
         fi
     fi
 done
+
 for int in 1 2 3 4; do
     if [ "_exdeb${int}" == "$1" ]; then
         local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
@@ -111,7 +114,8 @@ for int in 1 2 3 4; do
         fi
     fi
 done
-if [ "_extst" == "$1" ]; then
+
+if [ " _extst " == "$1" ]; then
     local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
@@ -122,40 +126,31 @@ if [ "_extst" == "$1" ]; then
         return 1
     fi
 fi
+
 if [ "_lst" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
     "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}/${FNN}".lst
     return 0
 fi
+
 if [ "_go" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
     "${_wrp2_}" "${_edit_}" --_xxd ${FN_DIR}
     return 0
 fi
+
 if [ "_deb" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
     "${_wrp2_}" . --_xxf "${FN_DEFAULT_DIR}"/default_deb.sh
     return 0
 fi
-for int in 1 2 3 4; do
-    if [ "_exdeb${int}" == "$1" ]; then
-        # FN_CONT_DIR=${FN_DIR}/dir_${FNN}/_${FNN}
-        local exdeb_num_file="${FN_DIR}"/"${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
-        if [ -f "${exdeb_num_file}" ]; then
-            [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-            "${_wrp2_}" . --_xxf "${exdeb_num_file}"
-            return 0
-        else
-            "${_plt_exit}" "not exist file: ${exdeb_num_file} "
-            return 1
-        fi
-    fi
-done
+
 if [ "_mdeb" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-    "${_wrp2_}" . "${FN_DIR}"/.d/.mdeb/.cntl/_start_${FNN}mdeb.sh "$2"
+    "${_wrp2_}" . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
     return 0
 fi
+
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}

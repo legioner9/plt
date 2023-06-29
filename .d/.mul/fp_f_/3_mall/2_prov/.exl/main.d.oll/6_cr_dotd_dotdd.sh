@@ -1,20 +1,17 @@
 #!/bin/bash
 
-${_wrp2_} cp -rf --_xxd ${PLT_PATH}/.d/.fs_standarts.ax/.dd --_xxd ${dir_fns_}/dir_${name_fn_}/.d
+"${_ehh}" cp -rf ${PATH_FS_STANDARTS_AX_DIR}/.dd ${_dotd_dir}
 
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/.d
+"${_ehh}" cd ${_dotd_dir}
 
-echo ${_wrp2_} rm --_xxf ${dir_fns_}/dir_${name_fn_}/.d/.dd/cr_tree_gign_dir.sh
+"${_ehh}" rm ${_dotd_dir}/.dd/cr_tree_gign_dir.sh
 
-${_wrp2_} rm --_xxf ${dir_fns_}/dir_${name_fn_}/.d/.dd/cr_tree_gign_dir.sh
-
-echo ${_cr_sh_} ${dir_fns_}/dir_${name_fn_}/.d/.dd/cr_tree_gign_dir.sh
-${_cr_sh_} ${dir_fns_}/dir_${name_fn_}/.d/.dd/cr_tree_gign_dir.sh
+"${_ehh}" ${_cr_sh_} ${_dotd_dir}/.dd/cr_tree_gign_dir.sh
 
 #? ins
 
-this_file=${dir_fns_}/dir_${name_fn_}/.d/.dd/cr_tree_gign_dir.sh
+this_file=${_dotd_dir}/.dd/cr_tree_gign_dir.sh
 
-${_is_est_} ${this_file} -f
+"${_ehh}" ${_is_est_} ${this_file} -f
 
-${_cr_f_dir_insert_} --name ${this_file} --dir_insert ${insert_dir}/cr_dotd_dotdd
+"${_ehh}" ${_cr_f_dir_insert_} --name ${this_file} --dir_insert ${insert_dir}/cr_dotd_dotdd
