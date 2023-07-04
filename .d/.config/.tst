@@ -1,6 +1,6 @@
-${FONSH_PATH}/actio
-${PLT_PATH}/actio
-${PATH_COMMUNIS}/Deploy_store/.qa
+#${FONSH_PATH}/actio
+#${PLT_PATH}/actio
+#${PATH_COMMUNIS}/Deploy_store/.qa
 
 
 # ${PATH_TST_DIR}
