@@ -274,6 +274,9 @@ if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
 
 	pull_bck_push_ -o
 
+	apt_alt_ 1
+	apt_alt_ 2
+
 	mm_dogit_
 
 fi
