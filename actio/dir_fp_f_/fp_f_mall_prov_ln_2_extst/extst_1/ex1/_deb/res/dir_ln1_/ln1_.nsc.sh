@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #! debag
-# . "${HOME}/.bashrc"
+# . "$HOME/.bashrc"
 #!
 
-filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/ln1_.sh"
+filename="{dir_fns_}/dir_{name_fn_}/{name_fn_}.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 
@@ -12,38 +12,16 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 #up_lib_git
 
-ln1_() {
+{name_fn_}() {
 
     #{def_const}
 
     #{ctrl_args}
 
-    local FNN="ln1_"
-    echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-    if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
-        ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
-        return 1
-    fi
-
-
-    # [[ " ${cntl_args[*]} " =~ " ${ARGS1} " ]] && return 0
-
-    for value in ${cntl_args[*]}; do
-        if [ "${value}" = "${ARGS1}" ]; then
-            return 0
-        fi
-    done
-
-    echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
-    if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
-        ${_plt_exit} "fail: . ${FN_SAL_DIR}/${FNN}.body.sh"
-        return 1
-    fi
-    ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
     #{init_body}
 
 }
 
-# ln1_ @
+# {name_fn_} @
 
 unset filename
