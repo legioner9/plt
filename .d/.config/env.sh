@@ -14,7 +14,10 @@ PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
+COMMUNIS_PATH="${REPO_PATH}"/communis
+
 PATH_COMMUNIS=${HOME}/start/communis
+
 PATH_MY_ONE=/run/media/${USER}/MY_ONE
 PATH_TOSHIBA_EXT=/run/media/${USER}/TOSHIBA_EXT
 PATH_TOSH=/run/media/${USER}/TOSH
