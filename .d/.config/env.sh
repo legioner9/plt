@@ -9,12 +9,15 @@ echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
 unset filename
 NET_MAIN_GIT_REPO="github.com:legioner9"
-PATH_OS="${HOME}/start/communis/Deploy_store"
+
+COMMUNIS_PATH="${REPO_PATH}"/communis
+#! depr PATH_OS="${HOME}/start/communis/Deploy_store"
+PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
-COMMUNIS_PATH="${REPO_PATH}"/communis
+
 
 #! PATH_COMMUNIS depr
 PATH_COMMUNIS=${HOME}/start/communis
