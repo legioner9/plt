@@ -15,6 +15,6 @@
 # eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 '\$PATH_FN'
 # eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 '\${PATH_FN}'
 
-eval cr_f_ ${path_file} --vi0 '/home/st/REPOBARE/_repo/plt/actio' --vr0 '/home/st/start/communis/Deploy_store/.qa/main_repo_fn'
+eval cr_f_ ${path_file} --vi0 '/home/st/REPOBARE/_repo/plt/actio' --vr0 '${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn'
 
 # eval cr_f_ ${path_file} --vi0 '\${PATH_MAIN_REPO_FN_DIR}' --vr0 'start/communis/Deploy_store/.qa/main_repo_fn'

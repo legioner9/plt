@@ -1,10 +1,10 @@
 
-- file: /home/st/start/communis/Deploy_store/.qa/main_repo_fn => PATH_MAIN_REPO_FN_DIR, env: PATH_MAIN_REPO_FN_DIR=/home/st/start/communis/Deploy_store/.qa/main_repo_fn
+- file: ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn => PATH_MAIN_REPO_FN_DIR, env: PATH_MAIN_REPO_FN_DIR=${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn
 
 flow  :
 
     - ${HOME}/start/communis/Deploy_store/.qa/main_repo_fn
-    - $HOME/start/communis/Deploy_store/.qa/main_repo_fn
+    - ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn
     - $PATH_FN
     - ${PATH_FN}
 

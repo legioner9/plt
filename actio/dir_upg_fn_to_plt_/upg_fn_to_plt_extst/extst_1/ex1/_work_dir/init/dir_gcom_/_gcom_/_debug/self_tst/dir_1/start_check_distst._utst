@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_gcom_/_gcom_/_debug/self_tst/dir_1/start_check_distst._utst"
+filename="${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_gcom_/_gcom_/_debug/self_tst/dir_1/start_check_distst._utst"
 
 echo -e "${HLIGHT}---start file://$filename with args: $@ ---${NORMAL}" # start file
 
@@ -46,7 +46,7 @@ fi
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-up_err_ distst /home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_gcom_/_gcom_/_debug/self_tst/dir_1/check_distst.list
+up_err_ distst ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_gcom_/_gcom_/_debug/self_tst/dir_1/check_distst.list
 #{body}
 #-------------------------------
 #-------------------------------------

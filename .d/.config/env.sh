@@ -3,7 +3,7 @@
 #. "$HOME/.bashrc"
 #! ${PATH_COMMUNIS}/Deploy_store/.qa/. => "${PLT_PATH}"/.d/.
 
-filename="$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
+filename="${COMMUNIS_PATH}/Deploy_store/.qa/.config/env.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
@@ -16,6 +16,7 @@ TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
 COMMUNIS_PATH="${REPO_PATH}"/communis
 
+#! PATH_COMMUNIS depr
 PATH_COMMUNIS=${HOME}/start/communis
 
 PATH_MY_ONE=/run/media/${USER}/MY_ONE
@@ -30,12 +31,12 @@ PATH_ENV_FILE="${PLT_PATH}"/.d/.config/env.sh
 
 LIST3_BCKP_GITPUSH="${PLT_PATH}"/.d/.lists/bckp_gitpush.list3
 
-CEXEC_PROJECT_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_exec"
+CEXEC_PROJECT_DIR="${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_exec"
 
 MAINEDITOR="codium"
 
 #? for rebase fn to plt; after copy to plt rename do that: PATH_MAIN_REPO_FN_DIR=${PLT_PATH}"/actio
-PATH_MAIN_REPO_FN_DIR="${PATH_COMMUNIS}/Deploy_store/.qa/main_repo_fn"
+PATH_MAIN_REPO_FN_DIR="${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn"
 
 #? .args .canons  .config .exl .flumen_tempus .ifs .insert .lists .man .pullsh  .puml .tml  .tst  .var  .vexillum  .warg
 PATH_ARGS_DIR="${PLT_PATH}"/.d/.args

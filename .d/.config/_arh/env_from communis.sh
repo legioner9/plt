@@ -3,7 +3,7 @@
 #. "$HOME/.bashrc"
 #! ${PATH_COMMUNIS}/Deploy_store/.qa/. => "${PLT_PATH}"/.d/.
 
-filename="$HOME/start/communis/Deploy_store/.qa/.config/env.sh"
+filename="${COMMUNIS_PATH}/Deploy_store/.qa/.config/env.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 

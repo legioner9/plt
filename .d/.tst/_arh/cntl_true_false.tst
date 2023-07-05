@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="$HOME/start/communis/Deploy_store/.qa/lib/stl_tmp_3/u_debug_2.tst"
+filename="${COMMUNIS_PATH}/Deploy_store/.qa/lib/stl_tmp_3/u_debug_2.tst"
 
 # NOT ANY echo !!!!!!!!!!!
 

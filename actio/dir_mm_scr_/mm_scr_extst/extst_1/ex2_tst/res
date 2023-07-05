@@ -1,5 +1,5 @@
 [0;32m${g_args[@]}: [0m
-'/home/st/start/communis/Deploy_store/.qa/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst/./exec._tst'
+'${COMMUNIS_PATH}/Deploy_store/.qa/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst/./exec._tst'
 [0;32m$tst_dir = /home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst/[0m
 vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst//_flow_tst.sh
 vr0_cr_f_={file_path}
@@ -12,7 +12,7 @@ vr0_cr_f_={file_path}
 [0;34meval tml_dir=${PATH_TML_DIR}/cr_tst_dir_/fn_tst[0m
 [0;34meval tst_dir=${PPWD}/${name_dir}[0m
 [0;34meval cp -rfuv ${tml_dir}/. ${tst_dir}[0m
-'/home/st/start/communis/Deploy_store/.qa/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst/./exec._tst'
+'${COMMUNIS_PATH}/Deploy_store/.qa/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/dir_mm_scr_/mm_scr_extst/extst_1/ex2_tst/./exec._tst'
 [0;34m[0m
 [0;34m#? _flow_tst.sh[0m
 [0;34meval file_path=${tst_dir}/_flow_tst.sh[0m

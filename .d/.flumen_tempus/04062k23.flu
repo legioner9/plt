@@ -1,9 +1,9 @@
 # do
 
-    rm -rf /home/st/start/communis/Deploy_store/.qa/_main_repo_fn_04062k23
+    rm -rf ${COMMUNIS_PATH}/Deploy_store/.qa/_main_repo_fn_04062k23
     cp -rf //main_repo_fn _main_repo_fn_04062k23
 
-    upg_fn_to_plt_ --_dir /home/st/start/communis/Deploy_store/.qa/_main_repo_fn_04062k23
+    upg_fn_to_plt_ --_dir ${COMMUNIS_PATH}/Deploy_store/.qa/_main_repo_fn_04062k23
     cp -r //_main_repo_fn_04062k23/* //plt/actio
     cp -r //main_repo_fn //_main_repo_fn
     tst_ 

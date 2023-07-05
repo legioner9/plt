@@ -178,12 +178,12 @@ rbl_manc1_() {
         # amount_arg $# x
 
         if [ "-d" == "$1" ]; then
-            cd_h "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
+            cd_h ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
             cr_man_h_unix_ -d
         fi
 
         rbl_isu_manc1_
-        cd_h "$HOME"/start/communis/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
+        cd_h ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_c_/_c_/_man/nbase/MAN1
         cr_man_h_unix_
 
         #!function body======================

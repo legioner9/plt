@@ -1,7 +1,7 @@
 vi99_cr_f_=weqwe999
 vr99_cr_f_=eeeee
-tml_cr_f_=/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_cr_f_/cr_f_tst/tml_b
-fi0_cr_f_=/home/st/start/communis/Deploy_store/.qa/main_repo_fn/dir_cr_f_/cr_f_tst/into_b
+tml_cr_f_=${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_cr_f_/cr_f_tst/tml_b
+fi0_cr_f_=${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_cr_f_/cr_f_tst/into_b
 cwaedc 
 
 &^IF*%IYVLLbjhbleiuw

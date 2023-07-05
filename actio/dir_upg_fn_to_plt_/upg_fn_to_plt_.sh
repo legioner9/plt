@@ -135,7 +135,7 @@ upg_fn_to_plt_() {
     #{cntl_default}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: upg path in fn for copy from /home/st/start/communis/Deploy_store/.qa/main_repo_fn to plt
+MAIN: upg path in fn for copy from ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn to plt
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | 

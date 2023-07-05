@@ -212,7 +212,7 @@ if [[ "${GIT_PULL_}" == "y" ]];then
 
 	mkdir "$HOME"/start
 	cd communis || {
-		read -p "$HOME/start/communis not EXIST, return 1"
+		read -p "${COMMUNIS_PATH} not EXIST, return 1"
 		return 1
 	}
 fi
@@ -223,19 +223,19 @@ read -p "START COPY_DOTFILES_ ? ========================== y/n"
 read COPY_DOTFILES_
 if [[ "${COPY_DOTFILES_}" == "y" ]];then
 
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
 	touch "$HOME"/.bashrc~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
 	touch "$HOME"/.bios~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
 	touch "$HOME"/.re_init_flash~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
 	touch "$HOME"/.gitconfig~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
 	touch "$HOME"/.gitrepo~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
 	touch "$HOME"/.gituid~
-	cp -fu "$HOME"/start/communis/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
+	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
 	touch "$HOME"/.fonsh~
 	echo "fed_$((1 + "$RANDOM" % 100))" >"$HOME"/.plt_name
 	touch "$HOME"/.plt_name~
