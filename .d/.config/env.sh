@@ -17,8 +17,6 @@ PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
-
-
 #! PATH_COMMUNIS depr
 PATH_COMMUNIS=${HOME}/start/communis
 

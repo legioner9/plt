@@ -14,8 +14,8 @@ if [[ "${RESET_PLT_COMMUNIS_TO_DEFAULT_}" == "y" ]];then
 	rm -f "$HOME"/.repo_path
 	rm -f "$HOME"/.plt_cogos
 
-	# rm -rf "$HOME"/Bare_communis
-	# rm -rf "$HOME"/start
+	rm -rf "$HOME"/Bare_communis
+	rm -rf "$HOME"/start
 	rm -rf "$HOME"/REPOBARE
 
 	rm -f "$HOME"/.gituid
@@ -67,13 +67,13 @@ if [[ "${SSH_CREATE_}" == "y" ]];then
 		    unzip ${HOME}/read.zip -d ${HOME}
 		    file ${HOME}/.ssh
 			continue
-		else
-			echo "continue with create keys from ssh generate (y/n)"
-			y3=""
-			read y3
-			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
-		    # return 0 #! deb
-		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
+#		else
+#			echo "continue with create keys from ssh generate (y/n)"
+#			y3=""
+#			read y3
+#			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
+#		    # return 0 #! deb
+#		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
 		fi
 
 		eval "$(ssh-agent -s)"
@@ -158,28 +158,28 @@ read -p "START GIT_PULL_ ? ========================== y/n"
 read GIT_PULL_
 if [[ "${GIT_PULL_}" == "y" ]];then
 
-	# if [ -d "$HOME"/Bare_communis ] || [ -d "$HOME"/start ]; then
+	if [ -d "$HOME"/Bare_communis ] || [ -d "$HOME"/start ]; then
 
-	# 	echo "$HOME/Bare_communis or $HOME/start exist continue with delit and clone (y/n)?"
-	# 	del_clone_key="n"
-	# 	read del_clone_key
+		echo "$HOME/Bare_communis or $HOME/start exist continue with delit and clone (y/n)?"
+		del_clone_key="n"
+		read del_clone_key
 
-	# 	if [ "$del_clone_key" == 'y' ]; then
-	# 	    rm -rf "$HOME"/start
-	# 	    rm -rf "$HOME"/Bare_communis
-	# 	else
-	# 	    read -p "$HOME/Bare_communis or $HOME/start exist: Enter to exit or ^C to interrapt"
-	# 		exit 1 
-	# 	fi
-	# fi
+		if [ "$del_clone_key" == 'y' ]; then
+		    rm -rf "$HOME"/start
+		    rm -rf "$HOME"/Bare_communis
+		else
+		    read -p "$HOME/Bare_communis or $HOME/start exist: Enter to exit or ^C to interrapt"
+			exit 1 
+		fi
+	fi
 
-	# mkdir "$HOME"/Bare_communis
-	# cd "$HOME"/Bare_communis || read -p "$HOME/Bare_communis not EXIST: ^C for interrapt"
-	# git init --bare
+	mkdir "$HOME"/Bare_communis
+	cd "$HOME"/Bare_communis || read -p "$HOME/Bare_communis not EXIST: ^C for interrapt"
+	git init --bare
 
 	mkdir -p "$HOME"/REPOBARE/_repo
 
-	cd "$HOME"/REPOBARE/_repo || { 
+	cd "$HOME"/REPOBARE/_repo || {
 		read -p "$HOME/REPOBARE/_repo not EXIST: return 1"
 		return 1
 	}
@@ -189,8 +189,19 @@ if [[ "${GIT_PULL_}" == "y" ]];then
 		return 1
 	}
 
+	mkdir "$HOME"/start
+
+	cd "$HOME"/start || {
+		read -p "$HOME/start/ not EXIST: return 1"
+		return 1
+	}
 	git clone git@github.com:legioner9/communis.git || {
 		read -p "fail: git clone git@github.com:legioner9/communis.git, return 1"
+		return 1
+	}
+
+	git clone git@github.com:legioner9/plt.git || {
+		read -p "fail: git clone git@github.com:legioner9/plt.git, return 1"
 		return 1
 	}
 
@@ -236,20 +247,22 @@ read BIOS_
 if [[ "${BIOS_}" == "y" ]];then
 	#? . "$HOME"/.bios
 	#? use .bachrc <- ${PLT_PATH}/.config/.env allready exist
-	if . "$HOME"/.bashrc; then
+	if ! . "$HOME"/.bashrc; then
 		read -p "fail: . $HOME/.bashrc , return 1" 
 		return 1   
 	fi
 
 	#! mm_dogit_ carp plt?
-	read -p "mm_dogit_ carp plt? do it or ^C"
+#	read -p "mm_dogit_ carp plt? do it or ^C"
 
-	if [ "$PLT_COGOS" == "fedora" ]; then
-		dnf_
-	fi
-	if [ "$PLT_COGOS" == "altlinux" ]; then
+#	if [ "$PLT_COGOS" == "fedora" ]; then
+#		dnf_
+#	fi
+#	if [ "$PLT_COGOS" == "altlinux" ]; then
 		apt_alt_ 1
-	fi
+		apt_alt_ 2
+		
+#	fi
 
 fi
 
@@ -263,9 +276,7 @@ if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
 
 	pull_bck_push_ -o
 
-	apt_alt_ 1
-	apt_alt_ 2
-
+    echo "do CARPPAFCP CLR.list main.var in mm_dogit_ mb 11"
 	mm_dogit_
 
 fi
