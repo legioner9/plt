@@ -3,7 +3,7 @@
 
 flow  :
 
-    - ${HOME}/start/communis/Deploy_store/.qa/main_repo_fn
+    - ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn
     - ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn
     - $PATH_FN
     - ${PATH_FN}

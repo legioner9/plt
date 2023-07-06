@@ -8,20 +8,20 @@ filename="${COMMUNIS_PATH}/Deploy_store/.qa/.config/env.sh"
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
 unset filename
-PATH_OS="${HOME}/start/communis/Deploy_store"
+PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_FN="${PATH_OS}/.qa/main_repo_fn" # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
 
-PATH_COMMUNIS=${HOME}/start/communis
+PATH_COMMUNIS=${COMMUNIS_PATH}
 PATH_MY_ONE=/run/media/${USER}/MY_ONE
 PATH_TOSHIBA_EXT=/run/media/${USER}/TOSHIBA_EXT
 PATH_TOSH=/run/media/${USER}/TOSH
 
-BASH_USER="${HOME}/start/communis/Deploy_store/.qa/lib/user"
+BASH_USER="${COMMUNIS_PATH}/Deploy_store/.qa/lib/user"
 
-PATH_GIT="${HOME}/start/communis"
+PATH_GIT="${COMMUNIS_PATH}"
 PATH_TST_FILE="${PATH_COMMUNIS}/Deploy_store/.qa/.config/.tst"
 PATH_ENV_FILE="${PATH_COMMUNIS}/Deploy_store/.qa/.config/env.sh"
 

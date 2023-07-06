@@ -62,7 +62,7 @@ fn_inst_and_start_idea_mm_start_() {
         wrp_fifs1_ tar -xpvzf $HOME/soft/ideaIU-2022.2.tar.gz -f1
 
         qq_pause "add path \"/home/st/soft/idea-IU-222.3345.118/bin\""
-        edit_ "${HOME}"/start/communis/Deploy_store/.qa/main_repo_fn/dir_add_PATH_/add_PATH_.lst
+        edit_ ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_add_PATH_/add_PATH_.lst
         qq_pause "tech pause 1"
         add_PATH_
 

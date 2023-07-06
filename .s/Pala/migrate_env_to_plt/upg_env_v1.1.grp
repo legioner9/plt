@@ -62,8 +62,8 @@ file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_l2exl_/l2exl_.sh :IFS 
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_l2exl_/_l2exl_/_fn/l2exl_mdeb.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_l2exl_/_l2exl_/_fn/l2exl_mdeb_set_1.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_nv_from_tml_/nv_from_tml_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
-file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_nv_from_tml_/nv_from_tml_.sh :EXAMP : nv_from_tml_ \"${HOME}/start/communis/Deploy_store/.qa/.var/git/hsc_alt/main.var\"${NORMAL}"
-file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_nv_from_tml_/_nv_from_tml_/_debug/v1/deb_1.sh :nv_from_tml_ "${HOME}/start/communis/Deploy_store/.qa/.var/git/hsc_alt/main.var"
+file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_nv_from_tml_/nv_from_tml_.sh :EXAMP : nv_from_tml_ \"${COMMUNIS_PATH}/Deploy_store/.qa/.var/git/hsc_alt/main.var\"${NORMAL}"
+file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_nv_from_tml_/_nv_from_tml_/_debug/v1/deb_1.sh :nv_from_tml_ "${COMMUNIS_PATH}/Deploy_store/.qa/.var/git/hsc_alt/main.var"
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/_config/a.man :[fc_ ...] copy .ext files from start/communis/Deploy_store/.qa/.vexillum
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/_config/a.man :env.sh  : ${COMMUNIS_PATH}/Deploy_store/.qa/.config/env
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/_config/a.man :env.sh : $PATH_TST_FILE path to start/communis/Deploy_store/.qa/.config/.tst WITH tested dir
@@ -95,7 +95,7 @@ file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_garg2e2_/_garg2e2_/_fn
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_ine_tail_/ine_tail_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_fonsh_/fonsh_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_ante_cntlif_/ante_cntlif_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
-file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_obs_quis_/obs_quis_.sh :        ls ${HOME}/start/communis/Deploy_store/.qa/.insert/obs_quis_
+file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_obs_quis_/obs_quis_.sh :        ls ${COMMUNIS_PATH}/Deploy_store/.qa/.insert/obs_quis_
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_obs_quis_/obs_quis_.sh :    _cont  : : ls content dir start/communis/Deploy_store/.qa/.insert/obs_quis_
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_obs_quis_/obs_quis_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_warg_/warg_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
@@ -347,14 +347,14 @@ file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst/file_to_upg.init :${COMMUNIS_PATH}/Deploy_store/.qa/.tst
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst/file_to_upg.init :${COMMUNIS_PATH}/Deploy_store/.qa/.var
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst/file_to_upg.init :${PATH_COMMUNIS}/Deploy_store/.qa/.vexillum
-file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst/file_to_upg.init :${HOME}/start/communis/Deploy_store/.qa/.warg
+file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_upg_path_/upg_path_tst/file_to_upg.init :${COMMUNIS_PATH}/Deploy_store/.qa/.warg
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_tst_/tst_.sh :            MAIN : up errors from list ${COMMUNIS_PATH}/Deploy_store/.qa/.config/.tst
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_tst_/tst_.sh :        # up_err_ tst ${COMMUNIS_PATH}/Deploy_store/.qa/.config/.tst -echo
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_tst_/tst_.sh :        up_err_ tst ${COMMUNIS_PATH}/Deploy_store/.qa/.config/.tst $1 $2
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_rbl_cat_ext_/_rbl_cat_ext_/_file_with_dirs_for_cat/flumen_tempus.dirs :start/communis/Deploy_store/.qa/.flumen_tempus
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_cp__/_cp__with_ptototype_fifs2.sh :            # discriptpion ifs ${COMMUNIS_PATH}/Deploy_store/.qa/.ifs/fifs2_bash.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_gvia_/gvia_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
-file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_gvia_/_gvia_/_fn/gvia_owerlook_gish.sh :        edit_ ${HOME}/start/communis/Deploy_store/.qa/.canons/.gitfnlist.md
+file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_gvia_/_gvia_/_fn/gvia_owerlook_gish.sh :        edit_ ${COMMUNIS_PATH}/Deploy_store/.qa/.canons/.gitfnlist.md
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_farg2e2_/_farg2e2_/_fn/farg2e2_mdeb_set_1.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_farg2e2_/_farg2e2_/_fn/farg2e2_mdeb.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_farg2e2_/farg2e2_.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
@@ -467,7 +467,7 @@ file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/NDvop.sh :IFS : (fifs| exl| ..
 file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/plt.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/NPgsql.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/NNet.sh :IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
-file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/env2e.sh :        cat "${HOME}"/start/communis/Deploy_store/.qa/.config/env.sh
+file://${COMMUNIS_PATH}/Deploy_store/.qa/lib/user/env2e.sh :        cat ${COMMUNIS_PATH}/Deploy_store/.qa/.config/env.sh
 file://${COMMUNIS_PATH}/Deploy_store/.qa/.insert/f_f_/2/_fn_fff_sh/2/cntl_help.insert :        IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/.insert/f_f_/3/_fn_fff_sh/2/cntl_help.insert :        IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs
 file://${COMMUNIS_PATH}/Deploy_store/.qa/.insert/f_f_/1/_fn_fff_sh/2/cntl_help.insert :        IFS : (fifs| exl| ...) - discribe in start/communis/Deploy_store/.qa/.ifs

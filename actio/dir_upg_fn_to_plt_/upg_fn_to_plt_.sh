@@ -160,7 +160,7 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} --_dir ~/start/communis/Deploy_store/.qa/main_repo_fn  --_do 0
+${FNN} --_dir ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn  --_do 0
 ${NORMAL}"
         return 0
     fi

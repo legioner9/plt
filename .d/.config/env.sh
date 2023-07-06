@@ -11,22 +11,22 @@ unset filename
 NET_MAIN_GIT_REPO="github.com:legioner9"
 
 COMMUNIS_PATH="${REPO_PATH}"/communis
-#! depr PATH_OS="${HOME}/start/communis/Deploy_store"
+#! depr PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
 PATH_TAG="${PATH_FN}/_config/agno_tag" # path to tag tree
 TSH_book_path="${HOME}/ProjectRepo_2/_repo/BOOK"
 
 #! PATH_COMMUNIS depr
-PATH_COMMUNIS=${HOME}/start/communis
+PATH_COMMUNIS=${COMMUNIS_PATH}
 
 PATH_MY_ONE=/run/media/${USER}/MY_ONE
 PATH_TOSHIBA_EXT=/run/media/${USER}/TOSHIBA_EXT
 PATH_TOSH=/run/media/${USER}/TOSH
 
-BASH_USER="${HOME}/start/communis/Deploy_store/.qa/lib/user"
+BASH_USER="${COMMUNIS_PATH}/Deploy_store/.qa/lib/user"
 
-PATH_GIT="${HOME}/start/communis"
+PATH_GIT="${COMMUNIS_PATH}"
 PATH_TST_FILE="${PLT_PATH}"/.d/.config/.tst
 PATH_ENV_FILE="${PLT_PATH}"/.d/.config/env.sh
 

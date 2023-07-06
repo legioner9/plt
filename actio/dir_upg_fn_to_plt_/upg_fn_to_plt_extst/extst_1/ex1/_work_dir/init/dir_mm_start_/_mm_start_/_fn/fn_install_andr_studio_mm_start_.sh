@@ -61,7 +61,7 @@ fn_install_andr_studio_mm_start_() {
         wrp_fifs1_ tar -xpvzf $HOME/soft/android-studio-2021.3.1.17-linux.tar.gz -f1
 
         qq_pause "add path \"/home/st/soft/android-studio/bin\""
-        edit_ "${HOME}"/start/communis/Deploy_store/.qa/main_repo_fn/dir_add_PATH_/add_PATH_.lst
+        edit_ ${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn/dir_add_PATH_/add_PATH_.lst
         qq_pause "tech pause"
         add_PATH_
 

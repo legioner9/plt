@@ -144,7 +144,7 @@ ARGS:
 \$1
 [ ,\$2 num_menu ]
 CNTLS:
-required --_dir (~/start/communis)
+required --_dir (${COMMUNIS_PATH})
 optional -verbose (not garg parsed, for echo main param function) 
 CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 _exdeb<num> exec ${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
@@ -160,7 +160,7 @@ WARN:
 DEBUG:
 ${FNN} _deb, ${FNN} _mdeb
 EXAMP:
-${FNN} --_dir ~/start/communis
+${FNN} --_dir ${COMMUNIS_PATH}
 ${NORMAL}"
         return 0
     fi
