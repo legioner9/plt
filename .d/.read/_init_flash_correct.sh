@@ -199,11 +199,7 @@ if [[ "${GIT_PULL_}" == "y" ]];then
 		return 1
 	}
 
-	mkdir "$HOME"/start
-	cd communis || {
-		read -p "${COMMUNIS_PATH} not EXIST, return 1"
-		return 1
-	}
+
 fi
 # copy before .bash
 
@@ -212,21 +208,23 @@ read -p "START COPY_DOTFILES_ ? ========================== y/n"
 read COPY_DOTFILES_
 if [[ "${COPY_DOTFILES_}" == "y" ]];then
 
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
+	"${_ehh}" cp -rfu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/sys_stores /run/media/st/MY_ONE/ 
+
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
 	touch "$HOME"/.bashrc~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
 	touch "$HOME"/.bios~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
 	touch "$HOME"/.re_init_flash~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
 	touch "$HOME"/.gitconfig~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
 	touch "$HOME"/.gitrepo~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
 	touch "$HOME"/.gituid~
-	cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
+	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
 	touch "$HOME"/.fonsh~
-	echo "fed_$((1 + "$RANDOM" % 100))" >"$HOME"/.plt_name
+	"${_ehh}"  echo "fed_$((1 + "$RANDOM" % 1000))" >"$HOME"/.plt_name
 	touch "$HOME"/.plt_name~
 
 fi
@@ -258,13 +256,14 @@ read -p "BD_COMMUNIS_BCP_ block ? ========================== y/n"
 read BD_COMMUNIS_BCP_
 if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
 
+  cp -rf ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/sys_stores /run/media/st/MY_ONE/ 
+
 	bd_communis_ -i
 	bd_communis_ -b
 
 	pull_bck_push_ -o
 
 	apt_alt_ 1
-	apt_alt_ 2
 
 	mm_dogit_
 
