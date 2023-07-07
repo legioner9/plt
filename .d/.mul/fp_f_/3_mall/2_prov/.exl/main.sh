@@ -2,26 +2,18 @@
 #! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
 main_d_oll=${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/main.d.oll
+echo -e "${GREEN}\$main_d_oll = $main_d_oll${NORMAL}" #print variable
+
 ls "${main_d_oll}"
+read
 for item in $(ls "${main_d_oll}"); do
-    "${_ehh}" . "${main_d_oll}/${item}"
+    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    read
+    . "${main_d_oll}/${item}"
 done
 
 ${_edit_} "${dir_fns_}/dir_${name_fn_}"
 
-# ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst
-
-# ${_cr_sh_} generate_self_tst_1.sh
-
-# file_path=${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
-
-# body=${insert_dir}/_fn_fff_self_tst_1/body_self_tst_1.insert
-
-# ${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body}
-
-# ${_edit_} "${dir_fns_}/dir_${name_fn_}"
-
-# . ${dir_fns_}/dir_${name_fn_}/_${name_fn_}/_debug/self_tst/generate_self_tst_1.sh
 #* work in _debug <<<<<<<<<<
 
 #* work in extst >>>>>>>>>>
@@ -53,4 +45,3 @@ ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
 
 echo -e "${HLIGHT}--- exec: ${_cr_shgnr_} 2 dir_sys ---${NORMAL}" #start files
 ${_cr_shgnr_} 2 dir_sys
-

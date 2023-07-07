@@ -1,13 +1,16 @@
 #!/bin/bash 
 
-"${_ehh}" : tml_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.tml
+tml_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.tml
+echo -e "${GREEN}\$tml_dir = $tml_dir${NORMAL}" #print variable
 
-"${_ehh}" : insert_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.insert
+insert_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.insert
+echo -e "${GREEN}\$insert_dir = $insert_dir${NORMAL}" #print variable
 
-"${_ehh}" : exl_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl
+exl_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl
+echo -e "${GREEN}\$exl_dir = $exl_dir${NORMAL}" #print variable
 
-"${_ehh}" : exl_file=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl/main.exl
+exl_file=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl/main.exl
+echo -e "${GREEN}\$exl_file = $exl_file${NORMAL}" #print variable
 
-"${_ehh}" : main_sh=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl/main.sh
-
-
+main_sh=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.exl/main.sh
+echo -e "${GREEN}\$main_sh = $main_sh${NORMAL}" #print variable

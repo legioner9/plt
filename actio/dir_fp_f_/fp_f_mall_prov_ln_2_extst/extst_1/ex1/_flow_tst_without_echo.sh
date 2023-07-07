@@ -19,7 +19,7 @@ ${_wrp2_} rm -rfv --_cxd ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/e
 #? --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_veri|2_prov|3_absc|...)
 
 # echo | fo_f_ --_name_fn nnn2_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/fo_f_1_extst/extst_1/ex1/_deb/res/ --_flow 1
-${_fp_f_} --_name_fn ln1_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res --_grad 3_mall --_tail 2_prov
+echo | ${_fp_f_} --_name_fn ln1_ --_dir_fns ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res --_grad 3_mall --_tail 2_prov >/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/log
 
 #{body_sh}
 #?-------------------------------------

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#. "${HOME}/.bashrc"
+#. "/home/st/.bashrc"
 
-filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/nnn2_extst/extst_1/start_exec._tst
+filename=${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/ln1_extst/extst_1/start_exec._tst
 
 # echo -e "${HLIGHT}---start file://$filename with args: $@ ---${NORMAL}" # start file
 
@@ -29,7 +29,7 @@ rdir="$(prs_f -d $filename)"
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-up_err_ extst ${PLT_PATH}/actio/dir_fp_f_/fp_f_extst/extst_1/ex1/_deb/res/dir_nnn2_/nnn2_extst/extst_1/start_exec.list 1>/dev/null
+up_err_ extst ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/ln1_extst/extst_1/start_exec.list 1>/dev/null
 errno=$?
 if [ 1 -eq "${errno}" ]; then
 echo "ANY in file://$rdir fail" >&2

@@ -1,0 +1,72 @@
+[1mexec: . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/.d/.sal/fp_f_.body.sh :end exec[0m
+[0;32m$tml_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml[0m
+[0;32m$insert_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert[0m
+[0;32m$exl_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.exl[0m
+[0;32m$exl_file = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.exl/main.exl[0m
+[0;32m$main_sh = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.exl/main.sh[0m
+[0;36m--- plt_pause() (ln1_) create grad=3_mall tail=2_prov !!! in (/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/) 0 ---[0m
+[1m--- . /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.exl/main.sh ---[0m
+[0;32m$main_d_oll = /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.exl/main.d.oll[0m
+1_name_space.sh
+2_cp_tml_to_fs.sh
+3_ins_to_puml_dotd_dotsal.sh
+4_ins_to_main.sh
+5_cr_mdeb.sh
+6_cr_dotd_dotdd.sh
+7_cr_self_tst.sh
+[0;32m$item = 1_name_space.sh[0m
+[0;32m$item = 2_cp_tml_to_fs.sh[0m
+[1m--- mkdir -p /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/file.ax.sh /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/ln1_.nsc.sh ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.self_tst /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.cir /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.sal/file.man /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.man ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.sal/file.lst /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.lst ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.sal/file.puml /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.sal/file.body.sh /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.body.nsc.sh ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/.d/.sal/file.h.sh /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.h.sh ---[0m
+[1m--- cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.tml/_file/. /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.ln1_ ---[0m
+[0;32m$item = 3_ins_to_puml_dotd_dotsal.sh[0m
+[1m--- is_est_ /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml -f ---[0m
+[1m--- cr_f_dir_insert_ --name /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml ---[0m
+[0;32m$name = /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml[0m
+[0;32m$path_file = /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml[0m
+[0;36m--- plt_pause() do it? create /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml in /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml ---[0m
+[0;32m$item = body_fn.insert[0m
+[0;32m$name_insert = body_fn[0m
+[0;36m---cr_f_() /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/body_fn.insert --fr0 {body_fn} ---[0m
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/body_fn.insert
+fr0_cr_f_={body_fn}
+f2f_ /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml {body_fn}
+sed -i /{body_fn}/i ' fnn o-> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{body_fn}/i ' fnn o-> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+[0;32m$item = wrap_fn.insert[0m
+[0;32m$name_insert = wrap_fn[0m
+[0;36m---cr_f_() /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/wrap_fn.insert --fr0 {wrap_fn} ---[0m
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/wrap_fn.insert
+fr0_cr_f_={wrap_fn}
+f2f_ /home/st/REPOBARE/_repo/plt/.d/.mul/fp_f_/3_mall/2_prov/.insert/_fn_fff_puml/wrap_fn.insert /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml {wrap_fn}
+sed -i /{wrap_fn}/i garg2e2_ -> {name_fn_}  /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i garg2e2_ -> {name_fn_}  /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i farg2e2_ -> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i farg2e2_ -> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i echo_deb_ -> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i echo_deb_ -> {name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:is_num /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:is_num /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:exit_err_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:exit_err_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:exit_reg_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:exit_reg_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:unset_autoargs_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+sed -i /{wrap_fn}/i {name_fn_} -> {name_fn_}:unset_autoargs_{name_fn_} /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+[0;36m---cr_f_() /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml --vi0 ln1_ --vr0 {fn_name} ---[0m
+vi0_cr_f_=ln1_
+vr0_cr_f_={fn_name}
+v2f_ ln1_ /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml {fn_name}
+sed -i \'s|{fn_name}"'|'"ln1_"'|g' /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml
+[0;36m---cr_f_() /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml --vi0 /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax --vr0 {root_path} ---[0m
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax
+vr0_cr_f_={root_path}
+v2f_ /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml {root_path}
+sed -i \'s|{root_path}"'|'"/home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax"'|g' /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.sal.ax/ln1_.puml

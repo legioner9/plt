@@ -30,5 +30,5 @@ ${_plt_pause} "(${name_fn_}) create grad=${grad_} tail=${tail_}  !!! in ($PWD/di
 # exl_ --list "${exl_file}"
 # echo | . ${sh_file}
 
-. ${main_sh}
+"${_ehh}" . ${main_sh}
 # "${_exl_}" --_exl_list "${main_sh}"
