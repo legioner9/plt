@@ -22,6 +22,7 @@
 
 - ${_wrp2_} file --_xxd1 ~/ not started (--_xxd1 is false arg)
 - ${_wrp2_} not correct with string contane '>'
+- ${_wrp2_} change env in args
 
 # raports
 
@@ -37,6 +38,8 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 - "unset" garg variable not need, ther allready local, but tst remove this fich
 
 # plans
+
+## teach upg_path_ use .env 
 
 ## use global nid_nid, nid_body to inject to .d/.cir/p1.cir
 
