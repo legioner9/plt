@@ -19,7 +19,6 @@ ln1_() {
     #{ctrl_args}
 
 local FNN=${FUNCNAME[0]}
-echo -e "1 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 echo ". ${PLT_PATH}/.d/.nid/mall.nid"
 if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
 ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
