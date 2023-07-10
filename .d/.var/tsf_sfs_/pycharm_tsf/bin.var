@@ -1,0 +1,6 @@
+#>var
+
+eval src="/home/${USER}/IDEA/PY/pycharm-2022.2.2" 
+eval dest_d="/home/${USER}/IDEA/PY" 
+#! usually eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
+eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
