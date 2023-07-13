@@ -68,3 +68,8 @@ scae_complexity_stucture_syll__ease_of_use: prim secu mall raqu ague
 - in .insert files to escape control characters
 - in .md files '<>' red selection
 - in .dd/textus.man main explanations
+
+# see
+- Scribus как Корел
+- Посмотрите GIMP и Inkscape
+- 
