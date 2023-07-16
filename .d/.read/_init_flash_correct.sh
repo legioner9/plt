@@ -67,13 +67,13 @@ if [[ "${SSH_CREATE_}" == "y" ]];then
 		    unzip ${HOME}/read.zip -d ${HOME}
 		    file ${HOME}/.ssh
 			continue
-		else
-			echo "continue with create keys from ssh generate (y/n)"
-			y3=""
-			read y3
-			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
+#		else
+#			echo "continue with create keys from ssh generate (y/n)"
+#			y3=""
+#			read y3
+#			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
 		    # return 0 #! deb
-		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
+#		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
 		fi
 
 		eval "$(ssh-agent -s)"
@@ -99,8 +99,8 @@ if [[ "${PLT_COGOS_}" == "y" ]];then
 		PLT_COGOS=$(cat "$HOME/.plt_cogos")
 		if [ -n "$PLT_COGOS" ]; then
 		    # echo "PLT_COGOS may be strong: fedora, altlinux"
-		    if [ "$PLT_COGOS" != "fedora" ] && [ "$PLT_COGOS" != "altlinux" ];then
-		        Sread -p "PLT_COGOS NOT = fedora or altlinux: Enter to exit or ^C to interrapt"
+		    if [ "$PLT_COGOS" != "fedora" ] || [ "$PLT_COGOS" != "altlinux" ];then
+		        read -p "PLT_COGOS NOT = fedora or altlinux: Enter to exit or ^C to interrapt"
 		        exit 1
 		    fi
 
@@ -199,7 +199,11 @@ if [[ "${GIT_PULL_}" == "y" ]];then
 		return 1
 	}
 
-
+#	mkdir "$HOME"/start
+#	cd communis || {
+#		read -p "${COMMUNIS_PATH} not EXIST, return 1"
+#		return 1
+#	}
 fi
 # copy before .bash
 
@@ -207,24 +211,23 @@ COPY_DOTFILES_=""
 read -p "START COPY_DOTFILES_ ? ========================== y/n" 
 read COPY_DOTFILES_
 if [[ "${COPY_DOTFILES_}" == "y" ]];then
+	__path_comm="/home/st/REPOBARE/_repo/communis"
 
-	"${_ehh}" cp -rfu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/sys_stores /run/media/st/MY_ONE/ 
-
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
 	touch "$HOME"/.bashrc~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
 	touch "$HOME"/.bios~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
 	touch "$HOME"/.re_init_flash~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
 	touch "$HOME"/.gitconfig~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
 	touch "$HOME"/.gitrepo~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
 	touch "$HOME"/.gituid~
-	"${_ehh}" cp -fu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
+	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
 	touch "$HOME"/.fonsh~
-	"${_ehh}"  echo "fed_$((1 + "$RANDOM" % 1000))" >"$HOME"/.plt_name
+	echo "fed_$((1 + "$RANDOM" % 1000))" >"$HOME"/.plt_name
 	touch "$HOME"/.plt_name~
 
 fi
@@ -234,7 +237,7 @@ read BIOS_
 if [[ "${BIOS_}" == "y" ]];then
 	#? . "$HOME"/.bios
 	#? use .bachrc <- ${PLT_PATH}/.config/.env allready exist
-	if . "$HOME"/.bashrc; then
+	if ! . "$HOME"/.bashrc; then
 		read -p "fail: . $HOME/.bashrc , return 1" 
 		return 1   
 	fi
@@ -256,14 +259,13 @@ read -p "BD_COMMUNIS_BCP_ block ? ========================== y/n"
 read BD_COMMUNIS_BCP_
 if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
 
-  cp -rf ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/sys_stores /run/media/st/MY_ONE/ 
-
 	bd_communis_ -i
 	bd_communis_ -b
 
 	pull_bck_push_ -o
 
 	apt_alt_ 1
+	apt_alt_ 2
 
 	mm_dogit_
 
