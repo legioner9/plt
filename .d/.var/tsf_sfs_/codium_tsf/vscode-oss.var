@@ -1,7 +1,7 @@
 #>var
 
-eval src="/home/${USER}/.vscode-oss" 
-eval dest_d="/home/${USER}" 
+eval src="${HOME}/.vscode-oss" 
+eval dest_d="${HOME}" 
 #! usually eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
 eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
 #! for differ zip files if name_dir is same
