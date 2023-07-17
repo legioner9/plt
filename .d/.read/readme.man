@@ -1,1 +1,8 @@
 ## st@host-108 /run/media/st/TOSH$ sudo chmod -R 777 . 
+
+##  ^-Fn
+
+- mate-terminal
+- codium
+- yandex-browser-stable 
+- telegram

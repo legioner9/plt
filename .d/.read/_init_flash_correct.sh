@@ -99,7 +99,7 @@ if [[ "${PLT_COGOS_}" == "y" ]];then
 		PLT_COGOS=$(cat "$HOME/.plt_cogos")
 		if [ -n "$PLT_COGOS" ]; then
 		    # echo "PLT_COGOS may be strong: fedora, altlinux"
-		    if [ "$PLT_COGOS" != "fedora" ] || [ "$PLT_COGOS" != "altlinux" ];then
+		    if [ "$PLT_COGOS" != "fedora" ] && [ "$PLT_COGOS" != "altlinux" ];then
 		        read -p "PLT_COGOS NOT = fedora or altlinux: Enter to exit or ^C to interrapt"
 		        exit 1
 		    fi
@@ -139,6 +139,9 @@ if [[ "${PLT_COGOS_}" == "y" ]];then
 	fi
 
 	if [ "$PLT_COGOS" == "altlinux" ]; then
+		if [ -f ${HOME}/.vscode-oss ];then
+			rm ${HOME}/.vscode-oss
+		fi
 		. "$PPWW"/_upd_all_alt.sh
 	fi
 
@@ -249,6 +252,9 @@ if [[ "${BIOS_}" == "y" ]];then
 		dnf_
 	fi
 	if [ "$PLT_COGOS" == "altlinux" ]; then
+		if [ -f ${HOME}/.vscode-oss ];then
+			rm ${HOME}/.vscode-oss
+		fi
 		apt_alt_ 1
 	fi
 
@@ -264,8 +270,12 @@ if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
 
 	pull_bck_push_ -o
 
+		if [ -f ${HOME}/.vscode-oss ];then
+			rm ${HOME}/.vscode-oss
+		fi
+
 	apt_alt_ 1
-	apt_alt_ 2
+#	apt_alt_ 2
 
 	mm_dogit_
 
