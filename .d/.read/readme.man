@@ -6,3 +6,7 @@
 - codium
 - yandex-browser-stable 
 - telegram
+
+## uncomment : WHEEL_USERS ALL=(ALL) ALL
+
+1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"

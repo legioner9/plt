@@ -1,6 +1,7 @@
 #!/bin/bash
 
 read -p "You apdate your Alt after first install system? ^C if NOT"
+read -p "uncomment : WHEEL_USERS ALL=(ALL) ALL: Enter to continue or ^C to interrapt exec:0)if need sudo ^C  1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"
 
 PPWW=$(pwd)
 
@@ -246,17 +247,17 @@ if [[ "${BIOS_}" == "y" ]];then
 	fi
 
 	#! mm_dogit_ carp plt?
-	read -p "mm_dogit_ carp plt? do it or ^C"
-
-	if [ "$PLT_COGOS" == "fedora" ]; then
-		dnf_
-	fi
-	if [ "$PLT_COGOS" == "altlinux" ]; then
-		if [ -f ${HOME}/.vscode-oss ];then
-			rm ${HOME}/.vscode-oss
-		fi
-		apt_alt_ 1
-	fi
+# 	read -p "mm_dogit_ carp plt? do it or ^C"
+#
+# 	if [ "$PLT_COGOS" == "fedora" ]; then
+# 		dnf_
+# 	fi
+# 	if [ "$PLT_COGOS" == "altlinux" ]; then
+# 		if [ -f ${HOME}/.vscode-oss ];then
+# 			rm ${HOME}/.vscode-oss
+# 		fi
+# 		apt_alt_ 1
+# 	fi
 
 fi
 

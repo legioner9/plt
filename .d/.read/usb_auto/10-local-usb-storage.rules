@@ -1,5 +1,0 @@
-SUBSYSTEM!="block", GOTO="end_rule"
-KERNEL!="sd[b-z][0-9]", GOTO="end_rule"
-ACTION=="add", RUN+="/usr/bin/mount_media %k plugdev"
-ACTION=="remove", RUN+="/usr/bin/mount_media %k unplugdev"
-LABEL="end_rule"
