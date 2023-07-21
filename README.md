@@ -1,4 +1,4 @@
-$\mathscr{Plt\ erit\ crescere\ a\ fons}$
+# $\mathscr{Plt\ erit\ crescere\ a\ fons}$
 
 ## [standarts plt](.d/.man/standarts)
 
