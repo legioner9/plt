@@ -33,5 +33,5 @@ ${FNN} --_name_fn <name_fn> --_dir_fns <dir_fns> --_grad (1_prim|2_secu|3_mall|4
 ADDS: 
     . fp_f_extst/extst_1/_gnr_dir_tst.sh 3 -> add ex3
     . _gnr_dir_sys.sh ${FNN}_1 -> add ${FNN}_1_extst
-RealExamp: fp_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad 3_mall --_tail 2_prov
+RealExamp: fp_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad mall --_tail prov
 ${NORMAL}"

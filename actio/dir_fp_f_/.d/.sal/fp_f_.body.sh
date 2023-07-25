@@ -22,7 +22,7 @@ fi
 
 # . ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.sh
 # ${_exl_} --_exl_list ${PLT_PATH}/.d/.mul/fp_f_/3_mall/cir.ax/out.cir
-. ${PLT_PATH}/.d/.mul/fp_f_/3_mall/cir.ax/out.cir
+"${_ehh}" . "${PLT_PATH}/.d/.mul/fp_f_/${grad_}/cir.ax/out.cir"
 
 
 ${_plt_pause} "(${name_fn_}) create grad=${grad_} tail=${tail_}  !!! in ($PWD/dir_${name_fn_}/) ?"

@@ -3,7 +3,7 @@
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 
 # HARDCOR FN_DIR
-local FN_DIR=${PLT_PATH}/actio/mall/dir_${FNN} #? contane dir of function
+local FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
 local FLN=$0
 local ARGS=($@)
 local NARGS=$#

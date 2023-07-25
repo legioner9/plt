@@ -14,6 +14,7 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 ln1_() {
 
+dir_fns_="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res"
     #{def_const}
 
     #{ctrl_args}
@@ -24,7 +25,7 @@ if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
 ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
 return 1
 fi
-if [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
+if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
 return 0
 fi
 # echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
