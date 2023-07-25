@@ -1,2 +1,1 @@
-#!/bin/bash
-
+/home/st/REPOBARE/_repo/plt/.d/.sal.ax/ln1_.sal

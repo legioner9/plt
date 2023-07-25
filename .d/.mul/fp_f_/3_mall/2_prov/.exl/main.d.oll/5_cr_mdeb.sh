@@ -45,6 +45,8 @@ name_file_sh="_start_${name_fn_}mdeb.sh"
 "${_ehh}" ${_obs_quis_} ${name_fn_}mdeb.sh
 "${_ehh}" ${_cr_f_dir_insert_} --name ${name_fn_}mdeb.sh --dir_insert ${cr_mdeb_insert}/fn_mdeb_zzz20
 
+"${_ehh}" ${_cr_f_} ${name_fn_}mdeb.sh --vi0 ${name_fn_} --vr0 {name_fn_}
+
 ${_wrp2_} . _cr_${name_fn_}mdeb_postfix.sh 1 "zx"
 
 "${_ehh}" ${_cr_f_dir_insert_} --name ${mdeb_mdeb_dir}/a1_fp_f_mdeb_zx.sh --dir_insert ${cr_mdeb_insert}/fn_mdeb_zx

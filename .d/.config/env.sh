@@ -60,6 +60,7 @@ PATH_WARG_DIR="${PLT_PATH}"/.d/.warg
 PATH_FS_STANDARTS_AX_DIR="${PLT_PATH}"/.d/.fs_standarts.ax
 PATH_POT_DIR="${PLT_PATH}"/.d/.pot
 PATH_READ_DIR="${PLT_PATH}"/.d/.read
+PATH_SAL_AX_DIR="${PLT_PATH}"/.d/.sal.ax
 
 PATH_CURR_REPO="${HOME}/REPOBARE/_repo"
 

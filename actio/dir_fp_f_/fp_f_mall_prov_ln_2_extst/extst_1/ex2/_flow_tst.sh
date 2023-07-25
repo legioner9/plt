@@ -11,7 +11,7 @@ cd "${idir}" || {
 #?-------------------------------------
 
 unset ln1_
-${_wrp2_} . --_xxf /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/ln1_.nsc.sh
+"${_ehh}" . /home/st/REPOBARE/_repo/plt/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/ln1_.nsc.sh
 ln1_ >res
 ln1_ -h >>res
 ln1_ _mdeb 1 >>res

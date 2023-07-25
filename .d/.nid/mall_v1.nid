@@ -1,6 +1,6 @@
 # local FNN=${FUNCNAME[0]}
 # local ORIGO_DIR=$PATH_FN/dir_$FNN === ${FN_DIR}
-# echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
+echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 local FN_DIR=${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_${FNN} #? contane dir of function
 local FLN=$0
 local ARGS=($@)
@@ -88,33 +88,33 @@ if [ "_flw" == "$1" ]; then
     fi
 fi
 
-# for int in 1 2 3 4; do
-#     if [ "_extst${int}" == "$1" ]; then
-#         local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
-#         if [ -f "${extst_num_file}" ]; then
-#             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
-#             . "${extst_num_file}"
-#             return 0
-#         else
-#             "${_plt_exit}" "not exist file: ${extst_num_file} "
-#             return 1
-#         fi
-#     fi
-# done
+for int in 1 2 3 4; do
+    if [ "_extst${int}" == "$1" ]; then
+        local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
+        if [ -f "${extst_num_file}" ]; then
+            [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
+            . "${extst_num_file}"
+            return 0
+        else
+            "${_plt_exit}" "not exist file: ${extst_num_file} "
+            return 1
+        fi
+    fi
+done
 
-# for int in 1 2 3 4; do
-#     if [ "_exdeb${int}" == "$1" ]; then
-#         local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
-#         if [ -f "${exdeb_num_file}" ]; then
-#             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
-#             . "${exdeb_num_file}"
-#             return 0
-#         else
-#             "${_plt_exit}" "not exist file: ${exdeb_num_file} "
-#             return 1
-#         fi
-#     fi
-# done
+for int in 1 2 3 4; do
+    if [ "_exdeb${int}" == "$1" ]; then
+        local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
+        if [ -f "${exdeb_num_file}" ]; then
+            [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
+            . "${exdeb_num_file}"
+            return 0
+        else
+            "${_plt_exit}" "not exist file: ${exdeb_num_file} "
+            return 1
+        fi
+    fi
+done
 
 if [ " _extst " == "$1" ]; then
     local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
@@ -157,12 +157,7 @@ fi
 #{ctrl_args}
 
 [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}--- wrp_fifs1_ cd $PPWD -d1 1>/dev/null ---${NORMAL}" #start files
-
-# ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
-cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
-
-echo "before fn"
-
+${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
 #!function body===================================================================
 #!function body===============================================
 #!function body======================

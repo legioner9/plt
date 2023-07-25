@@ -15,7 +15,7 @@
 
 "${_ehh}" cp -rf "${tml_dir}/.d/.sal/file.puml" "${_dotd_dir_sal}/${name_fn_}.puml"
 
-"${_ehh}" cp -rf "${tml_dir}/.d/.sal/file.body.sh" "${_dotd_dir_sal}/${name_fn_}.body.nsc.sh"
+# "${_ehh}" cp -rf "${tml_dir}/.d/.sal/file.body.sh" "${_dotd_dir_sal}/${name_fn_}.body.nsc.sh"
 
 "${_ehh}" cp -rf "${tml_dir}/.d/.sal/file.h.sh" "${_dotd_dir_sal}/${name_fn_}.h.sh"
 
