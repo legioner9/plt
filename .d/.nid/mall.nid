@@ -1,7 +1,9 @@
 # local FNN=${FUNCNAME[0]}
 # local ORIGO_DIR=$PATH_FN/dir_$FNN === ${FN_DIR}
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
-local FN_DIR=${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_${FNN} #? contane dir of function
+
+# HARDCOR FN_DIR
+local FN_DIR=${PLT_PATH}/actio/mall/dir_${FNN} #? contane dir of function
 local FLN=$0
 local ARGS=($@)
 local NARGS=$#
