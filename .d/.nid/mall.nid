@@ -161,8 +161,6 @@ fi
 # ${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
 cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
 
-echo "before fn"
-
 #!function body===================================================================
 #!function body===============================================
 #!function body======================
@@ -241,4 +239,3 @@ fi
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 #{hints}
-echo "end .nid"

@@ -19,7 +19,7 @@ ln1_() {
     #{ctrl_args}
 
 local FNN=${FUNCNAME[0]}
-echo ". ${PLT_PATH}/.d/.nid/mall.nid"
+# echo ". ${PLT_PATH}/.d/.nid/mall.nid"
 if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
 ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
 return 1
@@ -27,12 +27,12 @@ fi
 if [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
 return 0
 fi
-echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
+# echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
 if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
 ${_plt_exit} "fail: . ${FN_SAL_DIR}/${FNN}.body.sh"
 return 1
 fi
-${_wrp2_} cd --_xxd "$PPWD" 1>/dev/null
+cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
     #{init_body}
 
 }

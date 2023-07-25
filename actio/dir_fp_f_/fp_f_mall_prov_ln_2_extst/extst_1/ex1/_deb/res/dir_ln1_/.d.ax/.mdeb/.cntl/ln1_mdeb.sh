@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="{root_path}/{fn_name}.sh"
+filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.mdeb/.cntl/ln1_mdeb.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-{fn_name}(){
+ln1_mdeb(){
 local FNN=${FUNCNAME[0]}
 local PPWD=$PWD
 local ARGS=($@)
@@ -15,7 +15,7 @@ local NARGS=$#
 local verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname {root_path}/{fn_name}.sh)
+local d_name=$(dirname ${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/.d.ax/.mdeb/.cntl/ln1_mdeb.sh)
 # wrp_fifs1_ cd ${d_name} -d
 ${_wrp2_} cd --_xxd "${d_name}" >/dev/null
     #{intro_fn}
