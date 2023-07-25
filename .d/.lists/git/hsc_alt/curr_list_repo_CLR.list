@@ -5,9 +5,9 @@ communis
 #NPython
 #lex
 NCognito
-NMall
+#NMall
 #NEdu
-#Lexicon
+Lexicon
 Repono
 #NC
 #NUML
@@ -18,8 +18,9 @@ Repono
 #NVBA
 #Nota
 #NBash
-NWeb
-NPhp
+#NWeb
+#NPhp
+#NAbumbrare
 #NDvop
 #NBase
 

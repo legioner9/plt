@@ -5,10 +5,10 @@ main_d_oll=${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/main.d.oll
 echo -e "${GREEN}\$main_d_oll = $main_d_oll${NORMAL}" #print variable
 
 ls "${main_d_oll}"
-read
+# read
 for item in $(ls "${main_d_oll}"); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-    read
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # read
     . "${main_d_oll}/${item}"
 done
 
