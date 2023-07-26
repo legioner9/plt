@@ -7,6 +7,8 @@
     - elementary function [/primus] {prfn} (using only bash and linux utils {lifn}) [[f2e, ...]]
     - secundo function [/secundo] {sefn} (using {lifn}, {prfn}) [[wrp<num> ...]]
 
+
+# scae_complexity_stucture_syll__ease_of_use
 ## higt for care to fonsh
 ### /prim pst_unix 
 ### /secu pst_prim
@@ -15,3 +17,8 @@
 ### /mall pst_secu (after secu)
 ### /raqu min_mall (min mall)
 ### /auge pst_mall (after mall)
+
+# scae_relevance__possibility_of_using: veri prov absc
+## /absc - in product
+## /prov - in test
+## /veri - idea

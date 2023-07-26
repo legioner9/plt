@@ -1,8 +1,0 @@
-## plt - enter point 
-### contane [/actio] {acfn} (using {lifn}, {prfn}, {sefn}) [[pull_bcp_push_, ...]]
-    - env
-    - function up_level 
-
-## fonsh - opensouce platform
-    - elementary function [/primus] {prfn} (using only bash and linux utils {lifn}) [[f2e, ...]]
-    - secundo function [/secundo] {sefn} (using {lifn}, {prfn}) [[wrp<num> ...]]

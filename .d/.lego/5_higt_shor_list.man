@@ -1,0 +1,26 @@
+# higt_shor_list
+## prim
+- garg2e2_
+- farg2e2_
+- earg2e2_
+- plt_is_ques
+- plt_exit
+- plt_info
+- plt_pause
+- abs_path
+- ret2e
+- f2f_
+- v2f_
+- echo_deb_
+- puml_
+
+## secu
+- is_est_ -> - wrp2_
+
+## mall
+- fp_f_
+- 
+
+## ague
+- 
+
