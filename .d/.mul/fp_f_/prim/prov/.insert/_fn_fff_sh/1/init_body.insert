@@ -1,7 +1,7 @@
 local FNN=${FUNCNAME[0]}
 # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
-    ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
+if ! . "${PLT_PATH}/.d/.nid/{grad_}.nid"; then
+echo -e "${RED}--- fail: . ${PLT_PATH}/.d/.nid/{grad_}.nid ---${NORMAL}"
     return 1
 fi
 if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
@@ -9,8 +9,8 @@ if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
 fi
 # echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
 if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
-    ${_plt_exit} "fail: . ${FN_SAL_DIR}/${FNN}.body.sh"
+    echo -e "${RED}--- fail: . ${FN_SAL_DIR}/${FNN}.body.sh ---${NORMAL}"
     return 1
 fi
 
-cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
+cd "$PPWD" 1>/dev/null || echo -e "${RED}--- fail : cd $PPWD ---${NORMAL}"

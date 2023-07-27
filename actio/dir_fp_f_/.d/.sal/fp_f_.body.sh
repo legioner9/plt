@@ -2,7 +2,7 @@
 
 if typeset -F | grep -w ${name_fn_}; then
     ${_plt_exit} " not unique --_name_fn: ${name_fn_} "
-    return 1
+    exit 1
 fi
 
 if [ -d ${dir_fns_} ]; then
