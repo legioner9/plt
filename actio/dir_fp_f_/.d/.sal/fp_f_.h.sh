@@ -7,7 +7,7 @@ WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | 
 any stile path - if arg no rout full_path be pwd/$name , if name root name instead)
 ARGS: 
-\$1
+\$1 (prim | mall) - <name>.nid
 [ ,\$2 num_menu ]
 CNTLS:
     required
