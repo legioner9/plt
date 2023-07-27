@@ -15,7 +15,7 @@ ${_wrp2_} mkdir -p --_cnd ${PLT_PATH}/actio/dir_fp_f_/prim_extst/extst_1/ex1/_de
 
 ${_wrp2_} rm -rfv --_cxd ${PLT_PATH}/actio/dir_fp_f_/prim_extst/extst_1/ex1/_deb/res/dir_ln2_
 
-${_wrp2_} rm -fv ${PATH_SAL_AX_DIR}/ln2_
+${_wrp2_} rm -fv ${PATH_SAL_AX_DIR}/ln2_.sal
 
 #? --_grad (1_prim|2_secu|3_mall|4_raqu|5_ague) --_tail (1_veri|2_prov|3_absc|...)
 

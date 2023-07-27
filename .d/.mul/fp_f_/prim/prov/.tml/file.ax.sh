@@ -22,6 +22,15 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 }
 
+{name_fn_init_}() {
+
+    #{def_const}
+
+    #{ctrl_args}
+
+    #{init_body_init}
+}
+
 # {name_fn_} @
 
 unset filename

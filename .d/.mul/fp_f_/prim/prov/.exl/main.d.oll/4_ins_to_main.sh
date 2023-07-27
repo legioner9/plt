@@ -11,6 +11,10 @@ ${_cr_f_dir_insert_} --name ${src_fn_file} --dir_insert ${insert_dir}/_fn_fff_sh
 echo -e "${HLIGHT}--- exec: ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_} ---${NORMAL}" #start files
 ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_} --vr0 {name_fn_}
 
+# name_fn_init_
+echo -e "${HLIGHT}--- exec: ${_cr_f_} ${src_fn_file} --vi0 ${name_fn_init_} --vr0 {name_fn_init_} ---${NORMAL}" #start files
+${_cr_f_} ${src_fn_file} --vi0 ${name_fn_init_} --vr0 {name_fn_init_}
+
 # dir_fns_
 echo -e "${HLIGHT}--- exec: ${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_} ---${NORMAL}" #start files
 ${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_}

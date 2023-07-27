@@ -8,8 +8,8 @@ if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
     return 0
 fi
 # echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
-if ! . "${FN_SAL_DIR}/${FNN}.body.nsc.sh"; then
-    echo -e "${RED}--- fail: . ${FN_SAL_DIR}/${FNN}.body.sh ---${NORMAL}"
+if ! . "${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"; then
+    echo -e "${RED}--- fail: . ${FN_SAL_DIR}/{name_fn_}.body.sh ---${NORMAL}"
     return 1
 fi
 

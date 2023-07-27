@@ -1,7 +1,6 @@
 #!/bin/bash
 
-name_fn_init_="${name_fn_}"
-name_fn_="${name_fn_}"_plt_
+name_fn_init_="${name_fn_}"_plt_
 
 if typeset -F | grep -w ${name_fn_init_}; then
     ${_plt_exit} " not unique --_name_fn: ${name_fn_init_} "
