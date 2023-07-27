@@ -1,5 +1,13 @@
 #!/bin/bash
 
+name_fn_init_="${name_fn_}"
+name_fn_="${name_fn_}"_plt_
+
+if typeset -F | grep -w ${name_fn_init_}; then
+    ${_plt_exit} " not unique --_name_fn: ${name_fn_init_} "
+    exit 1
+fi
+
 if typeset -F | grep -w ${name_fn_}; then
     ${_plt_exit} " not unique --_name_fn: ${name_fn_} "
     exit 1
@@ -23,7 +31,6 @@ fi
 # . ${PLT_PATH}/.d/.mul/fp_f_/${grad_}/env/flow_env.sh
 # ${_exl_} --_exl_list ${PLT_PATH}/.d/.mul/fp_f_/3_mall/cir.ax/out.cir
 "${_ehh}" . "${PLT_PATH}/.d/.mul/fp_f_/${grad_}/cir.ax/out.cir"
-
 
 ${_plt_pause} "(${name_fn_}) create grad=${grad_} tail=${tail_}  !!! in ($PWD/dir_${name_fn_}/) ?"
 
