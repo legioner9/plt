@@ -4,7 +4,7 @@
 # . "${HOME}/.bashrc"
 #!
 
-filename="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res/dir_ln1_/ln1_.sh"
+filename="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 
@@ -12,9 +12,9 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 #up_lib_git
 
-ln1_() {
+gig_f_() {
 
-dir_fns_="${PLT_PATH}/actio/dir_fp_f_/fp_f_mall_prov_ln_2_extst/extst_1/ex1/_deb/res"
+dir_fns_="${PLT_PATH}/actio/mall"
     #{def_const}
 
     #{ctrl_args}
@@ -28,9 +28,9 @@ fi
 if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
 return 0
 fi
-# echo ". ${FN_SAL_DIR}/ln1_.body.nsc.sh"
-if ! . "${FN_SAL_DIR}/ln1_.body.nsc.sh"; then
-${_plt_exit} "fail: . ${FN_SAL_DIR}/ln1_.body.sh"
+# echo ". ${FN_SAL_DIR}/gig_f_.body.nsc.sh"
+if ! . "${FN_SAL_DIR}/gig_f_.body.nsc.sh"; then
+${_plt_exit} "fail: . ${FN_SAL_DIR}/gig_f_.body.sh"
 return 1
 fi
 cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
@@ -38,6 +38,6 @@ cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
 
 }
 
-# ln1_ @
+# gig_f_ @
 
 unset filename

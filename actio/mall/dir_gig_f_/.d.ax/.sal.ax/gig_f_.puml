@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> gig_f_ 
+farg2e2_ -> gig_f_
+echo_deb_ -> gig_f_
+gig_f_ -> gig_f_:is_num
+gig_f_ -> gig_f_:exit_err_gig_f_
+gig_f_ -> gig_f_:exit_reg_gig_f_
+gig_f_ -> gig_f_:unset_autoargs_gig_f_
+' {wrap_fn}
+' fnn o-> gig_f_
+' {body_fn}
+@enduml

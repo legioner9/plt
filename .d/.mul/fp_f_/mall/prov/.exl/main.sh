@@ -12,36 +12,41 @@ for item in $(ls "${main_d_oll}"); do
     . "${main_d_oll}/${item}"
 done
 
-${_edit_} "${dir_fns_}/dir_${name_fn_}"
+#! 9_edit.sh
+# ${_edit_} "${dir_fns_}/dir_${name_fn_}"
+#! ------------
 
-#* work in _debug <<<<<<<<<<
+#! 10_extst_1.sh
+# ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/
 
-#* work in extst >>>>>>>>>>
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/
+# ${_wrp2_} mkdir --_cnd ${name_fn_}extst
 
-${_wrp2_} mkdir --_cnd ${name_fn_}extst
+# ${_wrp2_} cd --_xxd ${name_fn_}extst
 
-${_wrp2_} cd --_xxd ${name_fn_}extst
+# #? cr_tst_sys_
+# echo -e "${HLIGHT}--- exec: ${_cr_tst_sys_} --name_dir extst_1 --ext extst ---${NORMAL}" #start files
+# ${_cr_tst_sys_} --name_dir extst_1 --ext extst
 
-#? cr_tst_sys_
-echo -e "${HLIGHT}--- exec: ${_cr_tst_sys_} --name_dir extst_1 --ext extst ---${NORMAL}" #start files
-${_cr_tst_sys_} --name_dir extst_1 --ext extst
 
 #? cr_shgnr_ 1 dir_tst in ${name_fn_}extst/extst_1
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/${name_fn_}extst/extst_1
-
+#${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}/${name_fn_}extst/extst_1
+#! ------------
 # ${_cr_shgnr_} 1 dir_tst
 
-#! be created cr_tst_dir_ --name "${name_fn_}"tst --ext tst (wrp_fifs1_ cd ${dir_fns_}/dir_${name_fn_}/)
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
+#! 11_tst.sh
 
-echo -e "${HLIGHT}--- exec: ${_cr_tst_dir_} --name_dir "${name_fn_}"tst --ext tst ---${NORMAL}" #start files
-${_cr_tst_dir_} --name_dir "${name_fn_}"tst --ext tst
+# ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
 
+# echo -e "${HLIGHT}--- exec: ${_cr_tst_dir_} --name_dir "${name_fn_}"tst --ext tst ---${NORMAL}" #start files
+# ${_cr_tst_dir_} --name_dir "${name_fn_}"tst --ext tst
+
+#! ------------
 #* work in extst <<<<<<<<<<
 
-#? cr_shgnr_ 2 dir_sys in nearly ${name_fn_}.sh
-${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
+#! 12_file_shgnr_2_dir_sys.sh
+# #? cr_shgnr_ 2 dir_sys in nearly ${name_fn_}.sh
+# ${_wrp2_} cd --_xxd ${dir_fns_}/dir_${name_fn_}
 
-echo -e "${HLIGHT}--- exec: ${_cr_shgnr_} 2 dir_sys ---${NORMAL}" #start files
-${_cr_shgnr_} 2 dir_sys
+# echo -e "${HLIGHT}--- exec: ${_cr_shgnr_} 2 dir_sys ---${NORMAL}" #start files
+# ${_cr_shgnr_} 2 dir_sys
+#! ------------
