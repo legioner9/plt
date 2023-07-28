@@ -35,6 +35,9 @@ ADDS:
     . _gnr_dir_sys.sh ${FNN}_1 -> add ${FNN}_1_extst
 RealExamp: fp_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad mall --_tail prov
 fp_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/prim --_grad prim --_tail prov
-    <name>      - with wrap - slowly 
-    <name>_plt  - without wrap - faster
+    in prim
+        <name>      - with wrap - slowly 
+        <name>_plt  - without wrap - faster
+    in raqu
+        wrap without tst
 ${NORMAL}"
