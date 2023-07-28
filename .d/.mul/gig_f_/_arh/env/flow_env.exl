@@ -1,0 +1,12 @@
+
+eval tml_dir=${PLT_PATH}/.d/.mul/fp_f_/${flow_}/.tml
+
+eval insert_dir=${PLT_PATH}/.d/.mul/fp_f_/${flow_}/.insert
+
+eval exl_dir=${PLT_PATH}/.d/.mul/fp_f_/${flow_}/.exl
+
+eval exl_file=${PLT_PATH}/.d/.mul/fp_f_/${flow_}/.exl/fo_f_.exl
+
+eval main_sh=${PLT_PATH}/.d/.mul/fp_f_/${flow_}/.exl/main.sh
+
+

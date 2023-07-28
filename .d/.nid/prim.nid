@@ -142,6 +142,12 @@ if [ "_go" == "$1" ]; then
     return 0
 fi
 
+if [ "_sal" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
+    "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN".sal
+    return 0
+fi
+
 if [ "_deb" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
     . "${FN_DEFAULT_DIR}"/default_deb.sh
