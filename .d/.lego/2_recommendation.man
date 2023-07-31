@@ -42,6 +42,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 ## RCM_OCNC
 - only const in .cir - hardcode is bad 
 
-## RCM_FRC
-- not name function - only ptr (alises)
-  - project mast define ptr functin in .frc files
+## RCM_CON
+- use coname <func_name><co> as 
+  - _plt without use .nid for productin
+  - _cntl for edit code <func_name>

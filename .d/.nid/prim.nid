@@ -26,7 +26,7 @@ local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
 local FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
 local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
 
-cntl_args=( -h _man _tst _puml _flw _extst _deb _mdeb _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4 )
+cntl_args=( -h _man _tst _puml _flw _extst _deb _head _mdeb _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4 )
 
 local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
@@ -88,6 +88,11 @@ if [ "_flw" == "$1" ]; then
         "${_plt_exit}" "not exist file: ${flw_file} " #exit 1
         return 1
     fi
+fi
+
+if [ "_head" == "$1" ]; then
+    echo "_head fn (default for _mdeb): ${FNN}"
+    return 0
 fi
 
 # for int in 1 2 3 4; do
