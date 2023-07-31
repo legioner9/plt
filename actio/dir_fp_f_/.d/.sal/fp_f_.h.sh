@@ -38,6 +38,4 @@ fp_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/prim --_grad prim --_tail 
     in prim
         <name>      - with wrap - slowly 
         <name>_plt  - without wrap - faster
-    in raqu
-        wrap without tst
 ${NORMAL}"

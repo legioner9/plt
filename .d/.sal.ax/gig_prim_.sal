@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}"   #print variable
+
+ARGS0="${ARGS[0]}"
+
+if [ -z "$ARGS0" ]; then
+    "${_plt_exit}" "first arg {name_prim_function} is empty"
+    return 1
+fi
+
+# ${_gig_f_} --_name_fn "$ARGS0" --_dir_fns "${PLT_PATH}"/actio/prim --_grad prim --_tail prov
+
+echo "that ${FNN}.sal"

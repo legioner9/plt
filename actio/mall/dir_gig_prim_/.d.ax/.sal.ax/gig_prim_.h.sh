@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "${CYAN} ${FNN}() help: 
-.        MAIN: cr wrapper for function from .d/.sal.ax/<name>.sal
+.        MAIN: mnr gig_f_ to prim flow: gig_f_ --_name_fn <name> --_dir_fns ${PLT_PATH}/actio/prim --_grad prim --_tail prov
 .        NAME: ${FNN}()
 .        WHERE:?(only in root dir)Y/N
 .        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
@@ -55,10 +55,5 @@ echo -e "${CYAN} ${FNN}() help:
 .        DEBUG:
 .            ${FNN} _deb, ${FNN} _mdeb
 .        EXAMP:
-.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad mall --_tail prov
-.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/prim --_grad prim --_tail prov
-.                in prim
-.                    <name>      - with wrap - slowly 
-.                    <name>_plt  - without wrap - faster
-.            ${FNN} -<>
+.            ${FNN} <name_prim_function>
 .            ${NORMAL}"
