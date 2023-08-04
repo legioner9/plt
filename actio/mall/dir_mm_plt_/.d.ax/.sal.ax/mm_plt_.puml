@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> mm_plt_ 
+farg2e2_ -> mm_plt_
+echo_deb_ -> mm_plt_
+mm_plt_ -> mm_plt_:is_num
+mm_plt_ -> mm_plt_:exit_err_mm_plt_
+mm_plt_ -> mm_plt_:exit_reg_mm_plt_
+mm_plt_ -> mm_plt_:unset_autoargs_mm_plt_
+' {wrap_fn}
+' fnn o-> mm_plt_
+' {body_fn}
+@enduml

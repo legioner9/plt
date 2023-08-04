@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}"   #print variable
+
+echo "that ${FNN}.sal"
+
+echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+local arr=()
+local res=()
+arr+=("leave menu")
+res+=("echo bye)))")
+#{arr_res}
+arr+=("mm_plt_all_actio_ - ls all name fn")
+res+=("mm_plt_all_actio_")
+arr+=("mm_plt_all_actio_help_ - cat all fn help")
+res+=("mm_plt_all_actio_help_")
+arr+=("mm_plt_all_actio_main_ - cat all fn main")
+res+=("mm_plt_all_actio_main_")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+    num_res=$(($1 - 1))
+    ${res[${num_res}]}
+    return 0
+fi
+PS3="eligendi actiones: "
+select item in "${arr[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item} == ${arr[$i]} ]]; then
+            ${res[$i]}
+            ${FNN} $@
+        fi
+        if [[ ${item} == ${arr[0]} ]]; then
+            ${res[$i]}
+        fi
+    done
+done
+# {zzz20}
