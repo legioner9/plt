@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> obs_quis_v2_ 
+farg2e2_ -> obs_quis_v2_
+echo_deb_ -> obs_quis_v2_
+obs_quis_v2_ -> obs_quis_v2_:is_num
+obs_quis_v2_ -> obs_quis_v2_:exit_err_obs_quis_v2_
+obs_quis_v2_ -> obs_quis_v2_:exit_reg_obs_quis_v2_
+obs_quis_v2_ -> obs_quis_v2_:unset_autoargs_obs_quis_v2_
+' {wrap_fn}
+' fnn o-> obs_quis_v2_
+' {body_fn}
+@enduml
