@@ -1,0 +1,10 @@
+local FNN=${FUNCNAME[0]}
+local ARGS=($@)
+
+# echo ". ${FN_SAL_DIR}/${FNN}.body.nsc.sh"
+if ! . "${PATH_SAL_AX_DIR}/{name_fn_}.sal"; then
+    echo -e "${RED}--- fail: . ${PATH_SAL_AX_DIR}/{name_fn_}.sal ---${NORMAL}"
+    return 1
+fi
+
+cd "$PPWD" 1>/dev/null || echo -e "${RED}--- fail : cd $PPWD ---${NORMAL}"

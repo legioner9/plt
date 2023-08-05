@@ -44,3 +44,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 - use coname <func_name><co> as 
   - _plt without use .nid for productin
   - _cntl for edit code in <func_name>
+
+## RCM_AID
+- any is directory (acro: all is file)
+  - use loop out: tread files 1_..., 2_... , step by step
