@@ -48,3 +48,6 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 ## RCM_AID
 - any is directory (acro: all is file)
   - use loop out: tread files 1_..., 2_... , step by step
+
+## RCM_PIN
+- path is name -  semanicaly - exa: <name>.<ext> <-> .ext/name/

@@ -1,0 +1,25 @@
+# requiremenents to plt_function
+- accessibility from cli
+
+## selftestable :
+- $<name_fn> <arg_tst> :: (true|fals)
+
+## rebildable :
+- $<name_fn> <arg_rbld> :
+  - rm dir_<name_fn>
+  - cr dir_<name_fn> with :
+    - file_path fix external files
+    - files as (ln -s) to external files
+    - possibility add proiperies with backward compatibility
+
+## catalogable :
+- $<name_fn> <arg_query_props> :: (string)
+  - description
+    - main
+    - depricate
+    - version
+  - path to :
+    - dir_<name_fn>
+    - any dot_dirs and dot_files in dir_<name_fn>
+      - <name_fn>.body.nsc.sh
+      - <name_fn>.man

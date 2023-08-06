@@ -2,8 +2,8 @@
 
 echo -e "${CYAN} ${FNN}() help: 
 .        MAIN: gig_f_ with 
-.            - <name_fn>.h.sh -> RCM_AID: .cub/<name_fn>/{main.cub, depr.cub, ...}
-.            - .nid/<name_fn>.nid -> RCM_AID: .nid/<name_fn>/{body.nid, cntl.nid, ...}
+.            - <name_fn>.h.sh -> RCM_PID: .cub/<name_fn>/{main.cub, depr.cub, ...}
+.            - .nid/<name_fn>.nid -> RCM_PID: .nid/<name_fn>/{body.nid, cntl.nid, ...}
 .        NAME: ${FNN}()
 .        WHERE:?(only in root dir)Y/N
 .        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
