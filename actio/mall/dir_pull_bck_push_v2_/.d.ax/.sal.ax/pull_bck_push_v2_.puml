@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> pull_bck_push_v2_ 
+farg2e2_ -> pull_bck_push_v2_
+echo_deb_ -> pull_bck_push_v2_
+pull_bck_push_v2_ -> pull_bck_push_v2_:is_num
+pull_bck_push_v2_ -> pull_bck_push_v2_:exit_err_pull_bck_push_v2_
+pull_bck_push_v2_ -> pull_bck_push_v2_:exit_reg_pull_bck_push_v2_
+pull_bck_push_v2_ -> pull_bck_push_v2_:unset_autoargs_pull_bck_push_v2_
+' {wrap_fn}
+' fnn o-> pull_bck_push_v2_
+' {body_fn}
+@enduml

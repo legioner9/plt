@@ -1,0 +1,9 @@
+## update plt_fn version
+- prev_fn : <name_fn>v<current>_
+- upd_fn : <name_fn>v<current+1>_
+- in .frc/a : _name_fn="prev_fn"
+  - warning in any code exec : prev_fn -> ${_name_fn}
+- cr <name_fn>v<current+1>_
+  - if mast backward compatibility : ifs_prev_fn identicaly ifs_upd_fn
+    - if add props to upd_fn : tst new props
+- in .frc/a : _name_fn="upd_fn"
