@@ -3,7 +3,21 @@
 echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}"   #print variable
 
 echo "that ${FNN}.sal"
+
+bd_communis_ "${ARGS[0]}"
+ 
+touch "/home/st/.gitconfig"
+touch "/home/st/.plt_cogos"
+
+up_plt_cogos_
+
+"${_ehh}" cp -fu "${COMMUNIS_PATH}/Deploy_store/plt_bd/sysdiffers/$PLT_COGOS/.gitconfig" "$HOME/.gitconfig"
+
+"${_ehh}" cp -rfu ${PLT_PATH}/.d/.read /run/media/st/MY_ONE/_git_communis/
+"${_ehh}" cp -rfu ${PLT_PATH}/.d/.read /run/media/st/TOSH/_git_communis/
+"${_ehh}" cp -rfu ${PLT_PATH}/.d/.read /run/media/st/TOSHIBA_EXT/_git_communis/
+"${_ehh}" cp -rfu ${COMMUNIS_PATH}/Deploy_store/plt_bd/main_store/sys_stores/. /run/media/st/MY_ONE/
