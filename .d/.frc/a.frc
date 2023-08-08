@@ -43,7 +43,8 @@ _echo_deb_="echo_deb_"
 _ehh="ehh"
 
 _pull_bck_push_="pull_bck_push_v2_"
-_bd_os_="bd_communis_"
+#_bd_os_="bd_communis_"
+_bd_os_="bd_os_"
 
 #? 
 
