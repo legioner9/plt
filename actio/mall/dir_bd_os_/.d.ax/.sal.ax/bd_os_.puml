@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> bd_os_ 
+farg2e2_ -> bd_os_
+echo_deb_ -> bd_os_
+bd_os_ -> bd_os_:is_num
+bd_os_ -> bd_os_:exit_err_bd_os_
+bd_os_ -> bd_os_:exit_reg_bd_os_
+bd_os_ -> bd_os_:unset_autoargs_bd_os_
+' {wrap_fn}
+' fnn o-> bd_os_
+' {body_fn}
+@enduml

@@ -1,0 +1,90 @@
+#!/bin/bash
+
+echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}"   #print variable
+
+echo "that ${FNN}.sal"
+
+local ARGS0=${ARGS[0]}
+#! ${COMMUNIS_PATH}/Deploy_store/plt_bd -> ${PATH_RPN_DIR}/${FNN}
+
+#? next store:
+#? local rpn_fn_="${PATH_RPN_DIR}/${FNN}"
+local rpn_fn_="${COMMUNIS_PATH}/Deploy_store/plt_bd"
+
+${_ehh} mkdir "${rpn_fn}"/main_store/code
+${_ehh} mkdir "${rpn_fn}"/main_store/dot_home_files
+${_ehh} mkdir "${rpn_fn}"/main_store/dot_home_dirs
+${_ehh} mkdir "${rpn_fn}"/main_store/dot_git_communis
+${_ehh} mkdir "${rpn_fn}"/main_store/any_files
+${_ehh} mkdir "${rpn_fn}"/main_store/any_dirs
+
+# "${rpn_fn}"/main_store/code/own_plt/
+# /home/st/REPOBARE/_repo/communis/Deploy_store/plt_bd/main_store/code/own_plt
+
+if [ "$1" == "-b" ] || [ "$1" == "-d" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ $1 ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    bckp_list_ "$1" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- bckp_list_ $1 ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    bckp_list_ "$1" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+
+elif [ "$1" == "-dp" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+
+elif [ "$1" == "-bp" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+
+elif [ "$1" == "-dc" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-d" ${rpn_fn}/list2/common.list2 @ 3
+
+elif [ "$1" == "-bc" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-b" ${rpn_fn}/list2/common.list2 @ 3
+
+elif [ "$1" == "-bcdp" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-b" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+
+elif [ "$1" == "-o" ]; then
+    bd_communis_ -dcbp
+
+elif [ "$1" == "-dcbp" ]; then
+    bd_communis_ -h
+    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-d" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    bckp_list_ "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+
+elif [ "$1" == "-i" ]; then
+    bd_communis_ -dc
+
+elif [ "$1" == "-h" ]; then
+    echo -e "${BLUE}--- 
+-b bcbp     :: bckp all     >> first host flow
+-d dcdp     :: depl all
+-i (-dc)    ::              >> once init system
+-o (-dcbp)  ::              >> second host flow
+-bc         :: bckp common  
+-dc         :: depl common  
+-bp         :: bckp plt     
+-dp         :: depl plt     
+-bcdp
+-dcbp
+---${NORMAL}" #sistem info mesage
+else
+    qq_exit "bd_communis_: arg $1 is not (-b|-d|-i)"
+fi
