@@ -8,14 +8,14 @@ echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}"   #print variable
 
 echo "that ${FNN}.sal"
 
-bd_communis_ "${ARGS[0]}"
+${_bd_os_} "${ARGS[0]}"
  
-touch "/home/st/.gitconfig"
-touch "/home/st/.plt_cogos"
+touch "${HOME}/.gitconfig"
+touch "${HOME}/.plt_cogos"
 
 up_plt_cogos_
 
-"${_ehh}" cp -fu "${COMMUNIS_PATH}/Deploy_store/plt_bd/sysdiffers/$PLT_COGOS/.gitconfig" "$HOME/.gitconfig"
+"${_ehh}" cp -fu "${COMMUNIS_PATH}/Deploy_store/plt_bd/sysdiffers/${PLT_COGOS}/.gitconfig" "$HOME/.gitconfig"
 
 "${_ehh}" cp -rfu ${PLT_PATH}/.d/.read /run/media/st/MY_ONE/_git_communis/
 "${_ehh}" cp -rfu ${PLT_PATH}/.d/.read /run/media/st/TOSH/_git_communis/
