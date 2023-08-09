@@ -27,47 +27,47 @@ ${_ehh} mkdir "${rpn_fn}"/main_store/any_dirs
 
 if [ "${ARGS0}" == "-b" ] || [ "${ARGS0}" == "-d" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ ${ARGS0} ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
-    bckp_list_ "${ARGS0}" ${rpn_fn}/list2/common.list2 @ 3
-    echo -e "${BLUE}--- bckp_list_ ${ARGS0} ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
-    bckp_list_ "${ARGS0}" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+    echo -e "${BLUE}--- ${_bckp_list_} ${ARGS0} ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "${ARGS0}" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- ${_bckp_list_} ${ARGS0} ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "${ARGS0}" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
 
 elif [ "${ARGS0}" == "-dp" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+    echo -e "${BLUE}--- ${_bckp_list_} -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
 
 elif [ "${ARGS0}" == "-bp" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+    echo -e "${BLUE}--- ${_bckp_list_} -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
 
 elif [ "${ARGS0}" == "-dc" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-d" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- ${_bckp_list_} -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-d" ${rpn_fn}/list2/common.list2 @ 3
 
 elif [ "${ARGS0}" == "-bc" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-b" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- ${_bckp_list_} -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-b" ${rpn_fn}/list2/common.list2 @ 3
 
 elif [ "${ARGS0}" == "-bcdp" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-b" ${rpn_fn}/list2/common.list2 @ 3
-    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+    echo -e "${BLUE}--- ${_bckp_list_} -b ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-b" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- ${_bckp_list_} -d ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-d" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
 
 elif [ "${ARGS0}" == "-o" ]; then
     bd_communis_ -dcbp
 
 elif [ "${ARGS0}" == "-dcbp" ]; then
     bd_communis_ -h
-    echo -e "${BLUE}--- bckp_list_ -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-d" ${rpn_fn}/list2/common.list2 @ 3
-    echo -e "${BLUE}--- bckp_list_ -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
-    bckp_list_ "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
+    echo -e "${BLUE}--- ${_bckp_list_} -d ${rpn_fn}/list2/common.list2 @ 3 ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-d" ${rpn_fn}/list2/common.list2 @ 3
+    echo -e "${BLUE}--- ${_bckp_list_} -b ${rpn_fn}/list2/plt_name.list2 @ 3 $PLT_NAME ---${NORMAL}" #sistem info mesage
+    ${_bckp_list_} "-b" ${rpn_fn}/list2/plt_name.list2 @ 3 "$PLT_NAME"
 
 elif [ "${ARGS0}" == "-i" ]; then
     bd_communis_ -dc

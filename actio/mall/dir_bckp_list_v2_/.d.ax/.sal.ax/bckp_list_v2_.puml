@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> bckp_list_v2_ 
+farg2e2_ -> bckp_list_v2_
+echo_deb_ -> bckp_list_v2_
+bckp_list_v2_ -> bckp_list_v2_:is_num
+bckp_list_v2_ -> bckp_list_v2_:exit_err_bckp_list_v2_
+bckp_list_v2_ -> bckp_list_v2_:exit_reg_bckp_list_v2_
+bckp_list_v2_ -> bckp_list_v2_:unset_autoargs_bckp_list_v2_
+' {wrap_fn}
+' fnn o-> bckp_list_v2_
+' {body_fn}
+@enduml
