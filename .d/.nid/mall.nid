@@ -3,35 +3,32 @@
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 
 # HARDCOR FN_DIR
-local FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
-local FLN=$0
-local ARGS=($@)
-local NARGS=$#
-local ARGS1=$1
-local ARGS2=$2
-local ARGS3=$3
-local PPWD=$PWD
+FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
+FLN=$0
+ARGS=($@)
+NARGS=$#
+PPWD=$PWD
 #? ${FNN}mdeb function - menu for debug flows
-local RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
+RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
 # $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
 
-local FN_DOTD_DIR=${FN_DIR}/.d.ax
-local FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
-local FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
+FN_DOTD_DIR=${FN_DIR}/.d.ax
+FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
+FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
 
-local FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
-local FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
-local FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
-local FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
-local FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
-local FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
+FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
+FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
+FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
+FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
+FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
+FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
 
 cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
 
-local FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
+FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
 # wrp_fifs1_ rm -f "${FN_ERR_FILE}" -cf1
-local verbose=0
+verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || {
     echo -e "${CYAN}---$FNN() ${ARGS[*]} ---${NORMAL}" #started functions
@@ -55,7 +52,7 @@ if [ "-h" == "$1" ]; then
 fi
 
 if [ "_tst" == "$1" ]; then
-    local tst_file="${FN_DIR}/${FNN}"tst/exec.tst
+    tst_file="${FN_DIR}/${FNN}"tst/exec.tst
     if [ -f "${tst_file}" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
         . "${tst_file}"
@@ -67,7 +64,7 @@ if [ "_tst" == "$1" ]; then
 fi
 
 if [ "_puml" == "$1" ]; then
-    local puml_file="${FN_DIR}/${FNN}".puml
+    puml_file="${FN_DIR}/${FNN}".puml
     if [ -f "${puml_file}" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
         "${_wrp2_}" "${_puml_}" --_xxf "${puml_file}" -_drawing
@@ -79,7 +76,7 @@ if [ "_puml" == "$1" ]; then
 fi
 
 if [ "_flw" == "$1" ]; then
-    local flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
+    flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
     if [ -f "${flw_file}" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
         . "${flw_file}"
@@ -97,7 +94,7 @@ fi
 
 # for int in 1 2 3 4; do
 #     if [ "_extst${int}" == "$1" ]; then
-#         local extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
+#         extst_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/exec.extst
 #         if [ -f "${extst_num_file}" ]; then
 #             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_num_file} ---${NORMAL}" #start files
 #             . "${extst_num_file}"
@@ -111,7 +108,7 @@ fi
 
 # for int in 1 2 3 4; do
 #     if [ "_exdeb${int}" == "$1" ]; then
-#         local exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
+#         exdeb_num_file="${FN_DIR}/${FNN}"extst/extst_1/ex${int}_tst/_flow_tst.sh
 #         if [ -f "${exdeb_num_file}" ]; then
 #             [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${exdeb_num_file} ---${NORMAL}" #start files
 #             . "${exdeb_num_file}"
@@ -124,7 +121,7 @@ fi
 # done
 
 if [ " _extst " == "$1" ]; then
-    local extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
+    extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
         . "${extst_file}"
@@ -179,10 +176,10 @@ cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
 #!function body======================
 #? amount_arg $# min_args max_args "in $FNN :: $*"
 #? USE ln1_() -echo -deb
-local echo_=0
-local debug_=0
-local verbose_=0
-local develop1_=0
+echo_=0
+debug_=0
+verbose_=0
+develop1_=0
 # [[ 1 -eq ${verbose} ]] || {
 #     garg_ ${FNN} $@
 # } && {
@@ -193,9 +190,9 @@ if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
     return 1
 fi
 #? g_args with cntl=value
-local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+g_args=($(${_garg2e2_} "${ARGS[@]}"))
 #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+e_args=($(${_earg2e2_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
 for strex in $(${_garg2e2_} "${ARGS[@]}"); do
     [[ 1 -eq ${verbose} ]] || echo "local $strex"
