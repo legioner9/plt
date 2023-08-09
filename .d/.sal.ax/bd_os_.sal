@@ -12,8 +12,8 @@ local ARGS0=${ARGS[0]}
 #! ${COMMUNIS_PATH}/Deploy_store/plt_bd -> ${PATH_RPN_DIR}/${FNN}
 
 #? next store:
-#? local rpn_fn_="${PATH_RPN_DIR}/${FNN}"
-local rpn_fn_="${COMMUNIS_PATH}/Deploy_store/plt_bd"
+#? local rpn_fn="${PATH_RPN_DIR}/${FNN}"
+rpn_fn="${COMMUNIS_PATH}/Deploy_store/plt_bd"
 
 ${_ehh} mkdir "${rpn_fn}"/main_store/code
 ${_ehh} mkdir "${rpn_fn}"/main_store/dot_home_files
