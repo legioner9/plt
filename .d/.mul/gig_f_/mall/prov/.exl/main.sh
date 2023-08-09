@@ -1,7 +1,7 @@
 #!/bin/bash
 #! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
-main_d_oll=${PATH_MUL_DIR}/fp_f_/${grad_}/${tail_}/.exl/main.d.oll
+main_d_oll=${PATH_MUL_DIR}/${_gig_f_}/${grad_}/${tail_}/.exl/main.d.oll
 echo -e "${GREEN}\$main_d_oll = $main_d_oll${NORMAL}" #print variable
 
 ls "${main_d_oll}"
