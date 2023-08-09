@@ -58,8 +58,8 @@ echo -e "${CYAN} ${FNN}() help:
 .            . \${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_flow_tst.sh
 .            cat \${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/res
 .        EXAMP:
-.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad mall --_tail prov
-.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/prim --_grad prim --_tail prov
+.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/mall --_grad mall --_tail prov (-_rb|-_cr)
+.            gig_f_ --_name_fn <name> --_dir_fns \${PLT_PATH}/actio/prim --_grad prim --_tail prov (-_rb|-_cr)
 .                in prim
 .                    <name>      - with wrap - slowly 
 .                    <name>_plt  - without wrap - faster
