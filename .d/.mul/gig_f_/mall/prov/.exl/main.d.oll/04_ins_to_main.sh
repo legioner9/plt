@@ -19,5 +19,5 @@ ${_cr_f_} ${src_fn_file} --vi0 ${dir_fns_} --vr0 {dir_fns_}
 echo -e "${HLIGHT}--- exec: ${_cr_f_} ${src_fn_file} --vi0 ${grad_} --vr0 {grad_} ---${NORMAL}" #start files
 ${_cr_f_} ${src_fn_file} --vi0 ${grad_} --vr0 {grad_}
 
-echo -e "${HLIGHT}--- exec: ${_upg_path_} ${src_fn_file} ---${NORMAL}" #start files
-${_upg_path_} ${src_fn_file}
+echo -e "${HLIGHT}--- exec: ${_upg_path_} ${src_fn_file} 1>/dev/null ---${NORMAL}" #start files
+${_upg_path_} ${src_fn_file} 1>/dev/null
