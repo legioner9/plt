@@ -45,8 +45,8 @@ echo -e "# in deb_1.sh
 #wrp_fifs1_ rm -rf dir_1 -cd1
 ${_wrp2_} mkdir --_cnd dir_1
 ${_wrp2_} cd --_xxd dir_1
-"${_ehh}" ${_cr_tst_dir_} --name_dir dis --ext distst
-"${_ehh}" ${_cr_tst_dir_} --name_dir dis2 --ext distst
+${_cr_tst_dir_} --name_dir dis --ext distst
+${_cr_tst_dir_} --name_dir dis2 --ext distst
 #{body}
 #-------------------------------
 #-------------------------------------

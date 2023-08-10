@@ -52,3 +52,7 @@ _bckp_list_="bckp_list_v2_"
 _gig_f_="gig_f_"
 _gig_mall_="gig_mall_"
 _gig_prim_="gig_prim_"
+
+#?
+#? ${PLT_PATH}/.d/.nid/${_mall_nid_file_} m.b. with subdirectiry; mall/mall.nid
+_mall_nid_file_="mall.nid"
