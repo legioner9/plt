@@ -3,9 +3,9 @@
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 
 # HARDCOR FN_DIR
-FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
+FN_DIR=${dir_fn_}/dir_${FNN} #? contane dir of function
 FLN=$0
-ARGS=($@)
+# ARGS=($@)
 NARGS=$#
 PPWD=$PWD
 #? ${FNN}mdeb function - menu for debug flows
@@ -180,24 +180,20 @@ echo_=0
 debug_=0
 verbose_=0
 develop1_=0
-# [[ 1 -eq ${verbose} ]] || {
-#     garg_ ${FNN} $@
-# } && {
-#     garg_ ${FNN} $@ 1>/dev/null
-# }
-if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
-    plt_exit " ${FNN} return 1: ${FNLOCK}"
-    return 1
-fi
-#? g_args with cntl=value
-g_args=($(${_garg2e2_} "${ARGS[@]}"))
-#? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-e_args=($(${_earg2e2_} "${ARGS[@]}"))
-[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(${_garg2e2_} "${ARGS[@]}"); do
-    [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    eval local $strex
-done
+
+# if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+#     plt_exit " ${FNN} return 1: ${FNLOCK}"
+#     return 1
+# fi
+# #? g_args with cntl=value
+# g_args=($(${_garg2e2_} "${ARGS[@]}"))
+# #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+# e_args=($(${_earg2e2_} "${ARGS[@]}"))
+# [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+# for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+#     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+#     eval local $strex
+# done
 #{garg}
 #
 #? cd "$1" || {

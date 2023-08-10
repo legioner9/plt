@@ -19,8 +19,6 @@ FN_DEFAULT_DIR
 cntl_args
 FNLOCK
 
-strex
-
 verbose
 tst_file
 puml_file
