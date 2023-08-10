@@ -23,7 +23,9 @@ name_file_sh="_cr_${name_fn_}mdeb_postfix.sh"
 "${_ehh}" ${_cr_f_dir_insert_} --name ${name_file_sh} --dir_insert ${insert_dir}/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1
 
 "${_ehh}" ${_cr_f_} ${name_file_sh} --vi0 ${name_fn_} --vr0 {name_fn_}
+
 "${_ehh}" ${_cr_f_} ${name_file_sh} --vi0 ${mdeb_cntl_dir} --vr0 {mdeb_cntl_dir}
+
 "${_ehh}" ${_obs_quis_} ${name_file_sh}
 
 #? ${_cr_sh_} _start_${name_fn_}mdeb.sh

@@ -14,7 +14,7 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 pull_bck_push_v2_() {
 
-dir_fns_="${PLT_PATH}/actio/mall"
+local dir_fns_="${PLT_PATH}/actio/mall"
     #{def_const}
 
     #{ctrl_args}

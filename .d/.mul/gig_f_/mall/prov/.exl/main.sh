@@ -7,7 +7,8 @@ echo -e "${GREEN}\$main_d_oll = $main_d_oll${NORMAL}" #print variable
 ls "${main_d_oll}"
 # read
 for item in $(ls "${main_d_oll}"); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    echo -e "${RED}start file: $item${NORMAL}" #print variable
+    echo -e "${GREEN}\$dir_fns_ = $dir_fns_${NORMAL}" #print variable
     read
     . "${main_d_oll}/${item}"
 done
