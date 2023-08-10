@@ -1,6 +1,6 @@
 local FNN=${FUNCNAME[0]}
 # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-if ! . "${PLT_PATH}/.d/.nid/{grad_}.nid"; then
+if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"; then
     ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}.nid"
     return 1
 fi

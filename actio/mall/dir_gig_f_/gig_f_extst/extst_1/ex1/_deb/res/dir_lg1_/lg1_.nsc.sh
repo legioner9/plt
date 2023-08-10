@@ -21,7 +21,7 @@ local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/r
 
 local FNN=${FUNCNAME[0]}
 # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-if ! . "${PLT_PATH}/.d/.nid/mall.nid"; then
+if ! . "${PLT_PATH}/.d/.nid/mall/mall.nid"; then
 ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/mall.nid"
 return 1
 fi
