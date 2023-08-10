@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 #! global variables from ARGSP: name_fn_, dir_fns_, flow_
 
 src_puml_file="${_dotd_dir_sal}/${name_fn_}.puml"
@@ -9,6 +9,4 @@ src_puml_file="${_dotd_dir_sal}/${name_fn_}.puml"
 
 "${_ehh}" ${_cr_f_} ${src_puml_file} --vi0 ${name_fn_} --vr0 {name_fn_}
 
-# "${_ehh}" ${_upg_path_} ${src_puml_file} 1>/dev/null
-echo -e "${HLIGHT}--- ${_upg_path_} ${path_file}>/dev/null  ---${NORMAL}" #start files
-${_upg_path_} ${src_puml_file} 1>/dev/null
+"${_ehh}" ${_upg_path_} ${src_puml_file}

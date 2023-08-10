@@ -8,7 +8,7 @@ echo -e "${GREEN}\$fn_body_ln = $fn_body_ln${NORMAL}" #print variable
 fn_body_sh=${_dotd_dir_sal}/${name_fn_}.body.nsc.sh
 echo -e "${GREEN}\$fn_body_sh = $fn_body_sh${NORMAL}" #print variable
 
-tml_dir=${PLT_PATH}/.d/.mul/${_gig_f_}/${grad_}/${tail_}/.tml
+tml_dir=${PLT_PATH}/.d/.mul/fp_f_/${grad_}/${tail_}/.tml
 echo -e "${GREEN}\$tml_dir = $tml_dir${NORMAL}" #print variable
 
 read -p "----------continue with that pram?---------------"
