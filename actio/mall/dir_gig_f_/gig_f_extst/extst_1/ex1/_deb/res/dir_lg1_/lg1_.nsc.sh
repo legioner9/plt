@@ -40,7 +40,7 @@ local local_var_wrap
 local local_var_wrapr_arr=()
 local local_var_fn
 local local_var_fn_arr=()
-for local_var_fn in $(f2e "${dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/${FNN}.local.list"); do
+for local_var_fn in $(f2e "${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_${FNN}/.d.ax/.sal.ax/${FNN}.local.list"); do
 # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
 eval local "$local_var_fn"
 local_var_fn_arr+=("${local_var_fn}")
@@ -59,8 +59,8 @@ if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
 return 0
 fi
 # echo ". ${FN_SAL_DIR}/lg1_.body.nsc.sh"
-if ! . "${dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/lg1_.body.nsc.sh"; then
-${_plt_exit} "fail: . ${dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/lg1_.body.sh"
+if ! . "${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_${FNN}/.d.ax/.sal.ax/lg1_.body.nsc.sh"; then
+${_plt_exit} "fail: . ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_${FNN}/.d.ax/.sal.ax/lg1_.body.sh"
 return 1
 fi
 cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
