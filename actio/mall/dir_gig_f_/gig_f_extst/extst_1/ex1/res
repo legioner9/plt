@@ -3,6 +3,8 @@
 [0;32m${f_args[@]} = [0m
 [0;32m${ARGS[@]} = [0m
 [0;32m${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res[0m
+[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args[0m
+[0;32m${local_var_fn_arr[@]} = vvvv[0m
 that lg1_.sal
 [0;36m garg2e2_() help: 
 MAIN: parser $@ : if ( -_char ) in args -> echo char_=1 , if ( --_char value ) -> echo char_=value
@@ -17,7 +19,7 @@ CNTL defaut: -echo, -debug, -verbose, --ptr_if {ptr_from_if: if true fn be work,
 CNTL develop: -develop1, ... for special development mode, NOT to product
 TAGS: (fs|net|)
 IFS: (fifs| exl| ...) - discribe in /home/st/REPOBARE/_repo/plt/.d/.ifs
-FLOW: (process | subprocess (no read pause only plt_err return 0) | interpritator)
+FLOW: (process | subprocess (no read pause only plt_err return ) | interpritator)
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
 WARN: 
@@ -26,10 +28,69 @@ garg2e2_ _deb, garg2e2_ _mdeb
 EXAMP:
 garg2e2_ -<>
 [0m
-[0;32m${g_args[@]} = [0m
-[0;32m${e_args[@]} = [0m
+[0;36m lg1_() help: 
+.        MAIN: 
+.        NAME: lg1_()
+.        WHERE:?(only in root dir)Y/N
+.        WHAT:?(only abs path [/...] | only name file [name.ext] | any stile path [head_path/name.ext])
+.            if arg no rout full_path be pwd/<name_file_with_head_path> , if name root name instead
+.        AUTH:?legioner9@inbox.ru
+.        DEPR:?(Y|N)
+.        ARGS: 
+.        \$1
+.        [ ,\$2 num_menu ]
+.        CNTLS:
+.            required
+.            optional -verbose (not garg parsed, for echo main param function) 
+.        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
+.                -h : this 
+.                _go : edit_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+.                _list : edit_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.list
+.            manual 
+.                _man : edit_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.man
+.                _puml : puml_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.puml -_drawing
+.            tst single mane :
+.                _tst : . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_tst/exec.tst
+.            deb single mane 
+.                _deb : . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.lg1_/_default/default_deb.sh
+.            steps tst single mane :
+.                _flw : . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_tst/_flow_tst.sh
+.            menu for deb
+.                _mdeb : . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.lg1_/_debug/mdeb.sh
+.            tst all . exec.extst in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1
+.                _extst : . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1/start_exec.tst
+.            tst <num> (exec.extst)
+.                _extst<num> . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1/ex<num>_tst/exec.extst
+.            steps extst_1/ex<num>_tst
+.                _exdeb<num> . /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1/ex<num>_tst/_flow_tst.sh
+.
+.        CNTL defaut: -_echo, -_debug
+.        CNTL develop: -_develop1, ... for special development mode, NOT to product
+.
+.        DEMANDS for IFS wrp_fn:
+.           . dir_lg1_/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+.           . dir_lg1_/_gnr_dir_sys.sh create extst in dir_lg1_
+.           . dir_lg1_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_lg1__mdeb <num>
+.           . dir_lg1_/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_lg1__mdeb <num>
+.           
+.        
+.        TAGS: (fs|net|)
+.        IFS: (fifs| exl| ...) - discribe in /home/st/REPOBARE/_repo/plt/.d/.ifs
+.        FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpritator)
+.        RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+.        ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
+.        WARN: 
+.        DEBUG:
+.            lg1_ _deb, lg1_ _mdeb
+.        EXAMP:
+.            lg1_ -<>
+.            [0m
+[0;32m${g_args[@]} = [0;36m garg2e2_() help: MAIN: parser $@ : if ( -_char ) in args -> echo char_=1 , if ( --_char value ) -> echo char_=value NAME: garg2e2_() ARGS: $@ CNTLS: required optional CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, -mdeb, _list CNTL defaut: -echo, -debug, -verbose, --ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ... CNTL develop: -develop1, ... for special development mode, NOT to product TAGS: (fs|net|) IFS: (fifs| exl| ...) - discribe in /home/st/REPOBARE/_repo/plt/.d/.ifs FLOW: (process | subprocess (no read pause only plt_err return ) | interpritator) RETURN: ( result>stdout, return 0 | data | change to ptr | fs_structure | ...) ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... ) WARN: DEBUG: garg2e2_ _deb, garg2e2_ _mdeb EXAMP: garg2e2_ -<> [0m[0m
+[0;32m${e_args[@]} = [0;36m earg2e2_() help: MAIN: echo [e]xecable [arg]s is not contane in $(garg2e2_ ${ARGS[@]}) NAME: earg2e2_() WHERE?:(only in root dir)Y/N WHAT?:(only abs path | only name file | any stile path ) ARGS: $1 [ ,$2 num_menu ] CNTLS: required optional -verbose (not garg parsed, for echo main param function) CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list CNTL defaut: -_echo, -_debug, --_ptr_if {ptr_from_if: if true fn be work, else be ignored}, --ptr_sem {ptr_with_semapore for arg wate_sem, free_sem usnig insidefunction} --errmes {if_error_case}, --outmes {free_message}, ... CNTL develop: -_develop1, ... for special development mode, NOT to product TAGS: (fs|net|) IFS: (fifs| exl| ...) - discribe in /home/st/REPOBARE/_repo/plt/.d/.ifs FLOW: (process | subprocess (no read pause only plt_err return ) | interpritator) RETURN: ( result>stdout, return 0 | data | change to ptr | fs_structure | ...) ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... ) WARN: DEBUG: earg2e2_ _deb, earg2e2_ _mdeb EXAMP: earg2e2_ -<> [0m[0m
 [0;32m${f_args[@]} = [0m
 [0;32m${ARGS[@]} = -h[0m
 [0;32m${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res[0m
+[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args[0m
+[0;32m${local_var_fn_arr[@]} = vvvv[0m
 that lg1_.sal
 [0;34m--- exec garg2e2_mdeb (num_menu) ---[0m

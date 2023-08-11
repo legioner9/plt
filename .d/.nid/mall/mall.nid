@@ -3,27 +3,27 @@
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 
 # HARDCOR FN_DIR
-FN_DIR=${dir_fn_}/dir_${FNN} #? contane dir of function
-FLN=$0
-# ARGS=($@)
-NARGS=$#
-PPWD=$PWD
-#? ${FNN}mdeb function - menu for debug flows
-RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
-# $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
+# FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
+# FLN=$0
+# # ARGS=($@)
+# NARGS=$#
+# PPWD=$PWD
+# #? ${FNN}mdeb function - menu for debug flows
+# RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
+# # $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
 
-FN_DOTD_DIR=${FN_DIR}/.d.ax
-FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
-FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
+# FN_DOTD_DIR=${FN_DIR}/.d.ax
+# FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
+# FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
 
-FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
-FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
-FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
-FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
-FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
-FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
+# FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
+# FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
+# FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
+# FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
+# FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
+# FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
 
-cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
+# cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
 
 FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
@@ -47,6 +47,7 @@ fi
 
 if [ "-h" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . ${FN_SAL_DIR}/$FNN.h.sh ---${NORMAL}" #start files
     . "${FN_SAL_DIR}"/"$FNN".h.sh
     return 0
 fi

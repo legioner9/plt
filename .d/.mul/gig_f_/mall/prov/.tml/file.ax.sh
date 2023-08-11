@@ -4,7 +4,7 @@
 # . "$HOME/.bashrc"
 #!
 
-filename="{dir_fns_}/dir_{name_fn_}/{name_fn_}.sh"
+filename="{dir_fns_}/dir_{name_fn_}/{name_fn_}.nsc.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 

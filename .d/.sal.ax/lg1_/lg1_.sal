@@ -6,6 +6,9 @@ echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
+echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #print variable
+
 # echo -e "${GREEN}\${local_var_arr[@]} = ${local_var_arr[*]}${NORMAL}" #print variable
 
 echo "that ${FNN}.sal"
