@@ -25,6 +25,8 @@
 
 # cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
 
+echo "start plt/.d/.nid/mall/mall.nid"
+
 FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
 # wrp_fifs1_ rm -f "${FN_ERR_FILE}" -cf1
@@ -41,7 +43,7 @@ verbose=0
 "${_c_up}" "${FN_FN_DIR}" 1>/dev/null
 if [ "_man" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
-    "${_edit_}" "${FN_SAL_DIR}"/"$FNN".man
+    "${_ehh}" "${_edit_}" "${FN_SAL_DIR}"/"$FNN".man
     return 0
 fi
 
@@ -68,7 +70,7 @@ if [ "_puml" == "$1" ]; then
     puml_file="${FN_DIR}/${FNN}".puml
     if [ -f "${puml_file}" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
-        "${_wrp2_}" "${_puml_}" --_xxf "${puml_file}" -_drawing
+        "${_ehh}" "${_puml_}" --_xxf "${puml_file}" -_drawing
         return $?
     else
         "${_plt_exit}" "not exist file: ${puml_file} " #exit 1
@@ -135,13 +137,13 @@ fi
 
 if [ "_lst" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-    "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}/${FNN}".lst
+    "${_ehh}" "${_edit_}" "${FN_DIR}/${FNN}".lst
     return 0
 fi
 
 if [ "_go" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
-    "${_wrp2_}" "${_edit_}" --_xxd ${FN_DIR}
+    "${_ehh}" "${_edit_}" ${FN_DIR}
     return 0
 fi
 
@@ -159,7 +161,8 @@ fi
 
 if [ "_mdeb" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-    "${_wrp2_}" . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
+    echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh $2 ---${NORMAL}" #start files
+    . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
     return 0
 fi
 

@@ -1,6 +1,31 @@
 local ARGS=($@)
-
 local FNN=${FUNCNAME[0]}
+
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+
+if [ -n "${ARGS[0]}" ] && [ "${ARGS[0]}" == '-h' ] || [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.cntl")" ]; then
+
+    for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.local"); do
+
+        # echo -e "${GREEN}\$local_var_wrap = $local_var_wrap${NORMAL}" #print variable
+        eval local "$local_var_wrap"
+        local_var_wrap_arr+=("${local_var_wrap}")
+
+    done
+
+    if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"; then
+        ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"
+        return 1
+    fi
+
+    if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"; then
+        ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"
+        return 1
+    fi
+    echo -e "${HLIGHT}--- . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid ---${NORMAL}" #start files
+    return 0
+
+fi
 
 # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
 if ! ${_garg2e2_} "${ARGS[@]}"; then
@@ -43,13 +68,11 @@ for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.local"); do
 done
 
 # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
-if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"; then
-    ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"
+if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"; then
+    ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"
     return 1
 fi
-if [[ -n "${ARGS1}" ]] && [[ "${cntl_args[@]}" =~ "${ARGS1}" ]]; then
-    return 0
-fi
+
 # echo ". ${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"
 if ! . "{dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
     ${_plt_exit} "fail: . {dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/{name_fn_}.body.sh"
