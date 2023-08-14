@@ -15,7 +15,7 @@ ${_ehh} mkdir ${rdir}/"$1"_extst
 #
 ${_ehh} cd ${rdir}/"$1"_extst
 #
-cr_tst_sys_ --name_dir extst_1 --ext extst" > ${rdir}/${gname}.tmp.exl
+${_ehh} cr_tst_sys_ --name_dir extst_1 --ext extst" > ${rdir}/${gname}.tmp.exl
 #
 ${_ehh}  ${_exl_} --_exl_list ${rdir}/${gname}.tmp.exl
 #

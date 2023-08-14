@@ -1,5 +1,5 @@
 local ARGS=($@)
-local FNN=${FUNCNAME[0]}
+local FNN={name_fn_}
 
 echo -e "${GREEN}\\\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
@@ -29,7 +29,7 @@ fi
 
 # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
 if ! ${_garg2e2_} "${ARGS[@]}"; then
-    ${_plt_exit} " ${FNN} return 1: ${FNLOCK}"
+    ${_plt_exit} " {name_fn_} return 1: ${FNLOCK}"
     return 1
 fi
 #? g_args with cntl=value
@@ -51,7 +51,7 @@ local local_var_wrap_arr=()
 local local_var_fn
 local local_var_fn_arr=()
 
-for local_var_fn in $(f2e "{dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/${FNN}.local.list"); do
+for local_var_fn in $(f2e "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.local.list"); do
 
     # echo -e "${GREEN}\$local_var_fn = $local_var_fn${NORMAL}" #print variable
     eval local "$local_var_fn"
@@ -74,8 +74,8 @@ if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"; then
 fi
 
 # echo ". ${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"
-if ! . "{dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
-    ${_plt_exit} "fail: . {dir_fns_}/dir_${FNN}/.d.ax/.sal.ax/{name_fn_}.body.sh"
+if ! . "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
+    ${_plt_exit} "fail: . {dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.sh"
     return 1
 fi
 
