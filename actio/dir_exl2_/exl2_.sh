@@ -135,7 +135,7 @@ exl2_() {
     #{cntl_default}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN:  [ex]ec [l]ines from {--_list} file.exl [, with {--_stu} file.stu | [--_var(1|2|3) \"name_var=value_var\" ]]
+MAIN:  [ex]ec [l]ines from {--_exl_list} file.exl [, with {--_stu} file.stu | [--_var(1|2|3) \"name_var=value_var\" ]]
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | 
