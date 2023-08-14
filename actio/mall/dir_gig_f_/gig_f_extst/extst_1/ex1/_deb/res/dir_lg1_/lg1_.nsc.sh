@@ -101,6 +101,39 @@ fi
 
 }
 
+lg1_g_() {
+
+local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res"
+    #{def_const}
+
+    #{ctrl_args}
+
+local ARGS=($@)
+local FNN=lg1_
+# if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e2_} "${ARGS[@]}"; then
+${_plt_exit} " lg1_ return 1: ${FNLOCK}"
+return 1
+fi
+#? g_args with cntl=value
+local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+#? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+local strex
+for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+[[ 1 -eq ${verbose} ]] || echo "local $strex"
+eval local $strex
+done
+# echo ". ${FN_SAL_DIR}/lg1_.body.nsc.sh"
+if ! . "${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh"; then
+${_plt_exit} "fail: . ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.sh"
+return 1
+fi
+    #{init_body_g}
+
+}
+
 # lg1_ @
 
 unset filename
