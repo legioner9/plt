@@ -6,17 +6,17 @@
 #
 plt_pause "do that? create $1 (like namefn_extst_num) cr_tst_sys_ in ${rdir}"
 #
-wrp2_ rm --_cxf ${rdir}/${gname}.tmp.exl
+${_ehh} rm ${rdir}/${gname}.tmp.exl
 #
 echo -e "
-wrp2_ cd --_xxd ${rdir}
+${_ehh} cd ${rdir}
 #
-wrp2_ mkdir --_xnd ${rdir}/"$1"_extst
+${_ehh} mkdir ${rdir}/"$1"_extst
 #
-wrp2_ cd --_xxd ${rdir}/"$1"_extst
+${_ehh} cd ${rdir}/"$1"_extst
 #
 cr_tst_sys_ --name_dir extst_1 --ext extst" > ${rdir}/${gname}.tmp.exl
 #
-exl_ --list ${rdir}/${gname}.tmp.exl
+${_ehh}  ${_exl_} --_exl_list ${rdir}/${gname}.tmp.exl
 #
-wrp2_ rm --_cxf ${rdir}/${gname}.tmp.exl
+${_ehh} rm ${rdir}/${gname}.tmp.exl

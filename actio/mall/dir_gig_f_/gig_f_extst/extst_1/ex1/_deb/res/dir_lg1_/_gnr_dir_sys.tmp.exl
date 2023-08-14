@@ -1,8 +1,0 @@
-
- cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
-#
- mkdir /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_1_extst
-#
- cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_1_extst
-#
-cr_tst_sys_ --name_dir extst_1 --ext extst
