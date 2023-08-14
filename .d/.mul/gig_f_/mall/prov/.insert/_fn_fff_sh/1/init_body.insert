@@ -3,7 +3,7 @@ local FNN={name_fn_}
 
 echo -e "${GREEN}\\\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
-if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.cntl")" ]; }; then
+    if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
 
     for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.local"); do
 
