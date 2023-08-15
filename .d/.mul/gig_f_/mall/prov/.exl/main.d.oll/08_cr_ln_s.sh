@@ -18,14 +18,14 @@ echo -e "${GREEN}\$fn_body_sh = $fn_body_sh${NORMAL}" #print variable
 read -p "----------continue with that pram?---------------"
 
 if [ -f "${fn_body_ln}" ]; then
-    if plt_is_ques "delit file ${fn_body_ln}?"; then
+
 echo 1
         "${_ehh}" rm -v ${fn_body_ln}
 
         "${_ehh}" cp -rfv "${tml_dir}/file.body.sh" "${fn_body_ln}"
 
         "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
-    fi
+
 else
 echo 2
     "${_ehh}" cp -rfv "${tml_dir}/file.body.sh" "${fn_body_ln}"
@@ -49,14 +49,14 @@ echo -e "${GREEN}\$fn_body_sh = $fn_body_sh${NORMAL}" #print variable
 read -p "----------continue with that pram?---------------"
 
 if [ -f "${fn_body_ln}" ]; then
-    if plt_is_ques "delit file ${fn_body_ln}?"; then
+
 echo 3
         "${_ehh}" rm -v ${fn_body_ln}
 
         "${_ehh}" cp -rfv "${tml_dir}/file.local.list" "${fn_body_ln}"
 
         "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
-    fi
+  
 else
 echo 4
     "${_ehh}" cp -rfv "${tml_dir}/file.local.list" "${fn_body_ln}"
@@ -83,14 +83,14 @@ echo -e "${GREEN}\$fn_body_list = $fn_body_list${NORMAL}" #print variable
 read -p "----------continue with that pram?---------------"
 
 if [ -f "${fn_body_ln}" ]; then
-    if plt_is_ques "delit file ${fn_body_ln}?"; then
+
 echo 5
         "${_ehh}" rm -v ${fn_body_ln}
 
         "${_ehh}" cp -rfv "${fn_h_tml}" "${fn_body_ln}"
 
         "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
-    fi
+
 else
 echo 6
     "${_ehh}" cp -rfv "${fn_h_tml}" "${fn_body_ln}"
@@ -118,14 +118,14 @@ echo -e "${GREEN}\$fn_dir_h_in = $fn_dir_h_in${NORMAL}" #print variable
 read -p "----------continue with that pram?---------------"
 
 if [ -d "${fn_dir_h_ln}" ]; then
-    if plt_is_ques "delit dir ${fn_dir_h_ln}?"; then
+
 echo 7
         "${_ehh}" rm -v ${fn_dir_h_ln}
 
         "${_ehh}" cp -rfv "${fn_dir_h_tml}" "${fn_dir_h_ln}"
 
         # "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
-    fi
+   
 else
 echo 8
     "${_ehh}" cp -rfv "${fn_dir_h_tml}" "${fn_dir_h_ln}"
