@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> el_nf_ 
+farg2e2_ -> el_nf_
+echo_deb_ -> el_nf_
+el_nf_ -> el_nf_:is_num
+el_nf_ -> el_nf_:exit_err_el_nf_
+el_nf_ -> el_nf_:exit_reg_el_nf_
+el_nf_ -> el_nf_:unset_autoargs_el_nf_
+' {wrap_fn}
+' fnn o-> el_nf_
+' {body_fn}
+@enduml
