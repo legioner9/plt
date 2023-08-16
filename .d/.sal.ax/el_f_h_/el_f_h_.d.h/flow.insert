@@ -1,0 +1,4 @@
+FLOW: 
+    - insert to replaser in file \${PATH_TML_DIR}/el_f_h_/main.tml
+    - use directories from \$PATH_CPL_DIR/el_f_h_/main.cpl
+    - copy to \${PATH_SAL_AX}/<name_fn>/<name_fn>.h

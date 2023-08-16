@@ -63,6 +63,7 @@ PATH_READ_DIR="${PLT_PATH}"/.d/.read
 PATH_SAL_AX_DIR="${PLT_PATH}"/.d/.sal.ax
 PATH_NID_DIR="${PLT_PATH}"/.d/.nid
 PATH_RPN_DIR="${PLT_PATH}"/.d/.rpn
+PATH_CPL_DIR="${PLT_PATH}"/.d/.cpl
 
 PATH_CURR_REPO="${HOME}/REPOBARE/_repo"
 
