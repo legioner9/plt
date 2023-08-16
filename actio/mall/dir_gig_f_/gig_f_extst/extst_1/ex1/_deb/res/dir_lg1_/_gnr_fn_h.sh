@@ -33,7 +33,7 @@ fi
 #-------------------------------------
 #-------------------------------
 #? cr fn.h 
-${_ehh} ${_el_f_h_} --_name_fn lg1_ --_dir_fns /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+${_ehh} ${_el_f_h_} --_name_for_fn lg1_ --_dir_for_fns /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
 #{body}
 #-------------------------------
 #-------------------------------------

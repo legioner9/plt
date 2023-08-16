@@ -169,10 +169,10 @@ fi
 
 if [ "_prp" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
-    echo -e "${HLIGHT}---${_ehh} ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2" ---${NORMAL}" #start files
+    
     "${_ehh}" ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2"
     return 0
-fi
+fi 
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}
