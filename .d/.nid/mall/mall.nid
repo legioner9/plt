@@ -49,8 +49,9 @@ fi
 
 if [ "-h" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
-    echo -e "${HLIGHT}--- . ${FN_SAL_DIR}/$FNN.h.sh ---${NORMAL}" #start files
-    . "${FN_SAL_DIR}"/"$FNN".h.sh
+
+    ${_ehh} . "${FN_DIR}"/_gnr_fn_h.sh
+    ${_ehh} cat "${FN_SAL_DIR}"/"${FNN}".h
     return 0
 fi
 
@@ -160,12 +161,18 @@ if [ "_deb" == "$1" ]; then
 fi
 
 if [ "_mdeb" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
     echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh $2 ---${NORMAL}" #start files
     . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
     return 0
 fi
 
+if [ "_prp" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
+    echo -e "${HLIGHT}---${_ehh} ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2" ---${NORMAL}" #start files
+    "${_ehh}" ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2"
+    return 0
+fi
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}

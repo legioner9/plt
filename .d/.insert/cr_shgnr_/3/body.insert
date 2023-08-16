@@ -1,4 +1,4 @@
 #? cr fn.h 
 
-${_ehh} ${_el_f_h_} --_name_fn {name_fn_} --_dir_fns {dir_fns_}
+${_ehh} ${_el_f_h_} --_name_for_fn {name_fn_} --_dir_for_fns {dir_fns_}
 

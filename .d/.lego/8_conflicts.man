@@ -1,0 +1,3 @@
+## cntl fn not be (inner vars at define function) :
+    --_name_fn
+    --_dir_fns

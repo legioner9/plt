@@ -1,3 +1,3 @@
 ARGS:
-    --_name_fn name fn
-    --_dir_fns dir with dir_${name_fn_}
+    --_name_for_fn name fn
+    --_dir_for_fns dir with dir_${name_fn_}
