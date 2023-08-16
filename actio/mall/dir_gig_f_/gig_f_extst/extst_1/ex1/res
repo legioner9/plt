@@ -4,7 +4,7 @@
 [0;32m${f_args[@]} = [0m
 [0;32m${ARGS[@]} = [0m
 [0;32m${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res[0m
-[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args[0m
+[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args dir_h[0m
 [0;32m${local_var_fn_arr[@]} = vvv[0m
 that lg1_.sal
 [0;32m${ARGS[@]} = -h[0m
@@ -19,7 +19,7 @@ dir_for_fns_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst
 [0;32m${f_args[@]} = [0m
 [0;32m${ARGS[@]} = --_name_for_fn lg1_ --_dir_for_fns /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res[0m
 [0;32m${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall[0m
-[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args[0m
+[0;32m${local_var_wrap_arr[@]} = FN_DIR FLN NARGS PPWD RATIS_DIR FN_DOTD_DIR FN_SAL_DIR FN_CIR_DIR FN_CONT_DIR FN_FN_DIR FN_TMP_DIR FN_DEBUG_DIR FN_CONFIG_DIR FN_DEFAULT_DIR cntl_args FNLOCK verbose tst_file puml_file flw_file extst_file extst_num_file exdeb_num_file echo_ debug_ develop1_ g_args e_args f_args dir_h[0m
 [0;32m${local_var_fn_arr[@]} = vvv[0m
 that el_f_h_.sal
 [1m--- cat /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.h ---[0m
