@@ -1,5 +1,7 @@
 #!/bin/bash
 
-${name_fn_}
+${_ehh} . ${dir_fns_}/dir_${name_fn_}/${name_fn_}.nsc.sh
+
+${_ehh} ${name_fn_}
 # ${name_fn_} -h
-${name_fn_} _mdeb 1
+${_ehh} ${name_fn_} _mdeb 1

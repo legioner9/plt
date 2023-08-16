@@ -1,2 +1,3 @@
 ARGS:
-    - ARGS0: name fn
+    --_name_fn name fn
+    --_dir_fns dir with dir_${name_fn_}

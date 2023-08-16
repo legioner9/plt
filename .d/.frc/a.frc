@@ -56,3 +56,5 @@ _gig_prim_="gig_prim_"
 #?
 #? ${PLT_PATH}/.d/.nid/mall${_mall_version_} m b _mall_version_="_v2"
 _mall_version_=""
+
+_el_f_h_="el_f_h_"
