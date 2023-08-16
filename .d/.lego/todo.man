@@ -24,6 +24,9 @@
 
 # raports
 
+### plt_data_ date +"%Y%m%d%H%M"
+
+
 
 
 # update fp_f
