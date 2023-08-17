@@ -51,3 +51,8 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 
 ## RCM_PIN
 - path is name -  semanicaly - exa: <name>.<ext> <-> .ext/name/
+
+## RCM_MIDNUM
+- naming contane name
+- ...2... to 
+- ...3... treat without ^# string or ^_ path

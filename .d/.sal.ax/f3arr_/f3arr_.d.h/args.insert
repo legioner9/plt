@@ -1,0 +1,3 @@
+ARGS:
+    ARGS0 u_path file (abs or rel)
+    ARGS1 ptr to arr
