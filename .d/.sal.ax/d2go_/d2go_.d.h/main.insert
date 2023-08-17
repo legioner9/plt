@@ -1,1 +1,0 @@
-MAIN: open dir as d2go_ ( <name_dir> | num | null | -e )
