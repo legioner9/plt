@@ -9,4 +9,6 @@ echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #print variable
 
+echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
 echo "that ${FNN}.sal"

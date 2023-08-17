@@ -1,6 +1,12 @@
 local ARGS=($@)
 local FNN={name_fn_}
 
+local local_var_wrap
+local local_var_wrap_arr=()
+
+local local_var_fn
+local local_var_fn_arr=()
+
 echo -e "${GREEN}\\\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
     if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
@@ -45,11 +51,6 @@ for strex in $(${_garg2e2_} "${ARGS[@]}"); do
     eval local $strex
 done
 
-local local_var_wrap
-local local_var_wrap_arr=()
-
-local local_var_fn
-local local_var_fn_arr=()
 
 for local_var_fn in $(f2e "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.local.list"); do
 

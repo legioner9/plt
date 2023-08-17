@@ -14,6 +14,8 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 lg1_() {
 
+    local ratis=0
+
 local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res"
     #{def_const}
 
@@ -21,6 +23,10 @@ local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/r
 
 local ARGS=($@)
 local FNN=lg1_
+local local_var_wrap
+local local_var_wrap_arr=()
+local local_var_fn
+local local_var_fn_arr=()
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
 for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
@@ -54,10 +60,6 @@ for strex in $(${_garg2e2_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done
-local local_var_wrap
-local local_var_wrap_arr=()
-local local_var_fn
-local local_var_fn_arr=()
 for local_var_fn in $(f2e "${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.local.list"); do
 # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
 eval local "$local_var_fn"
@@ -85,6 +87,8 @@ cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
 
 lg1_c_() {
 
+    local ratis=1
+
 local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res"
     #{def_const}
 
@@ -102,6 +106,8 @@ fi
 }
 
 lg1_g_() {
+
+    local ratis=2
 
 local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res"
     #{def_const}

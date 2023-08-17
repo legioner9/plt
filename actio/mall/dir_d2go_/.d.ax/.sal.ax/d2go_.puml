@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> d2go_ 
+farg2e2_ -> d2go_
+echo_deb_ -> d2go_
+d2go_ -> d2go_:is_num
+d2go_ -> d2go_:exit_err_d2go_
+d2go_ -> d2go_:exit_reg_d2go_
+d2go_ -> d2go_:unset_autoargs_d2go_
+' {wrap_fn}
+' fnn o-> d2go_
+' {body_fn}
+@enduml

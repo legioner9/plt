@@ -123,3 +123,34 @@ fi
 if ! "${_ehh}" ln -sv "${fn_body_ln}" "${fn_body_h}"; then
     "${_plt_exit}" "ln -sv ${fn_body_ln} ${fn_body_h}"
 fi
+
+#? dir.h
+
+fn_body_ln=${PATH_SAL_AX_DIR}/${name_fn_}/${name_fn_}.d.repo
+echo -e "${GREEN}\$fn_body_ln = $fn_body_ln${NORMAL}" #print variable
+
+fn_body_list=${_dotd_dir_sal}/${name_fn_}.d.repo
+echo -e "${GREEN}\$fn_body_sh = $fn_body_sh${NORMAL}" #print variable
+
+read -p "----------continue with that pram?---------------"
+
+if [ -d "${fn_body_ln}" ]; then
+
+        "${_ehh}" rm -rv ${fn_body_ln}
+
+        "${_ehh}" cp -rfv "${tml_dir}/dir.repo" "${fn_body_ln}"
+
+        # "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
+  
+else
+    "${_ehh}" cp -rfv "${tml_dir}/dir.repo" "${fn_body_ln}"
+
+    # "${_ehh}" "${_cr_f_}" "${fn_body_ln}" --vi0 ${name_fn_} --vr0 {name_fn_}
+
+fi
+
+if ! "${_ehh}" ln -sv "${fn_body_ln}" "${fn_body_list}"; then
+    "${_plt_exit}" "ln -sv ${fn_body_ln} ${fn_body_list}"
+fi
+
+

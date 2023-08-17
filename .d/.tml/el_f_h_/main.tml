@@ -1,8 +1,26 @@
-{name}
-{main}
-{args}
-{depr}
-{flow}
-{tags}
-{dfns}
-{fn_cntl}
+# NAME
+    {name}
+# SYNOPSIS
+    {main}
+# ARGUMENTS
+    {args}
+# IS DEPRICATED
+    {depr}
+# DO
+    {flow}
+# TAGS
+    {tags}
+# DIR WITH DIR_FN
+    {dfns}
+# GRAD
+    {grad}
+# CNTL GRAD
+    {fn_cntl}
+# DATE OF CREATION
+    {date}
+# LANG OF FN
+    {lngf}
+# CO_FUNCTIONS
+    {rtfn}
+# VERSION
+    {vers}
