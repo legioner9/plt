@@ -1,6 +1,9 @@
 FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
 FLN=$0
 # ARGS=($@)
+ARGS0=${ARGS[0]}
+ARGS1=${ARGS[1]}
+ARGS2=${ARGS[2]}
 NARGS=$#
 PPWD=$PWD
 #? ${FNN}mdeb function - menu for debug flows

@@ -12,3 +12,6 @@ echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #pri
 echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
 echo "that ${FNN}.sal"
+
+echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}" #print variable
+

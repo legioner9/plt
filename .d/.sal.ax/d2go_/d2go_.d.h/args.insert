@@ -1,1 +1,6 @@
 ARGS:
+    ARGSO: 
+        - name_dir -> edit_ name_dir
+        - num -> edit_ num_menu_dir
+        - null -> exec menu with dir
+        - -e -> edit_ lst name_dir@path_dir
