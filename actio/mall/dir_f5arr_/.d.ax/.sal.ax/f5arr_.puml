@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> f5arr_ 
+farg2e2_ -> f5arr_
+echo_deb_ -> f5arr_
+f5arr_ -> f5arr_:is_num
+f5arr_ -> f5arr_:exit_err_f5arr_
+f5arr_ -> f5arr_:exit_reg_f5arr_
+f5arr_ -> f5arr_:unset_autoargs_f5arr_
+' {wrap_fn}
+' fnn o-> f5arr_
+' {body_fn}
+@enduml

@@ -1,3 +1,5 @@
 ARGS:
     ARGS0 u_path file with double lst
     ARGS1 delim string
+    ARGS2 ptr arr0
+    ARGS3 ptr arr1
