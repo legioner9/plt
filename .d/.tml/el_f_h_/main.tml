@@ -14,9 +14,9 @@
     {dfns}
 # GRAD
     {grad}
-# CNTL GRAD
+# CNTL GRAD -
     {fn_cntl}
-# DATE OF CREATION
+# DATE OF CREATION -
     {date}
 # LANG OF FN
     {lngf}
@@ -24,3 +24,21 @@
     {rtfn}
 # VERSION
     {vers}
+# RETURN
+    {retu}
+# ERROR
+    {erro}
+
+            args.insert  
+            depr.insert  
+            dfns.insert  
+            erro.insert  
+            flow.insert  
+            grad.insert  
+            lngf.insert  
+            main.insert  
+            name.insert  
+            retu.insert  
+        rtfn.insert  
+        tags.insert  
+        vers.insert

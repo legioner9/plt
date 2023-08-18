@@ -1,3 +1,4 @@
 ARGS:
     ARGS0 u_path file (abs or rel)
-    ARGS1 ptr to arr
+    ARGS1 delimetr
+    ARGS2 ptr to arr

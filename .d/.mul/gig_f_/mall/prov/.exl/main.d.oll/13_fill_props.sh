@@ -6,6 +6,8 @@ echo "DATE: $(date +"%Y%m%d%H%M")" > ${dir_help}/date.insert
 
 echo "DFNS: ${dir_fns_}" > ${dir_help}/dfns.insert
 
+${_ehh} ${_upg_path_} ${dir_help}/dfns.insert
+
 echo "NAME: ${name_fn_}" > ${dir_help}/name.insert
 
 echo "GRAD: ${grad_}" > ${dir_help}/grad.insert
