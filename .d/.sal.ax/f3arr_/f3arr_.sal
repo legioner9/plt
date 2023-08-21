@@ -36,11 +36,12 @@ echo "that ${FNN}.sal"
 ptr_path=$ARGS0
 ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
+echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
+
 delim=$ARGS1
 
 # eval $ARGS2=\(a b c\)
 
-echo $ptr_path
 
 
 

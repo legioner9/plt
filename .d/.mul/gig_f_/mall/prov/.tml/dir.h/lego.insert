@@ -1,0 +1,5 @@
+LEGO:
+    - . {dir_fns_}/dir_{name_fn_}/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+    - . {dir_fns_}/dir_{name_fn_}/_gnr_dir_sys.sh create extst in dir_{name_fn_}
+    - . {dir_fns_}/dir_{name_fn_}/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_${name_fn_}_mdeb <num>
+    - . {dir_fns_}/dir_{name_fn_}/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_{name_fn_}_mdeb <num>

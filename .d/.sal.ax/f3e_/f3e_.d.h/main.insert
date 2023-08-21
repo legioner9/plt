@@ -1,0 +1,1 @@
+MAIN: like cat ($ARGS0) u_path file without ^# [, and only ${STR:1:1} == ($ARGS1) ] 

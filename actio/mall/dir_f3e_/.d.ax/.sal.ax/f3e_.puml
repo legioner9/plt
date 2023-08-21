@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> f3e_ 
+farg2e2_ -> f3e_
+echo_deb_ -> f3e_
+f3e_ -> f3e_:is_num
+f3e_ -> f3e_:exit_err_f3e_
+f3e_ -> f3e_:exit_reg_f3e_
+f3e_ -> f3e_:unset_autoargs_f3e_
+' {wrap_fn}
+' fnn o-> f3e_
+' {body_fn}
+@enduml

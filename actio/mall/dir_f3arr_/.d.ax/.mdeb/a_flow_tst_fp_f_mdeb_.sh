@@ -7,19 +7,19 @@ idir=$(pwd)
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a_flow_tst_fp_f_mdeb_(){
-local FNN=${FUNCNAME[0]}
-local PPWD=$PWD
-local ARGS=($@)
-local NARGS=$#
-local verbose=0
-[[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
-[[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_f3arr_/.d.ax/.mdeb/a_flow_tst_fp_f_mdeb_.sh)
-# wrp_fifs1_ cd ${d_name} -d
+a_flow_tst_fp_f_mdeb_() {
+    local FNN=${FUNCNAME[0]}
+    local PPWD=$PWD
+    local ARGS=($@)
+    local NARGS=$#
+    local verbose=0
+    [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+    [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_f3arr_/.d.ax/.mdeb/a_flow_tst_fp_f_mdeb_.sh)
+    # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
-if [ "-h" == "$1" ]; then
-echo -e "${CYAN} ${FNN}() help: 
+    if [ "-h" == "$1" ]; then
+        echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
@@ -41,43 +41,47 @@ DEBUG:
 EXAMP:
 ${FNN} -<>
 ${NORMAL}"
-return 0
-fi
+        return 0
+    fi
     #{help_cntl_fn}
-if [ "_man" == "$1" ]; then
-edit_ "${d_name}/${FNN}".man
-return 0
-fi
-if [ "_go" == "$1" ]; then
-edit_ "${d_name}/${FNN}".sh
-return 0
-fi
-if [ "_lst" == "$1" ]; then
-edit_ "${d_name}/${FNN}".lst
-return 0
-fi
-if [ "_head" == "$1" ]; then
-echo "_head fn: ${d_name}/${FNN}"
-return 0
-fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-plt_exit " ${FNN} return 1: ${FNLOCK}"
-return 1
-fi
-g_args=($(garg2e_ "${ARGS[@]}"))
-[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
-[[ 1 -eq ${verbose} ]] || echo "local $strex"
-eval local $strex
-done
+    if [ "_man" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".man
+        return 0
+    fi
+    if [ "_go" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".sh
+        return 0
+    fi
+    if [ "_lst" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".lst
+        return 0
+    fi
+    if [ "_head" == "$1" ]; then
+        echo "_head fn: ${d_name}/${FNN}"
+        return 0
+    fi
+    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+        plt_exit " ${FNN} return 1: ${FNLOCK}"
+        return 1
+    fi
+    g_args=($(garg2e_ "${ARGS[@]}"))
+    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    for strex in $(garg2e_ "${ARGS[@]}"); do
+        [[ 1 -eq ${verbose} ]] || echo "local $strex"
+        eval local $strex
+    done
     #{default_cntl_fn}
 
-    cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_f3arr_/f3arr_extst/extst_1/ex1
+    # cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_f3arr_/f3arr_extst/extst_1/ex1
 
-    local arr=()
+    # local arr=()
 
-    f3arr_ dat @ arr
-    
+    # f3arr_ dat @ arr
+
+    echo -e "${HLIGHT}--- . /home/st/REPOBARE/_repo/plt/actio/mall/dir_f3arr_/f3arr_extst/extst_1/ex1/_flow_tst.sh ---${NORMAL}" #start files
+    . /home/st/REPOBARE/_repo/plt/actio/mall/dir_f3arr_/f3arr_extst/extst_1/ex1/_flow_tst.sh
+    # . /home/st/REPOBARE/_repo/plt/actio/mall/dir_f3arr_/f3arr_extst/extst_1/ex1/_flow_tst.sh
+
     #{body_fn}
 }
 
