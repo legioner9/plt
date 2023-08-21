@@ -14,4 +14,5 @@ body=${insert_dir}/_fn_fff_self_tst_1/body_self_tst_1.insert
 
 "${_ehh}" ${_cr_f_} ${file_path} --fi0 ${body} --fr0 {body}
 
-"${_ehh}" . ${dir_self_tst}/generate_self_tst_1.sh
+echo -e "${HLIGHT}--- . ${dir_self_tst}/generate_self_tst_1.sh ---${NORMAL}" #start files
+. ${dir_self_tst}/generate_self_tst_1.sh

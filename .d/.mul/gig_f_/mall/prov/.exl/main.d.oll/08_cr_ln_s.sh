@@ -153,4 +153,6 @@ if ! "${_ehh}" ln -sv "${fn_body_ln}" "${fn_body_list}"; then
     "${_plt_exit}" "ln -sv ${fn_body_ln} ${fn_body_list}"
 fi
 
+fn_body_sh=${_dotd_dir_sal}/${name_fn_}.ifs
 
+${_ehh} rm 
