@@ -21,7 +21,7 @@ echo -e "ERRO:
     -
 " >${dir_help}/erro.insert
 
-ln -sv ${PATH_PLT_DIR}/.d/.anc.ax/ifs_fn.d.man/name_fn.d.h/lego.insert ${dir_help}/lego.insert 
+# ln -sv ${PATH_PLT_DIR}/.d/.anc.ax/ifs_fn.d.man/name_fn.d.h/lego.insert ${dir_help}/lego.insert 
 
 ${_cr_f_} ${dir_help}/lego.insert --vi0 ${dir_fns_} --vr0 {dir_fns_}
 ${_cr_f_} ${dir_help}/lego.insert --vi0 ${name_fn_} --vr0 {name_fn_}
