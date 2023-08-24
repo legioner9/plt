@@ -10,6 +10,8 @@ echo -e "${CYAN} ${FNN}() help:
 .        DEPR:?(Y|N)
 .        ARGS: 
 .        \\\$1
+.        if \\\$1=_ins => edit ${PATH_INSERT_DIR}/obs_quis_
+.        if \\\$1=_ls => ls ${PATH_INSERT_DIR}/obs_quis_
 .        [ ,\\\$2 num_menu ]
 .        CNTLS:
 .            required

@@ -10,6 +10,16 @@ echo "that ${FNN}.sal"
 
 local filename="${ARGS[0]}"
 
+if [ ${filename} == "_ins" ]; then
+    ${_edit_} ${PATH_INSERT_DIR}/obs_quis_
+    return 0
+fi
+
+if [ ${filename} == "_ls" ]; then
+    ls ${PATH_INSERT_DIR}/obs_quis_
+    return 0
+fi
+
 echo -e "${GREEN}\$filename = $filename${NORMAL}" #print variable
 
 ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
