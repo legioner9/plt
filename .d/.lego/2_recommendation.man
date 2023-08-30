@@ -55,6 +55,8 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 ## RCM_MIDNUM
 - naming contane name
   - ...2... to 
+    - d2... file in dir pipe to ...
+    - f2... sting in file pipe to ...
   - ...3... treat without ^# string or ^_ path
   - ...4... treat dowble lst 
   - ...5... treat dowble lst without ^# string or ^_ path

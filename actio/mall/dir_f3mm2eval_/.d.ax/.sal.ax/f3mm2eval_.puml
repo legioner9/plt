@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> f3mm2eval_ 
+farg2e2_ -> f3mm2eval_
+echo_deb_ -> f3mm2eval_
+f3mm2eval_ -> f3mm2eval_:is_num
+f3mm2eval_ -> f3mm2eval_:exit_err_f3mm2eval_
+f3mm2eval_ -> f3mm2eval_:exit_reg_f3mm2eval_
+f3mm2eval_ -> f3mm2eval_:unset_autoargs_f3mm2eval_
+' {wrap_fn}
+' fnn o-> f3mm2eval_
+' {body_fn}
+@enduml

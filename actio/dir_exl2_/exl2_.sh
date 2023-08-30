@@ -313,6 +313,7 @@ ${NORMAL}"
     exl2_exec_file_() { # file for exec
 
         local list_file="$1"
+        list_file=$(abs_path $PPWD "list_file") #ptr args
 
         if ! [[ -f "${list_file}" ]]; then
             plt_exit "${list_file} not .exl signed file"
