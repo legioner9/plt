@@ -55,22 +55,22 @@ done
 # res+=("bbbbbbbbb")
 
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-num_res=$(($1 - 1))
-${res[${num_res}]}
-return 0
+    num_res=$(($1 - 1))
+    ${res[${num_res}]}
+    return 0
 fi
 PS3="eligendi actiones: "
 select item in "${arr[@]}"; do
-for ((i = 0; i < 1000; i++)); do
-if [[ ${item} == ${arr[$i]} ]]; then
-echo -e "${HLIGHT}--- ${res[$i]} ---${NORMAL}" #start files
-${res[$i]}
-${FNN} $@
-fi
-if [[ ${item} == ${arr[0]} ]]; then
-${res[$i]}
-fi
-done
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item} == ${arr[$i]} ]]; then
+            echo -e "${HLIGHT}--- ${res[$i]} ---${NORMAL}" #start files
+            ${res[$i]}
+            ${FNN} $@
+        fi
+        if [[ ${item} == ${arr[0]} ]]; then
+            ${res[$i]}
+        fi
+    done
 done
 #{zzz20}
 
