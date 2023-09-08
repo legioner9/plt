@@ -12,3 +12,5 @@ wrp2_ touch --_cnf Repono/0
 wrp2_ mkdir -v --_cnd Tmp
 wrp2_ touch --_cnf Tmp/0
 wrp2_ touch --_cnf README.md
+wrp2_ mkdir -v --_cnd primus_gradus
+ 
