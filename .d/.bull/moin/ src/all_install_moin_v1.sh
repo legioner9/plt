@@ -2,6 +2,15 @@
 
 # PATH_MONI_APP_DIR=${HOME}/MoniMoniApp # in standart replace: /usr/local to ${MONI_APP_DIR}
 
+echo -e "${HLIGHT}--- Chapts: ---${NORMAL}" #start files
+echo -e "${BLUE}
+
+- install? :: MoinMoin
+- setting? :: MoinMoin
+- setting? :: nginx for MoinMoin
+
+${NORMAL}" #print variable
+
 #? install MoinMoin
 
 echo -e "${GREEN}\$VERSION_MOIN_APP = ${VERSION_MOIN_APP}${NORMAL}"                       #print variable
@@ -59,7 +68,7 @@ if plt_is_ques "setting? :: MoinMoin"; then
         max-requests = 200
         harakiri = 30
         die-on-term
-    "
+    "   
 
 fi
 
