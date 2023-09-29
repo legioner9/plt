@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# PATH_MONI_APP_DIR=${HOME}/MoniMoniApp # in standart replace: /usr/local to ${MONI_APP_DIR}
+# PATH_MONI_APP_DIR=${HOME}/MoniMoniApp # in standart replace: /usr/local to ${PATH_MONI_APP_DIR}
 
 echo -e "${HLIGHT}--- Chapts: ---${NORMAL}" #start files
 echo -e "${BLUE}
@@ -40,34 +40,114 @@ fi
 
 if plt_is_ques "setting? :: MoinMoin"; then
 
-    plt_vae "cd ${PATH_MONI_APP_DIR}/share/moin"
+    plt_ques_exec "cd ${PATH_MONI_APP_DIR}/share/moin"
 
     plt_ques_exec cp server/moin.wsgi .
 
     echo -e "sudo vi moin.wsgi
     После строки import sys, os вставьте следующий код:
  
-        sys.path.insert(0, '/usr/local/lib/python2.7/dist-packages/')
-        sys.path.insert(0, '/usr/local/share/moin/')
+        sys.path.insert(0, '${PATH_MONI_APP_DIR}/lib/python2.7/dist-packages/')
+        sys.path.insert(0, '${PATH_MONI_APP_DIR}/share/moin/')
 
     Сохраните и закройте файл. Эти строки указывают расположение кода MoinMoin и конфигурационных файлов вики.
 
-    sudo vi uwsgi.ini
+do that:
+
+vim uwsgi.ini
 
     Добавьте в этот файл следующие строки:
 
-        [uwsgi] uid = www-data
-        gid = www-data
-        socket = /usr/local/share/moin/moin.sock
-        chmod-socket = 660
-        logto = /var/log/uwsgi/uwsgi.log
-        chdir = /usr/local/share/moin/
-        wsgi-file = moin.wsgi
-        master
-        workers = 3
-        max-requests = 200
-        harakiri = 30
-        die-on-term
+[uwsgi] uid = st
+gid = st
+socket = ${PATH_MONI_APP_DIR}/share/moin/moin.sock
+chmod-socket = 660
+logto = /var/log/uwsgi/uwsgi.log 
+chdir = ${PATH_MONI_APP_DIR}/share/moin/
+wsgi-file = moin.wsgi
+master
+workers = 3
+max-requests = 200
+harakiri = 30
+die-on-term
+
+    Сохраните и закройте файл. Файл uwsgi.ini будет использоваться для загрузки приложения
+    MoinMoin и сервера uWSGI. Данный код определяет пользователя, сокет, конфигурационные
+    файлы и логи сервера, которые будет использовать приложение. При необходимости можно
+    отредактировать количество рабочих процессов, максимальное количество запросов и
+    продолжительность сессии.
+    "
+    plt_pause "do that?"
+
+    plt_ques_exec "sudo mkdir -p /var/log/uwsgi"
+    plt_ques_exec "sudo chown st /var/log/uwsgi"
+
+    echo -e "После этого нужно создать initctl-скрипт, предназначенный для запуска приложения MoinMoin. Этот скрипт включит MoinMoin при загрузке сервера и позволит управлять uWSGI при помощи команд:
+
+    start moin
+    stop moin
+    
+    Создайте и откройте файл moin.conf:
+
+sudo vim /etc/init.d/moin.conf
+
+        Добавьте в него код:
+
+description \"moin uwsgi service\"
+start on runlevel [2345] stop on runlevel [!2345] chdir ${PATH_MONI_APP_DIR}/share/moin
+exec ${PATH_MONI_APP_DIR}/bin/uwsgi ${PATH_MONI_APP_DIR}/share/moin/uwsgi.ini
+respawn
+
+    Сохраните и закройте файл. Строки chdir и exec должны отображать расположение установки MoinMoin, а также бинарных файлов и uwsgi.ini сервера uWSGI.
+
+        Теперь можно запустить сервер приложений:
+
+        sudo start moin
+
+        Но сначала рекомендуется отредактировать настройки вики.
+        "
+
+fi
+
+#? setting wiki
+
+if plt_is_ques "setting? :: wiki"; then
+
+    plt_ques_exec "cd ${PATH_MONI_APP_DIR}/share/moin"
+    plt_ques_exec "cp config/wikiconfig.py ."
+
+    echo -e "Откройте файл:
+
+do that:
+
+vim ${PATH_MONI_APP_DIR}/share/moin/wikiconfig.py
+
+    В нём можно отладить работу вики. Как минимум, нужно отредактировать следующие параметры:
+
+    sitename: укажите название вики-сайта.
+    page_front_page: раскомментируйте эту строку, чтобы у сайта появилась стартовая страница.
+    superuser: укажите имя администратора сайта и раскомментируйте строку.
+    Найдите все эти строки, удалите символ # и внесите свои данные, например:
+
+        sitename = u'My Wiki'
+        page_front_page = u\"FrontPage\"
+        superuser = [u\"WikiAdmin\", ]
+
+    Сохраните и закройте файл. Помните: это файл Python, потому нужно сохранить все существующие абзацные отступы.
+
+    Перед запуском приложения нужно изменить права собственности и права доступа к каталогам MoinMoin:
+
+do that:"
+
+    plt_ques_exec "sudo chown -R www-data: ${PATH_MONI_APP_DIR}/share/moin"
+    plt_ques_exec "sudo chmod -R o-rwx ${PATH_MONI_APP_DIR}/share/moin"
+
+    echo -e "   Запустите uWSGI:"
+
+    plt_ques_exec sudo start moin
+     
+    echo -e "
+    Теперь платформа MoinMoin работает; осталось установить и настроить веб-сервер Nginx.
     "
 
 fi
@@ -76,7 +156,13 @@ fi
 
 if plt_is_ques "setting? :: nginx for MoinMoin"; then
 
-    echo -e "sudo vi /etc/nginx/sites-available.d/moin
+    echo -e "
+
+do that:
+    
+    sudo vi /etc/nginx/sites-available.d/moin
+
+write that:
 
     server {
     server_name localhost_moin;
@@ -88,11 +174,15 @@ if plt_is_ques "setting? :: nginx for MoinMoin"; then
     uwsgi_modifier1 30;
     }
     }
-    
+
+do that:
+
     cd /etc/nginx/sites-enabled
     sudo ln -s ../sites-available/moin .
 
     sudo service nginx restart
+
+see in browser:
 
     переход: http://localhost_moin
     "
