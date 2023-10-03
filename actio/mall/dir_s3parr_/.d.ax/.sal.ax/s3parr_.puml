@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> s3parr_ 
+farg2e2_ -> s3parr_
+echo_deb_ -> s3parr_
+s3parr_ -> s3parr_:is_num
+s3parr_ -> s3parr_:exit_err_s3parr_
+s3parr_ -> s3parr_:exit_reg_s3parr_
+s3parr_ -> s3parr_:unset_autoargs_s3parr_
+' {wrap_fn}
+' fnn o-> s3parr_
+' {body_fn}
+@enduml

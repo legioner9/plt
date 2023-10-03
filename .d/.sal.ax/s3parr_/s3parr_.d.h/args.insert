@@ -1,0 +1,7 @@
+ARGS:
+
+CNTL:
+
+--_str string for delim
+--_del delimeter
+--_parr ptr to global arr for modify
