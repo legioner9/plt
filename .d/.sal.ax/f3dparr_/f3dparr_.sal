@@ -19,15 +19,15 @@
 echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 
 echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
 echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
 
 echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
@@ -37,6 +37,24 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
+list_strong_cntls=(file_ del_ dparr_)
+
+for item in "${list_strong_cntls[@]}"; do
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo "$(eval echo \$"$item")"
+    if [ -z "$(eval echo \$"$item")" ]; then
+        plt_info "$item is empty"
+        return 1
+    fi
+done
+
+file_=$(${_abs_path} $PPWD "file_")
+
+for item in $(f2e "${file_}"); do
+
+    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+
+done
 
 
 #?---------------------------------------

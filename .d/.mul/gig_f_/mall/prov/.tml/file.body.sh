@@ -33,6 +33,17 @@ echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
 echo "that ${FNN}.sal"
 
+#! list_strong_cntls=(?str_ ?del_ ?parr_)
+
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "$item is empty"
+#         return 1
+#     fi
+# done
+
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------

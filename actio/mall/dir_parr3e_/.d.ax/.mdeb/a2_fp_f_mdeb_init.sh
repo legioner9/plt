@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_f3dparr_/.d.ax/.mdeb/a2_fp_f_mdeb_see.sh"
+filename="${PLT_PATH}/actio/mall/dir_parr3e_/.d.ax/.mdeb/a2_fp_f_mdeb_init.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a2_fp_f_mdeb_see() {
+a2_fp_f_mdeb_init() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a2_fp_f_mdeb_see() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_f3dparr_/.d.ax/.mdeb/a2_fp_f_mdeb_see.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_parr3e_/.d.ax/.mdeb/a2_fp_f_mdeb_init.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -73,18 +73,11 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
-    # "${_ehh}" cat .store/tst.lst2
 
-    dp_arr=()
-
-    f3dparr_ --_file .store/tst.lst2 --_del : --_dparr dp_arr
-    # f3dparr_ --_file .store/tst.lst2 --_del : --_dparr
-
-    echo -e "${GREEN}\${dp_arr[@]} = ${dp_arr[*]}${NORMAL}" #print variable
-    
-    # for item_str in $(f2e .store/tst.lst2); do
-    #     echo -e "${GREEN}\$item_str = $item_str${NORMAL}" #print variable
-    # done
+    p_arr=("vsdfea" "ewv" "brer")
+    # echo -e "${GREEN}\${p_arr[@]} = ${p_arr[*]}${NORMAL}" #print variable
+    parr3e_ p_arr
+    # parr3e_
 }
 
 cd "${idir}"
