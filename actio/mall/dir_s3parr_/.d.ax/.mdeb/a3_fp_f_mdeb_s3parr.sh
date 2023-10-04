@@ -80,9 +80,10 @@ ${NORMAL}"
 
     # echo -e "${GREEN}\${p_arr[@]} = ${p_arr[*]}${NORMAL}" #print variable
 
-    for ((i = 0; i < ${#p_arr[@]}; i++)); do
-        echo "\${p_arr[$i]} = ${p_arr[$i]}"
-    done
+    # for ((i = 0; i < ${#p_arr[@]}; i++)); do
+    #     echo "\${p_arr[$i]} = ${p_arr[$i]}"
+    # done
+    parr3e_ p_arr
 
 }
 

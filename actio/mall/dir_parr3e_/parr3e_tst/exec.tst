@@ -12,8 +12,8 @@ idir=$(pwd)
 
 dir=$(prs_f -d "$filename")
 cd "$dir" || plt_exit
-. "$dir"/_flow_tst.sh &>/dev/null
-# . "$dir"/_flow_tst.sh &>res
+# . "$dir"/_flow_tst.sh &>/dev/null
+. "$dir"/_flow_tst.sh &>res
 
 # cd "$dir"/use/ || qq_exit
 

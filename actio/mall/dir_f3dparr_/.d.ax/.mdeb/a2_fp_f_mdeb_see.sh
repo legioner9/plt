@@ -75,10 +75,12 @@ ${NORMAL}"
     #{body_fn}
     # "${_ehh}" cat .store/tst.lst2
 
-    dp_arr=()
+    dp_arr=(6 7)
 
     f3dparr_ --_file .store/tst.lst2 --_del : --_dparr dp_arr
     # f3dparr_ --_file .store/tst.lst2 --_del : --_dparr
+
+    "${_ehh}" parr3e_ dp_arr
 
     echo -e "${GREEN}\${dp_arr[@]} = ${dp_arr[*]}${NORMAL}" #print variable
     

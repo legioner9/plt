@@ -16,22 +16,22 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
 #?--------------------------------------------------------
 #?---------------------------------------------
@@ -50,9 +50,23 @@ done
 
 file_=$(${_abs_path} $PPWD "file_")
 
+in_arr_=$dparr_
+
+"${_ehh}" parr3e_ in_arr_
+
 for item in $(f2e "${file_}"); do
 
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+
+    str_arr=()
+
+    s3parr_ --_del ":" --_str "$item" --_parr str_arr >/dev/null
+
+    # parr3e_ str_arr
+
+    in_arr_+=(str_arr)
+
+    "${_ehh}" parr3e_ in_arr_
 
 done
 
