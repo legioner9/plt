@@ -17,6 +17,7 @@ _plt_info="plt_info"
 #? ${_cr_sh_} ${_cr_f_} ${_cr_f_dir_insert_} ${_cr_shfn_} ${_cr_shgnr_} ${_cr_tst_dir_}
 #? ${_cr_tst_sys_} ${_cr_f_dir_insert_} ${} ${} ${} ${}
 _cr_sh_="cr_sh_"
+_cr_shf_="cr_shf_"
 _cr_f_="cr_f_"
 _cr_f_dir_insert_="cr_f_dir_insert_"
 _cr_shfn_="cr_shfn_"
@@ -41,6 +42,7 @@ _is_amount_arg="is_amount_arg"
 _puml_="puml_"
 _echo_deb_="echo_deb_"
 _ehh="ehh"
+_rand3e="rand3e"
 
 _pull_bck_push_="pull_bck_push_v2_"
 #_bd_os_="bd_communis_"

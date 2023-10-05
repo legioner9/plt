@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> cr_shf_ 
+farg2e2_ -> cr_shf_
+echo_deb_ -> cr_shf_
+cr_shf_ -> cr_shf_:is_num
+cr_shf_ -> cr_shf_:exit_err_cr_shf_
+cr_shf_ -> cr_shf_:exit_reg_cr_shf_
+cr_shf_ -> cr_shf_:unset_autoargs_cr_shf_
+' {wrap_fn}
+' fnn o-> cr_shf_
+' {body_fn}
+@enduml

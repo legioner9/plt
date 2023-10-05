@@ -1,0 +1,17 @@
+local ARGS=($@)
+if [ "${ARGS[0]}" == "-h" ]; then
+    echo -e "${BLUE} 
+    help from $filename :
+1)
+${NORMAL}" #sistem info mesage
+return 0
+fi
+NARGS=$#
+
+local verbose=0
+[[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+[[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}---$filename $* ---${NORMAL}" #started functions
+
+local idir=$(pwd)
+local rdir="$(prs_f -d $filename)"
+local gname="$(prs_f -n $filename)" # name without .ext
