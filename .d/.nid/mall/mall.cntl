@@ -1,5 +1,7 @@
 _man
 _tst
+_cr_h
+_edit_h
 _puml 
 _flw 
 _extst 
@@ -12,11 +14,3 @@ _prp
 _go 
 _sal 
 _cntl2e
-#_extst1 
-#_extst2 
-#_extst3 
-#_extst4 
-#_exdeb1 
-#_exdeb2 
-#_exdeb3 
-#_exdeb4

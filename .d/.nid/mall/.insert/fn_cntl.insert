@@ -3,6 +3,8 @@
 .            optional -verbose (not garg parsed, for echo main param function) 
 .        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 .                -h : this 
+.                _cr_h : . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh
+.                _edit_h : ${_edit_}" "${FN_SAL_DIR}/${FNN}.d.h
 .                _go : ${_edit_} ${FN_DIR}
 .                _sal : ${_edit_} ${PATH_SAL_AX_DIR}/$FNN
 .                _list : ${_edit_} ${FN_DIR}/${FNN}.list
@@ -25,7 +27,7 @@
 .            steps extst_1/ex<num>_tst
 .                _exdeb<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
 .               
-.               _cntl2e cat 
+.               _cntl2e cat ${PATH_NID_DIR}/mall/mall.cntl
 .
 .        CNTL defaut: -_echo, -_debug
 .        CNTL develop: -_develop1, ... for special development mode, NOT to product

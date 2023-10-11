@@ -48,10 +48,34 @@ if [ "_man" == "$1" ]; then
 fi
 
 if [ "-h" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}"
 
-    "${_ehh}" . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh
-    "${_ehh}" cat "${FN_SAL_DIR}/${FNN}".h
+    hf_fn="${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
+    "${_ehh}" cat "${hf_fn}"
+    echo
+    return 0
+fi
+
+if [ "_edit_h" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}"
+
+    echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/${FNN}.d.h ---${NORMAL}" #start files
+    "${_edit_}" "${FN_SAL_DIR}/${FNN}".d.h
+
+    return 0
+fi
+
+if [ "_cr_h" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh ---${NORMAL}"
+
+    hf_fn="${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
+    h_tml="${PATH_NID_DIR}/mall/.tml/h.tml"
+
+    echo -e "${HLIGHT}--- . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh ---${NORMAL}" #start files
+    echo | . "${PATH_EXL_DIR}/mall/cr_fn_h_file.sh"
+
+    "${_ehh}" cat "${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
     echo
     return 0
 fi
