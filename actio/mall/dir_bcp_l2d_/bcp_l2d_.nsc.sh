@@ -22,6 +22,7 @@ bcp_l2d_() {
     #{ctrl_args}
 
     local ARGS=($@)
+    local NARGS=${#ARGS[@]}
     local FNN=bcp_l2d_
     local local_var_wrap
     local local_var_wrap_arr=()

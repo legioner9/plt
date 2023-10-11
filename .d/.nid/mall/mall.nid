@@ -50,8 +50,9 @@ fi
 if [ "-h" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
 
-    ${_ehh} . "${FN_DIR}"/_gnr_fn_h.sh
-    ${_ehh} cat "${FN_SAL_DIR}"/"${FNN}".h
+    "${_ehh}" . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh
+    "${_ehh}" cat "${FN_SAL_DIR}/${FNN}".h
+    echo
     return 0
 fi
 
@@ -169,13 +170,21 @@ fi
 
 if [ "_mdeb_add" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
-    [ -n "$3" ] || {
-        plt_exit "_mdeb_add \$3 NOT EXIST"
+    ${_is_amount_arg} "${NARGS}" 3 3 || {
+        plt_exit "NARG_ERR: _mdeb_add \$3 NOT EXIST"
         return 1
     }
     plt_pause "create for ${FNN}? function a$2_fp_f_mdeb_$3 "
     echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh $2 $3 ---${NORMAL}" #start files
     . "${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh" "$2" "$3"
+    return 0
+fi
+
+if [ "_cntl2e" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"
+    echo -e "${BLUE}--- that all cntl from ${PATH_NID_DIR}/mall/mall.cntl ---${NORMAL}" #sistem info mesage       #start files
+    echo -e "${HLIGHT}--- f2e ${PATH_NID_DIR}/mall/mall.cntl ---${NORMAL}"              #start files
+    f2e ${PATH_NID_DIR}/mall/mall.cntl
     return 0
 fi
 

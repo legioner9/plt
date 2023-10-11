@@ -1,4 +1,5 @@
 local ARGS=($@)
+local NARGS=${#ARGS[@]}
 local FNN={name_fn_}
 
 local local_var_wrap
