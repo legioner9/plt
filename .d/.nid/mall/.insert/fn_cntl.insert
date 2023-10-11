@@ -4,6 +4,7 @@
 .        CNTL inspect : -h, _man, _tst, _extst_1 [,_extst_2 ...], _go, _deb, _mdeb, _list
 .                -h : this 
 .                _go : ${_edit_} ${FN_DIR}
+.                _sal : ${_edit_} ${PATH_SAL_AX_DIR}/$FNN
 .                _list : ${_edit_} ${FN_DIR}/${FNN}.list
 .            manual 
 .                _man : ${_edit_} ${FN_DIR}/${FNN}.man
@@ -16,6 +17,7 @@
 .                _flw : . ${FN_DIR}/${FNN}tst/_flow_tst.sh
 .            menu for deb
 .                _mdeb : . ${FN_DEBUG_DIR}/mdeb.sh
+.                _mdeb_add : . ${FN_DEBUG_DIR}/mdeb.sh
 .            tst all . exec.extst in ${FN_DIR}/${FNN}extst/extst_1
 .                _extst : . ${FN_DIR}/${FNN}extst/extst_1/start_exec.tst
 .            tst <num> (exec.extst)

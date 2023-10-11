@@ -167,12 +167,24 @@ if [ "_mdeb" == "$1" ]; then
     return 0
 fi
 
+if [ "_mdeb_add" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+    [ -n "$3" ] || {
+        plt_exit "_mdeb_add \$3 NOT EXIST"
+        return 1
+    }
+    plt_pause "create for ${FNN}? function a$2_fp_f_mdeb_$3 "
+    echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh $2 $3 ---${NORMAL}" #start files
+    . "${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh" "$2" "$3"
+    return 0
+fi
+
 if [ "_prp" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
-    
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+
     "${_ehh}" ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2"
     return 0
-fi 
+fi
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}
