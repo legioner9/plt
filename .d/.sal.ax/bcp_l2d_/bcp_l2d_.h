@@ -9,6 +9,10 @@ MAIN:
 {main}
 .
 ARGS:
+$1
+CNTLS:
+--_list file with: full_path_src_file_or_dir@name_tar_file_in_tar_dir
+--_dir tar_dir 
 {args}
 .
 RETU: 

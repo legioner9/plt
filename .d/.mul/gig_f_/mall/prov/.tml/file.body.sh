@@ -3,7 +3,7 @@
 #! amount args
 # ${_is_amount_arg} ${NARGS} min_equ max_equ
 # if [ $? -ne 0 ]; then
-#     plt_pause "${_is_amount_arg}:: be return 1 <- Fail: ${FNLOCK}"
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
 #     return 1
 # fi
 #! normalize ptr_path -> absolut path
@@ -34,16 +34,24 @@ echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
 echo "that ${FNN}.sal"
 
-#! list_strong_cntls=(?str_ ?del_ ?parr_)
-
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
 # for item in "${list_strong_cntls[@]}"; do
 #     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
 #     echo "$(eval echo \$"$item")"
 #     if [ -z "$(eval echo \$"$item")" ]; then
-#         plt_info "$item is empty"
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
 #         return 1
 #     fi
 # done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# if ([ "${dpl_:-0}" -eq 1 ] && [ "${bcp_:-0}" -ne 1 ]) || ([ "${dpl_:-0}" -ne 1 ] && [ "${bcp_:-0}" -eq 1 ]); then
+#     :
+# else
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
 
 #?--------------------------------------------------------
 #?---------------------------------------------
