@@ -150,7 +150,7 @@ fi
 
 if [ "_sal" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
-    "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN"
+    "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN".sal
     return 0
 fi
 

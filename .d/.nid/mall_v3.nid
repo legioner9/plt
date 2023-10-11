@@ -3,29 +3,27 @@
 # echo -e "2 ${GREEN}\$FNN = $FNN${NORMAL}" #print variable
 
 # HARDCOR FN_DIR
-# FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
-# FLN=$0
-# # ARGS=($@)
-# NARGS=$#
-# PPWD=$PWD
-# #? ${FNN}mdeb function - menu for debug flows
-# RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
-# # $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
+FN_DIR=${dir_fns_}/dir_${FNN} #? contane dir of function
+FLN=$0
+ARGS=($@)
+NARGS=$#
+PPWD=$PWD
+#? ${FNN}mdeb function - menu for debug flows
+RATIS_DIR=$(prs_f -d $PPWD) #? ratis is dir of generating kit function
+# $PATH_FN/dir_$FNN/ === $ORIGO_DIR === $FN_DIR
 
-# FN_DOTD_DIR=${FN_DIR}/.d.ax
-# FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
-# FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
+FN_DOTD_DIR=${FN_DIR}/.d.ax
+FN_SAL_DIR=${FN_DIR}/.d.ax/.sal.ax #? dir with fn's any contant
+FN_CIR_DIR=${FN_DIR}/.d.ax/.cir    #? dir with fn's any contant
 
-# FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
-# FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
-# FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
-# FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
-# FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
-# FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
+FN_CONT_DIR=${FN_DIR}/.d.ax/.${FNN}  #? dir with fn's any contant
+FN_FN_DIR=${FN_CONT_DIR}/_fn         #? dir with fn's subfunction
+FN_TMP_DIR=${FN_CONT_DIR}/_tmp       #? dir with fn's tmp
+FN_DEBUG_DIR=${FN_CONT_DIR}/_debug   #? dir with fn's free debug flow
+FN_CONFIG_DIR=${FN_CONT_DIR}/_config #? dir with fn's config
+FN_DEFAULT_DIR=${FN_CONT_DIR}/_default
 
-# cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
-
-echo "start plt/.d/.nid/mall/mall.nid"
+cntl_args=(-h _man _tst _puml _flw _extst _deb _mdeb _head _lst _go _sal _extst1 _extst2 _extst3 _extst4 _exdeb1 _exdeb2 _exdeb3 _exdeb4)
 
 FNLOCK="fn: ${FNN}, with_args: ${ARGS[*]} , filename: ${PATH_FN}/${FNN}.sh, line: $LINENO"
 # local FN_ERR_FILE="${FN_DIR}/_${FNN}/_out/err.res"
@@ -43,15 +41,13 @@ verbose=0
 "${_c_up}" "${FN_FN_DIR}" 1>/dev/null
 if [ "_man" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
-    "${_ehh}" "${_edit_}" "${FN_SAL_DIR}"/"$FNN".man
+    "${_edit_}" "${FN_SAL_DIR}"/"$FNN".man
     return 0
 fi
 
 if [ "-h" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
-
-    ${_ehh} . "${FN_DIR}"/_gnr_fn_h.sh
-    ${_ehh} cat "${FN_SAL_DIR}"/"${FNN}".h
+    . "${FN_SAL_DIR}"/"$FNN".h.sh
     return 0
 fi
 
@@ -71,7 +67,7 @@ if [ "_puml" == "$1" ]; then
     puml_file="${FN_DIR}/${FNN}".puml
     if [ -f "${puml_file}" ]; then
         [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
-        "${_ehh}" "${_puml_}" --_xxf "${puml_file}" -_drawing
+        "${_wrp2_}" "${_puml_}" --_xxf "${puml_file}" -_drawing
         return $?
     else
         "${_plt_exit}" "not exist file: ${puml_file} " #exit 1
@@ -138,19 +134,19 @@ fi
 
 if [ "_lst" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-    "${_ehh}" "${_edit_}" "${FN_DIR}/${FNN}".lst
+    "${_wrp2_}" "${_edit_}" --_xxf "${FN_DIR}/${FNN}".lst
     return 0
 fi
 
 if [ "_go" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
-    "${_ehh}" "${_edit_}" ${FN_DIR}
+    "${_wrp2_}" "${_edit_}" --_xxd ${FN_DIR}
     return 0
 fi
 
 if [ "_sal" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
-    "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN"
+    "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN".sal
     return 0
 fi
 
@@ -161,18 +157,11 @@ if [ "_deb" == "$1" ]; then
 fi
 
 if [ "_mdeb" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
-    echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh $2 ---${NORMAL}" #start files
-    . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
+    "${_wrp2_}" . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
     return 0
 fi
 
-if [ "_prp" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
-    
-    "${_ehh}" ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2"
-    return 0
-fi 
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}
@@ -191,20 +180,24 @@ echo_=0
 debug_=0
 verbose_=0
 develop1_=0
-
-# if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
-#     plt_exit " ${FNN} return 1: ${FNLOCK}"
-#     return 1
-# fi
-# #? g_args with cntl=value
-# g_args=($(${_garg2e2_} "${ARGS[@]}"))
-# #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-# e_args=($(${_earg2e2_} "${ARGS[@]}"))
-# [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-# for strex in $(${_garg2e2_} "${ARGS[@]}"); do
-#     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-#     eval local $strex
-# done
+# [[ 1 -eq ${verbose} ]] || {
+#     garg_ ${FNN} $@
+# } && {
+#     garg_ ${FNN} $@ 1>/dev/null
+# }
+if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+    plt_exit " ${FNN} return 1: ${FNLOCK}"
+    return 1
+fi
+#? g_args with cntl=value
+g_args=($(${_garg2e2_} "${ARGS[@]}"))
+#? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+e_args=($(${_earg2e2_} "${ARGS[@]}"))
+[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+    [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    eval local $strex
+done
 #{garg}
 #
 #? cd "$1" || {

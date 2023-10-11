@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> bcp_l2d_ 
+farg2e2_ -> bcp_l2d_
+echo_deb_ -> bcp_l2d_
+bcp_l2d_ -> bcp_l2d_:is_num
+bcp_l2d_ -> bcp_l2d_:exit_err_bcp_l2d_
+bcp_l2d_ -> bcp_l2d_:exit_reg_bcp_l2d_
+bcp_l2d_ -> bcp_l2d_:unset_autoargs_bcp_l2d_
+' {wrap_fn}
+' fnn o-> bcp_l2d_
+' {body_fn}
+@enduml

@@ -53,7 +53,14 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 - path is name -  semanicaly - exa: <name>.<ext> <-> .ext/name/
 
 ## RCM_MIDNUM
-- naming contane name
+- short before after N
+  - e : echo
+  - s : string
+  - d : directory
+  - f : file
+  - l : list
+  - parr : ptr 
+- naming contane N name 
   - ...2... to 
     - d2... file in dir pipe to ...
     - f2... sting in file pipe to ...
