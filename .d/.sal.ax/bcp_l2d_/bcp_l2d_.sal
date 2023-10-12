@@ -16,37 +16,31 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
 echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
 echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
-list_strong_cntls=(list_ dir_)
+list_strong_cntls=(list_ del_)
 
 for item in "${list_strong_cntls[@]}"; do
-    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-    # echo "$(eval echo \$"$item")"
     if [ -z "$(eval echo \$"$item")" ]; then
         plt_info "from ${FNN}() $item is empty :: be return 1"
         return 1
     fi
 done
-
-#?--------------------------------------------------------
-#?---------------------------------------------
-#?---------------------------------------
 
 if ([ "${dpl_:-0}" -eq 1 ] && [ "${bcp_:-0}" -ne 1 ]) || ([ "${dpl_:-0}" -ne 1 ] && [ "${bcp_:-0}" -eq 1 ]); then
     :
@@ -54,6 +48,71 @@ else
     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
     return 1
 fi
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+for item in $(f2e "${list_}"); do
+    p_arr=()
+    s3parr_ --_str "${item}" --_del "${del_}" --_parr p_arr 1>/dev/null
+
+    path_src="${p_arr[0]}"
+    dir_src=$(dirname "${path_src}")
+    node_src=$(basename "${path_src}")
+
+    echo -e "${GREEN}\$dir_src = $dir_src${NORMAL}"
+    echo -e "${GREEN}\$node_src = $node_src${NORMAL}"
+
+    path_tar=${p_arr[1]}.tar.gz
+    dir_tar=$(dirname "${path_tar}")
+    file_tar=$(basename "${path_tar}").tar.gz
+
+    echo -e "${GREEN}\$dir_tar = $dir_tar${NORMAL}"
+    echo -e "${GREEN}\$file_tar = $file_tar${NORMAL}"
+
+    [ -n "${path_tar}" ] || {
+        plt_info "from ${FNN}() ISEMPTY : \${path_tar} :: be return 1"
+        return 1
+    }
+
+    [ -d "${dir_tar}" ] || {
+        plt_info "from ${FNN}() :: NOTDIR : \${dir_tar}=${dir_tar} :: be return 1"
+        return 1
+    }
+
+    [ -f "${path_src}" ] || [ -d "${path_src}" ] || {
+        plt_info "from ${FNN}() NOTFILE or NOTDIR : \${path_src}=${path_src} :: be return 1"
+        return 1
+    }
+
+    if [ "${bcp_}" -eq 1 ]; then
+
+        if [ -f "${path_src}" ]; then
+
+            ehh tar -cfvz "${path_tar}" "${path_src}"
+
+        elif [ -d "${path_src}" ]; then
+
+            ehh tar -cfrvz "${path_tar}" "${path_src}"
+
+        fi
+
+    elif [ "${dpl_}" -eq 1 ]; then
+
+        if [ -f "${path_src}" ]; then
+
+            ehh tar -xfv "${path_tar}" -C "$(dirname "${dir_src}")"
+
+        elif [ -d "${path_src}" ]; then
+
+            ehh tar -xfrv "${path_tar}" -C "$(dirname "${dir_src}")"
+
+        fi
+        
+    fi
+
+done
 
 #?---------------------------------------
 #?---------------------------------------------

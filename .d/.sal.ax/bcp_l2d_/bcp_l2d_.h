@@ -5,14 +5,17 @@ DEPR:
 NAME: bcp_l2d_
 {name}
 .
-MAIN: 
+MAIN: dpl or bcp fs_nodes to dir accoding list_file 
 {main}
 .
 ARGS:
-$1
+.    $1
 CNTLS:
---_list file with: full_path_src_file_or_dir@name_tar_file_in_tar_dir
---_dir tar_dir 
+.    --_list file with: full_path_src_file_or_dir@name_tar_file_in_tar_dir
+.    --_dir tar_dir 
+.    -_dpl or -_bcp
+.       -_dpl deploy from tar to fs
+.       -_bcp bacup to tar from fs
 {args}
 .
 RETU: 
@@ -25,7 +28,7 @@ ERRO:
 -
 {erro}
 .
-VERS: 
+VERS: 0.0.1
 {vers}
 .
 TAGS: 
@@ -111,7 +114,7 @@ LEGO:
 - . ${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_bcp_l2d__mdeb <num>
 {lego}
 .
-LNGF:
+LNGF: bash
 {lngf}
 .
 RTFN: bcp_l2d_ bcp_l2d_c_ bcp_l2d_g_
