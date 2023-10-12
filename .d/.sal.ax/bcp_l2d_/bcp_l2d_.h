@@ -11,11 +11,14 @@ MAIN: dpl or bcp fs_nodes to dir accoding list_file
 ARGS:
 .    $1
 CNTLS:
+.   [ --_list && --_del ] && [ -_dpl || -_bcp ] && [ -_s || -_h ]
 .    --_list file with: full_path_src_file_or_dir@name_tar_file_in_tar_dir
-.    --_dir tar_dir 
+.    --_del delimeter in file.lst2
 .    -_dpl or -_bcp
 .       -_dpl deploy from tar to fs
 .       -_bcp bacup to tar from fs
+.       -_s soft dpl without delit src
+.       -_h hard dpl with delit src
 {args}
 .
 RETU: 

@@ -49,13 +49,6 @@ else
     return 1
 fi
 
-if ([ "${s_:-0}" -eq 1 ] && [ "${h_:-0}" -ne 1 ]) || ([ "${s_:-0}" -ne 1 ] && [ "${h_:-0}" -eq 1 ]); then
-    :
-else
-    plt_info "from ${FNN}() once s_ or h_ mast be able :: be return 1"
-    return 1
-fi
-
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
@@ -73,7 +66,7 @@ for item in $(f2e "${list_}"); do
 
     path_tar=${p_arr[1]}.tar.gz
     dir_tar=$(dirname "${path_tar}")
-    file_tar=$(basename "${path_tar}")
+    file_tar=$(basename "${path_tar}").tar.gz
 
     echo -e "${GREEN}\$dir_tar = $dir_tar${NORMAL}"
     echo -e "${GREEN}\$file_tar = $file_tar${NORMAL}"
@@ -100,30 +93,53 @@ for item in $(f2e "${list_}"); do
     # cd "${dir_tar}"
     # tar -xzvf f1.tar.gz -C "${dir_src}"
 
-    if [ -n "${bcp_}" ] && [ "${bcp_}" -eq 1 ]; then
+    if [ "${bcp_}" -eq 1 ]; then
 
-        cd "${dir_src}" || {
-            plt_info "FAIL : cd ${dir_src} :: be return 1"
-            return 1
-        }
+        if [ -f "${path_src}" ]; then
 
-        echo -e "${HLIGHT}--- tar -czvf ${node_src}._tmp_ ${node_src} ---${NORMAL}"
-        tar -czvf "${node_src}"._tmp_ "${node_src}"
+            cd "${dir_src}" || {
+                plt_info "FAIL : cd ${dir_src} :: be return 1"
+                return 1
+            }
 
-        echo -e "${HLIGHT}---  mv -vf ${node_src}._tmp_ ${path_tar} ---${NORMAL}"
-        mv -vf "${node_src}"._tmp_ "${path_tar}"
+            tar -czvf "${node_src}"._tmp_ "${node_src}"
 
-    fi
+            mv -vf "${node_src}"._tmp_ "${path_tar}"
 
-    if [ -n "${dpl_}" ] &&  [ "${dpl_}" -eq 1 ]; then
+        elif [ -d "${path_src}" ]; then
 
-        cd "${dir_tar}" || {
-            plt_info "FAIL : cd ${dir_tar} :: be return 1"
-            return 1
-        }
+            cd "${dir_src}" || {
+                plt_info "FAIL : cd ${dir_src} :: be return 1"
+                return 1
+            }
 
-        echo -e "${HLIGHT}--- tar -xzvf ${file_tar} -C ${dir_src} ---${NORMAL}"
-        tar -xzvf "${file_tar}" -C "${dir_src}"
+            tar -czvf "${node_src}"._tmp_ "${node_src}"
+
+            mv -vf "${node_src}"._tmp_ "${path_tar}"
+
+        fi
+
+    elif [ "${dpl_}" -eq 1 ]; then
+
+        if [ -f "${path_src}" ]; then
+
+            cd "${dir_tar}" || {
+                plt_info "FAIL : cd ${dir_tar} :: be return 1"
+                return 1
+            }
+
+            tar -xzvf "${file_tar}" -C "${dir_src}"
+
+        elif [ -d "${path_src}" ]; then
+
+            cd "${dir_tar}" || {
+                plt_info "FAIL : cd ${dir_tar} :: be return 1"
+                return 1
+            }
+
+            tar -xzvf "${file_tar}" -C "${dir_src}"
+
+        fi
 
     fi
 

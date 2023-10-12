@@ -73,17 +73,51 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
+    local tmp="${PLT_PATH}"/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp
     local lst2="${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.lst"
     local fs_dir="${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.fs"
 
     local arca_dir="${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.arca"
 
+    cp -rf "${tmp}"/.fs_/. "${tmp}"/.fs
     rm -frv "${arca_dir}"
     mkdir -v "${arca_dir}"
 
-    tar -cvzf -C "${fs_dir}" f1 -C "${arca_dir}" f1
+    #! flags for file
+    # cd "${fs_dir}"
+    # # touch f1
+    # : >f1
+    # tar -czvf f1._tmp_ f1
+    # mv -v f1._tmp_ "${arca_dir}"/f1.tar.gz
+    # rm -v f1
+    # echo 333 >f1
 
-    # "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_del "@" -_bcp
+    # cd "${arca_dir}"
+    # tar -xzvf f1.tar.gz -C "${fs_dir}"
+
+    #! flags for dir
+    # cd "${fs_dir}"
+    # # touch f1
+    # : >f1
+    # tar -czvf f1._tmp_ f1
+    # mv -v f1._tmp_ "${arca_dir}"/f1.tar.gz
+    # rm -v f1
+    # echo 333 >f1
+
+    # cd "${arca_dir}"
+    # tar -xzvf f1.tar.gz -C "${fs_dir}"
+
+    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_del "@" -_bcp -_s
+
+    echo "f1" > ${fs_dir}/f1
+    echo "d1" > ${fs_dir}/d1/0
+    echo "x" > ${fs_dir}/d1/x
+
+    plt_pause "see tars"
+    # rm -rf "${fs_dir}"
+    # mkdir "${fs_dir}"
+
+    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_del "@" -_dpl -_s
 
 }
 
