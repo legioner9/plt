@@ -41,6 +41,7 @@ PATH_MAIN_REPO_FN_DIR="${COMMUNIS_PATH}/Deploy_store/.qa/main_repo_fn"
 
 #? .args .canons  .config .exl .flumen_tempus .ifs .insert .lists .man .pullsh  .puml .tml  .tst  .var  .vexillum  .warg
 PATH_ARGS_DIR="${PLT_PATH}"/.d/.args
+PATH_FARGS_DIR="${PLT_PATH}"/.d/.fargs
 PATH_CANONS_DIR="${PLT_PATH}"/.d/.canons
 PATH_CONFIG_DIR="${PLT_PATH}"/.d/.config
 PATH_EXL_DIR="${PLT_PATH}"/.d/.exl

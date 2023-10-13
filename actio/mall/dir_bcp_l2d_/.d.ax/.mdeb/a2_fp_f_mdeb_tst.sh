@@ -79,45 +79,44 @@ ${NORMAL}"
 
     local arca_dir="${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.arca"
 
+    local fargs_file="${PATH_FARGS_DIR}/dpl_l2d_/_mdeb/curr_args.fargs"
+
+    rm -frv "${tmp}"/.fs
     cp -rf "${tmp}"/.fs_/. "${tmp}"/.fs
     rm -frv "${arca_dir}"
     mkdir -v "${arca_dir}"
 
-    #! flags for file
-    # cd "${fs_dir}"
-    # # touch f1
-    # : >f1
-    # tar -czvf f1._tmp_ f1
-    # mv -v f1._tmp_ "${arca_dir}"/f1.tar.gz
-    # rm -v f1
-    # echo 333 >f1
+    plt_pause " before -_bcp "
 
-    # cd "${arca_dir}"
-    # tar -xzvf f1.tar.gz -C "${fs_dir}"
+    echo "--_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_bcp -_soft" > "${fargs_file}"
 
-    #! flags for dir
-    # cd "${fs_dir}"
-    # # touch f1
-    # : >f1
-    # tar -czvf f1._tmp_ f1
-    # mv -v f1._tmp_ "${arca_dir}"/f1.tar.gz
-    # rm -v f1
-    # echo 333 >f1
+    echo -e "${HLIGHT}--- ${_bcp_l2d_} $(cat ${fargs_file}) ---${NORMAL}"
 
-    # cd "${arca_dir}"
-    # tar -xzvf f1.tar.gz -C "${fs_dir}"
+    "${_bcp_l2d_}" "$(cat "${fargs_file}")"
 
-    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_del "@" -_bcp -_s
+    echo "f1" >${fs_dir}/f1
+    echo "d1" >${fs_dir}/d1/0
+    echo "x" >${fs_dir}/d1/x
 
-    echo "f1" > ${fs_dir}/f1
-    echo "d1" > ${fs_dir}/d1/0
-    echo "x" > ${fs_dir}/d1/x
+    plt_pause " before -_dpl "
 
-    plt_pause "see tars"
-    # rm -rf "${fs_dir}"
-    # mkdir "${fs_dir}"
+    echo -e "${HLIGHT}--- ${_bcp_l2d_} --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_dpl -_soft ---${NORMAL}"
+    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_dir_tar "${arca_dir}" --_dlm "@" -_dpl -_soft
 
-    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_del "@" -_dpl -_s
+    echo "f1x" >${fs_dir}/f1
+    echo "d1x" >${fs_dir}/d1/0
+    echo "xx" >${fs_dir}/d1/x
+
+    "${_ehh}" cat ${fs_dir}/f1
+    "${_ehh}" cat ${fs_dir}/d1/0
+
+    plt_pause " before -_rst "
+
+    echo -e "${HLIGHT}--- ${_bcp_l2d_} --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_rst -_soft ---${NORMAL}"
+    "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_dir_tar "${arca_dir}" --_dlm "@" -_rst -_soft
+
+    "${_ehh}" cat ${fs_dir}/f1
+    "${_ehh}" cat ${fs_dir}/d1/0
 
 }
 

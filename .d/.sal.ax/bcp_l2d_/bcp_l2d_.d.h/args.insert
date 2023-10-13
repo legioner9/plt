@@ -1,11 +1,16 @@
 ARGS:
-.    \$1
+.    
 CNTLS:
-.   [ --_list && --_del ] && [ -_dpl || -_bcp ] && [ -_s || -_h ]
+.    [ --_list && --_dlm && --_dir_tar ] && [ -_dpl || -_bcp || -_rst ]
 .    --_list file with: full_path_src_file_or_dir@name_tar_file_in_tar_dir
-.    --_del delimeter in file.lst2
-.    -_dpl or -_bcp
+.    --_dlm delimeter in file.lst2
+.    --_dir_tar full_path to dir with tar
+.    -_dpl or -_bcp or --_rst
 .       -_dpl deploy from tar to fs
 .       -_bcp bacup to tar from fs
-.       -_s soft dpl without delit src
-.       -_h hard dpl with delit src
+.       -_rst restore: tar -x in full_path_src src_file_or_dir.bcp.tar.gz instead
+.    -_soft or -_hard
+.      -_dpl -_soft soft: not remove src_node before dpl
+.      -_dpl -_hard hard: remove src_node before dpl
+.      -_rst -_soft soft: not remove src_node before rst
+.      -_rst -_hard hard: remove src_node before rst
