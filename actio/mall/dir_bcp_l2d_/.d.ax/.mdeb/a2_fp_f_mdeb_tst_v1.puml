@@ -1,0 +1,6 @@
+@startuml(id=1)
+List : int size()
+List : void clear()
+List : int size()
+List : void clear()
+@enduml

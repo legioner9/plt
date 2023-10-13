@@ -86,22 +86,29 @@ ${NORMAL}"
     rm -frv "${arca_dir}"
     mkdir -v "${arca_dir}"
 
-    plt_pause " before -_bcp "
+    plt_pause " before -_bcp f1->null d1/0->null"
 
-    echo "--_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_bcp -_soft" > "${fargs_file}"
+    echo -e "${HLIGHT}--- echo --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_bcp -_soft > ${fargs_file} ---${NORMAL}"
+    echo "--_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_bcp -_soft" >"${fargs_file}"
 
-    echo -e "${HLIGHT}--- ${_bcp_l2d_} $(cat ${fargs_file}) ---${NORMAL}"
+    echo -e "${HLIGHT}--- ${_bcp_l2d_} $(cat "${fargs_file}") ---${NORMAL}"
 
     "${_bcp_l2d_}" "$(cat "${fargs_file}")"
 
-    echo "f1" >${fs_dir}/f1
-    echo "d1" >${fs_dir}/d1/0
-    echo "x" >${fs_dir}/d1/x
+    echo "1f" >${fs_dir}/f1
+    echo "1d" >${fs_dir}/d1/0
+    echo "1x" >${fs_dir}/d1/x
 
-    plt_pause " before -_dpl "
+    "${_ehh}" cat ${fs_dir}/f1
+    "${_ehh}" cat ${fs_dir}/d1/x
+    "${_ehh}" cat ${fs_dir}/d1/0
+
+    plt_pause "1) before -_dpl, f1->1f d1/0->1d 2) after that mast f1->null d1/0->null BUT in f1.bcp.tar.gz->1f d1.bcp.tar.gz->1d  "
 
     echo -e "${HLIGHT}--- ${_bcp_l2d_} --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_dpl -_soft ---${NORMAL}"
     "${_bcp_l2d_}" --_list "${lst2}/bcp_dpl.lst2" --_dir_tar "${arca_dir}" --_dlm "@" -_dpl -_soft
+
+    plt_pause " before f1x >f1, d1x >/d1/0, xx >/d1/x "
 
     echo "f1x" >${fs_dir}/f1
     echo "d1x" >${fs_dir}/d1/0
