@@ -9,3 +9,4 @@ sudo epm ei -y
 
 sudo epm play yandex-browser -y
 sudo epm play yandex-disk -y
+
