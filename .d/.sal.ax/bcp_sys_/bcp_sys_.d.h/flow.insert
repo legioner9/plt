@@ -1,0 +1,2 @@
+FLOW:
+ "${_bcp_l2d_}" --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ (-_bcp|-_dpl|-_rst) -_soft

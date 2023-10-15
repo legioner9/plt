@@ -46,9 +46,10 @@ echo "that ${FNN}.sal"
 # done
 
 #! once dpl_ or bcp_ mast be able (0 1)
-# if ([ "${dpl_:-0}" -eq 1 ] && [ "${bcp_:-0}" -ne 1 ]) || ([ "${dpl_:-0}" -ne 1 ] && [ "${bcp_:-0}" -eq 1 ]); then
-#     :
-# else
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
 #     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
 #     return 1
 # fi

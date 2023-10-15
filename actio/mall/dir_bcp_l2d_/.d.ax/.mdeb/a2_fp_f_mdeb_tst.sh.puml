@@ -1,11 +1,13 @@
 @startmindmap
 *:FYLESYSTEM:
+
 .fs/f1(null)
 .fs/d1/0(null)
 .fs/d1/x(null)
 
 .arca/EMPTY;
 **:DO:
+
 bcp_l2d_()
 --_dir_tar fpath/.arca
 --_dlm @
@@ -30,6 +32,7 @@ bcp_l2d_()
 .fs/d1/0(null->1d) - be diff
 .fs/d1/x(null->1x) - be diff;
 *****:DO:
+
 bcp_l2d_()
 --_dir_tar fpath/.arca
 --_dlm @

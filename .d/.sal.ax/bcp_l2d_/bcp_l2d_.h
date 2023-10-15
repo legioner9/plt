@@ -19,6 +19,11 @@ CNTLS:
 .       -_dpl deploy from tar to fs
 .       -_bcp bacup to tar from fs
 .       -_rst restore: tar -x in full_path_src src_file_or_dir.bcp.tar.gz instead
+.    -_soft or -_hard
+.      -_dpl -_soft soft: not remove src_node before dpl
+.      -_dpl -_hard hard: remove src_node before dpl
+.      -_rst -_soft soft: not remove src_node before rst
+.      -_rst -_hard hard: remove src_node before rst
 {args}
 .
 RETU: 
@@ -122,4 +127,21 @@ LNGF: bash
 .
 RTFN: bcp_l2d_ bcp_l2d_c_ bcp_l2d_g_
 {rtfn}
+.
+EXAM:
+.cat ${lst2}
+.   #${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.fs/...@${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.arca/...
+.   ${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.fs/d1@d1
+.   ${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.fs/f1@f1
+local lst2=${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.lst
+local fs_dir=${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.fs
+local arca_dir=${PLT_PATH}/actio/mall/dir_bcp_l2d_/.d.ax/.mdeb/.tmp/.arca
+local fargs_file=${PATH_FARGS_DIR}/dpl_l2d_/_mdeb/curr_args.fargs
+echo "--_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ -_bcp -_soft" >"${fargs_file}"
+echo -e "${HLIGHT}--- ${_bcp_l2d_} $(cat "${fargs_file}") ---${NORMAL}"
+"${_bcp_l2d_}" "$(cat "${fargs_file}")"
+{exam}
+.
+MANF:
+{manf}
 .

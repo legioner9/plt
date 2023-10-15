@@ -10,6 +10,7 @@ _fp_f_="fp_f_"
 _obs_quis_="obs_quis_v2_"
 
 #? ${_plt_pause} ${_plt_exit} ${_plt_info} ${}
+_plt_info="plt_info"
 _plt_pause="plt_pause"
 _plt_exit="plt_exit"
 _plt_info="plt_info"

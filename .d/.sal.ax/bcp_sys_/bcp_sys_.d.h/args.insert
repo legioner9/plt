@@ -1,0 +1,8 @@
+ARGS:
+    \$1 
+
+CNTLS:
+.    -_dpl or -_bcp or --_rst exactly as "${_bcp_l2d_}"
+.       -_dpl deploy from tar to fs
+.       -_bcp bacup to tar from fs
+.       -_rst restore: tar -x in full_path_src src_file_or_dir.bcp.tar.gz instead
