@@ -8,7 +8,7 @@ PPWW=$(pwd)
 RESET_PLT_COMMUNIS_TO_DEFAULT_=""
 read -p "START RESET_PLT_COMMUNIS_TO_DEFAULT_ block? =================== y/n"
 read RESET_PLT_COMMUNIS_TO_DEFAULT_
-if [[ "${RESET_PLT_COMMUNIS_TO_DEFAULT_}" == "y" ]];then
+if [[ "${RESET_PLT_COMMUNIS_TO_DEFAULT_}" == "y" ]]; then
 
 	rm -f "$HOME"/.fonsh_path
 	rm -f "$HOME"/.plt_path
@@ -31,7 +31,7 @@ fi
 SSH_REMOVE_=""
 read -p "START SSH_REMOVE_ block? =================== y/n"
 read SSH_REMOVE_
-if [[ "${SSH_REMOVE_}" == "y" ]];then
+if [[ "${SSH_REMOVE_}" == "y" ]]; then
 
 	if [ -f "$HOME/.ssh/id_rsa" ]; then
 
@@ -42,7 +42,7 @@ if [[ "${SSH_REMOVE_}" == "y" ]];then
 
 		if [ "${_delit}" == "y" ]; then
 			cp -rf ${HOME}/.ssh ${HOME}/.ssh~
-		    rm -rf ${HOME}/.ssh
+			rm -rf ${HOME}/.ssh
 		fi
 
 	fi
@@ -50,9 +50,9 @@ if [[ "${SSH_REMOVE_}" == "y" ]];then
 fi
 
 SSH_CREATE_=""
-read -p "START SSH_CREATE_ block? ========================== y/n" 
+read -p "START SSH_CREATE_ block? ========================== y/n"
 read SSH_CREATE_
-if [[ "${SSH_CREATE_}" == "y" ]];then
+if [[ "${SSH_CREATE_}" == "y" ]]; then
 
 	if ! [ -f "$HOME/.ssh/id_rsa" ]; then
 
@@ -61,20 +61,20 @@ if [[ "${SSH_CREATE_}" == "y" ]];then
 		read y2
 
 		if [ ${y2} == "y" ]; then
-		    cp -rfv ${PPWW}/read.zip ${HOME}
-		    cp -rf ${HOME}/.ssh ${HOME}/.ssh~
-		    rm -rf ${HOME}/.ssh
-		    cp ${PPWW}/read.zip ${HOME}/
-		    unzip ${HOME}/read.zip -d ${HOME}
-		    file ${HOME}/.ssh
+			cp -rfv ${PPWW}/read.zip ${HOME}
+			cp -rf ${HOME}/.ssh ${HOME}/.ssh~
+			rm -rf ${HOME}/.ssh
+			cp ${PPWW}/read.zip ${HOME}/
+			unzip ${HOME}/read.zip -d ${HOME}
+			file ${HOME}/.ssh
 			continue
-#		else
-#			echo "continue with create keys from ssh generate (y/n)"
-#			y3=""
-#			read y3
-#			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
-		    # return 0 #! deb
-#		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
+			#		else
+			#			echo "continue with create keys from ssh generate (y/n)"
+			#			y3=""
+			#			read y3
+			#			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
+			# return 0 #! deb
+			#		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
 		fi
 
 		eval "$(ssh-agent -s)"
@@ -86,29 +86,39 @@ fi
 
 #! hardcor path
 PLT_COGOS_=""
-read -p "START PLT_COGOS_ ? ========================== y/n" 
+read -p "START PLT_COGOS_ ? ========================== y/n"
 read PLT_COGOS_
-if [[ "${PLT_COGOS_}" == "y" ]];then
+if [[ "${PLT_COGOS_}" == "y" ]]; then
 
-	echo "$HOME"/REPOBARE/_repo/fonsh >"$HOME"/.fonsh_path
-	echo "$HOME"/REPOBARE/_repo/plt >"$HOME"/.plt_path
-	echo "$HOME"/REPOBARE/_repo >"$HOME"/.repo_path
+	# echo "$HOME"/REPOBARE/_repo/fonsh >"$HOME"/.fonsh_path
+	# echo "$HOME"/REPOBARE/_repo/plt >"$HOME"/.plt_path
+	# echo "$HOME"/REPOBARE/_repo >"$HOME"/.repo_path
+
+	path_tar_dir="${HOME}/REPOBARE/_repo/plt/.d/.repo/bcp_sys_"
+	arr_tar_file=(repo_path plt_path fonsh_path)
+
+	for item_arr in "${arr_tar_file[@]}"; do
+
+		echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/${item_arr} -C $HOME ---${NORMAL}"
+		tar -xzvf "${path_tar_dir}"/"${item_arr}" -C "$HOME"
+
+	done
 
 	echo "altlinux" >"$HOME"/.plt_cogos
 
 	if [ -f "$HOME/.plt_cogos" ]; then
 		PLT_COGOS=$(cat "$HOME/.plt_cogos")
 		if [ -n "$PLT_COGOS" ]; then
-		    # echo "PLT_COGOS may be strong: fedora, altlinux"
-		    if [ "$PLT_COGOS" != "fedora" ] && [ "$PLT_COGOS" != "altlinux" ];then
-		        read -p "PLT_COGOS NOT = fedora or altlinux: Enter to exit or ^C to interrapt"
-		        exit 1
-		    fi
+			# echo "PLT_COGOS may be strong: fedora, altlinux"
+			if [ "$PLT_COGOS" != "fedora" ] && [ "$PLT_COGOS" != "altlinux" ]; then
+				read -p "PLT_COGOS NOT = fedora or altlinux: Enter to exit or ^C to interrapt"
+				exit 1
+			fi
 
-		    echo "PLT_COGOS=$PLT_COGOS"
+			echo "PLT_COGOS=$PLT_COGOS"
 		else
-		    read -p "PLT_COGOS is empty: Enter to exit or ^C to interrapt"
-		    exit 1
+			read -p "PLT_COGOS is empty: Enter to exit or ^C to interrapt"
+			exit 1
 		fi
 	else
 		read -p "$HOME/.PLT_COGOS not exist: Enter to exit or ^C to interrapt"
@@ -131,16 +141,16 @@ if [[ "${PLT_COGOS_}" == "y" ]];then
 
 		if [ "$github_key" == 'y' ]; then
 
-		    sudo dnf install gh -y
-		    echo legioner9
-		    echo 124578a124578aA
-		    gh auth login
+			sudo dnf install gh -y
+			echo legioner9
+			echo 124578a124578aA
+			gh auth login
 		fi
 
 	fi
 
 	if [ "$PLT_COGOS" == "altlinux" ]; then
-		if [ -f ${HOME}/.vscode-oss ];then
+		if [ -f ${HOME}/.vscode-oss ]; then
 			rm ${HOME}/.vscode-oss
 		fi
 		. "$PPWW"/_upd_all_alt.sh
@@ -158,32 +168,13 @@ if [[ "${PLT_COGOS_}" == "y" ]];then
 fi
 
 GIT_PULL_=""
-read -p "START GIT_PULL_ ? ========================== y/n" 
+read -p "START GIT_PULL_ ? ========================== y/n"
 read GIT_PULL_
-if [[ "${GIT_PULL_}" == "y" ]];then
-
-	# if [ -d "$HOME"/Bare_communis ] || [ -d "$HOME"/start ]; then
-
-	# 	echo "$HOME/Bare_communis or $HOME/start exist continue with delit and clone (y/n)?"
-	# 	del_clone_key="n"
-	# 	read del_clone_key
-
-	# 	if [ "$del_clone_key" == 'y' ]; then
-	# 	    rm -rf "$HOME"/start
-	# 	    rm -rf "$HOME"/Bare_communis
-	# 	else
-	# 	    read -p "$HOME/Bare_communis or $HOME/start exist: Enter to exit or ^C to interrapt"
-	# 		exit 1 
-	# 	fi
-	# fi
-
-	# mkdir "$HOME"/Bare_communis
-	# cd "$HOME"/Bare_communis || read -p "$HOME/Bare_communis not EXIST: ^C for interrapt"
-	# git init --bare
+if [[ "${GIT_PULL_}" == "y" ]]; then
 
 	mkdir -p "$HOME"/REPOBARE/_repo
 
-	cd "$HOME"/REPOBARE/_repo || { 
+	cd "$HOME"/REPOBARE/_repo || {
 		read -p "$HOME/REPOBARE/_repo not EXIST: return 1"
 		return 1
 	}
@@ -212,73 +203,82 @@ fi
 # copy before .bash
 
 COPY_DOTFILES_=""
-read -p "START COPY_DOTFILES_ ? ========================== y/n" 
+read -p "START COPY_DOTFILES_ ? ========================== y/n"
 read COPY_DOTFILES_
-if [[ "${COPY_DOTFILES_}" == "y" ]];then
-	__path_comm="/home/st/REPOBARE/_repo/communis"
+if [[ "${COPY_DOTFILES_}" == "y" ]]; then
+	# __path_comm="/home/st/REPOBARE/_repo/communis"
 
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
-	touch "$HOME"/.bashrc~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
-	touch "$HOME"/.bios~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
-	touch "$HOME"/.re_init_flash~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
-	touch "$HOME"/.gitconfig~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
-	touch "$HOME"/.gitrepo~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
-	touch "$HOME"/.gituid~
-	cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
-	touch "$HOME"/.fonsh~
-	echo "fed_$((1 + "$RANDOM" % 1000))" >"$HOME"/.plt_name
-	touch "$HOME"/.plt_name~
+	path_tar_dir="${HOME}/REPOBARE/_repo/plt/.d/.repo/bcp_sys_"
+
+	# tar -xzvf "${file_tar}" -C "${dir_src}"
+	arr_tar_file=(bashrc gitconfig)
+
+	for item_arr in "${arr_tar_file[@]}"; do
+
+		echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/${item_arr} -C $HOME ---${NORMAL}"
+		tar -xzvf "${path_tar_dir}"/"${item_arr}" -C "$HOME"
+
+	done
+
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bashrc "$HOME"/
+	# touch "$HOME"/.bashrc~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.bios "$HOME"/
+	# touch "$HOME"/.bios~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/dot_home_files/own_plt/.re_init_flash "$HOME"/
+	# touch "$HOME"/.re_init_flash~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitconfig "$HOME"/
+	# touch "$HOME"/.gitconfig~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gitrepo "$HOME"/
+	# touch "$HOME"/.gitrepo~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.gituid "$HOME"/
+	# touch "$HOME"/.gituid~
+	# cp -fu ${__path_comm}/Deploy_store/plt_bd/main_store/src_bd_communis/.fonsh "$HOME"/
+	# touch "$HOME"/.fonsh~
+	# echo "fed_$((1 + "$RANDOM" % 1000))" >"$HOME"/.plt_name
+	# touch "$HOME"/.plt_name~
 
 fi
 BIOS_=""
-read -p "START BIOS_ block ? ========================== y/n" 
+read -p "START BIOS_ block ? ========================== y/n"
 read BIOS_
-if [[ "${BIOS_}" == "y" ]];then
+if [[ "${BIOS_}" == "y" ]]; then
+
 	#? . "$HOME"/.bios
 	#? use .bachrc <- ${PLT_PATH}/.config/.env allready exist
+
 	if ! . "$HOME"/.bashrc; then
-		read -p "fail: . $HOME/.bashrc , return 1" 
-		return 1   
+		read -p "fail: . $HOME/.bashrc , return 1"
+		return 1
 	fi
 
-	#! mm_dogit_ carp plt?
-# 	read -p "mm_dogit_ carp plt? do it or ^C"
-#
-# 	if [ "$PLT_COGOS" == "fedora" ]; then
-# 		dnf_
-# 	fi
-# 	if [ "$PLT_COGOS" == "altlinux" ]; then
-# 		if [ -f ${HOME}/.vscode-oss ];then
-# 			rm ${HOME}/.vscode-oss
-# 		fi
-# 		apt_alt_ 1
-# 	fi
+	if [ -f ${HOME}/.vscode-oss ]; then
+		rm ${HOME}/.vscode-oss
+	fi
 
-fi
-
-BD_COMMUNIS_BCP_=""
-read -p "BD_COMMUNIS_BCP_ block ? ========================== y/n" 
-read BD_COMMUNIS_BCP_
-if [[ "${BD_COMMUNIS_BCP_}" == "y" ]];then
-
-	bd_communis_ -i
-	bd_communis_ -b
-
-	pull_bck_push_ -o
-
-		if [ -f ${HOME}/.vscode-oss ];then
-			rm ${HOME}/.vscode-oss
-		fi
+	bcp_sys_ -_dpl
 
 	apt_alt_ 1
-#	apt_alt_ 2
-
-	mm_dogit_
 
 fi
+
+# BD_COMMUNIS_BCP_=""
+# read -p "BD_COMMUNIS_BCP_ block ? ========================== y/n"
+# read BD_COMMUNIS_BCP_
+# if [[ "${BD_COMMUNIS_BCP_}" == "y" ]]; then
+
+# 	bd_communis_ -i
+# 	bd_communis_ -b
+
+# 	pull_bck_push_ -o
+
+# 	if [ -f ${HOME}/.vscode-oss ]; then
+# 		rm ${HOME}/.vscode-oss
+# 	fi
+
+# 	apt_alt_ 1
+# 	#	apt_alt_ 2
+
+# 	mm_dogit_
+
+# fi
 unset filename
