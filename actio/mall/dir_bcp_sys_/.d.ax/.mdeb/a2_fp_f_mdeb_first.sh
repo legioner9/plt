@@ -74,7 +74,7 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    
+    "${_bcp_sys_}" -_bcp
 }
 
 cd "${idir}"

@@ -45,6 +45,15 @@ echo "that ${FNN}.sal"
 #     fi
 # done
 
+list2="${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2"
+dirtar="${PLT_PATH}/.d/.repo/bcp_sys_"
+
+echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}"
+if [ "${ARGS0}" == "_edit_lst2" ]; then
+    "${_edit_}" "${list2}"
+    return 0
+fi
+
 #! once dpl_ or bcp_ mast be able (0 1)
 sum_1=$((${dpl_:-0} + ${bcp_:-0} + ${rst_:-0}))
 echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
@@ -61,41 +70,20 @@ fi
 #  ${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2
 #  ${PLT_PATH}/.d/.repo/bcp_sys_
 
-# if 
-
-list2="${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2/bcp_dpl.lst2"
-dirtar="${PLT_PATH}/.d/.repo/bcp_sys_"
-
 if [ ${bcp_:-0} -eq 1 ]; then
 
-    "${_bcp_l2d_}" \
-        --_list ${list2} \
-        --_dir_tar ${dirtar} \
-        --_dlm @ \
-        -_bcp \
-        -_soft
+    "${_bcp_l2d_}" --_list "${list2}" --_dir_tar "${dirtar}" --_dlm @ -_bcp -_soft
 
 fi
 
 if [ ${dpl_:-0} -eq 1 ]; then
 
-    "${_bcp_l2d_}" \
-        --_list ${list2} \
-        --_dir_tar ${dirtar} \
-        --_dlm @ \
-        -_dpl \
-        -_soft
-
+    "${_bcp_l2d_}" --_list "${list2}" --_dir_tar "${dirtar}" --_dlm @ -_dpl -_soft
 fi
 
 if [ ${rst_:-0} -eq 1 ]; then
 
-    "${_bcp_l2d_}" \
-        --_list ${list2} \
-        --_dir_tar ${dirtar} \
-        --_dlm @ \
-        -_rst \
-        -_soft
+    "${_bcp_l2d_}" --_list "${list2}" --_dir_tar "${dirtar}" --_dlm @ -_rst -_soft
 
 fi
 #?---------------------------------------

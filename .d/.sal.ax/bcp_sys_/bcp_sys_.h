@@ -11,9 +11,11 @@ MAIN: wrap dpl_l2d_
 ARGS:
 $1 
 CNTLS:
-.    -_dpl or -_bcp 
-.       -_dpl deploy from tar to fs 
+.    _edit_lst2 : edit ${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2/bcp_dpl.lst2
+.    -_dpl or -_bcp or --_rst exactly as "${_bcp_l2d_}"
+.       -_dpl deploy from tar to fs
 .       -_bcp bacup to tar from fs
+.       -_rst restore: tar -x in full_path_src src_file_or_dir.bcp.tar.gz instead
 {args}
 .
 RETU: 
@@ -102,6 +104,7 @@ GRAD: mall
 {grad}
 .
 FLOW:
+"${_bcp_l2d_}" --_list ${lst2}/bcp_dpl.lst2 --_dir_tar ${arca_dir} --_dlm @ (-_bcp|-_dpl|-_rst) -_soft
 {flow}
 .
 # ln from ${PLT_PATH}/.d/.anc.ax/ifs_fn.d.man/name_fn.d.h/lego.insert
@@ -119,6 +122,8 @@ RTFN: bcp_sys_ bcp_sys_c_ bcp_sys_g_
 {rtfn}
 .
 EXAM:
+"${_bcp_sys_}" _edit_lst2
+"${_bcp_sys_}" (-_bcp|-_dpl|-_rst)
 {exam}
 .
 MANF:

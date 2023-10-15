@@ -62,9 +62,21 @@ fi
 #?---------------------------------------------
 #?---------------------------------------
 
+if [ "${bcp_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? BACKUP to ${dir_tar_} list: ${list_} dlm: ${dlm_} -_soft"
+fi
+
+if [ "${dpl_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? DEPLOY from ${dir_tar_} list: ${list_} dlm: ${dlm_} -_soft"
+fi
+
+if [ "${rst_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? RESTORE accoding list: ${list_} dlm: ${dlm_} -_soft"
+fi
+
 for item in $(f2e "${list_}"); do
 
-    echo -e "${GREEN}\$item = $item${NORMAL}"
+    echo -e "${BLUE}\$item = $item${NORMAL}"
     p_arr=()
     s3parr_ --_str "${item}" --_del "${dlm_}" --_parr p_arr 1>/dev/null
 

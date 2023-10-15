@@ -2,6 +2,7 @@ ARGS:
     \$1 
 
 CNTLS:
+.    _edit_lst2 : edit ${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2/bcp_dpl.lst2
 .    -_dpl or -_bcp or --_rst exactly as "${_bcp_l2d_}"
 .       -_dpl deploy from tar to fs
 .       -_bcp bacup to tar from fs

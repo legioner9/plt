@@ -1,1 +1,4 @@
 EXAM:
+
+"${_bcp_sys_}" _edit_lst2
+"${_bcp_sys_}" (-_bcp|-_dpl|-_rst)
