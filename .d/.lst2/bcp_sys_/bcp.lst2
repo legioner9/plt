@@ -1,6 +1,13 @@
 ${HOME}/.bashrc@bashrc
 ${HOME}/.bash_profile@bash_profile
 
+${PLT_PATH}/.d/.install/plt.install@plt.install
+${FONSH_PATH}/.d/.install/fonsh.install@fonsh.install
+
+${HOME}/.pltrc@pltrc
+${HOME}/.fonshrc@fonshrc
+
+
 ${HOME}/.gitconfig@gitconfig
 
 ${HOME}/.vimrc@vimrc

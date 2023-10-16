@@ -1,0 +1,69 @@
+#!/bin/bash
+
+#. "${HOME}/.bashrc"
+fntmp_654fe0b9ed() {
+    local filename=${PLT_PATH}/.d/.read/plt.init
+
+    local ARGS=($@)
+    if [ "${ARGS[0]}" == "-h" ]; then
+        echo -e "${BLUE} 
+help from $filename :
+1)
+${NORMAL}" #sistem info mesage
+        return 0
+    fi
+    NARGS=$#
+    local verbose=0
+    [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+    [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}---$filename $* ---${NORMAL}" #started functions
+    local idir=$(pwd)
+    local rdir="$(prs_f -d $filename)"
+    local gname="$(prs_f -n $filename)" # name without .ext
+    #{header}
+
+    #----------------------------------------------------------------------
+    #-------------------------------------
+    #-------------------------------
+    PPWW=$(pwd)
+    if [ -f "${PPWW}/.sh/upd_all_alt.sh" ]; then
+        . "${PPWW}/.sh/upd_all_alt.sh"
+    fi
+
+    read -p "You apdate your Alt after first install system? ^C if NOT"
+    read -p "uncomment : WHEEL_USERS ALL=(ALL) ALL: Enter to continue or ^C to interrapt exec:0)if need sudo ^C  1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"
+
+    if [ -f "${PPWW}/.sh/reset_plt_fonsh.sh" ]; then
+        . "${PPWW}/.sh/reset_plt_fonsh.sh"
+    fi
+
+    if [ -f "${PPWW}"/git.init ]; then
+        . "${PPWW}"/.sh/git.init
+    fi
+
+    read -p "Press enter to continue when prepear you Alt: add ssh to github.com or ^C for interrapt"
+
+    if [ -f "${PPWW}"/.sh/git.clone ]; then
+        . "${PPWW}"/.sh/git.clone
+    fi
+
+    if [ -f "${PPWW}"/.sh/first_copy_dotfiles.sh ]; then
+        . "${PPWW}"/.sh/first_copy_dotfiles.sh
+    fi
+
+    if [ -f "${PPWW}"/.sh/first_start_bash.sh ]; then
+        . "${PPWW}"/.sh/first_start_bash.sh
+    fi
+
+    #{body}
+    #-------------------------------
+    #-------------------------------------
+    #----------------------------------------------------------------------
+
+    cd "$idir"
+
+    unset filename
+}
+
+fntmp_654fe0b9ed "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8"
+
+unset fntmp_654fe0b9ed
