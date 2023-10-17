@@ -1,25 +1,25 @@
 #!/bin/bash
 
-SSH_REMOVE_=""
-read -p "START SSH_REMOVE_ block? =================== y/n"
-read SSH_REMOVE_
-if [[ "${SSH_REMOVE_}" == "y" ]]; then
+# SSH_REMOVE_=""
+# read -p "START SSH_REMOVE_ block? =================== y/n"
+# read SSH_REMOVE_
+# if [[ "${SSH_REMOVE_}" == "y" ]]; then
 
-    if [ -f "$HOME/.ssh/id_rsa" ]; then
+#     if [ -f "$HOME/.ssh/id_rsa" ]; then
 
-        echo "$HOME/.ssh/ EXIST: that not first start that file"
-        echo "continue with delite keys (y/n)?"
-        _delit=""
-        read _delit
+#         echo "$HOME/.ssh/ EXIST: that not first start that file"
+#         echo "continue with delite keys (y/n)?"
+#         _delit=""
+#         read _delit
 
-        if [ "${_delit}" == "y" ]; then
-            cp -rf ${HOME}/.ssh ${HOME}/.ssh~
-            rm -rf ${HOME}/.ssh
-        fi
+#         if [ "${_delit}" == "y" ]; then
+#             cp -rf ${HOME}/.ssh ${HOME}/.ssh~
+#             rm -rf ${HOME}/.ssh
+#         fi
 
-    fi
+#     fi
 
-fi
+# fi
 
 SSH_CREATE_=""
 read -p "START SSH_CREATE_ block? ========================== y/n"
@@ -33,12 +33,12 @@ if [[ "${SSH_CREATE_}" == "y" ]]; then
         read y2
 
         if [ ${y2} == "y" ]; then
-            cp -rfv ${PPWW}/.zip/read.zip ${HOME}
+            cp -rfv ${PPWW_654fe0b9ed}/.zip/read.zip ${HOME}
             cp -rf ${HOME}/.ssh ${HOME}/.ssh~
             rm -rf ${HOME}/.ssh
             unzip ${HOME}/read.zip -d ${HOME}
             file ${HOME}/.ssh
-            continue
+            # continue
             #		else
             #			echo "continue with create keys from ssh generate (y/n)"
             #			y3=""

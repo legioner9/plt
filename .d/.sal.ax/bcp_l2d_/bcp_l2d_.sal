@@ -74,6 +74,8 @@ if [ "${rst_:-0}" -eq 1 ]; then
     "${_plt_pause}" "DO? RESTORE accoding list: ${list_} dlm: ${dlm_} -_soft"
 fi
 
+is_fn="${FNN}()[ file://${list_} ] [ file://${dir_tar_} ]"
+
 for item in $(f2e "${list_}"); do
 
     echo -e "${BLUE}\$item = $item${NORMAL}"
@@ -95,17 +97,17 @@ for item in $(f2e "${list_}"); do
     echo -e "${GREEN}\$file_tar = $file_tar${NORMAL}"
 
     [ -n "${p_arr[1]}" ] || {
-        plt_info "from ${FNN}() ISEMPTY : \${p_arr[1]} :: be return 1"
+        plt_info "from ${is_fn} ISEMPTY : \${p_arr[1]} :: be return 1"
         return 1
     }
 
     [ -d "${dir_tar_}" ] || {
-        plt_info "from ${FNN}() :: NOTDIR : \${dir_tar_}=${dir_tar_} :: be return 1"
+        plt_info "from ${is_fn} :: NOTDIR : \${dir_tar_}=${dir_tar_} :: be return 1"
         return 1
     }
 
     [ -f "${path_src}" ] || [ -d "${path_src}" ] || {
-        plt_info "from ${FNN}() NOTFILE or NOTDIR : \${path_src}=${path_src} :: be return 1"
+        plt_info "from ${is_fn}  NOTFILE or NOTDIR : \${path_src}=${path_src} :: be return 1"
         return 1
     }
 
@@ -119,7 +121,7 @@ for item in $(f2e "${list_}"); do
     if [ "${bcp_:-0}" -eq 1 ]; then
 
         cd "${dir_src}" || {
-            plt_info "from ${FNN}() :: DOFAIL : cd ${dir_src} :: be return 1"
+            plt_info "from ${is_fn} :: DOFAIL : cd ${dir_src} :: be return 1"
             return 1
         }
 
@@ -134,7 +136,7 @@ for item in $(f2e "${list_}"); do
     if [ "${dpl_:-0}" -eq 1 ]; then
 
         cd "${dir_src}" || {
-            plt_info "from ${FNN}() :: DOFAIL : cd ${dir_src} :: be return 1"
+            plt_info "from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be return 1"
             return 1
         }
 
@@ -142,7 +144,7 @@ for item in $(f2e "${list_}"); do
         tar -czvf "${node_src}".bcp.tar.gz "${node_src}"
 
         cd "${dir_tar_}" || {
-            plt_info "from ${FNN}() :: DOFAIL : cd ${dir_tar_} :: be return 1"
+            plt_info "from ${is_fn} :: DOFAIL : cd ${dir_tar_} :: be return 1"
             return 1
         }
 
@@ -154,7 +156,7 @@ for item in $(f2e "${list_}"); do
     if [ "${rst_:-0}" -eq 1 ]; then
 
         cd "${dir_src}" || {
-            plt_info "from ${FNN}() :: DOFAIL : cd ${dir_src} :: be return 1"
+            plt_info "from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be return 1"
             return 1
         }
 
