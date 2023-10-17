@@ -1,8 +1,8 @@
 @startuml
+participant T1
 participant sys
 participant HOME
 participant ".bashrc"
-...5 minutes latter...
 
 == 1_upd_all_alt ==
 ref over HOME
@@ -10,7 +10,6 @@ epm full-upgrad
 apt-get install
 epm play yandex-
 end ref
-' fonsh plt
 
 == 2_reset_plt_fonsh ==
 ref over HOME : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
@@ -26,7 +25,7 @@ github -> HOME: clone git@github.com: plt, communis, fonsh
 ref over ".bashrc" : -> ".bashrc":add str: . ~/.fonshrc . ~/.pltrc
 ref over HOME : rm ${HOME}/.vscode-oss
 == 6_first_start_bash ==
-ref over sys 
+ref over sys
 . $HOME/.bashrc
 bcp_l2d_ -_bcp bashrc
 bcp_sys_ -_dpl
