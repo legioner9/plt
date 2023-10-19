@@ -9,6 +9,12 @@ participant HOME
 participant ".bashrc"
 participant "У меня очень\nдлинное имя" as L #99FF99
 
+participant Participant [
+    =Title
+    ----
+    ""SubTitle""
+]
+
 == 1_upd_all_alt ==
 ref over HOME
 epm full-upgrad
@@ -16,6 +22,8 @@ epm full-upgrad
 apt-get install
 epm play yandex-
 end ref
+
+newpage
 
 == 2_reset_plt_fonsh ==
 ref over HOME : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
@@ -39,6 +47,14 @@ bcp_l2d_ -_bcp bashrc
 bcp_sys_ -_dpl
 apt_alt_ 1
 end ref
+
+    group My own label
+    sys -> sys : Log attack start
+        loop 1000 times
+            sys -> sys: DNS Attack
+        end
+    sys -> sys : Log attack end
+    end
 
 
 @enduml
