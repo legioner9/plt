@@ -71,6 +71,10 @@ ${NORMAL}" #sistem info mesage
         . "${PPWW_654fe0b9ed}"/.sh/6_first_start_bash.sh
     fi
 
+    if is_yes "DO? : 7_post_first_" && [ -f "${PPWW_654fe0b9ed}"/.sh/7_post_first_.sh ]; then
+        . "${PPWW_654fe0b9ed}"/.sh/7_post_first_.sh
+    fi
+
     #{body}
     #-------------------------------
     #-------------------------------------

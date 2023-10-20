@@ -1,54 +1,27 @@
 #!/bin/bash
 
-# SSH_REMOVE_=""
-# read -p "START SSH_REMOVE_ block? =================== y/n"
-# read SSH_REMOVE_
-# if [[ "${SSH_REMOVE_}" == "y" ]]; then
+if ! [ -f "$HOME/.ssh/id_rsa" ]; then
 
-#     if [ -f "$HOME/.ssh/id_rsa" ]; then
+    echo "continue with create keys from zip (y/n)"
+    y2=""
+    read y2
 
-#         echo "$HOME/.ssh/ EXIST: that not first start that file"
-#         echo "continue with delite keys (y/n)?"
-#         _delit=""
-#         read _delit
-
-#         if [ "${_delit}" == "y" ]; then
-#             cp -rf ${HOME}/.ssh ${HOME}/.ssh~
-#             rm -rf ${HOME}/.ssh
-#         fi
-
-#     fi
-
-# fi
-
-SSH_CREATE_=""
-read -p "START SSH_CREATE_ block? ========================== y/n"
-read SSH_CREATE_
-if [[ "${SSH_CREATE_}" == "y" ]]; then
-
-    if ! [ -f "$HOME/.ssh/id_rsa" ]; then
-
-        echo "continue with create keys from zip (y/n)"
-        y2=""
-        read y2
-
-        if [ ${y2} == "y" ]; then
-            cp -rfv ${PPWW_654fe0b9ed}/.zip/read.zip ${HOME}
-            cp -rf ${HOME}/.ssh ${HOME}/.ssh~
-            rm -rf ${HOME}/.ssh
-            unzip ${HOME}/read.zip -d ${HOME}
-            file ${HOME}/.ssh
-            # continue
-            #		else
-            #			echo "continue with create keys from ssh generate (y/n)"
-            #			y3=""
-            #			read y3
-            #			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
-            # return 0 #! deb
-            #		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
-        fi
-
-        eval "$(ssh-agent -s)"
-        ssh-add ~/.ssh/id_rsa
+    if [ ${y2} == "y" ]; then
+        cp -rfv ${PPWW_654fe0b9ed}/.zip/read.zip ${HOME}
+        cp -rf ${HOME}/.ssh ${HOME}/.ssh~
+        rm -rf ${HOME}/.ssh
+        unzip ${HOME}/read.zip -d ${HOME}
+        file ${HOME}/.ssh
+        # continue
+        #		else
+        #			echo "continue with create keys from ssh generate (y/n)"
+        #			y3=""
+        #			read y3
+        #			[ "${y3}" == "y" ] && ! [ $y2 == "y" ]; then
+        # return 0 #! deb
+        #		    ssh-keygen -t rsa -b 4096 -C "legioner9@inbox.ru"
     fi
+
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
 fi

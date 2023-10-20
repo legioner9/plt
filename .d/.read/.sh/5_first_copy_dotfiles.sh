@@ -1,21 +1,10 @@
 #!/bin/bash
 
-PLT_COGOS_=""
-read -p "START PLT_COGOS_ ? ========================== y/n"
-read PLT_COGOS_
-if [[ "${PLT_COGOS_}" == "y" ]]; then
+path_tar_dir="${HOME}/REPOBARE/_repo/plt/.d/.repo/bcp_sys_"
+arr_tar_file=(repo_path plt_path fonsh_path)
 
-    path_tar_dir="${HOME}/REPOBARE/_repo/plt/.d/.repo/bcp_sys_"
-    arr_tar_file=(repo_path plt_path fonsh_path)
-
-    for item_arr in "${arr_tar_file[@]}"; do
-
-        echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/${item_arr} -C $HOME ---${NORMAL}"
-        tar -xzvf "${path_tar_dir}"/"${item_arr}" -C "$HOME"
-
-    done
-
-fi
+echo -e "${HLIGHT}--- tar -xzvf ${path_tar_dir}/enterrc.tar.gz -C $HOME ---${NORMAL}"
+tar -xzvf "${path_tar_dir}"/enterrc.tar.gz -C "$HOME"
 
 touch ~/.bashrc
 

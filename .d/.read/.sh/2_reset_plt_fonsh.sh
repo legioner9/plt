@@ -6,9 +6,10 @@ read RESET_PLT_FONSH_TO_DEFAULT_
 
 if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
 
-    rm -f "$HOME"/.fonsh_path
-    rm -f "$HOME"/.plt_path
-    rm -f "$HOME"/.repo_path
-    rm -rf "$HOME"/REPOBARE
+    rm -fv "$HOME"/.fonsh_path
+    rm -fv "$HOME"/.plt_path
+    rm -fv "$HOME"/.repo_path
+    rm -fv "$HOME"/.enterrc
+    rm -rfv "$HOME"/REPOBARE
 
 fi

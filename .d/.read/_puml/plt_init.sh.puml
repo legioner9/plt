@@ -61,6 +61,8 @@ erc -> erc : source .pltrc
 note right
 <code>
 
+Hardcore fonsh_path plt_path
+
 enter_sys_plt:
 FONSH_PATH=$(cat ~/.fonsh_path)
 PLT_PATH=$(cat ~/.plt_path)
