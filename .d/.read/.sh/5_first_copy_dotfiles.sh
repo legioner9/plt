@@ -19,12 +19,8 @@ fi
 
 touch ~/.bashrc
 
-if ! grep -F 'if [ -f ~/.pltrc ]; then . ~/.pltrc; fi' <~/.bashrc; then
-    echo 'if [ -f ~/.pltrc ]; then . ~/.pltrc; fi' >>~/.bashrc
-fi
-
-if ! grep -F 'if [ -f ~/.fonshrc ]; then . ~/.fonshrc; fi' <~/.bashrc; then
-    echo 'if [ -f ~/.fonshrc ]; then . ~/.fonshrc; fi' >>~/.bashrc
+if ! grep -F 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' <~/.bashrc; then
+    echo 'if [ -f ~/.enterrc ]; then . ~/.enterrc; fi' >>~/.bashrc
 fi
 
 if [ -f ${HOME}/.vscode-oss ]; then
