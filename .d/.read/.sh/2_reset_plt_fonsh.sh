@@ -11,5 +11,7 @@ if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
     rm -fv "$HOME"/.repo_path
     rm -fv "$HOME"/.enterrc
     rm -rfv "$HOME"/REPOBARE
+    rm -rfv "$HOME"/.ssh
+    sudo rm rfv
 
 fi

@@ -25,7 +25,7 @@ ${NORMAL}" #sistem info mesage
     #-------------------------------------
     #-------------------------------
 
-    sudo cp -v ${PLT_PATH}/.d/.etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-available.d/scena_1.conf
+    sudo cp -v ${PLT_PATH}/.d/.etc.ax/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-available.d/scena_1.conf
     sudo ln -sv /etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-enabled.d/scena_1.conf
     
     #{body}

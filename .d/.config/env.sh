@@ -11,6 +11,8 @@ unset filename
 NET_MAIN_GIT_REPO="github.com:legioner9"
 
 COMMUNIS_PATH="${REPO_PATH}"/communis
+#! depr PLT_COGOS
+PLT_COGOS="altlinux"
 #! depr PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_OS="${COMMUNIS_PATH}/Deploy_store"
 PATH_FN="${PATH_OS}/.qa/main_repo_fn"  # path to pln
