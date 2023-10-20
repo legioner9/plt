@@ -99,7 +99,7 @@ erc -> prc : source .fonshrc
 note right
 <code>
 
-PLT_ENV block:
+def c_up
 . "${PLT_PATH}"/.d/.config/env.sh
 . "${PLT_PATH}"/.d/.frc/a.frc
 c_up "${PLT_PATH}/actio"
@@ -112,6 +112,7 @@ erc -> frc : source .fonshrc
 note right
 <code>
 
+def c_up
 . "${FONSH_PATH}"/.d/.config/env.sh
 . "${FONSH_PATH}"/.d/.frc/a.frc
 c_up "${FONSH_PATH}/actio"

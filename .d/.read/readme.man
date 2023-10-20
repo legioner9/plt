@@ -1,18 +1,10 @@
-## st@host-108 /run/media/st/TOSH$ sudo chmod -R 777 . 
+## start init
 
-##  ^-Fn
+cd <root_dir>
+. plt_init.sh
 
-- mate-terminal
-- codium
-- yandex-browser-stable 
-- telegram
+## puml: <root_dir>/_puml/plt_init.sh.puml
 
-## uncomment : WHEEL_USERS ALL=(ALL) ALL
+## dir with flow: <root_dir>/.sh
 
-1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"
-
-```plantuml
-@startuml
-Bob -> Alice : hello
-@enduml
-```
+## dir with zip: <root_dir>/.zip
