@@ -3,9 +3,7 @@
 scale 1000*500
 autonumber 
 
-participant T1
 participant sys
-participant HOME
 participant ".bashrc" as brc
 participant ".enterrc" as erc
 participant ".fonshrc" as frc
@@ -14,7 +12,7 @@ participant github as gh
 participant "plt/.d/.repo/bcp_sys_/" as bcp_fs
 
 == 1_upd_all_alt ==
-ref over HOME
+ref over sys
 epm full-upgrad
 
 apt-get install
@@ -22,21 +20,21 @@ epm play yandex-
 end ref
 
 == 2_reset_plt_fonsh ==
-ref over HOME : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
+ref over sys : rm -f "$HOME"/ REPOBARE/ .fonsh_path .plt_path .repo_path
 
 == 3_git_init ==
-ref over HOME
+ref over sys
 rm -rf ${HOME}/.ssh
 unzip ${HOME}/read.zip -d ${HOME}
 end ref
 
 == 4_git_clone ==
-gh -> HOME: clone git@github.com: plt, communis, fonsh
+gh -> sys: clone git@github.com: plt, communis, fonsh
 
 == 5_first_copy_dotfiles ==
-bcp_fs -> HOME:tar -xzvf repo_path plt_path fonsh_path
+bcp_fs -> sys:tar -xzvf repo_path plt_path fonsh_path
 ref over brc : .bashrc:add str: . ~/.enterrc 
-ref over HOME : rm ${HOME}/.vscode-oss
+ref over sys : rm ${HOME}/.vscode-oss
 
 == 6_first_start_bash ==
 ref over sys
@@ -120,5 +118,21 @@ c_up "${FONSH_PATH}/actio"
 </code>
 end note
 
+== 7_post_first_ ==
+
+ref over sys
+. ${PLT_PATH}/.d/.etc/nginx/cp_scena_1_conf.sh
+end ref
+
+sys -> sys : . ${PLT_PATH}/.d/.etc/nginx/cp_scena_1_conf.sh
+
+note right
+<code>
+
+sudo cp -v ${PLT_PATH}/.d/.etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-available.d/scena_1.conf
+sudo ln -sv /etc/nginx/sites-available.d/scena_1.conf /etc/nginx/sites-enabled.d/scena_1.conf
+
+</code>
+end note
 
 @enduml
