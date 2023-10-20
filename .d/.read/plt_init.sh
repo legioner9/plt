@@ -27,7 +27,7 @@ ${NORMAL}" #sistem info mesage
         read -p "only y is yes. QUESTION: $1"
         read yes
 
-        if [ ${yes} == "y" ]; then
+        if [ ${yes:-0} == "y" ]; then
             return 0
         else
             return 1
@@ -39,6 +39,8 @@ ${NORMAL}" #sistem info mesage
     #-------------------------------
     PPWW_654fe0b9ed=$(dirname "${filename}")
 
+    read -p "uncomment : WHEEL_USERS ALL=(ALL) ALL: Enter to continue or ^C to interrapt exec:0)if need sudo ^C  1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"
+
     if is_yes_654fe0b9ed "DO? : 1_upd_all_alt ::
     epm full-upgrade
     apt-get install ...
@@ -46,9 +48,6 @@ ${NORMAL}" #sistem info mesage
         [ -f "${PPWW_654fe0b9ed}/.sh/1_upd_all_alt.sh" ]; then
         . "${PPWW_654fe0b9ed}/.sh/1_upd_all_alt.sh"
     fi
-
-    read -p "You apdate your Alt after first install system? ^C if NOT"
-    read -p "uncomment : WHEEL_USERS ALL=(ALL) ALL: Enter to continue or ^C to interrapt exec:0)if need sudo ^C  1)su - 2)EDITOR=mcedit visudo  3). _init_flash.sh"
 
     if is_yes_654fe0b9ed "DO? : 2_reset_plt_fonsh
     rm -f "$HOME"/.fonsh_path
