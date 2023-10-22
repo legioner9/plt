@@ -2,4 +2,7 @@ ARGS:
     \$1 
 
 CNTLS:
-    --_
+    --_name_fn name created fns: <name_fn>
+    --_dir_fns dir contane dir<name_fn>: (\${PLT_PATH}/actio | \${FONSH_PATH}/actio | ...)
+    --_grad name sub_sys: (mall|...) - is childdir for --_dir_fns
+    --_file_env file env for create fns  
