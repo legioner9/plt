@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "${GREEN} start 1_upd_all_alt.sh ${NORMAL}" #print variable
+
 sudo epm full-upgrade --auto -y
 sudo epm autoremove -y
 sudo epm autoremove --direct

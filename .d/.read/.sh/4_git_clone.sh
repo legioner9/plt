@@ -1,6 +1,8 @@
 #!/bin/bash
 
-mkdir -p "$HOME"/REPOBARE/_repo
+echo -e "${GREEN} start 4_git_clone.sh ${NORMAL}" #print variable
+
+mkdir -pv "$HOME"/REPOBARE/_repo
 
 cd "$HOME"/REPOBARE/_repo || {
     read -p "$HOME/REPOBARE/_repo not EXIST: return 1"

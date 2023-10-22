@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "${GREEN} start 2_reset_plt_fonsh.sh ${NORMAL}" #print variable
+
 RESET_PLT_FONSH_TO_DEFAULT_=""
 read -p "START RESET_PLT_FONSH_TO_DEFAULT_ block? =================== y/n"
 read RESET_PLT_FONSH_TO_DEFAULT_
@@ -12,6 +14,5 @@ if [[ "${RESET_PLT_FONSH_TO_DEFAULT_}" == "y" ]]; then
     rm -fv "$HOME"/.enterrc
     rm -rfv "$HOME"/REPOBARE
     rm -rfv "$HOME"/.ssh
-    sudo rm rfv
 
 fi

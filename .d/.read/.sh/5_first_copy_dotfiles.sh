@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "${GREEN} start 5_first_copy_dotfiles.sh ${NORMAL}" #print variable
+
 path_tar_dir="${HOME}/REPOBARE/_repo/plt/.d/.repo/bcp_sys_"
 arr_tar_file=(repo_path plt_path fonsh_path)
 
