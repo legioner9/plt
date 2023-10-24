@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="/home/st/.os/os_utils.sh"
+filename="${HOME}/REPOBARE/_repo/plt/.d/.sh/.bashrc/os_utils.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 

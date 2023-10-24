@@ -35,7 +35,7 @@ echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
-list_strong_cntls=(name_fn_ dir_fns_ grad_ file_env_)
+list_strong_cntls=(name_fn_ dir_fns_ grad_ file_env_ )
 for item in "${list_strong_cntls[@]}"; do
     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
     echo "$(eval echo \$"$item")"

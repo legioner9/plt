@@ -7,6 +7,8 @@ if ! . "$HOME"/.bashrc; then
 	return 1
 fi
 
+"${_apt_alt_}" 1
+
 "${_bcp_l2d_}" \
 	--_list "${HOME}/REPOBARE/_repo/plt/.d/.lst2/bcp_sys_/bcp_bashrc.lst2" \
 	--_dlm @ \

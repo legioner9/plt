@@ -2,7 +2,7 @@
 
 #. "$HOME/.bashrc"
 
-filename="$HOME/.os/os_aliases.sh"
+filename="${HOME}/REPOBARE/_repo/plt/.d/.sh/.bashrc/os_aliases.sh"
 
 echo -e "${HLIGHT}---start file: $filename---${NORMAL}" # start file
 
