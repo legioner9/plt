@@ -1,0 +1,1600 @@
+ name_fn_=lg1_
+dir_fns_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+grad_=mall
+tail_=prov
+cr_=1
+${g_args[@]} = 
+${e_args[@]} = 
+${f_args[@]} = 
+${ARGS[@]} = --_name_fn lg1_ --_dir_fns /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res --_grad mall --_tail prov -_cr
+${dir_fn_} = /home/st/REPOBARE/_repo/plt/actio/mall
+that gig_f_.sal
+. /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/cir.ax/out.cir ---
+$tml_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml
+$insert_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert
+$exl_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.exl
+$exl_file = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.exl/main.exl
+$main_sh = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.exl/main.sh
+--- plt_pause() (lg1_) create grad=mall tail=prov !!! in (/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/) ? ---
+--------plt_pause: (lg1_) create grad=mall tail=prov !!! in (/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/) ? --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+. /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.exl/main.sh ---
+$main_d_oll = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.exl/main.d.oll
+01_name_space.sh
+02_cp_tml_to_fs.sh
+03_ins_to_puml_dotd_dotsal.sh
+04_ins_to_main.sh
+05_cr_mdeb.sh
+06_cr_dotd_dotdd.sh
+07_cr_self_tst.sh
+08_cr_ln_s.sh
+09_edit.sh
+10_extst_1.sh
+11_tst.sh
+12_file_shgnr_2_dir_sys.sh
+13_fill_props.sh
+14_min_run.sh
+start file: 01_name_space.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+start file: 02_cp_tml_to_fs.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+mkdir -p /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/file.ax.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/.d/.self_tst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/.d/.cir /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/.d/.sal/file.man /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.man ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/.d/.sal/file.lst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.lst ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/.d/.sal/file.puml /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml ---
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/_file/. /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.lg1_ ---
+start file: 03_ins_to_puml_dotd_dotsal.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+is_est_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml -f ---
+cr_f_dir_insert_ --name /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml ---
+$name = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml
+--- plt_pause() do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml ---
+--------plt_pause: do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body_fn.insert
+$name_insert = body_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/body_fn.insert --fr0 {body_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/body_fn.insert
+fr0_cr_f_={body_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml {body_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/body_fn.insert
+$pre_placer = {body_fn}
+$str = ' fnn o-> {name_fn_}
+$item = wrap_fn.insert
+$name_insert = wrap_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/wrap_fn.insert --fr0 {wrap_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/wrap_fn.insert
+fr0_cr_f_={wrap_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/wrap_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml {wrap_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_puml/wrap_fn.insert
+$pre_placer = {wrap_fn}
+$str = garg2e2_ -> {name_fn_} 
+$str = farg2e2_ -> {name_fn_}
+$str = echo_deb_ -> {name_fn_}
+$str = {name_fn_} -> {name_fn_}:is_num
+$str = {name_fn_} -> {name_fn_}:exit_err_{name_fn_}
+$str = {name_fn_} -> {name_fn_}:exit_reg_{name_fn_}
+$str = {name_fn_} -> {name_fn_}:unset_autoargs_{name_fn_}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --vi0 lg1_ --vr0 {fn_name} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={fn_name}
+---v2f_() lg1_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml {fn_name} ---
+$inserter = lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml>/dev/null  ---
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml
+$pre_placer = {name_fn_}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.puml>/dev/null  ---
+start file: 04_ins_to_main.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+exec: cr_f_dir_insert_ --name /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh ---
+$name = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+--- plt_pause() do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1 ---
+--------plt_pause: do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1 --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = def_const.insert
+$name_insert = def_const
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/def_const.insert --fr0 {def_const} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/def_const.insert
+fr0_cr_f_={def_const}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/def_const.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {def_const} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/def_const.insert
+$pre_placer = {def_const}
+$str = local dir_fns_="{dir_fns_}"
+$item = init_body_c.insert
+$name_insert = init_body_c
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_c.insert --fr0 {init_body_c} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_c.insert
+fr0_cr_f_={init_body_c}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_c.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {init_body_c} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_c.insert
+$pre_placer = {init_body_c}
+$str = local ARGS=($@)
+$str = local FNN={name_fn_}
+$str = # echo ". ${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"
+$str = if ! . "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
+$str =     ${_plt_exit} "fail: . {dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.sh"
+$str =     return 1
+$str = fi
+$item = init_body_g.insert
+$name_insert = init_body_g
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_g.insert --fr0 {init_body_g} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_g.insert
+fr0_cr_f_={init_body_g}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_g.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {init_body_g} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body_g.insert
+$pre_placer = {init_body_g}
+$str = local ARGS=($@)
+$str = local FNN={name_fn_}
+$str = # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+$str = if ! ${_garg2e2_} "${ARGS[@]}"; then
+$str =     ${_plt_exit} " {name_fn_} return 1: ${FNLOCK}"
+$str =     return 1
+$str = fi
+$str = #? g_args with cntl=value
+$str = local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+$str = #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+$str = local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = local strex
+$str = for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval local $strex
+$str = done
+$str = # echo ". ${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"
+$str = if ! . "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
+$str =     ${_plt_exit} "fail: . {dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.sh"
+$str =     return 1
+$str = fi
+$item = init_body.insert
+$name_insert = init_body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body.insert --fr0 {init_body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body.insert
+fr0_cr_f_={init_body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {init_body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_sh/1/init_body.insert
+$pre_placer = {init_body}
+$str = local ARGS=($@)
+$str = local NARGS=${#ARGS[@]}
+$str = local FNN={name_fn_}
+$str = local local_var_wrap
+$str = local local_var_wrap_arr=()
+$str = local local_var_fn
+$str = local local_var_fn_arr=()
+$str = echo -e "${GREEN}\\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+$str =     if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
+$str =     for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.local"); do
+$str =         # echo -e "${GREEN}\$local_var_wrap = $local_var_wrap${NORMAL}" #print variable
+$str =         eval local "$local_var_wrap"
+$str =         local_var_wrap_arr+=("${local_var_wrap}")
+$str =     done
+$str =     if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"; then
+$str =         ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"
+$str =         return 1
+$str =     fi
+$str =     if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"; then
+$str =         ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid"
+$str =         return 1
+$str =     fi
+$str =     echo -e "${HLIGHT}--- . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.nid, return 0 ---${NORMAL}" #start files
+$str =     return 0
+$str = fi
+$str = # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+$str = if ! ${_garg2e2_} "${ARGS[@]}"; then
+$str =     ${_plt_exit} " {name_fn_} return 1: ${FNLOCK}"
+$str =     return 1
+$str = fi
+$str = #? g_args with cntl=value
+$str = local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+$str = #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+$str = local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = local strex
+$str = for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval local $strex
+$str = done
+$str = for local_var_fn in $(f2e "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.local.list"); do
+$str =     # echo -e "${GREEN}\$local_var_fn = $local_var_fn${NORMAL}" #print variable
+$str =     eval local "$local_var_fn"
+$str =     local_var_fn_arr+=("${local_var_fn}")
+$str = done
+$str = for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.local"); do
+$str =     # echo -e "${GREEN}\$local_var_wrap = $local_var_wrap${NORMAL}" #print variable
+$str =     eval local "$local_var_wrap"
+$str =     local_var_wrap_arr+=("${local_var_wrap}")
+$str = done
+$str = # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
+$str = if ! . "${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"; then
+$str =     ${_plt_exit} "fail: . ${PLT_PATH}/.d/.nid/{grad_}/{grad_}.const"
+$str =     return 1
+$str = fi
+$str = # echo ". ${FN_SAL_DIR}/{name_fn_}.body.nsc.sh"
+$str = if ! . "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.nsc.sh"; then
+$str =     ${_plt_exit} "fail: . {dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.body.sh"
+$str =     return 1
+$str = fi
+$str = cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --vi0 lg1_.nsc --vr0 {fn_name} ---
+vi0_cr_f_=lg1_.nsc
+vr0_cr_f_={fn_name}
+---v2f_() lg1_.nsc /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {fn_name} ---
+$inserter = lg1_.nsc
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_ --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh>/dev/null  ---
+exec: cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$pre_placer = {name_fn_}
+exec: cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res --vr0 {dir_fns_} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+vr0_cr_f_={dir_fns_}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {dir_fns_} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$pre_placer = {dir_fns_}
+exec: cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh --vi0 mall --vr0 {grad_} ---
+vi0_cr_f_=mall
+vr0_cr_f_={grad_}
+---v2f_() mall /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh {grad_} ---
+$inserter = mall
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh
+$pre_placer = {grad_}
+exec: upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh 1>/dev/null ---
+start file: 05_cr_mdeb.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/.mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax ---
+cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl ---
+cr_f_ _cr_lg1_mdeb_postfix.sh --tml /home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/init_body.sh ---
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/init_body.sh
+cr_f_dir_insert_ --name _cr_lg1_mdeb_postfix.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body ---
+$name = _cr_lg1_mdeb_postfix.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+--- plt_pause() do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body ---
+--------plt_pause: do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = init_body.insert
+$name_insert = init_body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body/init_body.insert --fr0 {init_body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body/init_body.insert
+fr0_cr_f_={init_body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body/init_body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {init_body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/init_body/init_body.insert
+$pre_placer = {init_body}
+$str = file_name={mdeb_cntl_dir}/_start_{name_fn_}mdeb.sh
+$str = this_dir=$(dirname "${file_name}")
+$str = this_name=$(basename "${file_name}")
+$str = #
+$str = #{body}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 _cr_lg1_mdeb_postfix --vr0 {fn_name} ---
+vi0_cr_f_=_cr_lg1_mdeb_postfix
+vr0_cr_f_={fn_name}
+---v2f_() _cr_lg1_mdeb_postfix /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {fn_name} ---
+$inserter = _cr_lg1_mdeb_postfix
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh>/dev/null  ---
+cr_f_dir_insert_ --name _cr_lg1_mdeb_postfix.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1 ---
+$name = _cr_lg1_mdeb_postfix.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+--- plt_pause() do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1 ---
+--------plt_pause: do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1 --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body.insert
+$name_insert = body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1/body.insert --fr0 {body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1/body.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1/body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_cr_fn_mdeb_postfix/next_step_1/body.insert
+$pre_placer = {body}
+$str = cd "${this_dir}"
+$str = cd ..
+$str = echo -e "${GREEN}$(pwd) = $(pwd)${NORMAL}" #print variable
+$str = if [[ -z "$1" ]] || [[ -z "$2" ]] ; then
+$str = plt_exit "dual args mast be exist and mean create a"$1"_fp_f_mdeb_"$2""
+$str = fi
+$str = cr_shfn_ a"$1"_fp_f_mdeb_"$2".sh
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 _cr_lg1_mdeb_postfix --vr0 {fn_name} ---
+vi0_cr_f_=_cr_lg1_mdeb_postfix
+vr0_cr_f_={fn_name}
+---v2f_() _cr_lg1_mdeb_postfix /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {fn_name} ---
+$inserter = _cr_lg1_mdeb_postfix
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh>/dev/null  ---
+cr_f_ _cr_lg1_mdeb_postfix.sh --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ _cr_lg1_mdeb_postfix.sh {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = _cr_lg1_mdeb_postfix.sh
+$pre_placer = {name_fn_}
+cr_f_ _cr_lg1_mdeb_postfix.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {mdeb_cntl_dir} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={mdeb_cntl_dir}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl _cr_lg1_mdeb_postfix.sh {mdeb_cntl_dir} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = _cr_lg1_mdeb_postfix.sh
+$pre_placer = {mdeb_cntl_dir}
+obs_quis_v2_ _cr_lg1_mdeb_postfix.sh ---
+${g_args[@]} = 
+${e_args[@]} = _cr_lg1_mdeb_postfix.sh
+${f_args[@]} = 
+${ARGS[@]} = _cr_lg1_mdeb_postfix.sh
+${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall
+that obs_quis_v2_.sal
+$filename = _cr_lg1_mdeb_postfix.sh
+$name = _cr_lg1_mdeb_postfix.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+--- plt_pause() do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ ---
+--------plt_pause: do it? create _cr_lg1_mdeb_postfix.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = ddd20.insert
+$name_insert = ddd20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert --fr0 {ddd20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+fr0_cr_f_={ddd20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ddd20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+$pre_placer = {ddd20}
+$item = ht_1.insert
+$name_insert = ht_1
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert --fr0 {ht_1} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+fr0_cr_f_={ht_1}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ht_1} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+$pre_placer = {ht_1}
+$item = ht_feedback.insert
+$name_insert = ht_feedback
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert --fr0 {ht_feedback} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+fr0_cr_f_={ht_feedback}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ht_feedback} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+$pre_placer = {ht_feedback}
+$item = ht_form.insert
+$name_insert = ht_form
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert --fr0 {ht_form} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+fr0_cr_f_={ht_form}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ht_form} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+$pre_placer = {ht_form}
+$item = ife.insert
+$name_insert = ife
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert --fr0 {ife} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+fr0_cr_f_={ife}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ife} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+$pre_placer = {ife}
+$item = ish.insert
+$name_insert = ish
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert --fr0 {ish} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+fr0_cr_f_={ish}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ish} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+$pre_placer = {ish}
+$item = ut.insert
+$name_insert = ut
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert --fr0 {ut} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+fr0_cr_f_={ut}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {ut} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+$pre_placer = {ut}
+$item = zzz20.insert
+$name_insert = zzz20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert --fr0 {zzz20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+fr0_cr_f_={zzz20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {zzz20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+$pre_placer = {zzz20}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 _cr_lg1_mdeb_postfix --vr0 {fn_name} ---
+vi0_cr_f_=_cr_lg1_mdeb_postfix
+vr0_cr_f_={fn_name}
+---v2f_() _cr_lg1_mdeb_postfix /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {fn_name} ---
+$inserter = _cr_lg1_mdeb_postfix
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_cr_lg1_mdeb_postfix.sh>/dev/null  ---
+cr_f_ _start_lg1_mdeb.sh --tml /home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/init_body.sh ---
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/init_body.sh
+cr_f_dir_insert_ --name _start_lg1_mdeb.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body ---
+$name = _start_lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+--- plt_pause() do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body ---
+--------plt_pause: do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = init_body.insert
+$name_insert = init_body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body/init_body.insert --fr0 {init_body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body/init_body.insert
+fr0_cr_f_={init_body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body/init_body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {init_body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/init_body/init_body.insert
+$pre_placer = {init_body}
+$str = file_name={mdeb_cntl_dir}/_start_{name_fn_}mdeb.sh
+$str = this_dir=$(dirname "${file_name}")
+$str = this_name=$(basename "${file_name}")
+$str = #
+$str = #{body}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 _start_lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=_start_lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() _start_lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {fn_name} ---
+$inserter = _start_lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh>/dev/null  ---
+cr_f_dir_insert_ --name _start_lg1_mdeb.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1 ---
+$name = _start_lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+--- plt_pause() do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1 ---
+--------plt_pause: do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1 --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body.insert
+$name_insert = body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1/body.insert --fr0 {body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1/body.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1/body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/_start_fn_mdeb/next_step_1/body.insert
+$pre_placer = {body}
+$str = . ${this_dir}/{name_fn_}mdeb.sh
+$str = {name_fn_}mdeb "$1"
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 _start_lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=_start_lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() _start_lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {fn_name} ---
+$inserter = _start_lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh>/dev/null  ---
+cr_f_ _start_lg1_mdeb.sh --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ _start_lg1_mdeb.sh {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = _start_lg1_mdeb.sh
+$pre_placer = {name_fn_}
+cr_f_ _start_lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {mdeb_cntl_dir} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={mdeb_cntl_dir}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl _start_lg1_mdeb.sh {mdeb_cntl_dir} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = _start_lg1_mdeb.sh
+$pre_placer = {mdeb_cntl_dir}
+obs_quis_v2_ _start_lg1_mdeb.sh ---
+${g_args[@]} = 
+${e_args[@]} = _start_lg1_mdeb.sh
+${f_args[@]} = 
+${ARGS[@]} = _start_lg1_mdeb.sh
+${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall
+that obs_quis_v2_.sal
+$filename = _start_lg1_mdeb.sh
+$name = _start_lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+--- plt_pause() do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ ---
+--------plt_pause: do it? create _start_lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = ddd20.insert
+$name_insert = ddd20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert --fr0 {ddd20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+fr0_cr_f_={ddd20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ddd20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+$pre_placer = {ddd20}
+$item = ht_1.insert
+$name_insert = ht_1
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert --fr0 {ht_1} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+fr0_cr_f_={ht_1}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ht_1} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+$pre_placer = {ht_1}
+$item = ht_feedback.insert
+$name_insert = ht_feedback
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert --fr0 {ht_feedback} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+fr0_cr_f_={ht_feedback}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ht_feedback} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+$pre_placer = {ht_feedback}
+$item = ht_form.insert
+$name_insert = ht_form
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert --fr0 {ht_form} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+fr0_cr_f_={ht_form}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ht_form} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+$pre_placer = {ht_form}
+$item = ife.insert
+$name_insert = ife
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert --fr0 {ife} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+fr0_cr_f_={ife}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ife} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+$pre_placer = {ife}
+$item = ish.insert
+$name_insert = ish
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert --fr0 {ish} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+fr0_cr_f_={ish}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ish} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+$pre_placer = {ish}
+$item = ut.insert
+$name_insert = ut
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert --fr0 {ut} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+fr0_cr_f_={ut}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {ut} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+$pre_placer = {ut}
+$item = zzz20.insert
+$name_insert = zzz20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert --fr0 {zzz20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+fr0_cr_f_={zzz20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {zzz20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+$pre_placer = {zzz20}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 _start_lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=_start_lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() _start_lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {fn_name} ---
+$inserter = _start_lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/_start_lg1_mdeb.sh>/dev/null  ---
+${name_fn_}mdeb.sh = lg1_mdeb.sh
+cr_shfn_ lg1_mdeb.sh ---
+$filename = lg1_mdeb.sh
+$name = lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+--- plt_pause() do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: /home/st/REPOBARE/_repo/plt/.d/.tml/cr_shfn_/frime.tml dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_ ---
+--------plt_pause: do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: /home/st/REPOBARE/_repo/plt/.d/.tml/cr_shfn_/frime.tml dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_ --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+$item = body_fn.insert
+$name_insert = body_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert --fr0 {body_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert
+fr0_cr_f_={body_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {body_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert
+$pre_placer = {body_fn}
+$str = # amount_arg $# 1 1
+$item = default_cntl_fn.insert
+$name_insert = default_cntl_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert --fr0 {default_cntl_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert
+fr0_cr_f_={default_cntl_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {default_cntl_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert
+$pre_placer = {default_cntl_fn}
+$str = if [ "_man" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".man
+$str =     return 0
+$str = fi
+$str = if [ "_go" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".sh
+$str =     return 0
+$str = fi
+$str = if [ "_lst" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".lst
+$str =     return 0
+$str = fi
+$str = if [ "_head" == "$1" ]; then
+$str =     echo "_head fn: ${d_name}/${FNN}"
+$str =     return 0
+$str = fi
+$str = if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+$str =     plt_exit " ${FNN} return 1: ${FNLOCK}"
+$str =     return 1
+$str = fi
+$str = g_args=($(garg2e_ "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = for strex in $(garg2e_ "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval local $strex
+$str = done
+$item = help_cntl_fn.insert
+$name_insert = help_cntl_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert --fr0 {help_cntl_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert
+fr0_cr_f_={help_cntl_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {help_cntl_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert
+$pre_placer = {help_cntl_fn}
+$str = if [ "-h" == "$1" ]; then
+$str =     echo -e "${CYAN} ${FNN}() help: 
+$str = MAIN: 
+$str = NAME: ${FNN}()
+$str = WHERE?:(only in root dir)Y/N
+$str = WHAT?:(only abs path | only name file | any stile path )
+$str = ARGS: 
+$str = \$1
+$str = [ ,\$2 num_menu ]
+$str = CNTLS:
+$str = required
+$str = optional 
+$str = CNTL inspect : -h, _man, _go, _list
+$str = TAGS: (fs|net|)
+$str = IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
+$str = FLOW: (process | subprocess (no read pause only plt_err return \$errno) | interpritator)
+$str = RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+$str = ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
+$str = WARN: 
+$str = DEBUG:
+$str = EXAMP:
+$str = ${FNN} -<>
+$str = ${NORMAL}"
+$str =     return 0
+$str = fi
+$item = intro_fn.insert
+$name_insert = intro_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert --fr0 {intro_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert
+fr0_cr_f_={intro_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {intro_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert
+$pre_placer = {intro_fn}
+$str = local FNN=${FUNCNAME[0]}
+$str = local PPWD=$PWD
+$str = local ARGS=($@)
+$str = local NARGS=$#
+$str = local verbose=0
+$str = [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
+$str = local d_name=$(dirname {root_path}/{fn_name}.sh)
+$str = # wrp_fifs1_ cd ${d_name} -d
+$item = post_fn.insert
+$name_insert = post_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert --fr0 {post_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert
+fr0_cr_f_={post_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {post_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert
+$pre_placer = {post_fn}
+$str = cd "${idir}"
+$str = unset filename
+$item = pre_fn.insert
+$name_insert = pre_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert --fr0 {pre_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert
+fr0_cr_f_={pre_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {pre_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert
+$pre_placer = {pre_fn}
+$str = #!/bin/bash
+$str = #. "$HOME/.bashrc"
+$str = filename="{root_path}/{fn_name}.sh"
+$str = echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
+$str = idir=$(pwd)
+$str = # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
+$str = # garg_ $(prs_f -n $filename) $@ 1>/dev/null
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {fn_name} ---
+$inserter = lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh>/dev/null  ---
+cr_f_dir_insert_ --name lg1_mdeb.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb ---
+$name = lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+--- plt_pause() do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb ---
+--------plt_pause: do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body_fn.insert
+$name_insert = body_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb/body_fn.insert --fr0 {body_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb/body_fn.insert
+fr0_cr_f_={body_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {body_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb/body_fn.insert
+$pre_placer = {body_fn}
+$str =  #{zzz20}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {fn_name} ---
+$inserter = lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh>/dev/null  ---
+obs_quis_v2_ lg1_mdeb.sh ---
+${g_args[@]} = 
+${e_args[@]} = lg1_mdeb.sh
+${f_args[@]} = 
+${ARGS[@]} = lg1_mdeb.sh
+${dir_fns_} = /home/st/REPOBARE/_repo/plt/actio/mall
+that obs_quis_v2_.sal
+$filename = lg1_mdeb.sh
+$name = lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+--- plt_pause() do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ ---
+--------plt_pause: do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_ --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = ddd20.insert
+$name_insert = ddd20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert --fr0 {ddd20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+fr0_cr_f_={ddd20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ddd20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ddd20.insert
+$pre_placer = {ddd20}
+$item = ht_1.insert
+$name_insert = ht_1
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert --fr0 {ht_1} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+fr0_cr_f_={ht_1}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ht_1} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_1.insert
+$pre_placer = {ht_1}
+$item = ht_feedback.insert
+$name_insert = ht_feedback
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert --fr0 {ht_feedback} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+fr0_cr_f_={ht_feedback}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ht_feedback} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_feedback.insert
+$pre_placer = {ht_feedback}
+$item = ht_form.insert
+$name_insert = ht_form
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert --fr0 {ht_form} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+fr0_cr_f_={ht_form}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ht_form} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ht_form.insert
+$pre_placer = {ht_form}
+$item = ife.insert
+$name_insert = ife
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert --fr0 {ife} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+fr0_cr_f_={ife}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ife} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ife.insert
+$pre_placer = {ife}
+$item = ish.insert
+$name_insert = ish
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert --fr0 {ish} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+fr0_cr_f_={ish}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ish} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ish.insert
+$pre_placer = {ish}
+$item = ut.insert
+$name_insert = ut
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert --fr0 {ut} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+fr0_cr_f_={ut}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {ut} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/ut.insert
+$pre_placer = {ut}
+$item = zzz20.insert
+$name_insert = zzz20
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert --fr0 {zzz20} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+fr0_cr_f_={zzz20}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {zzz20} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/obs_quis_/zzz20.insert
+$pre_placer = {zzz20}
+$str = echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+$str = local arr=()
+$str = local res=()
+$str = arr+=("leave menu")
+$str = res+=("echo bye)))")
+$str = #{arr_res}
+$str = # arr+=("aaaaaaaaa")
+$str = # res+=("bbbbbbbbb")
+$str = # arr+=("aaaaaaaaa")
+$str = # res+=("bbbbbbbbb")
+$str = # arr+=("aaaaaaaaa")
+$str = # res+=("bbbbbbbbb")
+$str = # arr+=("aaaaaaaaa")
+$str = # res+=("bbbbbbbbb")
+$str = if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+$str =     num_res=$(($1 - 1))
+$str =     ${res[${num_res}]}
+$str =     return 0
+$str = fi
+$str = PS3="eligendi actiones: "
+$str = select item in "${arr[@]}"; do
+$str =     for ((i = 0; i < 1000; i++)); do
+$str =         if [[ ${item} == ${arr[$i]} ]]; then
+$str =             ${res[$i]}
+$str =             ${FNN} $@
+$str =         fi
+$str =         if [[ ${item} == ${arr[0]} ]]; then
+$str =             ${res[$i]}
+$str =         fi
+$str =     done
+$str = done
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {fn_name} ---
+$inserter = lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh>/dev/null  ---
+cr_f_dir_insert_ --name lg1_mdeb.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20 ---
+$name = lg1_mdeb.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+--- plt_pause() do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20 ---
+--------plt_pause: do it? create lg1_mdeb.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20 --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = arr_res.insert
+$name_insert = arr_res
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/arr_res.insert --fr0 {arr_res} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/arr_res.insert
+fr0_cr_f_={arr_res}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/arr_res.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {arr_res} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/arr_res.insert
+$pre_placer = {arr_res}
+$str =     cd ..
+$str =     
+sed: -e выражение #1, символ 17: ожидалась \ после «a», «c» или «i»
+$str =     ${_wrp2_} c_up --_xxd "$(pwd)" >/dev/null
+$str =     for res_ in *; do
+$str =         # echo -e "${GREEN}\$arr_ = $arr_${NORMAL}" #print variable
+$str =         res_=$(prs_f -n "${res_}")
+$str =         arr_=$(${res_} _head)
+$str =         arr+=("${arr_}")
+$str =         res+=("${res_}")
+$str =     done
+$item = intro_fn.insert
+$name_insert = intro_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/intro_fn.insert --fr0 {intro_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/intro_fn.insert
+fr0_cr_f_={intro_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/intro_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {intro_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zzz20/intro_fn.insert
+$pre_placer = {intro_fn}
+$str = ${_wrp2_} cd --_xxd "${d_name}" >/dev/null
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 lg1_mdeb --vr0 {fn_name} ---
+vi0_cr_f_=lg1_mdeb
+vr0_cr_f_={fn_name}
+---v2f_() lg1_mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {fn_name} ---
+$inserter = lg1_mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/.cntl/lg1_mdeb.sh>/dev/null  ---
+cr_f_ lg1_mdeb.sh --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ lg1_mdeb.sh {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = lg1_mdeb.sh
+$pre_placer = {name_fn_}
+. _cr_lg1_mdeb_postfix.sh 1 zx ---
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb
+$filename = a1_fp_f_mdeb_zx.sh
+$name = a1_fp_f_mdeb_zx.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+--- plt_pause() do it? create a1_fp_f_mdeb_zx.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb tml: /home/st/REPOBARE/_repo/plt/.d/.tml/cr_shfn_/frime.tml dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_ ---
+--------plt_pause: do it? create a1_fp_f_mdeb_zx.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb tml: /home/st/REPOBARE/_repo/plt/.d/.tml/cr_shfn_/frime.tml dir_insert: /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_ --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+$item = body_fn.insert
+$name_insert = body_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert --fr0 {body_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert
+fr0_cr_f_={body_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {body_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/body_fn.insert
+$pre_placer = {body_fn}
+$str = # amount_arg $# 1 1
+$item = default_cntl_fn.insert
+$name_insert = default_cntl_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert --fr0 {default_cntl_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert
+fr0_cr_f_={default_cntl_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {default_cntl_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/default_cntl_fn.insert
+$pre_placer = {default_cntl_fn}
+$str = if [ "_man" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".man
+$str =     return 0
+$str = fi
+$str = if [ "_go" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".sh
+$str =     return 0
+$str = fi
+$str = if [ "_lst" == "$1" ]; then
+$str =     edit_ "${d_name}/${FNN}".lst
+$str =     return 0
+$str = fi
+$str = if [ "_head" == "$1" ]; then
+$str =     echo "_head fn: ${d_name}/${FNN}"
+$str =     return 0
+$str = fi
+$str = if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+$str =     plt_exit " ${FNN} return 1: ${FNLOCK}"
+$str =     return 1
+$str = fi
+$str = g_args=($(garg2e_ "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = for strex in $(garg2e_ "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval local $strex
+$str = done
+$item = help_cntl_fn.insert
+$name_insert = help_cntl_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert --fr0 {help_cntl_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert
+fr0_cr_f_={help_cntl_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {help_cntl_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/help_cntl_fn.insert
+$pre_placer = {help_cntl_fn}
+$str = if [ "-h" == "$1" ]; then
+$str =     echo -e "${CYAN} ${FNN}() help: 
+$str = MAIN: 
+$str = NAME: ${FNN}()
+$str = WHERE?:(only in root dir)Y/N
+$str = WHAT?:(only abs path | only name file | any stile path )
+$str = ARGS: 
+$str = \$1
+$str = [ ,\$2 num_menu ]
+$str = CNTLS:
+$str = required
+$str = optional 
+$str = CNTL inspect : -h, _man, _go, _list
+$str = TAGS: (fs|net|)
+$str = IFS: (fifs| exl| ...) - discribe in ${PATH_IFS_DIR}
+$str = FLOW: (process | subprocess (no read pause only plt_err return \$errno) | interpritator)
+$str = RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
+$str = ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
+$str = WARN: 
+$str = DEBUG:
+$str = EXAMP:
+$str = ${FNN} -<>
+$str = ${NORMAL}"
+$str =     return 0
+$str = fi
+$item = intro_fn.insert
+$name_insert = intro_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert --fr0 {intro_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert
+fr0_cr_f_={intro_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {intro_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/intro_fn.insert
+$pre_placer = {intro_fn}
+$str = local FNN=${FUNCNAME[0]}
+$str = local PPWD=$PWD
+$str = local ARGS=($@)
+$str = local NARGS=$#
+$str = local verbose=0
+$str = [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
+$str = local d_name=$(dirname {root_path}/{fn_name}.sh)
+$str = # wrp_fifs1_ cd ${d_name} -d
+$item = post_fn.insert
+$name_insert = post_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert --fr0 {post_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert
+fr0_cr_f_={post_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {post_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/post_fn.insert
+$pre_placer = {post_fn}
+$str = cd "${idir}"
+$str = unset filename
+$item = pre_fn.insert
+$name_insert = pre_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert --fr0 {pre_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert
+fr0_cr_f_={pre_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {pre_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_shfn_/pre_fn.insert
+$pre_placer = {pre_fn}
+$str = #!/bin/bash
+$str = #. "$HOME/.bashrc"
+$str = filename="{root_path}/{fn_name}.sh"
+$str = echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
+$str = idir=$(pwd)
+$str = # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
+$str = # garg_ $(prs_f -n $filename) $@ 1>/dev/null
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --vi0 a1_fp_f_mdeb_zx --vr0 {fn_name} ---
+vi0_cr_f_=a1_fp_f_mdeb_zx
+vr0_cr_f_={fn_name}
+---v2f_() a1_fp_f_mdeb_zx /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {fn_name} ---
+$inserter = a1_fp_f_mdeb_zx
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh>/dev/null  ---
+cr_f_dir_insert_ --name /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx ---
+$name = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+--- plt_pause() do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx ---
+--------plt_pause: do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body_fn.insert
+$name_insert = body_fn
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx/body_fn.insert --fr0 {body_fn} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx/body_fn.insert
+fr0_cr_f_={body_fn}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx/body_fn.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {body_fn} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_mdeb/fn_mdeb_zx/body_fn.insert
+$pre_placer = {body_fn}
+$str = echo "that from zx"
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --vi0 a1_fp_f_mdeb_zx --vr0 {fn_name} ---
+vi0_cr_f_=a1_fp_f_mdeb_zx
+vr0_cr_f_={fn_name}
+---v2f_() a1_fp_f_mdeb_zx /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {fn_name} ---
+$inserter = a1_fp_f_mdeb_zx
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.mdeb/a1_fp_f_mdeb_zx.sh>/dev/null  ---
+start file: 06_cr_dotd_dotdd.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+cp -rf /home/st/REPOBARE/_repo/plt/.d/.fs_standarts.ax/.dd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax ---
+cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax ---
+rm /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh ---
+cr_sh_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh ---
+--- plt_pause() create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh from /home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml ? ---
+--------plt_pause: create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh from /home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml ? --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert
+fr0_cr_f_={header}
+fi1_cr_f_=/home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body
+fr1_cr_f_=#{fn_body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh {header} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert
+$pre_placer = {header}
+$str = ARGS=($@)
+$str = NARGS=$#
+$str = verbose=0
+$str = [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}---$filename $* ---${NORMAL}" #started functions
+$str = idir=$(pwd)
+$str = rdir="$(prs_f -d $filename)"
+$str = gname="$(prs_f -n $filename)" # name without .ext
+$str = wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
+$str = g_args=($(garg2e_ "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = for strex in $(garg2e_ "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval $strex
+$str = done
+$str = _(){
+$str =     echo "empty _deb in $filename"
+$str =     # . $filename" arg1 arg2
+$str = }
+$str = if [ "_deb" == "$1" ]; then
+$str =     _
+$str =     return 0
+$str = fi
+---f2f_() /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh #{fn_body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body
+$pre_placer = #{fn_body}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+vr0_cr_f_=v000
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh v000 ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$pre_placer = v000
+vi0_cr_f_=\/home/st
+vr0_cr_f_=/home/st
+---v2f_() /home/st /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh /home/st ---
+$inserter = /home/st
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$pre_placer = /home/st
+is_est_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh -f ---
+cr_f_dir_insert_ --name /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh --dir_insert /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd ---
+$name = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$path_file = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+--- plt_pause() do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd ---
+--------plt_pause: do it? create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh in /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax tml: dir_insert: /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+cp: неверный ключ — «1»
+По команде «cp --help» можно получить дополнительную информацию.
+$item = body.insert
+$name_insert = body
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd/body.insert --fr0 {body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd/body.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd/body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/cr_dotd_dotdd/body.insert
+$pre_placer = {body}
+$str = echo ${rdir}
+$str = ${_wrp2_} cd --_xxd ${rdir}
+$str = cd ..
+$str = ${_wrp2_} tree -a -L 2 -o "$(pwd)"/.dd/tree_gign_dir.man --_xxd ^"$(pwd)"
+$str = sed -i '1s|^|'"tree -a -L 2 in $(pwd)\n"'|' "$(pwd)"/.dd/tree_gign_dir.man
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh --vi0 cr_tree_gign_dir --vr0 {fn_name} ---
+vi0_cr_f_=cr_tree_gign_dir
+vr0_cr_f_={fn_name}
+---v2f_() cr_tree_gign_dir /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh {fn_name} ---
+$inserter = cr_tree_gign_dir
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$pre_placer = {fn_name}
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd --vr0 {root_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd
+vr0_cr_f_={root_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh {root_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh
+$pre_placer = {root_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.dd/cr_tree_gign_dir.sh>/dev/null  ---
+start file: 07_cr_self_tst.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst ---
+cr_sh_ generate_self_tst_1.sh ---
+--- plt_pause() create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh from /home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml 0 ---
+--------plt_pause: create /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh from /home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml 0 --------
+^C - exit, ENTER - continue 
+after usually continue in parent thread 
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/sh.tml
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert
+fr0_cr_f_={header}
+fi1_cr_f_=/home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body
+fr1_cr_f_=#{fn_body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh {header} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/header.insert
+$pre_placer = {header}
+$str = ARGS=($@)
+$str = NARGS=$#
+$str = verbose=0
+$str = [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${HLIGHT}---$filename $* ---${NORMAL}" #started functions
+$str = idir=$(pwd)
+$str = rdir="$(prs_f -d $filename)"
+$str = gname="$(prs_f -n $filename)" # name without .ext
+$str = wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
+$str = g_args=($(garg2e_ "${ARGS[@]}"))
+$str = [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+$str = for strex in $(garg2e_ "${ARGS[@]}"); do
+$str =     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+$str =     eval $strex
+$str = done
+$str = _(){
+$str =     echo "empty _deb in $filename"
+$str =     # . $filename" arg1 arg2
+$str = }
+$str = if [ "_deb" == "$1" ]; then
+$str =     _
+$str =     return 0
+$str = fi
+---f2f_() /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh #{fn_body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_sh_/_cr_sh_/_insert_files/fn_body
+$pre_placer = #{fn_body}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh
+vr0_cr_f_=v000
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh v000 ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh
+$pre_placer = v000
+vi0_cr_f_=\/home/st
+vr0_cr_f_=/home/st
+---v2f_() /home/st /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh /home/st ---
+$inserter = /home/st
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh
+$pre_placer = /home/st
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh --fi0 /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_self_tst_1/body_self_tst_1.insert --fr0 {body} ---
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_self_tst_1/body_self_tst_1.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_self_tst_1/body_self_tst_1.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.insert/_fn_fff_self_tst_1/body_self_tst_1.insert
+$pre_placer = {body}
+$str = echo -e "# create tst flow at dis_tst and dis2_tst
+$str = # rename exec._{ext} to exec.{ext}
+$str = # . start_check_distst.sh for tst all files" >howuse.man
+$str = echo -e "# in deb_1.sh
+$str = ## delete dir_1
+$str = ## create directory "dir_1/dis" with envariment for exec._distst process
+$str = ## create directory "dir_1/dis2" with envariment for exec._distst process
+$str = ## create check_distst.list in dir_1
+$str = ## create start_check_distst.sh in dir_1" >whatshappenig.man
+$str = #rr_
+$str = #wrp_fifs1_ rm -rf dir_1 -cd1
+$str = ${_wrp2_} mkdir --_cnd dir_1
+$str = ${_wrp2_} cd --_xxd dir_1
+$str = ${_cr_tst_dir_} --name_dir dis --ext distst
+$str = ${_cr_tst_dir_} --name_dir dis2 --ext distst
+. /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/generate_self_tst_1.sh ---
+[1mexec: mkdir dir_1 :end exec
+[1mexec: cd dir_1 :end exec
+${g_args[@]}: name_dir=dis ext=distst
+cp -rfuv /home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/. /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis ---
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/.' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./_flow_tst.sh' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./dat' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/dat'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._tst'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./pre' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/pre'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./res' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/res'
+$tst_dir = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh --vr0 {file_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+$pre_placer = {file_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh 1>/dev/null ---
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst --vr0 {file_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+$pre_placer = {file_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst 1>/dev/null ---
+exl2_ --_exl_list /home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_dir_/create_tst_dir.exl ---
+#>exl
+
+# start/communis/Deploy_store/.qa/.exl/cr_tst_dir_/create_tst_dir.exl
+
+eval tml_dir=${PATH_TML_DIR}/cr_tst_dir_/fn_tst
+eval tst_dir=${PPWD}/${name_dir}
+eval cp -rfuv ${tml_dir}/. ${tst_dir}
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/./exec._tst'
+
+#? _flow_tst.sh
+eval file_path=${tst_dir}/_flow_tst.sh
+
+eval ${_cr_f_} ${file_path} --vi0 ${file_path} --vr0 {file_path}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/_flow_tst.sh
+$pre_placer = {file_path}
+eval ${_upg_path_} ${file_path} 1>/dev/null
+
+#? exec._tst
+eval wrp_fifs2_ mv ${tst_dir}/exec._tst ${tst_dir}/exec._${ext}
+eval file_path=${tst_dir}/exec._${ext}
+
+eval ${_cr_f_} ${file_path} --vi0 ${file_path} --vr0 {file_path}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis/exec._distst
+$pre_placer = {file_path}
+eval ${_upg_path_} ${file_path} 1>/dev/null
+${g_args[@]}: name_dir=dis2 ext=distst
+cp -rfuv /home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/. /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2 ---
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/.' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./_flow_tst.sh' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./dat' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/dat'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._tst'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./pre' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/pre'
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./res' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/res'
+$tst_dir = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh --vr0 {file_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+$pre_placer = {file_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh 1>/dev/null ---
+cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst --vi0 /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst --vr0 {file_path} ---
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+$pre_placer = {file_path}
+upg_path_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst 1>/dev/null ---
+exl2_ --_exl_list /home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_dir_/create_tst_dir.exl ---
+#>exl
+
+# start/communis/Deploy_store/.qa/.exl/cr_tst_dir_/create_tst_dir.exl
+
+eval tml_dir=${PATH_TML_DIR}/cr_tst_dir_/fn_tst
+eval tst_dir=${PPWD}/${name_dir}
+eval cp -rfuv ${tml_dir}/. ${tst_dir}
+'/home/st/REPOBARE/_repo/plt/.d/.tml/cr_tst_dir_/fn_tst/./exec._tst' -> '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/./exec._tst'
+
+#? _flow_tst.sh
+eval file_path=${tst_dir}/_flow_tst.sh
+
+eval ${_cr_f_} ${file_path} --vi0 ${file_path} --vr0 {file_path}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/_flow_tst.sh
+$pre_placer = {file_path}
+eval ${_upg_path_} ${file_path} 1>/dev/null
+
+#? exec._tst
+eval wrp_fifs2_ mv ${tst_dir}/exec._tst ${tst_dir}/exec._${ext}
+eval file_path=${tst_dir}/exec._${ext}
+
+eval ${_cr_f_} ${file_path} --vi0 ${file_path} --vr0 {file_path}
+vi0_cr_f_=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+vr0_cr_f_={file_path}
+---v2f_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst {file_path} ---
+$inserter = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.self_tst/dir_1/dis2/exec._distst
+$pre_placer = {file_path}
+eval ${_upg_path_} ${file_path} 1>/dev/null
+start file: 08_cr_ln_s.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+mkdir /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_ ---
+$tml_dir = /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml
+$fn_body_ln = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal
+$fn_body_sh = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh
+cp -rfv /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/file.body.sh /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal ---
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/file.body.sh' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal'
+cr_f_ /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal
+$pre_placer = {name_fn_}
+ln -sv /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh ---
+'/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.sal'
+$fn_body_ln = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local
+$fn_body_sh = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh
+cp -rfv /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/file.local.list /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local ---
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/file.local.list' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local'
+cr_f_ /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local --vi0 lg1_ --vr0 {name_fn_} ---
+vi0_cr_f_=lg1_
+vr0_cr_f_={name_fn_}
+---v2f_() lg1_ /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local {name_fn_} ---
+$inserter = lg1_
+$path_file_preplace = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local
+$pre_placer = {name_fn_}
+ln -sv /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.local.list ---
+'/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.local.list' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.local'
+$fn_body_ln = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h
+$fn_body_sh = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh
+cp -rfv /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h ---
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/exam.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/exam.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/manf.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/manf.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/tags.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/tags.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/dfns.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/dfns.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/name.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/name.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/rtfn.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/rtfn.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/lngf.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/lngf.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/depr.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/depr.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/main.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/main.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/args.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/args.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/flow.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/flow.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/lego.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/lego.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/grad.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/grad.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/retu.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/retu.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/vers.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/vers.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/erro.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/erro.insert'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.h/date.insert' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h/date.insert'
+ln -sv /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.d.h ---
+'/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.d.h' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.h'
+$fn_body_ln = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.h
+$fn_body_sh = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh
+touch /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.h ---
+ln -sv /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.h /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.h ---
+'/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.h' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.h'
+$fn_body_ln = /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo
+$fn_body_sh = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.body.nsc.sh
+cp -rfv /home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.repo /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo ---
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.repo' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.repo/.config' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo/.config'
+'/home/st/REPOBARE/_repo/plt/.d/.mul/gig_f_/mall/prov/.tml/dir.repo/.deploy' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo/.deploy'
+ln -sv /home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.d.repo ---
+'/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/.d.ax/.sal.ax/lg1_.d.repo' -> '/home/st/REPOBARE/_repo/plt/.d/.sal.ax/lg1_/lg1_.d.repo'
+rm ---
+rm: пропущен операнд
+По команде «rm --help» можно получить дополнительную информацию.
+start file: 09_edit.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+---edit_() /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_ ---
+$PWD = /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_garg2e2_/_garg2e2_/_fn/dd_extst/extst_1/ex2/lg1_extst/lg1_tst/lg1_extst/extst_1/ex2
+file = /bin/bash
+args = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+---main mode---
+$PPWD = /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_garg2e2_/_garg2e2_/_fn/dd_extst/extst_1/ex2/lg1_extst/lg1_tst/lg1_extst/extst_1/ex2
+---cd /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_garg2e2_/_garg2e2_/_fn/dd_extst/extst_1/ex2/lg1_extst/lg1_tst/lg1_extst/extst_1/ex2 succ))---
+[4mTHIS_ARG1=/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+[4m codium /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_
+---editor leav---
+---$3 not exist ---
+start file: 10_extst_1.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res
+cd /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/ ---
+mkdir lg1_extst ---
+cd lg1_extst ---
+exec: cr_tst_sys_ --name_dir extst_1 --ext extst ---
+#>exl
+# ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec.exl
+#? create /dir_1/start_exec._tst
+eval path_name=${root_dir}/${name_dir}/start_exec._tst
+eval tml=${PATH_TML_DIR}/cr_sh_/for_tst_1/sh_for_tst_1.tml
+
+eval cr_f_ "${path_name}" --tml ${tml}
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/for_tst_1/sh_for_tst_1.tml
+
+# eval header=${PATH_INSERT_DIR}/cr_sh_/header.insert
+
+# eval cr_f_ "${path_name}" --fi0 ${header} --fr0 {header}
+
+eval body=${PATH_INSERT_DIR}/cr_sh_/for_tst_1/body.insert
+
+eval cr_f_ "${path_name}" --fi0 ${body} --fr0 {body}
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1/start_exec._tst {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert
+$pre_placer = {body}
+$str = up_err_ extst {list} 1>/dev/null
+$str = errno=$?
+$str = if [ 1 -eq "${errno}" ]; then
+$str =     echo "ANY in file://$rdir fail" >&2
+$str = else
+$str =     echo "ALL in file://$rdir true"
+$str = fi
+
+eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}
+bash: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}: команда не найдена
+--------plt_exit: be return 1 <- Fail: return errno: 127 from: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name} in fn: exl_, with_args: --list /home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_sys_/create_start_exec.exl , filename: /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_exl_/exl_.sh, line: 28--------
+be return 1
+^C - exit, ENTER - return to process 
+after usually return 1 from parent thread

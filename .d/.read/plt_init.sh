@@ -61,12 +61,13 @@ fntmp_654fe0b9ed() {
         fi
     }
 
-    is_yes_654fe0b9ed "DO? : 2_reset_plt_fonsh
-    rm -f $HOME/.fonsh_path
-    rm -f $HOME/.plt_path
-    rm -f $HOME/.repo_path
-    rm -rf $HOME/REPOBARE
-    rm -rfv $HOME/.ssh
+    is_yes_654fe0b9ed "DO interactive? : 2_reset_plt_fonsh
+    rm -fvi $HOME/.fonsh_path
+    rm -fvi $HOME/.plt_path
+    rm -fvi $HOME/.repo_path
+    rm -fvi $HOME/.enterrc
+    DO? only 'y' remove all repo :: rm -rfv $HOME/REPOBARE
+    DO? only 'y' remove .ssh :: rm -rfv $HOME/.ssh
     y?" && {
         if [ -f "${PPWW_654fe0b9ed}/.sh/2_reset_plt_fonsh.sh" ]; then
             . "${PPWW_654fe0b9ed}/.sh/2_reset_plt_fonsh.sh"

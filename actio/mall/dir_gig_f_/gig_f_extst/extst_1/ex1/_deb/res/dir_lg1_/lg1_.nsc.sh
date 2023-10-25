@@ -22,6 +22,7 @@ local dir_fns_="${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/r
     #{ctrl_args}
 
 local ARGS=($@)
+local NARGS=${#ARGS[@]}
 local FNN=lg1_
 local local_var_wrap
 local local_var_wrap_arr=()
