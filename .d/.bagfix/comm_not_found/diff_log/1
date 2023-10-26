@@ -1,0 +1,7 @@
++++++ echo -e '\033[0;34meval cr_f_ "${path_name}" --tml ${tml}\033[0m'
+[0;34meval cr_f_ "${path_name}" --tml ${tml}[0m
++++++ '[' -n 'eval cr_f_ "${path_name}" --tml ${tml}' ']'
++++++ '[' '#' == e ']'
++++++ eval cr_f_ '"${path_name}"' --tml '${tml}'
+++++++ cr_f_ /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_extst/extst_1/start_exec._tst --tml /home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/for_tst_1/sh_for_tst_1.tml
+++++++ local FNN=cr_f_

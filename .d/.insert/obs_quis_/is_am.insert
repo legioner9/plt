@@ -1,0 +1,3 @@
+if ! is_amount_arg $# ? ?; then
+    plt_exit "from fDs : AMOUNT_ARGS : \$# = '$#'"
+fi

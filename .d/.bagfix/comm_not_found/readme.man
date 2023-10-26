@@ -1,0 +1,10 @@
+# exec
+
+    . ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_flow_tst.sh
+
+    edit_ ${PLT_PATH}/.d/.exl/cr_tst_sys_/create_start_exec.exl
+        add str: set -x
+
+# see 
+
+    bash: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}: команда не найдена

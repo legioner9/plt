@@ -1,0 +1,7 @@
++++++ echo -e '\033[0;34meval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}\033[0m'
+[0;34meval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}[0m
++++++ '[' -n 'eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}' ']'
++++++ '[' '#' == e ']'
++++++ 'eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}'
+bash: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}: команда не найдена
++++++ errno=127

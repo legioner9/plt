@@ -1,0 +1,2 @@
++++++ 'eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}'
+bash: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}: команда не найдена

@@ -10,6 +10,15 @@ echo "that ${FNN}.sal"
 
 local filename="${ARGS[0]}"
 
+obs_quis_v2_fs(){
+    echo
+}
+
+if [ ${filename} == "_fs" ]; then
+    obs_quis_v2_fs
+    return 0
+fi
+
 if [ ${filename} == "_ins" ]; then
     ${_edit_} ${PATH_INSERT_DIR}/obs_quis_
     return 0

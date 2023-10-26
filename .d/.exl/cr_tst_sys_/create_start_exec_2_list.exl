@@ -1,0 +1,15 @@
+#>exl
+# ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec_2_list.exl
+
+# eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}
+
+#? create dir_1/start_exec.list
+
+eval list=${root_dir}/${name_dir}/start_exec.list
+
+eval cr_f_ "${path_name}" --vi0 ${list} --vr0 {list}
+
+eval upg_path_ "${path_name}"
+
+
+eval echo ${root_dir}/${name_dir} >${list}

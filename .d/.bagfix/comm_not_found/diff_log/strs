@@ -1,0 +1,2 @@
++++++ echo -e '\033[0;34meval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}\033[0m'
++++++ echo -e '\033[0;34meval cr_f_ "${path_name}" --fi0 ${body} --fr0 {body}\033[0m'
