@@ -1,0 +1,26 @@
+# fix 
+
+. '/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_flow_tst.sh'
+
+# see 
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/log
+
+/home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_cr_tst_sys_/cr_tst_sys_.sh
+
+/home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_sys_
+
+## extract
+
+ exl_ --list ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec_fix.exl
+
+ with probleb code
+
+    eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}
+
+# fix bag info
+
+/home/st/REPOBARE/_repo/plt/.d/.bagfix/comm_not_found
+
+# result commit fix_comm_not_found :
+
+    - partial fix - mast be enter at error in exec gig_mall_

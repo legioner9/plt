@@ -1,0 +1,5 @@
+#>exl
+# ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec_fix.exl
+#? create fix
+
+eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}
