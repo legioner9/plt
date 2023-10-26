@@ -12,7 +12,7 @@ cd "${idir}" || {
 
 >res
 
-cr_tst_dir_ <dat &>>res
+# cr_tst_dir_ <dat &>>res
 
 #{body_sh}
 #?-------------------------------------

@@ -113,3 +113,7 @@ LNGF:
 RTFN: parr3e_ parr3e_c_ parr3e_g_
 {rtfn}
 .
+{exam}
+.
+{manf}
+.

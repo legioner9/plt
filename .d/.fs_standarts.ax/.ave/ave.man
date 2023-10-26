@@ -1,0 +1,1 @@
+# start ave.sh from root dir

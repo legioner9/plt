@@ -117,3 +117,7 @@ LNGF:
 RTFN: s3parr_ s3parr_c_ s3parr_g_
 {rtfn}
 .
+{exam}
+.
+{manf}
+.
