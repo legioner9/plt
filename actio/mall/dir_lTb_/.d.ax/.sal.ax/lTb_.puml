@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> lTb_ 
+farg2e2_ -> lTb_
+echo_deb_ -> lTb_
+lTb_ -> lTb_:is_num
+lTb_ -> lTb_:exit_err_lTb_
+lTb_ -> lTb_:exit_reg_lTb_
+lTb_ -> lTb_:unset_autoargs_lTb_
+' {wrap_fn}
+' fnn o-> lTb_
+' {body_fn}
+@enduml

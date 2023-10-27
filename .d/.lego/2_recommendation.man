@@ -52,7 +52,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 ## RCM_PIN
 - path is name -  semanicaly - exa: <name>.<ext> <-> .ext/name/
 
-## RCM_MIDNUM
+## RCM_NAMEFN
 - short before after N
   - e : echo
   - s : string
@@ -63,7 +63,6 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
   - parr : ptr to arr
   - narg : number of arguments 
   - m : menu
-  - tst : tst flow
 - naming contane N name 
   - ...2... to 
     - d2... file in dir pipe to ...
@@ -74,6 +73,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
   - ...4... treat dowble lst 
   - ...5... treat dowble lst without ^# string or ^_ path
   - ...D... delit (exa: fDs)
+  - ...T... tst 
   
 
 ## RCM_NHOE

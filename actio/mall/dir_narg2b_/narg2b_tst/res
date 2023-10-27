@@ -1,0 +1,27 @@
+narg2b_c_ 2 2 2
+[0;36m--- ret2e() narg2b_c_ 2 2 2 ---[0m
+0
+narg2b_c_ 1 2 2
+[0;36m--- ret2e() narg2b_c_ 1 2 2 ---[0m
+1
+narg2b_c_ 1 1 2
+[0;36m--- ret2e() narg2b_c_ 1 1 2 ---[0m
+0
+narg2b_c_ 2 1 2
+[0;36m--- ret2e() narg2b_c_ 2 1 2 ---[0m
+0
+narg2b_c_ 2 1 1
+[0;36m--- ret2e() narg2b_c_ 2 1 1 ---[0m
+1
+narg2b_c_ 1 1 1
+[0;36m--- ret2e() narg2b_c_ 1 1 1 ---[0m
+0
+narg2b_c_ 1 1
+[0;36m--- ret2e() narg2b_c_ 1 1 ---[0m
+1
+narg2b_c_ 1 
+[0;36m--- ret2e() narg2b_c_ 1 ---[0m
+1
+narg2b_c_
+[0;36m--- ret2e() narg2b_c_ ---[0m
+1

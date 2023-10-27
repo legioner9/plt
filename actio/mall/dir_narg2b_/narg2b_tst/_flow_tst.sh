@@ -9,8 +9,25 @@ cd "${idir}" || {
 }
 #?----------------------------------------------------
 #?-------------------------------------
-
 : >res
+echo "narg2b_c_ 2 2 2" >>res
+ret2e narg2b_c_ 2 2 2 >>res
+echo "narg2b_c_ 1 2 2" >>res
+ret2e narg2b_c_ 1 2 2 >>res
+echo "narg2b_c_ 1 1 2" >>res
+ret2e narg2b_c_ 1 1 2 >>res
+echo "narg2b_c_ 2 1 2" >>res
+ret2e narg2b_c_ 2 1 2 >>res
+echo "narg2b_c_ 2 1 1" >>res
+ret2e narg2b_c_ 2 1 1 >>res
+echo "narg2b_c_ 1 1 1" >>res
+ret2e narg2b_c_ 1 1 1 >>res
+echo "narg2b_c_ 1 1" >>res
+ret2e narg2b_c_ 1 1 >>res
+echo "narg2b_c_ 1 " >>res
+ret2e narg2b_c_ 1 >>res
+echo "narg2b_c_" >>res
+ret2e narg2b_c_ >>res
 
 # cr_tst_dir_ <dat &>>res
 
