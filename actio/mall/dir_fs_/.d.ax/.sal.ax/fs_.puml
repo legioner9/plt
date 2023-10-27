@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> fs_ 
+farg2e2_ -> fs_
+echo_deb_ -> fs_
+fs_ -> fs_:is_num
+fs_ -> fs_:exit_err_fs_
+fs_ -> fs_:exit_reg_fs_
+fs_ -> fs_:unset_autoargs_fs_
+' {wrap_fn}
+' fnn o-> fs_
+' {body_fn}
+@enduml
