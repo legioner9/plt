@@ -59,7 +59,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
   - d : directory
   - f : file
   - l : list
-  - b : bulian
+  - b : boolian
   - parr : ptr to arr
   - narg : number of arguments 
   - m : menu

@@ -1,0 +1,6 @@
+ARGS:
+    \$1 
+
+CNTLS:
+    --_lst_ext file.lst with extends
+    --_lst_dir file.lst with dir for exec tst file.ext
