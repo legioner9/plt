@@ -59,8 +59,11 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
   - d : directory
   - f : file
   - l : list
+  - b : bulian
   - parr : ptr to arr
+  - narg : number of arguments 
   - m : menu
+  - tst : tst flow
 - naming contane N name 
   - ...2... to 
     - d2... file in dir pipe to ...

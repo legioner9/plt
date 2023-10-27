@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> narg2b_ 
+farg2e2_ -> narg2b_
+echo_deb_ -> narg2b_
+narg2b_ -> narg2b_:is_num
+narg2b_ -> narg2b_:exit_err_narg2b_
+narg2b_ -> narg2b_:exit_reg_narg2b_
+narg2b_ -> narg2b_:unset_autoargs_narg2b_
+' {wrap_fn}
+' fnn o-> narg2b_
+' {body_fn}
+@enduml
