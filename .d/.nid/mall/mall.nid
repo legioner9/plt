@@ -218,6 +218,14 @@ if [ "_prp" == "$1" ]; then
     "${_ehh}" ${_el_f_prp_} --_name_for_fn ${FNN} --_dir_for_fns ${dir_fns_} --_prp "$2"
     return 0
 fi
+
+if [ "_tag" == "$1" ]; then
+    echo "cat tag.insert"
+fi
+
+if [ "_tag_add" == "$1" ]; then
+    echo "exec tag2f_ --_gtag_file .d/.tag/mall/mall.tag --_ltag <fn>/<fn>.d.h/tags.insert"
+fi
 #{cntl_default}
 #{#cntl_help}
 #{ctrl_args}
