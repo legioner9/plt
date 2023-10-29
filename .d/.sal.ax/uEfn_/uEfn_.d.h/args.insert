@@ -1,0 +1,13 @@
+ARGS:
+    \$1 
+
+CNTLS:
+    strong:
+        --_frm - name of frame (main, tag ...)
+    once:
+        presentation metods
+        -_e echo
+        -_m menu
+
+    optional:
+        --_grp - word for grep

@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> uEfn_ 
+farg2e2_ -> uEfn_
+echo_deb_ -> uEfn_
+uEfn_ -> uEfn_:is_num
+uEfn_ -> uEfn_:exit_err_uEfn_
+uEfn_ -> uEfn_:exit_reg_uEfn_
+uEfn_ -> uEfn_:unset_autoargs_uEfn_
+' {wrap_fn}
+' fnn o-> uEfn_
+' {body_fn}
+@enduml

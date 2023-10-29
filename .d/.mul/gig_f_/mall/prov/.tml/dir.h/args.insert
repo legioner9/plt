@@ -2,4 +2,10 @@ ARGS:
     \$1 
 
 CNTLS:
-    --_
+    strong:
+        --_
+        -_
+
+    once(1InAll):
+
+    optional:    

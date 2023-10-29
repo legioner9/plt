@@ -54,10 +54,12 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
 
 ## RCM_NAMEFN
 - short before after N
+  - u : univers - all of that
   - e : echo
   - s : string
   - d : directory
   - f : file
+  - fn : functions
   - l : list
   - b : boolian
   - parr : ptr to arr
@@ -74,6 +76,7 @@ for exec function use pointer_not_idetifier, define pointer in .frc (as .d/.frc/
   - ...5... treat dowble lst without ^# string or ^_ path
   - ...D... delit (exa: fDs)
   - ...T... tst 
+  - ...E... [E]lectus - catalog request 
   
 
 ## RCM_NHOE
