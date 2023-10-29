@@ -220,11 +220,11 @@ if [ "_prp" == "$1" ]; then
 fi
 
 if [ "_tag" == "$1" ]; then
-    echo "cat tag.insert"
+    echo "cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
 fi
 
 if [ "_tag_add" == "$1" ]; then
-    echo "exec tag2f_ --_gtag_file .d/.tag/mall/mall.tag --_ltag <fn>/<fn>.d.h/tags.insert"
+    echo "exec tag2f_ --_gtag_file ${PLT_PATH}/.d/.tag/mall/mall.tag --_ltag ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
 fi
 #{cntl_default}
 #{#cntl_help}

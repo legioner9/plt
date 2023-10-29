@@ -5,6 +5,8 @@
 .                -h : this 
 .                _cr_h : . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh
 .                _edit_h : ${_edit_}" "${FN_SAL_DIR}/${FNN}.d.h
+.                _tag : cat "${FN_SAL_DIR}/${FNN}.d.h/tags.insert
+.                _tag_add : "${FN_SAL_DIR}/${FNN}.d.h/tags.insert
 .                _go : ${_edit_} ${FN_DIR}
 .                _sal : ${_edit_} ${PATH_SAL_AX_DIR}/$FNN
 .                _list : ${_edit_} ${FN_DIR}/${FNN}.list
