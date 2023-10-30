@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> uE_ 
+farg2e2_ -> uE_
+echo_deb_ -> uE_
+uE_ -> uE_:is_num
+uE_ -> uE_:exit_err_uE_
+uE_ -> uE_:exit_reg_uE_
+uE_ -> uE_:unset_autoargs_uE_
+' {wrap_fn}
+' fnn o-> uE_
+' {body_fn}
+@enduml

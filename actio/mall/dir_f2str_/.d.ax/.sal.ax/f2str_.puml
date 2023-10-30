@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> f2str_ 
+farg2e2_ -> f2str_
+echo_deb_ -> f2str_
+f2str_ -> f2str_:is_num
+f2str_ -> f2str_:exit_err_f2str_
+f2str_ -> f2str_:exit_reg_f2str_
+f2str_ -> f2str_:unset_autoargs_f2str_
+' {wrap_fn}
+' fnn o-> f2str_
+' {body_fn}
+@enduml

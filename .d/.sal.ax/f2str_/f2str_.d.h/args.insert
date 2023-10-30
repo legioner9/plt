@@ -1,0 +1,11 @@
+ARGS:
+    \$1 file to string
+
+CNTLS:
+    strong:
+        --_
+        -_
+
+    once(1InAll):
+
+    optional:    

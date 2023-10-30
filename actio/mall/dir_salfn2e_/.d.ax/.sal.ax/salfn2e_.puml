@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> salfn2e_ 
+farg2e2_ -> salfn2e_
+echo_deb_ -> salfn2e_
+salfn2e_ -> salfn2e_:is_num
+salfn2e_ -> salfn2e_:exit_err_salfn2e_
+salfn2e_ -> salfn2e_:exit_reg_salfn2e_
+salfn2e_ -> salfn2e_:unset_autoargs_salfn2e_
+' {wrap_fn}
+' fnn o-> salfn2e_
+' {body_fn}
+@enduml
