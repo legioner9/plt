@@ -58,9 +58,22 @@ fi
 #?---------------------------------------------
 #?---------------------------------------
 
-for item in $(f2e ${PLT_PATH}/.d/.opus/fn_sal.opus); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-
+for item0 in $(f2e ${PLT_PATH}/.d/.opus/fn_sal.opus); do
+    # echo -e "${GREEN}\$item0 = $item0 ${NORMAL}" #print variable
+    for item1 in $(dd2e ${item0}); do
+        # echo -e "${GREEN}\$item1 = $item1 ${NORMAL}" #print variable
+        h_dir="${item0}/${item1}/${item1}.d.h"
+        e_dir="${item0}/${item1}"
+        if [ -f ${h_dir}/name.insert ]; then
+            name_str="$(cat "${h_dir}"/name.insert)"
+        fi
+        if [ -f ${h_dir}/main.insert ]; then
+            main_str="$(cat "${h_dir}"/main.insert)"
+        fi
+        echo -e "
+${BLUE}file://${e_dir}${NORMAL}
+${GREEN}${name_str:5}${NORMAL} ${RED}${main_str:5}${NORMAL}"
+    done
 done
 
 #?---------------------------------------

@@ -1,1 +1,1 @@
-MAIN: wrap dpl_l2d_ 
+MAIN: wrap dpl_l2d_ : list: file://${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2 dirtar: file://${PLT_PATH}/.d/.repo/bcp_sys_ 

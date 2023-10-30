@@ -24,7 +24,7 @@ Selfgenerated, selftested, selfdocumented, selfcatalogizated wrapper for custom 
 - <name_fn>\_c_ : <name_fn> without API - faster than <name_fn>
 - use function name only as variables from .d/.frc/a.frc - option to select version for all PLT
 
-EXAMPLE:
+Explicato:
 
     $ cat edit_vi_.sh
         #!/bin/bash
@@ -39,8 +39,16 @@ EXAMPLE:
         }
 
     $ cat a.frc
+        _edit_="edit_mc_"
+
+    $ cat any_fn.sh
+        #!/bin/bash
+        any_fn(){
+          ${_edit_} $1
+        }
         
-        
+    
+      
         
 
         
