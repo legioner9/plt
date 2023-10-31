@@ -1,0 +1,19 @@
+    $ cat variables_for_procedure.lst
+        variable_for_procedure="value_of_variable"
+
+    $ cat procedure.sh
+        #!/bin/bash
+        echo "${variable_for_procedure}"
+
+    $ cat fn_main_procedure.sh
+        ...
+        for item in $(cat variables_for_procedure.lst);do
+            eval local "${item}"
+        done
+        if [[ -f "procedure.sh" ]];then
+            source procedure.sh
+        fi
+        ...
+
+    $ source fn_main_procedure.sh
+        value_of_variable

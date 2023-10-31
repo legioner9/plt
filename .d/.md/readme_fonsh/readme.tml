@@ -24,59 +24,16 @@ FonSh is the system selfgenerated, selftested, selfdocumented, selfcatalogizated
   - fefine local variables in main process for procsdure
   - exec procsdure in main process
 
-[Explicato](/home/st/REPOBARE/_repo/plt/.d/.md/readme_fonsh/explicato/1.insert)
-
-    $ cat variables_for_procedure.lst
-        variable_for_procedure="value_of_variable"
-
-    $ cat procedure.sh
-        #!/bin/bash
-        echo "${variable_for_procedure}"
-
-    $ cat fn_main_procedure.sh
-        ...
-        for item in $(cat variables_for_procedure.lst);do
-            eval local "${item}"
-        done
-        if [[ -f "procedure.sh" ]];then
-            source procedure.sh
-        fi
-        ...
-
-    $ source fn_main_procedure.sh
-        value_of_variable
-
+[Explicato](explicato/main_proc.insert)
 
 
 
 - fn_c_ : fn without API - faster than fn_
 - use function name only as variables from .d/.frc/a.frc - option to select version for all PLT
 
-Explicato:
+[Explicato](explicato/inject_value.insert)
 
-    $ cat edit_vi_.sh
-        #!/bin/bash
-        edit_vi_(){
-          vi $1
-        }
-
-    $ cat edit_mc_.sh
-        #!/bin/bash
-        edit_mc_(){
-          mc $1
-        }
-
-    $ cat a.frc
-        _edit_="edit_mc_"
-
-    $ cat any_fn.sh
-        #!/bin/bash
-        any_fn(){
-          ${_edit_} $1
-        }        
-
-    $ ${_edit_} ${path_file}
-
+ 
 {features}
 
 ## Installation

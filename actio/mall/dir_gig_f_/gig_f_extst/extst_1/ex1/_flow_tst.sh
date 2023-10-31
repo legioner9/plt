@@ -24,7 +24,8 @@ ${_ehh} rm -rfv ${PATH_SAL_AX_DIR}/lg1_
 # echo | fo_f_ --_name_fn nnn2_ --_dir_fns ${PLT_PATH}/actio/dir_gig_f_/fo_f_1_extst/extst_1/ex1/_deb/res/ --_flow 1
 
 all_log=${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/log
-echo | ${_gig_f_} --_name_fn lg1_ --_dir_fns ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res --_grad mall --_tail prov -_cr &> ${all_log}
+echo | ${_gig_f_} --_name_fn lg1_ --_dir_fns ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res --_grad mall --_tail prov -_cr
+# echo | ${_gig_f_} --_name_fn lg1_ --_dir_fns ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res --_grad mall --_tail prov -_cr &> ${all_log}
 
 . ${PLT_PATH}/actio/mall/dir_gig_f_/gig_f_extst/extst_1/ex1/_deb/res/dir_lg1_/lg1_.nsc.sh 
 

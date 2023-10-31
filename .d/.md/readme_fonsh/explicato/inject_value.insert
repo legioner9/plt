@@ -1,0 +1,22 @@
+    $ cat edit_vi_.sh
+        #!/bin/bash
+        edit_vi_(){
+          vi $1
+        }
+
+    $ cat edit_mc_.sh
+        #!/bin/bash
+        edit_mc_(){
+          mc $1
+        }
+
+    $ cat a.frc
+        _edit_="edit_mc_"
+
+    $ cat any_fn.sh
+        #!/bin/bash
+        any_fn(){
+          ${_edit_} $1
+        }        
+
+    $ ${_edit_} ${path_file}
