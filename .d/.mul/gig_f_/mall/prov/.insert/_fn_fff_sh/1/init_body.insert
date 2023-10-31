@@ -34,6 +34,7 @@ echo -e "${GREEN}\\\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 
 fi
 
+#! ----- START COMMENT IF NOT USED ${_garg2e2_} -----
 # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
 if ! ${_garg2e2_} "${ARGS[@]}"; then
     ${_plt_exit} " {name_fn_} return 1: ${FNLOCK}"
@@ -51,6 +52,8 @@ for strex in $(${_garg2e2_} "${ARGS[@]}"); do
     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     eval local $strex
 done
+
+#! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
 
 
 for local_var_fn in $(f2e "{dir_fns_}/dir_{name_fn_}/.d.ax/.sal.ax/{name_fn_}.local.list"); do
