@@ -1,4 +1,4 @@
-[[TOC]]
+
 
 # $\mathscr{FonSh\ erit\ crescere\ a\ fons}$
 
@@ -35,13 +35,7 @@ FonSh is the system selfgenerated, selftested, selfdocumented, selfcatalogizated
 
 ### plt/.d/.nid
 
-#### procedure nid_API
-    plt/.d/.nid/mall/mall.nid 
 
-##### if add condition or variables to mall.nid - add that to mall.cntl or mall.local  
-
-#### enumeration local variables for nid_API
-    plt/.d/.nid/mall/mall.local
 
 #### cntl strings for nid_API
     plt/.d/.nid/mall/mall.cntl
