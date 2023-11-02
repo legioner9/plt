@@ -10,7 +10,29 @@ cd "${idir}" || {
 #?----------------------------------------------------
 #?-------------------------------------
 
-: >res
+    res_actio=${PLT_PATH}/actio/mall/dir__tmp_
+    res_sal=${PLT_PATH}/.d/.sal.ax/_tmp_
+
+    pre_actio=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.self_tst/dir_1/dis/res_exa_1/actio/dir__tmp_
+    pre_sal=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.self_tst/dir_1/dis/res_exa_1/sal/_tmp_
+    # /home/st/REPOBARE/_repo/plt/actio/mall/dir_gig_mall_v2_/.d.ax/.self_tst/dir_1/dis/res_exa_1
+
+    rm -rfv ${res_actio}
+    rm -rfv ${res_sal}
+
+    gig_mall_v2_ _tmp_
+
+    if ! diff ${res_actio} ${pre_actio} >/dev/null; then
+        plt_pause "EXEC_FAIL diff file://${res_actio} file://${pre_actio}"
+    else
+        echo -e "${BLUE}--- EXEC_TRUE diff file://${res_actio} file://${pre_actio} ---${NORMAL}" #sistem info mesage
+    fi
+
+    if ! diff ${res_sal} ${pre_sal} >/dev/null; then
+        plt_pause "EXEC_FAIL diff file://${res_sal} file://${pre_sal}"
+    else
+        echo -e "${BLUE}--- EXEC_TRUE diff file://${res_sal} file://${pre_sal} ---${NORMAL}" #sistem info mesage
+    fi
 
 # cr_tst_dir_ <dat &>>res
 

@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> snp_ 
+farg2e2_ -> snp_
+echo_deb_ -> snp_
+snp_ -> snp_:is_num
+snp_ -> snp_:exit_err_snp_
+snp_ -> snp_:exit_reg_snp_
+snp_ -> snp_:unset_autoargs_snp_
+' {wrap_fn}
+' fnn o-> snp_
+' {body_fn}
+@enduml

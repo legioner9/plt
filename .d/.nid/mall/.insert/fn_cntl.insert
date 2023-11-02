@@ -28,6 +28,9 @@
 .                _extst<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/exec.extst
 .            steps extst_1/ex<num>_tst
 .                _exdeb<num> . ${FN_DIR}/${FNN}extst/extst_1/ex<num>_tst/_flow_tst.sh
+.            inner tst
+.                _dis . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis/exec.distst
+.                _dis2 . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis2/exec.distst
 .               
 .               _cntl2e cat ${PATH_NID_DIR}/mall/mall.cntl
 .

@@ -38,7 +38,7 @@ _prs_f="prs_f"
 _edit_="edit_"
 _c_up="c_up"
 _is_num="is_num"
-_abs_path="abs_path"
+_abs_path="abs_path_v2"
 _is_amount_arg="is_amount_arg"
 _puml_="puml_"
 _echo_deb_="echo_deb_"
@@ -53,7 +53,7 @@ _bckp_list_="bckp_list_v2_"
 #? 
 
 _gig_f_="gig_f_"
-_gig_mall_="gig_mall_"
+_gig_mall_="gig_mall_v2"
 _gig_prim_="gig_prim_"
 
 #?

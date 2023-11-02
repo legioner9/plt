@@ -1,5 +1,5 @@
-#${FONSH_PATH}/actio
-#${PLT_PATH}/actio
+${FONSH_PATH}/actio
+${PLT_PATH}/actio
 #${PATH_COMMUNIS}/Deploy_store/.qa
 
 

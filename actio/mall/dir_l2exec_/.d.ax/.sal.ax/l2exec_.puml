@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> l2exec_ 
+farg2e2_ -> l2exec_
+echo_deb_ -> l2exec_
+l2exec_ -> l2exec_:is_num
+l2exec_ -> l2exec_:exit_err_l2exec_
+l2exec_ -> l2exec_:exit_reg_l2exec_
+l2exec_ -> l2exec_:unset_autoargs_l2exec_
+' {wrap_fn}
+' fnn o-> l2exec_
+' {body_fn}
+@enduml

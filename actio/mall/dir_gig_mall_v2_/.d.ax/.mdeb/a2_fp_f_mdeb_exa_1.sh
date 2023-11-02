@@ -73,6 +73,30 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
+
+    res_actio=${PLT_PATH}/actio/mall/dir__tmp_
+    res_sal=${PLT_PATH}/.d/.sal.ax/_tmp_
+
+    pre_actio=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/actio/dir__tmp_
+    pre_sal=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/sal/_tmp_
+
+    # rm -rfv ${res_actio}
+    # rm -rfv ${res_sal}
+
+    # gig_mall_v2_ _tmp_
+
+    if ! diff ${res_actio} ${pre_actio} >/dev/null; then
+        plt_pause "EXEC_FAIL diff ${res_actio} ${pre_actio}"
+    else
+        echo -e "${BLUE}--- EXEC_TRUE diff ${res_actio} ${pre_actio} ---${NORMAL}" #sistem info mesage
+    fi
+
+    if ! diff ${res_sal} ${pre_sal} >/dev/null; then
+        plt_pause "EXEC_FAIL diff ${res_sal} ${pre_sal}"
+    else
+        echo -e "${BLUE}--- EXEC_TRUE diff ${res_sal} ${pre_sal} ---${NORMAL}" #sistem info mesage
+    fi
+
 }
 
 cd "${idir}"

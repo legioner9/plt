@@ -140,8 +140,15 @@ Explicato:
 
 ## Usage
 
+### test all from ${PLT_PATH}/actio, ${FONSH_PATH}/actio
 
+    $ tst_ -echo
 
+### test hard function (inner tst) from list file ${PLT_PATH}/.d/.lst/ltst_/hard_tst.lst
+
+    $ ltst_
+
+#### mast inner tst: ${_gig_mall_} _dig
 
 ### Main Usage function
 

@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.self_tst/dir_1/dis/exec._distst 
+filename=${PLT_PATH}/actio/mall/dir__tmp_/_tmp_tst/exec._tst 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 

@@ -185,6 +185,18 @@ if [ "_deb" == "$1" ]; then
     return 0
 fi
 
+if [ "_dis" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+    . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis/exec.distst
+    return 0
+fi
+
+if [ "_dis2" == "$1" ]; then
+    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+    . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis2/exec.distst
+    return 0
+fi
+
 if [ "_mdeb" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
     echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh $2 ---${NORMAL}" #start files

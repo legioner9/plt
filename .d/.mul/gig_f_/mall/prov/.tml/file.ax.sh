@@ -24,30 +24,6 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 }
 
-{name_fn_}c_() {
-
-    local ratis=1
-
-    #{def_const}
-
-    #{ctrl_args}
-
-    #{init_body_c}
-
-}
-
-{name_fn_}g_() {
-
-    local ratis=2
-
-    #{def_const}
-
-    #{ctrl_args}
-
-    #{init_body_g}
-
-}
-
 # {name_fn_} @
 
 unset filename
