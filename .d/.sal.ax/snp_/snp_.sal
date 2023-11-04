@@ -69,6 +69,7 @@ if [ -z "${ARGS0}" ]; then
 else
     # create file from  --name, --dir_insert[, --tml]
     ptr_path=$(${_abs_path} "${PPWD}" "ARGS0") #ptr args
+    
 
 fi
 

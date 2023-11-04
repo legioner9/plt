@@ -3,9 +3,11 @@ ARGS:
 
 CNTLS:
     strong:
-        --_
-        -_
+        --_dir dir with {inserter}.insert
+            if --_file not exist
+            
 
     once(1InAll):
 
     optional:    
+        --_file
