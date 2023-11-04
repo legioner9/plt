@@ -4,8 +4,11 @@ vvv
 list_strong_cntls
 
 p_arr
+sum_1
+sum_2
 
 path_src
+dir_src
 node_src
 
 path_tar

@@ -106,11 +106,14 @@ for item in $(f2e "${list_}"); do
         return 1
     }
 
-    [ -f "${path_src}" ] || [ -d "${path_src}" ] || {
-        plt_info "from ${is_fn}  NOTFILE or NOTDIR : \${path_src}=${path_src} :: be return 1"
-        return 1
-    }
-
+    #! comment start
+    # echo -e "${BLUE}--- [ -f ${path_src} ] || [ -d ${path_src} ] ---${NORMAL}" #sistem info mesage
+    # [ -f "${path_src}" ] || [ -d "${path_src}" ] || {
+    #     plt_info "from ${is_fn}  NOTFILE or NOTDIR : \${path_src}= file://${path_src} :: be return 1"
+    #     return 1
+    # }
+    #! comment end
+    
     # cd "${dir_src}"
     # tar -czvf f1._tmp_ f1
     # mv -vf f1.tmp "${dir_tar}"/f1.tar.gz
