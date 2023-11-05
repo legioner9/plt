@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> pre_zip_git_ 
+farg2e2_ -> pre_zip_git_
+echo_deb_ -> pre_zip_git_
+pre_zip_git_ -> pre_zip_git_:is_num
+pre_zip_git_ -> pre_zip_git_:exit_err_pre_zip_git_
+pre_zip_git_ -> pre_zip_git_:exit_reg_pre_zip_git_
+pre_zip_git_ -> pre_zip_git_:unset_autoargs_pre_zip_git_
+' {wrap_fn}
+' fnn o-> pre_zip_git_
+' {body_fn}
+@enduml
