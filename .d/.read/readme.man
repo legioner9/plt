@@ -15,8 +15,25 @@ cd <root_dir>
 
 #### telegram
 
+### mm_dogit
+25 (edit clr)
+11 (CARPPAFCP CLR)
+
 ### hot keys:
 
 #### mate-terminal F2
 #### codium F3
 #### yandex-browser-stable F4
+
+ 
+
+### mm_tsf_fsf_ 
+#### codium 
+#### code 
+#### sitelocal
+
+
+
+### mm_dpl
+
+

@@ -4,10 +4,11 @@ ARGS:
 CNTLS:
     strong:
         --_dir dir with {inserter}.insert
-            if --_file not exist
-            
+            if --_file not exist: echo info about .insert files
+            if --_file exist: insert to that file all .insert files optional
+
 
     once(1InAll):
 
     optional:    
-        --_file
+        --_file file with {inserter}
