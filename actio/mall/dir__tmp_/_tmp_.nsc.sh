@@ -34,10 +34,9 @@ _tmp_() {
     local local_arg_fn_arr=()
     local local_env_fn
     local local_env_fn_arr=()
-    local local_pts_fn
-    local local_pts_fn_arr=()
-    local local_var_pts_fn
-    local local_var_pts_fn_arr=()
+    local local_def_pts_fn
+    local local_def_pts_fn_arr=()
+
     #* ------------
 
     echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
@@ -100,14 +99,17 @@ _tmp_() {
     fi
 
     if [ -f "${pts_:-0}" ]; then
-        for local_pts_fn in $(f2e "${pts_}"); do
-            # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
+        for local_def_pts_fn in $(f2e "${pts_}"); do
+            echo -e "${GREEN}\$local_def_pts_fn = $local_def_pts_fn${NORMAL}" #print variable
 
-            eval local val_"${local_pts_fn}"=\$"${local_pts_fn}"
+            eval local val_"${local_def_pts_fn}"=\$"${local_def_pts_fn}"
 
-            local_pts_fn_arr+=("${local_pts_fn}")
-            local_var_pts_fn_arr+=("${local_var_pts_fn}")
+            eval local elem="${local_def_pts_fn}=\$${local_def_pts_fn}"
+
+            local_def_pts_fn_arr+=("${elem}")
+
         done
+
     fi
 
     #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh

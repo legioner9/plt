@@ -33,8 +33,8 @@ echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     
 #* +++++++++++
 echo -e "${GREEN}\${local_arg_fn_arr[@]} = ${local_arg_fn_arr[*]}${NORMAL}"
 echo -e "${GREEN}\${local_env_fn_arr[@]} = ${local_env_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${local_pts_fn_arr[@]} = ${local_pts_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${local_var_pts_fn_arr[@]} = ${local_var_pts_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${local_def_pts_fn_arr[@]} = ${local_def_pts_fn_arr[*]}${NORMAL}"
+
 echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 #* -------------
 
@@ -74,7 +74,7 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
-
+echo 4 "${val_num}"
 
 #?---------------------------------------
 #?---------------------------------------------
