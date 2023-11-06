@@ -26,8 +26,20 @@ _tmp_() {
     local FNN=_tmp_
     local local_var_wrap
     local local_var_wrap_arr=()
-    local local_var_fn 
+    local local_var_fn
     local local_var_fn_arr=()
+
+    #* ------------
+    local local_arg_fn
+    local local_arg_fn_arr=()
+    local local_env_fn
+    local local_env_fn_arr=()
+    local local_pts_fn
+    local local_pts_fn_arr=()
+    local local_var_pts_fn
+    local local_var_pts_fn_arr=()
+    #* ------------
+
     echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
     if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
         for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
@@ -68,6 +80,51 @@ _tmp_() {
         eval local "$local_var_fn"
         local_var_fn_arr+=("${local_var_fn}")
     done
+
+    #* -------------
+
+    if [ -f "${obc_:-0}" ]; then
+        for local_arg_fn in $(f2e "${obc_}"); do
+            # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
+            eval local "$local_arg_fn"
+            local_arg_fn_arr+=("${local_arg_fn}")
+        done
+    fi
+
+    if [ -f "${aer_:-0}" ]; then
+        for local_env_fn in $(f2e "${obc_}"); do
+            # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
+            eval local "$local_env_fn"
+            local_env_fn_arr+=("${local_env_fn}")
+        done
+    fi
+
+    if [ -f "${pts_:-0}" ]; then
+        for local_pts_fn in $(f2e "${pts_}"); do
+            # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
+
+            eval local val_"${local_pts_fn}"=\$"${local_pts_fn}"
+
+            local_pts_fn_arr+=("${local_pts_fn}")
+            local_var_pts_fn_arr+=("${local_var_pts_fn}")
+        done
+    fi
+
+    #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+    if [ -n "${ppr_}" ]; then
+        eval local val_ppr=\$${ppr_}
+    fi
+
+    # [obc] obiectum      - [аргументы] объект
+    # [sub] subiectum     - [процедура] субъект
+    # [aer] aer           - [окружение] воздух
+    # [pts]               - [pointers]
+    # [ppr] productum     - [глобальная ссылка на результат] продукт
+
+    # [sag] sagitta       - [набор файлов] стрела
+
+    #* -------------
+
     for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
         # echo -e "${GREEN}$local_var_wrap = $local_var_wrap${NORMAL}" #print variable
         eval local "$local_var_wrap"

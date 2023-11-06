@@ -77,7 +77,13 @@ ${NORMAL}"
     #? up _tmp_
     . ${PLT_PATH}/actio/mall/dir__tmp_/_tmp_.nsc.sh
 
-    ehh _tmp_ 
+    local num=2
+
+    local pts_list_tmp=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/_deb/pts_for_tmp_.lst
+
+    ehh _tmp_ --_pts ${pts_list_tmp}
+
+    echo ${num}
 
 }
 
