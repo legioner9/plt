@@ -1,0 +1,1 @@
+eval local obc_1=${ARG0}

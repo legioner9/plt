@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a2_fp_f_mdeb_exa_1.sh"
+filename="${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a3_fp_f_mdeb_flw1_for_tmp.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a2_fp_f_mdeb_exa_1() {
+a3_fp_f_mdeb_flw1_for_tmp() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a2_fp_f_mdeb_exa_1() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a2_fp_f_mdeb_exa_1.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a3_fp_f_mdeb_flw1_for_tmp.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -74,28 +74,10 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    res_actio=${PLT_PATH}/actio/mall/dir__tmp_
-    res_sal=${PLT_PATH}/.d/.sal.ax/_tmp_
+    #? up _tmp_
+    . ${PLT_PATH}/actio/mall/dir__tmp_/_tmp_.nsc.sh
 
-    pre_actio=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/actio/dir__tmp_
-    pre_sal=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/sal/_tmp_
-
-    rm -rfv ${res_actio}
-    rm -rfv ${res_sal}
-
-    gig_mall_v2_ _tmp_
-
-    if ! diff ${res_actio} ${pre_actio} >/dev/null; then
-        plt_pause "EXEC_FAIL diff ${res_actio} ${pre_actio}"
-    else
-        echo -e "${BLUE}--- EXEC_TRUE diff ${res_actio} ${pre_actio} ---${NORMAL}" #sistem info mesage
-    fi
-
-    if ! diff ${res_sal} ${pre_sal} >/dev/null; then
-        plt_pause "EXEC_FAIL diff ${res_sal} ${pre_sal}"
-    else
-        echo -e "${BLUE}--- EXEC_TRUE diff ${res_sal} ${pre_sal} ---${NORMAL}" #sistem info mesage
-    fi
+    ehh _tmp_ 
 
 }
 
