@@ -16,23 +16,23 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
 # list_strong_cntls=(?str_ ?del_ ?parr_)
@@ -58,7 +58,67 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
+if [ -z "${ARGS0}" ]; then
+    plt_exit "in tag2e_ ERR_AMOUNT_ARGS : no args : return 1"
+    return 1
+fi
 
+echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+arr=()
+res=()
+# arr+=("leave menu")
+# res+=("echo bye)))")
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+${ARGS0} _tag
+
+# if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+#     num_res=$((${ARGS1} - 1))
+#     ${res[${num_res}]}
+#     return 0
+# fi
+
+arr=($(uE_ tag))
+PS3="eligendi actiones: "
+select item1 in ${arr[@]}; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item1} == ${arr[$i]} ]]; then
+
+            echo "${item1} try add"
+            file_tag=${PLT_PATH}/.d/.sal.ax/${ARGS0}/${ARGS0}.d.h/tags.insert
+
+            if [ -f ${file_tag} ]; then
+
+                echo -e "${BLUE}---  grep -w ${item1} ${file_tag} ---${NORMAL}" #sistem info mesage
+                if ! grep -w "${item1}" "${file_tag}" >/dev/null; then
+                    ${ARGS0} _tag
+                    plt_pause "DO? add tag '${item1}' to '${file_tag}'"
+                    echo -e "${HLIGHT}--- echo ${item1} >>${file_tag} ---${NORMAL}" #start files
+                    echo "${item1}" >>"${file_tag}"
+                    ${ARGS0} _tag
+                else
+                    plt_info "tag '${item1}' already exist for '${ARGS0}'"
+                fi
+
+            else
+                plt_exit "in tag2e_ NOT_FILE : ${file_tag} return 1"
+                return 1
+            fi
+            ${FNN} $@
+        fi
+        if [[ ${item1} == ${arr[0]} ]]; then
+            ${res[$i]}
+        fi
+    done
+done
+#{zzz20}
 
 #?---------------------------------------
 #?---------------------------------------------

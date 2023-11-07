@@ -1,6 +1,5 @@
 ARGS:
     \$1 name_fn
-    [, \$2 num of menu]
 
 CNTLS:
     strong:

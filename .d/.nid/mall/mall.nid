@@ -233,6 +233,7 @@ fi
 
 if [ "_tag" == "$1" ]; then
     echo "cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
+    cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert
 fi
 
 if [ "_tag_add" == "$1" ]; then
