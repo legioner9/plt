@@ -1,5 +1,5 @@
-# search for @tag
+# search for @tag , see: "foo\|bar"
     $ uE_ | grep -w -B 3 @tag
-    
+
 # echo all unique tags
     $ uE_ tag

@@ -85,8 +85,37 @@ ${CYAN}${tags_str}${NORMAL}"
 fi
 
 if [ "${ARGS0}" == "tag" ]; then
-    echo "tag"
+
+    all_tag_file=${PLT_PATH}/.d/.sal.ax/uE_/uE_.d.repo/all_tags.list
+    : >"${all_tag_file}"
+
+    for item0 in $(f2e ${PLT_PATH}/.d/.opus/fn_sal.opus); do
+
+        for item1 in $(dd2e ${item0}); do
+
+            h_dir="${item0}/${item1}/${item1}.d.h"
+            e_dir="${item0}/${item1}"
+
+            if [ -f ${h_dir}/tags.insert ]; then
+                for item2 in $(cat "${h_dir}"/tags.insert); do
+
+                    if ! [ "${item2}" == "TAGS:" ]; then
+                        if ! grep -w "${item2}" "${all_tag_file}" >/dev/null; then
+                            # echo 0 "${item2}"
+                            echo "${item2}" >>"${all_tag_file}"
+                        fi
+                    fi
+                done
+            fi
+
+        done
+
+    done
+    cat "${all_tag_file}"
+    return 0
+
 fi
+
 #?---------------------------------------
 #?---------------------------------------------
 #?--------------------------------------------------------

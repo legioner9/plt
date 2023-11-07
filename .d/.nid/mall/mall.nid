@@ -236,7 +236,8 @@ if [ "_tag" == "$1" ]; then
 fi
 
 if [ "_tag_add" == "$1" ]; then
-    echo "exec tag2f_ --_gtag_file ${PLT_PATH}/.d/.tag/mall/mall.tag --_ltag ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
+    # echo "exec tag2f_ ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
+    tag2f_ "${FNN}"
 fi
 #{cntl_default}
 #{#cntl_help}
