@@ -1,1 +1,8 @@
+# for sintetic tests 
 
+    $ gig_mall_v2_ _mdeb 6
+
+# for diff test 
+
+    $ gig_mall_v2_ 
+    

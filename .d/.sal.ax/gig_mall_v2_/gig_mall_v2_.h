@@ -73,6 +73,24 @@ TAGS:
 .        CNTL defaut: -_echo, -_debug
 .        CNTL develop: -_develop1, ... for special development mode, NOT to product
 .
+.       --_obc file.list with args
+.       [obc] obiectum      - [аргументы] объект
+.
+.       fn.sal
+.       [sub] subiectum     - [процедура] субъект
+.
+.       --_aer file.list with env to fn
+.       [aer] aer           - [окружение] воздух
+.       
+.       --_pts file.list with pointers 
+.       [pts]               - [pointers]
+.
+.       --_ppr ponter to result
+.       [ppr] productum     - [глобальная ссылка на результат] продукт
+.
+.       --_sag path to dir with sagitta
+.       [sag] sagitta       - [набор файлов] стрела
+.
 .        DEMANDS for IFS wrp_fn:
 .           . dir_${FNN}/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
 .           . dir_${FNN}/_gnr_dir_sys.sh create extst in dir_${FNN}

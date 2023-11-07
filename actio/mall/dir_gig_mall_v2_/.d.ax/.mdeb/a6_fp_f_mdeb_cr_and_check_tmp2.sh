@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a5_fp_f_mdeb_check_tmp2.sh"
+filename="${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a6_fp_f_mdeb_cr_and_check_tmp2.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a5_fp_f_mdeb_check_tmp2() {
+a6_fp_f_mdeb_cr_and_check_tmp2() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a5_fp_f_mdeb_check_tmp2() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a5_fp_f_mdeb_check_tmp2.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/a6_fp_f_mdeb_cr_and_check_tmp2.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -74,36 +74,15 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    #? up _tmp2_
-    . ${PLT_PATH}/actio/mall/dir__tmp2_/_tmp2_.nsc.sh
+plt_pause "that sintetic test gig_mall_v2_
+will be created _tmp2_ function
+and exec that in any flow
+see and compare result"
 
-    echo -e "
-add to body _tmp2_:
-echo 4 \${num}
-echo 5 num
-num=5
-"
-    plt_pause "add that?"
+gig_mall_v2_ _mdeb 4
+gig_mall_v2_ _mdeb 5
 
-    local num=2
-
-    local pts_list_tmp=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/_deb/pts_for_tmp_.lst
-
-    ehh _tmp2_ --_pts ${pts_list_tmp}
-
-    echo ${num}
-
-    echo -e "
-that _tmp2_.sal
-4 2
-5 num
-5"
-
-plt_pause "that result?"
-
-    ehh _tmp2_ _mdeb
 }
-
 cd "${idir}"
 unset filename
 #{post_fn}
