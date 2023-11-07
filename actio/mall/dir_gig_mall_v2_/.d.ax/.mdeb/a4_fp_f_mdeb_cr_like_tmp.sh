@@ -78,10 +78,10 @@ ${NORMAL}"
     pre_actio=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/actio/dir__tmp2_
     pre_sal=${PLT_PATH}/actio/mall/dir_gig_mall_v2_/.d.ax/.mdeb/.tmp/res_exa_1/sal/_tmp2_
 
-        rm -rfv ${res_actio}
+    rm -rfv ${res_actio}
     rm -rfv ${res_sal}
 
-     gig_mall_v2_ _tmp2_
+    gig_mall_v2_ _tmp2_
     #{body_fn}
 }
 

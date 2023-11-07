@@ -1,0 +1,7 @@
+## textus: tree -a -L 2 >> textus.man with notes
+
+├── 3_mall
+│   ├── 1_veri
+│   ├── 2_prov do ligth file.ax.sh 1_veri
+│   ├── 2_prov_v1 full file.ax.sh like 1_veri
+│   ├── 3_absc ?
