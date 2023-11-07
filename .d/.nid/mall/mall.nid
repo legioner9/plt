@@ -220,7 +220,7 @@ if [ "_cntl2e" == "$1" ]; then
     [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"
     echo -e "${BLUE}--- that all cntl from ${PATH_NID_DIR}/mall/mall.cntl ---${NORMAL}" #sistem info mesage       #start files
     # echo -e "${HLIGHT}--- f2e ${PATH_NID_DIR}/mall/mall.cntl ---${NORMAL}"              #start files
-    f2e ${PATH_NID_DIR}/mall/mall.cntl
+    "${_f2e}" ${PATH_NID_DIR}/mall/mall.cntl
     return 0
 fi
 
@@ -232,13 +232,18 @@ if [ "_prp" == "$1" ]; then
 fi
 
 if [ "_tag" == "$1" ]; then
-    echo "cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
+    echo -e "${HLIGHT}--- cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert ---${NORMAL}" #start files
     cat ${FN_SAL_DIR}/${FNN}.d.h/tags.insert
 fi
 
+if [ "_edit_tag" == "$1" ]; then
+    echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/${FNN}.d.h/tags.insert ---${NORMAL}" #start files
+    "${_edit_}" ${FN_SAL_DIR}/${FNN}.d.h/tags.insert
+fi
+
 if [ "_tag_add" == "$1" ]; then
-    # echo "exec tag2f_ ${FN_SAL_DIR}/${FNN}.d.h/tags.insert"
-    tag2f_ "${FNN}"
+    echo -e "${HLIGHT}--- tag2f_ ${FNN} ---${NORMAL}" #start files
+    "${_tag2f_}" "${FNN}"
 fi
 #{cntl_default}
 #{#cntl_help}
