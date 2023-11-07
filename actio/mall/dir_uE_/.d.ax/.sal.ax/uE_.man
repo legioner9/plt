@@ -1,1 +1,5 @@
-
+# search for @tag
+    $ uE_ | grep -w -B 3 @tag
+    
+# echo all unique tags
+    $ uE_ tag

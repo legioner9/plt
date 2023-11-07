@@ -1,6 +1,6 @@
 #>var
 
-eval src="${HOME}/.config/JetBrains/PyCharmCE2023.2" 
+eval src="${HOME}/.config/JetBrains/PyCharm2023.2" 
 eval dest_d="${HOME}/.config/JetBrains" 
 #! usually eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
 eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"

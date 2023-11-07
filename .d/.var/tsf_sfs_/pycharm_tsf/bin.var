@@ -1,8 +1,8 @@
 #>var
 
-eval src="${HOME}/.local/share/JetBrains/PyCharmCE2023.2" 
-eval dest_d="${HOME}/.local/share/JetBrains" 
+eval src="${HOME}/pycharm-2023.2.4" 
+eval dest_d="${HOME}" 
 #! usually eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
 eval bag="/run/media/${USER}/${name_flash}/TSF/${prf}_tsf"
 #! for differ zip files if name_dir is same
-eval notam="local_py"
+eval notam="bin"

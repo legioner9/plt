@@ -62,7 +62,7 @@ arg0=${ARGS[0]}
 ptr_path=
 ptr_path=$(${_abs_path} $PPWD "arg0") #ptr args
 
-echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
+# echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
 
 if ! [ -f "${ptr_path}" ]; then
     plt_exit "in f2str_ ERR_ARG NOT_FILE '${ptr_path}' return 1"
@@ -72,7 +72,7 @@ fi
 res_str=
 
 for item in $(cat "${ptr_path}"); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
     res_str="${res_str} ${item}"
 done
 

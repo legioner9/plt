@@ -1,5 +1,9 @@
 ARGS:
-    \$1 
+    
+    \$1= :
+        DO: stdout all fn standart info (dir_sal, name_fn, main_fn, tags_fn) 
+    \$1=tag :
+        DO: stdout all unique tag in all tags_fn
 
 CNTLS:
     strong:

@@ -73,7 +73,7 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     cd "${PLT_PATH}/actio/mall/dir_f2str_/.d.ax/.mdeb"
-    f2str_c_ .tmp/tags.insert
+    f2str_ .tmp/tags.insert
     #{body_fn}
 }
 
