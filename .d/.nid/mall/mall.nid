@@ -66,8 +66,6 @@ if [ "_edit_h" == "$1" ]; then
 fi
 
 if [ "_cr_h" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".h.sh ---${NORMAL}" #start files
-    echo -e "${HLIGHT}--- . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh ---${NORMAL}"
 
     hf_fn="${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
     h_tml="${PATH_NID_DIR}/mall/.tml/h.tml"
@@ -75,7 +73,8 @@ if [ "_cr_h" == "$1" ]; then
     echo -e "${HLIGHT}--- . ${PATH_EXL_DIR}/mall/cr_fn_h_file.sh ---${NORMAL}" #start files
     echo | . "${PATH_EXL_DIR}/mall/cr_fn_h_file.sh"
 
-    "${_ehh}" cat "${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
+    echo -e "${HLIGHT}--- . "${tst_file}" ---${NORMAL}" #start files
+    cat "${PATH_SAL_AX_DIR}/${FNN}/${FNN}.h"
     echo
     return 0
 fi
@@ -83,7 +82,7 @@ fi
 if [ "_tst" == "$1" ]; then
     tst_file="${FN_DIR}/${FNN}"tst/exec.tst
     if [ -f "${tst_file}" ]; then
-        [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
+        echo -e "${HLIGHT}--- . ${tst_file} ---${NORMAL}" #start files
         . "${tst_file}"
         return $?
     else
@@ -95,8 +94,8 @@ fi
 if [ "_puml" == "$1" ]; then
     puml_file="${FN_DIR}/${FNN}".puml
     if [ -f "${puml_file}" ]; then
-        [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
-        "${_ehh}" "${_puml_}" --_xxf "${puml_file}" -_drawing
+        echo -e "${HLIGHT}--- ${_puml_} ${puml_file} -_drawing ---${NORMAL}" #start files
+        "${_puml_}" "${puml_file}" -_drawing
         return $?
     else
         "${_plt_exit}" "not exist file: ${puml_file} " #exit 1
@@ -107,7 +106,7 @@ fi
 if [ "_flw" == "$1" ]; then
     flw_file="${FN_DIR}/$FNN"tst/_flow_tst.sh
     if [ -f "${flw_file}" ]; then
-        [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
+        echo -e "${HLIGHT}--- . ${flw_file} ---${NORMAL}" #start files
         . "${flw_file}"
         return $?
     else
@@ -152,7 +151,7 @@ fi
 if [ " _extst " == "$1" ]; then
     extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
-        [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
+        echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
         . "${extst_file}"
         return $?
     else
@@ -162,50 +161,48 @@ if [ " _extst " == "$1" ]; then
 fi
 
 if [ "_lst" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
-    "${_ehh}" "${_edit_}" "${FN_DIR}/${FNN}".lst
+    echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/${FNN}.lst ---${NORMAL}" #start files
+    "${_edit_}" "${FN_DIR}/${FNN}".lst
     return 0
 fi
 
 if [ "_go" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR}/ ---${NORMAL}" #start files
-    "${_ehh}" "${_edit_}" ${FN_DIR}
+    echo -e "${HLIGHT}--- ${_edit_} ${FN_DIR} ---${NORMAL}" #start files
+    "${_edit_}" ${FN_DIR}
     return 0
 fi
 
 if [ "_sal" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${_edit_} ${FN_SAL_DIR}/"$FNN".man ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- ${_edit_} ${PATH_SAL_AX_DIR}/$FNN ---${NORMAL}" #start files
     "${_edit_}" "${PATH_SAL_AX_DIR}"/"$FNN"
     return 0
 fi
 
 if [ "_deb" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . "${FN_DEFAULT_DIR}"/default_deb.sh ---${NORMAL}" #start files
     . "${FN_DEFAULT_DIR}"/default_deb.sh
     return 0
 fi
 
 if [ "_dis" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis/exec.distst ---${NORMAL}" #start files
     . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis/exec.distst
     return 0
 fi
 
 if [ "_dis2" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- . ${FN_CONT_DIR}/_default/default_deb.sh ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis2/exec.distst ---${NORMAL}" #start files
     . ${FN_DIR}/.d.ax/.self_tst/dir_1/dis2/exec.distst
     return 0
 fi
 
 if [ "_mdeb" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}"             #start files
     echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh $2 ---${NORMAL}" #start files
     . "${FN_DOTD_DIR}/.mdeb/.cntl/_start_${FNN}mdeb.sh" "$2"
     return 0
 fi
 
 if [ "_mdeb_add" == "$1" ]; then
-    [[ 1 -eq "${verbose}" ]] || echo -e "${HLIGHT}--- ${FNN}mdeb() ---${NORMAL}" #start files
     ${_is_amount_arg} "${NARGS}" 3 3 || {
         plt_exit "NARG_ERR: _mdeb_add \$3 NOT EXIST"
         return 1
@@ -214,6 +211,11 @@ if [ "_mdeb_add" == "$1" ]; then
     echo -e "${HLIGHT}--- . ${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh $2 $3 ---${NORMAL}" #start files
     . "${FN_DOTD_DIR}/.mdeb/.cntl/_cr_${FNN}mdeb_postfix.sh" "$2" "$3"
     return 0
+fi
+
+if [ "_edit_mdeb" == "$1" ]; then
+    echo -e "${HLIGHT}--- ${_edit_} ${FN_DOTD_DIR}/.mdeb ---${NORMAL}" #start files
+    "${_edit_}" "${FN_DOTD_DIR}/.mdeb"
 fi
 
 if [ "_cntl2e" == "$1" ]; then
