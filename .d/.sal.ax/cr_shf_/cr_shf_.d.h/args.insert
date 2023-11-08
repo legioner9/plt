@@ -1,1 +1,2 @@
 ARGS:
+    \$1 file.ext

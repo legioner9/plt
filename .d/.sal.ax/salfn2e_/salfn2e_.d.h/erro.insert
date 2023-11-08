@@ -1,4 +1,0 @@
-ERRO:
-    - type (return > 0 |& stderr |& exit)
-    -
-

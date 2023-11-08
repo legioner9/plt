@@ -73,6 +73,15 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
+
+    plt_pause "up 'fol_', fol_ with dir_fol"
+
+    echo -e "${HLIGHT}--- . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh ---${NORMAL}" #start files
+    . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh
+
+    echo -e "${HLIGHT}--- fol_ --_dir ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/dir_fol ---${NORMAL}" #start files
+    fol_ --_dir ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/dir_fol
+
 }
 
 cd "${idir}"

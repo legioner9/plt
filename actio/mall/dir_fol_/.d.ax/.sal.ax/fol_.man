@@ -1,1 +1,48 @@
+# parent (who use fol_) behaviour:
+    parent(){
+        strong cntls
+        --_vir (virga - dir with .fol - folium)
 
+        fol_ -_E - echo name_vig=(name subdir)  main.fol tag.fol
+        fol_ -_mm
+        fol_ --_name @ -_tag_add @ (add exist tag to name/tag.fol if unique)
+        fol_ -_tag (echo all unique tags)
+
+        fol_ --_name @ -_edit_tags (edit name/tags.fol)
+        fol_ --_name @ -_cat_tags (cat name/tags.fol)
+        fol_ --_name @ -_edit_cont (edit name/cont.fol) => -_{sub1}_{obc} - ({sub2} name/{obc}.fol)
+
+        Control files
+        sub1_sub2_file.lst2=(
+            cat@cat
+            edit@${_edit_}
+        )
+        obc.lst={
+            main
+            tags
+            cont
+        }
+
+        1. {sub1}_{obc}_=1 
+        2. if [ -n "$(lst2_ {sub1} sub1_sub2_file.lst2 "@")" ] && grep -w {obc} obc.lst
+        3. use function: IFS: lst2_ {sub1} sub1_sub2_file.lst2 "@" # echo sub2
+        4. {$(lst2_ {sub1} sub1_sub2_file.lst2) "@" } name/{obc}.fol
+
+        lst2_(){
+            for str1 in $(f2e sub1_sub2_file.lst2);do
+                local in_arr=()
+                IFS='@' read -r -a in_arr <<< "$string"
+            done
+        }
+                
+
+            obc (main|tags|cont) => 
+
+    }
+
+# adapter to flow with .insert
+
+    if -f that.insert 
+        treat that.insert
+    if -d that.insert
+        treat that.insert/cont.fol

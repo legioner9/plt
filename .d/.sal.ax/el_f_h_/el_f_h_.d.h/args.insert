@@ -1,3 +1,0 @@
-ARGS:
-    --_name_for_fn name fn
-    --_dir_for_fns dir with dir_${name_fn_}

@@ -1,4 +1,0 @@
-## struct - discribe gign dir
-
-### that file
-### that dir

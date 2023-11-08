@@ -3,7 +3,7 @@ ARGS:
 
 CNTLS:
     strong:
-        --_
+        --_dir dir with .fol
         -_
 
     once(1InAll):

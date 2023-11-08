@@ -1,1 +1,0 @@
-/home/st/REPOBARE/_repo/plt/.d/.sal.ax/bcp_conf_/bcp_conf_.sal

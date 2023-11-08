@@ -36,6 +36,7 @@ VERS:
 .
 TAGS:
 @catalog
+@tag
 {tags}
 .
 .        CNTLS:
@@ -55,7 +56,7 @@ TAGS:
 .                _tag : cat "${FN_SAL_DIR}/${FNN}.d.h/tags.insert
 .                   DO:
 .                _tag_add : "${FN_SAL_DIR}/${FNN}.d.h/tags.insert
-.                   DO:
+.                   DO: exec tag2f_ ${FNN}
 .                _go : ${_edit_} ${FN_DIR}
 .                   DO:
 .                _sal : ${_edit_} ${PATH_SAL_AX_DIR}/$FNN
@@ -142,6 +143,7 @@ _extst
 _deb 
 _mdeb 
 _mdeb_add 
+_edit_mdeb
 _head 
 _lst 
 _prp 
@@ -150,6 +152,7 @@ _sal
 _cntl2e
 _tag
 _tag_add
+_edit_tag
 _dis
 _dis2
 {all_cntl}

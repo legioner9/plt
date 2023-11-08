@@ -1,4 +1,0 @@
-FLOW: 
-    - insert to replaser in file \${PATH_TML_DIR}/el_f_h_/main.tml
-    - use with inject \${name_fn_} directories from \$PATH_LST_DIR/el_f_h_/main.lst
-    - copy to \${PATH_SAL_AX}/\${name_fn_}/\${name_fn_}.h
