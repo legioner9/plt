@@ -77,7 +77,7 @@ fol_() {
     done
     #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
     #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
-    for var_fn in $(f2e "${PLT_PATH}/actio/mall/dir__tmp_/.d.ax/.sal.ax/_tmp_.local.list"); do
+    for var_fn in $(f2e "${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.sal.ax/fol_.local.list"); do
         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
         eval local "$var_fn"
         var_fn_arr+=("${var_fn}")

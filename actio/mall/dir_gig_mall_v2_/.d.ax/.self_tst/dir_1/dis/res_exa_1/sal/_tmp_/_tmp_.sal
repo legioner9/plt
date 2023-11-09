@@ -27,8 +27,14 @@ echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
 
 echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}" #print variable
+
+echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 
 echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
@@ -53,6 +59,21 @@ echo "that ${FNN}.sal"
 #     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
 #     return 1
 # fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_ 
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
 
 #?--------------------------------------------------------
 #?---------------------------------------------
