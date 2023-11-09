@@ -1,3 +1,7 @@
+# do 1) fol_ -_mm , 2) fol_ --_ram <true_name_ram> , 3) fol_ --_ram <false_name_ram>
+
+    fol_ _mdeb 2 
+
 # words
 
     vis           - суть
@@ -91,3 +95,4 @@
         treat that.insert
     if -d that.insert
         treat that.insert/cont.fol
+
