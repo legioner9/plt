@@ -16,35 +16,35 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
 
-echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
-list_strong_cntls=(dir_)
+list_strong_cntls=(sil_ arb_)
 for item in "${list_strong_cntls[@]}"; do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-    echo "$(eval echo \$"$item")"
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo "$(eval echo \$"$item")"
     if [ -z "$(eval echo \$"$item")" ]; then
         plt_info "from ${FNN}() :: $item is empty :: be return 1"
         return 1
@@ -55,14 +55,23 @@ done
 # sum_1=$((${dpl_:-0} + ${bcp_:-0}))
 # echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
 
-# if [ "${sum_1:-0}" -ne 1 ]; then
-#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
-#     return 1
-# fi
+echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+
+flag_ram_=0
+if [ -n "${ram_}" ]; then
+    flag_ram_=1
+fi
+
+sum_1=$((${mm_:-0} + ${flag_ram_:-0}))
+
+if [ "${sum_1:-0}" -eq 2 ]; then
+    plt_info "from ${FNN}() mm_ and ram_ not be exist simultaneously :: be return 1"
+    return 1
+fi
 
 #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
 #? in nid allready be reseiving value from ppr_
-#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_ 
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
 #? use and assign new value to ppr_
 #   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
 
@@ -78,8 +87,51 @@ done
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
+# ${sil_} ${arb_}
 
+. ${sil_}/paratus.sh
 
+# tree ${arb_}
+
+if [ ${E_:-0} -eq 1 ]; then
+    echo "do E_"
+    return 0
+fi
+
+for item1 in $(cat ${sil_}/vis/ll.lst); do
+    for item2 in $(cat ${sil_}/arb/ll.lst); do
+        eval value1=\$\{${item1}_${item2}_\}
+        if [ ${value1:-0} -eq 1 ]; then
+            sub=${item1}
+            obc=${item2}
+            echo -e "${GREEN}\$sub = $sub${NORMAL}" #print variable
+            echo -e "${GREEN}\$obc = $obc${NORMAL}" #print variable
+        fi
+    done
+done
+
+if [ "${mm_:-0}" -eq 1 ]; then
+    echo -e "${BLUE}--- 2 exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+
+    arr_ram=()
+
+    for item3 in $(dd2e "${arb_}"); do
+        arr_ram+=("$(prs_f -n "${item3}")")
+    done
+
+    PS3="eligendi actiones: "
+    select item4 in "${arr_ram[@]}"; do
+        ram_=${item4}
+        break
+    done
+    echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+#{zzz20}
+fi
+
+if ! [ -d "${arb_}/${ram_}.ram" ]; then
+    plt_exit "in ${FNN} : NOT_FILE : '${arb_}/${ram_}.ram' return 1"
+    return 1
+fi
 
 #?---------------------------------------
 #?---------------------------------------------

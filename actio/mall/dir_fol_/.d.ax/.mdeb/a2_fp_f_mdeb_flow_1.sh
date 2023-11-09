@@ -74,13 +74,25 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
-    plt_pause "up 'fol_', fol_ with dir_fol"
+    plt_pause "fol_ with dir_fol"
 
-    echo -e "${HLIGHT}--- . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh ---${NORMAL}" #start files
-    . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh
+    # echo -e "${HLIGHT}--- . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh ---${NORMAL}" #start files
+    # . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh
 
+    # --_sil ${PLT_PATH}/.d/.sil.ax/phylum_a.sil
+    # --_arb ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
+
+    local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
+    local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
+
+    local str_arr=
     echo -e "${HLIGHT}--- fol_ --_dir ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/dir_fol ---${NORMAL}" #start files
-    fol_ --_dir ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/dir_fol
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_cat_cont \
+        -_mm 
+        # --_ram name_ramus_1
 
 }
 

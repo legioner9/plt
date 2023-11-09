@@ -1,5 +1,9 @@
 ARGS:
     \$1 
+    -_mm or --_ram
+        
+    -_u_{sub}_{obs}
+    -_E echo main info: 
 
 CNTLS:
     strong:

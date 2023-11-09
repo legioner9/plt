@@ -9,15 +9,13 @@
     folium        - лист
     bud           - бутон
 
-# fs
+# sil types:
 
-├── name_silva.sil
+/home/st/REPOBARE/_repo/plt/.d/.sil.ax
+├── phylum_a.sil
 │   ├── arb
-│   │   ├── name_ramus_1.ram
-│   │   │   ├── cont.fol
-│   │   │   ├── main.fol
-│   │   │   └── tags.fol
-│   │   └── name_ramus_2.ram
+│   │   ├── 0
+│   │   └── name_ramus.ram
 │   │       ├── cont.fol
 │   │       ├── main.fol
 │   │       └── tags.fol
@@ -29,13 +27,14 @@
 │           ├── addtag.sh
 │           ├── cat.sh
 │           ├── edit.sh
-│           └── newram.sh
+│           ├── exec.sh
+│           └── newvir.sh
 
 # parent (who use fol_) behaviour:
     parent(){
         strong cntls:
-        --_vir name.vir.d (virga - dir with .fol - folium)
-        --_dir 
+        --_sil (/home/st/REPOBARE/_repo/plt/.d/.sil.ax/phylum_a.sil)
+        --_arb (/home/st/REPOBARE/_repo/plt/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb) 
 
         fol_ -_E - echo name_vig=(name subdir)  main.fol tag.fol
         fol_ -_mm

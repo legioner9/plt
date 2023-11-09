@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dir_tree=${PLT_PATH}/.d/.sil.ax
+
+tree ${dir_tree} > ${dir_tree}/tree.f
