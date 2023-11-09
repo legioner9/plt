@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> ins_nod_ 
+farg2e2_ -> ins_nod_
+echo_deb_ -> ins_nod_
+ins_nod_ -> ins_nod_:is_num
+ins_nod_ -> ins_nod_:exit_err_ins_nod_
+ins_nod_ -> ins_nod_:exit_reg_ins_nod_
+ins_nod_ -> ins_nod_:unset_autoargs_ins_nod_
+' {wrap_fn}
+' fnn o-> ins_nod_
+' {body_fn}
+@enduml

@@ -1,7 +1,41 @@
+# words
+
+    vis           - суть
+    ora           - край
+    silva         - лес
+    arbor         - дерево
+    truncus       - ствол
+    ramus         - ветвь
+    folium        - лист
+    bud           - бутон
+
+# fs
+
+├── name_silva.sil
+│   ├── arb
+│   │   ├── name_ramus_1.ram
+│   │   │   ├── cont.fol
+│   │   │   ├── main.fol
+│   │   │   └── tags.fol
+│   │   └── name_ramus_2.ram
+│   │       ├── cont.fol
+│   │       ├── main.fol
+│   │       └── tags.fol
+│   └── vis
+│       ├── lst
+│       │   ├── fol.lst
+│       │   └── sh.lst
+│       └── sh
+│           ├── addtag.sh
+│           ├── cat.sh
+│           ├── edit.sh
+│           └── newram.sh
+
 # parent (who use fol_) behaviour:
     parent(){
-        strong cntls
-        --_vir (virga - dir with .fol - folium)
+        strong cntls:
+        --_vir name.vir.d (virga - dir with .fol - folium)
+        --_dir 
 
         fol_ -_E - echo name_vig=(name subdir)  main.fol tag.fol
         fol_ -_mm
@@ -12,17 +46,29 @@
         fol_ --_name @ -_cat_tags (cat name/tags.fol)
         fol_ --_name @ -_edit_cont (edit name/cont.fol) => -_{sub1}_{obc} - ({sub2} name/{obc}.fol)
 
-        Control files
-        sub1_sub2_file.lst2=(
-            cat@cat
-            edit@${_edit_}
-        )
-        obc.lst={
-            main
-            tags
-            cont
-        }
+        1. name.vir.d:
+           1. fol.lst:
+              1. tags.fol
+              2. cont.fol
+              3. main.fol
+           2. sh.lst
+              1. cat.sh
+              2. edit.sh
+              3. addtag.sh   
+        1.{sub}_{obc}_=1
+        2.grep -w {obc}.fol fol.lst && grep -w {sub}.sh sh.lst
+        3.$ source {sub}.sh {obc}.fol
+            examp: cat_tags_=1
+                cat cat.sh
+                    #!/bin/bash
+                    cat $1
+                cat tags.fol
+                    TAGS:
+                    @tag
+            exec: source cat.bad tags.fol
+                
 
+                
         1. {sub1}_{obc}_=1 
         2. if [ -n "$(lst2_ {sub1} sub1_sub2_file.lst2 "@")" ] && grep -w {obc} obc.lst
         3. use function: IFS: lst2_ {sub1} sub1_sub2_file.lst2 "@" # echo sub2
