@@ -128,9 +128,20 @@ if [ "${mm_:-0}" -eq 1 ]; then
 #{zzz20}
 fi
 
-if ! [ -d "${arb_}/${ram_}.ram" ]; then
-    plt_exit "in ${FNN} : NOT_FILE : '${arb_}/${ram_}.ram' return 1"
-    return 1
+if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
+
+    if ! [ -d "${arb_}/${ram_}.ram" ]; then
+        plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
+        return 1
+    fi
+
+    plt_info "Treat: \${ram_} = file://${arb_}/${ram_} , \${sub} = ${sub} , \${obc} = ${obc}"
+
+    echo -e "${HLIGHT}--- ${sub} ${arb_}/${ram_}.ram/${obc}.fol ---${NORMAL}" #start files
+    echo "start---------------"
+    ${sub} ${arb_}/${ram_}.ram/${obc}.fol
+    echo "end-----------------"
+    return 0
 fi
 
 #?---------------------------------------

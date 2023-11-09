@@ -86,13 +86,25 @@ ${NORMAL}"
     local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
 
     local str_arr=
-    echo -e "${HLIGHT}--- fol_ --_dir ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/dir_fol ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- 1) fol_ -_mm , 2) fol_ --_ram <true_name_ram> , 3) fol_ --_ram <false_name_ram> ---${NORMAL}" #start files
+
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
         -_cat_cont \
-        -_mm 
-        # --_ram name_ramus_1
+        -_mm
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_cat_cont \
+        --_ram name_ramus_1
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_cat_cont \
+        --_ram name_ramus_1x
 
 }
 
