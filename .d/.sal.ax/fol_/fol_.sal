@@ -174,17 +174,64 @@ if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
 
         if ! grep -w ${tag_to_add} ${arb_}/${ram_}.ram/tags.fol &>/dev/null; then
             # echo -e "\n${tag_to_add}" >>${arb_}/${ram_}.ram/tags.fol
-            "${_ins_last_s}" ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}
+
+            if ! "${_ins_last_s}" ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}; then
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}"
+            fi
+
             echo -e "${CYAN}--- tag ${tag_to_add} to file://${arb_}/${ram_}.ram/tags.fol ---${NORMAL}" #sistem info mesage
+
             . ${arb_}/paratus_arb.sh
         else
-            plt_info "${tag_to_add} already in ${arb_}/${ram_}.ram/tags.fol"
+            plt_info "${tag_to_add} already in file://${arb_}/${ram_}.ram/tags.fol"
         fi
     }
 
     while true; do
 
         if ! plt_ques_exec fol_addtag_; then
+            break
+        fi
+
+    done
+
+fi
+
+if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
+
+    fol_crtag_() {
+
+        echo -e "${HLIGHT}--- cat ${arb_}/all_unique_tags.lst ---${NORMAL}" #start files
+        echo "start-----------"
+        "${_f2e}" ${arb_}/all_unique_tags.lst
+        echo "end-------------"
+
+        echo "exist tags in file://${arb_}/${ram_}.ram/tags.fol:"
+        echo "start-----------"
+        "${_f2e}" ${arb_}/${ram_}.ram/tags.fol
+        echo "end-------------"
+
+        plt_pause "in fol_() : DO?: for (ram_='${ram_}') create tag in file://${arb_}/${ram_}.ram/tags.fol"
+
+        read -p "Enter tag (^@,11<#) " tag_to_create
+
+        echo -e "${GREEN}\$tag_to_create = $tag_to_create${NORMAL}" #print variable
+
+        if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
+
+            if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}"
+            fi
+            
+        else
+            plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
+        fi
+
+    }
+
+    while true; do
+
+        if ! plt_ques_exec fol_crtag_; then
             break
         fi
 
