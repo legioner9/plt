@@ -4,6 +4,7 @@ vvv
 list_strong_cntls
 arr
 arr1
+arr2
 res
 item
 item1
@@ -20,3 +21,5 @@ obc
 
 ram_
 arr_ram
+tag_to_add
+fol_addtag_

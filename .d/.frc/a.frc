@@ -18,6 +18,9 @@ _plt_info="plt_info"
 #? SYS
 _f2e="f2e"
 _tag2f_="tag2f_"
+_dd2e="dd2e"
+_prs_f="prs_f"
+_ins_last_s="ins_last_s"
 
 #? ${_cr_sh_} ${_cr_f_} ${_cr_f_dir_insert_} ${_cr_shfn_} ${_cr_shgnr_} ${_cr_tst_dir_}
 #? ${_cr_tst_sys_} ${_cr_f_dir_insert_} ${} ${} ${} ${}

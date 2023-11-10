@@ -2,6 +2,11 @@
 
     fol_ _mdeb 2 
 
+# do fol_ -_tag flow 
+
+    fol_ _mdeb 3
+    
+
 # words
 
     vis           - суть

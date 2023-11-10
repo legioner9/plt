@@ -90,6 +90,7 @@ fi
 # ${sil_} ${arb_}
 
 . ${sil_}/paratus.sh
+. ${arb_}/paratus_arb.sh
 
 # tree ${arb_}
 
@@ -98,8 +99,8 @@ if [ ${E_:-0} -eq 1 ]; then
     return 0
 fi
 
-for item1 in $(cat ${sil_}/vis/ll.lst); do
-    for item2 in $(cat ${sil_}/arb/ll.lst); do
+for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
+    for item2 in $("${_f2e}" ${sil_}/arb/ll.lst); do
         eval value1=\$\{${item1}_${item2}_\}
         if [ ${value1:-0} -eq 1 ]; then
             sub=${item1}
@@ -115,17 +116,17 @@ if [ "${mm_:-0}" -eq 1 ]; then
 
     arr_ram=()
 
-    for item3 in $(dd2e "${arb_}"); do
-        arr_ram+=("$(prs_f -n "${item3}")")
+    for item3 in $(${_dd2e} "${arb_}"); do
+        arr_ram+=("$(${_prs_f} -n "${item3}")")
     done
 
-    PS3="eligendi actiones: "
+    PS3="eligendi actiones ramus name: "
     select item4 in "${arr_ram[@]}"; do
         ram_=${item4}
         break
     done
     echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
-#{zzz20}
+
 fi
 
 if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
@@ -142,6 +143,53 @@ if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
     ${sub} ${arb_}/${ram_}.ram/${obc}.fol
     echo "end-----------------"
     return 0
+fi
+
+if [ "${tag_:-0}" -eq 1 ]; then
+    echo -e "${HLIGHT}--- cat ${arb_}/all_unique_tags.lst ---${NORMAL}" #start files
+    echo "start-----------"
+    "${_f2e}" ${arb_}/all_unique_tags.lst
+    echo "end-------------"
+    return 0
+fi
+
+if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
+
+    fol_addtag_() {
+
+        echo -e "${BLUE}--- exec addtag ${FNN} (num_menu) ---${NORMAL}" #started functions
+
+        arr2=($(cat ${arb_}/all_unique_tags.lst))
+
+        echo "exist tags in ${arb_}/${ram_}.ram/tags.fol:"
+        echo "start-----------"
+        "${_f2e}" ${arb_}/${ram_}.ram/tags.fol
+        echo "end-------------"
+
+        PS3="eligendi actiones tag (ram_='${ram_}') to insert to file://${arb_}/${ram_}.ram/tags.fol: "
+        select item5 in "${arr2[@]}"; do
+            tag_to_add=${item5}
+            break
+        done
+
+        if ! grep -w ${tag_to_add} ${arb_}/${ram_}.ram/tags.fol &>/dev/null; then
+            # echo -e "\n${tag_to_add}" >>${arb_}/${ram_}.ram/tags.fol
+            "${_ins_last_s}" ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}
+            echo -e "${CYAN}--- tag ${tag_to_add} to file://${arb_}/${ram_}.ram/tags.fol ---${NORMAL}" #sistem info mesage
+            . ${arb_}/paratus_arb.sh
+        else
+            plt_info "${tag_to_add} already in ${arb_}/${ram_}.ram/tags.fol"
+        fi
+    }
+
+    while true; do
+
+        if ! plt_ques_exec fol_addtag_; then
+            break
+        fi
+
+    done
+
 fi
 
 #?---------------------------------------
