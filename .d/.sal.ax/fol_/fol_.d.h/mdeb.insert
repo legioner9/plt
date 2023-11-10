@@ -1,0 +1,16 @@
+MDEB:
+# do 1) fol_ -_mm , 2) fol_ --_ram <true_name_ram> , 3) fol_ --_ram <false_name_ram>
+
+    fol_ _mdeb 2 
+
+# do fol_ -_tag + -_addtag flow 
+
+    fol_ _mdeb 3
+
+# do fol_ -_crtag flow
+
+    fol_ _mdeb 4
+
+# do fol_ -deltag
+
+    fol_ _mdeb 5

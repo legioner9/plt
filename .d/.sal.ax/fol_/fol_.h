@@ -5,17 +5,27 @@ DEPR:
 NAME: fol_
 {name}
 .
-MAIN: 
+MAIN: treat dir with .fol
 {main}
 .
 ARGS:
 $1 
 CNTLS:
-strong:
---_
--_
+--_ram => ram_ ram name
+strong:        
+--_sil dir IFS from .sil
+--_arb dir implimentation with .ram
+optional:
+-_mm or --_ram or not (if demand define neme ramus)
+--_ram name (without .ext) dir .ram with .fol files
+-_mm choice ram_
+--_{sub}_{obs} or -_crtag or -_addtag
+-_tag echo unique from all tag in arbor
+-_addtag to ram_ add tag from unique exist tag
+-_crtag to ram_ create new tag and add
+--_{sub}_{obs} (in ram name do {sub} with {obs})
+-_E echo main info: 
 once(1InAll):
-optional:    
 {args}
 .
 RETU: 
@@ -185,3 +195,7 @@ EXAM:
 MANF:
 {manf}
 .
+{bags}
+.
+# check  --_{sub}_{obs} or -_crtag or -_addtag
+{todo}

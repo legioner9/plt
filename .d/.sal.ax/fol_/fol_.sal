@@ -197,7 +197,7 @@ if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
 
 fi
 
-if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
+if [ "${crtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
 
     fol_crtag_() {
 
@@ -222,7 +222,7 @@ if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
             if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
                 plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}"
             fi
-            
+            . ${arb_}/paratus_arb.sh
         else
             plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
         fi
