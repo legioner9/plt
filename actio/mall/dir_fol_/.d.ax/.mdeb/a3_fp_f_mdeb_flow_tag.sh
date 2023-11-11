@@ -81,16 +81,15 @@ ${NORMAL}"
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
-        -_cat_cont \
         -_tag
 
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
-        -_mm \
         -_addtag
 
     #{body_fn}
+    
 }
 
 cd "${idir}"

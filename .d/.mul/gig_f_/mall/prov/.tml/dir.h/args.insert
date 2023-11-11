@@ -2,10 +2,19 @@ ARGS:
     \$1 
 
 CNTLS:
-    strong:
         --_
         -_
 
-    once(1InAll):
+LOGIC ARGS:
+    !()
+    ?()
 
-    optional:    
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
+exa:
+    !( --_sil && --_arb )
+    ( --_{sub}_{obs} && --_ram )
+    ( --_{sub}_{obs} || -_crtag || -_addtag )
+    ?( --_ram ) && (-_crtag || -_addtag )

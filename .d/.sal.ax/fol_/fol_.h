@@ -19,10 +19,11 @@ optional:
 -_mm or --_ram or not (if demand define neme ramus)
 --_ram name (without .ext) dir .ram with .fol files
 -_mm choice ram_
---_{sub}_{obs} or -_crtag or -_addtag
+--_{sub}_{obs} or -_crtag or -_addtag or -_deltag
 -_tag echo unique from all tag in arbor
 -_addtag to ram_ add tag from unique exist tag
 -_crtag to ram_ create new tag and add
+-_deltag from ram_
 --_{sub}_{obs} (in ram name do {sub} with {obs})
 -_E echo main info: 
 once(1InAll):
@@ -199,3 +200,16 @@ MANF:
 .
 # check  --_{sub}_{obs} or -_crtag or -_addtag
 {todo}
+.
+MDEB:
+# do 1) fol_ -_mm , 2) fol_ --_ram <true_name_ram> , 3) fol_ --_ram <false_name_ram>
+fol_ _mdeb 2 
+# do fol_ -_tag + -_addtag flow 
+fol_ _mdeb 3
+# do fol_ -_crtag flow
+fol_ _mdeb 4
+# do fol_ -_deltag
+fol_ _mdeb 5
+{mdeb}
+.
+{utst}

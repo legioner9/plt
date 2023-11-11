@@ -4,13 +4,17 @@ vvv
 list_strong_cntls
 arr
 arr1
-arr2
+arr_2
+arr_3
 res
 item
 item1
 item2
 item3
 item4
+item5
+item6
+item7
 value1
 sum_1
 
@@ -22,6 +26,10 @@ obc
 ram_
 arr_ram
 tag_to_add
+tag_to_delete
+
+fol_show_arb_tags_
+fol_show_ram_tags_
 
 fol_addtag_
 fol_crtag_

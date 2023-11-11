@@ -3,23 +3,25 @@ ARGS:
 
 
 CNTLS:
-    --_ram => ram_ ram name
+    --_ram name (without .ext) dir .ram with .fol files
+    --_sil dir IFS from .sil
+    --_arb dir implimentation with .ram       
+    --_{sub}_{obs} (in ram name do {sub} with {obs})    
+    -_tag echo unique from all tag in arbor
+    -_addtag to ram_ add tag from unique exist tag
+    -_crtag to ram_ create new tag and add
+    -_deltag from ram_
+    -_E echo main info:      
 
-    strong:        
-        --_sil dir IFS from .sil
-        --_arb dir implimentation with .ram
-    optional:
-        -_mm or --_ram or not (if demand define neme ramus)
-            --_ram name (without .ext) dir .ram with .fol files
-            -_mm choice ram_
-    --_{sub}_{obs} or -_crtag or -_addtag or -_deltag
-        -_tag echo unique from all tag in arbor
-        -_addtag to ram_ add tag from unique exist tag
-        -_crtag to ram_ create new tag and add
-        -_deltag from ram_
-            
-        --_{sub}_{obs} (in ram name do {sub} with {obs})
-        -_E echo main info: 
-    once(1InAll):
+LOGIC ARGS:
+    !(--_sil && --_arb)
+    (--_{sub}_{obs} && --_ram)
+    ( --_{sub}_{obs} || -_crtag || -_addtag || -_deltag)
+    ?( --_ram ) && (-_crtag || -_addtag || -_deltag)
+
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
 
         

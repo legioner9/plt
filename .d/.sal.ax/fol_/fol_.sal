@@ -102,6 +102,7 @@ fi
 for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
     for item2 in $("${_f2e}" ${sil_}/arb/ll.lst); do
         eval value1=\$\{${item1}_${item2}_\}
+        #? check exist param=1
         if [ ${value1:-0} -eq 1 ]; then
             sub=${item1}
             obc=${item2}
@@ -111,107 +112,123 @@ for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
     done
 done
 
-if [ "${mm_:-0}" -eq 1 ]; then
-    echo -e "${BLUE}--- 2 exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+fol_mm_() { #? choice ram_ if ram_ NOT_DEFINE
 
-    arr_ram=()
+    local fol_mm_arg_1="$1"
 
-    for item3 in $(${_dd2e} "${arb_}"); do
-        arr_ram+=("$(${_prs_f} -n "${item3}")")
-    done
+    if [ -z "${ram_}" ]; then
 
-    PS3="eligendi actiones ramus name: "
-    select item4 in "${arr_ram[@]}"; do
-        ram_=${item4}
-        break
-    done
-    echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+        arr_ram=()
 
-fi
+        for item3 in $("${_dd2e}" "${arb_}"); do
+            arr_ram+=("$(${_prs_f} -n "${item3}")")
+        done
 
-if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
+        plt_info "${fol_mm_arg_1}"
+        PS3="eligendi actiones ramus name: "
+        select item4 in "${arr_ram[@]}"; do
+            ram_=${item4}
+            break
+        done
+        echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+
+    fi
 
     if ! [ -d "${arb_}/${ram_}.ram" ]; then
         plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
         return 1
     fi
 
-    plt_info "Treat: \${ram_} = file://${arb_}/${ram_} , \${sub} = ${sub} , \${obc} = ${obc}"
+    ram_tag_file=${arb_}/${ram_}.ram/tags.fol
+}
 
-    echo -e "${HLIGHT}--- ${sub} ${arb_}/${ram_}.ram/${obc}.fol ---${NORMAL}" #start files
-    echo "start---------------"
+fol_show_arb_tags_() {
+
+    echo -e "${CYAN}--- START all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+    "${_f2e}" ${arb_}/all_unique_tags.lst
+    echo -e "${CYAN}--- END all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+
+}
+
+fol_show_ram_tags_() {
+
+    echo -e "${CYAN}--- START exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+    "${_f2e}" ${ram_tag_file}
+    echo -e "${CYAN}--- END exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+}
+
+if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
+
+    # plt_info "Treat: \${ram_} = file://${arb_}/${ram_} , \${sub} = ${sub} , \${obc} = ${obc}"
+
+    # echo -e "${CYAN}--- START ${sub} file://${arb_}/${ram_}.ram/${obc}.fol ---${NORMAL}" #start files
     ${sub} ${arb_}/${ram_}.ram/${obc}.fol
-    echo "end-----------------"
+    # echo -e "${CYAN}--- END ${sub} file://${arb_}/${ram_}.ram/${obc}.fol ---${NORMAL}" #start files
+
     return 0
 fi
 
 if [ "${tag_:-0}" -eq 1 ]; then
-    echo -e "${HLIGHT}--- cat ${arb_}/all_unique_tags.lst ---${NORMAL}" #start files
-    echo "start-----------"
-    "${_f2e}" ${arb_}/all_unique_tags.lst
-    echo "end-------------"
+    "${_f2e}" "${arb_}"/all_unique_tags.lst
     return 0
 fi
 
-if [ "${addtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
+if [ "${addtag_:-0}" -eq 1 ]; then
+
+    fol_mm_ "choice ramus for addtag_ from file://${arb_}"
 
     fol_addtag_() {
 
         echo -e "${BLUE}--- exec addtag ${FNN} (num_menu) ---${NORMAL}" #started functions
 
-        arr2=($(cat ${arb_}/all_unique_tags.lst))
+        arr_2=($("${_f2e}" ${arb_}/all_unique_tags.lst))
 
-        echo "exist tags in ${arb_}/${ram_}.ram/tags.fol:"
-        echo "start-----------"
-        "${_f2e}" ${arb_}/${ram_}.ram/tags.fol
-        echo "end-------------"
+        fol_show_arb_tags_
+        fol_show_ram_tags_
 
-        PS3="eligendi actiones tag (ram_='${ram_}') to insert to file://${arb_}/${ram_}.ram/tags.fol: "
-        select item5 in "${arr2[@]}"; do
+        PS3="eligendi actiones tag (ram_='${ram_}') to insert to file://${ram_tag_file}: "
+        select item5 in "${arr_2[@]}"; do
             tag_to_add=${item5}
             break
         done
 
-        if ! grep -w ${tag_to_add} ${arb_}/${ram_}.ram/tags.fol &>/dev/null; then
-            # echo -e "\n${tag_to_add}" >>${arb_}/${ram_}.ram/tags.fol
+        if ! grep -w ${tag_to_add} ${ram_tag_file} &>/dev/null; then
+            # echo -e "\n${tag_to_add}" >>${ram_tag_file}
 
-            if ! "${_ins_last_s}" ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}; then
-                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}"
+            if ! "${_ins_last_s}" ${ram_tag_file} ${tag_to_add}; then
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
             fi
 
-            echo -e "${CYAN}--- tag ${tag_to_add} to file://${arb_}/${ram_}.ram/tags.fol ---${NORMAL}" #sistem info mesage
+            echo -e "${CYAN}--- tag ${tag_to_add} to file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
 
             . ${arb_}/paratus_arb.sh
+
+            sort_tags_s ${ram_tag_file}
+            fol_show_ram_tags_
         else
-            plt_info "${tag_to_add} already in file://${arb_}/${ram_}.ram/tags.fol"
+            plt_info "${tag_to_add} already in file://${ram_tag_file}"
         fi
     }
 
     while true; do
-
         if ! plt_ques_exec fol_addtag_; then
             break
         fi
-
     done
 
 fi
 
-if [ "${crtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
+if [ "${crtag_:-0}" -eq 1 ]; then
+
+    fol_mm_ "choice ramus for crtag_ from file://${arb_}"
 
     fol_crtag_() {
 
-        echo -e "${HLIGHT}--- cat ${arb_}/all_unique_tags.lst ---${NORMAL}" #start files
-        echo "start-----------"
-        "${_f2e}" ${arb_}/all_unique_tags.lst
-        echo "end-------------"
+        fol_show_arb_tags_
+        fol_show_ram_tags_
 
-        echo "exist tags in file://${arb_}/${ram_}.ram/tags.fol:"
-        echo "start-----------"
-        "${_f2e}" ${arb_}/${ram_}.ram/tags.fol
-        echo "end-------------"
-
-        plt_pause "in fol_() : DO?: for (ram_='${ram_}') create tag in file://${arb_}/${ram_}.ram/tags.fol"
+        plt_pause "in fol_() : DO?: for (ram_='${ram_}') create tag in file://${ram_tag_file}"
 
         read -p "Enter tag (^@,11<#) " tag_to_create
 
@@ -220,9 +237,14 @@ if [ "${crtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
         if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
 
             if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
-                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${arb_}/${ram_}.ram/tags.fol ${tag_to_add}"
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
             fi
+
             . ${arb_}/paratus_arb.sh
+
+            sort_tags_s ${ram_tag_file}
+            fol_show_ram_tags_
+
         else
             plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
         fi
@@ -230,11 +252,50 @@ if [ "${crtag_:-0}" -eq 1 ] && [ -n "${ram_}" ]; then
     }
 
     while true; do
-
         if ! plt_ques_exec fol_crtag_; then
             break
         fi
+    done
 
+fi
+
+if [ "${deltag_:-0}" -eq 1 ]; then
+
+    fol_mm_ "choice ramus for deltag_ from file://${arb_}"
+
+    fol_deltag_() {
+
+        # plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag in file://${ram_tag_file}"
+
+        arr_3=($("${_f2e}" "${ram_tag_file}"))
+
+        PS3="eligendi actiones tag (ram_='${ram_}') to delete from file://${ram_tag_file}: "
+        select item6 in "${arr_3[@]}"; do
+            tag_to_delete=${item6}
+            break
+        done
+
+        echo -e "${GREEN}\$tag_to_delete = $tag_to_delete${NORMAL}" #print variable
+
+        plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag ${tag_to_delete} in file://${ram_tag_file}"
+
+        echo -e "${HLIGHT}--- sed 's/'${tag_to_delete}'//' ${ram_tag_file} ---${NORMAL}" #start files
+
+        if ! sed -i '/'"${tag_to_delete}"'/g' ${ram_tag_file}; then
+            plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+        fi
+
+        . ${arb_}/paratus_arb.sh
+
+        sort_tags_s ${ram_tag_file}
+        fol_show_ram_tags_
+
+    }
+
+    while true; do
+        if ! plt_ques_exec fol_deltag_; then
+            break
+        fi
     done
 
 fi
