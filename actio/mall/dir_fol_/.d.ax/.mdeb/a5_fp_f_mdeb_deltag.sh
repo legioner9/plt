@@ -82,7 +82,7 @@ ${NORMAL}"
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
         -_mm \
-        -_deltag
+        -_deltag 
     #{body_fn}
 }
 
