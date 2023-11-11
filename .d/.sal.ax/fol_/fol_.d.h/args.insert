@@ -6,16 +6,29 @@ CNTLS:
     --_ram name (without .ext) dir .ram with .fol files
     --_sil dir IFS from .sil
     --_arb dir implimentation with .ram       
+    --_pararb parent dir for create arb_
     --_{sub}_{obs} (in ram name do {sub} with {obs})    
     -_tag echo unique from all tag in arbor
+
     -_addtag to ram_ add tag from unique exist tag
     -_crtag to ram_ create new tag and add
     -_deltag from ram_
+
+    -_crram create ram_ in arb_
+    -_delram delit ram_ from arb_
+
+    -_crarb create arb_
+    -_delarb delete arb_
+
     -_E echo main info:      
 
 LOGIC ARGS:
-    !(--_sil && --_arb)
-    (--_{sub}_{obs} && --_ram)
+ 
+    ( --_sil && --_pararb && ( -_crarb || -_delarb ))
+    ( --_sil && --_arb ) && ?( --_ram ) && 
+        ?( -_addram || -_delram ) ||
+        ?( --_{sub}_{obs} )
+
     ( --_{sub}_{obs} || -_crtag || -_addtag || -_deltag)
     ?( --_ram ) && (-_crtag || -_addtag || -_deltag)
 

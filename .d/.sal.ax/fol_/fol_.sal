@@ -158,6 +158,12 @@ fol_show_ram_tags_() {
 
 }
 
+fol_show_arb_rams_() {
+    echo -e "${CYAN}--- START all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+    "${_f2e}" ${arb_}/all_ramus_name.lst
+    echo -e "${CYAN}--- END all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+}
+
 if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
 
     # plt_info "Treat: \${ram_} = file://${arb_}/${ram_} , \${sub} = ${sub} , \${obc} = ${obc}"
@@ -259,11 +265,63 @@ if [ "${crtag_:-0}" -eq 1 ]; then
 
 fi
 
-if [ "${deltag_:-0}" -eq 1 ]; then
+if [ "${crram_:-0}" -eq 1 ]; then
 
-    fol_mm_ "choice ramus for deltag_ from file://${arb_}"
+    fol_crram_() {
 
-    fol_deltag_() {
+        fol_show_arb_rams_
+
+        if [ -z "${ram_}" ]; then
+
+            plt_pause "in fol_() : DO?: create ram in file://${arb_}"
+
+            read -p "Enter name ram_ (11<#,only w d _) " ram_name_to_create
+
+            echo -e "${GREEN}\$ram_name_to_create = $ram_name_to_create${NORMAL}" #print variable
+
+            if [ -n "${ram_name_to_create}" ] && [ "${#ram_name_to_create}" -le 10 ] && "${_is_eng_var}" "${ram_name_to_create}"; then
+            
+                plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+
+                if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}"; then
+                    plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                fi
+
+            else
+                plt_info "in fol_() : NOT_IN_CONDITION : '${ram_name_to_create}'"
+
+            fi
+
+        fi
+
+        if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
+
+            if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+            fi
+
+            . ${arb_}/paratus_arb.sh
+
+            sort_tags_s ${ram_tag_file}
+            fol_show_ram_tags_
+
+        else
+            plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
+        fi
+
+    }
+
+    while true; do
+        if ! plt_ques_exec fol_crram_; then
+            break
+        fi
+    done
+
+fi
+
+if [ "${delram_:-0}" -eq 1 ]; then
+
+    fol_delram_() {
 
         # plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag in file://${ram_tag_file}"
 
@@ -294,6 +352,46 @@ if [ "${deltag_:-0}" -eq 1 ]; then
 
     while true; do
         if ! plt_ques_exec fol_deltag_; then
+            break
+        fi
+    done
+
+fi
+
+if [ "${crtag_:-0}" -eq 1 ]; then
+
+    fol_mm_ "choice ramus for crtag_ from file://${arb_}"
+
+    fol_crtag_() {
+
+        fol_show_arb_tags_
+        fol_show_ram_tags_
+
+        plt_pause "in fol_() : DO?: for (ram_='${ram_}') create tag in file://${ram_tag_file}"
+
+        read -p "Enter tag (^@,11<#) " tag_to_create
+
+        echo -e "${GREEN}\$tag_to_create = $tag_to_create${NORMAL}" #print variable
+
+        if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
+
+            if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
+                plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+            fi
+
+            . ${arb_}/paratus_arb.sh
+
+            sort_tags_s ${ram_tag_file}
+            fol_show_ram_tags_
+
+        else
+            plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
+        fi
+
+    }
+
+    while true; do
+        if ! plt_ques_exec fol_crtag_; then
             break
         fi
     done
