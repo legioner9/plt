@@ -19,3 +19,6 @@ MDEB:
 
 # do fol_ -_delram flow
     fol_ _mdeb 7
+
+# echo | fol_ -_ram tmp_d -_crram + -_delram flow 
+    fol_ _mdeb 8
