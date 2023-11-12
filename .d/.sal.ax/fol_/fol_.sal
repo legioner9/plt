@@ -329,19 +329,25 @@ if [ "${crram_:-0}" -eq 1 ]; then
 
                 plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
 
-                if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_name_to_create}.ram"; then
-                    plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                if ! [ -d "${arb_}/${ram_name_to_create}.ram" ]; then
+
+                    if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_name_to_create}.ram"; then
+                        plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                    fi
+                    echo -e "${CYAN}--- in in fol_() : CREATE ${ram_name_to_create}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #sistem info mesage
+
+                    echo -e "${HLIGHT}--- ls -A ${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #start files
+                    ls -A ${arb_}/${ram_name_to_create}.ram
+
+                else
+                    plt_info "in fol_() : DIR : already exist '${ram_name_to_create}' file://${arb_}/${ram_name_to_create}.ram"
                 fi
-                echo -e "${CYAN}--- in in fol_() : CREATE ${ram_name_to_create}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #sistem info mesage
-
-                echo -e "${HLIGHT}--- ls -A ${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #start files
-                ls -A ${arb_}/${ram_name_to_create}.ram
-
             else
                 plt_info "in fol_() : NOT_IN_CONDITION : '${ram_name_to_create}'"
             fi
-
         fi
+
+        . ${arb_}/paratus_arb.sh
 
     }
 
