@@ -16,3 +16,6 @@ MDEB:
 
 # do fol_ -_crram flow
     fol_ _mdeb 6
+
+# do fol_ -_delram flow
+    fol_ _mdeb 7
