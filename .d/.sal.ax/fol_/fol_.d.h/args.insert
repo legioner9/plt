@@ -32,6 +32,8 @@ LOGIC ARGS:
     ( --_{sub}_{obs} || -_crtag || -_addtag || -_deltag)
     ?( --_ram ) && (-_crtag || -_addtag || -_deltag)
 
+    ( --_sil && --_arb && --_ram && --_tag && ( -_crtag || -_deltag )
+
 * !( a && b || c ) strong 
 * ?() optional
 * .() once
