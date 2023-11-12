@@ -22,3 +22,12 @@ MDEB:
 
 # echo | fol_ -_ram tmp_d -_crram + -_delram flow 
     fol_ _mdeb 8
+
+# fol_ --_arb tmp_arb -_crarb + -_delarb flow
+    fol_ _mdeb 9
+
+# fol_ --_arb tmp_arb -_crarb + -_delarb flow
+    fol_ _mdeb 10
+
+# fol_ fol_ --_arb tmp_arb -_crarb + -_delarb flow
+    fol_ _mdeb 9

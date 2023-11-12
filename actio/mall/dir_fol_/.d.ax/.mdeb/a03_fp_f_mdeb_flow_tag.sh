@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a6_fp_f_mdeb_crram.sh"
+filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a03_fp_f_mdeb_flow_tag.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a6_fp_f_mdeb_crram() {
+a03_fp_f_mdeb_flow_tag() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a6_fp_f_mdeb_crram() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a6_fp_f_mdeb_crram.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a03_fp_f_mdeb_flow_tag.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -73,7 +73,7 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    plt_pause "fol_ -_crram flow "
+    plt_pause "fol_ -_tag flow , fol_ -_addtag -_mm"
 
     local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
     local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
@@ -81,9 +81,15 @@ ${NORMAL}"
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
-        -_crram 
+        -_tag
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_addtag
 
     #{body_fn}
+    
 }
 
 cd "${idir}"

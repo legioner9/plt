@@ -72,7 +72,8 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    plt_pause "fol_ --_arb tmp_arb -_crarb + -_delarb flow "
+
+    plt_pause "fol_ --_arb tmp_arb -_crarb, --_ram tmp_d -_crram, -_crtag"
 
     local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
     local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/tmp_arb
@@ -93,7 +94,6 @@ ${NORMAL}"
         --_arb "${dir_arb}" \
         --_ram "tmp_d" \
         -_crtag
-
     #{body_fn}
 }
 

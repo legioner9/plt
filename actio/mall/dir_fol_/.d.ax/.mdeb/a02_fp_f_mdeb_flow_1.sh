@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a3_fp_f_mdeb_flow_tag.sh"
+filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a02_fp_f_mdeb_flow_1.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a3_fp_f_mdeb_flow_tag() {
+a02_fp_f_mdeb_flow_1() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a3_fp_f_mdeb_flow_tag() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a3_fp_f_mdeb_flow_tag.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a02_fp_f_mdeb_flow_1.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -72,24 +72,40 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+    #{body_fn}
 
-    plt_pause "fol_ -_tag flow , fol_ -_addtag -_mm"
+    plt_pause "fol_ with dir_fol"
+
+    # echo -e "${HLIGHT}--- . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh ---${NORMAL}" #start files
+    # . ${PLT_PATH}/actio/mall/dir_fol_/fol_.nsc.sh
+
+    # --_sil ${PLT_PATH}/.d/.sil.ax/phylum_a.sil
+    # --_arb ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
 
     local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
     local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
 
-    fol_ \
-        --_sil "${dir_sil}" \
-        --_arb "${dir_arb}" \
-        -_tag
+    local str_arr=
+    echo -e "${HLIGHT}--- 1) fol_ -_mm , 2) fol_ --_ram <true_name_ram> , 3) fol_ --_ram <false_name_ram> ---${NORMAL}" #start files
 
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
-        -_addtag
+        -_cat_cont \
+        -_mm
 
-    #{body_fn}
-    
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_cat_cont \
+        --_ram name_ramus_1
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_cat_cont \
+        --_ram name_ramus_1x
+
 }
 
 cd "${idir}"

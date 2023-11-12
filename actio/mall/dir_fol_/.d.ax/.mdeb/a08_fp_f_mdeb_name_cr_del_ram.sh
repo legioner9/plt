@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a8_fp_f_mdeb_name_cr_del_ram.sh"
+filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a08_fp_f_mdeb_name_cr_del_ram.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a8_fp_f_mdeb_name_cr_del_ram() {
+a08_fp_f_mdeb_name_cr_del_ram() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a8_fp_f_mdeb_name_cr_del_ram() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a8_fp_f_mdeb_name_cr_del_ram.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a08_fp_f_mdeb_name_cr_del_ram.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
