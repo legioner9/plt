@@ -89,7 +89,7 @@ fi
 #?---------------------------------------
 # ${sil_} ${arb_}
 
-. ${sil_}/paratus.sh
+. ${sil_}/paratus_sil.sh
 . ${arb_}/paratus_arb.sh
 
 arb_rams=${arb_}/all_ramus_name.lst

@@ -1,8 +1,13 @@
 #!/bin/bash
-rdir_21342355=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/vis
-ls ${rdir_21342355}/sh >${rdir_21342355}/ls.lst
 
-: >${rdir_21342355}/ll.lst
-for str_645635 in $(cat ${rdir_21342355}/ls.lst); do
-    echo $(prs_f -n ${str_645635}) >>${rdir_21342355}/ll.lst
+#! inner procedure IFS for ${PLT_PATH}/.d/.sal.ax/fol_/fol_.sal
+#! local var {rdir_vis} {str3}
+#! {arb_} full path to arb dir with .ram files {sil_} full path to sil dir with arbs
+rdir_vis=${sil_}/vis
+
+ls ${rdir_vis}/sh >${rdir_vis}/ls.lst
+
+: >${rdir_vis}/ll.lst
+for str3 in $(cat ${rdir_vis}/ls.lst); do
+    echo "$(prs_f -n ${str3})" >>${rdir_vis}/ll.lst
 done
