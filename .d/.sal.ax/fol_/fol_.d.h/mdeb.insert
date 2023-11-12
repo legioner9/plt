@@ -11,6 +11,5 @@ MDEB:
 
     fol_ _mdeb 4
 
-# do fol_ -_deltag
-
+# do fol_ -_deltag flow
     fol_ _mdeb 5

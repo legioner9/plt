@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #?
-arb_837687944="${arb_}"
+arb_837687944="${PLT_PATH}"/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
 : >"${arb_837687944}"/all_ramus_name.lst
 for item_78467468 in $("${_dd2e}" "${arb_837687944}"); do
     echo "$(prs_f -n "${item_78467468}")" >>"${arb_837687944}"/all_ramus_name.lst
