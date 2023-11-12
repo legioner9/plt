@@ -15,7 +15,8 @@ CNTLS:
     -_deltag from ram_
 
     -_crram create ram_ in arb_
-    -_delram delit ram_ from arb_
+    -_delram delit ram_ from arb_ (bcp to _~)
+    -_cleram delit all bcp _ram_.ram~
 
     -_crarb create arb_
     -_delarb delete arb_
@@ -26,7 +27,7 @@ LOGIC ARGS:
  
     ( --_sil && --_pararb && ( -_crarb || -_delarb ))
     ( --_sil && --_arb ) && ?( --_ram ) && 
-        ?( -_addram || -_delram ) ||
+        ?( -_addram || -_delram || -_cleram ) ||
         ?( --_{sub}_{obs} )
 
     ( --_{sub}_{obs} || -_crtag || -_addtag || -_deltag)
