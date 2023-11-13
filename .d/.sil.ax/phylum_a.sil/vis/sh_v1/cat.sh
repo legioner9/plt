@@ -1,3 +1,3 @@
 #!/bin/bash
 
-newvir "$1"
+cat "$1"

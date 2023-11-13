@@ -1,5 +1,4 @@
-addtag.sh
-cat.sh
-edit.sh
-exec.sh
-newvir.sh
+f_cat.sh
+f_edit.sh
+f_exec.sh
+_readme.man

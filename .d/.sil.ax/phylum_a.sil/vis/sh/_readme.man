@@ -1,0 +1,4 @@
+# classify proc
+## f_... ${obc} is folio
+## r_... ${obc} is ramus
+## a_... ${obc} is arbor

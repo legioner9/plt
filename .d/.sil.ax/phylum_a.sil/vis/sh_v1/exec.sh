@@ -1,3 +1,3 @@
 #!/bin/bash
 
-addtag "$1"
+source "$1"
