@@ -16,6 +16,7 @@ item4
 item5
 item6
 item7
+item8
 value1
 sum_1
 
@@ -44,3 +45,6 @@ fol_show_ram_tags_
 
 fol_addtag_
 fol_crtag_
+
+ret_nom
+res_arr

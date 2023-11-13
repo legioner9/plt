@@ -132,7 +132,8 @@ Explicato:
 
     $ ${_edit_} ${path_file}
 
-
+### inner function from dir
+### -_arg and --_arg
 
 ## Installation
 

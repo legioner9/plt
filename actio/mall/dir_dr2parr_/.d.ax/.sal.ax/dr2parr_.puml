@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> dr2parr_ 
+farg2e2_ -> dr2parr_
+echo_deb_ -> dr2parr_
+dr2parr_ -> dr2parr_:is_num
+dr2parr_ -> dr2parr_:exit_err_dr2parr_
+dr2parr_ -> dr2parr_:exit_reg_dr2parr_
+dr2parr_ -> dr2parr_:unset_autoargs_dr2parr_
+' {wrap_fn}
+' fnn o-> dr2parr_
+' {body_fn}
+@enduml

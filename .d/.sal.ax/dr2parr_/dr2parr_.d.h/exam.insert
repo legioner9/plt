@@ -1,0 +1,17 @@
+EXAM:
+
+    cd "${PLT_PATH}"/actio/mall/dir_dr2parr_/.d.ax/.mdeb/.tmp/root_dir
+
+    fx() {
+        echo "dr2parr_ res_arr $1 >/dev/null"
+        dr2parr_ res_arr $1 >/dev/null
+        parr3e_ res_arr
+    }
+    res_arr=()
+    fx 0
+    res_arr=()
+    fx 1
+    res_arr=()
+    fx 2
+    res_arr=()
+    fx 3

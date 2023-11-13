@@ -1,0 +1,32 @@
+dr2parr_ res_arr 0 root_dir>/dev/null
+${res_arr[0]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/01_a.f
+${res_arr[1]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/02_a.f
+${res_arr[2]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/03_a.f
+${res_arr[3]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/04_a/01_b.f
+${res_arr[4]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/04_a/02_b.f
+${res_arr[5]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/05_a/01_c.f
+${res_arr[6]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2parr_/dr2parr_tst/root_dir/05_a/02_c.f
+dr2parr_ res_arr 1 root_dir>/dev/null
+${res_arr[0]} = 01_a.f
+${res_arr[1]} = 02_a.f
+${res_arr[2]} = 03_a.f
+${res_arr[3]} = 04_a/01_b.f
+${res_arr[4]} = 04_a/02_b.f
+${res_arr[5]} = 05_a/01_c.f
+${res_arr[6]} = 05_a/02_c.f
+dr2parr_ res_arr 2 root_dir>/dev/null
+${res_arr[0]} = 01_a.f
+${res_arr[1]} = 02_a.f
+${res_arr[2]} = 03_a.f
+${res_arr[3]} = 01_b.f
+${res_arr[4]} = 02_b.f
+${res_arr[5]} = 01_c.f
+${res_arr[6]} = 02_c.f
+dr2parr_ res_arr 3 root_dir>/dev/null
+${res_arr[0]} = 01_a
+${res_arr[1]} = 02_a
+${res_arr[2]} = 03_a
+${res_arr[3]} = 01_b
+${res_arr[4]} = 02_b
+${res_arr[5]} = 01_c
+${res_arr[6]} = 02_c

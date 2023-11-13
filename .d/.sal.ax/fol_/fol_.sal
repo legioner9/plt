@@ -41,7 +41,7 @@
 # echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
-list_strong_cntls=(sil_ arb_)
+list_strong_cntls=(sil_)
 for item in "${list_strong_cntls[@]}"; do
     # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
     # echo "$(eval echo \$"$item")"
@@ -90,11 +90,42 @@ fi
 # ${sil_} ${arb_}
 
 # tree ${arb_}
+echo file://${sil_}/proc/fol_
 
-if [ ${E_:-0} -eq 1 ]; then
-    echo "do E_"
-    return 0
-fi
+c_up "${sil_}/proc/fol_"
+
+res_arr=()
+dr2parr_ res_arr 3 "${sil_}/proc/fol_"
+parr3e_ res_arr
+
+for item6 in ${res_arr[@]}; do
+    echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+    ${item6}
+
+    ret_nom=$?
+    if [ ${ret_nom} -eq 2 ]; then
+        return 0
+    fi
+    if [ ${ret_nom} -eq 3 ]; then
+        return 1
+    fi
+    echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+done
+
+# errno_8657=$?
+# echo -e "${GREEN}\$errno_8657 = $errno_8657errno_8657${NORMAL}" #print variable
+# if [ "${errno_8657}" -eq 2 ]; then
+#     return 0
+# fi
+# if [ "${errno_8657}" -eq 3 ]; then
+#     return 1
+# fi
+
+# if [ ${E_:-0} -eq 1 ]; then
+#     echo "do E_"
+#     return 0
+# fi
 
 for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
     for item2 in $("${_f2e}" ${sil_}/arb/ll.lst); do
