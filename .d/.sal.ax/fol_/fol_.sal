@@ -90,15 +90,19 @@ fi
 # ${sil_} ${arb_}
 
 # tree ${arb_}
-echo file://${sil_}/proc/fol_
+if [ -d "${sil_}/proc/fol_" ]; then
 
-c_up "${sil_}/proc/fol_"
+    c_up "${sil_}/proc/fol_"
 
-res_arr=()
-dr2parr_ res_arr 3 "${sil_}/proc/fol_"
-parr3e_ res_arr
+    inner_fn_arr=()
+    dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
 
-for item6 in ${res_arr[@]}; do
+else
+    plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+    return 1
+fi
+
+for item6 in ${inner_fn_arr[@]}; do
     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
 
     ${item6}
@@ -111,6 +115,7 @@ for item6 in ${res_arr[@]}; do
         return 1
     fi
     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
 done
 
 # errno_8657=$?
