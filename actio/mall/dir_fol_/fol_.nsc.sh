@@ -118,7 +118,7 @@ fol_() {
     #? mapping mall.local file to use in ${FNN}.body.nsc.sh
     for var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
         # echo -e "${GREEN}$var_wrap = $var_wrap${NORMAL}" #print variable
-        eval local "$var_wrap"
+        eval local "$var_wrap" 
         var_wrap_arr+=("${var_wrap}")
     done
     # echo ". ${PLT_PATH}/.d/.nid/mall.nid"

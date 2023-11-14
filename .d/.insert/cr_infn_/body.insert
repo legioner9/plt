@@ -1,0 +1,2 @@
+    echo -e "${CYAN}--- {fn_}_{par_dir_}_{par_fn_}() file://{path_file} ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
