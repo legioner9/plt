@@ -145,140 +145,140 @@ for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
     done
 done
 
-fol_mm_() { #? choice ram_ if ram_ NOT_DEFINE
+# fol_mm_() { #? choice ram_ if ram_ NOT_DEFINE
 
-    local fol_mm_arg_1="$1"
+#     local fol_mm_arg_1="$1"
 
-    if [ -z "${ram_}" ]; then
+#     if [ -z "${ram_}" ]; then
 
-        arr_ram=()
+#         arr_ram=()
 
-        for item3 in $("${_dd2e}" "${arb_}"); do
-            arr_ram+=("$(${_prs_f} -n "${item3}")")
-        done
+#         for item3 in $("${_dd2e}" "${arb_}"); do
+#             arr_ram+=("$(${_prs_f} -n "${item3}")")
+#         done
 
-        plt_info "${fol_mm_arg_1}"
-        PS3="eligendi actiones ramus name: "
-        select item4 in "${arr_ram[@]}"; do
-            ram_=${item4}
-            break
-        done
-        echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+#         plt_info "${fol_mm_arg_1}"
+#         PS3="eligendi actiones ramus name: "
+#         select item4 in "${arr_ram[@]}"; do
+#             ram_=${item4}
+#             break
+#         done
+#         echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
 
-    fi
+#     fi
 
-    if ! [ -d "${arb_}/${ram_}.ram" ]; then
-        plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
-        return 1
-    fi
+#     if ! [ -d "${arb_}/${ram_}.ram" ]; then
+#         plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
+#         return 1
+#     fi
 
-    ram_tag_file=${arb_}/${ram_}.ram/tags.fol
-}
+#     ram_tag_file=${arb_}/${ram_}.ram/tags.fol
+# }
 
-fol_show_arb_tags_() {
+# fol_show_arb_tags_() {
 
-    echo -e "${CYAN}--- START all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
-    "${_f2e}" ${arb_}/all_unique_tags.lst
-    echo -e "${CYAN}--- END all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+#     echo -e "${CYAN}--- START all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${arb_}/all_unique_tags.lst
+#     echo -e "${CYAN}--- END all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
 
-}
+# }
 
-fol_show_ram_tags_() {
+# fol_show_ram_tags_() {
 
-    echo -e "${CYAN}--- START exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
-    "${_f2e}" ${ram_tag_file}
-    echo -e "${CYAN}--- END exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+#     echo -e "${CYAN}--- START exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${ram_tag_file}
+#     echo -e "${CYAN}--- END exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
 
-}
+# }
 
-fol_show_arb_rams_() {
-    echo -e "${CYAN}--- START all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
-    "${_f2e}" ${arb_rams}
-    echo -e "${CYAN}--- END all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
-}
+# fol_show_arb_rams_() {
+#     echo -e "${CYAN}--- START all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${arb_rams}
+#     echo -e "${CYAN}--- END all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+# }
 
-if [ "${delarb_:-0}" -eq 1 ]; then
+# if [ "${delarb_:-0}" -eq 1 ]; then
 
-    plt_pause "in fol_() : DO? : delete arbor : file://${arb_}"
+#     plt_pause "in fol_() : DO? : delete arbor : file://${arb_}"
 
-    if [ -d "${arb_}" ]; then
-        if ! cp -rfv "${arb_}" "$(dirname "${arb_}")"/_"$(basename "${arb_}")"~; then
-            plt_exit "in fol_() : EXEC_FAIL : cp -rfv ${arb_} $(dirname ${arb_})/_$(basename ${arb_})~ return 1"
-            return 1
-        fi
+#     if [ -d "${arb_}" ]; then
+#         if ! cp -rfv "${arb_}" "$(dirname "${arb_}")"/_"$(basename "${arb_}")"~; then
+#             plt_exit "in fol_() : EXEC_FAIL : cp -rfv ${arb_} $(dirname ${arb_})/_$(basename ${arb_})~ return 1"
+#             return 1
+#         fi
 
-        if ! rm -rfv "${arb_}"; then
-            plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
-            return 1
-        fi
-    else
-        plt_exit "in fol_() : NOT_DIR : not exist ${arb_} return 1"
-        return 1
-    fi
+#         if ! rm -rfv "${arb_}"; then
+#             plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
+#             return 1
+#         fi
+#     else
+#         plt_exit "in fol_() : NOT_DIR : not exist ${arb_} return 1"
+#         return 1
+#     fi
 
-    echo -e "${CYAN}--- DELETE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
+#     echo -e "${CYAN}--- DELETE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
 
-    return 0
+#     return 0
 
-fi
+# fi
 
-if [ "${crarb_:-0}" -eq 1 ]; then
+# if [ "${crarb_:-0}" -eq 1 ]; then
 
-    plt_pause "in fol_() : DO? : create arbor : file://${arb_}"
+#     plt_pause "in fol_() : DO? : create arbor : file://${arb_}"
 
-    if ! [ -d "${arb_}" ]; then
-        if ! mkdir -pv "${arb_}"; then
-            plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
-            return 1
-        fi
-    else
-        plt_exit "in fol_() : DIR : already exist ${arb_} return 1"
-        return 1
-    fi
+#     if ! [ -d "${arb_}" ]; then
+#         if ! mkdir -pv "${arb_}"; then
+#             plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
+#             return 1
+#         fi
+#     else
+#         plt_exit "in fol_() : DIR : already exist ${arb_} return 1"
+#         return 1
+#     fi
 
-    if ! cp -rv "${sil_}"/arb/. ${arb_}; then
-        plt_exit "in fol_() : EXEC_FAIL : cp -rv ${sil_}/arb/. ${arb_} return 1"
-        return 1
-    fi
+#     if ! cp -rv "${sil_}"/arb/. ${arb_}; then
+#         plt_exit "in fol_() : EXEC_FAIL : cp -rv ${sil_}/arb/. ${arb_} return 1"
+#         return 1
+#     fi
 
-    echo -e "${CYAN}--- CREATE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
+#     echo -e "${CYAN}--- CREATE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
 
-    . ${sil_}/paratus_sil.sh
-    . ${arb_}/paratus_arb.sh
+#     . ${sil_}/paratus_sil.sh
+#     . ${arb_}/paratus_arb.sh
 
-    arb_rams=${arb_}/all_ramus_name.lst
+#     arb_rams=${arb_}/all_ramus_name.lst
 
-    fol_show_arb_rams_
+#     fol_show_arb_rams_
 
-    return 0
+#     return 0
 
-fi
+# fi
 
-. ${sil_}/paratus_sil.sh
-. ${arb_}/paratus_arb.sh
+# . ${sil_}/paratus_sil.sh
+# . ${arb_}/paratus_arb.sh
 
-arb_rams=${arb_}/all_ramus_name.lst
+# arb_rams=${arb_}/all_ramus_name.lst
 
-if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
-    if [ "${sub:0:2}" == "f_" ]; then
-        ${sub:2} ${arb_}/${ram_}.ram/${obc}.fol
-    fi
-    return 0
-fi
+# if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "f_" ]; then
+#         ${sub:2} ${arb_}/${ram_}.ram/${obc}.fol
+#     fi
+#     return 0
+# fi
 
-if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
-    if [ "${sub:0:2}" == "f_" ]; then
-        ${sub:2} ${arb_}/${ram_}.ram
-    fi
-    return 0
-fi
+# if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "f_" ]; then
+#         ${sub:2} ${arb_}/${ram_}.ram
+#     fi
+#     return 0
+# fi
 
-if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
-    if [ "${sub:0:2}" == "a_" ]; then
-        ${sub:2} ${arb_}
-    fi
-    return 0
-fi
+# if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "a_" ]; then
+#         ${sub:2} ${arb_}
+#     fi
+#     return 0
+# fi
 
 if [ "${utag_:-0}" -eq 1 ]; then
     "${_f2e}" "${arb_}"/all_unique_tags.lst

@@ -48,3 +48,11 @@ fol_crtag_
 
 ret_nom
 res_arr
+
+#name infunctions
+fol_mm_
+fol_show_arb_tags_
+fol_show_ram_tags_
+fol_show_arb_rams_
+
+arb_rams
