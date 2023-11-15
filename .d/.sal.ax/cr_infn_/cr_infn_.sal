@@ -124,8 +124,7 @@ done
 #?---------------------------------------
 
 eval name_fn=\${PPWD#$root_dir_}
-# ${fff//\//_}
-# ${fff//./_}
+
 base_root=$(basename $root_dir_)
 base_root=${base_root//./_}
 

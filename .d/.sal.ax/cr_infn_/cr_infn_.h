@@ -5,15 +5,14 @@ DEPR:
 NAME: cr_infn_
 {name}
 .
-MAIN: 
+MAIN: cr file with inner fn path - name_fn = path_to_file_from_root_dir_+ basename root_dir_
 {main}
 .
 ARGS:
 $1 
 CNTLS:
 !--_fn
-!--_par_fn
-?--_par_dir
+!--_root_dir parent dir for infn_dir
 LOGIC ARGS:
 !()
 ?()
@@ -42,6 +41,8 @@ VERS:
 {vers}
 .
 TAGS: 
+@cr
+@file
 {tags}
 .
 .        CNTLS:
@@ -190,7 +191,12 @@ RTFN: cr_infn_ cr_infn_c_ cr_infn_g_
 {rtfn}
 .
 EXAM:
-cr_infn_ --_fn "01_ttm_fn" --_par_dir "02_pd" --_par_fn fool_
+root_dir=${PLT_PATH}/actio/mall/dir_cr_infn_/.d.ax/.mdeb/.tmp/de.b
+par_dir="${r_dir}"/01_first/01_second
+plt_pause "DO? cr_infn_ --_fn 02_ttm_fn --_root_dir file://$root_dir in file://$par_dir"
+cd "${par_dir}" || plt_exit "NOT_DIR : ${par_dir}"
+rm -v "${par_dir}"/02_ttm_fn_01_first_01_second_de_b.sh
+cr_infn_ --_fn "02_ttm_fn" --_root_dir "${root_dir}"
 {exam}
 .
 MANF:
