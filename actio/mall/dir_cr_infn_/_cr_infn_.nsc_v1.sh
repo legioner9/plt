@@ -88,34 +88,31 @@ cr_infn_() {
         eval local "$var_fn"
         var_fn_arr+=("${var_fn}")
     done
-
     #? mapping obc_ file to env_fn_arr and local vars into fn as mutable internal values
-    if [ -n "${obc_}" ] && [ -f "${obc_}" ]; then
+    if [ -f "${obc_:-0}" ]; then
         for arg_fn in $(f2e "${obc_}"); do
             # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
             eval local "$arg_fn"
             arg_fn_arr+=("${arg_fn}")
         done
     fi
-    echo 3
     #? mapping aer_ file to env_fn_arr and local vars into fn as immutable external values
-    if [ -n "${aer_}" ] && [ -f "${aer_}" ]; then
+    if [ -f "${aer_:-0}" ]; then
         for env_fn in $(f2e "${aer_}"); do
             # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
             eval local "$env_fn"
             env_fn_arr+=("${env_fn}")
         done
     fi
-
     #? visualisation pointers for use: mapping pts_ file to pts_fn_arr
-    if [ -n "${pts_}" ] &&  [ -f "${pts_}" ]; then
+    if [ -f "${pts_:-0}" ]; then
         for pts_fn in $(f2e "${pts_}"); do
             pts_fn_arr+=("${pts_fn}")
         done
     fi
     #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
     if [ -n "${ppr_}" ]; then
-        eval local val_ppr=\$${ppr_}
+        eval local val_ppr=$${ppr_}
     fi
     # [obc] obiectum      - [аргументы] объект
     # [sub] subiectum     - [процедура] субъект
@@ -124,8 +121,8 @@ cr_infn_() {
     # [ppr] productum     - [глобальная ссылка на результат] продукт
     # [sag] sagitta       - [набор файлов] стрела
 
-    # echo 3
-
+    echo 3
+    
     #* -------------
     #? mapping mall.local file to use in ${FNN}.body.nsc.sh
     for var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
@@ -133,6 +130,8 @@ cr_infn_() {
         eval local "$var_wrap"
         var_wrap_arr+=("${var_wrap}")
     done
+
+    
 
     # echo ". ${PLT_PATH}/.d/.nid/mall.nid"
     if ! . "${PLT_PATH}/.d/.nid/mall/mall.const"; then

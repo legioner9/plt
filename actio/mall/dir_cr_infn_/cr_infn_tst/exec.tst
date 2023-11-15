@@ -22,13 +22,13 @@ cd "$dir" || plt_exit
 #? if res, pre dirs -> diff -qr | diff -r
 
 flag=1
-if ! diff -r "$dir"/_pre "$dir"/_res ; then
+if ! diff -rq "$dir"/_pre "$dir"/_res >/dev/null; then
     flag=0
 fi
 
 if [ 0 -eq "$flag" ]; then
     echo "ANY in file://$dir fail" >&2
-    diff "$dir"/pre "$dir"/res >&2
+    diff -r "$dir"/_pre "$dir"/_res >&2
     return 1
 else
     echo "ALL in $dir true"

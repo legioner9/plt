@@ -1,1 +1,1 @@
-MAIN: cr file with inner fn 
+MAIN: cr file with inner fn path - name_fn = path_to_file_from_root_dir_+ basename root_dir_

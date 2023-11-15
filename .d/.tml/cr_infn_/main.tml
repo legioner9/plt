@@ -1,6 +1,6 @@
 #{pre}
 
-{fn_}_{par_dir_}_{par_fn_}() {
+{name_fn}() {
 
 #{body}
 

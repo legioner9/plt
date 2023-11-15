@@ -1,2 +1,13 @@
 EXAM:
-    cr_infn_ --_fn "01_ttm_fn" --_par_dir "02_pd" --_par_fn fool_
+
+    root_dir=${PLT_PATH}/actio/mall/dir_cr_infn_/.d.ax/.mdeb/.tmp/de.b
+
+    par_dir="${r_dir}"/01_first/01_second
+
+    plt_pause "DO? cr_infn_ --_fn 02_ttm_fn --_root_dir file://$root_dir in file://$par_dir"
+
+    cd "${par_dir}" || plt_exit "NOT_DIR : ${par_dir}"
+
+    rm -v "${par_dir}"/02_ttm_fn_01_first_01_second_de_b.sh
+
+    cr_infn_ --_fn "02_ttm_fn" --_root_dir "${root_dir}"

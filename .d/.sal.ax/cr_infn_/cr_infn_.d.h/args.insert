@@ -3,8 +3,8 @@ ARGS:
 
 CNTLS:
         !--_fn
-        !--_par_fn
-        ?--_par_dir
+        !--_root_dir parent dir for infn_dir
+
         
 
 LOGIC ARGS:

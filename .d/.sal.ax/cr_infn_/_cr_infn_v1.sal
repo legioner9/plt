@@ -42,7 +42,7 @@ echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
-list_strong_cntls=(fn_ root_dir_)
+list_strong_cntls=(fn_ par_fn_)
 for item in "${list_strong_cntls[@]}"; do
     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
     echo "$(eval echo \$"$item")"
@@ -123,20 +123,7 @@ done
 #?---------------------------------------------
 #?---------------------------------------
 
-eval name_fn=\${PPWD#$root_dir_}
-# ${fff//\//_}
-# ${fff//./_}
-base_root=$(basename $root_dir_)
-base_root=${base_root//./_}
-
-name_fn=${name_fn//./_}
-name_fn=${name_fn//\//_}
-
-name_fn=${fn_}${name_fn}_${base_root}
-
-echo -e "${GREEN}\$name_fn = $name_fn${NORMAL}" #print variable
-
-filename=${PPWD}/${name_fn}.sh
+filename=${PPWD}/${fn_}_${par_dir_}_${par_fn_}.sh
 
 plt_pause "in ${FNN}() : DO? : create file://${filename} "
 
@@ -150,11 +137,19 @@ ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/${FNN}
 
 cr_f_ \
     "$filename" \
-    --vi0 "${name_fn}" --vr0 "{name_fn}" \
-    --vi1 "${filename}" --vr1 "{filename}"
+    --vi0 "$fn_" --vr0 "{fn_}" \
+    --vi1 "$par_fn_" --vr1 "{par_fn_}"
 
-    ${_upg_path_} "${filename}"
+if [ -n "$par_dir_" ]; then
 
+    cr_f_ \
+        "$filename" \
+        --vi0 "$par_dir_" --vr0 "{par_dir_}"
+else
+
+    sed -i 's/{par_dir_}//g' "$filename"
+
+fi
 #{main_body_fn}
 
 #?---------------------------------------
