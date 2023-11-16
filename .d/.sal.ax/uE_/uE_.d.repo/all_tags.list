@@ -1,10 +1,14 @@
+@catalog
+@mm
+@ntst
+@wrp
+@arb
 @bcp
 @lst
 @sys
+@ndo
 @cr
 @file
-@wrp
-@mm
 @dir
 @parr
 @empty
@@ -13,4 +17,3 @@
 @str
 @arr
 @tag
-@catalog

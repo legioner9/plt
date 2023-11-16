@@ -92,7 +92,6 @@ ${NORMAL}"
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
         -_cat_cont \
-        -_mm
 
     fol_ \
         --_sil "${dir_sil}" \

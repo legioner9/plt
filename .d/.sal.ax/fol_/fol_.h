@@ -11,22 +11,34 @@ MAIN: treat dir with .fol
 ARGS:
 $1 
 CNTLS:
---_ram => ram_ ram name
-strong:        
---_sil dir IFS from .sil
---_arb dir implimentation with .ram
-optional:
--_mm or --_ram or not (if demand define neme ramus)
 --_ram name (without .ext) dir .ram with .fol files
--_mm choice ram_
---_{sub}_{obs} or -_crtag or -_addtag or -_deltag
--_tag echo unique from all tag in arbor
+--_sil dir IFS from .sil
+--_arb dir implimentation with .ram       
+--_tag name tag ()
+--_{sub}_{obs} (in ram name do {sub} with {obs})   
+-_utag echo unique from all tag in arbor
 -_addtag to ram_ add tag from unique exist tag
 -_crtag to ram_ create new tag and add
 -_deltag from ram_
---_{sub}_{obs} (in ram name do {sub} with {obs})
--_E echo main info: 
-once(1InAll):
+-_crram create ram_ in arb_
+-_delram delit ram_ from arb_ (bcp to _~)
+-_cleram delit all bcp _ram_.ram~
+-_crarb create arb_
+-_delarb delete arb_
+-_E echo main info:    
+-_all_arb echo all arb in sys_plt
+LOGIC ARGS:
+( --_sil && --_arb && ( -_crarb || -_delarb ))
+( --_sil && --_arb ) && ?( --_ram ) && 
+?( -_addram || -_delram || -_cleram ) ||
+?( --_{sub}_{obs} )
+( --_{sub}_{obs} || -_crtag || -_addtag || -_deltag)
+?( --_ram ) && (-_crtag || -_addtag || -_deltag)
+( --_sil && --_arb && --_ram && --_tag && ( -_crtag || -_deltag )
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
 {args}
 .
 RETU: 
@@ -194,11 +206,17 @@ EXAM:
 {exam}
 .
 MANF:
+# multyplay cr infs
+edit_ a13_fp_f_mdeb_gig_fs_infns.sh
+fol_ _mdeb 13 
 {manf}
 .
 {bags}
 .
 # check  --_{sub}_{obs} or -_crtag or -_addtag
+# fol_ is util and info func:
+## product mode 
+## tag add if exist, delit if not exist
 {todo}
 .
 MDEB:
@@ -208,8 +226,20 @@ fol_ _mdeb 2
 fol_ _mdeb 3
 # do fol_ -_crtag flow
 fol_ _mdeb 4
-# do fol_ -_deltag
+# do fol_ -_deltag flow
 fol_ _mdeb 5
+# do fol_ -_crram flow
+fol_ _mdeb 6
+# do fol_ -_delram flow
+fol_ _mdeb 7
+# echo | fol_ -_ram tmp_d -_crram + -_delram flow 
+fol_ _mdeb 8
+# fol_ --_arb tmp_arb -_crarb + -_delarb flow
+fol_ _mdeb 9
+# fol_ --_arb tmp_arb -_crarb + -_delarb flow
+fol_ _mdeb 10
+# fol_ fol_ --_arb tmp_arb -_crarb + -_delarb flow
+fol_ _mdeb 9
 {mdeb}
 .
 {utst}

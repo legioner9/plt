@@ -88,3 +88,5 @@ QQ_EXIT=0
 
 # nid_nid='${PLT_PATH}/.d/.nid/mall.nid'
 # nid_body='${FN_SAL_DIR}/${FNN}.body.sh'
+
+SIL_A="${PLT_PATH}"/.d/.sil.ax/phylum_a.sil

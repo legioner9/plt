@@ -17,6 +17,7 @@ item5
 item6
 item7
 item8
+item8
 value1
 sum_1
 
@@ -36,6 +37,7 @@ sub
 obc
 
 ram_
+ram_dir
 arr_ram
 tag_to_add
 tag_to_delete

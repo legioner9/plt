@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> cr_arb_ 
+farg2e2_ -> cr_arb_
+echo_deb_ -> cr_arb_
+cr_arb_ -> cr_arb_:is_num
+cr_arb_ -> cr_arb_:exit_err_cr_arb_
+cr_arb_ -> cr_arb_:exit_reg_cr_arb_
+cr_arb_ -> cr_arb_:unset_autoargs_cr_arb_
+' {wrap_fn}
+' fnn o-> cr_arb_
+' {body_fn}
+@enduml

@@ -77,14 +77,14 @@ fol_() {
     done
     #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
     #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
-    for var_fn in $(f2e "${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.sal.ax/fol_.local.list"); do
+    for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.sal.ax/fol_.local.list"); do
         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
         eval local "$var_fn"
         var_fn_arr+=("${var_fn}")
     done
     #? mapping obc_ file to env_fn_arr and local vars into fn as mutable internal values
     if [ -f "${obc_:-0}" ]; then
-        for arg_fn in $(f2e "${obc_}"); do
+        for arg_fn in $("${_f2e}" "${obc_}"); do
             # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
             eval local "$arg_fn"
             arg_fn_arr+=("${arg_fn}")
@@ -92,7 +92,7 @@ fol_() {
     fi
     #? mapping aer_ file to env_fn_arr and local vars into fn as immutable external values
     if [ -f "${aer_:-0}" ]; then
-        for env_fn in $(f2e "${aer_}"); do
+        for env_fn in $("${_f2e}" "${aer_}"); do
             # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
             eval local "$env_fn"
             env_fn_arr+=("${env_fn}")
@@ -100,13 +100,13 @@ fol_() {
     fi
     #? visualisation pointers for use: mapping pts_ file to pts_fn_arr
     if [ -f "${pts_:-0}" ]; then
-        for pts_fn in $(f2e "${pts_}"); do
+        for pts_fn in $("${_f2e}" "${pts_}"); do
             pts_fn_arr+=("${pts_fn}")
         done
     fi
     #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
     if [ -n "${ppr_}" ]; then
-        eval local val_ppr=$${ppr_}
+        eval local val_ppr=\$${ppr_}
     fi
     # [obc] obiectum      - [аргументы] объект
     # [sub] subiectum     - [процедура] субъект
