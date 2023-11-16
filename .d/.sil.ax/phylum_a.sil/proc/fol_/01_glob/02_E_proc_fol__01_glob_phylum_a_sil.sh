@@ -4,7 +4,7 @@
 
 02_E_proc_fol__01_glob_phylum_a_sil() {
 
-echo -e "${CYAN}--- 02_E_proc_fol__01_glob_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/01_glob/02_E_proc_fol__01_glob_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- 02_E_proc_fol__01_glob_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/01_glob/02_E_proc_fol__01_glob_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
 echo -e "${CYAN}--- MAIN: check main condition and pre start util files ---${NORMAL}" #sistem info mesage
 #{body}
 

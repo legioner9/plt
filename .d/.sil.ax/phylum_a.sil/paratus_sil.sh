@@ -4,6 +4,8 @@
 #! local var {item_ram_} {item_tag_}
 #! {arb_} full path to arb dir with .ram files {sil_} full path to sil dir with arbs
 
+echo -e "${CYAN}--- start paratus_sil.sh ---${NORMAL}" #sistem info mesage
+
 . ${sil_}/arb/ls.sh
 . ${sil_}/vis/ls.sh
 

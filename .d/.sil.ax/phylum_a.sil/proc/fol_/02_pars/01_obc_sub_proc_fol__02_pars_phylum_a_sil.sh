@@ -4,7 +4,7 @@
 
 01_obc_sub_proc_fol__02_pars_phylum_a_sil() {
 
-echo -e "${CYAN}--- 01_obc_sub_proc_fol__02_pars_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/02_pars/01_obc_sub_proc_fol__02_pars_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- 01_obc_sub_proc_fol__02_pars_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/02_pars/01_obc_sub_proc_fol__02_pars_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
 echo -e "${CYAN}--- MAIN: pars arg -_(f_|r_|a_){sub_}_{obc_} to sub_={sub_} , obc_={obc_} ---${NORMAL}" #sistem info mesage
 #{body}
 
@@ -21,6 +21,7 @@ echo -e "${CYAN}--- MAIN: pars arg -_(f_|r_|a_){sub_}_{obc_} to sub_={sub_} , ob
         done
     done
     echo -e "${HLIGHT}--- . ${sil_}/paratus_sil.sh ---${NORMAL}" #start files
+    
     . ${sil_}/paratus_sil.sh
 
 }

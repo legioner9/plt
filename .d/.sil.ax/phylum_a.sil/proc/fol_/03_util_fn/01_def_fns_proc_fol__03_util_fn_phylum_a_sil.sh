@@ -4,7 +4,7 @@
 
 01_def_fns_proc_fol__03_util_fn_phylum_a_sil() {
 
-    echo -e "${CYAN}--- 01_def_fns_proc_fol__03_util_fn_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/03_util_fn/01_def_fns_proc_fol__03_util_fn_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${BLUE}--- 01_def_fns_proc_fol__03_util_fn_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/03_util_fn/01_def_fns_proc_fol__03_util_fn_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
     echo -e "${CYAN}--- MAIN: defime fol_mm_() , fol_show_arb_tags_() , fol_show_ram_tags_() , fol_show_arb_rams_() ---${NORMAL}"                                                                                        #sistem info mesage
     #{body}
 

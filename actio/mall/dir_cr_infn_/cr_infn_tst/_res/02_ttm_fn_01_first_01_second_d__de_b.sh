@@ -8,4 +8,4 @@ echo -e "${CYAN}--- 02_ttm_fn_01_first_01_second_d__de_b() file://${PLT_PATH}/ac
 echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
 #{body}
 
-}
+} 

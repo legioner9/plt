@@ -4,7 +4,7 @@
 
 02_del_arb_proc_fol__04_arb_flow_phylum_a_sil() {
 
-    echo -e "${CYAN}--- 02_del_arb_proc_fol__04_arb_flow_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/04_arb_flow/02_del_arb_proc_fol__04_arb_flow_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${BLUE}--- 02_del_arb_proc_fol__04_arb_flow_phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/04_arb_flow/02_del_arb_proc_fol__04_arb_flow_phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
     echo -e "${CYAN}--- MAIN: flow --_arb -_del_arb ---${NORMAL}"                                                                                                                                                             #sistem info mesage
     #{body}
     if [ "${delarb_:-0}" -eq 1 ]; then

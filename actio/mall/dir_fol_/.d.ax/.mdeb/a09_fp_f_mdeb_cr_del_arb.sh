@@ -76,6 +76,8 @@ ${NORMAL}"
     local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
     local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/tmp_arb
 
+    rm -rv "${dir_arb}"
+
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
