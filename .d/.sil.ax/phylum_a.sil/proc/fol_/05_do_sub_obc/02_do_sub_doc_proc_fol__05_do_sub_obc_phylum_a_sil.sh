@@ -14,21 +14,21 @@
             echo -e "${HLIGHT}--- ${sub:2} ${arb_}/${ram_}.ram/${obc}.fol ---${NORMAL}" #start files
             "${sub:2}" "${arb_}/${ram_}.ram/${obc}.fol"
         fi
-        return 0
+        return 2
     fi
 
     if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
         if [ "${sub:0:2}" == "r_" ] && [ -d "${arb_}/${ram_}.ram" ]; then
             "${sub:2}" "${arb_}/${ram_}.ram"
         fi
-        return 0
+        return 2
     fi
 
     if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
         if [ "${sub:0:2}" == "a_" ] && [ -d "${arb_}" ]; then
             "${sub:2}" "${arb_}"
         fi
-        return 0
+        return 2
     fi
 
 }

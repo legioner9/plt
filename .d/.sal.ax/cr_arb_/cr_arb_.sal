@@ -123,16 +123,16 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
-if [ -z "${ARG0}" ]; then
+if [ -z "${ARGS0}" ]; then
 
-    plt_exit "in ${FNN}: ERR_AMOUNT_ARGS : ARG0 is empty return 1"
+    plt_exit "in ${FNN}: ERR_AMOUNT_ARGS : ARG0='${ARGS0}' is empty return 1"
     return 1
 
 fi
 
 fol_ \
     --_sil "${SIL_A}" \
-    --_arb "${ARG0}" \
+    --_arb "${ARGS0}" \
     -_crarb
 
 #{main_body_fn}

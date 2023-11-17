@@ -141,6 +141,15 @@ Explicato:
 
 ## Usage
 
+### E catalog all plt function
+    $ uE_ 
+    arg : [ tag ] all unuque tag from uE_
+    
+
+### mm all .arb for use sysplt
+    $ aE_
+    arg : [ num ] number of mm 
+
 ### test all from ${PLT_PATH}/actio, ${FONSH_PATH}/actio
 
     $ tst_ -echo

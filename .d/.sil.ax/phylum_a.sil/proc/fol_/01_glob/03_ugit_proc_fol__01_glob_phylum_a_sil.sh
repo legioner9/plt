@@ -10,7 +10,7 @@
 
     if [ -f "${arb_}"/all_unique_tags.lst ] && [ "${utag_:-0}" -eq 1 ]; then
         "${_f2e}" "${arb_}"/all_unique_tags.lst
-        return 0
+        return 2
     fi
 
 }
