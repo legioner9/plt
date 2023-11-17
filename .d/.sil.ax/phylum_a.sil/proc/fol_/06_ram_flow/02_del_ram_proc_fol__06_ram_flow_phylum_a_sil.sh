@@ -55,6 +55,8 @@
                 fi
             done
 
+            return 2
+
         else
 
             ram_to_delete=${arb_}/${ram_}.ram

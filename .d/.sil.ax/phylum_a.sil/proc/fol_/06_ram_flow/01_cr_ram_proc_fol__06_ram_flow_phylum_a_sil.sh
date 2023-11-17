@@ -56,6 +56,8 @@
                     break
                 fi
             done
+
+            return 2
         else
 
             if ! [ -n "${ram_}" ] && [ "${#ram_}" -le 10 ] && "${_is_eng_var}" "${ram_}"; then
