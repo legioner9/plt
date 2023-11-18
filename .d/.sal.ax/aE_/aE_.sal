@@ -144,6 +144,9 @@ for item3 in ${arrr[@]}; do
 
 done
 
+arr+=("edit_list_allarb")
+res+=("${_edit_} ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst")
+
 arr+=("exit menu")
 res+=("return 0")
 
