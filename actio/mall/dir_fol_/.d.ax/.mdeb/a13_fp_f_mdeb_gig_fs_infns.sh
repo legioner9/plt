@@ -88,7 +88,7 @@ ${NORMAL}"
     # cr_infn_ --_fn "02_add_tag" --_root_dir "${root_dir}"
     # cr_infn_ --_fn "03_del_tag" --_root_dir "${root_dir}"
 
-    cd ${fol_dir}/01_glob || plt_exit "NOT_DIR : ${fol_dir}/01_glob"
+    cd ${fol_dir}/03_util_fn || plt_exit "NOT_DIR : ${fol_dir}/03_util_fn"
     cr_infn_ --_fn "04_all_arb" --_root_dir "${root_dir}"
 
     # cr_infn_ --_fn "0_do_sub_doc" --_root_dir "${root_dir}"

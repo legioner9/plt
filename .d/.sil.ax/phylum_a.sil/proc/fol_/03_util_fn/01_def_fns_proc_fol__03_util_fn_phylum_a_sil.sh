@@ -32,7 +32,7 @@
 
         if ! [ -d "${arb_}/${ram_}.ram" ]; then
             plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
-            return 1
+            return 3
         fi
 
         ram_tag_file=${arb_}/${ram_}.ram/tags.fol

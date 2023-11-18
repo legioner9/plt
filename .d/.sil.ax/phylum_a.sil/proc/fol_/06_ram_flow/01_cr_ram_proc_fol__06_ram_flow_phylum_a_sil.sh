@@ -47,6 +47,8 @@
 
                 fi
 
+                hook_after_crram
+
                 . ${arb_}/paratus_arb.sh
 
             }
@@ -87,6 +89,8 @@
             fi
 
             echo -e "${CYAN}--- in fol_() : CREATE : file://${ram_to_create} ---${NORMAL}" #sistem info mesage
+
+            hook_after_crram
 
             . ${arb_}/paratus_arb.sh
 
