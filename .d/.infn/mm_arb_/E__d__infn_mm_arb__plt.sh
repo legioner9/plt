@@ -5,7 +5,7 @@
 E__d__infn_mm_arb__plt() {
 
 echo -e "${CYAN}--- E__d__infn_mm_arb__plt() file://${PLT_PATH}/.d/.infn/mm_arb_/E__d__infn_mm_arb__plt.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: E from $1 ---${NORMAL}" #sistem info mesage
+echo -e "${CYAN}--- MAIN: E from file://$1 ---${NORMAL}" #sistem info mesage
 #{body}
     local dir_sil=${SIL_A}
 

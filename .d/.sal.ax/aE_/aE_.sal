@@ -128,42 +128,41 @@
 echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
 
 arr=()
-# res=()
-arr=($("${_f2e}" ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst))
-# res=()
-# arr+=("leave menu")
-# res+=("echo bye)))")
-#{arr_res}
-# arr+=("aaaaaaaaa")
-# res+=("bbbbbbbbb")
-# arr+=("aaaaaaaaa")
-# res+=("bbbbbbbbb")
-# arr+=("aaaaaaaaa")
-# res+=("bbbbbbbbb")
-# arr+=("aaaaaaaaa")
-# res+=("bbbbbbbbb")
+res=()
+arrr=()
+arrr=($("${_f2e}" ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst))
+
+for item2 in ${arrr[@]}; do
+
+    arr+=("$("${_f2e}" "${item2}"/main.arb)")
+
+done
+
+for item3 in ${arrr[@]}; do
+
+    res+=("mm_arb_ ${item3}") 
+
+done
+
+arr+=("exit menu")
+res+=("return 0")
+
+echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+
+
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
     num_res=$(($1 - 1))
-    fol_ \
-        --_sil ${SIL_A} \
-        --_arb ${arr[${num_res}]} \
-        -_E
+    ${res[${num_res}]}
     return 0
 fi
-
 PS3="eligendi actiones: "
-select item_i in "${arr[@]}"; do
-    if [ -d "${item_i}" ]; then
-        fol_ \
-            --_sil "${SIL_A}" \
-            --_arb "${item_i}" \
-            -_E
-        ${FNN} $@
-        else 
-
-        plt_pause "in ${FNN}() : NOT_DIR : '${item_i}'"
-
-    fi
+select item in "${arr[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item} == ${arr[$i]} ]]; then
+            ${res[$i]}
+            ${FNN} $@
+        fi
+    done
 done
 #{zzz20}
 
