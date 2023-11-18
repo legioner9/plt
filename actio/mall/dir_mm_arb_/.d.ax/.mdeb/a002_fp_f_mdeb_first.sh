@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a12_fp_f_mdeb_c_up_1.sh"
+filename="${PLT_PATH}/actio/mall/dir_mm_arb_/.d.ax/.mdeb/a002_fp_f_mdeb_first.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a12_fp_f_mdeb_c_up_1() {
+a002_fp_f_mdeb_first() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a12_fp_f_mdeb_c_up_1() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/a12_fp_f_mdeb_c_up_1.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_mm_arb_/.d.ax/.mdeb/a002_fp_f_mdeb_first.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -73,15 +73,8 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    plt_pause "fol_ --_sil -_E"
-
-    local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
-    local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
-
-    fol_ \
-        --_sil "${dir_sil}" \
-        --_arb "${dir_arb}" \
-        -_E
+    local arb_dir=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
+    "${_mm_arb_}" "${arb_dir}"
 
     #{body_fn}
 }

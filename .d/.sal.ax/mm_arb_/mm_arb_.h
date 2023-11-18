@@ -2,14 +2,15 @@
 DEPR: 
 {depr}
 .
-NAME: aE_
+NAME: mm_arb_
 {name}
 .
-MAIN: mm: fol_ -_E --_sil ${SIL_A} --_arb from list file://${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst
+MAIN: mm with main treat and display on stdout
 {main}
 .
 ARGS:
-?$1 num menu - -_E arb 
+!$1 arb_dir
+?$2 num_menu
 CNTLS:
 --_
 -_
@@ -41,11 +42,9 @@ VERS:
 {vers}
 .
 TAGS: 
-@catalog
-@mm
 @ntst
-@wrp
 @arb
+@mm
 {tags}
 .
 .        CNTLS:
@@ -167,7 +166,7 @@ _dis2
 {all_cntl}
 .
 .
-DATE: 202311161334
+DATE: 202311181100
 {date}
 .
 DFNS: ${PLT_PATH}/actio/mall
@@ -181,16 +180,16 @@ FLOW:
 .
 # ln from ${PLT_PATH}/.d/.anc.ax/ifs_fn.d.man/name_fn.d.h/lego.insert
 LEGO:
-- . ${PLT_PATH}/actio/mall/dir_aE_/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
-- . ${PLT_PATH}/actio/mall/dir_aE_/_gnr_dir_sys.sh create extst in dir_aE_
-- . ${PLT_PATH}/actio/mall/dir_aE_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_$aE__mdeb <num>
-- . ${PLT_PATH}/actio/mall/dir_aE_/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_aE__mdeb <num>
+- . ${PLT_PATH}/actio/mall/dir_mm_arb_/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+- . ${PLT_PATH}/actio/mall/dir_mm_arb_/_gnr_dir_sys.sh create extst in dir_mm_arb_
+- . ${PLT_PATH}/actio/mall/dir_mm_arb_/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_$mm_arb__mdeb <num>
+- . ${PLT_PATH}/actio/mall/dir_mm_arb_/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir_mm_arb__mdeb <num>
 {lego}
 .
 LNGF:
 {lngf}
 .
-RTFN: aE_ aE_c_ aE_g_
+RTFN: mm_arb_ mm_arb_c_ mm_arb_g_
 {rtfn}
 .
 EXAM:
