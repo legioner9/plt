@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> ram2arb_ 
+farg2e2_ -> ram2arb_
+echo_deb_ -> ram2arb_
+ram2arb_ -> ram2arb_:is_num
+ram2arb_ -> ram2arb_:exit_err_ram2arb_
+ram2arb_ -> ram2arb_:exit_reg_ram2arb_
+ram2arb_ -> ram2arb_:unset_autoargs_ram2arb_
+' {wrap_fn}
+' fnn o-> ram2arb_
+' {body_fn}
+@enduml

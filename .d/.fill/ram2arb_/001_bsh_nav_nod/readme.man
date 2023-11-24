@@ -1,0 +1,7 @@
+## edit :
+- files from .fol
+  - ? tags add tags or not
+  - ! main change PATH_TO_NOD
+- files from .var
+  - ! ram_ is name of adding ramus 
+ 
