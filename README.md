@@ -30,8 +30,10 @@ FonSh is the system selfgenerated, selftested, selfdocumented, selfcatalogizated
 
 ####
 
-- ...(.ax)... mean not delit fs node
-- ...(.nsc)... mean not change contane
+- ...(.ax)... : not delit fs node
+- ...(.nsc)... : not change contane
+- ...(.ln) ext : issue for soft ln
+- ...(.nl) ext : destination for soft ln
 
 ### plt/.d/.nid
 

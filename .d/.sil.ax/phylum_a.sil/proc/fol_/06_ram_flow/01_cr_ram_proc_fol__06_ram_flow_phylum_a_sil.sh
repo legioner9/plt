@@ -24,6 +24,11 @@
 
                     echo -e "${GREEN}\$ram_name_to_create = $ram_name_to_create${NORMAL}" #print variable
 
+                    if ! hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
+                        plt_exit "in ${FNN} : FAILEXEC : hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"
+                        return 3
+                    fi
+
                     if [ -n "${ram_name_to_create}" ] && [ "${#ram_name_to_create}" -le 10 ] && "${_is_eng_var}" "${ram_name_to_create}"; then
 
                         plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
@@ -47,7 +52,10 @@
 
                 fi
 
-                hook_after_crram
+                if ! hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
+                    plt_exit "in ${FNN} : FAILEXEC : hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"
+                    return 3
+                fi
 
                 . ${arb_}/paratus_arb.sh
 
@@ -69,6 +77,11 @@
 
             ram_to_create=${arb_}/${ram_}.ram
 
+            if ! hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
+                plt_exit "in ${FNN} : FAILEXEC : hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"
+                return 3
+            fi
+
             plt_pause "in fol_() : DO? : create ram '"${ram_}"' on file://${arb_}"
 
             if ! [ -d "${ram_to_create}" ]; then
@@ -84,17 +97,19 @@
                 ls -A ${ram_to_create}
 
             else
-                plt_info "in fol_() : DIR : already exist '${ram_}' file://${ram_to_create}"
+                plt_info "in fol_() : DIR : already exist '${ram_}' file://${ram_to_create} return 3"
                 return 3
             fi
 
             echo -e "${CYAN}--- in fol_() : CREATE : file://${ram_to_create} ---${NORMAL}" #sistem info mesage
 
-            hook_after_crram
+            if ! hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
+                plt_exit "in ${FNN} : FAILEXEC : hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"
+                return 3
+            fi
 
             . ${arb_}/paratus_arb.sh
 
-            fol_show_arb_rams_
             return 2
         fi
 

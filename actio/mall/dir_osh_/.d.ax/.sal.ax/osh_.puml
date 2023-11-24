@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> osh_ 
+farg2e2_ -> osh_
+echo_deb_ -> osh_
+osh_ -> osh_:is_num
+osh_ -> osh_:exit_err_osh_
+osh_ -> osh_:exit_reg_osh_
+osh_ -> osh_:unset_autoargs_osh_
+' {wrap_fn}
+' fnn o-> osh_
+' {body_fn}
+@enduml

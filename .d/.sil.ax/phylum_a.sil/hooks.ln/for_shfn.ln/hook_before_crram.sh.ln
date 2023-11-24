@@ -1,0 +1,10 @@
+#!/bin/bash
+# use ${arb_} ${sil_} ${ram_name_to_create}
+
+#! global: ram_name_to_create
+
+if typeset -F | grep -w ${ram_name_to_create}; then
+    ${_plt_exit} " not unique : ${ram_name_to_create} return 3 "
+    return 3
+fi
+

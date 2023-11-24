@@ -1,0 +1,1 @@
+MAIN: osh_ <name_fn> - exec : <name_fn> after up to mem : . ${PLT_PATH}/.d/.arb/osh.arb/<name_fn>.ram/.grot/<name_fn>.sh

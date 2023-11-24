@@ -1,0 +1,22 @@
+ARGS:
+    \$1 once name_fn
+        if "-E" exec catalog osh.arb
+    \$2 ... args for name_fn
+
+CNTLS:
+        --_
+        -_
+
+LOGIC ARGS:
+    !()
+    ?()
+
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
+exa:
+    !( --_sil && --_arb )
+    ( --_{sub}_{obs} && --_ram )
+    ( --_{sub}_{obs} || -_crtag || -_addtag )
+    ?( --_ram ) && (-_crtag || -_addtag )

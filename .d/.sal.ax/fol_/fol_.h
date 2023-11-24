@@ -203,6 +203,13 @@ RTFN: fol_ fol_c_ fol_g_
 {rtfn}
 .
 EXAM:
+dir_sil=${SIL_A}
+dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
+fol_ 
+--_sil "${dir_sil}" 
+--_arb "${dir_arb}" 
+?-_cat_cont 
+?-_E
 {exam}
 .
 MANF:
@@ -216,7 +223,8 @@ fol_ _mdeb 13
 # check  --_{sub}_{obs} or -_crtag or -_addtag
 # fol_ is util and info func:
 ## product mode 
-## tag add if exist, delit if not exist
+# to fill and tst dir ${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/fol_/05_do_sub_obc : 07_tag_flow
+# 02_do_sub_doc_proc_fol__05_do_sub_obc_phylum_a_sil add choice ram_ if that null like -_crtag
 {todo}
 .
 MDEB:
