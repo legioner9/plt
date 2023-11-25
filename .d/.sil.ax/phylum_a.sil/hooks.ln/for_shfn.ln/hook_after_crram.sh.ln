@@ -1,11 +1,11 @@
 #!/bin/bash
-# use ${arb_} ${sil_} ${ram_name_to_create}
+# use ${arb_} ${sil_} ${ram_} ${ram_to_create}
 
 #! global: ram_name_to_create
 
-cd ${arb_}/${ram_name_to_create}.ram/.grot || {
-    plt_exit "EXEC_FAIL: cd ${arb_}/${ram_name_to_create}.ram/.grot return 3"
+cd ${ram_to_create}/.grot || {
+    plt_exit "EXEC_FAIL: cd file://${ram_to_create}/.grot return 3"
     return 3
 }
 
-${_cr_shfn_} ${ram_name_to_create}.sh
+${_cr_shfn_} ${ram_}.sh

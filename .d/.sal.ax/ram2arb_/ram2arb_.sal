@@ -132,7 +132,7 @@ res=()
 
 arr=($(${_dd2e} "${fill_dir}"))
 
-echo "${arr[@]}"
+# echo "${arr[@]}"
 
 #{arr_res}
 # arr+=("aaaaaaaaa")
@@ -145,16 +145,19 @@ echo "${arr[@]}"
 # res+=("bbbbbbbbb")
 # arr+=("exit menu")
 # res+=("return 0")
-
-if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-    num_res=$(($1 - 1))
+flag=0
+if [ "$(num_01 ${ARGS0})" -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS0} - 1))
     dilectus="${arr[${num_res}]}"
+    flag=1
 fi
-PS3="eligendi actiones: init fill for ramus "
-select item_arr in "${arr[@]}"; do
-    dilectus=${item_arr}
-    break
-done
+if [[ ${flag} -eq 0 ]]; then
+    PS3="eligendi actiones: init fill for ramus "
+    select item_arr in "${arr[@]}"; do
+        dilectus=${item_arr}
+        break
+    done
+fi
 echo -e "${GREEN}\$dilectus = $dilectus${NORMAL}" #print variable
 
 if [[ -d "${tmp_dir}"/"${dilectus}" ]]; then
@@ -169,14 +172,26 @@ cat "${tmp_dir}"/"${dilectus}"/readme.man
 
 plt_pause "DO? ram2arb_ accoding ${tmp_dir}/${dilectus}"
 
-for item1 in $("${_d2e}" ${tmp_dir}/${dilectus}); do
+for item1 in $("${_d2e}" ${tmp_dir}/${dilectus}/.var); do
 
     var_name=$("${_prs_f}" -n "${item1}")
     echo -e "${GREEN}\$var_name = $var_name${NORMAL}" #print variable
 
+    eval $var_name=\$\(${_f2e} ${tmp_dir}/${dilectus}/.var/${item1}\)
+
 done
 
+echo -e "${GREEN}\$sil_ = $sil_${NORMAL}" #print variable
+echo -e "${GREEN}\$arb_ = $arb_${NORMAL}" #print variable
+echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
 #{zzz20}
+plt_pause "DO? fol_ -_crram"
+
+fol_ \
+    --_sil "${sil_}" \
+    --_arb "${arb_}" \
+    --_ram "${ram_}" \
+    -_crram 
 
 #{main_body_fn}
 
