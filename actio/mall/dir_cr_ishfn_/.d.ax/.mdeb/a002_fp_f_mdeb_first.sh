@@ -73,7 +73,9 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1\
 
-    cr_ishfn_ --_name_fn tmpp_ --_gig_dir "$PLT_PATH}"/actio/mall/dir_cr_ishfn_/.d.ax/.mdeb/.tmp/first
+    rm -fv "$PLT_PATH"/actio/mall/dir_cr_ishfn_/.d.ax/.mdeb/.tmp/first/tmpp_
+
+    cr_ishfn_ --_name_fn tmpp_ --_gig_dir "$PLT_PATH"/actio/mall/dir_cr_ishfn_/.d.ax/.mdeb/.tmp/first
 
     #{body_fn}
 }

@@ -126,14 +126,16 @@ done
 echo -e "${GREEN}\$gig_dir_ = $gig_dir_${NORMAL}" #print variable
 echo -e "${GREEN}\$name_fn_ = $name_fn_${NORMAL}" #print variable
 
-if [[ -d "${gig_dir_}" ]]; then
+if ! [[ -d "${gig_dir_}" ]]; then
     plt_exit "in ${FNN} : NOT_DIR : ${gig_dir_} return 1"
     return 1
 fi
 
 file_fn=${gig_dir_}/${name_fn_}
 
-${_cr_f_} ${file_fn} --tml 
+${_cr_f_} ${file_fn} --tml ${PLT_PATH}/.d/.tml/cr_ishfn_/init.tml
+
+cat ${gig_dir_}/${name_fn_} 
 #{main_body_fn}
 
 #?---------------------------------------
