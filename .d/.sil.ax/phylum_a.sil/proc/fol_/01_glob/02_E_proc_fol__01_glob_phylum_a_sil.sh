@@ -18,7 +18,7 @@
             ram_name="${item9}"
 
             if [ -f ${ram_dir}/main.fol ]; then
-                main_str="$("${_f2e}" "${ram_dir}"/main.fol)"
+                main_str="$("${_f2oe}" "${ram_dir}"/main.fol)"
             else
                 plt_pause "NOT_FILE '${ram_dir}/main.fol'"
             fi

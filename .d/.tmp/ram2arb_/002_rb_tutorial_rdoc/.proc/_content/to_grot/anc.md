@@ -1,1 +1,1 @@
-# file:///home/st/REPOBARE/_repo/NRuby/Repono/docs/ruby_3_3_0_preview2_complete/IO.html#method-c-popen
+# file:///home/st/REPOBARE/_repo/NRuby/Repono/docs/ruby_3_3_0_preview2_complete/Complex.html
