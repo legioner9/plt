@@ -132,8 +132,6 @@ res=()
 
 arr=($(${_dd2e} "${fill_dir}"))
 
-arr+=("edit_fills")
-
 # echo "${arr[@]}"
 
 #{arr_res}
@@ -151,19 +149,11 @@ flag=0
 if [ "$(num_01 ${ARGS0})" -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
     num_res=$((${ARGS0} - 1))
     dilectus="${arr[${num_res}]}"
-    if [[ ${dilectus} == "edit_fills" ]]; then
-        "${_edit_}" "${PLT_PATH}"/.d/.fill/${FNN}
-        "${FNN}"
-    fi
     flag=1
 fi
 if [[ ${flag} -eq 0 ]]; then
     PS3="eligendi actiones: init fill for ramus "
     select item_arr in "${arr[@]}"; do
-        if [[ ${item_arr} == "edit_fills" ]]; then
-            "${_edit_}" "${PLT_PATH}"/.d/.fill/${FNN}
-            "${FNN}"
-        fi
         dilectus=${item_arr}
         break
     done
@@ -191,33 +181,17 @@ for item1 in $("${_d2e}" ${tmp_dir}/${dilectus}/.var); do
 
 done
 
-if [[ -z ${ram_} ]]; then
-    plt_exit "in ${FNN} : EMPTY_FILE : ${tmp_dir}/${dilectus}/.var/ram_.var return 1"
-    return 1
-fi
-
 echo -e "${GREEN}\$sil_ = $sil_${NORMAL}" #print variable
 echo -e "${GREEN}\$arb_ = $arb_${NORMAL}" #print variable
 echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
 #{zzz20}
 plt_pause "DO? fol_ -_crram"
 
-if ! fol_ \
+fol_ \
     --_sil "${sil_}" \
     --_arb "${arb_}" \
     --_ram "${ram_}" \
-    -_crram; then
-
-    plt_exit "in ${FNN} : EXEC_FAIL : fol_ --_sil "${sil_}" --_arb "${arb_}" --_ram "${ram_}" -_crram : return 1"
-    return 1
-
-fi
-
-echo -e "${HLIGHT}--- ${_c_up} ${tmp_dir}/${dilectus}/.proc ---${NORMAL}" #start files
-
-${_c_up} ${tmp_dir}/${dilectus}/.proc
-
-"${_edit_}" $arb_/$ram_.ram
+    -_crram 
 
 #{main_body_fn}
 

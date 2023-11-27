@@ -1,1 +1,1 @@
-${_edit_} {PATH_TO_NOD}  file://${PATH_CURR_REPO}/{name_fn} 
+${_edit_} file://${PLT_PATH}/.d/.arb/bsh.arb/{ram_}.ram

@@ -72,6 +72,8 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+    plt_pause "DO? ram2arb_ 1 cr: ttt"
+    rm -rfv ${PLT_PATH}/.d/.arb/bsh.arb/ttt.ram
     ram2arb_ 1
     
     #{body_fn}
