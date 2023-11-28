@@ -1,1 +1,6 @@
 EXAM:
+    1 - num arb (plt/.d/.arb/arb.arb/arb.ram)
+    6 - num flow (-_E)
+    grep -B 3 : up 3 string
+        -w "@<tag>" : search tag as word
+    aE_ 1 6 | grep -B 3 -w "@<tag>"

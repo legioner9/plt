@@ -163,15 +163,20 @@ arr+=("exit menu")
 res+=("return 0")
 
 if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+
     num_res=$((${ARGS1} - 1))
-    ${res[${num_res}]}
+    echo -e "${HLIGHT}--- ${res[${num_res}]} ---${NORMAL}" #start files
+    ${res[${num_res}]} ${ARGS0}
     return 0
+    
 fi
 
 PS3="eligendi actiones: "
 select item in "${arr[@]}"; do
     for ((i = 0; i < 1000; i++)); do
         if [[ ${item} == ${arr[$i]} ]]; then
+
+            echo -e "${HLIGHT}--- ${res[$i]} ${ARGS0} ---${NORMAL}" #start files
             ${res[$i]} "${ARGS0}"
             ${FNN} $@
         fi

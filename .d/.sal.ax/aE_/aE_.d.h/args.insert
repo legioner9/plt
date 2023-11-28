@@ -1,5 +1,6 @@
 ARGS:
-    ?\$1 num menu - -_E arb 
+    ?\$1 num menu choice arb
+    ?\$2 num menu choice flow for arb
 
 CNTLS:
         --_

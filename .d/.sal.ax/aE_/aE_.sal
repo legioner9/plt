@@ -155,7 +155,8 @@ echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
 
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
     num_res=$(($1 - 1))
-    ${res[${num_res}]}
+    echo -e "${HLIGHT}--- ${res[${num_res}]} $2 ---${NORMAL}" #start files
+    ${res[${num_res}]} "$2"
     return 0
 fi
 PS3="eligendi actiones: "
