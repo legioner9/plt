@@ -16,5 +16,6 @@ par_dir=${root_dir}/.d/mm_arb_
 # cr_infn_ --_fn "deltag" --_root_dir "${root_dir}" --_par_dir "${par_dir}"
 # cr_infn_ --_fn "utag" --_root_dir "${root_dir}" --_par_dir "${par_dir}"
 
-cr_infn_ --_fn "editarb" --_root_dir "${root_dir}" --_par_dir "${par_dir}"
+# cr_infn_ --_fn "editarb" --_root_dir "${root_dir}" --_par_dir "${par_dir}"
+cr_infn_ --_fn "editram" --_root_dir "${root_dir}" --_par_dir "${par_dir}"
 

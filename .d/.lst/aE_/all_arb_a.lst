@@ -9,3 +9,4 @@ ${PATH_CURR_REPO}/NRuby/.arb/man
 ${PATH_CURR_REPO}/NRuby/.arb/gem
 
 ${PATH_CURR_REPO}/NBash/.arb/man
+${PATH_CURR_REPO}/NBash/.arb/util
