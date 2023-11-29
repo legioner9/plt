@@ -144,10 +144,10 @@ for item3 in ${arrr[@]}; do
 
 done
 
-arr+=("edit_list_allarb")
+arr+=("allarb.lst.edit")
 res+=("${_edit_} ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst")
 
-arr+=("exit menu")
+arr+=("menu.exit")
 res+=("return 0")
 
 echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions

@@ -1,1 +1,1 @@
-arb with all arb in sysplt file://${PLT_PATH}/.d/.arb/arb.arb
+arb.all_in_sysplt ::::: file://${PLT_PATH}/.d/.arb/arb.arb

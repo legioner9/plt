@@ -32,7 +32,7 @@
             return 1
         fi
 
-        echo "MAIN:  : arb_path file://${arb_}" > ${arb_}/main.arb
+        echo "item.prop ::::: file://${arb_}" > ${arb_}/main.arb
 
         echo -e "${CYAN}--- CREATE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
 

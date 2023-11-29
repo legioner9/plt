@@ -1,1 +1,1 @@
-arb with once exec .sh files : arb_path file:///home/st/REPOBARE/_repo/plt/.d/.arb/osh.arb
+bash.once_proc ::::: file:///home/st/REPOBARE/_repo/plt/.d/.arb/osh.arb
