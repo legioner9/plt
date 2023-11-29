@@ -27,17 +27,12 @@
             return 1
         fi
 
-        if ! cp -rv "${sil_}"/arb/_proc ${arb_}; then
+        if ! cp -rv "${sil_}"/arb/paratus_arb.sh ${arb_}; then
             plt_exit "in fol_() : EXEC_FAIL : cp -rv ${sil_}/arb/paratus_arb.sh ${arb_} return 1"
             return 1
         fi
 
-        if ! cp -v "${sil_}"/arb/paratus_arb.sh ${arb_}; then
-            plt_exit "in fol_() : EXEC_FAIL : cp -rv ${sil_}/arb/paratus_arb.sh ${arb_} return 1"
-            return 1
-        fi
-
-        echo "item.prop ::::: file://${arb_}" >${arb_}/main.arb
+        echo "item.prop ::::: file://${arb_}" > ${arb_}/main.arb
 
         echo -e "${CYAN}--- CREATE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
 

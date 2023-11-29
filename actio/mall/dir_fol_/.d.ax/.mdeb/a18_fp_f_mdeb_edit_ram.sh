@@ -72,6 +72,17 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+        plt_pause "fol_ -_edit_ram flow "
+
+    local dir_sil=${PLT_PATH}/.d/.sil.ax/phylum_a.sil
+    local dir_arb=${PLT_PATH}/actio/mall/dir_fol_/.d.ax/.mdeb/.tmp/name_silva.sil/arb
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_crram 
+
+    #{body_fn}
     #{body_fn}
 }
 
