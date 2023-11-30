@@ -1,0 +1,7 @@
+## edit :
+- files from .fol
+  - ? tags add tags or not
+
+- files from .var
+  - ! ram_ is name of adding ramus 
+ 

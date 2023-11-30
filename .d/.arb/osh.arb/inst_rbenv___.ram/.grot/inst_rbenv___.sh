@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/osh.arb/cr_dir_1.ram/.grot/cr_dir_1.sh"
+filename="${PLT_PATH}/.d/.arb/osh.arb/inst_rbenv___.ram/.grot/inst_rbenv___.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-cr_dir_1() {
+inst_rbenv___() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ cr_dir_1() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/osh.arb/cr_dir_1.ram/.grot/cr_dir_1.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/osh.arb/inst_rbenv___.ram/.grot/inst_rbenv___.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -72,7 +72,17 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    echo "that cr_dir_1"
+
+    echo "rbenv be init"
+    
+    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+    cd ~/.rbenv && src/configure && make -C src
+    ~/.rbenv/bin/rbenv init
+    curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+    mkdir -p ~/.rbenv/plugins
+    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    rbenv install $(rbenv install -l | grep -v - | tail -1)
+
     #{body_fn}
 }
 
