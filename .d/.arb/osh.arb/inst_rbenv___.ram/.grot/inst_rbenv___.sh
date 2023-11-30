@@ -79,9 +79,11 @@ ${NORMAL}"
     cd ~/.rbenv && src/configure && make -C src
     ~/.rbenv/bin/rbenv init
     curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-    mkdir -p ~/.rbenv/plugins
-    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-    rbenv install $(rbenv install -l | grep -v - | tail -1)
+    mkdir -p "$(rbenv root)"/plugins
+    git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+    last_stable_v_ruby=$(rbenv install -l | grep -v - | tail -1)
+    rbenv install "${last_stable_v_ruby}"
+    rbenv global "${last_stable_v_ruby}"
 
     #{body_fn}
 }

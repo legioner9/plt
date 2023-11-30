@@ -123,7 +123,7 @@
 #?---------------------------------------------
 #?---------------------------------------
 
-"${_f2e}" ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst
+# "${_f2e}" ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst
 
 echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
 

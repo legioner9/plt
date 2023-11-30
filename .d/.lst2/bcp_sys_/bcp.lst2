@@ -13,4 +13,4 @@ ${HOME}/.fonsh_path@fonsh_path
 ${HOME}/.repo_path@repo_path
 ${HOME}/.plt_path@plt_path
 
-${HOME}/.rvm@rvm
+${HOME}/.rbenv@rbenv 
