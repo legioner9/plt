@@ -1,1 +1,1 @@
-arb.all_in_sysplt ::::: file://${PLT_PATH}/.d/.arb/arb.arb
+arb.syp ::::: file://${PLT_PATH}/.d/.arb/arb.arb

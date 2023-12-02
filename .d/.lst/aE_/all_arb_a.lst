@@ -4,6 +4,7 @@ ${PLT_PATH}/.d/.arb/bsh.arb
 ${PLT_PATH}/.d/.arb/osh.arb
 ${PLT_PATH}/.d/.arb/tag.arb
 ${PLT_PATH}/.d/.arb/apt_alt.arb
+${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb
 
 ${PATH_CURR_REPO}/NRuby/.arb/man
 ${PATH_CURR_REPO}/NRuby/.arb/gem
