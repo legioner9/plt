@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/d2e__.ram/.grot/d2e__.sh"
+filename="${PLT_PATH}/actio/mall/dir_d2e_/.d.ax/.mdeb/.cntl/d2e_mdeb.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-d2e__(){
+d2e_mdeb(){
 local FNN=${FUNCNAME[0]}
 local PPWD=$PWD
 local ARGS=($@)
@@ -15,8 +15,9 @@ local NARGS=$#
 local verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/d2e__.ram/.grot/d2e__.sh)
+local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_d2e_/.d.ax/.mdeb/.cntl/d2e_mdeb.sh)
 # wrp_fifs1_ cd ${d_name} -d
+${_wrp2_} cd --_xxd "${d_name}" >/dev/null
     #{intro_fn}
 if [ "-h" == "$1" ]; then
 echo -e "${CYAN} ${FNN}() help: 
@@ -72,6 +73,46 @@ eval local $strex
 done
     #{default_cntl_fn}
 # amount_arg $# 1 1
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+local arr=()
+local res=()
+local num_res
+local item_arr
+cd ..
+${_wrp2_} c_up --_xxd "$(pwd)" >/dev/null
+for res_ in *; do
+# echo -e "${GREEN}$arr_ = $arr_${NORMAL}" #print variable
+res_=$(prs_f -n "${res_}")
+arr_=$(${res_} _head)
+arr+=("${arr_}")
+res+=("${res_}")
+done
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+num_res=$(($1 - 1))
+${res[${num_res}]}
+return 0
+fi
+PS3="eligendi actiones: "
+select item_arr in "${arr[@]}"; do
+for ((i = 0; i < 1000; i++)); do
+if [[ ${item_arr} == ${arr[$i]} ]]; then
+${res[$i]}
+${FNN} $@
+fi
+done
+done
+#{zzz20}
     #{body_fn}
 }
 

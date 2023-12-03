@@ -8,8 +8,8 @@ CNTLS:
     --_arb dir implimentation with .ram       
     --_tag name tag () 
     -_(proc_{name_proc}
-            {name_proc} from {SIL_A}/vis/sh/{name_proc}
-            {name_proc} from arb_/_proc/sub/{name_proc}
+            {name_proc} from {SIL_A}/vis/sh/proc_{name_proc}.sh
+            {name_proc} from arb_/_proc/sub/proc_{name_proc}.sh
 
 
     -_utag echo unique from all tag in arbor

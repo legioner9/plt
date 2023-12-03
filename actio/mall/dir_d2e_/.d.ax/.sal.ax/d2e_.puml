@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> d2e_ 
+farg2e2_ -> d2e_
+echo_deb_ -> d2e_
+d2e_ -> d2e_:is_num
+d2e_ -> d2e_:exit_err_d2e_
+d2e_ -> d2e_:exit_reg_d2e_
+d2e_ -> d2e_:unset_autoargs_d2e_
+' {wrap_fn}
+' fnn o-> d2e_
+' {body_fn}
+@enduml
