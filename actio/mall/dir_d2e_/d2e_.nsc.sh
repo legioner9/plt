@@ -34,7 +34,7 @@ d2e_() {
     local env_fn_arr=()
     local pts_fn
     local pts_fn_arr=()
-    echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+    # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
     if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
         for var_wrap in $("${_f2e}" "${PLT_PATH}/.d/.nid/mall/mall.local"); do
             # echo -e "${GREEN}$var_wrap = $var_wrap${NORMAL}" #print variable
