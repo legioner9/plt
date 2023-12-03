@@ -6,22 +6,10 @@ CNTLS:
     --_ram name (without .ext) dir .ram with .fol files
     --_sil dir IFS from .sil
     --_arb dir implimentation with .ram       
-    --_tag name tag ()
-    --_((s|a)f_|
-        (s|a)r_|
-        (s|a)a_){sub}_{obs} (in ram name do {sub} with {obs})  
-
-        s - proc from sil_
-        sf_ : {obs} .fol {sub} on (tags.fol|main.fol|cont.fol)
-        sr_ : {obs}==0 .ram {sub} on dir arb_/ram_.ram
-        sa_ : {obs}==0 .arb {sub} on dir arb_
-            {sub} from {SIL_A}/vis/sh
-
-        a - proc from arb_
-        af_ : {obs} .fol {sub} on (tags.fol|main.fol|cont.fol)
-        ar_ : {obs}==0 .ram {sub} on dir arb_/ram_.ram
-        aa_ : {obs}==0 .arb {sub} on dir arb_
-            {sub} from arb_/_proc/sub
+    --_tag name tag () 
+    -_(proc_{name_proc}
+            {name_proc} from {SIL_A}/vis/sh/{name_proc}
+            {name_proc} from arb_/_proc/sub/{name_proc}
 
 
     -_utag echo unique from all tag in arbor

@@ -20,37 +20,41 @@
 
                     plt_pause "in fol_() : DO?: create ram on file://${arb_}"
 
-                    read -p "Enter name ram_ (11<#, only w d _) " ram_name_to_create
+                    read -p "Enter name ram_ (11<#, only w d _) " ram_
 
-                    echo -e "${GREEN}\$ram_name_to_create = $ram_name_to_create${NORMAL}" #print variable
+                    echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+
+                    ram_to_create=${arb_}/${ram_}.ram
 
                     if ! hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
                         plt_exit "in ${FNN} : FAILEXEC : hook_before_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"
                         return 3
                     fi
 
-                    if [ -n "${ram_name_to_create}" ] && [ "${#ram_name_to_create}" -le 10 ] && "${_is_eng_var}" "${ram_name_to_create}"; then
+                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 10 ] && "${_is_eng_var}" "${ram_}"; then
 
                         plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
 
-                        if ! [ -d "${arb_}/${ram_name_to_create}.ram" ]; then
+                        if ! [ -d "${arb_}/${ram_}.ram" ]; then
 
-                            if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_name_to_create}.ram"; then
+                            if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_}.ram"; then
                                 plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
                             fi
-                            echo -e "${CYAN}--- in in fol_() : CREATE ${ram_name_to_create}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #sistem info mesage
+                            echo -e "${CYAN}--- in in fol_() : CREATE ${ram_}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_}.ram ---${NORMAL}" #sistem info mesage
 
-                            echo -e "${HLIGHT}--- ls -A ${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #start files
-                            ls -A ${arb_}/${ram_name_to_create}.ram
+                            echo -e "${HLIGHT}--- ls -A ${arb_}/${ram_}.ram ---${NORMAL}" #start files
+                            ls -A ${arb_}/${ram_}.ram
 
                         else
-                            plt_info "in fol_() : DIR : already exist '${ram_name_to_create}' file://${arb_}/${ram_name_to_create}.ram"
+                            plt_info "in fol_() : DIR : already exist '${ram_}' file://${arb_}/${ram_}.ram"
                         fi
                     else
-                        plt_info "in fol_() : NOT_IN_CONDITION : '${ram_name_to_create}'"
+                        plt_info "in fol_() : NOT_IN_CONDITION : '${ram_}'"
                     fi
 
                 fi
+
+                ram_to_create=${arb_}/${ram_}.ram
 
                 if ! hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil; then
                     plt_exit "in ${FNN} : FAILEXEC : hook_after_crram_02_hooks_proc_fol__03_util_fn_phylum_a_sil return 3"

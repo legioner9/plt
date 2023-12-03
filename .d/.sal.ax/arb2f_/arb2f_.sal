@@ -123,6 +123,36 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+local arr=()
+local res=()
+local num_res
+local item_arr
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+    num_res=$(($1 - 1))
+    ${res[${num_res}]}
+    return 0
+fi
+PS3="eligendi actiones: "
+select item_arr in "${arr[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item_arr} == ${arr[$i]} ]]; then
+            ${res[$i]}
+            ${FNN} $@
+        fi
+    done
+done
 #{zzz20}
 
 #{main_body_fn}

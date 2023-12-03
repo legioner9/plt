@@ -1,3 +1,8 @@
-sfcat
-sfedit
-sfexec
+proc_cat_cont
+proc_cat_main
+proc_cat_tags
+proc_edit_arb
+proc_edit_cont
+proc_edit_main
+proc_edit_ram
+proc_edit_tags

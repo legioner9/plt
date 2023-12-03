@@ -80,7 +80,7 @@ ${NORMAL}"
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
-        -_crram 
+        -_edit_ram 
 
     #{body_fn}
     #{body_fn}

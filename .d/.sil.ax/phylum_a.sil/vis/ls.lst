@@ -1,3 +1,8 @@
-sfcat.sh
-sfedit.sh
-sfexec.sh
+proc_cat_cont.sh
+proc_cat_main.sh
+proc_cat_tags.sh
+proc_edit_arb.sh
+proc_edit_cont.sh
+proc_edit_main.sh
+proc_edit_ram.sh
+proc_edit_tags.sh
