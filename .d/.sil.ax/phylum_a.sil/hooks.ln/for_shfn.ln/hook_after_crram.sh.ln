@@ -9,3 +9,15 @@ cd ${ram_to_create}/.grot || {
 }
 
 ${_cr_shfn_} ${ram_}.sh
+
+${_cr_tst_dir_} --name_dir "${ram_}"tst --ext tst
+
+"${_ehh}" mkdir ${ram_}extst
+
+"${_ehh}" cd ${ram_}extst
+
+#? cr_tst_sys_
+echo -e "${HLIGHT}--- exec: ${_cr_tst_sys_} --name_dir extst_1 --ext extst ---${NORMAL}" #start files
+${_cr_tst_sys_} --name_dir extst_1 --ext extst
+
+

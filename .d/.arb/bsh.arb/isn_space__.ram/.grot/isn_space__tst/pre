@@ -1,0 +1,14 @@
+isn_space__ "f"
++
+isn_space__ "fcdssd"
++
+isn_space__ "f "
+-
+isn_space__ "f csd  "
+-
+isn_space__ ""
+-
+isn_space__ 
+-
+isn_space__ "f" "f" 
+-
