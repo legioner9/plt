@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> nit_ 
+farg2e2_ -> nit_
+echo_deb_ -> nit_
+nit_ -> nit_:is_num
+nit_ -> nit_:exit_err_nit_
+nit_ -> nit_:exit_reg_nit_
+nit_ -> nit_:unset_autoargs_nit_
+' {wrap_fn}
+' fnn o-> nit_
+' {body_fn}
+@enduml
