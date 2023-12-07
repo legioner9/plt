@@ -144,14 +144,8 @@ if ! [[ -d "${ptr_path}" ]]; then
     plt_exit "in ${FNN} : NOT_DIR : '${ptr_path}' return 1"
     return 1
 fi
-ARGS3="${ARGS[3]}"
+ARGS3=${ARGS[3]}
 # echo -e "${GREEN}\$ARGS3 = $ARGS3${NORMAL}" #print variable
-
-dr2e_v2_recurce() {
-    if [ -d "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ]; then
-        ${_dr2e_} ${ARGS0} ${ARGS1} "${ptr_path}/$item" ${ARGS3}
-    fi
-}
 
 if [ "0" == "${ARGS0}" ]; then
 
@@ -165,21 +159,18 @@ if [ "0" == "${ARGS0}" ]; then
                 if [ -f "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo "${ptr_path}/$item"
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ ${ARGS1} == "-dd" ]]; then
                 if [ -d "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo "${ptr_path}/$item"
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ ${ARGS1} == "-fd" ]]; then
                 if ([ -d "${ptr_path}/$item" ] || [ -f "${ptr_path}/$item" ]) && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo "${ptr_path}/$item"
                 fi
-                dr2e_v2_recurce
             fi
         done
 
@@ -193,25 +184,19 @@ if [ "0" == "${ARGS0}" ]; then
                 if [ -f "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ]; then
                     echo "${ptr_path}/$item"
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ "${ARGS1}" == "-dd" ]]; then
                 if [ -d "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ]; then
                     echo "${ptr_path}/$item"
-
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ "${ARGS1}" == "-fd" ]]; then
                 if ([ -d "${ptr_path}/$item" ] || [ -f "${ptr_path}/$item" ]) && [ "${item:0:1}" != "_" ]; then
                     echo "${ptr_path}/$item"
-
                 fi
-                dr2e_v2_recurce
             fi
-
         done
     fi
 
@@ -227,22 +212,18 @@ else
                 if [ -f "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ ${ARGS1} == "-dd" ]]; then
                 if [ -d "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ ${ARGS1} == "-fd" ]]; then
                 if ([ -d "${ptr_path}/$item" ] || [ -f "${ptr_path}/$item" ]) && [ "${item:0:1}" != "_" ] && [ "$(prs_f -e "$item")" == "${ARGS3}" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
-
                 fi
-                dr2e_v2_recurce
             fi
         done
 
@@ -256,21 +237,18 @@ else
                 if [ -f "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ "${ARGS1}" == "-dd" ]]; then
                 if [ -d "${ptr_path}/$item" ] && [ "${item:0:1}" != "_" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
                 fi
-                dr2e_v2_recurce
             fi
 
             if [[ "${ARGS1}" == "-fd" ]]; then
                 if ([ -d "${ptr_path}/$item" ] || [ -f "${ptr_path}/$item" ]) && [ "${item:0:1}" != "_" ]; then
                     echo $(prs_f ${ARGS0} ${ptr_path}/$item)
                 fi
-                dr2e_v2_recurce
             fi
         done
     fi

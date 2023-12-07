@@ -12,6 +12,47 @@ cd "${idir}" || {
 
 : >res
 
+echo -e "--- ${_dr2e_} 0 -fd d_tst rb ---" >>res
+${_dr2e_} 0 -fd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -n -fd d_tst rb ---" >>res
+${_dr2e_} -n -fd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -e -fd d_tst rb ---" >>res
+${_dr2e_} -e -fd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -d -fd d_tst rb ---" >>res
+${_dr2e_} -d -fd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -ne -fd d_tst rb ---" >>res
+${_dr2e_} -ne -fd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -n -dd d_tst rb ---" >>res
+${_dr2e_} -n -dd d_tst rb >>res
+
+echo -e "--- ${_dr2e_} -n -ff d_tst rb ---" >>res
+${_dr2e_} -n -ff d_tst rb >>res
+
+echo -e "--- ${_dr2e_} 0 -fd d_tst  ---" >>res
+${_dr2e_} 0 -fd d_tst >>res
+
+echo -e "--- ${_dr2e_} -n -fd d_tst  ---" >>res
+${_dr2e_} -n -fd d_tst >>res
+
+echo -e "--- ${_dr2e_} -e -fd d_tst  ---" >>res
+${_dr2e_} -e -fd d_tst >>res
+
+echo -e "--- ${_dr2e_} -d -fd d_tst  ---" >>res
+${_dr2e_} -d -fd d_tst >>res
+
+echo -e "--- ${_dr2e_} -ne -fd d_tst  ---" >>res
+${_dr2e_} -ne -fd d_tst >>res
+
+echo -e "--- ${_dr2e_} -n -dd d_tst  ---" >>res
+${_dr2e_} -n -dd d_tst >>res
+
+echo -e "--- ${_dr2e_} -n -ff d_tst  ---" >>res
+${_dr2e_} -n -ff d_tst >>res
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

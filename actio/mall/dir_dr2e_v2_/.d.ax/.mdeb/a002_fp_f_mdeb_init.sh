@@ -77,47 +77,47 @@ ${NORMAL}"
         return 1
     }
 
-    echo -e "${HLIGHT}--- dr2e_v2_ 0 -fd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ 0 -fd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} 0 -fd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} 0 -fd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -fd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -n -fd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -fd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -n -fd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -e -fd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -e -fd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -e -fd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -e -fd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -d -fd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -d -fd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -d -fd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -d -fd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -ne -fd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -ne -fd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -ne -fd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -ne -fd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -dd d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -n -dd d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -dd d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -n -dd d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -ff d_tst rb ---${NORMAL}" #start files
-    dr2e_v2_ -n -ff d_tst rb
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -ff d_tst rb ---${NORMAL}" #start files
+    ${_dr2e_} -n -ff d_tst rb
 
-    echo -e "${HLIGHT}--- dr2e_v2_ 0 -fd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ 0 -fd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} 0 -fd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} 0 -fd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -fd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -n -fd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -fd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -n -fd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -e -fd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -e -fd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -e -fd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -e -fd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -d -fd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -d -fd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -d -fd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -d -fd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -ne -fd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -ne -fd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -ne -fd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -ne -fd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -dd d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -n -dd d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -dd d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -n -dd d_tst
 
-    echo -e "${HLIGHT}--- dr2e_v2_ -n -ff d_tst  ---${NORMAL}" #start files
-    dr2e_v2_ -n -ff d_tst
+    echo -e "${HLIGHT}--- ${_dr2e_} -n -ff d_tst  ---${NORMAL}" #start files
+    ${_dr2e_} -n -ff d_tst
     #{body_fn}
 }
 

@@ -1,0 +1,56 @@
+--- dr2e_v2_ 0 -fd d_tst rb ---
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/2.rb
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir/2.rb
+--- dr2e_v2_ -n -fd d_tst rb ---
+2
+2
+--- dr2e_v2_ -e -fd d_tst rb ---
+rb
+rb
+--- dr2e_v2_ -d -fd d_tst rb ---
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir
+--- dr2e_v2_ -ne -fd d_tst rb ---
+2.rb
+2.rb
+--- dr2e_v2_ -n -dd d_tst rb ---
+--- dr2e_v2_ -n -ff d_tst rb ---
+2
+2
+--- dr2e_v2_ 0 -fd d_tst  ---
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/1.sh
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/2.rb
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir/1.sh
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir/2.rb
+--- dr2e_v2_ -n -fd d_tst  ---
+1
+2
+in_dir
+1
+2
+--- dr2e_v2_ -e -fd d_tst  ---
+sh
+rb
+in_dir
+sh
+rb
+--- dr2e_v2_ -d -fd d_tst  ---
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir
+/home/st/REPOBARE/_repo/plt/actio/mall/dir_dr2e_v2_/dr2e_v2_tst/d_tst/in_dir
+--- dr2e_v2_ -ne -fd d_tst  ---
+1.sh
+2.rb
+in_dir
+1.sh
+2.rb
+--- dr2e_v2_ -n -dd d_tst  ---
+in_dir
+--- dr2e_v2_ -n -ff d_tst  ---
+1
+2
+1
+2
