@@ -5,11 +5,25 @@ DEPR:
 NAME: dr2e_v2_
 {name}
 .
-MAIN: 
+MAIN: dir with recurce to echo with treat prs_f
 {main}
 .
 ARGS:
-$1 
+$1 (arg for prs_f) if 0 without prs_f treat
+$2 (-ff only files
+|-dd only dirs
+|-fd files and dirs)
+$3 u_path dir
+[ ,$4 exclude .ext]
+------------------------ 
+path=/the/path/_foo.txt        
+$(prs_f -d /the/path/_foo.txt)  : /the/path 
+$(prs_f -ne /the/path/_foo.txt) : _foo.txt   
+$(prs_f -n /the/path/_foo.txt)  : _foo   
+$(prs_f -e /the/path/_foo.txt)  : txt   
+$(prs_f -pr /the/path/_foo.txt) : _   
+$(prs_f -po /the/path/_foo.txt) : foo.txt     
+----------------------
 CNTLS:
 --_
 -_
@@ -43,6 +57,7 @@ VERS:
 TAGS: 
 @ndo
 @ntst
+@dir
 {tags}
 .
 .        CNTLS:

@@ -34,7 +34,7 @@ nit_() {
     local env_fn_arr=()
     local pts_fn
     local pts_fn_arr=()
-    echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+    # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
     if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
         for var_wrap in $("${_f2e}" "${PLT_PATH}/.d/.nid/mall/mall.local"); do
             # echo -e "${GREEN}$var_wrap = $var_wrap${NORMAL}" #print variable
@@ -61,20 +61,20 @@ nit_() {
     fi
     #! ----- START COMMENT IF NOT USED ${_garg2e2_} -----
     # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
-    if ! ${_garg2e2_} "${ARGS[@]}"; then
-        ${_plt_exit} " nit_ return 1: ${FNLOCK}"
-        return 1
-    fi
-    #? g_args with cntl=value
-    local g_args=($(${_garg2e2_} "${ARGS[@]}"))
-    #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-    local e_args=($(${_earg2e2_} "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    local strex
-    for strex in $(${_garg2e2_} "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! ${_garg2e2_} "${ARGS[@]}"; then
+    #     ${_plt_exit} " nit_ return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # #? g_args with cntl=value
+    # local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+    # #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+    # local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # local strex
+    # for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
     #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
     for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_nit_/.d.ax/.sal.ax/nit_.local.list"); do
