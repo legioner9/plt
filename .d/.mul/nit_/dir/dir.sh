@@ -1,1 +1,0 @@
-dr2e "${dir_for_treat}" tst

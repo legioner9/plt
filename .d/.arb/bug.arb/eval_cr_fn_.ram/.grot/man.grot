@@ -1,0 +1,49 @@
+
+log gig_mall_ _mdeb 6:
+
+start file: 10_extst_1.sh
+$dir_fns_ = /home/st/REPOBARE/_repo/plt/actio/mall
+--- cd /home/st/REPOBARE/_repo/plt/actio/mall/dir__tmp2_/ ---
+--- mkdir _tmp2_extst ---
+--- cd _tmp2_extst ---
+--- exec: cr_tst_sys_ --name_dir extst_1 --ext extst ---
+exl_ --list /home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_sys_/create_start_exec_1_sh.exl
+#>exl
+# ${PATH_EXL_DIR}/cr_tst_sys_/create_start_exec_1_sh.exl
+#? create /dir_1/start_exec._tst
+eval path_name=${root_dir}/${name_dir}/start_exec._tst
+eval tml=${PATH_TML_DIR}/cr_sh_/for_tst_1/sh_for_tst_1.tml
+
+eval cr_f_ "${path_name}" --tml ${tml}
+tml_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.tml/cr_sh_/for_tst_1/sh_for_tst_1.tml
+
+# eval header=${PATH_INSERT_DIR}/cr_sh_/header.insert
+
+# eval cr_f_ "${path_name}" --fi0 ${header} --fr0 {header}
+
+eval body=${PATH_INSERT_DIR}/cr_sh_/for_tst_1/body.insert
+
+eval cr_f_ "${path_name}" --fi0 ${body} --fr0 {body}
+fi0_cr_f_=/home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert
+fr0_cr_f_={body}
+---f2f_() /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert /home/st/REPOBARE/_repo/plt/actio/mall/dir__tmp2_/_tmp2_extst/extst_1/start_exec._tst {body} ---
+$file_for_insert = /home/st/REPOBARE/_repo/plt/.d/.insert/cr_sh_/for_tst_1/body.insert
+$pre_placer = {body}
+$str = up_err_ extst {list} 1>/dev/null
+$str = errno=$?
+$str = if [ 1 -eq "${errno}" ]; then
+$str =     echo "ANY in file://$rdir fail" >&2
+$str = else
+$str =     echo "ALL in file://$rdir true"
+$str = fi
+
+eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}
+bash: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name}: команда не найдена
+--------plt_exit: be return 1 <- Fail: return errno: 127 from: eval cr_f_ "${path_name}" --vi0 ${path_name} --vr0 {path_name} in fn: exl_, with_args: --list /home/st/REPOBARE/_repo/plt/.d/.exl/cr_tst_sys_/create_start_exec_1_sh.exl , filename: /home/st/REPOBARE/_repo/communis/Deploy_store/.qa/main_repo_fn/dir_exl_/exl_.sh, line: 28--------
+be return 1
+^C - exit, ENTER - return to process
+after usually return 1 from parent thread
+
+^ENTER
+
+in file start_exec._tst {path_name} NOT inserted

@@ -1,0 +1,29 @@
+ARGS:
+    !\$1 parr
+    !\$2 (0|1|2|3)
+        0 full path
+        1 path from root_dor
+        2 name_file.ext
+        3 name_file
+    !\$3 (0|ext)
+        0   : any ext
+        ext : only ext
+    ?\$4 dir upath
+
+CNTLS:
+        --_
+        -_
+
+LOGIC ARGS:
+    !()
+    ?()
+
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
+exa:
+    !( --_sil && --_arb )
+    ( --_{sub}_{obs} && --_ram )
+    ( --_{sub}_{obs} || -_crtag || -_addtag )
+    ?( --_ram ) && (-_crtag || -_addtag )

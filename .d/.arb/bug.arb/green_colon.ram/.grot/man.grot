@@ -1,0 +1,5 @@
+## ${PLT_PATH}/actio/mall/dir_parr3e_/parr3e_.nsc.sh 
+
+         # echo 2
+ ln:64   # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+         # echo 3

@@ -51,21 +51,36 @@ parr3e_() {
         ${_plt_exit} " parr3e_ return 1: ${FNLOCK}"
         return 1
     fi
+
+
     #? g_args with cntl=value
     local g_args=($(${_garg2e2_} "${ARGS[@]}"))
     #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+
+    
+
     local e_args=($(${_earg2e2_} "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # echo 2
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # echo 3
     local strex
+
+    
+
     for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+
         [[ 1 -eq ${verbose} ]] || echo "local $strex"
         eval local $strex
     done
+
+    # echo 3
+
     for local_var_fn in $(f2e "${PLT_PATH}/actio/mall/dir_parr3e_/.d.ax/.sal.ax/parr3e_.local.list"); do
         # echo -e "${GREEN}$local_var_fn = $local_var_fn${NORMAL}" #print variable
         eval local "$local_var_fn"
         local_var_fn_arr+=("${local_var_fn}")
     done
+
     for local_var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
         # echo -e "${GREEN}$local_var_wrap = $local_var_wrap${NORMAL}" #print variable
         eval local "$local_var_wrap"
@@ -77,6 +92,7 @@ parr3e_() {
         return 1
     fi
     # echo ". ${FN_SAL_DIR}/parr3e_.body.nsc.sh"
+
     if ! . "${PLT_PATH}/actio/mall/dir_parr3e_/.d.ax/.sal.ax/parr3e_.body.nsc.sh"; then
         ${_plt_exit} "fail: . ${PLT_PATH}/actio/mall/dir_parr3e_/.d.ax/.sal.ax/parr3e_.body.sh"
         return 1

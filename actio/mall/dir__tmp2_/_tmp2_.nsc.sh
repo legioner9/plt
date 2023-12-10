@@ -36,7 +36,7 @@ local pts_fn
 local pts_fn_arr=()
 echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 if [ -n "${ARGS[0]}" ] && { [ "${ARGS[0]}" == '-h' ] || { [ "${ARGS[0]:0:1}" != "-" ] && [ -n "$(grep -w "${ARGS[0]}" "${PLT_PATH}/.d/.nid/mall/mall.cntl")" ]; }; }; then
-for var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
+for var_wrap in $("${_f2e}" "${PLT_PATH}/.d/.nid/mall/mall.local"); do
 # echo -e "${GREEN}$var_wrap = $var_wrap${NORMAL}" #print variable
 eval local "$var_wrap"
 var_wrap_arr+=("${var_wrap}")
@@ -77,36 +77,36 @@ eval local $strex
 done
 #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
 #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
-for var_fn in $(f2e "${PLT_PATH}/actio/mall/dir__tmp2_/.d.ax/.sal.ax/_tmp2_.local.list"); do
+for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir__tmp2_/.d.ax/.sal.ax/_tmp2_.local.list"); do
 # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
 eval local "$var_fn"
 var_fn_arr+=("${var_fn}")
 done
 #? mapping obc_ file to env_fn_arr and local vars into fn as mutable internal values
-if [ -f "${obc_:-0}" ]; then
-for arg_fn in $(f2e "${obc_}"); do
+if [ -n "${obc_}" ] &&  [ -f "${obc_}" ]; then
+for arg_fn in $("${_f2e}" "${obc_}"); do
 # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
 eval local "$arg_fn"
 arg_fn_arr+=("${arg_fn}")
 done
 fi
 #? mapping aer_ file to env_fn_arr and local vars into fn as immutable external values
-if [ -f "${aer_:-0}" ]; then
-for env_fn in $(f2e "${aer_}"); do
+if [ -n "${aer_}" ] &&  [ -f "${aer_}" ]; then
+for env_fn in $("${_f2e} ""${aer_}"); do
 # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
 eval local "$env_fn"
 env_fn_arr+=("${env_fn}")
 done
 fi
 #? visualisation pointers for use: mapping pts_ file to pts_fn_arr
-if [ -f "${pts_:-0}" ]; then
-for pts_fn in $(f2e "${pts_}"); do
+if [ -n "${pts_}" ] &&  [ -f "${pts_}" ]; then
+for pts_fn in $("${_f2e}" "${pts_}"); do
 pts_fn_arr+=("${pts_fn}")
 done
 fi
 #! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
 if [ -n "${ppr_}" ]; then
-eval local val_ppr=$${ppr_}
+eval local val_ppr=\$${ppr_}
 fi
 # [obc] obiectum      - [аргументы] объект
 # [sub] subiectum     - [процедура] субъект
@@ -116,7 +116,7 @@ fi
 # [sag] sagitta       - [набор файлов] стрела
 #* -------------
 #? mapping mall.local file to use in ${FNN}.body.nsc.sh
-for var_wrap in $(f2e "${PLT_PATH}/.d/.nid/mall/mall.local"); do
+for var_wrap in $("${_f2e}" "${PLT_PATH}/.d/.nid/mall/mall.local"); do
 # echo -e "${GREEN}$var_wrap = $var_wrap${NORMAL}" #print variable
 eval local "$var_wrap"
 var_wrap_arr+=("${var_wrap}")

@@ -73,11 +73,11 @@ eval local $strex
 done
     #{default_cntl_fn}
 # amount_arg $# 1 1
-echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 local arr=()
 local res=()
-arr+=("leave menu")
-res+=("echo bye)))")
+local num_res
+local item_arr
 cd ..
 ${_wrp2_} c_up --_xxd "$(pwd)" >/dev/null
 for res_ in *; do
@@ -96,20 +96,19 @@ done
 # res+=("bbbbbbbbb")
 # arr+=("aaaaaaaaa")
 # res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
 num_res=$(($1 - 1))
 ${res[${num_res}]}
 return 0
 fi
 PS3="eligendi actiones: "
-select item in "${arr[@]}"; do
+select item_arr in "${arr[@]}"; do
 for ((i = 0; i < 1000; i++)); do
-if [[ ${item} == ${arr[$i]} ]]; then
+if [[ ${item_arr} == ${arr[$i]} ]]; then
 ${res[$i]}
 ${FNN} $@
-fi
-if [[ ${item} == ${arr[0]} ]]; then
-${res[$i]}
 fi
 done
 done

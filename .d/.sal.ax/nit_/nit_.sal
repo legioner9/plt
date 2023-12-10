@@ -123,17 +123,52 @@
 #?---------------------------------------------
 #?---------------------------------------
 
-for item_nit_dir in $(d2e_ 0 -dd ${PLT_PATH}/.d/.mul/nit_); do
+if [ -d "${sil_}/proc/fol_" ]; then
 
-    ppath="${item_nit_dir}"/$(prs_f -n "${item_nit_dir}")
+    c_up "${sil_}/proc/fol_">/dev/null
 
-    for dir_for_treat in $(f2e ${ppath}.lst); do
+    inner_fn_arr=()
+    dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
 
-        . ${ppath}.sh
+else
+    plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+    return 1
+fi
 
-    done
+for item6 in ${inner_fn_arr[@]}; do
+    # echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+    ${item6}
+
+    ret_nom=$?
+    if [ ${ret_nom} -eq 2 ]; then
+        return 0
+    fi
+    if [ ${ret_nom} -eq 3 ]; then
+        return 1
+    fi
+    # echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
 
 done
+
+
+
+
+# c_up ${PLT_PATH}/.d/.infn/nit_
+
+
+
+# for item_nit_dir in $(d2e_ 0 -dd ${PLT_PATH}/.d/.mul/nit_); do
+
+#     ppath="${item_nit_dir}"/$(prs_f -n "${item_nit_dir}")
+
+#     for dir_for_treat in $(f2e ${ppath}.lst); do
+
+#         . ${ppath}.sh
+
+#     done
+
+# done
 
 #{main_body_fn}
 
