@@ -16,30 +16,30 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
-echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
 
-echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
 # list_strong_cntls=(?str_ ?del_ ?parr_)
@@ -119,10 +119,54 @@ echo "that ${FNN}.sal"
 
 # done
 
-
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
+
+in_arr=${ARGS0}
+
+flag_item=${ARGS1}
+
+ext=${ARGS2}
+
+ptr_path=${ARGS3}
+
+ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+
+dre2parr_fn_() {
+    local arg1="$1"
+    for item in $(${_da2e} ${arg1}); do
+        local path_item="${arg1}/${item}"
+
+        if [ -f "${path_item}" ] && [ "$(${_prs_f} -e "${path_item}")" == "${ext}" ]; then
+
+            if [ ${flag_item:-10} -eq 0 ]; then
+                in_parr_add="${path_item}"
+            fi
+
+            if [ ${flag_item:-10} -eq 1 ]; then
+                eval rel_path=\${path_item#$ptr_path/}
+                in_parr_add="${rel_path}"
+            fi
+
+            if [ ${flag_item:-10} -eq 2 ]; then
+                in_parr_add="$(${_prs_f} -ne "${path_item}")"
+            fi
+
+            if [ ${flag_item:-10} -eq 3 ]; then
+                in_parr_add="$(${_prs_f} -n "${path_item}")"
+            fi
+
+            eval ${in_arr}+=\(\$in_parr_add\)
+        fi
+
+        if [ -d "${path_item}" ]; then
+            dre2parr_fn_ "${path_item}"
+        fi
+    done
+}
+# echo -e "${HLIGHT}--- dr2parr_fn_ ${ptr_path} ---${NORMAL}" #start files
+dre2parr_fn_ ${ptr_path}
 
 #{main_body_fn}
 

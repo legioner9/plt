@@ -11,7 +11,21 @@ cd "${idir}" || {
 #?-------------------------------------
 
 : >res
+# cd "${PLT_PATH}"/actio/mall/dir_dr2parr_/.d.ax/.mdeb/.tmp
 
+fx() {
+    echo "dre2parr_ res_arr $1 $2 root_dir>/dev/null"
+    dre2parr_ res_arr $1 $2 root_dir >/dev/null
+    parr3e_ res_arr
+}
+res_arr=()
+fx 0 "f" >>res
+res_arr=()
+fx 1 "f" >>res
+res_arr=()
+fx 2 "f" >>res
+res_arr=()
+fx 3 "f" >>res
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

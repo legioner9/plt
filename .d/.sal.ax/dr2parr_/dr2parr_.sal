@@ -90,7 +90,7 @@ ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
 dr2parr_fn_() {
     local arg1="$1"
-    for item in $(da2e ${arg1}); do
+    for item in $(${_da2e} ${arg1}); do
         local path_item="${arg1}/${item}"
 
         if [ -f "${path_item}" ]; then
@@ -105,11 +105,11 @@ dr2parr_fn_() {
             fi 
 
             if [ ${flag_item:-10} -eq 2 ]; then
-                in_parr_add="$(prs_f -ne "${path_item}")"
+                in_parr_add="$(${_prs_f} -ne "${path_item}")"
             fi
 
             if [ ${flag_item:-10} -eq 3 ]; then
-                in_parr_add="$(prs_f -n "${path_item}")"
+                in_parr_add="$(${_prs_f} -n "${path_item}")"
             fi
 
             eval ${in_arr}+=\(\$in_parr_add\)
