@@ -102,7 +102,7 @@ dr2parr_fn_() {
             if [ ${flag_item:-10} -eq 1 ]; then
                 eval rel_path=\${path_item#$ptr_path/}
                 in_parr_add="${rel_path}"
-            fi
+            fi 
 
             if [ ${flag_item:-10} -eq 2 ]; then
                 in_parr_add="$(prs_f -ne "${path_item}")"
