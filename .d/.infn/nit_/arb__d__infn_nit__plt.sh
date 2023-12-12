@@ -4,8 +4,8 @@
 
 arb__d__infn_nit__plt() {
 
-    echo -e "${CYAN}--- arb__d__infn_nit__plt() file://${PLT_PATH}/.d/.infn/nit_/arb__d__infn_nit__plt.sh ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                             #sistem info mesage
+    # echo -e "${CYAN}--- arb__d__infn_nit__plt() file://${PLT_PATH}/.d/.infn/nit_/arb__d__infn_nit__plt.sh ---${NORMAL}" #sistem info mesage
+    # echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                             #sistem info mesage
 
     #! ${dir_for_treat}
 
@@ -18,7 +18,7 @@ arb__d__infn_nit__plt() {
         if [[ -d "${path_item_dir}" ]] && [[ $(prs_f -e "${path_item_dir}") == "ram" ]]; then
             # echo -e "${RED}\$path_item_dir = $path_item_dir${NORMAL}" #print variable
 
-            echo -e "${HLIGHT}--- ${_dr2e} ${path_item_dir}/.grot tst ---${NORMAL}" #start files
+            # echo -e "${HLIGHT}--- ${_dr2e} ${path_item_dir}/.grot tst ---${NORMAL}" #start files
             ${_dr2e} "${path_item_dir}"/.grot tst
 
         fi

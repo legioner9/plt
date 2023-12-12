@@ -131,25 +131,27 @@ if [ -d "${nit_infn}" ]; then
     c_up "${nit_infn}"
 
     inner_fn_arr=()
-    echo -e "${HLIGHT}--- ${_dre2parr_} inner_fn_arr 3 ${nit_infn} ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- ${_dre2parr_} inner_fn_arr 3 file://${nit_infn} ---${NORMAL}" #start files
     "${_dre2parr_}" inner_fn_arr 3 "sh" "${nit_infn}"
 
 else
-    plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+    plt_exit "in ${FNN} : NOT_DIR : file://'${PLT_PATH}/.d/.infn/nit_' return 1"
     return 1
 fi
 
 parr3e_ inner_fn_arr
 
+arr_all_tst_files=()
+
 for item6 in ${inner_fn_arr[@]}; do
     # echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
 
-    echo -e "${HLIGHT}--- f2e ${nit_infn}/${item6}.lst ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- f2e file://${nit_infn}/${item6}.lst ---${NORMAL}" #start files
     for dir_for_treat in $(f2e ${nit_infn}/${item6}.lst); do
 
-        echo -e "${GREEN}\$dir_for_treat = $dir_for_treat${NORMAL}" #print variable
+        echo -e "${GREEN}\$dir_for_treat = file://$dir_for_treat${NORMAL}" #print variable
         echo -e "${GREEN}\$item6 = $item6${NORMAL}"                 #print variable
-        ${item6}
+        arr_all_tst_files+=("$("${item6}")")
 
         ret_nom=$?
         if [ ${ret_nom} -eq 2 ]; then
@@ -163,6 +165,32 @@ for item6 in ${inner_fn_arr[@]}; do
     # echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
 
 done
+
+# parr3e_ arr_all_tst_files
+
+flag=1
+
+for file_tst in ${arr_all_tst_files[@]}; do
+
+    if ! [ -f "$file_tst" ]; then
+        plt_exit "in ${FNN} : NOT_FILE : 'file://$file_tst' return 1"
+        return 1
+    fi
+
+    echo -e "${HLIGHT}--- . file://"$file_tst" ---${NORMAL}" #start files
+    if ! [ "$(. "$file_tst")" ] >/dev/null; then
+        flag=0
+    fi
+
+done
+
+if [ 1 -eq ${flag:-10} ]; then
+    echo "<<< nit_() tst TRUE :: from file://${PLT_PATH}/.d/.infn/nit_ >>>" #sistem info mesage
+fi
+
+if [ 0 -eq ${flag:-10} ]; then
+    echo "<<< nit_() tst FAIL :: from file://${PLT_PATH}/.d/.infn/nit_ >>>" >&2 #sistem info mesage
+fi
 
 # c_up ${PLT_PATH}/.d/.infn/nit_
 
