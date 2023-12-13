@@ -142,11 +142,15 @@ arr=($(${_f2e} ${lst_mitt}))
 # arr+=("exit menu")
 # res+=("return 0")
 
-arb2f_e() {
+arb2f_insert() { #$1 arb
     :
 }
 
-arb2f_all() {
+arb2f_insert_all() { 
+    :
+}
+
+arb2f_E() {
     :
 }
 
@@ -155,25 +159,31 @@ if [ -z "${ARGS0}" ]; then
     return 0
 fi
 
-if [ ${ARGS0} -eq 0 ]; then
-    arb2f_all
-    return 0
-fi
+if [ -n "${ARGS0}" ] && [ -f "${ARGS0}" ]; then
 
-if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
-    num_res=$((${ARGS0} - 1))
-    eligendi="${arr[${num_res}]}"
-fi
+    if [ ${ARGS1} -eq 0 ]; then
+        arb2f_all
+        return 0
+    fi
 
-if [[ -z ${eligendi} ]]; then
-    PS3="eligendi actiones: "
-    select item_arr in "${arr[@]}"; do
-        eligendi="${item_arr}"
-        break
-    done
-fi
-echo -e "${GREEN}\$eligendi = $eligendi${NORMAL}" #print variable
+    if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+        num_res=$((${ARGS1} - 1))
+        eligendi="${arr[${num_res}]}"
+    fi
 
+    if [[ -z ${eligendi} ]]; then
+        PS3="eligendi actiones: "
+        select item_arr in "${arr[@]}"; do
+            eligendi="${item_arr}"
+            break
+        done
+    fi
+
+    echo -e "${GREEN}\$eligendi = $eligendi${NORMAL}" #print variable
+
+    arb2f_insert "$eligendi"
+
+fi
 #{zzz20}
 
 #{main_body_fn}

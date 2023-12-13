@@ -89,7 +89,7 @@ arb2f_() {
             # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
             eval local "$arg_fn"
             arg_fn_arr+=("${arg_fn}")
-        done
+        done 
     fi
     #? mapping aer_ file to env_fn_arr and local vars into fn as immutable external values
     if [ -n "${aer_}" ] && [ -f "${aer_}" ]; then

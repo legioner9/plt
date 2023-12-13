@@ -177,7 +177,9 @@ for file_tst in ${arr_all_tst_files[@]}; do
         return 1
     fi
 
-    echo -e "${HLIGHT}--- . file://"$file_tst" ---${NORMAL}" #start files
+    echo -e "${CYAN}--- from file://$("${_prs_f}" -d $file_tst) ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . file://$file_tst ---${NORMAL}" #start files
+
     if ! [ "$(. "$file_tst")" ] >/dev/null; then
         flag=0
     fi
