@@ -5,7 +5,7 @@ DEPR:
 NAME: d2e_
 {name}
 .
-MAIN: 
+MAIN: dir to echo with treat prs_f
 {main}
 .
 ARGS:
@@ -57,6 +57,7 @@ VERS:
 TAGS: 
 @ndo
 @ntst
+@dir
 {tags}
 .
 .        CNTLS:

@@ -3,6 +3,7 @@ ARGS:
         if \$1 empty : E of all .mitt arb
     [, \$2 ] num arb to reciver
         if \$2 empty : choice arb from menu
+        if \$2 == 0 : insrt all arb from menu
 
 CNTLS:
         --_
