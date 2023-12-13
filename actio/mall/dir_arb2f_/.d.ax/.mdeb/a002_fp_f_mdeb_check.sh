@@ -75,14 +75,21 @@ ${NORMAL}"
         plt_exit "in ${FNN} : FAIL_EXEC : cd ${d_name} return 1"
         return 1
     }
+
     rm -v c_file0.check
     cp -v c_file0.init c_file0.check
+
+    rm -v c_file2.check
+    cp -v c_file2.init c_file2.check
 
     rm -v c_file1.check
     cp -v c_file1.init c_file1.check
 
-    echo -e "${HLIGHT}--- arb2f_ c_file.check 0 ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- arb2f_ c_file0.check 0 ---${NORMAL}" #start files
     arb2f_ c_file0.check 0
+
+    echo -e "${HLIGHT}--- arb2f_ c_file2.check 2 ---${NORMAL}" #start files
+    arb2f_ c_file2.check 2
 
     echo -e "${HLIGHT}--- arb2f_ c_file1.check 1 ---${NORMAL}" #start files
     arb2f_ c_file1.check 1

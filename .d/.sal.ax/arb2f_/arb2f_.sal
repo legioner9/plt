@@ -124,12 +124,21 @@
 #?---------------------------------------
 
 lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb.lst
+arr_arb=($(${_f2e} ${lst_mitt}))
+parr3e_ arr_arb
+
+file_resiv=${ARGS0}
+num_flow=${ARGS1}
+
+echo -e "${GREEN}\$file_resiv = $file_resiv${NORMAL}" #print variable
+echo -e "${GREEN}\$num_flow = $num_flow${NORMAL}"     #print variable
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 # arr=()
 # res=()
 
-arr=($(${_f2e} ${lst_mitt}))
+# arr=($(${_f2e} ${lst_mitt}))
+
 #{arr_res}
 # arr+=("aaaaaaaaa")
 # res+=("bbbbbbbbb")
@@ -146,23 +155,30 @@ arb2f_insert() {                                        #$1 arb
     echo -e "${CYAN}--- arb2f_insert() $* ---${NORMAL}" #sistem info mesage
     local arb_dir=$1
     echo -e "${HLIGHT}--- ${_d2e_} -n -dd ${arb_dir} ram ---${NORMAL}" #start files
+    ${_d2e_} -n -dd ${arb_dir} ram
 
     local arr_ram_name=($(${_d2e_} -n -dd ${arb_dir} ram))
     parr3e_ arr_ram_name
 
     for mitt in ${arr_ram_name[@]}; do
 
-        if grep "{{${mitt}}}" "${ARGS0}"; then
+        if grep "{{${mitt}}}" "${file_resiv}"; then
             echo -e "${GREEN}\$mitt = $mitt${NORMAL}" #print variable
 
             file_mitt=${arb_dir}/${mitt}.ram/cont.fol
+            echo -e "${GREEN}\$file_mitt = $file_mitt${NORMAL}" #print variable
 
-            # if [ -f "${file_mitt}" ]; then
-            #     cr_f_ "${ARGS0}" --fi0 "${file_mitt}" --fr0 "{${mitt}}"
-            # else
-            #     plt_exit "in ${FNN} : NOT_FILE : file://${file_mitt} return 1"
-            #     return 1
-            # fi
+            if [ -f "${file_mitt}" ] && [ -f "${file_resiv}" ]; then
+                echo -e "${HLIGHT}--- cr_f_ ${file_resiv} --fi0 ${file_mitt} --fr0 {{${mitt}}} ---${NORMAL}" #start files
+
+                cr_f_ "${file_resiv}" --fi0 "${file_mitt}" --fr0 "{{${mitt}}}"
+
+                cr_f_ "${file_resiv}" --vi0 "[[${mitt}]]" --vr0 "{{${mitt}}}"
+                
+            else
+                plt_exit "in ${FNN} : NOT_FILE : file://${file_resiv} && file://${file_mitt} return 1"
+                return 1
+            fi
         fi
 
     done
@@ -171,7 +187,7 @@ arb2f_insert() {                                        #$1 arb
 arb2f_insert_all() {
     echo -e "${CYAN}--- arb2f_insert_all() ---${NORMAL}" #sistem info mesage
 
-    for arb_to_ins in ${arr[@]}; do
+    for arb_to_ins in $(${_f2e} ${lst_mitt}); do
         echo -e "${HLIGHT}--- arb2f_insert ${arb_to_ins} ---${NORMAL}" #start files
         arb2f_insert "${arb_to_ins}"
     done
@@ -181,34 +197,42 @@ arb2f_insert_all() {
 arb2f_E() {
     echo -e "${CYAN}--- arb2f_E() ---${NORMAL}" #sistem info mesage
 
+    for arb_curr in ${arr_arb[@]}; do
+
+        echo -e "${HLIGHT}--- fol_ --_sil ${SIL_A} --_arb ${arb_curr} -_E ---${NORMAL}" #start files
+
+        fol_ --_sil "${SIL_A}" --_arb "${arb_curr}" -_E
+
+    done
+
 }
 
-if [ -z "${ARGS0}" ]; then
+if [ -z "${file_resiv}" ]; then
     arb2f_E
     return 0
 fi
 
-if [ -n "${ARGS0}" ]; then
+if [ -n "${file_resiv}" ]; then
 
-    ARGS0=$(${_abs_path} $PPWD "ARGS0")
+    file_resiv=$(${_abs_path} $PPWD "file_resiv")
 
-    echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}" #print variable
+    echo -e "${GREEN}\$file_resiv = $file_resiv${NORMAL}" #print variable
 
-    if [ -f "${ARGS0}" ]; then
+    if [ -f "${file_resiv}" ]; then
 
-        if [ "${ARGS1:-10}" -eq 0 ]; then
+        if [ "${num_flow:-10}" -eq 0 ]; then
             arb2f_insert_all
             return 0
         fi
 
-        if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
-            num_res=$((${ARGS1} - 1))
-            eligendi="${arr[${num_res}]}"
+        if [ $(num_01 ${num_flow}) -eq 1 ] && [ ${num_flow} -le ${#arr_arb[@]} ]; then
+            num_res=$((${num_flow} - 1))
+            eligendi="${arr_arb[${num_res}]}"
         fi
 
         if [[ -z ${eligendi} ]]; then
             PS3="eligendi actiones: "
-            select item_arr in "${arr[@]}"; do
+            select item_arr in "${arr_arb[@]}"; do
                 eligendi="${item_arr}"
                 break
             done
