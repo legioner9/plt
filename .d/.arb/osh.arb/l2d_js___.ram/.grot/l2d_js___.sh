@@ -73,7 +73,37 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    echo -e "${GREEN}\$PPWD = $PPWD${NORMAL}" #print variable
+    plt_pause "in l2d_js___() : DO? : cr sys dir in file://$PPWD "
+
+    root_dir="${PPWD}"
+    parts_md="${root_dir}"/parts.md
+
+    if ! [[ -f "${parts_md}" ]]; then
+
+        if is_yes "CREATE? : NOT_FILE : ${parts_md}"; then
+            touch "${parts_md}"
+        else
+            plt_exit "in ${FNN} : NOT_FILE : ${parts_md} return 1"
+            return 1
+        fi
+    fi
+    echo -e "${HLIGHT}--- cat ${parts_md} ---${NORMAL}" #start files
+    cat "${parts_md}"
+    echo
+
+    plt_pause "DO? that file://${parts_md} "
+
+    for name_cr_dir in $(${_f2e} ${parts_md}); do
+
+        mkdir -v "${root_dir}"/"${name_cr_dir}"
+
+        if ! [[ -f "${root_dir}"/"${name_cr_dir}"/0.js ]]; then
+
+            echo -e "${HLIGHT}--- echo \'use strict\' >${root_dir}/${name_cr_dir}/0.js ---${NORMAL}" #start files
+            echo \'use strict\' >"${root_dir}"/"${name_cr_dir}"/0.js
+
+        fi
+    done
 
     #{body_fn}
 }
