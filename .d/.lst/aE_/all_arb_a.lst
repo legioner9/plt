@@ -6,12 +6,16 @@ ${PLT_PATH}/.d/.arb/tag.arb
 ${PLT_PATH}/.d/.arb/bug.arb
 ${PLT_PATH}/.d/.arb/apt_alt.arb
 
+${PLT_PATH}/.d/.arb/.sgm/html.sgm.arb
+
 ${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb
 ${REPO_PATH}/Nodus/.d/.arb/nodus.comm.mitt.arb
 
-${PATH_CURR_REPO}/NRuby/.arb/man
-${PATH_CURR_REPO}/NRuby/.arb/gem
+${REPO_PATH}/NRuby/.arb/man
+${REPO_PATH}/NRuby/.arb/gem
 
-${PATH_CURR_REPO}/NBash/.arb/man
-${PATH_CURR_REPO}/NBash/.arb/util
-${PATH_CURR_REPO}/Opus/.d/.arb/syll.arb
+${REPO_PATH}/NBash/.arb/man
+${REPO_PATH}/NBash/.arb/util
+
+${REPO_PATH}/Opus/.d/.arb/syll.arb
+${REPO_PATH}/Opus/.d/.arb/html.arb
