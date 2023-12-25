@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Заголовок страницы</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f1f1f1;
+        }
+
+        /* Шапка сайта */
+        .header {
+            padding: 80px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+        /* Увеличим размер шрифта заголовка */
+        .header h1 {
+            font-size: 40px;
+        }
+
+        /* Стили верхней навигационной панели */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Стили ссылок верхней нав.панели */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Меняем цвет при наведении мыши */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Создаем две не равные колонки, которые обтекают друг друга (становятся рядом друг с другом) */
+        /* Главная колонка */
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Левая колонка */
+        .side {
+            -ms-flex: 30%;
+            /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            padding-left: 20px;
+        }
+
+        /* Заглушка изображения */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Подвал */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Адаптивный макет - когда ширина экрана меньше 700px, две колонки отображаются друг над другом, а не рядом друг с другом */
+        @media (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Адаптивный макет - когда ширина экрана меньше 400px, ссылки навигационной панели отображаются друг над другом, а не рядом друг с другом */
+        @media (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Мой веб-сайт</h1>
+        <p>Веб-сайт создан мной.</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#">Ссылка</a>
+        <a href="#">Ссылка</a>
+        <a href="#">Ссылка</a>
+        <a href="#" style="float:right">Ссылка</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>Обо мне</h2>
+            <h5>Мое фото:</h5>
+            <div class="fakeimg" style="height:200px;">Изображение</div>
+            <p>Немного текста обо мне: сфера нашей активности играет определяющее значение для новых предложений..</p>
+            <h3>Еще текст</h3>
+            <p>Немного текста пустышки.</p>
+            <div class="fakeimg" style="height:60px;">Изображение</div><br>
+            <div class="fakeimg" style="height:60px;">Изображение</div><br>
+            <div class="fakeimg" style="height:60px;">Изображение</div>
+            <h3>Мои контакты</h3>
+            <p>Немного текста.</p>
+        </div>
+        <div class="main">
+            <h2>ЗАГОЛОВОК СТАТЬИ</h2>
+            <h5>Описание под заголовком, Дек 7, 2020</h5>
+            <div class="fakeimg" style="height:200px;">Изображение</div>
+            <p>Немного текста..</p>
+            <p>Равным образом, выбранный нами инновационный путь говорит о возможностях новых принципов формирования
+                материально-технической и кадровой базы. Являясь всего лишь частью общей картины, акционеры крупнейших
+                компаний заблокированы в рамках своих собственных рациональных ограничений.</p>
+            <br>
+            <h2>ЗАГОЛОВОК СТАТЬИ</h2>
+            <h5>Описание под заголовком, Сен 2, 2020</h5>
+            <div class="fakeimg" style="height:200px;">Изображение</div>
+            <p>Немного текста..</p>
+            <p>Равным образом, выбранный нами инновационный путь говорит о возможностях новых принципов формирования
+                материально-технической и кадровой базы. Являясь всего лишь частью общей картины, акционеры крупнейших
+                компаний заблокированы в рамках своих собственных рациональных ограничений.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Подвал</h2>
+    </div>
+
+</body>
+
+</html>
