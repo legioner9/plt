@@ -9,6 +9,8 @@ cd ${ram_to_create}/.grot || {
 }
 
 touch 1.html
-touch anc.man
+: >anc.man
+echo "# https://yandex.ru/search/?text=${ram_}" >>anc.man
+
 touch ${ram_}.man
 echo "# ${ram_}.man" >${ram_}.man

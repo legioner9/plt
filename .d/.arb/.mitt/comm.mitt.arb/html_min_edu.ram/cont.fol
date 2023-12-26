@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <title>Title 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script>
+        let a = 0;
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Site 1</h1>
+
+</body>
+
+</html>
