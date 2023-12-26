@@ -8,6 +8,7 @@ cd ${ram_to_create}/.grot || {
     return 3
 }
 
-if is_yes "touch 1.html"; then
-    touch 1.html
-fi
+touch 1.html
+touch anc.man
+touch ${ram_}.man
+echo "# ${ram_}.man" >${ram_}.man
