@@ -31,7 +31,7 @@
                         return 3
                     fi
 
-                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 20 ] && "${_is_eng_var}" "${ram_}"; then
+                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 20 ] && "${_is_eng_var_p}" "${ram_}"; then
 
                         plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
 
