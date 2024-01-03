@@ -12,6 +12,10 @@ cd "${idir}" || {
 
 : >res
 
+if ! dexec2err__ for_exec.d; then
+    echo "FAIL_EXEC:  dexec2err__ for_exec.d"
+fi
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

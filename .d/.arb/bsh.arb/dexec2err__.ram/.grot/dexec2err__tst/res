@@ -1,0 +1,5 @@
+[0;32m$ptr_path = /home/st/REPOBARE/_repo/plt/.d/.arb/bsh.arb/dexec2err__.ram/.grot/dexec2err__tst/for_exec.d[0m
+that f1.file
+[0;31m--------plt_info: in dexec2err__() : FAIL_EXEC . : file:///home/st/REPOBARE/_repo/plt/.d/.arb/bsh.arb/dexec2err__.ram/.grot/dexec2err__tst/for_exec.d/f1.file : flag_err=1 --------[0m
+that f2.sh
+FAIL_EXEC:  dexec2err__ for_exec.d

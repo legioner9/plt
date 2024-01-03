@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename=${PLT_PATH}/.d/.arb/bsh.arb/dexec2err__.ram/.grot/dexec2err__tst/exec._tst 
+filename=${PLT_PATH}/.d/.arb/bsh.arb/dexec2err__.ram/.grot/dexec2err__tst/exec._tst
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 
@@ -12,8 +12,8 @@ idir=$(pwd)
 
 dir=$(prs_f -d "$filename")
 cd "$dir" || plt_exit
-. "$dir"/_flow_tst.sh &>/dev/null
-# . "$dir"/_flow_tst.sh &>res
+# . "$dir"/_flow_tst.sh &>/dev/null
+. "$dir"/_flow_tst.sh &>res
 
 # cd "$dir"/use/ || qq_exit
 

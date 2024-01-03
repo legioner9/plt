@@ -7,8 +7,7 @@
 #     return 1
 # fi
 
-for file in $(d2e ${PLT_PATH}/.d/.ord/mm_dogit_/check_common_demand_repo_name.fn.lst.d); do
-
-    echo -e "${GREEN}\$file = $file${NORMAL}" #print variable
-     
-done
+if ! dexec2err__ ${PLT_PATH}/.d/.ord/mm_dogit_/check_common_demand_repo_name.fn.lst.d; then
+    plt_info "in file:///home/st/REPOBARE/_repo/plt/.d/.ord/mm_dogit_/check_common_demand_repo_name.ord : FAIL_EXEC : dexec2err__ ${PLT_PATH}/.d/.ord/mm_dogit_/check_common_demand_repo_name.fn.lst.d : return 1"
+    return 1
+fi

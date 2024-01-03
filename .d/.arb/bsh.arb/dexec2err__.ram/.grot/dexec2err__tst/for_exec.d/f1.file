@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "that f1.file"
+return 1
