@@ -82,7 +82,7 @@ ${NORMAL}"
     ptr_path=$1
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
-    echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
+    # echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
 
     local file
     local file_path

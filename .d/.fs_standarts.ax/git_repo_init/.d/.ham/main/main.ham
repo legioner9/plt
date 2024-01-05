@@ -1,3 +1,11 @@
 #!/bin/bash
 
-return 0
+# if find ${REPO_PATH}/Repono -type f -size +45M  -not -path "${REPO_PATH}/Repono/.git" ; then
+#     plt_info "in ${REPO_PATH}/_repo/Repono/.d/.ham/main/main.ham : TRUE_EXEC : find ${REPO_PATH}/Repono -type f -size +45M : return 1"
+#     return 1
+# fi
+
+if ! dexec2err__ XXX/main.fn.lst.d; then
+    plt_info "in file://XXX/main.ham : FAIL_EXEC : dexec2err__ file://XXX/main.fn.lst.d : return 1"
+    return 1
+fi
