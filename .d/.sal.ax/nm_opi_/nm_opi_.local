@@ -15,6 +15,7 @@ sub
 obc
 
 elegendi_done
+arr_str
 
 num_res
 item_arr
@@ -36,3 +37,9 @@ push_local_strong
 
 push_net
 push_local
+
+dir_nm_opi_
+dir_nm_opi_var
+dir_nm_opi_lst
+dir_nm_opi_set_proc
+dir_nm_opi_singl_proc

@@ -9,7 +9,7 @@
 # name_repo="tgu"
 
 #? fs contaner: dir_repo
-dir_contaner="${REPO_PATH}"
+dir_contaner="$(dirname ${REPO_PATH})"
 
 #? repo lockation: dir_repo
 dir_repo=${dir_contaner}/_repo

@@ -125,9 +125,9 @@ echo "that ${FNN}.sal"
 
 dir_nm_opi_=${PLT_PATH}/.d/.mul/nm_opi_
 dir_nm_opi_var=${dir_nm_opi_}/var
-dir_nm_opi_set_flow=${dir_nm_opi_}/set_flow
-dir_nm_opi_singl_flow=${dir_nm_opi_}/singl_flow
-
+dir_nm_opi_lst=${dir_nm_opi_}/lst
+dir_nm_opi_set_proc=${dir_nm_opi_}/set_proc
+dir_nm_opi_singl_proc=${dir_nm_opi_}/singl_proc
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 arr=($(d2e ${dir_nm_opi_var}))
@@ -147,6 +147,15 @@ res=($(d2e ${dir_nm_opi_var}))
 # arr+=("aaaaaaaaa")
 # res+=("bbbbbbbbb")
 
+arr+=("edit_ ${dir_nm_opi_set_proc}")
+res+=("edit_ ${dir_nm_opi_set_proc}")
+
+arr+=("edit_ ${dir_nm_opi_singl_proc}")
+res+=("edit_ ${dir_nm_opi_singl_proc}")
+
+arr+=("edit_ ${dir_nm_opi_lst}")
+res+=("edit_ ${dir_nm_opi_lst}")
+
 arr+=("edit_ ${dir_nm_opi_var}")
 res+=("edit_ ${dir_nm_opi_var}")
 
@@ -158,9 +167,22 @@ elegendi_done=0
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
     num_res=$(($1 - 1))
     # ${res[${num_res}]}
-    file_var_nm_opi_=${dir_nm_opi_var}/${res[${num_res}]}
+    arr_str=(${res[${num_res}]})
+
+    echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+
+    if [ "${arr_str[0]}" == "edit_" ]; then
+        ${res[${num_res}]}
+        ${FNN} "$@"
+    elif [ "${arr_str[0]}" == "exit" ]; then
+        return 0
+    else
+        file_var_nm_opi_=${dir_nm_opi_var}/${res[${num_res}]}
+        elegendi_done=1
+    fi
+
     # echo -e "${GREEN}\$file_var_nm_opi_ = $file_var_nm_opi_${NORMAL}" #print variable
-    elegendi_done=1
+
 fi
 
 if [ "${elegendi_done}" -eq 0 ]; then
@@ -168,10 +190,19 @@ if [ "${elegendi_done}" -eq 0 ]; then
     select item_arr in "${arr[@]}"; do
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr[$i]} ]]; then
-                # echo -e "${HLIGHT}--- ${res[$i]} ---${NORMAL}" #start files
-                file_var_nm_opi_=${dir_nm_opi_var}/${res[$i]}
-                # echo -e "${GREEN}\$file_var_nm_opi_ = file://$file_var_nm_opi_${NORMAL}" #print variable
-                # ${FNN} $@
+
+                arr_str=(${arr[$i]})
+
+                echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+
+                if [ "${arr_str[0]}" == "edit_" ]; then
+                    ${res[$i]}
+                    ${FNN} "$@"
+                elif [ "${arr_str[0]}" == "exit" ]; then
+                    return 0
+                else
+                    file_var_nm_opi_=${dir_nm_opi_var}/${res[$i]}
+                fi
             fi
         done
         break
@@ -205,6 +236,38 @@ if ! . ${file_var_nm_opi_}; then
     return 1
 
 fi
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+arr=()
+res=()
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+    num_res=$(($1 - 1))
+    ${res[${num_res}]}
+    return 0
+fi
+PS3="eligendi actiones: "
+select item_arr in "${arr[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item_arr} == ${arr[$i]} ]]; then
+            ${res[$i]}
+            ${FNN} $@
+        fi
+    done
+done
+#[[b_sel]]
+
 #{main_body_fn}
 
 #?---------------------------------------
