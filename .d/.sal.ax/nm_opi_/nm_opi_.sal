@@ -123,6 +123,84 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
+dir_nm_opi_=${PLT_PATH}/.d/.var/nm_opi_
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+arr=($(d2e ${PLT_PATH}/.d/.var/nm_opi_))
+res=($(d2e ${PLT_PATH}/.d/.var/nm_opi_))
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+
+arr+=("edit_ ${dir_nm_opi_}")
+res+=("edit_ ${dir_nm_opi_}")
+
+arr+=("exit menu")
+res+=("return 0")
+
+elegendi_done=0
+
+if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+    num_res=$(($1 - 1))
+    # ${res[${num_res}]}
+    file_var_nm_opi_=${dir_nm_opi_}/${res[${num_res}]}
+    # echo -e "${GREEN}\$file_var_nm_opi_ = $file_var_nm_opi_${NORMAL}" #print variable
+    elegendi_done=1
+fi
+
+if [ "${elegendi_done}" -eq 0 ]; then
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                # echo -e "${HLIGHT}--- ${res[$i]} ---${NORMAL}" #start files
+                file_var_nm_opi_=${dir_nm_opi_}/${res[$i]}
+                # echo -e "${GREEN}\$file_var_nm_opi_ = file://$file_var_nm_opi_${NORMAL}" #print variable
+                # ${FNN} $@
+            fi
+        done
+        break
+    done
+fi
+
+echo -e "${GREEN}\$file_var_nm_opi_ = $file_var_nm_opi_${NORMAL}" #print variable
+
+#* that env for
+# dir_contaner
+# dir_repo
+# dir_bare
+
+# clone_net
+# clone_local
+
+# pull_net_strong
+# pull_local_strong
+
+# push_net_strong
+# push_local_strong
+
+# push_net
+# push_local
+
+echo -e "${HLIGHT}--- . file://${file_var_nm_opi_} ---${NORMAL}" #start files
+
+if ! . ${file_var_nm_opi_}; then
+
+    plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : . ${file_var_nm_opi_} : return 1"
+    return 1
+
+fi
 #{main_body_fn}
 
 #?---------------------------------------
