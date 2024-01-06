@@ -123,11 +123,15 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
-dir_nm_opi_=${PLT_PATH}/.d/.var/nm_opi_
+dir_nm_opi_=${PLT_PATH}/.d/.mul/nm_opi_
+dir_nm_opi_var=${dir_nm_opi_}/var
+dir_nm_opi_set_flow=${dir_nm_opi_}/set_flow
+dir_nm_opi_singl_flow=${dir_nm_opi_}/singl_flow
+
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
-arr=($(d2e ${PLT_PATH}/.d/.var/nm_opi_))
-res=($(d2e ${PLT_PATH}/.d/.var/nm_opi_))
+arr=($(d2e ${dir_nm_opi_var}))
+res=($(d2e ${dir_nm_opi_var}))
 
 #{arr_res}
 # arr+=("aaaaaaaaa")
@@ -143,8 +147,8 @@ res=($(d2e ${PLT_PATH}/.d/.var/nm_opi_))
 # arr+=("aaaaaaaaa")
 # res+=("bbbbbbbbb")
 
-arr+=("edit_ ${dir_nm_opi_}")
-res+=("edit_ ${dir_nm_opi_}")
+arr+=("edit_ ${dir_nm_opi_var}")
+res+=("edit_ ${dir_nm_opi_var}")
 
 arr+=("exit menu")
 res+=("return 0")
@@ -154,7 +158,7 @@ elegendi_done=0
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
     num_res=$(($1 - 1))
     # ${res[${num_res}]}
-    file_var_nm_opi_=${dir_nm_opi_}/${res[${num_res}]}
+    file_var_nm_opi_=${dir_nm_opi_var}/${res[${num_res}]}
     # echo -e "${GREEN}\$file_var_nm_opi_ = $file_var_nm_opi_${NORMAL}" #print variable
     elegendi_done=1
 fi
@@ -165,7 +169,7 @@ if [ "${elegendi_done}" -eq 0 ]; then
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr[$i]} ]]; then
                 # echo -e "${HLIGHT}--- ${res[$i]} ---${NORMAL}" #start files
-                file_var_nm_opi_=${dir_nm_opi_}/${res[$i]}
+                file_var_nm_opi_=${dir_nm_opi_var}/${res[$i]}
                 # echo -e "${GREEN}\$file_var_nm_opi_ = file://$file_var_nm_opi_${NORMAL}" #print variable
                 # ${FNN} $@
             fi
