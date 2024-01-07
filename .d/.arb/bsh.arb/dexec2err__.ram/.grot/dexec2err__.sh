@@ -20,12 +20,12 @@ dexec2err__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: exec all files check err from dir
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
+$1 upath to dir
 [ ,$2 num_menu ]
 CNTLS:
 required
@@ -74,13 +74,18 @@ ${NORMAL}"
 
     #! normalize ptr_path -> absolut path
 
-    if [ -z "$1" ];then
+    if [ -z "$1" ]; then
         plt_info "first arg is empty : return 1"
         return 1
     fi
-    
+
     ptr_path=$1
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+
+    if ! [ -d ${ptr_path} ]; then
+        plt_info "in dexec2err__() : FAIL_EXEC : '[ -d file://${ptr_path} ]' : return 1"
+        return 1
+    fi
 
     # echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
 
@@ -94,7 +99,7 @@ ${NORMAL}"
         file_path=$ptr_path/$file
 
         if ! . $file_path; then
-            plt_info "in dexec2err__() : FAIL_EXEC . : file://$file_path : flag_err=1"
+            plt_info "in dexec2err__() : FAIL_EXEC : ' . file://$file_path ' : flag_err=1"
             flag_err=1
         fi
 
