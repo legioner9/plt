@@ -164,8 +164,8 @@ res+=("return 0")
 
 elegendi_done=0
 
-if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-    num_res=$(($1 - 1))
+if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS0} - 1))
     # ${res[${num_res}]}
     arr_str=(${res[${num_res}]})
 
@@ -238,8 +238,8 @@ if ! . ${file_var_nm_opi_}; then
 fi
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
-arr=()
-res=()
+arr=($(d2e ${dir_nm_opi_lst}))
+res=($(d2e ${dir_nm_opi_lst}))
 
 #{arr_res}
 # arr+=("aaaaaaaaa")
@@ -252,20 +252,47 @@ res=()
 # res+=("bbbbbbbbb")
 arr+=("exit menu")
 res+=("return 0")
-if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-    num_res=$(($1 - 1))
-    ${res[${num_res}]}
-    return 0
+
+elegendi_done=0
+
+if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS1} - 1))
+    file_lst=${dir_nm_opi_lst}/${res[${num_res}]}
+    elegendi_done=1
 fi
+
 PS3="eligendi actiones: "
-select item_arr in "${arr[@]}"; do
-    for ((i = 0; i < 1000; i++)); do
-        if [[ ${item_arr} == ${arr[$i]} ]]; then
-            ${res[$i]}
-            ${FNN} $@
-        fi
+if [ ${elegendi_done} -eq 0 ]; then
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                file_lst=${dir_nm_opi_lst}/${res[$i]}
+                # ${FNN} $@
+            fi
+        done
+        break
     done
+fi
+
+echo -e "${GREEN}\$file_lst = $file_lst${NORMAL}" #print variable
+arr_name_repo=($(f2e "${file_lst}"))
+parr3e_ arr_name_repo
+
+#! ---------- START define nm_opi_nm_set() ----------
+
+nm_opi_nm_set() {
+    echo -e "${GREEN}\$name_repo = $name_repo${NORMAL}" #print variable
+
+}
+
+#! ---------- END define nm_opi_nm_set() ----------
+
+for name_repo in "${arr_name_repo[@]}"; do
+
+    nm_opi_nm_set
+
 done
+
 #[[b_sel]]
 
 #{main_body_fn}
