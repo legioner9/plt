@@ -29,6 +29,7 @@
     #? signature: fn_name=addr<>remote><addr2<>remote2
     #! structure to parse: var_name=key1<>val1><key2<>val2
 
+    #! clone_net || clone_local
     clone_net=
     clone_local="/run/media/${USER}/TOSHIBA_EXT/REPOBARE/_bare/${name_repo}<>TOSHIBA_EXT_REPOBARE_BARE_${name_repo}"
 
@@ -46,5 +47,8 @@
 
     wrp2_ mkdir -pv --_cnd ${dir_repo}
     wrp2_ mkdir -pv --_cnd ${dir_bare}
+
+    export clone_net
+    export clone_local
 
 }

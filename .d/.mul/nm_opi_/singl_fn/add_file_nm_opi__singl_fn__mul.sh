@@ -4,8 +4,8 @@
 
 add_file_nm_opi__singl_fn__mul() {
 
-echo -e "${CYAN}--- add_file_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/add_file_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
-#{body}
+    echo -e "${CYAN}--- add_file_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/add_file_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                          #sistem info mesage
+    #{body}
 
-} 
+}

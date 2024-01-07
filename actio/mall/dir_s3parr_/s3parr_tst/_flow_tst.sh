@@ -12,14 +12,14 @@ cd "${idir}" || {
 
 fn() {
 
-    local p_arr=()
+    local p_arr_s=()
 
-    s3parr_ --_str "ewrved:erfwe:cgbb" --_parr p_arr --_del : >/dev/null
+    s3parr_ --_str 'ewrved:erfwe:cgbb' --_parr p_arr_s --_del ':' >/dev/null
 
     # echo -e "${GREEN}\${p_arr[@]} = ${p_arr[*]}${NORMAL}" #print variable
 
-    for ((i = 0; i < ${#p_arr[@]}; i++)); do
-        echo "\${p_arr[$i]} = ${p_arr[$i]}"
+    for ((i = 0; i < ${#p_arr_s[@]}; i++)); do
+        echo "\${p_arr_s[$i]} = ${p_arr_s[$i]}"
     done
 }
 

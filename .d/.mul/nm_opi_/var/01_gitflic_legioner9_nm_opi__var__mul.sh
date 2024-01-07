@@ -29,6 +29,7 @@
     #? signature: fn_name=addr<>remote><addr2<>remote2
     #! structure to parse: var_name=key1<>val1><key2<>val2
 
+    #! clone_net || clone_local
     clone_net="git@gitflic.ru:legioner9/${name_repo}.git<>GITFLIC_LEGIONER9_${name_repo}"
     clone_local=
 

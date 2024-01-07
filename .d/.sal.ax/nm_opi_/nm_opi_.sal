@@ -124,12 +124,18 @@ echo "that ${FNN}.sal"
 #?---------------------------------------
 
 dir_nm_opi_=${PLT_PATH}/.d/.mul/nm_opi_
+dir_nm_opi_util=${dir_nm_opi_}/util
 dir_nm_opi_var=${dir_nm_opi_}/var
 dir_nm_opi_lst=${dir_nm_opi_}/lst
 dir_nm_opi_set_fn=${dir_nm_opi_}/set_fn
 dir_nm_opi_singl_fn=${dir_nm_opi_}/singl_fn
 
 flag_dexec2err__=0
+
+if ! dexec2err__ "${dir_nm_opi_util}"; then
+    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_util}' : flag_dexec2err__=1"
+    flag_dexec2err__=1
+fi
 
 if ! dexec2err__ "${dir_nm_opi_var}"; then
     plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_var}' : flag_dexec2err__=1"
@@ -221,7 +227,7 @@ if [ "${elegendi_done}" -eq 0 ]; then
 
                 if [ "${arr_str[0]}" == "edit_" ]; then
                     ${arr[$i]}
-                    ${FNN} "$@"
+                    # ${FNN} "$@"
                 elif [ "${arr_str[0]}" == "exit" ]; then
                     return 0
                 else
@@ -236,6 +242,7 @@ fi
 #* ---------- END CHOICE ENV ------------------
 
 #* that env for
+
 # dir_contaner
 # dir_repo
 # dir_bare
@@ -252,6 +259,18 @@ fi
 # push_net
 # push_local
 
+echo -e "${GREEN}\$clone_net = $clone_net${NORMAL}" #print variable
+echo -e "${GREEN}\$clone_local = $clone_local${NORMAL}" #print variable
+
+#* ---------- START PARS and CHECK ENV ------------------
+
+if ! pars_var_nm_opi__util__mul; then
+    plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : pars_var_nm_opi__util__mul() : return 1"
+    return 1
+fi
+
+#* ---------- END PARS and CHECK ENV ------------------
+
 #* ---------- START CHOICE LIST REPO ------------------
 
 echo -e "${HLIGHT}--- exec : ${fn_var_nm_opi_} ---${NORMAL}" #start files
@@ -262,6 +281,8 @@ if ! ${fn_var_nm_opi_}; then
     return 1
 
 fi
+
+
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 arr=($(d2e ${dir_nm_opi_lst}))
@@ -303,7 +324,7 @@ fi
 echo -e "${GREEN}\$file_lst = $file_lst${NORMAL}" #print variable
 
 arr_name_repo=($(f2e "${file_lst}"))
-parr3e_ arr_name_repo
+# parr3e_ arr_name_repo
 
 #* ---------- END CHOICE LIST REPO ------------------
 
@@ -333,13 +354,14 @@ if [ $(num_01 ${ARGS2}) -eq 1 ] && [ ${ARGS2} -le ${#arr[@]} ]; then
     elegendi_done=1
 fi
 
-if [ ${elegendi_done} -eq 0 ]; then
+if [ "${elegendi_done}" -eq 0 ]; then
     PS3="eligendi actiones: "
     select item_arr in "${arr[@]}"; do
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr[$i]} ]]; then
-                ${res[$i]}
-                ${FNN} $@
+                fn_set_nm_opi_="$(prs_f -n ${arr[$i]})"
+                # ${FNN} $@
+
             fi
         done
         break
@@ -351,13 +373,18 @@ fi
 
 #! ---------- START define nm_opi_nm_set() ----------
 
-nm_opi_nm_set() {
-    # fn_set_nm_opi_
-    # fn_var_nm_opi_
+echo -e "${RED} ---------- start checked params ---------- ${NORMAL}" #exit 1
+echo -e "${GREEN}\$fn_set_nm_opi_ = $fn_set_nm_opi_${NORMAL}"         #print variable
+echo -e "${GREEN}\$fn_var_nm_opi_ = $fn_var_nm_opi_${NORMAL}"         #print variable
+parr3e_ arr_name_repo
+echo -e "${RED} ---------- end checked params ---------- ${NORMAL}" #exit 1
 
-    echo -e "${GREEN}\$name_repo = $name_repo${NORMAL}"           #print variable
-    echo -e "${GREEN}\$fn_set_nm_opi_ = $fn_set_nm_opi_${NORMAL}" #print variable
-    echo -e "${GREEN}\$fn_var_nm_opi_ = $fn_var_nm_opi_${NORMAL}" #print variable
+plt_pause "DO? : start process with THAT params?"
+
+nm_opi_nm_set() {
+
+    echo -e "${GREEN}\$name_repo = $name_repo${NORMAL}" #print variable
+    "${fn_set_nm_opi_}"
 
 }
 

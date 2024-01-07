@@ -80,7 +80,7 @@ nm_opi_() {
     for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_nm_opi_/.d.ax/.sal.ax/nm_opi_.local.list"); do
         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
         eval local "$var_fn"
-        eval "$var_fn"=
+        # eval "$var_fn"=
         var_fn_arr+=("${var_fn}")
     done
     #? mapping obc_ file to env_fn_arr and local vars into fn as mutable internal values
