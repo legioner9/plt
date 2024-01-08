@@ -73,11 +73,13 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
-    rm -rfv ${REPO_PATH}/tgu
+    echo -e "${HLIGHT}--- rm -rf ${REPO_PATH}/tgu ---${NORMAL}" #start files
+    rm -rf ${REPO_PATH}/tgu
 
     nm_opi_ 5 1 1
 
-    rm -rfv ${REPO_PATH}/tgu
+    echo -e "${HLIGHT}--- rm -rf ${REPO_PATH}/tgu ---${NORMAL}" #start files
+    rm -rf ${REPO_PATH}/tgu
 
     nm_opi_ 1 1 1
 

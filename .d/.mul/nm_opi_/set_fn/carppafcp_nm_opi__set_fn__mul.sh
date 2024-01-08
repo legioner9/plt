@@ -15,11 +15,12 @@ carppafcp_nm_opi__set_fn__mul() {
 
     #! nothing_commit global var to gcom_
     nothing_commit=0
-    gadd_file_
 
-    gcom_
+    add_file_nm_opi__singl_fn__mul
 
-    gpush_
+    com_nm_opi__singl_fn__mul
+
+    push_nm_opi__singl_fn__mul
     # exec block end --------------------------------
 
     # END EXL FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

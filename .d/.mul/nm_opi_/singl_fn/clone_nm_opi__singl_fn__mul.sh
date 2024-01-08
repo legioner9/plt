@@ -17,12 +17,15 @@ clone_nm_opi__singl_fn__mul() {
     # clone_abs_adr
 
     cd ${dir_repo} || {
-        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd ${dir_repo}' : return 1"
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}' : return 1"
         return 1
     }
 
-    plt_pause "in dir $(pwd) : DO? : 'git clone ${clone_abs_adr}'"
+    # plt_pause "in dir $(pwd) : DO? : 'git clone ${clone_abs_adr}'"
 
-    git clone "${clone_abs_adr}"
+    if ! git clone "${clone_abs_adr}"; then
+        plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git clone ${clone_abs_adr}' : return 1"
+        return 1
+    fi
 
 }

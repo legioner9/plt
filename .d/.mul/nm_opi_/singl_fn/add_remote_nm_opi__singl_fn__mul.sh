@@ -4,8 +4,25 @@
 
 add_remote_nm_opi__singl_fn__mul() {
 
-echo -e "${CYAN}--- add_remote_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/add_remote_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
-#{body}
+    echo -e "${CYAN}--- add_remote_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/add_remote_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                              #sistem info mesage
+    #{body}
 
-} 
+    for item in ${arr_str_all_unic_repo[@]}; do
+
+        arr_item=(${item//<>/ })
+
+        cd ${dir_repo}/${name_repo} || {
+            plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+            return 1
+        }
+        echo -e "${HLIGHT}--- git remote add ${arr_item[1]} ${arr_item[0]} ---${NORMAL}" #start files
+
+        if ! git remote add ${arr_item[1]} ${arr_item[0]}; then
+            plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git remote add ${arr_item[1]} ${arr_item[0]}' : return 1"
+            return 1
+        fi
+
+    done
+
+}
