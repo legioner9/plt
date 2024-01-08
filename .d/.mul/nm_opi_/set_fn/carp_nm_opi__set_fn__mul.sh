@@ -9,9 +9,21 @@ carp_nm_opi__set_fn__mul() {
     #{body}
 
     # exec block start --------------------------------
-    clone_nm_opi__singl_fn__mul
-    add_remote_nm_opi__singl_fn__mul
-    push_nm_opi__singl_fn__mul
+    if ! clone_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : clone_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    if ! add_remote_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : add_remote_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    if ! push_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : push_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
     # exec block end --------------------------------
 
 }

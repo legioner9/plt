@@ -47,7 +47,7 @@ pars_var_nm_opi__util__mul() {
         clone_net_addr=${arr_clone_net[0]}
 
         clone_abs_adr=${clone_net_addr}
-        pull_abs_remote=${arr_clone_local[1]}
+        pull_abs_remote=${arr_clone_net[1]}
 
         if ! is_ping; then
             plt_info "in pars_var_nm_opi__util__mul() : clone_net : FAIL_EXEC : 'is_ping()' : return 1"
@@ -105,5 +105,7 @@ pars_var_nm_opi__util__mul() {
 
     # pull_net_strong
     # pull_local_strong
+
+    echo -e "${GREEN}\$pull_abs_remote = $pull_abs_remote${NORMAL}" #print variable
 
 }

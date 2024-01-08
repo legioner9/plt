@@ -8,20 +8,29 @@ ppafcp_nm_opi__set_fn__mul() {
     echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                #sistem info mesage
     #{body}
 
-    # exec block start --------------------------------
+    if ! pull_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : pull_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
-    pull_nm_opi__singl_fn__mul 
-    push_nm_opi__singl_fn__mul 
-
+    # push_nm_opi__singl_fn__mul
     #! nothing_commit global var to gcom_
+
     nothing_commit=0
-    add_file_nm_opi__singl_fn__mul 
 
-    com_nm_opi__singl_fn__mul 
+    if ! add_file_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : add_file_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
-    push_nm_opi__singl_fn__mul 
-    # exec block end --------------------------------
+    if ! com_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : com_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
-    # END EXL FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    if ! push_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : push_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
 }

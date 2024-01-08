@@ -10,19 +10,48 @@ carppafcp_nm_opi__set_fn__mul() {
 
     # exec block start --------------------------------
 
-    clone_nm_opi__singl_fn__mul
-    add_remote_nm_opi__singl_fn__mul
-    pull_nm_opi__singl_fn__mul
-    push_nm_opi__singl_fn__mul
+
+
+    if ! clone_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : clone_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    if ! add_remote_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : add_remote_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    if ! push_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : push_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    if ! pull_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : pull_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
+    # push_nm_opi__singl_fn__mul
     #! nothing_commit global var to gcom_
-    
+
     nothing_commit=0
 
-    add_file_nm_opi__singl_fn__mul
+    if ! add_file_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : add_file_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
-    com_nm_opi__singl_fn__mul
+    if ! com_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : com_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
 
-    push_nm_opi__singl_fn__mul
+    if ! push_nm_opi__singl_fn__mul; then
+        plt_exit "in carp_nm_opi__set_fn__mul() : FAIL_EXEC : push_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+        return 1
+    fi
+
     # exec block end --------------------------------
 
     # END EXL FILE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
