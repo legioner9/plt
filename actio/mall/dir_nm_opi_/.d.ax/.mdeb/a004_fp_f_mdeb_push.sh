@@ -77,7 +77,7 @@ ${NORMAL}"
     echo -e "${HLIGHT}--- rm -rf ${REPO_PATH}/tgu ---${NORMAL}" #start files
     rm -rf ${REPO_PATH}/tgu
 
-    echo -e "${HLIGHT}--- $(dirname ${REPO_PATH})/_bare/tgu ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- rm -rf  $(dirname ${REPO_PATH})/_bare/tgu ---${NORMAL}" #start files
     rm -rf "$(dirname ${REPO_PATH})"/_bare/tgu
 
     nm_opi_ 1 1 2
@@ -85,7 +85,7 @@ ${NORMAL}"
     echo -e "${HLIGHT}--- rm -rf ${REPO_PATH}/tgu ---${NORMAL}" #start files
     rm -rf ${REPO_PATH}/tgu
 
-    echo -e "${HLIGHT}--- $(dirname ${REPO_PATH})/_bare/tgu ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- rm -rf  $(dirname ${REPO_PATH})/_bare/tgu ---${NORMAL}" #start files
     rm -rf "$(dirname ${REPO_PATH})"/_bare/tgu
 
     nm_opi_ 5 1 2

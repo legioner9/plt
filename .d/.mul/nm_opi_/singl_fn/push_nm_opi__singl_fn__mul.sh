@@ -66,6 +66,11 @@ push_nm_opi__singl_fn__mul() {
 
                 git --bare init
 
+                cd "${dir_repo}/${name_repo}" || {
+                    plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+                    return 1
+                }
+
             fi
 
             echo -e "${GREEN}\$adr = $adr${NORMAL}"       #print variable
@@ -119,8 +124,21 @@ push_nm_opi__singl_fn__mul() {
             remote=${arr_item[1]}
 
             if ! [ -d ${adr} ]; then
-                plt_info "push_nm_opi__singl_fn__mul() : EXEC_FAIL : adr : '[ -d ${adr} ]' : continue"
-                continue
+
+                mkdir -pv "${adr}"
+
+                cd "${adr}" || {
+                    plt_info "push_nm_opi__singl_fn__mul() : EXEC_FAIL : adr : 'cd ${adr}' : return 1"
+                    return 1
+                }
+
+                git --bare init
+
+                cd "${dir_repo}/${name_repo}" || {
+                    plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+                    return 1
+                }
+
             fi
 
             echo -e "${GREEN}\$adr = $adr${NORMAL}"       #print variable
