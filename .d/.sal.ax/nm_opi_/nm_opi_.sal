@@ -132,6 +132,8 @@ dir_nm_opi_singl_fn=${dir_nm_opi_}/singl_fn
 
 flag_dexec2err__=0
 
+#* ---------- START UP TO MEMO FN ------------------
+
 if ! dexec2err__ "${dir_nm_opi_util}"; then
     plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_util}' : flag_dexec2err__=1"
     flag_dexec2err__=1
@@ -157,7 +159,9 @@ if [ ${flag_dexec2err__} -eq 1 ]; then
     return 1
 fi
 
-#* ---------- START CHOICE ENV ------------------
+#* ---------- START UP TO MEMO FN ------------------
+
+#* ---------- START CHOICE VAR ------------------
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 arr=($(d2e ${dir_nm_opi_var}))
@@ -239,9 +243,9 @@ if [ "${elegendi_done}" -eq 0 ]; then
     done
 fi
 
-#* ---------- END CHOICE ENV ------------------
+#* ---------- END CHOICE VAR ------------------
 
-#* that env for
+#* that VAR for
 
 # dir_contaner
 # dir_repo
@@ -259,31 +263,25 @@ fi
 # push_net
 # push_local
 
-echo -e "${GREEN}\$clone_net = $clone_net${NORMAL}" #print variable
-echo -e "${GREEN}\$clone_local = $clone_local${NORMAL}" #print variable
+nm_opi_up_to_memory_var() {
 
-#* ---------- START PARS and CHECK ENV ------------------
+    echo -e "${HLIGHT}--- exec : ${fn_var_nm_opi_} ---${NORMAL}" #start files
 
-if ! pars_var_nm_opi__util__mul; then
-    plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : pars_var_nm_opi__util__mul() : return 1"
-    return 1
-fi
+    if ! ${fn_var_nm_opi_}; then
 
-#* ---------- END PARS and CHECK ENV ------------------
+        plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : ${fn_var_nm_opi_} : return 1"
+        return 1
+
+    fi
+
+    if ! pars_var_nm_opi__util__mul; then
+        plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : pars_var_nm_opi__util__mul() : return 1"
+        return 1
+    fi
+
+}
 
 #* ---------- START CHOICE LIST REPO ------------------
-
-echo -e "${HLIGHT}--- exec : ${fn_var_nm_opi_} ---${NORMAL}" #start files
-
-if ! ${fn_var_nm_opi_}; then
-
-    plt_info "in file://${PLT_PATH}/.d/.sal.ax/nm_opi_/nm_opi_.sal : FAIL_EXEC : ${fn_var_nm_opi_} : return 1"
-    return 1
-
-fi
-
-
-
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 arr=($(d2e ${dir_nm_opi_lst}))
 res=($(d2e ${dir_nm_opi_lst}))
@@ -392,6 +390,7 @@ nm_opi_nm_set() {
 
 for name_repo in "${arr_name_repo[@]}"; do
 
+    nm_opi_up_to_memory_var
     nm_opi_nm_set
 
 done

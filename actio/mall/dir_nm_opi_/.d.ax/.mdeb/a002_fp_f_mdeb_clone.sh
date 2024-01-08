@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_nm_opi_/.d.ax/.mdeb/a001_fp_f_mdeb_zx.sh"
+filename="${PLT_PATH}/actio/mall/dir_nm_opi_/.d.ax/.mdeb/a002_fp_f_mdeb_clone.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a001_fp_f_mdeb_zx() {
+a002_fp_f_mdeb_clone() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a001_fp_f_mdeb_zx() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_nm_opi_/.d.ax/.mdeb/a001_fp_f_mdeb_zx.sh)
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_nm_opi_/.d.ax/.mdeb/a002_fp_f_mdeb_clone.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -72,8 +72,15 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    echo "that from zx"
     #{body_fn}
+    rm -rfv ${REPO_PATH}/tgu
+
+    nm_opi_ 5 1 1
+
+    rm -rfv ${REPO_PATH}/tgu
+
+    nm_opi_ 1 1 1
+
 }
 
 cd "${idir}"

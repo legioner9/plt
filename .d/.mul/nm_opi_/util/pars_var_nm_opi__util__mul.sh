@@ -43,21 +43,29 @@ pars_var_nm_opi__util__mul() {
     fi
 
     if [ -n "${clone_net}" ]; then
+        arr_clone_net=(${clone_net//<>/ })
+        clone_net_addr=${arr_clone_net[0]}
+
+        clone_abs_adr=${clone_net_addr}
+
         if ! is_ping; then
-            plt_info "in pars_var_nm_opi__util__mul() : FAIL : 'is_ping()' : return 1"
+            plt_info "in pars_var_nm_opi__util__mul() : clone_net : FAIL_EXEC : 'is_ping()' : return 1"
             return 1
         fi
     fi
 
     if [ -n "${clone_local}" ]; then
         arr_clone_local=(${clone_local//<>/ })
-        parr3e_ arr_clone_local
-        # if ! [ -d "${dir_bare}" ]; then
-        #     plt_info "in pars_var_nm_opi__util__mul() : FAIL_EXEC : '[ -d file://${dir_bare} ]' : return 1"
-        #     return 1
-        # fi
+        clone_local_addr=${arr_clone_local[0]}
+
+        clone_abs_adr=${clone_local_addr}
+
+        # clone_local_remote=${arr_clone_local[1]}
+        # parr3e_ arr_clone_local
+        if ! [ -d "${clone_local_addr}" ]; then
+            plt_info "in pars_var_nm_opi__util__mul() : FAIL_EXEC : clone_local_addr : '[ -d file://${clone_local_addr} ]' : return 1"
+            return 1
+        fi
     fi
-
-
 
 }

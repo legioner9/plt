@@ -11,5 +11,18 @@ clone_nm_opi__singl_fn__mul() {
     # clone_net
     # clone_local
     # name_repo
+    # dir_contaner="$(dirname ${REPO_PATH})"
+    # dir_repo=${dir_contaner}/_repo
+    # dir_bare=${dir_contaner}/_bare
+    # clone_abs_adr
+
+    cd ${dir_repo} || {
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd ${dir_repo}' : return 1"
+        return 1
+    }
+
+    plt_pause "in dir $(pwd) : DO? : 'git clone ${clone_abs_adr}'"
+
+    git clone "${clone_abs_adr}"
 
 }

@@ -49,3 +49,7 @@ name_repo
 
 fn_set_nm_opi_
 fn_var_nm_opi_
+
+arr_clone_local
+clone_net_addr
+clone_abs_adr
