@@ -4,8 +4,20 @@
 
 pull_nm_opi__singl_fn__mul() {
 
-echo -e "${CYAN}--- pull_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/pull_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
-#{body}
+    echo -e "${CYAN}--- pull_nm_opi__singl_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/pull_nm_opi__singl_fn__mul.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                  #sistem info mesage
+    #{body}
 
-} 
+    cd "${dir_repo}/${name_repo}" || {
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+        return 1
+    }
+
+    echo -e "${HLIGHT}--- git pull ${pull_abs_remote} master ---${NORMAL}" #start files
+
+    if ! git pull "${pull_abs_remote}" master; then
+        plt_pause "in pull_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git pull "${pull_abs_remote}" master' : return 1"
+        return 1
+    fi
+
+}

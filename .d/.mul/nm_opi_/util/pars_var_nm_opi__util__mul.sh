@@ -47,6 +47,7 @@ pars_var_nm_opi__util__mul() {
         clone_net_addr=${arr_clone_net[0]}
 
         clone_abs_adr=${clone_net_addr}
+        pull_abs_remote=${arr_clone_local[1]}
 
         if ! is_ping; then
             plt_info "in pars_var_nm_opi__util__mul() : clone_net : FAIL_EXEC : 'is_ping()' : return 1"
@@ -60,6 +61,7 @@ pars_var_nm_opi__util__mul() {
         clone_local_addr=${arr_clone_local[0]}
 
         clone_abs_adr=${clone_local_addr}
+        pull_abs_remote=${arr_clone_local[1]}
 
         # clone_local_remote=${arr_clone_local[1]}
         # parr3e_ arr_clone_local
@@ -100,5 +102,8 @@ pars_var_nm_opi__util__mul() {
     # echo -e "${GREEN}\${arr_str_all_unic_repo[@]} = ${arr_str_all_unic_repo[*]}${NORMAL}" #print variable
 
     parr3e_ arr_str_all_unic_repo
+
+    # pull_net_strong
+    # pull_local_strong
 
 }

@@ -8,14 +8,15 @@ add_remote_nm_opi__singl_fn__mul() {
     echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                              #sistem info mesage
     #{body}
 
+    cd "${dir_repo}/${name_repo}" || {
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+        return 1
+    }
+
     for item in ${arr_str_all_unic_repo[@]}; do
 
         arr_item=(${item//<>/ })
 
-        cd ${dir_repo}/${name_repo} || {
-            plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
-            return 1
-        }
         echo -e "${HLIGHT}--- git remote add ${arr_item[1]} ${arr_item[0]} ---${NORMAL}" #start files
 
         if ! git remote add ${arr_item[1]} ${arr_item[0]}; then

@@ -8,4 +8,11 @@ push_nm_opi__singl_fn__mul() {
     echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                  #sistem info mesage
     #{body}
 
+    cd "${dir_repo}/${name_repo}" || {
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+        return 1
+    }
+
+    
+
 }

@@ -10,10 +10,12 @@ carppafcp_nm_opi__set_fn__mul() {
 
     # exec block start --------------------------------
 
+    clone_nm_opi__singl_fn__mul
+    add_remote_nm_opi__singl_fn__mul
     pull_nm_opi__singl_fn__mul
     push_nm_opi__singl_fn__mul
-
     #! nothing_commit global var to gcom_
+    
     nothing_commit=0
 
     add_file_nm_opi__singl_fn__mul
