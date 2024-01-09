@@ -138,7 +138,7 @@ push_nm_opi__singl_fn__mul() {
                     plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
                     return 1
                 }
-
+ 
             fi
 
             echo -e "${GREEN}\$adr = $adr${NORMAL}"       #print variable
