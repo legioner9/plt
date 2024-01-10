@@ -23,9 +23,23 @@ clone_nm_opi__singl_fn__mul() {
 
     # plt_pause "in dir $(pwd) : DO? : 'git clone ${clone_abs_adr}'"
 
+    if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_clone.ham ]; then
+        if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_clone.ham; then
+            plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/ham/before_clone.ham' {with \$name_repo = '$name_repo'} : continue"
+            continue
+        fi
+    fi
+
     if ! git clone "${clone_abs_adr}"; then
         plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git clone ${clone_abs_adr}' : return 1"
         return 1
+    fi
+
+    if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/after_clone.ham ]; then
+        if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/after_clone.ham; then
+            plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/ham/after_clone.ham' {with \$name_repo = '$name_repo'} : continue"
+            continue
+        fi
     fi
 
 }
