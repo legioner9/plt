@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#? USE ${name_repo}
+
+# if ! [ -d ${REPO_PATH}/${name_repo}/.ddd ]; then
+#     plt_info "in check_common_demand_repo_name.ord : FAIL_EXEC : [ -d ${REPO_PATH}/${name_repo}/.ddd ] : return 1"
+#     return 1
+# fi
+
+if ! dexec2err__ ${PLT_PATH}/.d/.ord/mn_opi_/check_common_demand_repo_name.fn.lst.d; then
+    plt_info "in file:///home/st/REPOBARE/_repo/plt/.d/.ord/mn_opi_/check_common_demand_repo_name.ord : FAIL_EXEC : dexec2err__ ${PLT_PATH}/.d/.ord/mm_dogit_/check_common_demand_repo_name.fn.lst.d : return 1"
+    return 1
+fi

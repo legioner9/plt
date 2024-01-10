@@ -264,7 +264,7 @@ fi
 # push_local
 
 nm_opi_up_to_memory_var() {
-
+    echo -e "${BLUE}--- nm_opi_up_to_memory_var() ---${NORMAL}"  #sistem info mesage
     echo -e "${HLIGHT}--- exec : ${fn_var_nm_opi_} ---${NORMAL}" #start files
 
     if ! ${fn_var_nm_opi_}; then
@@ -380,18 +380,42 @@ echo -e "${RED} ---------- end checked params ---------- ${NORMAL}" #exit 1
 # plt_pause "DO? : start process with THAT params?"
 
 nm_opi_nm_set() {
-
+    echo -e "${BLUE}--- nm_opi_nm_set() ---${NORMAL}"   #sistem info mesage
     echo -e "${GREEN}\$name_repo = $name_repo${NORMAL}" #print variable
     "${fn_set_nm_opi_}"
 
+}
+
+nm_opi_check_ord_name_repo() {
+    echo -e "${BLUE}--- nm_opi_check_ord_name_repo() ---${NORMAL}" #sistem info mesage
+    if ! dexec2err__ "${PLT_PATH}"/.d/.ord/mn_opi_; then
+        plt_info "in nm_opi_check_ord() : FAIL_EXEC : 'dexec2err__ ${PLT_PATH}/.d/.ord/mn_opi_' : return 1"
+        return 1
+    fi
 }
 
 #! ---------- END define nm_opi_nm_set() ----------
 
 for name_repo in "${arr_name_repo[@]}"; do
 
-    nm_opi_up_to_memory_var
-    nm_opi_nm_set
+    if ! nm_opi_check_ord_name_repo; then
+        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_check_ord_name_repo {with \$name_repo = '$name_repo'}"
+    fi
+
+    if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham ]; then
+        if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham; then
+            plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.ham' {with \$name_repo = '$name_repo'} : continue"
+            continue
+        fi
+    fi
+
+    if ! nm_opi_up_to_memory_var; then
+        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_up_to_memory_var {with \$name_repo = '$name_repo'}"
+    fi
+
+    if ! nm_opi_nm_set; then
+        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_nm_set {with \$name_repo = '$name_repo'}"
+    fi
 
 done
 

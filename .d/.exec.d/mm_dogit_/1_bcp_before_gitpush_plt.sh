@@ -31,9 +31,9 @@ ${NORMAL}" #sistem info mesage
 
     for item_name_flash_31d528dc02 in "${arr_name_flash_31d528dc02[@]}"; do
 
-        if [ -d "/run/media/st/${item_name_flash_31d528dc02}" ]; then
-            echo -e "${HLIGHT}--- cp -furv ${PLT_PATH}/.d/.read /run/media/$(whoami)/${item_name_flash_31d528dc02} ---${NORMAL}"
-            cp -furv "${PLT_PATH}/.d/.read" "/run/media/$(whoami)/${item_name_flash_31d528dc02}"
+        if [ -d "/run/media/${USER}/${item_name_flash_31d528dc02}" ]; then
+            echo -e "${HLIGHT}--- cp -furv ${PLT_PATH}/.d/.read /run/media/${USER}/${item_name_flash_31d528dc02} ---${NORMAL}"
+            cp -furv "${PLT_PATH}/.d/.read" "/run/media/${USER}/${item_name_flash_31d528dc02}"
         fi
 
     done

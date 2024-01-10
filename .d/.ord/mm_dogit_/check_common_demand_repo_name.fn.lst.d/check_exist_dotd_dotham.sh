@@ -14,7 +14,7 @@ if ! [ -d ${REPO_PATH}/${name_repo}/.d/.ham/mm_dogit_ ]; then
     flag_err_check_exist_dotd_dotham=1
 fi
 
-if [ $flag_err_check_exist_dotd_dotham -eq 1 ]; then
+if [ ${flag_err_check_exist_dotd_dotham} -eq 1 ]; then
     plt_info "in file://${PLT_PATH}/.d/.ord/mm_dogit_/check_common_demand_repo_name.fn.lst.d/check_exist_dotd_dotham.sh : flag_err=1 : return 1"
     return 1
 fi

@@ -23,3 +23,8 @@ git clone git@github.com:legioner9/fonsh.git || {
     read -p "fail: git clone git@github.com:legioner9/fonsh.git, return 1"
     return 1
 }
+
+git clone git@github.com:legioner9/lex.git || {
+    read -p "fail: git clone git@github.com:legioner9/fonsh.git, return 1"
+    return 1
+}
