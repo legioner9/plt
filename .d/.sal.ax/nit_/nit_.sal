@@ -160,7 +160,7 @@ for item6 in ${inner_fn_arr[@]}; do
         if [ ${ret_nom} -eq 3 ]; then
             return 1
         fi
-
+ 
     done
     # echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
 

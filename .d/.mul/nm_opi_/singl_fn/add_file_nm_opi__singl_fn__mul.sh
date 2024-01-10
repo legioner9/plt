@@ -8,4 +8,15 @@ add_file_nm_opi__singl_fn__mul() {
     echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                          #sistem info mesage
     #{body}
 
+    if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_add_file_.ham ]; then
+
+        echo -e "${BLUE}--- . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_add_file_.ham ---${NORMAL}" #sistem info mesage
+
+        if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_add_file_.ham; then
+            plt_exit "in nm_opi_() : FAIL_EXEC : '. file://${REPO_PATH}/${name_repo}/.d/.ham/ham/before_add_file_.ham' {with \$name_repo = '$name_repo'} : return 1"
+            return 1
+        fi
+        
+    fi
+
 }
