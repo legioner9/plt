@@ -72,9 +72,116 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
 
-    dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
-    dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
-    dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
+    local dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
+    local dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
+    local dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
+
+    echo -e "${RED}--- edit info: ---${NORMAL}"                                #sistem info mesage
+    echo -e "${GREEN}\$dir_nm_opi_var = file://$dir_nm_opi_var${NORMAL}"       #print variable
+    echo -e "${GREEN}\$dir_nm_opi_lst = file://$dir_nm_opi_lst${NORMAL}"       #print variable
+    echo -e "${GREEN}\$dir_nm_opi_set_fn = file://$dir_nm_opi_set_fn${NORMAL}" #print variable
+
+    local arr_dir_nm_opi_var=()
+    local arr_dir_nm_opi_lst=()
+    local arr_dir_nm_opi_set_fn=()
+
+    d2parr_dstr__ arr_dir_nm_opi_var ${dir_nm_opi_var}
+    d2parr_dstr__ arr_dir_nm_opi_lst ${dir_nm_opi_lst}
+    d2parr_dstr__ arr_dir_nm_opi_set_fn ${dir_nm_opi_set_fn}
+
+    # parr3e_ arr_dir_nm_opi_var
+    # parr3e_ arr_dir_nm_opi_lst
+    # parr3e_ arr_dir_nm_opi_set_fn
+
+    local item1
+    local item2
+    local item3
+
+    local arr_item1
+    local arr_item2
+    local arr_item3
+
+    local arr=()
+    local res=()
+
+    for item1 in ${arr_dir_nm_opi_var[@]}; do
+
+        arr_item1=(${item1//<>/ })
+        item10=${arr_item1[0]}
+        item11=${arr_item1[1]}
+
+        item10=${item10//_nm_opi__var__mul.sh/}
+        item10=${item10:4}
+
+        for item2 in ${arr_dir_nm_opi_lst[@]}; do
+
+            arr_item2=(${item2//<>/ })
+            item20=${arr_item2[0]}
+
+            item21=${arr_item2[1]}
+
+            item20=${item20//.lst/}
+            item20=${item20:4}
+
+            for item3 in ${arr_dir_nm_opi_set_fn[@]}; do
+
+                arr_item3=(${item3//<>/ })
+                item30=${arr_item3[0]}
+
+                item31=${arr_item3[1]}
+
+                item30=${item30//_nm_opi__set_fn__mul.sh/}
+                item30=${item30:4}
+
+                str_arr="$item10 $item20 $item30"
+                str_res="$item11 $item21 $item31"
+
+                arr+=("${str_arr}")
+                res+=("${str_res}")
+
+                # echo -e "${GREEN}\$str_arr = $str_arr${NORMAL}" #print variable
+                # echo -e "${GREEN}\$str_res = $str_res${NORMAL}" #print variable
+
+            done
+
+        done
+
+    done
+
+    echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+
+    local num_res
+    local item_arr
+    #{arr_res}
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    arr+=("exit menu")
+    res+=("return 0")
+
+    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+        num_res=$(($1 - 1))
+        plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[${num_res}]}"
+        ${res[${num_res}]}
+        return 0
+    fi
+
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[$i]}"
+                nm_opi_ "${res[$i]}"
+                # ${FNN} $@
+            fi
+        done
+    done
+    #[[b_sel]]
 
     # amount_arg $# 1 1
     #{body_fn}

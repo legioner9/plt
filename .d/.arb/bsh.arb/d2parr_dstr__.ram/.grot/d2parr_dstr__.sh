@@ -81,7 +81,7 @@ ${NORMAL}"
     local str_item
 
     ARGS0="$1"
-    echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}" #print variable
+    # echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}" #print variable
     # eval parr=\(\$\{"${ARGS0}"[@]\}\)
     # pparr=()
     ptr_path=$2
@@ -95,7 +95,7 @@ ${NORMAL}"
     fi
 
     for file_name in $(d2e "$ptr_path"); do
-        echo -e "${GREEN}\$file_name = $file_name${NORMAL}" #print variable
+        # echo -e "${GREEN}\$file_name = $file_name${NORMAL}" #print variable
         if [ -n "${file_name}" ]; then
             str_item="${file_name}<>${num}"
             eval $ARGS0+=\(\$str_item\)
