@@ -5,7 +5,7 @@
 002_carppafcp_nm_opi__set_fn__mul() {
 
     echo -e "${CYAN}--- 002_carppafcp_nm_opi__set_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/set_fn/carppafcp_nm_opi__set_fn__mul.sh ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                      #sistem info mesage
+    echo -e "${CYAN}--- MAIN: IFCHANGE FLOW : clone add push ---${NORMAL}"                                                                                                      #sistem info mesage
     #{body}
 
     # exec block start --------------------------------

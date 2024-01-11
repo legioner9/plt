@@ -1,6 +1,8 @@
 @dir
 @echo
 @edit
+@err
+@exec
 @ext
 @is
 @nav_nod

@@ -30,9 +30,13 @@ clone_nm_opi__singl_fn__mul() {
         fi
     fi
 
-    if ! git clone "${clone_abs_adr}"; then
-        plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git clone ${clone_abs_adr}' : return 1"
-        return 1
+    if ! [ -d "${REPO_PATH}/${name_repo}" ]; then
+        if ! git clone "${clone_abs_adr}"; then
+            plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git clone ${clone_abs_adr}' : return 1"
+            return 1
+        fi
+    else
+        echo -e "${BLUE}--- not need clone : DIR_EXIST : ${REPO_PATH}/${name_repo} ---${NORMAL}" #sistem info mesage
     fi
 
     if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/after_clone.ham ]; then

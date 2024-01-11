@@ -5,7 +5,7 @@
 003_ppafcp_nm_opi__set_fn__mul() {
 
     echo -e "${CYAN}--- 003_ppafcp_nm_opi__set_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/set_fn/ppafcp_nm_opi__set_fn__mul.sh ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                #sistem info mesage
+    echo -e "${CYAN}--- MAIN: WORKFLOW : add push ---${NORMAL}"                                                                                                #sistem info mesage
     #{body}
 
     #! check_ord

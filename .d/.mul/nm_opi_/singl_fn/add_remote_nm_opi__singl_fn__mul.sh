@@ -19,10 +19,12 @@ add_remote_nm_opi__singl_fn__mul() {
 
         echo -e "${HLIGHT}--- git remote add ${arr_item[1]} ${arr_item[0]} ---${NORMAL}" #start files
 
-        if ! git remote add ${arr_item[1]} ${arr_item[0]}; then
-            plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git remote add ${arr_item[1]} ${arr_item[0]}' : return 1"
-            return 1
-        fi
+        # if ! git remote add ${arr_item[1]} ${arr_item[0]}; then
+        #     plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git remote add ${arr_item[1]} ${arr_item[0]}' : return 1"
+        #     return 1
+        # fi
+        # echo -e "${BLUE}--- git remote add ${arr_item[1]} ${arr_item[0]} ---${NORMAL}" #sistem info mesage
+        git remote add ${arr_item[1]} ${arr_item[0]} 2>/dev/null
 
     done
 

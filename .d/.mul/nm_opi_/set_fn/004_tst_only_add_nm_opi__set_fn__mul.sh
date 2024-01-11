@@ -5,7 +5,7 @@
 004_tst_only_add_nm_opi__set_fn__mul() {
 
     echo -e "${CYAN}--- 004_tst_only_add_nm_opi__set_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/set_fn/only_add_nm_opi__set_fn__mul.sh ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                    #sistem info mesage
+    echo -e "${CYAN}--- MAIN: test add ---${NORMAL}"                                                                                                    #sistem info mesage
     #{body}
 
     if ! add_file_nm_opi__singl_fn__mul; then
