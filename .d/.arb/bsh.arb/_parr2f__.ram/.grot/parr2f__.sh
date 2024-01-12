@@ -82,13 +82,17 @@ ${NORMAL}"
 
     eval in_parr=\(\$\{$ARGS0\[@\]\}\)
 
-    # parr3e_ in_parr
+    parr3e_ in_parr
 
     local item
     : >"${ptr_path}"
-    for item in ${in_parr[@]}; do
-        echo "${item}" >>"${ptr_path}"
+
+    IFS=$'\n'
+    # for item in ${in_parr[@]}; do
+    for item in $(eval \(\"\$\{$ARGS0\[@\]\}\"\)); do
+        echo ${item} >>"${ptr_path}"
     done
+    IFS=$' \t\n'
 
 }
 

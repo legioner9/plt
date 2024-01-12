@@ -12,7 +12,7 @@ cd "${idir}" || {
 
 : >res
 
-parr_arr=(1 "csadf" 43 "jyturte55")
+parr_arr=(1 "csadf csda" 43 "jyturte55 sdcf")
 
 parr2f__ parr_arr res
 
