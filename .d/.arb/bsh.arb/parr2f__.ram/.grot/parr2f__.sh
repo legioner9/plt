@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/d2parr_dstr__.ram/.grot/d2parr_dstr__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/parr2f__.ram/.grot/parr2f__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-d2parr_dstr__() {
+parr2f__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,19 +15,19 @@ d2parr_dstr__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/d2parr_dstr__.ram/.grot/d2parr_dstr__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/parr2f__.ram/.grot/parr2f__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: dir to parr+=(name_file<>num_file_at_ls_dir)
+MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
 \$1 parr
-\$2 dir
-[ ,$2 num_menu ]
+\$2 upath file
+[ ,\$2 num_menu ]
 CNTLS:
 required
 optional 
@@ -73,40 +73,23 @@ ${NORMAL}"
     # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+    #{body_fn}
 
-    local file_name
-    local num
-    local parr
-    local ptr_path
-    local str_item
+    ARGS0=$1
 
-    ARGS0="$1"
-    # echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}" #print variable
-    # eval parr=\(\$\{"${ARGS0}"[@]\}\)
-    # pparr=()
     ptr_path=$2
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
-    num=1
+    eval in_parr=\(\$\{$ARGS0\[@\]\}\)
 
-    if ! [ -d ${ptr_path} ]; then
-        plt_info "in d2parr_dstr__() : NOT_DIR : '${ptr_path}' : return 1"
-        return 1
-    fi
+    # parr3e_ in_parr
 
-    for file_name in $(d2e "$ptr_path"); do
-        # echo -e "${GREEN}\$file_name = $file_name${NORMAL}" #print variable
-        if [ -n "${file_name}" ]; then
-            str_item="${file_name}<>${num}"
-            eval $ARGS0+=\(\$str_item\)
-        fi
-        num=$((num + 1))
+    local item
+    : >"${ptr_path}"
+    for item in ${in_parr[@]}; do
+        echo "${item}" >>"${ptr_path}"
     done
 
-    # parr3e_ parr
-
-    # eval $ARGS0=\(\$\{parr\}[@]\}\)
-    #{body_fn}
 }
 
 cd "${idir}"

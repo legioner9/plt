@@ -25,7 +25,8 @@ NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
+$1  if num -> num menu
+    if -m  -> correct mask args
 [ ,$2 num_menu ]
 CNTLS:
 required
@@ -60,21 +61,29 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(garg2e_ "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e_ "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(garg2e_ "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(garg2e_ "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
+
+    local ARGS0="$1"
+    local edit_mask=0
+
+    if [ "${ARGS0}" == "-m" ]; then
+        edit_mask=1
+    fi
 
     local dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
     local dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
     local dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
+    local file_mask_num=${PD_PATH}/.d/.mul/nmw_opi__/mask/mask_num.lst
 
     echo -e "${RED}--- edit info: ---${NORMAL}"                                #sistem info mesage
     echo -e "${GREEN}\$dir_nm_opi_var = file://$dir_nm_opi_var${NORMAL}"       #print variable
@@ -88,6 +97,9 @@ ${NORMAL}"
     d2parr_dstr__ arr_dir_nm_opi_var ${dir_nm_opi_var}
     d2parr_dstr__ arr_dir_nm_opi_lst ${dir_nm_opi_lst}
     d2parr_dstr__ arr_dir_nm_opi_set_fn ${dir_nm_opi_set_fn}
+
+    local arr_file_mask_num=($(f2e "${file_mask_num}"))
+    parr3e_ arr_file_mask_num
 
     # parr3e_ arr_dir_nm_opi_var
     # parr3e_ arr_dir_nm_opi_lst
@@ -164,10 +176,10 @@ ${NORMAL}"
     arr+=("exit menu")
     res+=("return 0")
 
-    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-        num_res=$(($1 - 1))
+    if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
+        num_res=$((${ARGS0} - 1))
         plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[${num_res}]}"
-        ${res[${num_res}]}
+        nm_opi_ "${res[${num_res}]}"
         return 0
     fi
 
@@ -178,6 +190,7 @@ ${NORMAL}"
                 plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[$i]}"
                 nm_opi_ "${res[$i]}"
                 # ${FNN} $@
+                return 0
             fi
         done
     done

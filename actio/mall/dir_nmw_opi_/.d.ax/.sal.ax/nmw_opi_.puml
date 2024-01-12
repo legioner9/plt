@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> nmw_opi_ 
+farg2e2_ -> nmw_opi_
+echo_deb_ -> nmw_opi_
+nmw_opi_ -> nmw_opi_:is_num
+nmw_opi_ -> nmw_opi_:exit_err_nmw_opi_
+nmw_opi_ -> nmw_opi_:exit_reg_nmw_opi_
+nmw_opi_ -> nmw_opi_:unset_autoargs_nmw_opi_
+' {wrap_fn}
+' fnn o-> nmw_opi_
+' {body_fn}
+@enduml

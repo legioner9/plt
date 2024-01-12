@@ -1,0 +1,258 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#! cr fs cr_f_
+# cr_f_ \
+#     "$filename" \
+#     --tml "${PATH_TML_DIR}/cr_shf_/shf.tml" \
+#     --fi0 "${header}" --fr0 "{header}" \
+#     --vi0 "$filename" --vr0 "{filename}"
+
+#! cr fs standart
+# "${_obs_quis_}" "$filename"
+# "${_upg_path}" "$filename"
+
+#! cr fs cr_f_dir_insert_
+# ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
+
+#! innerfns
+# if [ -d "${sil_}/proc/fol_" ]; then
+
+#     c_up "${sil_}/proc/fol_"
+
+#     inner_fn_arr=()
+#     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+# else
+#     plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+#     return 1
+# fi
+
+# for item6 in ${inner_fn_arr[@]}; do
+#     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+#     ${item6}
+
+#     ret_nom=$?
+#     if [ ${ret_nom} -eq 2 ]; then
+#         return 0
+#     fi
+#     if [ ${ret_nom} -eq 3 ]; then
+#         return 1
+#     fi
+#     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+# done
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+# local edit_mask=0
+
+# if [ "${ARGS0}" == "-m" ]; then
+#     edit_mask=1
+# fi
+
+dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
+dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
+dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
+
+dir_mask=${PD_PATH}/.d/.mul/nmw_opi__/mask
+
+file_mask_num=${dir_mask}/mask_num.lst
+file_all_point_nm=${dir_mask}/all_point_nm.lst
+
+echo -e "${RED}--- for debug see: ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- file://${dir_mask} ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- correct: file://${file_mask_num} ---${NORMAL}" #sistem info mesage
+echo -e "${BLUE}--- accoding: file://${file_all_point_nm} ---${NORMAL}" #sistem info mesage
+
+
+
+echo -e "${RED}--- edit info: ---${NORMAL}"                                #sistem info mesage
+echo -e "${GREEN}\$dir_nm_opi_var = file://$dir_nm_opi_var${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_nm_opi_lst = file://$dir_nm_opi_lst${NORMAL}"       #print variable
+echo -e "${GREEN}\$dir_nm_opi_set_fn = file://$dir_nm_opi_set_fn${NORMAL}" #print variable
+
+arr_dir_nm_opi_var=()
+arr_dir_nm_opi_lst=()
+arr_dir_nm_opi_set_fn=()
+
+d2parr_dstr__ arr_dir_nm_opi_var ${dir_nm_opi_var}
+d2parr_dstr__ arr_dir_nm_opi_lst ${dir_nm_opi_lst}
+d2parr_dstr__ arr_dir_nm_opi_set_fn ${dir_nm_opi_set_fn}
+ 
+arr_file_mask_num=($(f2e "${file_mask_num}"))
+# parr3e_ arr_file_mask_num
+
+
+# parr3e_ arr_dir_nm_opi_var 
+# parr3e_ arr_dir_nm_opi_lst
+# parr3e_ arr_dir_nm_opi_set_fn
+
+arr_item1=()
+arr_item2=()
+arr_item3=()
+
+arr=()
+res=()
+
+for item1 in ${arr_dir_nm_opi_var[@]}; do
+
+    arr_item1=(${item1//<>/ })
+    item10=${arr_item1[0]}
+    item11=${arr_item1[1]}
+
+    item10=${item10//_nm_opi__var__mul.sh/}
+    item10=${item10:4}
+
+    for item2 in ${arr_dir_nm_opi_lst[@]}; do
+
+        arr_item2=(${item2//<>/ })
+        item20=${arr_item2[0]}
+
+        item21=${arr_item2[1]}
+
+        item20=${item20//.lst/}
+        item20=${item20:4}
+
+        for item3 in ${arr_dir_nm_opi_set_fn[@]}; do
+
+            arr_item3=(${item3//<>/ })
+            item30=${arr_item3[0]}
+
+            item31=${arr_item3[1]}
+
+            item30=${item30//_nm_opi__set_fn__mul.sh/}
+            item30=${item30:4}
+
+            str_arr="$item10 $item20 $item30"
+            str_res="$item11 $item21 $item31"
+
+            arr+=("${str_arr}")
+            res+=("${str_res}")
+
+            # echo -e "${GREEN}\$str_arr = $str_arr${NORMAL}" #print variable
+            # echo -e "${GREEN}\$str_res = $str_res${NORMAL}" #print variable
+
+        done
+
+    done
+
+done
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr+=("exit menu")
+res+=("return 0")
+
+if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
+    num_res=$((${ARGS0} - 1))
+    plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[${num_res}]}"
+    nm_opi_ "${res[${num_res}]}"
+    return 0
+fi
+
+PS3="eligendi actiones: "
+select item_arr in "${arr[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item_arr} == ${arr[$i]} ]]; then
+            plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[$i]}"
+            nm_opi_ "${res[$i]}"
+            # ${FNN} $@
+            return 0
+        fi
+    done
+done
+#[[b_sel]]
+
+#{main_body_fn}
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------
