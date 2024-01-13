@@ -49,7 +49,7 @@
 #?---------------------------------------
 
 if [ -z "${ARGS0}" ]; then
-    plt_exit "${ARGS0} not defined"
+    plt_info "${ARGS0} not defined : return 1"
     return 1
 fi
 

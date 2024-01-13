@@ -75,10 +75,20 @@ ${NORMAL}"
     # amount_arg $# 1 1
     #{body_fn}
 
+    if [ -z "$2" ]; then
+        plt_info "in parr2f__() : ERR_AMOUNT_ARGS : empty '\$2' : return 1"
+        return 1
+    fi
+
     ARGS0=$1
 
     ptr_path=$2
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+
+    if ! [ -f ${ptr_path} ]; then
+        plt_info "in parr2f__() : NOT_FILE : '${ptr_path}' : return 1"
+        return 1
+    fi
 
     # echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
 
