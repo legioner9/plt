@@ -199,9 +199,6 @@ for item1 in ${arr_dir_nm_opi_var[@]}; do
 
 done
 
-# parr3e_ arr
-# parr3e_ res
-
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 
 #{arr_res}

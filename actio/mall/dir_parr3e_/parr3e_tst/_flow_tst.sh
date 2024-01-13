@@ -10,8 +10,9 @@ cd "${idir}" || {
 #?----------------------------------------------------
 #?-------------------------------------
 
-p_arr=("vsdfea" "ewv" "brer")
+p_arr=("vsd fea" "e wv" "b er")
 # echo -e "${GREEN}\${p_arr[@]} = ${p_arr[*]}${NORMAL}" #print variable
+
 parr3e_ p_arr
 
 # cr_tst_dir_ <dat &>>res

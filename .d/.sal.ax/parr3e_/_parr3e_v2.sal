@@ -53,22 +53,14 @@ if [ -z "${ARGS0}" ]; then
     return 1
 fi
 
-eval num=\$\{#"${ARGS0}"[@]\}
+eval arr_=\(\$\{"${ARGS0}"[@]\}\)
 
-for ((i = 0; i < ${num}; i++)); do
-    eval echo "\\\${\${ARGS0}[$i]} = \${${ARGS0}[$i]}"
+# echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}"         #print variable
+# echo -e "${GREEN}\${arr_[@]} = ${arr_[*]}${NORMAL}" #print variable
+
+for ((i = 0; i < ${#arr_[@]}; i++)); do
+    echo "\${${ARGS0}[$i]} = ${arr_[$i]}"
 done
-
-# echo -e "${GREEN}\$num = $num${NORMAL}" #print variable
-
-# eval arr_=\(\$\{"${ARGS0}"[@]\}\)
-
-# # echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}"         #print variable
-# # echo -e "${GREEN}\${arr_[@]} = ${arr_[*]}${NORMAL}" #print variable
-
-# for ((i = 0; i < ${#arr_[@]}; i++)); do
-#     echo "\${${ARGS0}[$i]} = ${arr_[$i]}"
-# done
 
 #?---------------------------------------
 #?---------------------------------------------
