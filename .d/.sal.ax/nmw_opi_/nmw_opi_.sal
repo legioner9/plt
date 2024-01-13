@@ -202,6 +202,43 @@ done
 # parr3e_ arr
 # parr3e_ res
 
+#! ------ START flt_arr2arr ------
+# arr_file_mask_num=(3 5)
+# arr=("1 +" "2  . +" "3 +" "4  -" "5 = =")
+filtr_arr=()
+n=1
+IFS=$'\n'
+for init in "${arr[@]}"; do
+    for filtr in "${arr_file_mask_num[@]}"; do
+        if [ "${filtr}" -eq "$n" ]; then
+            filtr_arr+=("${init}")
+        fi
+    done
+    n=$((n + 1))
+done
+IFS=$' \t\n'
+# parr3e_ filtr_arr
+#! ------- END flt_arr2arr -------
+
+#! ------ START flt_arr2arr ------
+# arr_file_mask_num=(3 5)
+# res=("1 +" "2  . +" "3 +" "4  -" "5 = =")
+filtr_res=()
+n=1
+IFS=$'\n'
+for init in "${res[@]}"; do
+    for filtr in "${arr_file_mask_num[@]}"; do
+        if [ "${filtr}" -eq "$n" ]; then
+            filtr_res+=("${init}")
+        fi
+    done
+    n=$((n + 1))
+done
+IFS=$' \t\n'
+# parr3e_ filtr_res
+#! ------- END flt_arr2arr -------
+#[[flt_arr2arr]]
+
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 
 #{arr_res}
@@ -216,19 +253,21 @@ echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 arr+=("exit menu")
 res+=("return 0")
 
+IFS=$' \t\n'
 if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
     num_res=$((${ARGS0} - 1))
-    plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[${num_res}]}"
-    nm_opi_ "${res[${num_res}]}"
+    plt_pause "in nmw_opi__() : DO? : nm_opi_ ${filtr_res[${num_res}]}"
+    nm_opi_ "${filtr_res[${num_res}]}"
     return 0
 fi
 
+IFS=$' \t\n'
 PS3="eligendi actiones: "
-select item_arr in "${arr[@]}"; do
+select item_arr in "${filtr_arr[@]}"; do
     for ((i = 0; i < 1000; i++)); do
-        if [[ ${item_arr} == ${arr[$i]} ]]; then
-            plt_pause "in nmw_opi__() : DO? : nm_opi_ ${res[$i]}"
-            nm_opi_ "${res[$i]}"
+        if [[ ${item_arr} == ${filtr_arr[$i]} ]]; then
+            plt_pause "in nmw_opi__() : DO? : nm_opi_ ${filtr_res[$i]}"
+            nm_opi_ "${filtr_res[$i]}"
             # ${FNN} $@
             return 0
         fi
