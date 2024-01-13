@@ -127,15 +127,8 @@ dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
 dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
 dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
 file_mask_num=${PD_PATH}/.d/.mul/nmw_opi__/mask/mask_num.lst
-file_filtr_arr=${PD_PATH}/.d/.mul/nmw_opi__/mask/filtr_arr.lst
-file_all_point_nm=${PD_PATH}/.d/.mul/nmw_opi__/mask/all_point_nm.lst
 
-echo -e "${RED}--- debug info: ---${NORMAL}"
-echo -e "${GREEN}\$file_mask_num = file://$file_mask_num${NORMAL}" #print variable
-echo -e "${GREEN}\$file_filtr_arr = file://$file_filtr_arr${NORMAL}" #print variable
-echo -e "${GREEN}\$file_all_point_nm = file://$file_all_point_nm${NORMAL}" #print variable
-
-echo -e "${RED}--- edit info: ---${NORMAL}"
+echo -e "${RED}--- edit info: ---${NORMAL}"                                #sistem info mesage
 echo -e "${GREEN}\$dir_nm_opi_var = file://$dir_nm_opi_var${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_nm_opi_lst = file://$dir_nm_opi_lst${NORMAL}"       #print variable
 echo -e "${GREEN}\$dir_nm_opi_set_fn = file://$dir_nm_opi_set_fn${NORMAL}" #print variable
@@ -224,9 +217,7 @@ for init in "${arr[@]}"; do
     n=$((n + 1))
 done
 IFS=$' \t\n'
-
-# filtr_arr_c=("${filtr_arr[@]}")
-# parr3e_ filtr_arr_c
+# parr3e_ filtr_arr
 #! ------- END flt_arr2arr -------
 
 #! ------ START flt_arr2arr ------
@@ -244,15 +235,9 @@ for init in "${res[@]}"; do
     n=$((n + 1))
 done
 IFS=$' \t\n'
-
-# filtr_res_c=("${filtr_res[@]}")
-# parr3e_ filtr_res_c
-
+# parr3e_ filtr_res
 #! ------- END flt_arr2arr -------
 #[[flt_arr2arr]]
-
-parr2f__ filtr_arr "$file_filtr_arr"
-parr2f__ arr "$file_all_point_nm"
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 

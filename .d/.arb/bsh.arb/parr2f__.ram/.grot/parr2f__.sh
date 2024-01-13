@@ -80,19 +80,15 @@ ${NORMAL}"
     ptr_path=$2
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
-    eval in_parr=\(\$\{$ARGS0\[@\]\}\)
+    # echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
 
-    parr3e_ in_parr
-
-    local item
     : >"${ptr_path}"
 
-    IFS=$'\n'
-    # for item in ${in_parr[@]}; do
-    for item in $(eval \(\"\$\{$ARGS0\[@\]\}\"\)); do
-        echo ${item} >>"${ptr_path}"
+    eval num=\$\{#"${ARGS0}"[@]\}
+
+    for ((i = 0; i < ${num}; i++)); do
+        eval echo "\${${ARGS0}[$i]}" >>"${ptr_path}"
     done
-    IFS=$' \t\n'
 
 }
 
