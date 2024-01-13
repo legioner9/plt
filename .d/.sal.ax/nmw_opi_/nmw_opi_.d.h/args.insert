@@ -1,5 +1,6 @@
 ARGS:
-    \$1 
+    $1 - {n menu} filtr_num file 
+    $2 - {n menu} nmw_opi_ flow
 
 CNTLS:
         --_

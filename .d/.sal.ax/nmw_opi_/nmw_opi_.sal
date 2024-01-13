@@ -125,8 +125,10 @@
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 
-dir_mask=${PD_PATH}/.d/.mul/nmw_opi__/mask/mask_num.d
+dir_mask=${PD_PATH}/.d/.mul/nmw_opi_/mask/mask_num.d
 arr_dir_mask=($(d2e ${dir_mask}))
+
+parr3e_ arr_dir_mask
 
 # parr3e_ arr_dir_mask
 
@@ -141,6 +143,8 @@ arr_dir_mask=($(d2e ${dir_mask}))
 # res+=("bbbbbbbbb")
 arr_dir_mask+=("exit menu")
 
+
+
 dilectus=0
 
 if [ $(num_01 $ARGS0) -eq 1 ] && [ $ARGS0 -le ${#arr_dir_mask[@]} ]; then
@@ -149,7 +153,7 @@ if [ $(num_01 $ARGS0) -eq 1 ] && [ $ARGS0 -le ${#arr_dir_mask[@]} ]; then
     dilectus=1
 fi
 
-echo -e "${GREEN}\$dilectus = $dilectus${NORMAL}" #print variable
+# echo -e "${GREEN}\$dilectus = $dilectus${NORMAL}" #print variable
 
 if [ "${dilectus}" -eq 0 ]; then
     PS3="eligendi actiones: "
@@ -159,15 +163,20 @@ if [ "${dilectus}" -eq 0 ]; then
     done
 fi
 
-echo -e "${GREEN}\$file_mask_num = $file_mask_num${NORMAL}" #print variable
+# echo -e "${GREEN}\$file_mask_num = $file_mask_num${NORMAL}" #print variable
 #[[b_sel]]
 
 dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
 dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
 dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3
 # file_mask_num=${PD_PATH}/.d/.mul/nmw_opi__/mask/mask_num.d/mask_num.lst
-file_filtr_arr=${PD_PATH}/.d/.mul/nmw_opi__/mask/filtr_arr.lst
-file_all_point_nm=${PD_PATH}/.d/.mul/nmw_opi__/mask/all_point_nm.lst
+file_filtr_arr=${PD_PATH}/.d/.mul/nmw_opi_/mask/filtr_arr.lst
+file_all_point_nm=${PD_PATH}/.d/.mul/nmw_opi_/mask/all_point_nm.lst
+
+echo -e "${RED}--- dir info: ---${NORMAL}"
+echo -e "${GREEN}PD = file:/${PD_PATH}/.d/.mul/nmw_opi_${NORMAL}"         #print variable
+echo -e "${GREEN}PLT = file:/${PLT_PATH}/.d/.mul/nm_opi_${NORMAL}"         #print variable
+
 
 echo -e "${RED}--- debug info: ---${NORMAL}"
 echo -e "${GREEN}\$file_mask_num = file://$file_mask_num${NORMAL}"         #print variable
