@@ -143,8 +143,6 @@ parr3e_ arr_dir_mask
 # res+=("bbbbbbbbb")
 arr_dir_mask+=("exit menu")
 
-
-
 dilectus=0
 
 if [ $(num_01 $ARGS0) -eq 1 ] && [ $ARGS0 -le ${#arr_dir_mask[@]} ]; then
@@ -174,9 +172,8 @@ file_filtr_arr=${PD_PATH}/.d/.mul/nmw_opi_/mask/filtr_arr.lst
 file_all_point_nm=${PD_PATH}/.d/.mul/nmw_opi_/mask/all_point_nm.lst
 
 echo -e "${RED}--- dir info: ---${NORMAL}"
-echo -e "${GREEN}PD = file:/${PD_PATH}/.d/.mul/nmw_opi_${NORMAL}"         #print variable
-echo -e "${GREEN}PLT = file:/${PLT_PATH}/.d/.mul/nm_opi_${NORMAL}"         #print variable
-
+echo -e "${GREEN}PD = file://file:/${PD_PATH}/.d/.mul/nmw_opi_${NORMAL}" #print variable
+echo -e "${GREEN}PLT = file://${PLT_PATH}/.d/.mul/nm_opi_${NORMAL}"      #print variable
 
 echo -e "${RED}--- debug info: ---${NORMAL}"
 echo -e "${GREEN}\$file_mask_num = file://$file_mask_num${NORMAL}"         #print variable
