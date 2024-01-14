@@ -5,7 +5,7 @@
 002_carppafcp_nm_opi__set_fn__mul() {
 
     echo -e "${CYAN}--- 002_carppafcp_nm_opi__set_fn__mul() file://${PLT_PATH}/.d/.mul/nm_opi_/set_fn/carppafcp_nm_opi__set_fn__mul.sh ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: IFCHANGE FLOW : clone add push ---${NORMAL}"                                                                                                      #sistem info mesage
+    echo -e "${CYAN}--- MAIN: IFCHANGE FLOW : clone add push ---${NORMAL}"                                                                           #sistem info mesage
     #{body}
 
     # exec block start --------------------------------
@@ -15,17 +15,20 @@
         return 1
     fi
 
-     #! check_ord
+    #! check_ord
 
     if ! nm_opi_check_ord_name_repo; then
         plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : nm_opi_check_ord_name_repo {with \${name_repo}} = '${name_repo}'} : return 1"
         return 1
     fi
 
-    if ! add_remote_nm_opi__singl_fn__mul; then
-        plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : add_remote_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
-        return 1
-    fi
+    # if ! add_remote_nm_opi__singl_fn__mul; then
+    #     plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : add_remote_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
+    #     return 1
+    # fi
+
+    echo -e "${BLUE}--- add_remote_nm_opi__singl_fn__mul() ---${NORMAL}" #sistem info mesage
+    add_remote_nm_opi__singl_fn__mul
 
     if ! push_nm_opi__singl_fn__mul; then
         plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : push_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"

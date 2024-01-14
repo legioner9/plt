@@ -63,3 +63,30 @@ arr_str_all_unic_repo
 
 adr
 remote
+
+# from lex/.d/.mul/nm_opi_/var
+clone_net
+clone_local
+pull_net_strong
+pull_local_strong
+push_net_strong
+push_local_strong
+push_net
+push_local
+
+# ${PLT_PATH}/.d/.mul/nm_opi_/util/pars_var_nm_opi__util__mul.sh
+arr_clone_net
+clone_net_addr
+clone_abs_adr
+clone_net_addr
+pull_abs_remote
+
+arr_clone_local
+clone_local_addr
+arr_clone_local
+arr_all_ptr_var
+
+str_all_repo
+arr_str_all_repo
+arr_str_all_unic_repo
+

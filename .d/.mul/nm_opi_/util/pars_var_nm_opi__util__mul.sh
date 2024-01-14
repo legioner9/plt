@@ -69,9 +69,12 @@ pars_var_nm_opi__util__mul() {
             plt_info "in pars_var_nm_opi__util__mul() : FAIL_EXEC : clone_local_addr : '[ -d file://${clone_local_addr} ]' : return 1"
             return 1
         fi
+         
     fi
 
     arr_all_ptr_var=(clone_net clone_local pull_net_strong pull_local_strong push_net_strong push_local_strong push_net push_local)
+
+    str_all_repo=""
 
     for item in ${arr_all_ptr_var[@]}; do
 
