@@ -1,2 +1,18 @@
-    echo -e "${CYAN}--- {name_fn}() file://{filename} ---${NORMAL}" #sistem info mesage
-    echo -e "${CYAN}--- MAIN: ---${NORMAL}" #sistem info mesage
+echo -e "${CYAN}--- {name_fn}() file://{filename} ---${NORMAL}" #sistem info mesage
+echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mesage
+
+# local first_arg=
+# first_arg=$1
+# if [ -z "${first_arg}" ]; then
+#     plt_info "{name_fn}() : \$1 : args NOT_DEFINE : return 1"
+#     return 1
+# fi
+
+#! -------------- START check env -------------------
+
+if [ -z "${XXX}" ]; then
+    plt_info "in {name_fn}() : NOT_DEFINE : '\${XXX}' : return 1"
+    return 1
+fi
+
+#! -------------- END check env -------------------

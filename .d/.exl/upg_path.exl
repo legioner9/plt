@@ -15,6 +15,9 @@ eval cr_f_ ${path_file} --vi0 "${PATH_CURR_REPO}" --vr0 '\$PATH_CURR_REPO'
 
 
 eval cr_f_ ${path_file} --vi0 '\${PLT_PATH}' --vr0 "${PLT_PATH}"
+eval cr_f_ ${path_file} --vi0 '\${PD_PATH}' --vr0 "${PD_PATH}"
+
+
 eval cr_f_ ${path_file} --vi0 '\${FONSH_PATH}' --vr0 "${FONSH_PATH}"
 eval cr_f_ ${path_file} --vi0 '\${PATH_CURR_REPO}' --vr0 "${PATH_CURR_REPO}"
 

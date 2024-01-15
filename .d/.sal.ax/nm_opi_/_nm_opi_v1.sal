@@ -124,16 +124,15 @@
 #?---------------------------------------
 
 dir_nm_opi_=${PLT_PATH}/.d/.mul/nm_opi_
-
 dir_nm_opi_util=${dir_nm_opi_}/util
+dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var
+dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst
 dir_nm_opi_set_fn=${dir_nm_opi_}/set_fn
 dir_nm_opi_singl_fn=${dir_nm_opi_}/singl_fn
 
-dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var
-dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst
+# dir_ham_proc=
 
-dir_plt_proc_ham=${PLT_PATH}/.d/.proc/.ham
-dir_pd_proc_ham=${PD_PATH}/.d/.proc/.ham
+# /home/st/REPOBARE/_repo/lex/.d/.ham/proc
 
 flag_dexec2err__=0
 
@@ -156,16 +155,6 @@ fi
 
 if ! dexec2err__ "${dir_nm_opi_singl_fn}"; then
     plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_nm_opi_singl_fn}' : flag_dexec2err__=1"
-    flag_dexec2err__=1
-fi
-
-if ! dexec2err__ "${dir_plt_proc_ham}"; then
-    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_plt_proc_ham}' : flag_dexec2err__=1"
-    flag_dexec2err__=1
-fi
-
-if ! dexec2err__ "${dir_pd_proc_ham}"; then
-    plt_info "in nm_opi_() : FAIL_EXEC : 'dexec2err__ ${dir_pd_proc_ham}' : flag_dexec2err__=1"
     flag_dexec2err__=1
 fi
 
