@@ -1,0 +1,9 @@
+в конфиге 
+    location / {
+        root /home/st/REPOBARE/_repo/NWeb/3w/html;
+        autoindex on;
+
+а ошибка 
+    "/home/st/REPOBARE/_repo/NWeb/3w/html/index.html" is forbidden (13: Permission denied)
+
+разве он не должен просто открыть мне рут - зачем ему index.html?
