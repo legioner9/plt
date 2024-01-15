@@ -17,10 +17,10 @@
 
     #! check_ord
 
-    if ! nm_opi_check_ord_name_repo; then
-        plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : nm_opi_check_ord_name_repo {with \${name_repo}} = '${name_repo}'} : return 1"
-        return 1
-    fi
+    # if ! nm_opi_check_ord_name_repo; then
+    #     plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : nm_opi_check_ord_name_repo {with \${name_repo}} = '${name_repo}'} : return 1"
+    #     return 1
+    # fi
 
     # if ! add_remote_nm_opi__singl_fn__mul; then
     #     plt_exit "in 002_carppafcp_nm_opi__set_fn__mul() : FAIL_EXEC : add_remote_nm_opi__singl_fn__mul {with \${name_repo}} = '${name_repo}'} : return 1"
