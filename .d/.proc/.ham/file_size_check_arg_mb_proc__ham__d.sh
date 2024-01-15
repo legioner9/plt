@@ -29,15 +29,17 @@ file_size_check_arg_mb_proc__ham__d() {
     #{body}
 
     echo -e "${HLIGHT}--- find ${REPO_PATH}/${name_repo} -type f -size +${check_size}M -not -path ${REPO_PATH}/${name_repo}/.git/* ---${NORMAL}" #start files
-    str_err=$(find ${REPO_PATH}/${name_repo} -type f -size +${check_size}M -not -path "${REPO_PATH}/${name_repo}/.git/*")
 
-    echo -e "\${str_err} = '${str_err}'"
+    IFS=$'\n'
+    arr_err=($(find ${REPO_PATH}/${name_repo} -type f -size +${check_size}M -not -path "${REPO_PATH}/${name_repo}/.git/*"))
+    IFS=$' \t\n'
 
-    if [ -n "${str_err}" ] || [ "${str_err}" == "" ]; then
+    if [ -n "${arr_err[0]}" ]; then
+        parr3e_ arr_err
         plt_info "in file_size_check_arg_mb_proc__ham__d() file://${PLT_PATH}/.d/.proc/.ham/file_size_check_arg_mb_proc__ham__d.sh : EXEC_TRUE : 'find ${REPO_PATH}/${repo_name} -type f -size +${check_size}M -not -path ${REPO_PATH}/${name_repo}/.git/*' : return 1"
         return 1
     fi
 
-    return 1
+    return 0
 
 }

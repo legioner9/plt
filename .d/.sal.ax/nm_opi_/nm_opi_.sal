@@ -132,6 +132,7 @@ dir_nm_opi_singl_fn=${dir_nm_opi_}/singl_fn
 dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var
 dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst
 
+#? dir with inner function to use in main and ham files
 dir_plt_proc_ham=${PLT_PATH}/.d/.proc/.ham
 dir_pd_proc_ham=${PD_PATH}/.d/.proc/.ham
 
@@ -401,28 +402,34 @@ nm_opi_nm_set() {
 
 }
 
-nm_opi_check_ord_name_repo() {
-    echo -e "${BLUE}--- nm_opi_check_ord_name_repo() ---${NORMAL}" #sistem info mesage
-    if ! dexec2err__ "${PLT_PATH}"/.d/.ord/mn_opi_; then
-        plt_info "in nm_opi_check_ord() : FAIL_EXEC : 'dexec2err__ ${PLT_PATH}/.d/.ord/mn_opi_' : return 1"
-        return 1
-    fi
-}
+# nm_opi_check_ham_name_repo() {
+#     echo -e "${BLUE}--- nm_opi_check_ham_name_repo() ---${NORMAL}"                               #sistem info mesage
+#     echo -e "${HLIGHT}--- dexec2err__ file://${REPO_PATH}/${name_repo}/.d/.ham/ham ---${NORMAL}" #start files
+
+#     if ! dexec2err__ "${REPO_PATH}"/"${name_repo}"/.d/.ham/ham; then
+#         plt_info "in nm_opi_check_ham_name_repo() : FAIL_EXEC : 'dexec2err__ ${REPO_PATH}/${name_repo}/.d/.ham/ham' : return 1"
+#         return 1
+#     fi
+# }
 
 #! ---------- END define nm_opi_nm_set() ----------
 
 for name_repo in "${arr_name_repo[@]}"; do
 
-    if ! nm_opi_check_ord_name_repo; then
-        plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_check_ord_name_repo {with \$name_repo = '$name_repo'}"
-    fi
+#? use function from 
 
+    #? main check
     if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham ]; then
         if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham; then
             plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/main/main.ham' {with \$name_repo = '$name_repo'} : continue"
             continue
         fi
     fi
+
+    #? ham check
+    # if ! nm_opi_check_ham_name_repo; then
+    #     plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_check_ham_name_repo {with \$name_repo = '$name_repo'}"
+    # fi
 
     if ! nm_opi_up_to_memory_var; then
         plt_exit "in nm_opi_() : FAIL_EXEC : nm_opi_up_to_memory_var {with \$name_repo = '$name_repo'}"
