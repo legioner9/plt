@@ -4,7 +4,7 @@
 # . "${HOME}/.bashrc"
 #!
 
-filename="${PLT_PATH}/actio/mall/dir_arb2tst_/arb2tst_.nsc.sh"
+filename="${PLT_PATH}/actio/mall/dir_parr2up_err_/parr2up_err_.nsc.sh"
 
 echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start file
 
@@ -12,7 +12,7 @@ echo -e "${HLIGHT}--- start file: $filename with args: $@ ---${NORMAL}" # start 
 
 #up_lib_git
 
-arb2tst_() {
+parr2up_err_() {
 
     local ratis=0
 
@@ -23,7 +23,7 @@ arb2tst_() {
 
     local ARGS=($@)
     local NARGS=${#ARGS[@]}
-    local FNN=arb2tst_
+    local FNN=parr2up_err_
     local var_wrap
     local var_wrap_arr=()
     local var_fn
@@ -60,9 +60,9 @@ arb2tst_() {
         return 0
     fi
     #! ----- START COMMENT IF NOT USED ${_garg2e2_} -----
-    # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+    # # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
     # if ! ${_garg2e2_} "${ARGS[@]}"; then
-    #     ${_plt_exit} " arb2tst_ return 1: ${FNLOCK}"
+    #     ${_plt_exit} " parr2up_err_ return 1: ${FNLOCK}"
     #     return 1
     # fi
     # #? g_args with cntl=value
@@ -75,9 +75,9 @@ arb2tst_() {
     #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     #     eval local $strex
     # done
-    #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
+    # #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
     #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
-    for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.sal.ax/arb2tst_.local.list"); do
+    for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_parr2up_err_/.d.ax/.sal.ax/parr2up_err_.local.list"); do
         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
         eval local "$var_fn"
         var_fn_arr+=("${var_fn}")
@@ -133,18 +133,15 @@ arb2tst_() {
     #     # var_wrap_arr+=("${var_wrap}")
     # done
     #? exec main fn procedore
-    if ! . "${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.sal.ax/arb2tst_.body.nsc.sh"; then
-        ${_plt_exit} "fail: . ${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.sal.ax/arb2tst_.body.sh"
+    if ! . "${PLT_PATH}/actio/mall/dir_parr2up_err_/.d.ax/.sal.ax/parr2up_err_.body.nsc.sh"; then
+        ${_plt_exit} "fail: . ${PLT_PATH}/actio/mall/dir_parr2up_err_/.d.ax/.sal.ax/parr2up_err_.body.sh"
         return 1
     fi
     cd "$PPWD" 1>/dev/null || plt_exit "fail : cd $PPWD"
-
     #{init_body}
-
-    
 
 }
 
-# arb2tst_ @
+# parr2up_err_ @
 
 unset filename

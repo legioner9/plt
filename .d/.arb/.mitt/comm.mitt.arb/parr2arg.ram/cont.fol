@@ -1,0 +1,11 @@
+#! ------ START parr2arg ------
+
+IFS=$'\\n'
+eval num=\$\{#"${ARGS0}"[@]\}
+
+for ((i = 0; i < ${num}; i++)); do
+    eval echo "\${${ARGS0}[$i]}"
+done
+IFS=$' \\t\\n'
+
+#! ------- END parr2arg -------

@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> parr2up_err_ 
+farg2e2_ -> parr2up_err_
+echo_deb_ -> parr2up_err_
+parr2up_err_ -> parr2up_err_:is_num
+parr2up_err_ -> parr2up_err_:exit_err_parr2up_err_
+parr2up_err_ -> parr2up_err_:exit_reg_parr2up_err_
+parr2up_err_ -> parr2up_err_:unset_autoargs_parr2up_err_
+' {wrap_fn}
+' fnn o-> parr2up_err_
+' {body_fn}
+@enduml
