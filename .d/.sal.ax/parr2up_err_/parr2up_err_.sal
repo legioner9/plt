@@ -16,30 +16,30 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
-echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
-echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
 
-echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
-echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
 
-echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 
-echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-echo "that ${FNN}.sal"
+# echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
 # list_strong_cntls=(?str_ ?del_ ?parr_)
@@ -103,7 +103,7 @@ echo "that ${FNN}.sal"
 #     return 1
 # fi
 
-# for item6 in ${inner_fn_arr[@]}; do 
+# for item6 in ${inner_fn_arr[@]}; do
 #     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
 
 #     ${item6}
@@ -123,12 +123,46 @@ echo "that ${FNN}.sal"
 #?---------------------------------------------
 #?---------------------------------------
 
+if [ -z "${ARGS0}" ]; then
+    plt_info "in parr2up_err_() : ERR_ARGS : \${ARGS0} not define : return 1"
+    return 1
+fi
+
+if [ -z "${ARGS1}" ]; then
+    plt_info "in parr2up_err_() : ERR_ARGS : \${ARGS1} not define : return 1"
+    return 1
+fi
+
 eval num=\$\{#"${ARGS0}"[@]\}
 
 for ((i = 0; i < ${num}; i++)); do
-    eval echo "\${${ARGS0}[$i]}" >>"${ptr_path}"
+    eval dir_tst="\${${ARGS0}[$i]}"
+    echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
+
+    flag=1
+
+    for file_path in $(find_ext "$dir_tst" "${ARGS1}"); do
+
+        if ! . "$file_path"; then
+            echo "--- file://${file_path} fail ---"
+            flag=0
+        else
+            echo "--- file://${file_path} true ---"
+        fi
+
+    done
+
 done
 
+if [ 1 -eq ${flag} ]; then
+    echo "<<< parr2up_err_  file://${ARGS0} ${ARGS1} TRUE >>>" #sistem info mesage
+    return 0
+fi
+
+if [ 0 -eq ${flag} ]; then
+    echo "<<< parr2up_err_ file://${ARGS0} ${ARGS1} FAIL >>>" >&2 #sistem info mesage
+    return 1
+fi
 #{main_body_fn}
 
 #?---------------------------------------

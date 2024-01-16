@@ -1,0 +1,4 @@
+if [ -z "${ARGS0}" ]; then
+    plt_info "in FN() : ERR_ARGS : \${ARGS0} not define : return 1"
+    return 1
+fi

@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.mdeb/a002_fp_f_mdeb_init.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/find_ext__.ram/.grot/find_ext__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-a002_fp_f_mdeb_init() {
+find_ext__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ a002_fp_f_mdeb_init() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.mdeb/a002_fp_f_mdeb_init.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/find_ext__.ram/.grot/find_ext__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -60,23 +60,45 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(garg2e_ "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e_ "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(garg2e_ "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(garg2e_ "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    echo -e "${HLIGHT}--- arb2tst_ ${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.mdeb/.tmp/arb.lst tst ---${NORMAL}" #start files
+    if ! [ -d "$1" ]; then
+        # plt_info "in find_ext__() : first arg NOT_DIR : '$1' : return 1"
+        return 1
+    fi
 
-    arb2tst_ ${PLT_PATH}/actio/mall/dir_arb2tst_/.d.ax/.mdeb/.tmp/arb.lst tst
+    if [ -z "$2" ]; then
+        # plt_info "in find_ext__() : ERR_ARGS : \$2 not define : return 1"
+        return 1
+    fi
 
+    #[[ERR_ARGS]]
+
+    local item
+
+    for item in $(ls "$1"); do
+        local item_path="$1"/$item
+        if [ -f "$item_path" ] && [ "${item:0:1}" != "_" ] && [ "${item##*.}" = "$2" ]; then
+            echo "$item_path"
+        else
+            # if [ -d "$item_path" ] && [ "${item:0:1}" != "_" ] && [ "$item" != "." ] && [ "$item" != ".." ]; then
+            if [ -d "$item_path" ] && [ "${item:0:1}" != "_" ]; then
+                find_ext__ "$item_path" "$2"
+            fi
+        fi
+    done
+    
     #{body_fn}
 }
 
