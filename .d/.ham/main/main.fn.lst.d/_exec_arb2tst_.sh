@@ -1,7 +1,7 @@
 #!/bin/bash
 
 file_sh="${REPO_PATH}/${name_repo}"/.d/.ham/main/main.fn.lst.d/exec_arb2tst_.sh
-file_lst="${REPO_PATH}/${name_repo}"/.d/.ham/main/main.fn.lst.d/exec_arb2tst_.lst
+file_lst="${REPO_PATH}/${name_repo}"/.d/.ham/main/main.fn.lst.d/_exec_arb2tst_.lst
 
 echo -e "${BLUE}--- that file://${file_sh} ---${NORMAL}"               #sistem info mesage
 echo -e "${HLIGHT}--- arb2tst_() wiwh file://${file_lst} ---${NORMAL}" #start files
