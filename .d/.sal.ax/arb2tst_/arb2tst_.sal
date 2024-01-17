@@ -112,7 +112,7 @@ echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 #     if [ ${ret_nom} -eq 2 ]; then
 #         return 0
 #     fi
-#     if [ ${ret_nom} -eq 3 ]; then
+#     if [ ${ret_nom} -eq 3 ]; then 
 #         return 1
 #     fi
 #     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
