@@ -21,8 +21,8 @@
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
@@ -128,33 +128,36 @@
 arr_up_err=()
 IFS=$'\n'
 for item in $(f2e ${ARGS0}); do
-    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
 
     flag=1
-    for item2 in $(dd2e "$item"); do
-        # echo -e "${GREEN}\${item2} = $item2${NORMAL}" #print variable
-        if [ "${item2: -4}" == ".ram" ]; then
+    IFS=$'\n'
+    for item2 in $(dd2e__ "$item"); do
+
+        ext="${item2: -4}"
+
+        if [[ "${ext}" == ".ram" ]]; then
 
             dir_tst=${item}/${item2}/.grot
-            echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
 
-            echo -e "${HLIGHT}--- arr_ext=($(find_ext__ "$dir_tst" "${ARGS1}")) ---${NORMAL}" #start files
+            IFS=$'\n'
+            arr_ext=()
+            arr_ext=("$(find_ext__ "$dir_tst" "${ARGS1}")")
 
-            arr_ext=($(find_ext__ "$dir_tst" "${ARGS1}"))
-
-            # parr3e_ arr_ext
-
+            IFS=$'\n'
             for file_path in ${arr_ext[@]}; do
-                # echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
-                if [ -f ${file_path} ]; then
-                    if ! . "$file_path" 1>/dev/null; then
-                        echo "--- file://${file_path} fail ---"
+
+                if [ -f "${file_path}" ] && [ -n "${file_path}" ]; then
+
+                    str_res="$(source "${file_path}")"
+                    echo "${str_res}"
+
+                    err_str_res="$(echo ${str_res} | grep ' true')"
+
+                    if [ -z "${err_str_res}" ]; then
                         flag=0
-                    else
-                        echo "--- file://${file_path} true ---"
                     fi
-                else
-                    plt_info "${file_path} NOT_FILE"
+
                 fi
             done
         fi
