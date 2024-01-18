@@ -123,6 +123,16 @@ echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 #?---------------------------------------------
 #?---------------------------------------
 
+if [ -z "${ARGS0}" ]; then
+    plt_info "in arb2tst_() : ERR_ARGS : \${ARGS0} not define : return 1"
+    return 1
+fi
+if [ -z "${ARGS1}" ]; then
+    plt_info "in arb2tst_() : ERR_ARGS : \${ARGS1} not define : return 1"
+    return 1
+fi
+#[[ERR_ARGS]]
+
 #{main_body_fn}
 
 arr_up_err=()
