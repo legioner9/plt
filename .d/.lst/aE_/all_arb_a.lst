@@ -8,6 +8,8 @@ ${PLT_PATH}/.d/.arb/tag.arb
 ${PLT_PATH}/.d/.arb/bug.arb
 ${PLT_PATH}/.d/.arb/apt_alt.arb
 
+${PLT_PATH}/.d/.arb/git.arb
+
 ${PLT_PATH}/.d/.arb/.sgm/html.sgm.arb
 
 ${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb

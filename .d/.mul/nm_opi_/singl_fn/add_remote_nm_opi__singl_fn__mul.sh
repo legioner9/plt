@@ -19,6 +19,8 @@ add_remote_nm_opi__singl_fn__mul() {
 
         local arr_item0=${arr_item[0]}
 
+        local is_gitflic
+
         is_gitflic=$(echo "${arr_item0}" | grep gitflic)
 
         if [ -n "${is_gitflic}" ]; then

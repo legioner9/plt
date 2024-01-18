@@ -112,7 +112,7 @@ echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 #     if [ ${ret_nom} -eq 2 ]; then
 #         return 0
 #     fi
-#     if [ ${ret_nom} -eq 3 ]; then 
+#     if [ ${ret_nom} -eq 3 ]; then
 #         return 1
 #     fi
 #     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
@@ -133,12 +133,14 @@ for item in $(f2e ${ARGS0}); do
     flag=1
     IFS=$'\n'
     for item2 in $(dd2e__ "$item"); do
+        # echo -e "${GREEN}\${item2} = ${item2}${NORMAL}" #print variable
 
         ext="${item2: -4}"
 
         if [[ "${ext}" == ".ram" ]]; then
 
             dir_tst=${item}/${item2}/.grot
+            echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
 
             IFS=$'\n'
             arr_ext=()
@@ -146,6 +148,8 @@ for item in $(f2e ${ARGS0}); do
 
             IFS=$'\n'
             for file_path in ${arr_ext[@]}; do
+
+                echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
 
                 if [ -f "${file_path}" ] && [ -n "${file_path}" ]; then
 

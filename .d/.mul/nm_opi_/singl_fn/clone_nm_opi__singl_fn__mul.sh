@@ -23,6 +23,14 @@ clone_nm_opi__singl_fn__mul() {
 
     # plt_pause "in dir $(pwd) : DO? : 'git clone ${clone_abs_adr}'"
 
+    local is_gitflic
+
+    is_gitflic=$(echo "${clone_abs_adr}" | grep gitflic)
+
+    if [ -n "${is_gitflic}" ]; then
+        clone_abs_adr=${clone_abs_adr,,}
+    fi
+
     if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_clone.ham ]; then
         if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/before_clone.ham; then
             plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/ham/before_clone.ham' {with \$name_repo = '$name_repo'} : continue"
@@ -31,7 +39,7 @@ clone_nm_opi__singl_fn__mul() {
     fi
 
     if ! [ -d "${REPO_PATH}/${name_repo}" ]; then
-        if ! git clone "${clone_abs_adr}"; then
+        if ! git clone "${clone_abs_adr}" "${name_repo}"; then
             plt_pause "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'git clone ${clone_abs_adr}' : return 1"
             return 1
         fi
@@ -42,7 +50,6 @@ clone_nm_opi__singl_fn__mul() {
     if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/ham/after_clone.ham ]; then
         if ! . "${REPO_PATH}/${name_repo}"/.d/.ham/ham/after_clone.ham; then
             plt_exit "in nm_opi_() : FAIL_EXEC : continue? : '. file://${REPO_PATH}/${name_repo}/.d/.ham/ham/after_clone.ham' {with \$name_repo = '$name_repo'} : continue"
-            continue
         fi
     fi
 
