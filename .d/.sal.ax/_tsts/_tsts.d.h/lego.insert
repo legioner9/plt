@@ -1,0 +1,6 @@
+# ln from ${PLT_PATH}/.d/.anc.ax/ifs_fn.d.man/name_fn.d.h/lego.insert
+LEGO:
+    - . ${PATH_CURR_REPO}/tgu/actio/dir__tsts/.d/.dd/cr_tree_gign_dir.sh - create tree_gign_dir.man with tree
+    - . ${PATH_CURR_REPO}/tgu/actio/dir__tsts/_gnr_dir_sys.sh create extst in dir__tsts
+    - . ${PATH_CURR_REPO}/tgu/actio/dir__tsts/.d/.mdeb/.cntl/_start_ex1_mdeb.sh start dir_$_tsts_mdeb <num>
+    - . ${PATH_CURR_REPO}/tgu/actio/dir__tsts/.d/.mdeb/.cntl/_cr_ex1_mdeb_postfix.sh create point file fo function dir__tsts_mdeb <num>

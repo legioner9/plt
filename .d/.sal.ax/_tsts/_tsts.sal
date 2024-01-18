@@ -16,30 +16,30 @@
 # [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
 #! ${array[@]:1} all from 1 member arr
 
-# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
-# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
-# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
-# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
 
-# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
-# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
 
-# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
-# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
-# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
 
-# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
 
-# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
 
-# echo "that ${FNN}.sal"
+echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
 # list_strong_cntls=(?str_ ?del_ ?parr_)
@@ -119,75 +119,10 @@
 
 # done
 
+
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
-if [ -z "${ARGS0}" ]; then
-    plt_info "in arb2tst_() : ERR_ARGS : \${ARGS0} not define : return 1"
-    return 1
-fi
-if [ -z "${ARGS1}" ]; then
-    plt_info "in arb2tst_() : ERR_ARGS : \${ARGS1} not define : return 1"
-    return 1
-fi
-#[[ERR_ARGS]]
-
-arr_up_err=()
-IFS=$'\n'
-for item in $(f2e ${ARGS0}); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-
-    flag=1
-    IFS=$'\n'
-    for item2 in $(dd2e__ "$item"); do
-        # echo -e "${GREEN}\${item2} = ${item2}${NORMAL}" #print variable
-
-        pre="${item2:0:4}"
-
-        if [[ "${pre}" == "dir_" ]]; then
-
-            dir_tst="${item2}"
-            echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
-
-            IFS=$'\n'
-            arr_pre=()
-            arr_pre=("$(find_ext__ "$dir_tst" "${ARGS1}")")
-
-            IFS=$'\n'
-            for file_path in ${arr_pre[@]}; do
-
-                echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
-
-                if [ -f "${file_path}" ] && [ -n "${file_path}" ]; then
-
-                    str_res="$(source "${file_path}")"
-                    echo "${str_res}"
-
-                    err_str_res="$(echo ${str_res} | grep ' true')"
-
-                    if [ -z "${err_str_res}" ]; then
-                        flag=0
-                    fi
-
-                fi
-            done
-        fi
-
-    done
-
-done
-IFS=$' \t\n'
-
-if [ 1 -eq ${flag} ]; then
-    echo "<<< arb2tst_() file://${ARGS0} ${ARGS1} TRUE >>>" #sistem info mesage
-    return 0
-fi
-
-if [ 0 -eq ${flag} ]; then
-    echo "<<< arb2tst_() file://${ARGS0} ${ARGS1} FAIL >>>" >&2 #sistem info mesage
-    return 1
-fi
-
 
 #{main_body_fn}
 

@@ -21,8 +21,8 @@
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
@@ -122,6 +122,7 @@
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
+
 if [ -z "${ARGS0}" ]; then
     plt_info "in arb2tst_() : ERR_ARGS : \${ARGS0} not define : return 1"
     return 1
@@ -131,6 +132,8 @@ if [ -z "${ARGS1}" ]; then
     return 1
 fi
 #[[ERR_ARGS]]
+
+#{main_body_fn}
 
 arr_up_err=()
 IFS=$'\n'
@@ -142,19 +145,19 @@ for item in $(f2e ${ARGS0}); do
     for item2 in $(dd2e__ "$item"); do
         # echo -e "${GREEN}\${item2} = ${item2}${NORMAL}" #print variable
 
-        pre="${item2:0:4}"
+        ext="${item2: -4}"
 
-        if [[ "${pre}" == "dir_" ]]; then
+        if [[ "${ext}" == ".ram" ]]; then
 
-            dir_tst="${item2}"
+            dir_tst=${item}/${item2}/.grot
             echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
 
             IFS=$'\n'
-            arr_pre=()
-            arr_pre=("$(find_ext__ "$dir_tst" "${ARGS1}")")
+            arr_ext=()
+            arr_ext=("$(find_ext__ "$dir_tst" "${ARGS1}")")
 
             IFS=$'\n'
-            for file_path in ${arr_pre[@]}; do
+            for file_path in ${arr_ext[@]}; do
 
                 echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
 
@@ -188,8 +191,12 @@ if [ 0 -eq ${flag} ]; then
     return 1
 fi
 
+# parr3e_ arr_up_err
 
-#{main_body_fn}
+# if ! parr2up_err_ arr_up_err tst; then
+#     plt_info "in arb2tst_() : EXEC_FAIL : parr2up_err_ arr_up_err tst : return 1"
+#     return 1
+# fi
 
 #?---------------------------------------
 #?---------------------------------------------
