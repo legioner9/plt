@@ -164,6 +164,9 @@ fi
 # echo -e "${GREEN}\$file_mask_num = $file_mask_num${NORMAL}" #print variable
 #[[b_sel]]
 
+echo -e "${RED}--- DO NOT FOGET : bcp_before_push__ ---${NORMAL}"
+echo -e "${RED}--- DO NOT FOGET : dpl_after_pull__ ---${NORMAL}"
+
 dir_nm_opi_var=${PD_PATH}/.d/.mul/nm_opi_/var        #1
 dir_nm_opi_lst=${PD_PATH}/.d/.mul/nm_opi_/lst        #2
 dir_nm_opi_set_fn=${PLT_PATH}/.d/.mul/nm_opi_/set_fn #3

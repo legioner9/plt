@@ -209,8 +209,17 @@ res+=("edit_ ${dir_nm_opi_lst}")
 arr+=("edit_ ${dir_nm_opi_var}")
 res+=("edit_ ${dir_nm_opi_var}")
 
+arr+=("DO! bcp_before_push__")
+res+=("bcp_before_push__")
+
+arr+=("DO! dpl_after_pull__")
+res+=("dpl_after_pull__")
+
 arr+=("exit menu")
 res+=("return 0")
+
+echo -e "${GREEN}\${arr[@]} = ${arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${res[@]} = ${res[*]}${NORMAL}" #print variable
 
 elegendi_done=0
 
@@ -219,11 +228,17 @@ if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr[@]} ]; then
     # ${res[${num_res}]}
     arr_str=(${arr[${num_res}]})
 
-    echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+    echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}"           #print variable
+    echo -e "${GREEN}\${res[${num_res}]} = ${res[${num_res}]}${NORMAL}" #print variable
 
     if [ "${arr_str[0]}" == "edit_" ]; then
         ${arr[${num_res}]}
-        ${FNN} "$@"
+        return 0
+        # ${FNN} "$@"
+    elif [ "${arr_str[0]}" == "DO!" ]; then
+        ${res[${num_res}]}
+        return 0
+        # ${FNN} "$@"
     elif [ "${arr_str[0]}" == "exit" ]; then
         return 0
     else
@@ -244,9 +259,15 @@ if [ "${elegendi_done}" -eq 0 ]; then
                 arr_str=(${arr[$i]})
 
                 echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+                echo -e "${GREEN}\${res[$i]} = ${res[$i]}${NORMAL}" #print variable
 
                 if [ "${arr_str[0]}" == "edit_" ]; then
                     ${arr[$i]}
+                    return 0
+                    # ${FNN} "$@"
+                elif [ "${arr_str[0]}" == "do" ]; then
+                    ${res[$i]}
+                    return 0
                     # ${FNN} "$@"
                 elif [ "${arr_str[0]}" == "exit" ]; then
                     return 0
@@ -416,7 +437,7 @@ nm_opi_nm_set() {
 
 for name_repo in "${arr_name_repo[@]}"; do
 
-#? use function from 
+    #? use function from
 
     #? main check
     if [ -f "${REPO_PATH}/${name_repo}"/.d/.ham/main/main.ham ]; then

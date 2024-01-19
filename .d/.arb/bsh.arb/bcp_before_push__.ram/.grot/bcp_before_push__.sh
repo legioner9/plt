@@ -81,6 +81,8 @@ ${NORMAL}"
         if [ -d "/run/media/${USER}/${item_name_flash_}" ]; then
             echo -e "${HLIGHT}--- cp -furv ${PLT_PATH}/.d/.read /run/media/${USER}/${item_name_flash_} ---${NORMAL}"
             cp -furv "${PLT_PATH}/.d/.read" "/run/media/${USER}/${item_name_flash_}"
+            echo -e "${HLIGHT}--- echo $(date) >/run/media/${USER}/${item_name_flash_} ---${NORMAL}" #start files
+            echo "$(date)" >"/run/media/${USER}/${item_name_flash_}"/.read/date.man
         fi
 
     done
