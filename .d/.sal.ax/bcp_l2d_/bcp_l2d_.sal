@@ -63,22 +63,22 @@ fi
 #?---------------------------------------
 
 if [ "${bcp_:-0}" -eq 1 ]; then
-    "${_plt_pause}" "DO? BACKUP to ${dir_tar_} list: ${list_} dlm: ${dlm_} -_soft"
+    "${_plt_pause}" "DO? BACKUP to file://${dir_tar_} list: file://${list_} dlm: ${dlm_} -_soft"
 fi
 
 if [ "${dpl_:-0}" -eq 1 ]; then
-    "${_plt_pause}" "DO? DEPLOY from ${dir_tar_} list: ${list_} dlm: ${dlm_} -_soft"
+    "${_plt_pause}" "DO? DEPLOY from file://${dir_tar_} list: file://${list_} dlm: ${dlm_} -_soft"
 fi
 
 if [ "${rst_:-0}" -eq 1 ]; then
-    "${_plt_pause}" "DO? RESTORE accoding list: ${list_} dlm: ${dlm_} -_soft"
+    "${_plt_pause}" "DO? RESTORE accoding list: file://${list_} dlm: ${dlm_} -_soft"
 fi
 
 is_fn="${FNN}()[ file://${list_} ] [ file://${dir_tar_} ]"
 
 for item in $(f2e "${list_}"); do
 
-    echo -e "${BLUE}\$item = $item${NORMAL}"
+    echo -e "${BLUE}\$item = file://$item${NORMAL}"
     p_arr=()
     s3parr_ --_str "${item}" --_del "${dlm_}" --_parr p_arr 1>/dev/null
 
@@ -86,15 +86,15 @@ for item in $(f2e "${list_}"); do
     dir_src=$(dirname "${path_src}")
     node_src=$(basename "${path_src}")
 
-    echo -e "${GREEN}\$dir_src = $dir_src${NORMAL}"
-    echo -e "${GREEN}\$node_src = $node_src${NORMAL}"
+    echo -e "${GREEN}\$dir_src = file://$dir_src${NORMAL}"
+    echo -e "${GREEN}\$node_src = file://$node_src${NORMAL}"
 
     path_tar="${dir_tar_}"/"${p_arr[1]}".tar.gz
     # dir_tar=$(dirname "${path_tar}")
     file_tar=$(basename "${path_tar}")
 
-    echo -e "${GREEN}\$dir_tar_ = ${dir_tar_}${NORMAL}"
-    echo -e "${GREEN}\$file_tar = $file_tar${NORMAL}"
+    echo -e "${GREEN}\$dir_tar_ = file://${dir_tar_}${NORMAL}"
+    echo -e "${GREEN}\$file_tar = file://$file_tar${NORMAL}"
 
     [ -n "${p_arr[1]}" ] || {
         plt_info "from ${is_fn} ISEMPTY : \${p_arr[1]} :: be return 1"
@@ -102,7 +102,7 @@ for item in $(f2e "${list_}"); do
     }
 
     [ -d "${dir_tar_}" ] || {
-        plt_info "from ${is_fn} :: NOTDIR : \${dir_tar_}=${dir_tar_} :: be return 1"
+        plt_info "from ${is_fn} :: NOTDIR : \${dir_tar_}=file://${dir_tar_} :: be return 1"
         return 1
     }
 
