@@ -12,6 +12,9 @@ cd "${idir}" || {
 
 : >res
 
+echo | arb2tst_ ${PLT_PATH}/actio/mall/dir_arb2tst_/arb2tst_tst/for_tst.lst tst &>>res
+# arb2tst_ ${PLT_PATH}/actio/mall/dir_arb2tst_/arb2tst_tst/for_tst.lst tst
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

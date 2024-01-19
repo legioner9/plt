@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> fn_tst_fail_ 
+farg2e2_ -> fn_tst_fail_
+echo_deb_ -> fn_tst_fail_
+fn_tst_fail_ -> fn_tst_fail_:is_num
+fn_tst_fail_ -> fn_tst_fail_:exit_err_fn_tst_fail_
+fn_tst_fail_ -> fn_tst_fail_:exit_reg_fn_tst_fail_
+fn_tst_fail_ -> fn_tst_fail_:unset_autoargs_fn_tst_fail_
+' {wrap_fn}
+' fnn o-> fn_tst_fail_
+' {body_fn}
+@enduml

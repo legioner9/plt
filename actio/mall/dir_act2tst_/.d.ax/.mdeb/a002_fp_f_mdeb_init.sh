@@ -73,7 +73,7 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-act2tst_ 
+    act2tst_ ${REPO_PATH}/plt/actio/mall/dir_act2tst_/.d.ax/.mdeb/.tmp/tst.lst tst
 
     #{body_fn}
 }

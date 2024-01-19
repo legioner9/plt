@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> fn_tst_true_ 
+farg2e2_ -> fn_tst_true_
+echo_deb_ -> fn_tst_true_
+fn_tst_true_ -> fn_tst_true_:is_num
+fn_tst_true_ -> fn_tst_true_:exit_err_fn_tst_true_
+fn_tst_true_ -> fn_tst_true_:exit_reg_fn_tst_true_
+fn_tst_true_ -> fn_tst_true_:unset_autoargs_fn_tst_true_
+' {wrap_fn}
+' fnn o-> fn_tst_true_
+' {body_fn}
+@enduml

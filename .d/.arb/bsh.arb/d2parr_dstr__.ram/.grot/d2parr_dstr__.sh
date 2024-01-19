@@ -98,10 +98,13 @@ ${NORMAL}"
         # echo -e "${GREEN}\$file_name = $file_name${NORMAL}" #print variable
         if [ -n "${file_name}" ]; then
             str_item="${file_name}<>${num}"
+            #! ---- err for tst COMMIT THAT next str
+            # str_item="${file_name}<>${num}X"
             eval $ARGS0+=\(\$str_item\)
         fi
         num=$((num + 1))
     done
+
 
     # parr3e_ parr
 

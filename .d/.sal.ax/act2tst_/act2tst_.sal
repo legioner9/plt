@@ -146,17 +146,19 @@ for item in $(f2e ${ARGS0}); do
 
         if [[ "${pre}" == "dir_" ]]; then
 
-            dir_tst="${item2}"
-            echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
+            dir_tst="${item}/${item2}"
+            # echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
 
             IFS=$'\n'
             arr_pre=()
+            # echo -e "${HLIGHT}--- find_ext__ $dir_tst ${ARGS1} ---${NORMAL}" #start files
             arr_pre=("$(find_ext__ "$dir_tst" "${ARGS1}")")
+            # echo -e "${GREEN}\${arr_pre[@]} = ${arr_pre[*]}${NORMAL}" #print variable
 
             IFS=$'\n'
             for file_path in ${arr_pre[@]}; do
 
-                echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
+                echo -e "${GREEN}\$file_path = file://$file_path${NORMAL}" #print variable
 
                 if [ -f "${file_path}" ] && [ -n "${file_path}" ]; then
 
@@ -179,15 +181,14 @@ done
 IFS=$' \t\n'
 
 if [ 1 -eq ${flag} ]; then
-    echo "<<< arb2tst_() file://${ARGS0} ${ARGS1} TRUE >>>" #sistem info mesage
+    echo "<<< act2tst_() file://${ARGS0} ${ARGS1} TRUE >>>" #sistem info mesage
     return 0
 fi
 
 if [ 0 -eq ${flag} ]; then
-    echo "<<< arb2tst_() file://${ARGS0} ${ARGS1} FAIL >>>" >&2 #sistem info mesage
+    echo "<<< act2tst_() file://${ARGS0} ${ARGS1} FAIL >>>" >&2 #sistem info mesage
     return 1
 fi
-
 
 #{main_body_fn}
 

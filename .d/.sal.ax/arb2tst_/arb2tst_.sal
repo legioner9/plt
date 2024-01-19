@@ -21,8 +21,8 @@
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
@@ -138,7 +138,7 @@ fi
 arr_up_err=()
 IFS=$'\n'
 for item in $(f2e ${ARGS0}); do
-    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
 
     flag=1
     IFS=$'\n'
@@ -150,7 +150,7 @@ for item in $(f2e ${ARGS0}); do
         if [[ "${ext}" == ".ram" ]]; then
 
             dir_tst=${item}/${item2}/.grot
-            echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
+            # echo -e "${GREEN}\$dir_tst = $dir_tst${NORMAL}" #print variable
 
             IFS=$'\n'
             arr_ext=()
@@ -159,7 +159,7 @@ for item in $(f2e ${ARGS0}); do
             IFS=$'\n'
             for file_path in ${arr_ext[@]}; do
 
-                echo -e "${GREEN}\$file_path = $file_path${NORMAL}" #print variable
+                echo -e "${GREEN}\$file_path = file://$file_path${NORMAL}" #print variable
 
                 if [ -f "${file_path}" ] && [ -n "${file_path}" ]; then
 

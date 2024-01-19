@@ -12,6 +12,9 @@ cd "${idir}" || {
 
 : >res
 
+echo | act2tst_ ${PLT_PATH}/actio/mall/dir_act2tst_/act2tst_tst/tst_in_tst.lst tst &>>res
+# act2tst_ ${PLT_PATH}/actio/mall/dir_act2tst_/act2tst_tst/tst_in_tst.lst tst 
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

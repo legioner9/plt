@@ -1,0 +1,9 @@
+[0;32m$file_path = file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_arb2tst_/arb2tst_tst/tst_arb/fail_ram.ram/.grot/with_tst/fail.tst[0m
+[0;34m--- that fail.tst ---[0m
+[0;32m$file_path = file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_arb2tst_/arb2tst_tst/tst_arb/true_ram.ram/.grot/with_tst/true.tst[0m
+[0;34m--- that true.tst ---[0m
+<<< arb2tst_() file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_arb2tst_/arb2tst_tst/for_tst.lst tst FAIL >>>
+[0;31m--------plt_exit: fail: . /home/st/REPOBARE/_repo/plt/actio/mall/dir_arb2tst_/.d.ax/.sal.ax/arb2tst_.body.sh--------[0m
+[0;31mbe return 1[0m
+[0;31m^C - exit, ENTER - return to process 
+after usually return 1 from parent thread[0m

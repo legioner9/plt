@@ -1,0 +1,16 @@
+[0;32m${ARGS[@]} = /home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/tst_in_tst.lst
+tst[0m
+[0;32m$item = /home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/_actio[0m
+[0;32m$file_path = file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/_actio/dir_fn_tst_fail_/fn_tst_fail_tst/exec.tst[0m
+ANY in file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/_actio/dir_fn_tst_fail_/fn_tst_fail_tst fail
+1d0
+< x
+\ В конце файла нет новой строки
+
+[0;32m$file_path = file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/_actio/dir_fn_tst_true_/fn_tst_true_tst/exec.tst[0m
+ALL in file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/_actio/dir_fn_tst_true_/fn_tst_true_tst true
+<<< act2tst_() file:///home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/act2tst_tst/tst_in_tst.lst tst FAIL >>>
+[0;31m--------plt_exit: fail: . /home/st/REPOBARE/_repo/plt/actio/mall/dir_act2tst_/.d.ax/.sal.ax/act2tst_.body.sh--------[0m
+[0;31mbe return 1[0m
+[0;31m^C - exit, ENTER - return to process 
+after usually return 1 from parent thread[0m
