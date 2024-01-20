@@ -218,8 +218,8 @@ res+=("dpl_after_pull__")
 arr+=("exit menu")
 res+=("return 0")
 
-echo -e "${GREEN}\${arr[@]} = ${arr[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${res[@]} = ${res[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${arr[@]} = ${arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${res[@]} = ${res[*]}${NORMAL}" #print variable
 
 elegendi_done=0
 
@@ -258,8 +258,8 @@ if [ "${elegendi_done}" -eq 0 ]; then
 
                 arr_str=(${arr[$i]})
 
-                echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
-                echo -e "${GREEN}\${res[$i]} = ${res[$i]}${NORMAL}" #print variable
+                # echo -e "${GREEN}\${arr_str[0]} = ${arr_str[0]}${NORMAL}" #print variable
+                # echo -e "${GREEN}\${res[$i]} = ${res[$i]}${NORMAL}" #print variable
 
                 if [ "${arr_str[0]}" == "edit_" ]; then
                     ${arr[$i]}

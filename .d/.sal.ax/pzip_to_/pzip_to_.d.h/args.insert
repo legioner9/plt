@@ -1,5 +1,7 @@
 ARGS:
-    \$1 
+    \$1 prl
+    \$2 dist file
+    \$3 src node
 
 CNTLS:
         --_
