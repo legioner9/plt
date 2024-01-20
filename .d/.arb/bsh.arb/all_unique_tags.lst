@@ -5,8 +5,11 @@
 @exec
 @ext
 @find
+@indicator
 @is
 @nav_nod
+@red
 @space
+@stderr
 @string
 @tst

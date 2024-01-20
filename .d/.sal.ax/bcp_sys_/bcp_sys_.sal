@@ -45,8 +45,8 @@ echo "that ${FNN}.sal"
 #     fi
 # done
 
-list2="${PLT_PATH}/.d/.lst2/bcp_sys_/bcp.lst2"
-dirtar="${PLT_PATH}/.d/.repo/bcp_sys_"
+list2="${PD_PATH}/.d/.lst2/bcp_sys_/bcp.lst2"
+dirtar="${PD_PATH}/.d/.repo/bcp_sys_"
 
 echo -e "${GREEN}\$ARGS0 = $ARGS0${NORMAL}"
 if [ "${ARGS0}" == "_edit_lst2" ]; then

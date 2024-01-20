@@ -77,12 +77,15 @@ ${NORMAL}"
     arr_name_flash_=(TOSHIBA_EXT TOSH MY_ONE)
 
     for item_name_flash_ in "${arr_name_flash_[@]}"; do
-
-        if [ -d "/run/media/${USER}/${item_name_flash_}" ]; then
+        path_flash="/run/media/${USER}/${item_name_flash_}"
+        if [ -d "${path_flash}" ]; then
             echo -e "${HLIGHT}--- cp -furv ${PLT_PATH}/.d/.read /run/media/${USER}/${item_name_flash_} ---${NORMAL}"
-            cp -furv "${PLT_PATH}/.d/.read" "/run/media/${USER}/${item_name_flash_}"
+
+            rm -rv "${path_flash}"/.read
+            cp -frv "${PD_PATH}/.d/.read" "${path_flash}"
             echo -e "${HLIGHT}--- echo $(date) >/run/media/${USER}/${item_name_flash_} ---${NORMAL}" #start files
             echo "$(date)" >"/run/media/${USER}/${item_name_flash_}"/.read/date.man
+
         fi
 
     done

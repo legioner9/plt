@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> pzip_to_ 
+farg2e2_ -> pzip_to_
+echo_deb_ -> pzip_to_
+pzip_to_ -> pzip_to_:is_num
+pzip_to_ -> pzip_to_:exit_err_pzip_to_
+pzip_to_ -> pzip_to_:exit_reg_pzip_to_
+pzip_to_ -> pzip_to_:unset_autoargs_pzip_to_
+' {wrap_fn}
+' fnn o-> pzip_to_
+' {body_fn}
+@enduml
