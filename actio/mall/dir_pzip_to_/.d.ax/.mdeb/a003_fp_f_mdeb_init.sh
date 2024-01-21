@@ -75,12 +75,27 @@ ${NORMAL}"
     local src=${dir_003}/src.d/src.file
     local dist=${dir_003}/dist.d/dist.zip
 
+    # echo -e "${HLIGHT}--- rm ${dist} ---${NORMAL}" #start files
+    # rm "${dist}"
+
     echo -e "${HLIGHT}--- pzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
     pzip_to_ "${PD_READ}" "${dist}" "${src}"
 
     echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
     ls "${dir_003}"/dist.d
-    # unzip -p "${PD_READ}" "${dist}"
+
+    cd "${dir_003}"/dist.d || plt_exit
+
+    echo -e "${HLIGHT}--- unzip -P ${PD_READ} ${dist} ---${NORMAL}" #start files
+    unzip -P "${PD_READ}" "${dist}"
+
+    echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
+    ls "${dir_003}"/dist.d
+
+    echo -e "${HLIGHT}--- cat file://${dir_003}/dist.d/src.file ---${NORMAL}" #start files
+    cat "${dir_003}"/dist.d/src.file
+
+    echo
 
     # amount_arg $# 1 1
     #{body_fn}

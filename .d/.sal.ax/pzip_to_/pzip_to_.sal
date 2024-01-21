@@ -19,11 +19,11 @@
 # echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
 # echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
@@ -154,26 +154,30 @@ file_src=$(basename "${path_src}")
 dir_dist=$(dirname "${path_dist}")
 file_dist=$(basename "${path_dist}")
 
-echo -e "${GREEN}\$dir_src = file://${dir_src}${NORMAL}" #print variable
-echo -e "${GREEN}\$file_src = $file_src${NORMAL}"        #print variable
+# echo -e "${GREEN}\$dir_src = file://${dir_src}${NORMAL}" #print variable
+# echo -e "${GREEN}\$file_src = $file_src${NORMAL}"        #print variable
 
-echo -e "${GREEN}\$dir_dist = file://${dir_dist}${NORMAL}" #print variable
-echo -e "${GREEN}\$file_dist = ${file_dist}${NORMAL}"      #print variable
+# echo -e "${GREEN}\$dir_dist = file://${dir_dist}${NORMAL}" #print variable
+# echo -e "${GREEN}\$file_dist = ${file_dist}${NORMAL}"      #print variable
 
 cd "${dir_src}" || {
     plt_exit "in pzip_to_() : NOT_DIR : '${dir_src}' : path_file return 1"
     return 1
 }
 
-rm -v "${file_dist}"
+rm -v "${dir_dist}"/"${file_src}"
+rm -v "${path_dist}"
 
-echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
+# echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
+# echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
 zip -P "${ARGS0}" "${file_dist}" "${file_src}"
 
-mv -v "${file_dist}" "${path_dist}"
+mv "${file_dist}" "${path_dist}"
+
+return 0
 # rm -v "${file_dist}"
 
-# zip -p "${ARGS0}" "${ARGS1}" "${ARGS2}"
+# zip -P "${ARGS0}" "${ARGS1}" "${ARGS2}"
 
 #?---------------------------------------
 #?---------------------------------------------
