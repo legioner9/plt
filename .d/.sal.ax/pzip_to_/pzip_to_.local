@@ -13,3 +13,16 @@ sum1
 
 sub
 obc
+
+is_dir
+is_file
+no_password
+
+path_dist
+path_src
+
+path_src
+file_src
+
+dir_dist
+file_dist

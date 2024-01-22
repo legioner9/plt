@@ -137,9 +137,33 @@
 # fi
 #[[ERR_ARGS]]
 
+
+
 if [ -z "${ARGS2}" ]; then
     plt_info "in pzip_to_() : ERR_AMOUNT_ARGS : not define \${ARGS2}: return 1"
     return 1
+fi
+
+is_dir=0
+
+if [ -d "${ARGS2}" ]; then
+    is_dir=1
+fi
+
+is_file=0
+
+if [ -f "${ARGS2}" ]; then
+    is_file=1
+fi
+
+is_check=$((is_dir + is_file))
+
+
+
+no_password=0
+
+if [ "${ARGS0}" -eq 0 ]; then
+    no_password=1
 fi
 
 path_dist="${ARGS1}"

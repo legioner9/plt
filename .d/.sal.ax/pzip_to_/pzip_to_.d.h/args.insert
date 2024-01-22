@@ -1,5 +1,6 @@
 ARGS:
     \$1 prl
+        if 0 - without prl
     \$2 dist file
     \$3 src node
 
