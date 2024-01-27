@@ -83,29 +83,31 @@ ${NORMAL}"
 
     echo -e "${GREEN}\$ptr_path = file://$ptr_path${NORMAL}" #print variable
 
-    local is_dir=0
+    local is_fnode=0
 
     if [ -d "${ptr_path}" ]; then
-        is_dir=1
+        is_fnode=1
+    else
+        stat_str=$(ls -l ${ptr_path})
+        chr_stat_str=${stat_str:0:1}
+
+        echo -e "${GREEN}\$stat_str = $stat_str${NORMAL}"         #print variable
+        echo -e "${GREEN}\$chr_stat_str = $chr_stat_str${NORMAL}" #print variable
+
+        if [ ${chr_stat_str} == "-" ]; then
+            is_fnode=1
+        fi
+
     fi
 
-    local is_file=0
+    echo -e "${GREEN}\$is_fnode = $is_fnode${NORMAL}" #print variable
 
-    if [ -f "${ptr_path}" ]; then
-        is_file=1
-    fi
-    local is_check=0
-    is_check=$((is_dir + is_file))
-
-    echo -e "${GREEN}\$is_check = $is_check${NORMAL}" #print variable
-
-    if [ ${is_check} -eq 1 ]; then
+    if [ ${is_fnode} -eq 1 ]; then
         return 1
     fi
 
     return 0
 
-    #{body_fn}
 }
 
 cd "${idir}"

@@ -1,11 +1,10 @@
 /home/st/REPOBARE/_repo/plt/.d/.arb/bsh.arb/isn_d_or_f__.ram/.grot/isn_d_or_f__tst
-[0;36m--- ret2e() isn_d_or_f__
-dir_tst/dir.d ---[0m
+[0;36m--- ret2e() isn_d_or_f__ dir_tst/dir.d ---[0m
 1
 [0;36m--- ret2e() isn_d_or_f__ dir_tst/file.f ---[0m
 1
 [0;36m--- ret2e() isn_d_or_f__ dir_tst/file.f.lns ---[0m
-1
+0
 [0;36m--- ret2e() isn_d_or_f__ dir_tst/file.f.lnh ---[0m
 1
 [0;36m--- ret2e() isn_d_or_f__ dir_tst/socket.sock ---[0m

@@ -12,6 +12,14 @@ cd "${idir}" || {
 
 : >res
 pwd >>res
+
+isn_d_or_f__ dir_tst/dir.d 
+isn_d_or_f__ dir_tst/file.f 
+isn_d_or_f__ dir_tst/file.f.lns  
+isn_d_or_f__ dir_tst/file.f.lnh 
+isn_d_or_f__ dir_tst/socket.sock 
+isn_d_or_f__ dir_tst/file.fifo 
+
 ret2e isn_d_or_f__ dir_tst/dir.d >>res
 ret2e isn_d_or_f__ dir_tst/file.f >>res
 ret2e isn_d_or_f__ dir_tst/file.f.lns >>res 
