@@ -1,0 +1,1 @@
+# https://stackoverflow.com/questions/8482843/git-commit-bash-script
