@@ -60,16 +60,16 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(garg2e_ "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e_ "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(garg2e_ "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(garg2e_ "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
@@ -91,8 +91,8 @@ ${NORMAL}"
         stat_str=$(ls -l ${ptr_path})
         chr_stat_str=${stat_str:0:1}
 
-        echo -e "${GREEN}\$stat_str = $stat_str${NORMAL}"         #print variable
-        echo -e "${GREEN}\$chr_stat_str = $chr_stat_str${NORMAL}" #print variable
+        # echo -e "${GREEN}\$stat_str = $stat_str${NORMAL}"         #print variable
+        # echo -e "${GREEN}\$chr_stat_str = $chr_stat_str${NORMAL}" #print variable
 
         if [ ${chr_stat_str} == "-" ]; then
             is_fnode=1
