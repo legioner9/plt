@@ -1,5 +1,8 @@
 ARGS:
-    \$1 
+    \$1 prl
+        if 0 - without prl
+    \$2 dist dir
+    \$3 src file.zip
 
 CNTLS:
         --_

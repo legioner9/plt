@@ -22,6 +22,9 @@ dist=${dir_003}/dist.d/dist.zip
 # echo -e "${HLIGHT}--- rm ${dist} ---${NORMAL}" #start files
 # rm "${dist}"
 
+rm -v ${dir_003}/dist.d/src.file
+# rm -v ${dist}
+
 echo -e "${HLIGHT}--- pzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
 pzip_to_ "${PD_READ}" "${dist}" "${src}"
 
@@ -45,6 +48,9 @@ echo >>"${idir}"/res
 
 src=${dir_003}/src.d/src.d
 dist=${dir_003}/dist.d/dist_src_d.zip
+
+rm -rv ${dir_003}/dist.d/src.d
+# rm -v ${dist}
 
 # echo -e "${HLIGHT}--- rm ${dist} ---${NORMAL}" #start files
 # rm "${dist}"

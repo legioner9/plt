@@ -189,8 +189,11 @@ if [ ${char_type_src} == "-" ]; then
         return 1
     }
 
-    rm -v "${dir_dist}"/"${file_src}"
-    rm -v "${path_dist}"
+    # rm -v "${dir_dist}"/"${file_src}"
+    if [ -f "${path_dist}" ]; then
+        echo -e "${HLIGHT}--- mv -v ${path_dist} ${path_dist}~ ---${NORMAL}" #start files
+        mv -v "${path_dist}" "${path_dist}"~
+    fi
 
     # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
     # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
@@ -208,8 +211,12 @@ if [ ${char_type_src} == "d" ]; then
         return 1
     }
 
-    rm -vr "${dir_dist}"/"${file_src}"
-    rm -vr "${path_dist}"
+    # rm -vr "${dir_dist}"/"${file_src}"
+    if [ -f "${path_dist}" ]; then
+
+        echo -e "${HLIGHT}--- mv -vr ${path_dist} ${path_dist}~ ---${NORMAL}" #start files
+        mv -v "${path_dist}" "${path_dist}"~
+    fi
 
     # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
     # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
@@ -218,8 +225,6 @@ if [ ${char_type_src} == "d" ]; then
     mv "${file_dist}" "${path_dist}"
 
     return 0
-
-return 0
 
 fi
 
