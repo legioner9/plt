@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir_tst=${REPO_PATH}/plt/.d/.arb/bsh.arb/fch_type__.ram/.grot/fch_type__tst/dir_tst
+dir_tst=${REPO_PATH}/plt/.d/.arb/bsh.arb/t2c__.ram/.grot/t2c__tst/dir_tst
 
 mkdir ${dir_tst}/dir.d
 touch ${dir_tst}/dir.d/0
