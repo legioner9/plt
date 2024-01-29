@@ -197,7 +197,14 @@ if [ ${char_type_src} == "-" ]; then
 
     # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
     # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
-    zip -P "${ARGS0}" "${file_dist}" "${file_src}"
+
+    if [ ${no_password} -eq 0 ]; then
+        zip -P "${ARGS0}" "${file_dist}" "${file_src}"
+    fi
+
+    if [ ${no_password} -eq 1 ]; then
+        zip "${file_dist}" "${file_src}"
+    fi
 
     mv "${file_dist}" "${path_dist}"
 
@@ -221,6 +228,14 @@ if [ ${char_type_src} == "d" ]; then
     # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
     # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
     zip -P "${ARGS0}" -r "${file_dist}" "${file_src}"
+
+    if [ ${no_password} -eq 0 ]; then
+        zip -P "${ARGS0}" -r "${file_dist}" "${file_src}"
+    fi
+
+    if [ ${no_password} -eq 1 ]; then
+        zip -r "${file_dist}" "${file_src}"
+    fi
 
     mv "${file_dist}" "${path_dist}"
 

@@ -119,10 +119,49 @@
 
 # done
 
-
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
+
+if [ -z "${ARGS2}" ]; then
+    plt_info "in pzip_to_() : ERR_AMOUNT_ARGS : not define \${ARGS2}: return 1"
+    return 1
+fi
+
+no_password=0
+
+if [ "${ARGS0}" -eq 0 ]; then
+    no_password=1
+fi
+
+path_dist="${ARGS1}"
+path_dist=$(${_abs_path} $PPWD "path_dist")
+
+path_src="${ARGS2}"
+path_src=$(${_abs_path} $PPWD "path_src") #ptr args
+
+if ! [ -d "${path_dist}" ]; then
+    plt_info "in punzip_to_() : NOT_DIR : 'file://${path_dist}' : return 1"
+    return 1
+fi
+
+if ! [ -f "${path_src}" ]; then
+    plt_info "in punzip_to_() : NOT_FILE : 'file://${path_src}' : return 1"
+    return 1
+fi
+
+dir_src=$(dirname "${path_src}")
+file_src=$(basename "${path_src}")
+
+dir_dist=$(dirname "${path_dist}")
+file_dist=$(basename "${path_dist}")
+
+cd "${dir_src}" || {
+    plt_exit "in punzip_to_() : FAIL_EXEC : 'cd file://${dir_src}' : return 1"
+    return 1
+}
+
+
 
 #{main_body_fn}
 
