@@ -137,6 +137,8 @@
 # fi
 #[[ERR_ARGS]]
 
+
+
 if [ -z "${ARGS2}" ]; then
     plt_info "in pzip_to_() : ERR_AMOUNT_ARGS : not define \${ARGS2}: return 1"
     return 1
@@ -155,6 +157,8 @@ if [ -f "${ARGS2}" ]; then
 fi
 
 is_check=$((is_dir + is_file))
+
+
 
 no_password=0
 
@@ -180,49 +184,21 @@ file_dist=$(basename "${path_dist}")
 # echo -e "${GREEN}\$dir_dist = file://${dir_dist}${NORMAL}" #print variable
 # echo -e "${GREEN}\$file_dist = ${file_dist}${NORMAL}"      #print variable
 
-char_type_src=$(t2c__ "${path_src}")
+cd "${dir_src}" || {
+    plt_exit "in pzip_to_() : NOT_DIR : '${dir_src}' : path_file return 1"
+    return 1
+}
 
-if [ ${char_type_src} == "-" ]; then
+rm -v "${dir_dist}"/"${file_src}"
+rm -v "${path_dist}"
 
-    cd "${dir_src}" || {
-        plt_exit "in pzip_to_() : NOT_DIR : '${dir_src}' : path_file return 1"
-        return 1
-    }
+# echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
+# echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
+zip -P "${ARGS0}" "${file_dist}" "${file_src}"
 
-    rm -v "${dir_dist}"/"${file_src}"
-    rm -v "${path_dist}"
-
-    # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
-    # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
-    zip -P "${ARGS0}" "${file_dist}" "${file_src}"
-
-    mv "${file_dist}" "${path_dist}"
-
-    return 0
-fi
-
-if [ ${char_type_src} == "d" ]; then
-
-    cd "${dir_src}" || {
-        plt_exit "in pzip_to_() : NOT_DIR : '${dir_src}' : path_file return 1"
-        return 1
-    }
-
-    rm -vr "${dir_dist}"/"${file_src}"
-    rm -vr "${path_dist}"
-
-    # echo -e "${GREEN}\$(pwd) = file://$(pwd)${NORMAL}" #print variable
-    # echo -e "${HLIGHT}--- zip -P ${ARGS0} ${file_dist} ${file_src} ---${NORMAL}" #start files
-    zip -P "${ARGS0}" -r "${file_dist}" "${file_src}"
-
-    mv "${file_dist}" "${path_dist}"
-
-    return 0
+mv "${file_dist}" "${path_dist}"
 
 return 0
-
-fi
-
 # rm -v "${file_dist}"
 
 # zip -P "${ARGS0}" "${ARGS1}" "${ARGS2}"

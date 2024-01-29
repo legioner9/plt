@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> punzip_to_ 
+farg2e2_ -> punzip_to_
+echo_deb_ -> punzip_to_
+punzip_to_ -> punzip_to_:is_num
+punzip_to_ -> punzip_to_:exit_err_punzip_to_
+punzip_to_ -> punzip_to_:exit_reg_punzip_to_
+punzip_to_ -> punzip_to_:unset_autoargs_punzip_to_
+' {wrap_fn}
+' fnn o-> punzip_to_
+' {body_fn}
+@enduml
