@@ -14,25 +14,37 @@ cd "${idir}" || {
 
 dir_tst=${REPO_PATH}/plt/actio/mall/dir_punzip_to_/punzip_to_tst/dir_tst
 
+echo -e "${HLIGHT}--- . ${src}/_cr_zip_src.sh ---${NORMAL}" #start files
+. ${dir_tst}/src.d/_cr_zip_src.sh
+
+#! FILE
+
 src=${dir_tst}/src.d/src.file.zip
 dist=${dir_tst}/dist.d
 
-# echo -e "${HLIGHT}--- rm ${dist} ---${NORMAL}" #start files
-# rm "${dist}"
-
 rm -v ${dir_tst}/dist.d/src.file
-# rm -v ${dist}
-
-echo -e "${HLIGHT}--- . ${src}/_cr_zip_src.sh ---${NORMAL}" #start files
-. "${src}"/_cr_zip_src.sh
 
 echo -e "${HLIGHT}--- punzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
 punzip_to_ "${PD_READ}" "${dist}" "${src}"
 
-cd "${dist}" || plt_exit
+echo -e "${HLIGHT}--- diff ${dir_tst}/src.d/src.file ${dir_tst}/dist.d/src.file ---${NORMAL}" >>"${idir}"/res
+diff "${dir_tst}"/src.d/src.file "${dir_tst}"/dist.d/src.file &>>"${idir}"/res
 
-echo -e "${HLIGHT}--- zip -P ${PD_READ} src.file.zip src.file ---${NORMAL}" #start files
-zip -P "${PD_READ}" src.file.zip src.file
+#! DIR
+
+src=${dir_tst}/src.d/in_src.d.zip
+dist=${dir_tst}/dist.d
+
+rm -vr ${dir_tst}/dist.d/in_src.d
+
+echo -e "${HLIGHT}--- punzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
+punzip_to_ "${PD_READ}" "${dist}" "${src}"
+
+echo -e "${HLIGHT}--- diff -r ${dir_tst}/src.d/in_src.d ${dir_tst}/dist.d/in_src.d ---${NORMAL}" >>"${idir}"/res
+diff -r ${dir_tst}/src.d/in_src.d ${dir_tst}/dist.d/in_src.d &>>"${idir}"/res
+
+# echo -e "${HLIGHT}--- zip -P ${PD_READ} src.file.zip src.file ---${NORMAL}" #start files
+# zip -P "${PD_READ}" src.file.zip src.file
 
 # echo -e "${HLIGHT}--- diff ${dist}/src.file.zip ${src} ---${NORMAL}" #start files
 # diff "${dist}"/src.file.zip "${src}"
@@ -43,7 +55,7 @@ zip -P "${PD_READ}" src.file.zip src.file
 # diff "${dist}"/src.file.zip "${src}" &>>"${idir}"/res
 
 # diff -y <(unzip -l "${dist}"/src.file.zip) <(unzip -l "${src}")
-diff -y <(unzip -l "${dist}"/src.file.zip) <(unzip -l "${src}")
+# diff -y <(unzip -l "${dist}"/src.file.zip) <(unzip -l "${src}")
 
 echo >>"${idir}"/res
 
