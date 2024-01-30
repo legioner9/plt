@@ -23,18 +23,27 @@ dist=${dir_tst}/dist.d
 rm -v ${dir_tst}/dist.d/src.file
 # rm -v ${dist}
 
+echo -e "${HLIGHT}--- . ${src}/_cr_zip_src.sh ---${NORMAL}" #start files
+. "${src}"/_cr_zip_src.sh
+
 echo -e "${HLIGHT}--- punzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
 punzip_to_ "${PD_READ}" "${dist}" "${src}"
 
 cd "${dist}" || plt_exit
 
-echo -e "${HLIGHT}--- unzip -P ${PD_READ} ${dist} ---${NORMAL}" #start files
+echo -e "${HLIGHT}--- zip -P ${PD_READ} src.file.zip src.file ---${NORMAL}" #start files
 zip -P "${PD_READ}" src.file.zip src.file
 
-echo -e "${HLIGHT}--- diff ${dist}/src.file.zip ${src} ---${NORMAL}" #start files
-diff "${dist}"/src.file.zip "${src}"
+# echo -e "${HLIGHT}--- diff ${dist}/src.file.zip ${src} ---${NORMAL}" #start files
+# diff "${dist}"/src.file.zip "${src}"
 
-diff "${dist}"/src.file.zip "${src}" &>>"${idir}"/res
+# echo -e "${HLIGHT}--- cmp -b -l ${dist}/src.file.zip ${src} ---${NORMAL}" #start files
+# cmp -b -l "${dist}"/src.file.zip "${src}"
+
+# diff "${dist}"/src.file.zip "${src}" &>>"${idir}"/res
+
+# diff -y <(unzip -l "${dist}"/src.file.zip) <(unzip -l "${src}")
+diff -y <(unzip -l "${dist}"/src.file.zip) <(unzip -l "${src}")
 
 echo >>"${idir}"/res
 

@@ -153,15 +153,15 @@ fi
 dir_src=$(dirname "${path_src}")
 file_src=$(basename "${path_src}")
 
-dir_dist=$(dirname "${path_dist}")
-file_dist=$(basename "${path_dist}")
+# dir_dist=$(dirname "${path_dist}")
+# file_dist=$(basename "${path_dist}")
 
 cd "${dir_src}" || {
     plt_exit "in punzip_to_() : FAIL_EXEC : 'cd file://${dir_src}' : return 1"
     return 1
 }
 
-
+unzip -P "${ARGS0}" "${file_src}" -d "${path_dist}"
 
 #{main_body_fn}
 

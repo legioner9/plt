@@ -2,5 +2,10 @@
 
 dir_tst=${REPO_PATH}/plt/actio/mall/dir_punzip_to_/punzip_to_tst/dir_tst
 
-pzip_to_ ${PD_READ} ${dir_tst}/src.d/in_src.d.zip ${dir_tst}/src.d/in_src.d
-pzip_to_ ${PD_READ} ${dir_tst}/src.d/src.file.zip ${dir_tst}/src.d/src.file
+cd ${dir_tst}/src.d || plt_exit
+
+rm -rv in_src.d.zip
+rm -v src.file.zip
+
+zip -P ${PD_READ} -r in_src.d.zip in_src.d
+zip -P ${PD_READ} src.file.zip src.file
