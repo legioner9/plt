@@ -12,20 +12,8 @@ cd "${idir}" || {
 
 : >res
 
-if_str() {
-    # echo -e "${GREEN}\$@ = $@${NORMAL}" #print variable
-    echo -e "${HLIGHT}--- sn_lcru__ $@ ---${NORMAL}" #start files
-
-    if isn_lcru__ "$@"; then
-        echo "true"
-    else
-        echo "fail"
-    fi
-
-}
-
-if_str "fewre"
-if_str "fewre мва"
+ret2e isn_lcru__ "fewre" >>res
+ret2e isn_lcru__ "fewre мва" >>res
 
 
 
