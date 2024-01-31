@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/is_upper_str__.ram/.grot/is_upper_str__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/isn_lcru__.ram/.grot/isn_lcru__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-is_upper_str__() {
+isn_lcru__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ is_upper_str__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/is_upper_str__.ram/.grot/is_upper_str__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/isn_lcru__.ram/.grot/isn_lcru__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -71,27 +71,29 @@ ${NORMAL}"
     #     eval local $strex
     # done
     #{default_cntl_fn}
+
     # amount_arg $# 1 1
 
+    if [ -z "$1" ]; then
+        plt_exit "in ${FNN} : \$1 is EMPTY : return 1"
+        return 1
+    fi
+
     arr_ru_letter=('й' 'ц' 'у' 'к' 'е' 'н' 'г' 'ш' 'щ' 'з' 'х' 'ъ' 'ф' 'ы' 'в' 'а' 'п' 'р' 'о' 'л' 'д' 'ж' 'э' 'я' 'ч' 'с' 'м' 'и' 'т' 'ь' 'б' 'ю')
-    echo -e "${GREEN}\${arr_ru_letter[@]} = ${arr_ru_letter[*]}${NORMAL}" #print variable
+    # echo -e "${GREEN}\${arr_ru_letter[@]} = ${arr_ru_letter[*]}${NORMAL}" #print variable
 
     for letter in $(grep -o . <<<"$1"); do
-
-        if [[ "${letter}" = [a-z] ]]; then
-            return 1
-        fi
-
+        # echo -e "${GREEN}\$letter = $letter${NORMAL}" #print variable
         for ru_letter in ${arr_ru_letter[@]}; do
+            # echo ${ru_letter}
             if [ "${ru_letter}" == "${letter}" ]; then
+                echo -e "${GREEN}\$letter = $letter${NORMAL}" #print variable
                 return 1
             fi
         done
 
     done
-
     return 0
-
     #{body_fn}
 }
 
