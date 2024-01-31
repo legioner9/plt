@@ -27,6 +27,8 @@ if_str() {
 if_str "fewre"
 if_str "fewre мва"
 
+
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}
