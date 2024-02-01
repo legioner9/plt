@@ -1,4 +1,4 @@
-local ARGS=($@)
+local ARGS=("$@")
 local NARGS=${#ARGS[@]}
 local FNN={name_fn_}
 
@@ -65,11 +65,12 @@ local e_args=($(${_earg2e2_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
 
 local strex
+IFS=$'\\n'
 for strex in $(${_garg2e2_} "${ARGS[@]}"); do
     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    eval local $strex
+    eval local \\"$strex\\"
 done
-
+IFS=$' \\t\\n'
 #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
 
 #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
