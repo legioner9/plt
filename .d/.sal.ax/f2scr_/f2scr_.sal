@@ -42,15 +42,16 @@
 # echo "that ${FNN}.sal"
 
 #! every from list_strong_cntls by able
-# list_strong_cntls=(?str_ ?del_ ?parr_)
-# for item in "${list_strong_cntls[@]}"; do
-#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
-#     echo "$(eval echo \$"$item")"
-#     if [ -z "$(eval echo \$"$item")" ]; then
-#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
-#         return 1
-#     fi
-# done
+# ${file_} ${pstr_before_} ${pstr_after_} ${pstr_body_}
+list_strong_cntls=(file_ pstr_before_ pstr_after_ pstr_body_)
+for item in "${list_strong_cntls[@]}"; do
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo "$(eval echo \$"$item")"
+    if [ -z "$(eval echo \$"$item")" ]; then
+        plt_info "from ${FNN}() :: $item is empty :: be return 1"
+        return 1
+    fi
+done
 
 #! once dpl_ or bcp_ mast be able (0 1)
 # sum_1=$((${dpl_:-0} + ${bcp_:-0}))
@@ -126,6 +127,12 @@
 
 #{main_body_fn}
 
+# ${file_} ${pstr_before_} ${pstr_after_} ${pstr_body_} 
+
+ptr_path=${file_}
+ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+
+echo -e "${GREEN}\$ptr_path = file://$ptr_path${NORMAL}" #print variable
 
 #?---------------------------------------
 #?---------------------------------------------

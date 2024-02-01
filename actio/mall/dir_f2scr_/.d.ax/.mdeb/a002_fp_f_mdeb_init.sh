@@ -75,13 +75,14 @@ ${NORMAL}"
 
     cd "${PLT_PATH}"/actio/mall/dir_f2scr_/.d.ax/.mdeb || plt_exit
 
-    file_1=tmp/file_1.html
+    file_1=".tmp/file_1.html"
 
-    pstr_b="aefd"
-    pstr_a="luyiol"
+    pstr_b='<p>'
+    pstr_a='</p>'
     pstr_body='[\w\W]*?' # '.+?' '[\w\W]*' '.*?'
 
     f2scr_ --_file ${file_1} --_pstr_before pstr_b --_pstr_after pstr_a --_pstr_body pstr_body_to_match
+    # f2scr_ --_file ${file_1} --_pstr_before pstr_b --_pstr_after pstr_a 
 
     #{body_fn}
 }
