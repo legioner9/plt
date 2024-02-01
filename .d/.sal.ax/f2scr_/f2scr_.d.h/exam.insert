@@ -1,1 +1,11 @@
 EXAM:
+.
+( e b) before after (?<=\\ \\ e\\ b).*(?=\\ \\ e\\ b) , 
+перенос ()[\\w\\W]*(),нежад ().*?(),
+нежад+перенос ()[\\w\\W]*?()
+.
+pstr_b="aefd"
+pstr_a="luyiol"
+pstr_body='[\\w\\W]*?' # other rgx: '.+?' '[\\w\\W]*' '.*?'
+file_1="upath/to/file_for_matching"
+f2scr_ --_file \${file_1} --_pstr_before pstr_b --_pstr_after pstr_a --_pstr_body pstr_body_to_match

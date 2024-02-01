@@ -71,13 +71,13 @@ f2scr_() {
     local e_args=($(${_earg2e2_} "${ARGS[@]}"))
     [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
     local strex
-    IFS=$'\\n'
+    IFS=$'\n'
     for strex in $(${_garg2e2_} "${ARGS[@]}"); do
         # [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        echo -e "${HLIGHT}--- eval local $strex ---${NORMAL}" #start files
+        # echo -e "${HLIGHT}--- eval local $strex ---${NORMAL}" #start files 
         eval local \"$strex\"
     done
-    IFS=$' \\t\\n'
+    IFS=$' \t\n'
     #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
     #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
     for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_f2scr_/.d.ax/.sal.ax/f2scr_.local.list"); do

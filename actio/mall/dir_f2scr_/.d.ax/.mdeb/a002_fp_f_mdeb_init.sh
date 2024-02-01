@@ -73,11 +73,15 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    echo -e "${GREEN}\$d_name = $d_name${NORMAL}" #print variable
+    cd "${PLT_PATH}"/actio/mall/dir_f2scr_/.d.ax/.mdeb || plt_exit
 
-    file_1=.tmp/
+    file_1=tmp/file_1.html
 
-    f2scr_ --_pstr_before str_b --_pstr_after str_a --_file ${file_1}
+    pstr_b="aefd"
+    pstr_a="luyiol"
+    pstr_body='[\w\W]*?' # '.+?' '[\w\W]*' '.*?'
+
+    f2scr_ --_file ${file_1} --_pstr_before pstr_b --_pstr_after pstr_a --_pstr_body pstr_body_to_match
 
     #{body_fn}
 }

@@ -2,8 +2,10 @@ ARGS:
     \$1 
 
 CNTLS:
-        --_
-        -_
+        --_file upath to file
+        --_pstr_body ptr to string body regexp for match 
+        --_pstr_before ptr to string before match
+        --_pstr_after ptr to string after match
 
 LOGIC ARGS:
     !()
