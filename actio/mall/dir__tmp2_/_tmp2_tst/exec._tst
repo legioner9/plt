@@ -31,7 +31,7 @@ if [ 0 -eq "$flag" ]; then
     diff "$dir"/pre "$dir"/res >&2
     return 1
 else
-    echo "ALL in $dir true"
+    echo "ALL in file://$dir true"
     return 0
 fi
 
