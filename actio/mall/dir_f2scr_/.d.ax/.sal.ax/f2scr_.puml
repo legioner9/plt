@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> f2scr_ 
+farg2e2_ -> f2scr_
+echo_deb_ -> f2scr_
+f2scr_ -> f2scr_:is_num
+f2scr_ -> f2scr_:exit_err_f2scr_
+f2scr_ -> f2scr_:exit_reg_f2scr_
+f2scr_ -> f2scr_:unset_autoargs_f2scr_
+' {wrap_fn}
+' fnn o-> f2scr_
+' {body_fn}
+@enduml
