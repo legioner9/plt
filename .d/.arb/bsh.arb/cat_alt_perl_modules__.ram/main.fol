@@ -1,0 +1,1 @@
+cat all perl rpm for altlinux : ${REPO_PATH}/NPerl/.d/.lst/alt_perl_modules.lst
