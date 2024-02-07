@@ -1,0 +1,671 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+list_strong_cntls=(sil_)
+for item in "${list_strong_cntls[@]}"; do
+    # echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+    # echo "$(eval echo \$"$item")"
+    if [ -z "$(eval echo \$"$item")" ]; then
+        plt_info "from ${FNN}() :: $item is empty :: be return 1"
+        return 1
+    fi
+done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+
+flag_ram_=0
+if [ -n "${ram_}" ]; then
+    flag_ram_=1
+fi
+
+sum_1=$((${mm_:-0} + ${flag_ram_:-0}))
+
+if [ "${sum_1:-0}" -eq 2 ]; then
+    plt_info "from ${FNN}() mm_ and ram_ not be exist simultaneously :: be return 1"
+    return 1
+fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+# ${sil_} ${arb_}
+
+# tree ${arb_}
+if [ -d "${sil_}/proc/fol_" ]; then
+
+    # c_up "${sil_}/proc/fol_" >/dev/null
+    c_up "${sil_}/proc/fol_"
+
+    inner_fn_arr=()
+    dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+else
+    plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+    return 1
+fi
+
+for item6 in ${inner_fn_arr[@]}; do
+    # echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+    ${item6}
+
+    ret_nom=$?
+    if [ ${ret_nom} -eq 2 ]; then
+        return 0
+    fi
+    if [ ${ret_nom} -eq 3 ]; then
+        return 1
+    fi
+    # echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+done
+
+# errno_8657=$?
+# echo -e "${GREEN}\$errno_8657 = $errno_8657errno_8657${NORMAL}" #print variable
+# if [ "${errno_8657}" -eq 2 ]; then
+#     return 0
+# fi
+# if [ "${errno_8657}" -eq 3 ]; then
+#     return 1
+# fi
+
+# if [ ${E_:-0} -eq 1 ]; then
+#     echo "do E_"
+#     return 0
+# fi
+
+# for item1 in $("${_f2e}" ${sil_}/vis/ll.lst); do
+#     for item2 in $("${_f2e}" ${sil_}/arb/ll.lst); do
+#         eval value1=\$\{${item1}_${item2}_\}
+#         #? check exist param=1
+#         if [ ${value1:-0} -eq 1 ]; then
+#             sub=${item1}
+#             obc=${item2}
+#             echo -e "${GREEN}\$sub = $sub${NORMAL}" #print variable
+#             echo -e "${GREEN}\$obc = $obc${NORMAL}" #print variable
+#         fi
+#     done
+# done
+
+# fol_mm_() { #? choice ram_ if ram_ NOT_DEFINE
+
+#     local fol_mm_arg_1="$1"
+
+#     if [ -z "${ram_}" ]; then
+
+#         arr_ram=()
+
+#         for item3 in $("${_dd2e}" "${arb_}"); do
+#             arr_ram+=("$(${_prs_f} -n "${item3}")")
+#         done
+
+#         plt_info "${fol_mm_arg_1}"
+#         PS3="eligendi actiones ramus name: "
+#         select item4 in "${arr_ram[@]}"; do
+#             ram_=${item4}
+#             break
+#         done
+#         echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
+
+#     fi
+
+#     if ! [ -d "${arb_}/${ram_}.ram" ]; then
+#         plt_exit "in ${FNN} : NOT_DIR : file://'${arb_}/${ram_}.ram' return 1"
+#         return 1
+#     fi
+
+#     ram_tag_file=${arb_}/${ram_}.ram/tags.fol
+# }
+
+# fol_show_arb_tags_() {
+
+#     echo -e "${CYAN}--- START all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${arb_}/all_unique_tags.lst
+#     echo -e "${CYAN}--- END all unique tags in file://${arb_} ---${NORMAL}" #sistem info mesage
+
+# }
+
+# fol_show_ram_tags_() {
+
+#     echo -e "${CYAN}--- START exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${ram_tag_file}
+#     echo -e "${CYAN}--- END exist tags in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+# }
+
+# fol_show_arb_rams_() {
+#     echo -e "${CYAN}--- START all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+#     "${_f2e}" ${arb_rams}
+#     echo -e "${CYAN}--- END all ramus in ${arb_} ---${NORMAL}" #sistem info mesage
+# }
+
+# if [ "${delarb_:-0}" -eq 1 ]; then
+
+#     plt_pause "in fol_() : DO? : delete arbor : file://${arb_}"
+
+#     if [ -d "${arb_}" ]; then
+#         if ! cp -rfv "${arb_}" "$(dirname "${arb_}")"/_"$(basename "${arb_}")"~; then
+#             plt_exit "in fol_() : EXEC_FAIL : cp -rfv ${arb_} $(dirname ${arb_})/_$(basename ${arb_})~ return 1"
+#             return 1
+#         fi
+
+#         if ! rm -rfv "${arb_}"; then
+#             plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
+#             return 1
+#         fi
+#     else
+#         plt_exit "in fol_() : NOT_DIR : not exist ${arb_} return 1"
+#         return 1
+#     fi
+
+#     echo -e "${CYAN}--- DELETE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
+
+#     return 0
+
+# fi
+
+# if [ "${crarb_:-0}" -eq 1 ]; then
+
+#     plt_pause "in fol_() : DO? : create arbor : file://${arb_}"
+
+#     if ! [ -d "${arb_}" ]; then
+#         if ! mkdir -pv "${arb_}"; then
+#             plt_exit "in fol_() : EXEC_FAIL : mkdir -pv ${arb_} return 1"
+#             return 1
+#         fi
+#     else
+#         plt_exit "in fol_() : DIR : already exist ${arb_} return 1"
+#         return 1
+#     fi
+
+#     if ! cp -rv "${sil_}"/arb/. ${arb_}; then
+#         plt_exit "in fol_() : EXEC_FAIL : cp -rv ${sil_}/arb/. ${arb_} return 1"
+#         return 1
+#     fi
+
+#     echo -e "${CYAN}--- CREATE arbor ${arb_} from sil  ---${NORMAL}" #sistem info mesage
+
+#     . ${sil_}/paratus_sil.sh
+#     . ${arb_}/paratus_arb.sh
+
+#     arb_rams=${arb_}/all_ramus_name.lst
+
+#     fol_show_arb_rams_
+
+#     return 0
+
+# fi
+
+# . ${sil_}/paratus_sil.sh
+# . ${arb_}/paratus_arb.sh
+
+# arb_rams=${arb_}/all_ramus_name.lst
+
+# if [ -n "${sub}" ] && [ -n "${obc}" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "f_" ]; then
+#         ${sub:2} ${arb_}/${ram_}.ram/${obc}.fol
+#     fi
+#     return 0
+# fi
+
+# if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "f_" ]; then
+#         ${sub:2} ${arb_}/${ram_}.ram
+#     fi
+#     return 0
+# fi
+
+# if [ -n "${sub}" ] && [ "${obc}" == "0" ] && [ -n "${ram_}" ]; then
+#     if [ "${sub:0:2}" == "a_" ]; then
+#         ${sub:2} ${arb_}
+#     fi
+#     return 0
+# fi
+
+# if [ "${utag_:-0}" -eq 1 ]; then
+#     "${_f2e}" "${arb_}"/all_unique_tags.lst
+#     return 0
+# fi
+
+# if [ "${addtag_:-0}" -eq 1 ]; then
+
+#     fol_mm_ "choice ramus for addtag_ from file://${arb_}"
+
+#     fol_addtag_() {
+
+#         echo -e "${BLUE}--- exec addtag ${FNN} (num_menu) ---${NORMAL}" #started functions
+
+#         arr_2=($("${_f2e}" "${arb_}"/all_unique_tags.lst))
+
+#         fol_show_arb_tags_
+#         fol_show_ram_tags_
+
+#         PS3="eligendi actiones tag (ram_='${ram_}') to insert to file://${ram_tag_file}: "
+#         select item5 in "${arr_2[@]}"; do
+#             tag_to_add=${item5}
+#             break
+#         done
+
+#         if ! grep -w ${tag_to_add} ${ram_tag_file} &>/dev/null; then
+#             # echo -e "\n${tag_to_add}" >>${ram_tag_file}
+
+#             if ! "${_ins_last_s}" ${ram_tag_file} ${tag_to_add}; then
+#                 plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+#             fi
+
+#             #sistem info mesage
+#             echo -e "${CYAN}--- in in fol_() : ADD ram_ '${ram_tag_file}' : for (ram_='${ram_}') add tag ${ram_tag_file} to file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#             . ${arb_}/paratus_arb.sh
+
+#             "${_sort_tags_s}" ${ram_tag_file}
+#             fol_show_ram_tags_
+#         else
+#             plt_info "${tag_to_add} already in file://${ram_tag_file}"
+#         fi
+#     }
+
+#     while true; do
+#         if ! plt_ques_exec fol_addtag_; then
+#             break
+#         fi
+#     done
+
+# fi
+
+# if [ "${crtag_:-0}" -eq 1 ]; then
+
+#     if [ -z ${tag_} ]; then
+
+#         fol_mm_ "choice ramus for crtag_ from file://${arb_}"
+
+#         fol_crtag_() {
+
+#             fol_show_arb_tags_
+#             fol_show_ram_tags_
+
+#             plt_pause "in fol_() : DO?: for (ram_='${ram_}') create tag in file://${ram_tag_file}"
+
+#             read -p "Enter tag (^@, 11<#, only w d _) " tag_to_create
+
+#             echo -e "${GREEN}\$tag_to_create = $tag_to_create${NORMAL}" #print variable
+
+#             if grep -w ${tag_to_create} "${ram_tag_file}"; then
+#                 plt_info "in fol_() : EXIST : tag '${tag_to_create}' already in file://${ram_tag_file}"
+#                 return 1
+#             fi
+
+#             if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
+
+#                 if ! "${_ins_last_s}" "${arb_}"/"${ram_}".ram/tags.fol "${tag_to_create}"; then
+#                     plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+#                 fi
+
+#                 echo -e "${CYAN}--- in in fol_() : CREATE ${tag_to_create} : for (ram_='${ram_}') create tag ${tag_to_create} in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#                 . ${arb_}/paratus_arb.sh
+
+#                 "${_sort_tags_s}" ${ram_tag_file}
+#                 fol_show_ram_tags_
+
+#             else
+#                 plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
+#             fi
+
+#         }
+
+#         while true; do
+#             if ! plt_ques_exec fol_crtag_; then
+#                 break
+#             fi
+#         done
+
+#         echo -e "${CYAN}--- in in fol_() : CREATE tag '${tag_to_create}' : for (ram_='${ram_}') delete tag ${tag_to_create} in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#         . ${arb_}/paratus_arb.sh
+
+#         sort_tags_s ${ram_tag_file}
+#         fol_show_ram_tags_
+
+#     else
+
+#         tag_to_create="${tag_}"
+#         ram_tag_file="${arb_}"/"${ram_}".ram/tags.fol
+
+#         echo -e "${GREEN}\$tag_to_create = $tag_to_create${NORMAL}" #print variable
+
+#         if grep -w ${tag_to_create} "${ram_tag_file}"; then
+#             plt_info "in fol_() : EXIST : tag '${tag_to_create}' already in file://${ram_tag_file}"
+#             return 1
+#         fi
+
+#         if [ -n "${tag_to_create}" ] && [ "${#tag_to_create}" -le 10 ] && "${_is_eng_var}" "${tag_to_create:1}" && [ "${tag_to_create:0:1}" == "@" ]; then
+
+#             if ! "${_ins_last_s}" "${ram_tag_file}" "${tag_to_create}"; then
+#                 plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+#                 return 1
+#             fi
+
+#             echo -e "${CYAN}--- in in fol_() : CREATE ${tag_to_create} : for (ram_='${ram_}') create tag ${tag_to_create} in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#             . ${arb_}/paratus_arb.sh
+
+#             "${_sort_tags_s}" ${ram_tag_file}
+#             fol_show_ram_tags_
+#             return 0
+#         else
+#             plt_info "in fol_() : NOT_IN_CONDITION : '${tag_to_create}'"
+#             return 1
+#         fi
+#     fi
+# fi
+
+# if [ "${deltag_:-0}" -eq 1 ]; then
+
+#     if [ -z "${ram_}" ]; then
+
+#         fol_mm_ "choice ramus for deltag_ from file://${arb_}"
+
+#         fol_deltag_() {
+
+#             # plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag in file://${ram_tag_file}"
+
+#             arr_3=($("${_f2e}" "${ram_tag_file}"))
+
+#             PS3="eligendi actiones tag (ram_='${ram_}') to delete from file://${ram_tag_file}: "
+#             select item6 in "${arr_3[@]}"; do
+#                 tag_to_delete=${item6}
+#                 break
+#             done
+
+#             echo -e "${GREEN}\$tag_to_delete = $tag_to_delete${NORMAL}" #print variable
+
+#             if ! grep -w ${tag_to_delete} "${ram_tag_file}"; then
+#                 plt_info "in fol_() : NOT_EXIST : tag '${tag_to_create}' in file://${ram_tag_file}"
+#             fi
+
+#             plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag ${tag_to_delete} in file://${ram_tag_file}"
+
+#             echo -e "${HLIGHT}--- sed 's/'${tag_to_delete}'//' ${ram_tag_file} ---${NORMAL}" #start files
+
+#             if ! sed -i '/'"${tag_to_delete}"'/g' ${ram_tag_file}; then
+#                 plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add}"
+#             fi
+
+#             echo -e "${CYAN}--- in in fol_() : DELELE tag '${tag_to_delete}' : for (ram_='${ram_}') delete tag ${tag_to_delete} in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#             . ${arb_}/paratus_arb.sh
+
+#             sort_tags_s ${ram_tag_file}
+#             fol_show_ram_tags_
+
+#         }
+
+#         while true; do
+#             if ! plt_ques_exec fol_deltag_; then
+#                 break
+#             fi
+#         done
+
+#     else
+
+#         tag_to_delete=${tag_}
+#         ram_tag_file=${arb_}/${ram_}.ram/tags.fol
+
+#         if ! grep -w ${tag_to_delete} "${ram_tag_file}"; then
+#             plt_info "in fol_() : NOT_EXIST : tag '${tag_to_create}' in file://${ram_tag_file}"
+#             return 1
+#         fi
+
+#         echo -e "${GREEN}\$tag_to_delete = $tag_to_delete${NORMAL}" #print variable
+
+#         plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag ${tag_to_delete} in file://${ram_tag_file}"
+
+#         echo -e "${HLIGHT}--- sed 's/'${tag_to_delete}'//' ${ram_tag_file} ---${NORMAL}" #start files
+
+#         if ! sed -i '/'"${tag_to_delete}"'/g' ${ram_tag_file}; then
+#             plt_info "in in fol_() : EXEC_FAIL : ${_ins_last_s} ${ram_tag_file} ${tag_to_add} return 1"
+#             return 1
+#         fi
+
+#         echo -e "${CYAN}--- in in fol_() : DELELE tag '${tag_to_delete}' : for (ram_='${ram_}') delete tag ${tag_to_delete} in file://${ram_tag_file} ---${NORMAL}" #sistem info mesage
+
+#         . ${arb_}/paratus_arb.sh
+
+#         sort_tags_s ${ram_tag_file}
+#         fol_show_ram_tags_
+
+#         return 0
+#     fi
+# fi
+
+# if [ "${crram_:-0}" -eq 1 ]; then
+
+#     if [ -z "${ram_}" ]; then
+
+#         fol_crram_() {
+
+#             fol_show_arb_rams_
+
+#             if [ -z "${ram_}" ]; then
+
+#                 plt_pause "in fol_() : DO?: create ram on file://${arb_}"
+
+#                 read -p "Enter name ram_ (11<#, only w d _) " ram_name_to_create
+
+#                 echo -e "${GREEN}\$ram_name_to_create = $ram_name_to_create${NORMAL}" #print variable
+
+#                 if [ -n "${ram_name_to_create}" ] && [ "${#ram_name_to_create}" -le 10 ] && "${_is_eng_var}" "${ram_name_to_create}"; then
+
+#                     plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+
+#                     if ! [ -d "${arb_}/${ram_name_to_create}.ram" ]; then
+
+#                         if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_name_to_create}.ram"; then
+#                             plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+#                         fi
+#                         echo -e "${CYAN}--- in in fol_() : CREATE ${ram_name_to_create}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #sistem info mesage
+
+#                         echo -e "${HLIGHT}--- ls -A ${arb_}/${ram_name_to_create}.ram ---${NORMAL}" #start files
+#                         ls -A ${arb_}/${ram_name_to_create}.ram
+
+#                     else
+#                         plt_info "in fol_() : DIR : already exist '${ram_name_to_create}' file://${arb_}/${ram_name_to_create}.ram"
+#                     fi
+#                 else
+#                     plt_info "in fol_() : NOT_IN_CONDITION : '${ram_name_to_create}'"
+#                 fi
+
+#             fi
+
+#             . ${arb_}/paratus_arb.sh
+
+#         }
+
+#         while true; do
+#             if ! plt_ques_exec fol_crram_; then
+#                 break
+#             fi
+#         done
+#     else
+
+#         if ! [ -n "${ram_}" ] && [ "${#ram_}" -le 10 ] && "${_is_eng_var}" "${ram_}"; then
+#             plt_exit "in fol_() : NOT_IN_CONDITION : '${ram_}' : return 1"
+#             return 1
+#         fi
+
+#         ram_to_create=${arb_}/${ram_}.ram
+
+#         plt_pause "in fol_() : DO? : create ram '"${ram_}"' on file://${arb_}"
+
+#         if ! [ -d "${ram_to_create}" ]; then
+
+#             if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${ram_to_create}"; then
+#                 plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+#                 return 1
+#             fi
+#             echo -e "${CYAN}--- in in fol_() : CREATE ${ram_}.ram : for (arb_='${arb_}') create ram_ file://${ram_to_create} ---${NORMAL}" #sistem info mesage
+
+#             echo -e "${HLIGHT}--- ls -A ${ram_to_create} ---${NORMAL}" #start files
+
+#             ls -A ${ram_to_create}
+
+#         else
+#             plt_info "in fol_() : DIR : already exist '${ram_}' file://${ram_to_create}"
+#             return 1
+#         fi
+
+#         echo -e "${CYAN}--- in fol_() : CREATE : file://${ram_to_create} ---${NORMAL}" #sistem info mesage
+
+#         . ${arb_}/paratus_arb.sh
+
+#         fol_show_arb_rams_
+#         return 0
+#     fi
+
+# fi
+
+# if [ "${delram_:-0}" -eq 1 ]; then
+
+#     if [ -z "${ram_}" ]; then
+#         fol_delram_() {
+
+#             # plt_pause "in fol_() : DO?: for (ram_='${ram_}') delete tag in file://${ram_tag_file}"
+#             fol_show_arb_rams_
+
+#             arr_4=($("${_f2e}" "${arb_rams}"))
+
+#             PS3="eligendi actiones choice ram_ to delete from file://${arb_}: "
+#             select item7 in "${arr_4[@]}"; do
+#                 ram_to_delete=${item7}
+#                 break
+#             done
+
+#             if [ -d ${arb_}/${ram_to_delete}.ram ]; then
+#                 plt_pause "in : DO? : rm -r ${arb_}/${ram_to_delete}.ram"
+
+#                 echo -e "${CYAN}--- cp -r ${arb_}/${ram_to_delete}.ram ${arb_}/${ram_to_delete}.ram~ ---${NORMAL}" #sistem info mesage
+
+#                 if ! cp -r ${arb_}/${ram_to_delete}.ram ${arb_}/_${ram_to_delete}.ram~; then
+#                     plt_info "in in fol_() : EXEC_FAIL : cp -r ${arb_}/${ram_to_delete}.ram ${arb_}/_${ram_to_delete}.ram~"
+#                 fi
+
+#                 if ! rm -r ${arb_}/${ram_to_delete}.ram; then
+#                     plt_info "in in fol_() : EXEC_FAIL : rm -r ${arb_}/${ram_to_delete}.ram"
+#                 fi
+
+#             else
+#                 plt_info "in fol_() : NOT_DIR : not exist '${ram_to_delete}' : file://${arb_}/${ram_to_delete}.ram"
+#             fi
+
+#             echo -e "${CYAN}--- in fol_() : CREATE : file://${ram_to_delete} ---${NORMAL}" #sistem info mesage
+
+#             . ${arb_}/paratus_arb.sh
+
+#             fol_show_arb_rams_
+
+#         }
+
+#         while true; do
+#             if ! plt_ques_exec fol_delram_; then
+#                 break
+#             fi
+#         done
+
+#     else
+
+#         ram_to_delete=${arb_}/${ram_}.ram
+
+#         if [ -d "${ram_to_delete}" ]; then
+#             plt_pause "in : DO? : rm -r ${ram_to_delete}"
+
+#             echo -e "${CYAN}--- cp -r ${ram_to_delete} ${arb_}/_${ram_}.ram~ ---${NORMAL}" #sistem info mesage
+
+#             if ! cp -r ${ram_to_delete} ${arb_}/_${ram_}.ram~; then
+#                 plt_info "in in fol_() : EXEC_FAIL : cp -r ${ram_to_delete} ${arb_}/_${ram_}.ram~"
+#                 return 1
+#             fi
+
+#             if ! rm -r ${ram_to_delete}; then
+#                 plt_info "in in fol_() : EXEC_FAIL : rm -r ${ram_to_delete}"
+#                 return 1
+#             fi
+
+#         else
+#             plt_info "in fol_() : NOT_DIR : not exist '${ram_}' : file://${ram_to_delete}"
+#             return 1
+#         fi
+
+#         echo -e "${CYAN}--- in fol_() : DELETE : file://${ram_to_delete} ---${NORMAL}" #sistem info mesage
+
+#         . ${arb_}/paratus_arb.sh
+
+#         fol_show_arb_rams_
+
+#         return 0
+#     fi
+
+# fi
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------
