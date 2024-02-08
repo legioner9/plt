@@ -4,6 +4,9 @@ FLN=$0
 ARGS0=${ARGS[0]}
 ARGS1=${ARGS[1]}
 ARGS2=${ARGS[2]}
+ARGS3=${ARGS[3]}
+ARGS4=${ARGS[4]}
+ARGS5=${ARGS[5]}
 NARGS=$#
 PPWD=$PWD
 #? ${FNN}mdeb function - menu for debug flows

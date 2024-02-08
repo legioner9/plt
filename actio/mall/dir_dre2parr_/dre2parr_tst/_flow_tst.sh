@@ -14,8 +14,8 @@ cd "${idir}" || {
 # cd "${PLT_PATH}"/actio/mall/dir_dr2parr_/.d.ax/.mdeb/.tmp
 
 fx() {
-    echo "dre2parr_ res_arr $1 $2 root_dir>/dev/null"
-    dre2parr_ res_arr $1 $2 root_dir >/dev/null
+    echo "dre2parr_ res_arr $1 $2 root_dir/05_a>/dev/null"
+    dre2parr_ res_arr $1 $2 root_dir/05_a >/dev/null
     parr3e_ res_arr
 }
 res_arr=()

@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename={path_name}
+filename=${REPO_PATH}/plt/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/start_exec._tst
 
 # echo -e "${HLIGHT}---start file://$filename with args: $@ ---${NORMAL}" # start file
 

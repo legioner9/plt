@@ -21,10 +21,9 @@
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
 # echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
@@ -138,8 +137,8 @@ echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"     #print variable
 # fi
 #[[ERR_ARGS]]
 
-if [ -z "${ARGS3}" ]; then
-    plt_info "in pzip_to_() : ERR_AMOUNT_ARGS : not define \${ARGS3}='${ARGS3}': return 1"
+if [ -z "${ARGS2}" ]; then
+    plt_info "in pzip_to_() : ERR_AMOUNT_ARGS : not define \${ARGS2}: return 1"
     return 1
 fi
 
@@ -165,10 +164,6 @@ fi
 
 path_dist="${ARGS1}"
 path_dist=$(${_abs_path} $PPWD "path_dist")
-
-if [[ $(prs_f -e ${path_dist}) != "zip" ]]; then
-    path_dist=${path_dist}.zip
-fi
 
 path_src="${ARGS2}"
 path_src=$(${_abs_path} $PPWD "path_src") #ptr args
