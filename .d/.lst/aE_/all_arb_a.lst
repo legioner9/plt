@@ -6,7 +6,9 @@ ${PLT_PATH}/.d/.arb/bsh.arb
 ${PLT_PATH}/.d/.arb/osh.arb
 ${PLT_PATH}/.d/.arb/tag.arb
 ${PLT_PATH}/.d/.arb/bug.arb
+
 ${PLT_PATH}/.d/.arb/apt_alt.arb
+${PLT_PATH}/.d/.arb/epm_alt.arb
 
 ${PLT_PATH}/.d/.arb/git.arb
 
