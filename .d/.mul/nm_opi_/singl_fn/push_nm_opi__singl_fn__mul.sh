@@ -21,6 +21,12 @@ push_nm_opi__singl_fn__mul() {
     echo -e "${GREEN}\$push_net_strong = $push_net_strong${NORMAL}" #print variable
     arr_push_net_strong=()
     if [ -n "${push_net_strong}" ]; then
+
+        if ! is_ping; then
+            plt_info "in push_nm_opi__singl_fn__mul() : FAIL_EXEC : 'is_ping()' at \${push_net_strong}=${push_net_strong} : return 1"
+            return 1
+        fi
+
         arr_push_net_strong=(${push_net_strong//></ })
         parr3e_ arr_push_net_strong
         for item in ${arr_push_net_strong[@]}; do
@@ -90,6 +96,12 @@ push_nm_opi__singl_fn__mul() {
 
     arr_push_net=()
     if [ -n "${push_net}" ]; then
+
+        if ! is_ping; then
+            plt_info "in push_nm_opi__singl_fn__mul() : FAIL_EXEC : 'is_ping()' at \${push_net}=${push_net} : return 0"
+            return 0
+        fi
+
         arr_push_net=(${push_net//></ })
         parr3e_ arr_push_net
         for item in ${arr_push_net[@]}; do
@@ -138,7 +150,7 @@ push_nm_opi__singl_fn__mul() {
                     plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : continue"
                     continue
                 }
- 
+
             fi
 
             echo -e "${GREEN}\$adr = $adr${NORMAL}"       #print variable

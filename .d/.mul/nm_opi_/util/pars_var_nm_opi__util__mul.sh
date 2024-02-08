@@ -49,10 +49,10 @@ pars_var_nm_opi__util__mul() {
         clone_abs_adr=${clone_net_addr}
         pull_abs_remote=${arr_clone_net[1]}
 
-        if ! is_ping; then
-            plt_info "in pars_var_nm_opi__util__mul() : clone_net : FAIL_EXEC : 'is_ping()' : return 1"
-            return 1
-        fi
+        # if ! is_ping; then
+        #     plt_info "in pars_var_nm_opi__util__mul() : clone_net : FAIL_EXEC : 'is_ping()' : return 1"
+        #     return 1
+        # fi
     fi
 
     if [ -n "${clone_local}" ]; then
