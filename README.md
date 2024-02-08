@@ -1,7 +1,5 @@
 [[TOC]]
 
-<a href=".d/.md/README.md/intro.md"> intro </a>
-
 [intro](.d/.md/README.md/intro.md)
 
 # $\mathscr{FonSh\ erit\ crescere\ a\ fons}$
