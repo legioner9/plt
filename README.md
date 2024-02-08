@@ -1,5 +1,9 @@
 [[TOC]]
 
+<a href=".d/.md/README.md/intro.md"> intro </a>
+
+[intro](.d/.md/README.md/intro.md)
+
 # $\mathscr{FonSh\ erit\ crescere\ a\ fons}$
 
 ## Dedicata est
@@ -37,7 +41,7 @@ FonSh is the system selfgenerated, selftested, selfdocumented, selfcatalogizated
 
 ### plt/.d/.nid
 
-#### procedure nid_API
+#### procedure nid_APIlav@etersoft.ru
     plt/.d/.nid/mall/mall.nid 
 
 ##### if add condition or variables to mall.nid - add that to mall.cntl or mall.local  
@@ -58,8 +62,6 @@ FonSh is the system selfgenerated, selftested, selfdocumented, selfcatalogizated
 dir for test, use <fn_name> in any flow 
 #### dir_<fn_name>/.d.ax
 ##### dir_<fn_name>/.d.ax/.sal.ax
-
-
 
 ## Features
 
