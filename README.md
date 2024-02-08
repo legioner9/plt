@@ -1,5 +1,5 @@
 
-# $\mathscr{Fonsh\ erit\ crescere\ a\ fons}$
+# Fonsh erit crescere a fons
 
 ## Dicata amicus Meus Marcus (aliud nomen @tshemsedinov)
 
