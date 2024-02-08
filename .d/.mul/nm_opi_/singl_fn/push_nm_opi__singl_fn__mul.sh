@@ -128,15 +128,15 @@ push_nm_opi__singl_fn__mul() {
                 mkdir -pv "${adr}"
 
                 cd "${adr}" || {
-                    plt_info "push_nm_opi__singl_fn__mul() : EXEC_FAIL : adr : 'cd ${adr}' : return 1"
-                    return 1
+                    plt_info "push_nm_opi__singl_fn__mul() : EXEC_FAIL : adr : 'cd ${adr}' : continue"
+                    continue
                 }
 
                 git --bare init
 
                 cd "${dir_repo}/${name_repo}" || {
-                    plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
-                    return 1
+                    plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : continue"
+                    continue
                 }
  
             fi
