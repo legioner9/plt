@@ -1,6 +1,12 @@
-# <enterrc> <DATA> <homedotfiles> ~/.enterrc
+# <enterrc> <DATA> <homedotfiles> `~/.enterrc`
 
-## `~/.enterrc` - входной скрипт bash процедур и определений констант для PLT
-=
+## MAIN
+
+Входной скрипт bash процедур и определений констант для PLT
+
+## UP TO ENV
+
+in ~/.bashrc
+
 
 [up to README.md](../../../../../README.md)

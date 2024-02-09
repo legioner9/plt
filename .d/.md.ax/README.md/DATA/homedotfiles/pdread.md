@@ -1,5 +1,10 @@
-# <pdread> <DATA> <homedotfiles> ~/.pdread
+# <pdread> <DATA> <homedotfiles> `~/.pdread` 
 
-## `~/.pdread` - contane [<pdread> <DATA> <const> ${PD_READ}](../consts/pdread.md) - plt standart password 
+## MAIN 
+contane [<pdread> <DATA> <const> ${PD_READ}](../consts/pdread.md) - plt standart password 
+
+## UP TO ENV
+
+in 
 
 [up to README.md](../../../../../README.md)
