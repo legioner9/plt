@@ -9,5 +9,8 @@
 
 # [<solvendum> Методы решения задач](.d/.md.ax/README.md/solvendum.md)
 
+# [<embed> Развертывание](.d/.md.ax/README.md/embed.md)
+
+# [<detrminarefs> Назначение файловых структур и констант](.d/.md.ax/README.md/detrminare_fs.md)
 
 
