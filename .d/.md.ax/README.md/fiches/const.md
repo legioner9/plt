@@ -1,0 +1,5 @@
+# <const> <fiches> <solvendum> 
+
+[up to parent doc](../solvendum.md)
+
+[up to README.md](../../../README.md)
