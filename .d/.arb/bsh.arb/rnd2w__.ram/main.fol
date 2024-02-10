@@ -1,1 +1,1 @@
-echo [\w\d]{$1} or [\w\d]{32}
+echo rand [\w\d]{$1} or [\w\d]{32}

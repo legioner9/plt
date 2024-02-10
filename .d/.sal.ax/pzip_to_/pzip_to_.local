@@ -17,6 +17,7 @@ obc
 is_dir
 is_file
 no_password
+no_check
 
 path_dist
 path_src

@@ -9,12 +9,13 @@ cd "${idir}" || {
 }
 #?----------------------------------------------------
 #?-------------------------------------
-
 plt_info "START flow pzip_to_ \${PD_READ} \${dist} \${src} 1"
 
 : >res
 
 dir_003="${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/003"
+
+cp -rfv ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/_003 "${dir_003}"
 
 #! FILE
 

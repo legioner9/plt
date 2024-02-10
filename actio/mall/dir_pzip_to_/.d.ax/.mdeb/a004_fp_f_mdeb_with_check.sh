@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/actio/mall/dir_pzip_to_/.d.ax/.mdeb/.cntl/pzip_to_mdeb.sh"
+filename="${PLT_PATH}/actio/mall/dir_pzip_to_/.d.ax/.mdeb/a004_fp_f_mdeb_with_check.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-pzip_to_mdeb() {
+a004_fp_f_mdeb_with_check() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,9 +15,8 @@ pzip_to_mdeb() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name123=$(dirname ${PLT_PATH}/actio/mall/dir_pzip_to_/.d.ax/.mdeb/.cntl/pzip_to_mdeb.sh)
-    # wrp_fifs1_ cd ${d_name123} -d
-    ${_wrp2_} cd --_xxd "${d_name123}" >/dev/null
+    local d_name=$(dirname ${PLT_PATH}/actio/mall/dir_pzip_to_/.d.ax/.mdeb/a004_fp_f_mdeb_with_check.sh)
+    # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
@@ -46,19 +45,19 @@ ${NORMAL}"
     fi
     #{help_cntl_fn}
     if [ "_man" == "$1" ]; then
-        edit_ "${d_name123}/${FNN}".man
+        edit_ "${d_name}/${FNN}".man
         return 0
     fi
     if [ "_go" == "$1" ]; then
-        edit_ "${d_name123}/${FNN}".sh
+        edit_ "${d_name}/${FNN}".sh
         return 0
     fi
     if [ "_lst" == "$1" ]; then
-        edit_ "${d_name123}/${FNN}".lst
+        edit_ "${d_name}/${FNN}".lst
         return 0
     fi
     if [ "_head" == "$1" ]; then
-        echo "_head fn: ${d_name123}/${FNN}"
+        echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
     if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
@@ -73,48 +72,11 @@ ${NORMAL}"
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
-    local arr=()
-    local res=()
-    local num_res
-    local item_arr
-    ${_wrp2_} cd --_xxd "${d_name123}" >/dev/null
-    cd ..
-    ${_wrp2_} c_up --_xxd "$(pwd)" >/dev/null
-    for res_ in *; do
-        # echo -e "${GREEN}$arr_ = $arr_${NORMAL}" #print variable
-        res_=$(prs_f -n "${res_}")
-        arr_=$(${res_} _head)
-        arr+=("${arr_}")
-        res+=("${res_}")
-    done
-    #{arr_res}
-    # arr+=("aaaaaaaaa")
-    # res+=("bbbbbbbbb")
-    # arr+=("aaaaaaaaa")
-    # res+=("bbbbbbbbb")
-    # arr+=("aaaaaaaaa")
-    # res+=("bbbbbbbbb")
-    # arr+=("aaaaaaaaa")
-    # res+=("bbbbbbbbb")
-    arr+=("exit menu")
-    res+=("return 0")
-    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-        num_res=$(($1 - 1))
-        ${res[${num_res}]}
-        return 0
-    fi
-    PS3="eligendi actiones: "
-    select item_arr in "${arr[@]}"; do
-        for ((i = 0; i < 1000; i++)); do
-            if [[ ${item_arr} == ${arr[$i]} ]]; then
-                ${res[$i]}
-                ${FNN} $@
-            fi
-        done
-    done
-    #{zzz20}
     #{body_fn}
+
+    cp -rf "${PLT_PATH}"/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/_003 "${PLT_PATH}"/actio/mall/dir_pzip_to_/.d.ax/.mdeb/.tmp/dist_4
+
+    
 }
 
 cd "${idir}"

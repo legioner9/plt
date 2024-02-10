@@ -148,7 +148,7 @@ fi
 #     fi
 # done
 
-if [ " _extst " == "$1" ]; then
+if [ "_extst" == "$1" ]; then
     extst_file="${FN_DIR}/$FNN"extst/extst_1/start_exec.tst
     if [ -f ${tst_file} ]; then
         echo -e "${HLIGHT}--- . ${extst_file} ---${NORMAL}" #start files
