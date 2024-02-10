@@ -29,7 +29,7 @@ rm -v ${dir_003}/dist.d/src.file
 # rm -v ${dist}
 
 echo -e "${HLIGHT}--- pzip_to_ 0 file://${dist} file://${src} ---${NORMAL}" #start files
-pzip_to_ 0 "${dist}" "${src}" "0"
+pzip_to_ 0 "${dist}" "${src}" 0
 
 echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
 ls "${dir_003}"/dist.d

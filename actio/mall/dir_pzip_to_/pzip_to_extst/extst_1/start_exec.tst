@@ -29,7 +29,9 @@ rdir="$(prs_f -d $filename)"
 #----------------------------------------------------------------------
 #-------------------------------------
 #-------------------------------
-up_err_ extst ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/start_exec.list 1>/dev/null
+up_err_ extst ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/start_exec.list 
+# up_err_ extst ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/start_exec.list 1>/dev/null
+
 errno=$?
 if [ 1 -eq "${errno}" ]; then
 echo "ANY in file://$rdir fail" >&2

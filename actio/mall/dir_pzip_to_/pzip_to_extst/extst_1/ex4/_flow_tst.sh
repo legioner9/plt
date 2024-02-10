@@ -13,9 +13,10 @@ plt_info "START flow pzip_to_ \${PD_READ} \${dist} \${src} 1"
 
 : >res
 
-dir_003="${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/003"
+dir_003="${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex4/dir_4"
 
-cp -rfv ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/_003 "${dir_003}"
+
+cp -rfv ${PLT_PATH}/actio/mall/dir_pzip_to_/pzip_to_extst/extst_1/ex1/_003 ${dir_003}
 
 #! FILE
 
@@ -31,16 +32,10 @@ rm -v ${dir_003}/dist.d/src.file
 echo -e "${HLIGHT}--- pzip_to_ ${PD_READ} file://${dist} file://${src} ---${NORMAL}" #start files
 pzip_to_ "${PD_READ}" "${dist}" "${src}" 1
 
-echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
-ls "${dir_003}"/dist.d
-
 cd "${dir_003}"/dist.d || plt_exit
 
 echo -e "${HLIGHT}--- unzip -P ${PD_READ} ${dist} ---${NORMAL}" #start files
 unzip -P "${PD_READ}" "${dist}"
-
-echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
-ls "${dir_003}"/dist.d
 
 echo -e "${HLIGHT}--- cat file://${dir_003}/dist.d/src.file ---${NORMAL}" #start files
 cat "${dir_003}"/dist.d/src.file >>"${idir}"/res
@@ -64,16 +59,10 @@ rm -rv ${dir_003}/dist.d/src.d
 echo -e "${HLIGHT}--- pzip_to_ ${PD_READ} file://${dist} file://${src} 0 ---${NORMAL}" #start files
 pzip_to_ "${PD_READ}" "${dist}" "${src}" 1
 
-echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
-ls "${dir_003}"/dist.d
-
 cd "${dir_003}"/dist.d || plt_exit
 
 echo -e "${HLIGHT}--- unzip -P ${PD_READ} -r ${dist} ---${NORMAL}" #start files
 unzip -P "${PD_READ}" "${dist}"
-
-echo -e "${HLIGHT}--- ls file://${dir_003}/dist.d ---${NORMAL}" #start files
-ls "${dir_003}"/dist.d
 
 echo -e "${HLIGHT}--- cat file://${dir_003}/dist.d/src.file ---${NORMAL}" #start files
 cat "${dir_003}"/dist.d/src.d/in_src_d.file >>"${idir}"/res

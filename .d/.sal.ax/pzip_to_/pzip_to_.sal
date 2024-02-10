@@ -228,19 +228,32 @@ if [ ${char_type_src} == "-" ]; then
     mv "${file_dist}" "${path_dist}"
 
     if [[ ${no_check} -eq 0 ]]; then
-        mkdir -v "${tmp_dir}"
+        echo -e "${CYAN}--- mkdir "${tmp_dir}" ---${NORMAL}" #sistem info mesage
+        mkdir "${tmp_dir}"
+
+        cp ${path_dist} "${tmp_dir}"
+        echo -e "${RED}--- cd file://"${tmp_dir}" || plt_exit ---${NORMAL}" #sistem info mesage
+        cd "${tmp_dir}" || plt_exit
+
+        if [ ${no_password} -eq 0 ]; then
+            unzip -P "${ARGS0}" "${tmp_dir}"/${file_dist}
+        fi
+
+        if [ ${no_password} -eq 1 ]; then
+            unzip "${tmp_dir}"/${file_dist}
+        fi
+
+        echo -e "${CYAN}--- diff ${tmp_dir}/${file_src} ${dir_src}/${file_src} ---${NORMAL}" #sistem info mesage
+        if ! diff ${tmp_dir}/${file_src} ${dir_src}/${file_src}; then
+            plt_exit "in ${FNN} : FAIL_EXEC : 'diff ${tmp_dir}/${file_src} ${dir_src}/${file_src}' : return 1"
+            return 1
+        fi
+
+        echo -e "${CYAN}--- rm -rv "${tmp_dir}" ---${NORMAL}" #sistem info mesage
+        rm -rv "${tmp_dir}"
+
     fi
-
-    # cp ${path_dist} "${tmp_dir}"
-    # cd "${tmp_dir}" || plt_exit
-
-    # if [ ${no_password} -eq 0 ]; then
-    #     unzip -P "${ARGS0}" "${file_dist}"
-    # fi
-
-    # if [ ${no_password} -eq 1 ]; then
-    #     unzip "${file_dist}"
-    # fi
+    #
 
     # rm -rv "${tmp_dir}"
 
@@ -278,10 +291,32 @@ if [ ${char_type_src} == "d" ]; then
 
     #? unzip and check correct
 
-    cd "${dir_dist}" || {
-        plt_exit "in pzip_to_() : NOT_DIR : '${dir_dist}' : path_file return 1"
-        return 1
-    }
+    if [[ ${no_check} -eq 0 ]]; then
+        echo -e "${CYAN}--- mkdir "${tmp_dir}" ---${NORMAL}" #sistem info mesage
+        mkdir "${tmp_dir}"
+
+        cp ${path_dist} "${tmp_dir}"
+        echo -e "${RED}--- cd file://"${tmp_dir}" || plt_exit ---${NORMAL}" #sistem info mesage
+        cd "${tmp_dir}" || plt_exit
+
+        if [ ${no_password} -eq 0 ]; then
+            unzip -P "${ARGS0}" "${tmp_dir}"/${file_dist}
+        fi
+
+        if [ ${no_password} -eq 1 ]; then
+            unzip "${tmp_dir}"/${file_dist}
+        fi
+
+        echo -e "${CYAN}--- diff -r ${tmp_dir}/${file_src} ${dir_src}/${file_src} ---${NORMAL}" #sistem info mesage
+        if ! diff -r ${tmp_dir}/${file_src} ${dir_src}/${file_src}; then
+            plt_exit "in ${FNN} : FAIL_EXEC : 'diff ${tmp_dir}/${file_src} ${dir_src}/${file_src}' : return 1"
+            return 1
+        fi
+        
+        echo -e "${CYAN}--- rm -rv "${tmp_dir}" ---${NORMAL}" #sistem info mesage
+        rm -rv "${tmp_dir}"
+
+    fi
 
     return 0
 
