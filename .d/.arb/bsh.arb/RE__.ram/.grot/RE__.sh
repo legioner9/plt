@@ -20,12 +20,12 @@ RE__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: edit_ plt ${PLT_PATH}/README.md at ${PLT_PATH}/.d/.md.ax/README.md
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
+$1 NON
 [ ,$2 num_menu ]
 CNTLS:
 required

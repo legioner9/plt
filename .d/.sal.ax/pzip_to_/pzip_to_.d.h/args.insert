@@ -4,7 +4,7 @@ ARGS:
     \$2 dist file !(be added to file.zip if not ext not .zip)
     \$3 src node
     \$4 0 
-        if not 0 be tst result
+        if not 0 be selftst result
 
 CNTLS:
         --_

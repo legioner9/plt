@@ -46,6 +46,9 @@ cat "${dir_003}"/dist.d/src.file >>"${idir}"/res
 
 echo >>"${idir}"/res
 
+echo -e "${HLIGHT}--- diff ${dir_003}/dist.d/src.d ${dir_003}/src.d/src.d ---${NORMAL}" >>"${idir}"/res
+diff "${dir_003}"/dist.d/src.file "${dir_003}"/src.d/src.file >>"${idir}"/res
+
 #! DIR
 
 src=${dir_003}/src.d/src.d
@@ -73,6 +76,11 @@ ls "${dir_003}"/dist.d
 
 echo -e "${HLIGHT}--- cat file://${dir_003}/dist.d/src.file ---${NORMAL}" #start files
 cat "${dir_003}"/dist.d/src.d/in_src_d.file >>"${idir}"/res
+
+echo >>"${idir}"/res
+
+echo -e "${HLIGHT}--- diff ${dir_003}/dist.d/src.d ${dir_003}/src.d/src.d ---${NORMAL}" >>"${idir}"/res
+diff "${dir_003}"/dist.d/src.d "${dir_003}"/src.d/src.d >>"${idir}"/res
 
 # cr_tst_dir_ <dat &>>res
 
