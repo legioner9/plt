@@ -21,10 +21,12 @@
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}" #print variable
+
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
 # echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
@@ -224,6 +226,23 @@ if [ ${char_type_src} == "-" ]; then
     fi
 
     mv "${file_dist}" "${path_dist}"
+
+    if [[ ${no_check} -eq 0 ]]; then
+        mkdir -v "${tmp_dir}"
+    fi
+
+    # cp ${path_dist} "${tmp_dir}"
+    # cd "${tmp_dir}" || plt_exit
+
+    # if [ ${no_password} -eq 0 ]; then
+    #     unzip -P "${ARGS0}" "${file_dist}"
+    # fi
+
+    # if [ ${no_password} -eq 1 ]; then
+    #     unzip "${file_dist}"
+    # fi
+
+    # rm -rv "${tmp_dir}"
 
     return 0
 fi
