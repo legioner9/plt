@@ -1,0 +1,26 @@
+ARGS:
+    \$1 prl
+        if 0 - without prl
+    \$2 dist file !(be added to file.zip if not ext not .zip)
+    \$3 src node
+    \$4 0 
+        if not 0 be selftst result
+    \$5 (-bcp|dpl)
+
+CNTLS:
+        --_
+        -_
+
+LOGIC ARGS:
+    !()
+    ?()
+
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
+exa:
+    !( --_sil && --_arb )
+    ( --_{sub}_{obs} && --_ram )
+    ( --_{sub}_{obs} || -_crtag || -_addtag )
+    ?( --_ram ) && (-_crtag || -_addtag )

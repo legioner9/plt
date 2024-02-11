@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> bdpl_pzip_ 
+farg2e2_ -> bdpl_pzip_
+echo_deb_ -> bdpl_pzip_
+bdpl_pzip_ -> bdpl_pzip_:is_num
+bdpl_pzip_ -> bdpl_pzip_:exit_err_bdpl_pzip_
+bdpl_pzip_ -> bdpl_pzip_:exit_reg_bdpl_pzip_
+bdpl_pzip_ -> bdpl_pzip_:unset_autoargs_bdpl_pzip_
+' {wrap_fn}
+' fnn o-> bdpl_pzip_
+' {body_fn}
+@enduml
