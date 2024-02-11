@@ -161,6 +161,17 @@ cd "${dir_src}" || {
     return 1
 }
 
+echo -e "${GREEN}\${path_dist}/${file_src} = ${path_dist}/${file_src}${NORMAL}" #print variable
+
+file_src_nozip=$(prs_f -n ${file_src})
+
+path_src_nozip=${path_dist}/${file_src_nozip}
+
+if [ -e ${path_src_nozip} ]; then
+    echo -e "${CYAN}--- mv ${path_src_nozip} ${path_src_nozip}~ ---${NORMAL}" #sistem info mesage
+    mv ${path_src_nozip} ${path_src_nozip}~
+fi
+
 unzip -P "${ARGS0}" "${file_src}" -d "${path_dist}"
 
 #{main_body_fn}

@@ -80,10 +80,17 @@ ${NORMAL}"
 
     cd ${mdeb_num} || plt_exit
 
-    bdpl_pzip_ ${PD_READ} ${mdeb_num}/dist.d/src.file ${mdeb_num}/src.d/src.file 1 -bcp
-    # bdpl_pzip_ ${PD_READ} ${mdeb_num}/dist.d/src.file ${mdeb_num}/src.d/src.file 1
-    
     ls -l ${mdeb_num}/dist.d
+
+    bdpl_pzip_ ${PD_READ} ${mdeb_num}/dist.d/src.file ${mdeb_num}/src.d/src.file 1 -bcp
+
+    bdpl_pzip_ ${PD_READ} ${mdeb_num}/dist.d.bck ${mdeb_num}/dist.d/src.file.zip 1 -dpl
+
+    echo -e "${CYAN}--- tree ${mdeb_num} ---${NORMAL}" #sistem info mesage
+    tree ${mdeb_num}
+
+    echo -e "${CYAN}--- cat ${mdeb_num}/dist.d.bck/src.file ---${NORMAL}" #sistem info mesage
+    cat ${mdeb_num}/dist.d.bck/src.file
 
     # amount_arg $# 1 1
     #{body_fn}

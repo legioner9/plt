@@ -180,6 +180,18 @@ if [[ "${ARGS4}" == "-bcp" ]]; then
     fi
 fi
 
+if [[ "${ARGS4}" == "-dpl" ]]; then
+    if ! punzip_to_ "${ARGS0}" "${ARGS1}" "${ARGS2}" "${ARGS3}"; then
+        plt_exit "in ${FNN} : EXEC_FAIL : 'punzip_to_ ${ARGS0} ${ARGS1} ${ARGS2} ' : return 1"
+        return 1
+    fi
+fi
+
+if [[ "${ARGS4}" != "-dpl" ]] && [[ "${ARGS4}" != "-bcp" ]]; then
+    plt_exit "in ${FNN} : \${ARGS4}='${ARGS4}' not '-dpl' or '-bcp' : return 1"
+    return 1
+fi
+
 #{main_body_fn}
 
 #?---------------------------------------
