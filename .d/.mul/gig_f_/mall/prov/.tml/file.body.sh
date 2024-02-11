@@ -24,6 +24,9 @@ echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
 echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
 echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
 echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS4} = ${ARGS4}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"         #print variable
 echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
 echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
