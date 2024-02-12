@@ -39,7 +39,7 @@ bdpl_pzip_ ${PD_READ} ${mdeb_num}/src.d ${mdeb_num}/dist.d/src.file.zip 1 -dpl
 echo -e "${CYAN}--- cat file://${mdeb_num}/src.d/src.file ---${NORMAL}" >>${idir_324527}/res
 cat ${mdeb_num}/src.d/src.file >>${idir_324527}/res
 echo "" >>${idir_324527}/res
-echo
+echo 
 
 #! DIR src.d/src.d
 

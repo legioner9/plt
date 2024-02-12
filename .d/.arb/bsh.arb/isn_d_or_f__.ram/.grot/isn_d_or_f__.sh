@@ -81,7 +81,7 @@ ${NORMAL}"
     local ptr_path=$1
     ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
-    echo -e "${GREEN}\$ptr_path = file://$ptr_path${NORMAL}" #print variable
+    # echo -e "${GREEN}\$ptr_path = file://$ptr_path${NORMAL}" #print variable
 
     local is_fnode=0
 
@@ -100,7 +100,7 @@ ${NORMAL}"
 
     fi
 
-    echo -e "${GREEN}\$is_fnode = $is_fnode${NORMAL}" #print variable
+    # echo -e "${GREEN}\$is_fnode = $is_fnode${NORMAL}" #print variable
 
     if [ ${is_fnode} -eq 1 ]; then
         return 1
