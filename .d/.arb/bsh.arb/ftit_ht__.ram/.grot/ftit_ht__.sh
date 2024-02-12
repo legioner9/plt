@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/ftit_t__.ram/.grot/ftit_t__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/ftit_ht__.ram/.grot/ftit_ht__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-ftit_t__() {
+ftit_ht__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=($@)
@@ -15,7 +15,7 @@ ftit_t__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/ftit_t__.ram/.grot/ftit_t__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/ftit_ht__.ram/.grot/ftit_ht__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -73,7 +73,7 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    if [[ -z "$1" ]]; then
+        if [[ -z "$1" ]]; then
         plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : '{NARGS}=${NARGS}' demand: 1  : return 1"
         return 1
     fi
@@ -90,7 +90,7 @@ ${NORMAL}"
 
     # echo -e "${GREEN}\$ptr_path = file://$ptr_path${NORMAL}" #print variable
 
-    echo $(date +%s%6N -r "${ptr_path}")
+    echo $(date +%Y%m%d%H%M%S%6N -r "${ptr_path}")
 
     #{body_fn}
 }

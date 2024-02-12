@@ -1,2 +1,2 @@
-utime modify nod \$1
+utime 10**(-6) seconds t0 modify nod \$1
 

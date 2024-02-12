@@ -10,8 +10,10 @@
 @indicator
 @install
 @is
+@modify
 @module
 @nav_nod
+@nod
 @perl
 @rand
 @red
@@ -22,4 +24,5 @@
 @stderr
 @string
 @tst
+@utime
 @wget
