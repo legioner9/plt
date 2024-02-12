@@ -21,6 +21,7 @@ ret2e isn_odw__ "32" >>"${idir_3452tc}"/res
 ret2e isn_odw__ "32 sdf" >>"${idir_3452tc}"/res
 ret2e isn_odw__ "32_sdf" >>"${idir_3452tc}"/res
 ret2e isn_odw__ "32%sdf" >>"${idir_3452tc}"/res
+ret2e isn_odw__ >>"${idir_3452tc}"/res
 
 # cr_tst_dir_ <dat &>>res
 

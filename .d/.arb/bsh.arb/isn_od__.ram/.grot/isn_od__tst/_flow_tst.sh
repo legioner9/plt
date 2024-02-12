@@ -20,6 +20,9 @@ ret2e isn_od__ "32" >>"${idir_3452t}"/res
 
 ret2e isn_od__ "3 2" >>"${idir_3452t}"/res
 
+ret2e isn_od__ >>"${idir_3452t}"/res
+
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

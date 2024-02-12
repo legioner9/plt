@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> repo_main_tst_ 
+farg2e2_ -> repo_main_tst_
+echo_deb_ -> repo_main_tst_
+repo_main_tst_ -> repo_main_tst_:is_num
+repo_main_tst_ -> repo_main_tst_:exit_err_repo_main_tst_
+repo_main_tst_ -> repo_main_tst_:exit_reg_repo_main_tst_
+repo_main_tst_ -> repo_main_tst_:unset_autoargs_repo_main_tst_
+' {wrap_fn}
+' fnn o-> repo_main_tst_
+' {body_fn}
+@enduml

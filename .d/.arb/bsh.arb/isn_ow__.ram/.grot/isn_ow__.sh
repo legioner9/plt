@@ -74,8 +74,8 @@ ${NORMAL}"
     # amount_arg $# 1 1
 
     if [[ -z "$1" ]]; then
-        plt_exit "in ${FNN} : NOT_DEFINE : first arg : return 1"
-        return 1
+        plt_info "in ${FNN} : NOT_DEFINE : first arg : return 0"
+        return 0
     fi
 
     if ! [[ "$1" =~ ^[a-zA-Z]+$ ]]; then

@@ -60,28 +60,42 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(garg2e_ "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e_ "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(garg2e_ "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(garg2e_ "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
     if isn_od__ "$1"; then
-        plt_exit "in ${FNN} : DO? : '$1' : return 1"
-        return 1
+        plt_info "in ${FNN} : NOT_NUMBER : '\$1=$1' : return 0"
+        return 0
     fi
 
-    if [ ! "$1" -ge "$2" ] || [ ! "$1" -le "$3" ]; then
-        plt_exit "message\$4: $4: EXIT amount args = $1: not >= $2 or <= $3"
+    if isn_od__ "$2"; then
+        plt_info "in ${FNN} : NOT_NUMBER : '\$2=$2' : return 0"
+        return 0
+    fi
+
+    if isn_od__ "$3"; then
+        plt_info "in ${FNN} : NOT_NUMBER : '\$3=$3' : return 0"
+        return 0
+    fi
+
+    if [ "$1" -ge "$2" ] && [ "$1" -le "$3" ]; then
+        return 0
+    else
+        plt_info "message '$4': EXEC_FAIL : $1: not >= $2 or <= $3"
+        return 0
     fi
     #{body_fn}
+
 }
 
 cd "${idir}"

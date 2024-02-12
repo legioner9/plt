@@ -18,6 +18,7 @@ ret2e isn_ow__ "casd" >>"${idir_3452}"/res
 ret2e isn_ow__ "ca sd" >>"${idir_3452}"/res
 
 ret2e isn_ow__ "32" >>"${idir_3452}"/res
+ret2e isn_ow__  >>"${idir_3452}"/res
 
 # cr_tst_dir_ <dat &>>res
 
