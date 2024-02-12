@@ -60,23 +60,23 @@ echo -e "${HLIGHT}--- . ${PLT_PATH}/.d/.nid/mall/mall.nid, return 0 ---${NORMAL}
 return 0
 fi
 #! ----- START COMMENT IF NOT USED ${_garg2e2_} -----
-# if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
-if ! ${_garg2e2_} "${ARGS[@]}"; then
-${_plt_exit} " repo_main_tst_ return 1: ${FNLOCK}"
-return 1
-fi
-#? g_args with cntl=value
-local g_args=($(${_garg2e2_} "${ARGS[@]}"))
-#? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
-local e_args=($(${_earg2e2_} "${ARGS[@]}"))
-[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-local strex
-IFS=$'\n'
-for strex in $(${_garg2e2_} "${ARGS[@]}"); do
-[[ 1 -eq ${verbose} ]] || echo "local $strex"
-eval local \"$strex\"
-done
-IFS=$' \t\n'
+# # if ! ${_garg2e2_} "${ARGS[@]}" 1>/dev/null; then
+# if ! ${_garg2e2_} "${ARGS[@]}"; then
+# ${_plt_exit} " repo_main_tst_ return 1: ${FNLOCK}"
+# return 1
+# fi
+# #? g_args with cntl=value
+# local g_args=($(${_garg2e2_} "${ARGS[@]}"))
+# #? e_args is {ARGS[@]} without cntl and cmtl_value - as it's free
+# local e_args=($(${_earg2e2_} "${ARGS[@]}"))
+# [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+# local strex
+# IFS=$'\n'
+# for strex in $(${_garg2e2_} "${ARGS[@]}"); do
+# [[ 1 -eq ${verbose} ]] || echo "local $strex"
+# eval local \"$strex\"
+# done
+# IFS=$' \t\n'
 #! ----- END COMMENT IF NOT USED ${_garg2e2_} -----
 #? mapping ${FNN}.local.list" file to var_fn_arr and local vars instead fn
 for var_fn in $("${_f2e}" "${PLT_PATH}/actio/mall/dir_repo_main_tst_/.d.ax/.sal.ax/repo_main_tst_.local.list"); do

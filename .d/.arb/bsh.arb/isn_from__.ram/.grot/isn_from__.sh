@@ -89,7 +89,7 @@ ${NORMAL}"
     fi
 
     if [ "$1" -ge "$2" ] && [ "$1" -le "$3" ]; then
-        return 0
+        return 1
     else
         plt_info "message '$4': EXEC_FAIL : $1: not >= $2 or <= $3"
         return 0
