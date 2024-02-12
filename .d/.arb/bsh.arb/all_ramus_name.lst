@@ -13,9 +13,12 @@ ftit_ht__
 ftit_t__
 go_repo__
 isn_d_or_f__
+isn_from__
 isn_lcru__
+isn_od__
+isn_odw__
+isn_ow__
 isn_space__
-is_num__
 NBash
 parr2f__
 pstr2rgx__
@@ -23,5 +26,6 @@ RE__
 red_stderr__
 rnd2d__
 rnd2w__
+run2tic__
 site2d__
 t2c__
