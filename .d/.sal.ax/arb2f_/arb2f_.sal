@@ -123,12 +123,18 @@
 #?---------------------------------------------
 #?---------------------------------------
 
-lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb.lst
-arr_arb=($(${_f2e} ${lst_mitt}))
-parr3e_ arr_arb
-
 file_resiv=${ARGS0}
 num_flow=${ARGS1}
+
+if [[ "${ARGS2}" == "-dpl" ]]; then
+    plt_info "in -dpl mode"
+    lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb_dpl.lst
+else
+    lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb.lst
+fi
+
+arr_arb=($(${_f2e} ${lst_mitt}))
+parr3e_ arr_arb
 
 echo -e "${GREEN}\$file_resiv = $file_resiv${NORMAL}" #print variable
 echo -e "${GREEN}\$num_flow = $num_flow${NORMAL}"     #print variable
@@ -174,7 +180,7 @@ arb2f_insert() {                                        #$1 arb
                 cr_f_ "${file_resiv}" --fi0 "${file_mitt}" --fr0 "{{${mitt}}}"
 
                 cr_f_ "${file_resiv}" --vi0 "[[${mitt}]]" --vr0 "{{${mitt}}}"
-                
+
             else
                 plt_exit "in ${FNN} : NOT_FILE : file://${file_resiv} && file://${file_mitt} return 1"
                 return 1

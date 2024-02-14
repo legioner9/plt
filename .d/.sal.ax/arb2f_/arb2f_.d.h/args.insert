@@ -4,6 +4,7 @@ ARGS:
     [, \$2 ] num arb to reciver
         if \$2 empty : choice arb from menu
         if \$2 == 0 : insrt all arb from menu
+    [, \$3 ] ( | -dpl) mode for deploy sys   
 
 CNTLS:
         --_
