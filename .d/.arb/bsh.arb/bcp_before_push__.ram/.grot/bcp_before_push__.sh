@@ -83,6 +83,8 @@ ${NORMAL}"
 
             rm -rv "${path_flash}"/.read
             cp -frv "${PD_PATH}/.d/.read" "${path_flash}"
+            rm -rv "${path_flash}"/.repo
+            cp -frv "${PD_PATH}/.d/.repo" "${path_flash}"
             echo -e "${HLIGHT}--- echo $(date) >/run/media/${USER}/${item_name_flash_} ---${NORMAL}" #start files
             echo "$(date)" >"/run/media/${USER}/${item_name_flash_}"/.read/date.man
 

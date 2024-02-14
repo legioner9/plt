@@ -100,9 +100,9 @@ ${NORMAL}"
 
         if [[ "$5" != "0" ]]; then
 
-       eval incl=\"\""$5"\"\"
+            eval incl=\"\""$5"\"\"
 
-       echo -e "${GREEN}\$incl = $incl${NORMAL}" #print variable
+            echo -e "${GREEN}\$incl = $incl${NORMAL}" #print variable
 
             plt_pause "download? : $1 to dir ${PPWD}"
 

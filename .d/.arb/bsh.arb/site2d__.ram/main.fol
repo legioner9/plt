@@ -1,1 +1,1 @@
-wget sites
+wget sites \$1 url \$2 deep \$3 (0|-np) not parrent \$4 (0|input file) \$5 (0|include-dir) 
