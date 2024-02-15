@@ -23,6 +23,9 @@ ${REPO_PATH}/NRuby/.arb/gem
 ${REPO_PATH}/NBash/.arb/man
 ${REPO_PATH}/NBash/.arb/util
 
+${REPO_PATH}/NPhp/.d/.arb/man.arb
+${REPO_PATH}/NPhp/.d/.arb/infn.arb
+
 ${REPO_PATH}/Opus/.d/.arb/syll.arb
 ${REPO_PATH}/Opus/.d/.arb/html.arb
 ${REPO_PATH}/NMall/.d/.arb/mall.arb
