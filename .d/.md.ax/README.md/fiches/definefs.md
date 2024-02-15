@@ -2,9 +2,11 @@
 
 [up to parent doc](../solvendum.md)
 
-- `<repo_path>/.d` dir for spechial directories
+- [`<repo_path>/.d`](../repofiles/repodotd.md) 
   - `.d/.ham` hooks for before/after git action
 
 - `<repo_path>/.<repo_name>rc` входной скрипт bash процедур и определений констант для `<repo_name>`
+
+- 
 
 [up to README.md](../../../README.md)
