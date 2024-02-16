@@ -1,0 +1,1 @@
+tmux attach from name [, \$1] 

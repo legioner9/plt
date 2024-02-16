@@ -1,4 +1,6 @@
+@alias
 @alt
+@attach
 @cpan
 @digit
 @dir
@@ -16,7 +18,9 @@
 @isn
 @kill
 @letter
+@ls
 @lsof
+@menu
 @modify
 @module
 @nav_nod
@@ -37,6 +41,7 @@
 @stdout
 @string
 @tic
+@tmux
 @tst
 @utime
 @wget
