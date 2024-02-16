@@ -72,6 +72,7 @@ ${NORMAL}"
     # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+    
     if [[ -z "$(tmux ls)" ]]; then
         plt_info "tmux set sessions empty : return 0"
         return 0

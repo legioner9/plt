@@ -24,6 +24,7 @@
 @modify
 @module
 @nav_nod
+@new
 @nod
 @num
 @only
@@ -35,6 +36,7 @@
 @repeat
 @repo
 @rpm
+@session
 @site
 @space
 @stderr
