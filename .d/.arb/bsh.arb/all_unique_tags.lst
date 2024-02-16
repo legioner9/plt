@@ -14,7 +14,9 @@
 @install
 @is
 @isn
+@kill
 @letter
+@lsof
 @modify
 @module
 @nav_nod
@@ -22,6 +24,8 @@
 @num
 @only
 @perl
+@port
+@ps
 @rand
 @red
 @repeat
@@ -30,6 +34,7 @@
 @site
 @space
 @stderr
+@stdout
 @string
 @tic
 @tst
