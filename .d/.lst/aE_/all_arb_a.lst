@@ -28,6 +28,7 @@ ${REPO_PATH}/NPhp/.d/.arb/doc.arb
 
 ${REPO_PATH}/Opus/.d/.arb/syll.arb
 ${REPO_PATH}/Opus/.d/.arb/html.arb
+${REPO_PATH}/Opus/.d/.arb/heap.arb
 ${REPO_PATH}/NMall/.d/.arb/mall.arb
 
 ${REPO_PATH}/NPerl/.d/.arb/man.arb

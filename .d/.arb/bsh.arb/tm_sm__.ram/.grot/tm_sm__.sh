@@ -10,7 +10,7 @@ idir=$(pwd)
 tm_sm__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
-    local ARGS=($@)
+    local ARGS=("$@")
     local NARGS=$#
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
@@ -68,10 +68,15 @@ ${NORMAL}"
     [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
     for strex in $(garg2e_ "${ARGS[@]}"); do
         [[ 1 -eq ${verbose} ]] || echo "local $strex"
+        echo "$strex"
         eval local $strex
     done
     #{default_cntl_fn}
     # amount_arg $# 1 1
+
+    echo -e "${GREEN}\${ARGS[0]} = ${ARGS[0]}${NORMAL}" #print variable
+    echo -e "${GREEN}\${ARGS[1]} = ${ARGS[1]}${NORMAL}" #print variable
+
     #{body_fn}
 }
 

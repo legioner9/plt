@@ -32,7 +32,9 @@
 @perl
 @port
 @ps
+@ques
 @rand
+@read
 @red
 @repeat
 @repo
@@ -48,3 +50,4 @@
 @tst
 @utime
 @wget
+@yes
