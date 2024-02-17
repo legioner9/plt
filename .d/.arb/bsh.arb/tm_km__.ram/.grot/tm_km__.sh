@@ -72,7 +72,7 @@ ${NORMAL}"
     # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    
+
     if [[ -z "$(tmux ls)" ]]; then
         plt_info "tmux set sessions empty : return 0"
         return 0
@@ -105,7 +105,10 @@ ${NORMAL}"
     #     tmux kill-session -t "${name_session}"
     # fi
 
-if 
+    if ! isn_yes__ "DO?: kill-session :: ${delectus}"; then
+        echo -e "${HLIGHT}--- tmux kill-session -t "${name_session}" ---${NORMAL}" #start files
+        tmux kill-session -t "${name_session}"
+    fi
 
     #{body_fn}
 }
