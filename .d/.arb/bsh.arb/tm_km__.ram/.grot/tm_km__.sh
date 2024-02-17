@@ -96,14 +96,16 @@ ${NORMAL}"
 
     name_session=${arr_delectus[0]}
 
-    plt_info "DO?: kill-session :: ${delectus} :: do only 'y'"
+    # plt_info "DO?: kill-session :: ${delectus} :: do only 'y'"
 
-    read yes
+    # read yes
 
-    if [[ ${yes} == "y" ]]; then
-        echo -e "${HLIGHT}--- tmux kill-session -t "${name_session}" ---${NORMAL}" #start files
-        tmux kill-session -t "${name_session}"
-    fi
+    # if [[ ${yes} == "y" ]]; then
+    #     echo -e "${HLIGHT}--- tmux kill-session -t "${name_session}" ---${NORMAL}" #start files
+    #     tmux kill-session -t "${name_session}"
+    # fi
+
+if 
 
     #{body_fn}
 }

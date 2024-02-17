@@ -74,24 +74,24 @@ ${NORMAL}"
     # amount_arg $# 1 1
 
     if isn_od__ "$1"; then
-        plt_info "in ${FNN} : NOT_NUMBER : '\$1=$1' : return 0"
+        plt_err "in ${FNN} : NOT_NUMBER : '\$1=$1' : return 0"
         return 0
     fi
 
     if isn_od__ "$2"; then
-        plt_info "in ${FNN} : NOT_NUMBER : '\$2=$2' : return 0"
+        plt_err "in ${FNN} : NOT_NUMBER : '\$2=$2' : return 0"
         return 0
     fi
 
     if isn_od__ "$3"; then
-        plt_info "in ${FNN} : NOT_NUMBER : '\$3=$3' : return 0"
+        plt_err "in ${FNN} : NOT_NUMBER : '\$3=$3' : return 0"
         return 0
     fi
 
     if [ "$1" -ge "$2" ] && [ "$1" -le "$3" ]; then
         return 1
     else
-        plt_info "message '$4': EXEC_FAIL : $1: not >= $2 or <= $3"
+        plt_err "message '$4': EXEC_FAIL : $1: not >= $2 or <= $3"
         return 0
     fi
     #{body_fn}

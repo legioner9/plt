@@ -1,0 +1,1 @@
+neg ques mess \$1 if 'y' return 1 - any case return 0

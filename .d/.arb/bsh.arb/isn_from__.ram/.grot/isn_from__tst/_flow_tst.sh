@@ -11,13 +11,13 @@ cd "${idir_dwefq}" || {
 #?-------------------------------------
 
 : >${idir_dwefq}/res
-ret2e isn_from__ 1 1 >>${idir_dwefq}/res
-ret2e isn_from__ 1 1 x >>${idir_dwefq}/res
-ret2e isn_from__ 1 1 1 >>${idir_dwefq}/res
-ret2e isn_from__ 1 2 1 >>${idir_dwefq}/res
-ret2e isn_from__ 2 1 1 >>${idir_dwefq}/res
-ret2e isn_from__ 2 1 3 >>${idir_dwefq}/res
-ret2e isn_from__ 0 0 0 >>${idir_dwefq}/res
+ret2e isn_from__ 1 1 &>>${idir_dwefq}/res
+ret2e isn_from__ 1 1 x &>>${idir_dwefq}/res
+ret2e isn_from__ 1 1 1 &>>${idir_dwefq}/res
+ret2e isn_from__ 1 2 1 &>>${idir_dwefq}/res
+ret2e isn_from__ 2 1 1 &>>${idir_dwefq}/res
+ret2e isn_from__ 2 1 3 &>>${idir_dwefq}/res
+ret2e isn_from__ 0 0 0 &>>${idir_dwefq}/res
 
 # cr_tst_dir_ <dat &>>res
 
