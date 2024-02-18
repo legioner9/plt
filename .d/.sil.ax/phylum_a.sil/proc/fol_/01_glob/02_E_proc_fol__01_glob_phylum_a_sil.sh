@@ -12,6 +12,8 @@
 
         . "${arb_}"/paratus_arb.sh
 
+        echo -e "${HLIGHT}--- ${_f2e} ${arb_}/all_ramus_name.lst ---${NORMAL}" #start files
+
         for item9 in $("${_f2e}" "${arb_}"/all_ramus_name.lst); do
 
             ram_dir="${arb_}"/"${item9}".ram

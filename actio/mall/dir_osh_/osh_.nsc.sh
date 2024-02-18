@@ -21,7 +21,7 @@ osh_() {
 
     #{ctrl_args}
 
-    local ARGS=($@)
+    local ARGS=("$@")
     local NARGS=${#ARGS[@]}
     local FNN=osh_
     local var_wrap

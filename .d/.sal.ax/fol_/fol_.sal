@@ -92,7 +92,8 @@ fi
 # tree ${arb_}
 if [ -d "${sil_}/proc/fol_" ]; then
 
-    c_up "${sil_}/proc/fol_">/dev/null
+    echo -e "${HLIGHT}--- c_up "${sil_}/proc/fol_" ---${NORMAL}" #start files
+    c_up "${sil_}/proc/fol_" >/dev/null
 
     inner_fn_arr=()
     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"

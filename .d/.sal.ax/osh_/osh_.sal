@@ -123,6 +123,8 @@
 #?---------------------------------------------
 #?---------------------------------------
 
+echo -e "${GREEN}\$FN_FN_DIR = file://$FN_FN_DIR${NORMAL}" #print variable
+
 if [[ -z "${ARGS0}" ]]; then
     plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS0} NOT_DEFINE : return 1"
     return 1
@@ -136,7 +138,7 @@ if [[ "${ARGS0}" == "-E" ]]; then
     dir_arb=${PLT_PATH}/.d/.arb/osh.arb
 
     echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
-    
+
     fol_ \
         --_sil "${dir_sil}" \
         --_arb "${dir_arb}" \
@@ -160,7 +162,7 @@ fi
 
 echo -e "${HLIGHT}--- exec : ${ARGS[*]} ---${NORMAL}" #start files
 
-${ARGS[*]}
+"${ARGS[*]}"
 
 unset "${ARGS0}"
 
