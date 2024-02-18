@@ -142,6 +142,28 @@ if [[ -z "${ARGS0}" ]]; then
     return 1
 fi
 
+# echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
+
+arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
+
+flag_fail_cntl=0
+
+if [[ "${ARGS0:0:1}" == "-" ]]; then
+    flag_fail_cntl=1
+    for default_cntl in ${arr_default_cntl[@]}; do
+
+        if [[ "${default_cntl}" == "${ARGS0}" ]]; then
+            flag_fail_cntl=0
+        fi
+
+    done
+fi
+
+if [[ ${flag_fail_cntl} -eq 1 ]]; then
+    plt_exit "in ${FNN} : NOT_IN_CONDITION : '\${ARGS0}=${ARGS0}' not in (-n -an -t -at -t -m -c) : return 1"
+    return 1
+fi
+
 arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
 
 if [[ "${ARGS0}" == "-E" ]]; then
@@ -231,6 +253,20 @@ if [[ "${ARGS0}" == "-n" ]]; then
     str_to_grep=${ARGS1}
 
     001_grep_name__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-an" ]]; then
+
+    004_all_name__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-at" ]]; then
+
+    005_all_tags__d_ax__osh___fn_dir_osh_
 
     return 0
 fi

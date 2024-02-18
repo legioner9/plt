@@ -23,3 +23,7 @@ dir_sil
 dir_arb
 
 type_fol_to_grep
+
+arr_default_cntl
+default_cntl
+flag_fail_cntl
