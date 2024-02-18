@@ -125,6 +125,19 @@
 
 echo -e "${GREEN}\$FN_FN_DIR = file://$FN_FN_DIR${NORMAL}" #print variable
 
+echo -e "${HLIGHT}--- ls file://$FN_FN_DIR ---${NORMAL}" #start files
+
+ls "${FN_FN_DIR}"
+
+c_up "${FN_FN_DIR}" >/dev/null
+
+#! 001_grep_name__d_ax__osh___fn_dir_osh_
+#! 002_grep_tag__d_ax__osh___fn_dir_osh_
+#! 003_E__d_ax__osh___fn_dir_osh_
+#! 004_exec_fn__d_ax__osh___fn_dir_osh_
+
+
+
 if [[ -z "${ARGS0}" ]]; then
     plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS0} NOT_DEFINE : return 1"
     return 1

@@ -1,6 +1,8 @@
 ARGS:
     \$1 once name_fn
         if "-E" exec catalog osh.arb
+        if "-n" grep for \$2 name -> mm -> exec 
+        if "-t" grep for \$2 tag -> mm -> exec 
     \$2 ... args for name_fn
 
 CNTLS:

@@ -11,6 +11,7 @@ ${PLT_PATH}/.d/.arb/apt_alt.arb
 ${PLT_PATH}/.d/.arb/epm_alt.arb
 
 ${PLT_PATH}/.d/.arb/git.arb
+${PLT_PATH}/.d/.arb/gui.arb
 
 ${PLT_PATH}/.d/.arb/.sgm/html.sgm.arb
 
