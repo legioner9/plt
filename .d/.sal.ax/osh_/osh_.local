@@ -21,3 +21,5 @@ name_ram
 
 dir_sil
 dir_arb
+
+type_fol_to_grep

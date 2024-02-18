@@ -168,17 +168,71 @@ if [[ "${ARGS0}" == "-t" ]]; then
 
         plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
         return 1
-
     fi
 
-    #! define str_to_grep for infn 002_grep_tag__d_ax__osh___fn_dir_osh_ :
-
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
     str_to_grep=${ARGS1}
 
-    002_grep_tag__d_ax__osh___fn_dir_osh_
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="tags"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
 
     return 0
+fi
 
+if [[ "${ARGS0}" == "-m" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="main"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-c" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="cont"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-n" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    001_grep_name__d_ax__osh___fn_dir_osh_
+
+    return 0
 fi
 
 fn_file=${arb_osh_dir}/${ARGS0}.ram/.grot/${ARGS0}.sh
@@ -195,7 +249,7 @@ fi
 
 echo -e "${HLIGHT}--- exec : ${ARGS[*]} ---${NORMAL}" #start files
 
-"${ARGS[*]}"
+"${ARGS[@]}"
 
 unset "${ARGS0}"
 

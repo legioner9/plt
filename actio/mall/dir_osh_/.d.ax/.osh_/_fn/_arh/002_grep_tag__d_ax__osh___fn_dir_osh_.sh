@@ -24,6 +24,11 @@
         return 1
     fi
 
+    if [ -z "${type_fol_to_grep}" ]; then
+        plt_info "in 002_grep_tag__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${type_fol_to_grep}' : return 1"
+        return 1
+    fi
+
     #! -------------- END check env -------------------
     #{body}
 
@@ -31,10 +36,9 @@
     local main_str
     local tags_str
     local arr_name_ram
-    local item_arr_name_ram
 
-    #? define env infn
-    local type_fol_to_grep="tags"
+    #? define env infn #!
+    # local type_fol_to_grep="tags"
 
     arr_name_ram=()
 

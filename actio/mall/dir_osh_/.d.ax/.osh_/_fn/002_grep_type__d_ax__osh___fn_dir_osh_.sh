@@ -2,35 +2,40 @@
 #? return 2 => return 0, return 3 => return 1
 #{pre}
 
-001_grep_name__d_ax__osh___fn_dir_osh_() {
+002_grep_type__d_ax__osh___fn_dir_osh_() {
 
-    echo -e "${CYAN}--- 001_grep_name__d_ax__osh___fn_dir_osh_() file://${PLT_PATH}/actio/mall/dir_osh_/.d.ax/.osh_/_fn/001_grep_name__d_ax__osh___fn_dir_osh_.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- 002_grep_type__d_ax__osh___fn_dir_osh_() file://${PLT_PATH}/actio/mall/dir_osh_/.d.ax/.osh_/_fn/002_grep_type__d_ax__osh___fn_dir_osh_.sh ---${NORMAL}" #sistem info mesage
     echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                                                     #sistem info mesage
     # local first_arg=
     # first_arg=$1
     # if [ -z "${first_arg}" ]; then
-    #     plt_info "001_grep_name__d_ax__osh___fn_dir_osh_() : $1 : args NOT_DEFINE : return 1"
+    #     plt_info "002_grep_type__d_ax__osh___fn_dir_osh_() : $1 : args NOT_DEFINE : return 1"
     #     return 1
     # fi
     #! -------------- START check env -------------------
+
     if [ -z "${str_to_grep}" ]; then
-        plt_info "in 001_grep_name__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '${str_to_grep}' : return 1"
+        plt_info "in 002_grep_type__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${str_to_grep}' : return 1"
         return 1
     fi
 
     if [ -z "${arb_osh_dir}" ]; then
-        plt_info "in 001_grep_name__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '${arb_osh_dir}' : return 1"
+        plt_info "in 002_grep_type__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${arb_osh_dir}' : return 1"
         return 1
     fi
+
+    if [ -z "${type_fol_to_grep}" ]; then
+        plt_info "in 002_grep_type__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${type_fol_to_grep}' : return 1"
+        return 1
+    fi
+
     #! -------------- END check env -------------------
     #{body}
+
     local mach_grep
     local main_str
     local tags_str
     local arr_name_ram
-    local type_fol_to_grep
-
-    type_fol_to_grep="name"
 
     arr_name_ram=()
 
@@ -39,10 +44,10 @@
         # echo -e "${GREEN}\$name_ram = $name_ram${NORMAL}" #print variable
         local path_to_ram=${arb_osh_dir}/${name_ram}.ram
 
-        mach_grep=$(echo ${name_ram} | grep "${str_to_grep}")
+        mach_grep=$(grep "${str_to_grep}" "${path_to_ram}"/"${type_fol_to_grep}".fol)
 
         if [[ -n "${mach_grep}" ]]; then
-            echo -e "${GREEN}match : ${str_to_grep}${NORMAL}" #print variable
+            echo -e "${GREEN}match : ${str_to_grep}${NORMAL}"          #print variable
             echo -e "${RED}${type_fol_to_grep} : $mach_grep${NORMAL}" #print variable
 
             if [ -f ${path_to_ram}/main.fol ]; then
@@ -91,5 +96,6 @@
         return 0
     done
     return 0
+    #{body}
 
 }
