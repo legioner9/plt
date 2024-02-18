@@ -14,7 +14,7 @@ echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mes
 # fi
 #! -------------- START check env -------------------
 if [ -z "${XXX}" ]; then
-plt_info "in 02_ttm_fn_01_first_01_second_d__de_b() : NOT_DEFINE : '${XXX}' : return 1"
+plt_info "in 02_ttm_fn_01_first_01_second_d__de_b() : NOT_DEFINE : '\${XXX}' : return 1"
 return 1
 fi
 #! -------------- END check env -------------------

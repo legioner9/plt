@@ -22,13 +22,15 @@
             if [ -f ${ram_dir}/main.fol ]; then
                 main_str="$("${_f2oe}" "${ram_dir}"/main.fol)"
             else
-                plt_pause "NOT_FILE '${ram_dir}/main.fol'"
+                plt_info "NOT_FILE '${ram_dir}/main.fol' continue"
+                continue
             fi
 
             if [ -f ${ram_dir}/tags.fol ]; then
                 tags_str="$("${_f2str_}" "${ram_dir}"/tags.fol)"
             else
-                plt_pause "NOT_FILE '${ram_dir}/tags.fol'"
+                plt_info "NOT_FILE '${ram_dir}/tags.fol' continue"
+                continue
             fi
 
             echo -e "

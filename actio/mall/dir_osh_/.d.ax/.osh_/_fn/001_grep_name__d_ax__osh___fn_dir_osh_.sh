@@ -13,11 +13,21 @@
     #     return 1
     # fi
     #! -------------- START check env -------------------
-    # if [ -z "${XXX}" ]; then
-    #     plt_info "in 001_grep_name__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '${XXX}' : return 1"
-    #     return 1
-    # fi
+    if [ -z "${str_to_grep}" ]; then
+        plt_info "in 002_grep_tag__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '${str_to_grep}' : return 1"
+        return 1
+    fi
+
+        if [ -z "${arb_osh_dir}" ]; then
+        plt_info "in 002_grep_tag__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '${arb_osh_dir}' : return 1"
+        return 1
+    fi
     #! -------------- END check env -------------------
     #{body}
+    for name_ram in $(d2e_ -n -dd ${arb_osh_dir} "ram "); do
+
+    echo -e "${GREEN}\$item1 = $item1${NORMAL}" #print variable
+
+done
 
 }

@@ -125,10 +125,6 @@
 
 echo -e "${GREEN}\$FN_FN_DIR = file://$FN_FN_DIR${NORMAL}" #print variable
 
-echo -e "${HLIGHT}--- ls file://$FN_FN_DIR ---${NORMAL}" #start files
-
-ls "${FN_FN_DIR}"
-
 c_up "${FN_FN_DIR}" >/dev/null
 
 #! 001_grep_name__d_ax__osh___fn_dir_osh_
@@ -136,7 +132,10 @@ c_up "${FN_FN_DIR}" >/dev/null
 #! 003_E__d_ax__osh___fn_dir_osh_
 #! 004_exec_fn__d_ax__osh___fn_dir_osh_
 
-
+# ${BLUE}PATH: file://${ram_dir}${NORMAL}
+# ${GREEN}NAME: ${ram_name}${NORMAL}
+# ${RED}MAIN: ${main_str}${NORMAL}
+# ${CYAN}TAGS: ${tags_str}${NORMAL}"
 
 if [[ -z "${ARGS0}" ]]; then
     plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS0} NOT_DEFINE : return 1"
@@ -147,15 +146,36 @@ arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
 
 if [[ "${ARGS0}" == "-E" ]]; then
 
-    dir_sil=${SIL_A}
-    dir_arb=${PLT_PATH}/.d/.arb/osh.arb
+    # dir_sil=${SIL_A}
+    # dir_arb=${PLT_PATH}/.d/.arb/osh.arb
 
-    echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
+    # echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
 
-    fol_ \
-        --_sil "${dir_sil}" \
-        --_arb "${dir_arb}" \
-        -_E
+    # fol_ \
+    #     --_sil "${dir_sil}" \
+    #     --_arb "${dir_arb}" \
+    #     -_E
+
+    003_E__d_ax__osh___fn_dir_osh_
+
+    return 0
+
+fi
+
+if [[ "${ARGS0}" == "-t" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+
+    fi
+
+    #! define str_to_grep for infn 002_grep_tag__d_ax__osh___fn_dir_osh_ :
+
+    str_to_grep=${ARGS1}
+
+    002_grep_tag__d_ax__osh___fn_dir_osh_
 
     return 0
 

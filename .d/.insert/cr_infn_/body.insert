@@ -11,7 +11,7 @@ echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mes
 #! -------------- START check env -------------------
 
 if [ -z "${XXX}" ]; then
-    plt_info "in {name_fn}() : NOT_DEFINE : '\${XXX}' : return 1"
+    plt_info "in {name_fn}() : NOT_DEFINE : '\\\${XXX}' : return 1"
     return 1
 fi
 

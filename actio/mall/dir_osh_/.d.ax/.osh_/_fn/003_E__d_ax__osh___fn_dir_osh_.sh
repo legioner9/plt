@@ -18,6 +18,18 @@
     #     return 1
     # fi
     #! -------------- END check env -------------------
+
+    dir_sil=${SIL_A}
+    dir_arb=${PLT_PATH}/.d/.arb/osh.arb
+
+    echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
+
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_E
+
+    return 0
     #{body}
 
 }

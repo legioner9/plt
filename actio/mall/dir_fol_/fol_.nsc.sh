@@ -21,7 +21,7 @@ fol_() {
 
     #{ctrl_args}
 
-    local ARGS=($@)
+    local ARGS=("$@")
     local NARGS=${#ARGS[@]}
     local FNN=fol_
     local var_wrap
@@ -83,23 +83,24 @@ fol_() {
         var_fn_arr+=("${var_fn}")
     done
     #? mapping obc_ file to env_fn_arr and local vars into fn as mutable internal values
-    if [ -f "${obc_:-0}" ]; then
-        for arg_fn in $("${_f2e}" "${obc_}"); do
-            # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
-            eval local "$arg_fn"
-            arg_fn_arr+=("${arg_fn}")
-        done
-    fi
+    # if [ -f "${obc_:-0}" ]; then
+    #     for arg_fn in $("${_f2e}" "${obc_}"); do
+    #         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
+    #         eval local "$arg_fn"
+    #         arg_fn_arr+=("${arg_fn}")
+    #     done
+    # fi
     #? mapping aer_ file to env_fn_arr and local vars into fn as immutable external values
-    if [ -f "${aer_:-0}" ]; then
-        for env_fn in $("${_f2e}" "${aer_}"); do
-            # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
-            eval local "$env_fn"
-            env_fn_arr+=("${env_fn}")
-        done
-    fi
+    # if [ -f "${aer_:-0}" ]; then
+    #     for env_fn in $("${_f2e}" "${aer_}"); do
+    #         # echo -e "${GREEN}$var_fn = $var_fn${NORMAL}" #print variable
+    #         eval local "$env_fn"
+    #         env_fn_arr+=("${env_fn}")
+    #     done
+    # fi
     #? visualisation pointers for use: mapping pts_ file to pts_fn_arr
-    if [ -f "${pts_:-0}" ]; then
+    # if [ -f "${pts_:-0}" ]; then
+    if [ -n "${pts_}" ] &&  [ -f "${pts_}" ]; then
         for pts_fn in $("${_f2e}" "${pts_}"); do
             pts_fn_arr+=("${pts_fn}")
         done

@@ -16,3 +16,8 @@ obc
 
 arb_osh_dir
 fn_file
+
+name_ram
+
+dir_sil
+dir_arb
