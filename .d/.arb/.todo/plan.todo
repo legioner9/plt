@@ -1,0 +1,11 @@
+
+# 1. test change stste after deploy to any host:
+
+    bdpl_pzip_
+        bdpl_pzip_extst/extst_1/start_exec.tst_
+    punzip_to_
+        punzip_to_tst/exec.tst_
+    pzip_to_
+        pzip_to_extst/extst_1/start_exec.tst_
+
+siple tst NOT_IMPOSSIBLE - TO DO single test for .tst_
