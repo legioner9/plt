@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> garb_ 
+farg2e2_ -> garb_
+echo_deb_ -> garb_
+garb_ -> garb_:is_num
+garb_ -> garb_:exit_err_garb_
+garb_ -> garb_:exit_reg_garb_
+garb_ -> garb_:unset_autoargs_garb_
+' {wrap_fn}
+' fnn o-> garb_
+' {body_fn}
+@enduml
