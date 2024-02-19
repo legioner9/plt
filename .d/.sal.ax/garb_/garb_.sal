@@ -129,10 +129,184 @@ echo "that ${FNN}.sal"
 
 #{main_body_fn}
 
-arb_path=${ARGS0}
+arb_path=${arb_path_}
 arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
 
+#! define invariable : in_ram_name
 
+dir_sil_infn_garg=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_
+
+echo -e "${GREEN}\$dir_sil_infn_garg = file://$dir_sil_infn_garg${NORMAL}" #print variable
+
+c_up "${dir_sil_infn_garg}" >/dev/null
+
+read -p "TODO: cr infns like $dir_sil_infn_garg/_arh"
+
+#! 001_grep_name__d_ax__osh___fn_dir_osh_
+#! 002_grep_tag__d_ax__osh___fn_dir_osh_
+#! 003_E__d_ax__osh___fn_dir_osh_
+#! 004_exec_fn__d_ax__osh___fn_dir_osh_
+
+# ${BLUE}PATH: file://${ram_dir}${NORMAL}
+# ${GREEN}NAME: ${ram_name}${NORMAL}
+# ${RED}MAIN: ${main_str}${NORMAL}
+# ${CYAN}TAGS: ${tags_str}${NORMAL}"
+
+if [[ -z "${ARGS0}" ]]; then
+    plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS0} NOT_DEFINE : return 1"
+    return 1
+fi
+
+# echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
+
+arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
+
+flag_fail_cntl=0
+
+if [[ "${ARGS0:0:1}" == "-" ]]; then
+    flag_fail_cntl=1
+    for default_cntl in ${arr_default_cntl[@]}; do
+
+        if [[ "${default_cntl}" == "${ARGS0}" ]]; then
+            flag_fail_cntl=0
+        fi
+
+    done
+fi
+
+if [[ ${flag_fail_cntl} -eq 1 ]]; then
+    plt_exit "in ${FNN} : NOT_IN_CONDITION : '\${ARGS0}=${ARGS0}' not in (-n -an -t -at -t -m -c) : return 1"
+    return 1
+fi
+
+arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
+
+if [[ "${ARGS0}" == "-E" ]]; then
+
+    # dir_sil=${SIL_A}
+    # dir_arb=${PLT_PATH}/.d/.arb/osh.arb
+
+    # echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
+
+    # fol_ \
+    #     --_sil "${dir_sil}" \
+    #     --_arb "${dir_arb}" \
+    #     -_E
+
+    003_E__d_ax__osh___fn_dir_osh_
+
+    return 0
+
+fi
+
+if [[ "${ARGS0}" == "-t" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="tags"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-m" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="main"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-c" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="cont"
+
+    002_grep_type__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-n" ]]; then
+
+    if [[ -z "${ARGS1}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS1} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS1}
+
+    001_grep_name__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-an" ]]; then
+
+    004_all_name__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+if [[ "${ARGS0}" == "-at" ]]; then
+
+    005_all_tags__d_ax__osh___fn_dir_osh_
+
+    return 0
+fi
+
+
+
+. "${arb_path}"/_proc/infn/garb__infn.sh
+
+# fn_file=${arb_osh_dir}/${ARGS0}.ram/.grot/${ARGS0}.sh
+
+# if ! [[ -f "${fn_file}" ]]; then
+#     plt_exit "in ${FNN} : NOT_FILE : ${fn_file} return 1"
+#     return 1
+# fi
+
+# if ! . "${fn_file}"; then
+#     plt_exit "in ${FNN} : FAIL_EXEC : . ${fn_file}  return 1"
+#     return 1
+# fi
+
+# echo -e "${HLIGHT}--- exec : ${ARGS[*]} ---${NORMAL}" #start files
+
+# "${ARGS[@]}"
+
+unset "${ARGS0}"
 
 #?---------------------------------------
 #?---------------------------------------------

@@ -6,7 +6,7 @@ fol_dir="${PLT_PATH}"/.d/.mul/nm_opi_/singl_fn
 
 # name_fn="05_TOSHIBA_EXT"
 
-for name_fn in $(f2e ${fol_dir}/_gig_cr_fns_files/_name_fn.lst); do
+for name_fn in $(f2e ${fol_dir}/_gig/_name_fn.lst); do
 
     plt_pause "multyplay cr infs in ${fol_dir} function ${name_fn}"
 

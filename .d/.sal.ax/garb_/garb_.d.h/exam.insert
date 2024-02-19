@@ -1,1 +1,2 @@
 EXAM:
+garb_ -t "rub" --_arb_path \${REPO_PATH}/plt/.d/.arb/osh.arb

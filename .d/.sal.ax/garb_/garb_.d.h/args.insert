@@ -1,9 +1,8 @@
 ARGS:
-    \$1 
+    \$1 (cntl (-n -an -t -at -t -m -c) [, \$2 mach_to_grep]) or \$1 ram_name
 
 CNTLS:
         --_arb_path path to arb for grep
-        --_ptr_ram ptr for record name_ram
         -_
 
 LOGIC ARGS:
