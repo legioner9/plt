@@ -14,8 +14,8 @@ pull_nm_opi__singl_fn__mul() {
     }
 
     if ! is_ping; then
-        plt_info "in pull_nm_opi__singl_fn__mul() : FAIL_EXEC : 'is_ping()' at \${pull_abs_remote}=${pull_abs_remote} : return 1"
-        return 1
+        plt_info "in pull_nm_opi__singl_fn__mul() : FAIL_EXEC : 'is_ping()' at \${pull_abs_remote}=${pull_abs_remote} : return 0"
+        # return 1
     fi
 
     echo -e "${HLIGHT}--- git pull ${pull_abs_remote} master ---${NORMAL}" #start files
