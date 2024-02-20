@@ -1,1 +1,1 @@
-
+check main.ham in \${REPO_PATH} return (0|1)

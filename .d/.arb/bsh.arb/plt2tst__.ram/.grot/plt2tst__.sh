@@ -20,7 +20,7 @@ plt2tst__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: check main.ham in \${REPO_PATH} return (0|1)
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
