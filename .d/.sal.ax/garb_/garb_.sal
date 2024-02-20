@@ -122,30 +122,31 @@ echo "that ${FNN}.sal"
 
 # done
 
-
 #?--------------------------------------------------------
 #?---------------------------------------------
 #?---------------------------------------
 
 #{main_body_fn}
 
-arb_path=${arb_path_}
-arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
+local arb_path=${arb_path_}
+local arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
 
 #! define invariable : in_ram_name
 
-dir_sil_infn_garg=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_
+local dir_sil_infn_garg=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_
 
 echo -e "${GREEN}\$dir_sil_infn_garg = file://$dir_sil_infn_garg${NORMAL}" #print variable
 
 c_up "${dir_sil_infn_garg}" >/dev/null
 
-read -p "TODO: cr infns like $dir_sil_infn_garg/_arh"
+# read -p "TODO: cr infns like $dir_sil_infn_garg/_arh" 
 
-#! 001_grep_name__d_ax__osh___fn_dir_osh_
-#! 002_grep_tag__d_ax__osh___fn_dir_osh_
-#! 003_E__d_ax__osh___fn_dir_osh_
-#! 004_exec_fn__d_ax__osh___fn_dir_osh_
+
+# 001_grep_name_proc_garb__phylum_a_sil.sh  
+# 002_grep_type_proc_garb__phylum_a_sil.sh  
+# 003_E_proc_garb__phylum_a_sil.sh  
+# 004_all_name_proc_garb__phylum_a_sil.sh  
+# 005_all_tag_proc_garb__phylum_a_sil.sh
 
 # ${BLUE}PATH: file://${ram_dir}${NORMAL}
 # ${GREEN}NAME: ${ram_name}${NORMAL}
@@ -159,9 +160,13 @@ fi
 
 # echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
 
-arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
+local arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
 
-flag_fail_cntl=0
+local flag_fail_cntl=0
+local str_to_grep
+local arb_osh_dir
+local type_fol_to_grep
+
 
 if [[ "${ARGS0:0:1}" == "-" ]]; then
     flag_fail_cntl=1
@@ -193,7 +198,7 @@ if [[ "${ARGS0}" == "-E" ]]; then
     #     --_arb "${dir_arb}" \
     #     -_E
 
-    003_E__d_ax__osh___fn_dir_osh_
+    003_E_proc_garb__phylum_a_sil
 
     return 0
 
@@ -213,7 +218,7 @@ if [[ "${ARGS0}" == "-t" ]]; then
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="tags"
 
-    002_grep_type__d_ax__osh___fn_dir_osh_
+    002_grep_type_proc_garb__phylum_a_sil
 
     return 0
 fi
@@ -232,7 +237,7 @@ if [[ "${ARGS0}" == "-m" ]]; then
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="main"
 
-    002_grep_type__d_ax__osh___fn_dir_osh_
+    002_grep_type_proc_garb__phylum_a_sil
 
     return 0
 fi
@@ -251,7 +256,7 @@ if [[ "${ARGS0}" == "-c" ]]; then
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="cont"
 
-    002_grep_type__d_ax__osh___fn_dir_osh_
+    002_grep_type_proc_garb__phylum_a_sil
 
     return 0
 fi
@@ -267,26 +272,24 @@ if [[ "${ARGS0}" == "-n" ]]; then
     #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
     str_to_grep=${ARGS1}
 
-    001_grep_name__d_ax__osh___fn_dir_osh_
+    001_grep_name_proc_garb__phylum_a_sil
 
     return 0
 fi
 
 if [[ "${ARGS0}" == "-an" ]]; then
 
-    004_all_name__d_ax__osh___fn_dir_osh_
+    004_all_name_proc_garb__phylum_a_sil
 
     return 0
 fi
 
 if [[ "${ARGS0}" == "-at" ]]; then
 
-    005_all_tags__d_ax__osh___fn_dir_osh_
+    005_all_tag_proc_garb__phylum_a_sil
 
     return 0
 fi
-
-
 
 . "${arb_path}"/_proc/infn/garb__infn.sh
 

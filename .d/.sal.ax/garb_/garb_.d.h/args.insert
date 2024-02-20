@@ -1,9 +1,17 @@
 ARGS:
-    \$1 (cntl (-n -an -t -at -t -m -c) [, \$2 mach_to_grep]) or \$1 ram_name
+    \$1 arb
+        0 - choice from menu => <list_arb> -> menu <arb> => arb
+        <num> - num from menu => <arb>
+        all - treat all arb from <list_arb>
+    \$2 <proc>
+        0 choce <proc> from menu from files in <path_to_arb>/_proc/_in_fn
+        <num> num from menu => <proc>
+    \$3 ram
+        (cntl (-n -an -t -at -t -m -c) [, \$4 mach_to_grep]) or \$3 ram_name
 
 CNTLS:
-        --_arb_path path to arb for grep
-        -_
+        --_arb_path path_to_arb for grep
+            if not define choice path_to_arb from mm
 
 LOGIC ARGS:
     !()
