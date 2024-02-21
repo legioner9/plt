@@ -19,14 +19,14 @@
 # echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
 # echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
-echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS4} = ${ARGS4}${NORMAL}"         #print variable
-echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"         #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS4} = ${ARGS4}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"     #print variable
 # echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
 
 # echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
@@ -128,6 +128,52 @@ echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"         #print variable
 
 #{main_body_fn}
 
+local root_arb_path=${REPO_PATH}/plt/.d/.arb/osh.arb
+
+if isn_from__ ${NARGS} 4 5 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+    return 1
+fi
+
+garb__menu_arb_list_mmdir() {
+    echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+    local root_dir="$1"
+    local arr=()
+    local res=()
+    #! name file for menu
+    arr=$(d2e_ -n -ff ${root_dir})
+    #! full path for result
+    res=$(d2e_ 0 -ff ${root_dir})
+    local num_res
+    local item_arr
+
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+
+    arr+=("exit_menu")
+    res+=("return_0")
+    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+        num_res=$(($1 - 1))
+        if [[ "${res[${num_res}]}" == "return_0" ]]; then
+            return 0
+        fi
+        ${res[${num_res}]}
+        return 0
+    fi
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                if [[ "${res[$i]}" == "return_0" ]]; then
+                    return 0
+                fi
+                ${res[$i]}
+                ${FNN} "$@"
+            fi
+        done
+    done
+}
+#[[b_sel]]
+
 local arb_path=${arb_path_}
 local arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
 
@@ -139,13 +185,12 @@ echo -e "${GREEN}\$dir_sil_infn_garg = file://$dir_sil_infn_garg${NORMAL}" #prin
 
 c_up "${dir_sil_infn_garg}" >/dev/null
 
-# read -p "TODO: cr infns like $dir_sil_infn_garg/_arh" 
+# read -p "TODO: cr infns like $dir_sil_infn_garg/_arh"
 
-
-# 001_grep_name_proc_garb__phylum_a_sil.sh  
-# 002_grep_type_proc_garb__phylum_a_sil.sh  
-# 003_E_proc_garb__phylum_a_sil.sh  
-# 004_all_name_proc_garb__phylum_a_sil.sh  
+# 001_grep_name_proc_garb__phylum_a_sil.sh
+# 002_grep_type_proc_garb__phylum_a_sil.sh
+# 003_E_proc_garb__phylum_a_sil.sh
+# 004_all_name_proc_garb__phylum_a_sil.sh
 # 005_all_tag_proc_garb__phylum_a_sil.sh
 
 # ${BLUE}PATH: file://${ram_dir}${NORMAL}
@@ -166,7 +211,6 @@ local flag_fail_cntl=0
 local str_to_grep
 local arb_osh_dir
 local type_fol_to_grep
-
 
 if [[ "${ARGS0:0:1}" == "-" ]]; then
     flag_fail_cntl=1
