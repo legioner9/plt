@@ -4,15 +4,15 @@
 
 002_grep_type_proc_garb__phylum_a_sil() {
 
-echo -e "${CYAN}--- 002_grep_type_proc_garb__phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_/002_grep_type_proc_garb__phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mesage
-# local first_arg=
-# first_arg=$1
-# if [ -z "${first_arg}" ]; then
-#     plt_info "002_grep_type_proc_garb__phylum_a_sil() : $1 : args NOT_DEFINE : return 1"
-#     return 1
-# fi
-if [ -z "${str_to_grep}" ]; then
+    echo -e "${CYAN}--- 002_grep_type_proc_garb__phylum_a_sil() file://${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_/002_grep_type_proc_garb__phylum_a_sil.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                                                                                  #sistem info mesage
+    # local first_arg=
+    # first_arg=$1
+    # if [ -z "${first_arg}" ]; then
+    #     plt_info "002_grep_type_proc_garb__phylum_a_sil() : $1 : args NOT_DEFINE : return 1"
+    #     return 1
+    # fi
+    if [ -z "${str_to_grep}" ]; then
         plt_info "in 002_grep_type_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${str_to_grep}' : return 1"
         return 1
     fi
@@ -45,7 +45,7 @@ if [ -z "${str_to_grep}" ]; then
         mach_grep=$(grep "${str_to_grep}" "${path_to_ram}"/"${type_fol_to_grep}".fol)
 
         if [[ -n "${mach_grep}" ]]; then
-            echo -e "${GREEN}match : ${str_to_grep}${NORMAL}"          #print variable
+            echo -e "${GREEN}match : ${str_to_grep}${NORMAL}"         #print variable
             echo -e "${RED}${type_fol_to_grep} : $mach_grep${NORMAL}" #print variable
 
             if [ -f ${path_to_ram}/main.fol ]; then
@@ -96,4 +96,4 @@ if [ -z "${str_to_grep}" ]; then
     return 0
     #{body}
 
-} 
+}

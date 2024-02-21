@@ -30,6 +30,27 @@
         --_arb "${dir_arb}" \
         -_utag
 
+    # /home/st/REPOBARE/_repo/plt/.d/.arb/osh.arb/all_unique_tags.lst
+
+    local tag_utag
+
+    PS3="delectus tag for grep:"
+    select tag_utag in $(f2e_ ${dir_arb}/all_unique_tags.lst); do
+
+        #! str_to_grep : env to 002_grep_type_proc_garb__phylum_a_sil
+        local str_to_grep=${tag_utag:1}
+        break
+
+    done
+    echo -e "${GREEN}\$str_to_grep = $str_to_grep${NORMAL}" #print variable
+    # read -p "debug 1: enter"
+    #! arb_osh_dir : env to 002_grep_type_proc_garb__phylum_a_sil
+    arb_osh_dir=${dir_arb}
+    #! type_fol_to_grep : env to 002_grep_type_proc_garb__phylum_a_si
+    type_fol_to_grep="tags"
+
+    002_grep_type_proc_garb__phylum_a_sil
+
     return 0
 
 }

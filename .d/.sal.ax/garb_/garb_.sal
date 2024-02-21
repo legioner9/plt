@@ -291,7 +291,8 @@ if [[ "${ARGS0}" == "-at" ]]; then
     return 0
 fi
 
-. "${arb_path}"/_proc/infn/garb__infn.sh
+# . "${arb_path}"/_proc/infn/garb__infn.sh
+. "${arb_path}"/_proc/infn/001_infn.sh
 
 # fn_file=${arb_osh_dir}/${ARGS0}.ram/.grot/${ARGS0}.sh
 
