@@ -1,3 +1,5 @@
+#! start bash select -----------------------------------
+
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 local arr=()
 local res=()
@@ -36,3 +38,5 @@ select item_arr in "${arr[@]}"; do
     done
 
 done
+
+#! end bash select -----------------------------------

@@ -1,0 +1,61 @@
+#! start ZZZ_mmfdir flow ---------------------------
+
+ZZZ_mmdir() {
+    #! ZZZ_mmdir flow
+    echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+    local root_dir="$1"
+    local arr_name_file=()
+    local res_path_file=()
+    #! name file for menu
+    arr_name_file=($(d2e_ -n -ff ${root_dir}))
+    #! full path for result
+    res_path_file=($(d2e_ 0 -ff ${root_dir}))
+    local num_res
+    local name_file
+
+    # arr_name_file+=("aaaaaaaaa")
+    # res_path_file+=("bbbbbbbbb")
+
+    arr_name_file+=("exit_menu return 0")
+    res_path_file+=("return_0")
+    arr_name_file+=("exit_env return 7")
+    res_path_file+=("return_7")
+
+    if [ $(num_01 ${ARGSX}) -eq 1 ] && [ ${ARGSX} -le ${#arr_name_file[@]} ]; then
+        num_res=$((${ARGSX} - 1))
+        if [[ "${res_path_file[${num_res}]}" == "return_0" ]]; then
+            return 0
+        fi
+        if [[ "${res_path_file[${num_res}]}" == "return_7" ]]; then
+            return 7
+        fi
+        echo -e "${HLIGHT}--- XXX ${res_path_file[${num_res}]} ---${NORMAL}" #start files
+        XXX ${res_path_file[${num_res}]}
+        return 0
+    fi
+
+    PS3="eligendi actiones: "
+    select name_file in "${arr_name_file[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${name_file} == ${arr_name_file[$i]} ]]; then
+                if [[ "${res_path_file[$i]}" == "return_0" ]]; then
+                    return 0
+                fi
+                if [[ "${res_path_file[${num_res}]}" == "return_7" ]]; then
+                    return 7
+                fi
+                echo -e "${HLIGHT}--- XXX ${res_path_file[$i]} ---${NORMAL}" #start files
+                XXX ${res_path_file[$i]}
+                # ${FNN} "$@"
+            fi
+        done
+    done
+}
+
+#! ZZZ_mmdir "@"
+ZZZ_mmdir "@"
+if [[ "$?" -eq 7 ]]; then
+    return 0
+fi
+
+#! end ZZZ_mmfdir flow ---------------------------

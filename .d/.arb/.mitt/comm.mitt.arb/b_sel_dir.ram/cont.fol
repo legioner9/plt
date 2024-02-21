@@ -1,0 +1,54 @@
+#! start ZZZ_mmdir flow ---------------------------
+#! define root_dir
+
+if [[ $(num_01 ${ARGSX}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGSX}=${ARGSX}' : return 1"
+    return 1
+fi
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+local root_dir="${dir_lst_arb}"
+local arr_name_file=()
+local res_path_file=()
+#! name file for menu
+
+arr_name_file=($(d2e_ -n -ff ${root_dir}))
+#! full path for result
+res_path_file=($(d2e_ 0 -ff ${root_dir}))
+
+local num_res
+local name_file
+local result_file
+# arr_name_file+=("aaaaaaaaa")
+# res_path_file+=("bbbbbbbbb")
+arr_name_file+=("exit_menu return 0")
+res_path_file+=("return 0")
+
+if [[ ${ARGSX} -gt 0 ]]; then
+    if [ $(num_01 ${ARGSX}) -eq 1 ] && [ ${ARGSX} -le ${#arr_name_file[@]} ]; then
+        num_res=$((${ARGSX} - 1))
+        if [[ "${res_path_file[${num_res}]}" == "return 0" ]]; then
+            return 0
+        fi
+        result_file=${res_path_file[${num_res}]}
+        echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
+    fi
+fi
+
+if [[ ${ARGSX} -eq 0 ]]; then
+    PS3="eligendi actiones: "
+    select name_file in "${arr_name_file[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${name_file} == ${arr_name_file[$i]} ]]; then
+                if [[ "${res_path_file[$i]}" == "return_0" ]]; then
+                    return 0
+                fi
+                result_file=${res_path_file[$i]}
+                echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
+            fi
+        done
+        break
+    done
+fi
+#! RESULT of select => result_file
+#! end ZZZ_mmdir flow --------------------------
