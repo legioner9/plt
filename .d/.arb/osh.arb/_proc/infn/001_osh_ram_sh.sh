@@ -2,9 +2,9 @@
 #? return 2 => return 0, return 3 => return 1
 #{pre}
 
-001_exec_ram_sh_infn() {
+001_osh_ram_sh() {
 
-echo -e "${CYAN}--- 001_exec_ram_sh_infn() file://${PLT_PATH}/.d/.arb/osh.arb/_proc/infn/001_infn.sh ---${NORMAL}" #sistem info mesage
+echo -e "${CYAN}--- 001_osh_ram_sh() file://${PLT_PATH}/.d/.arb/osh.arb/_proc/infn/001_osh_ram_sh.sh ---${NORMAL}" #sistem info mesage
 echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mesage
 
 read -p "2 enter"
