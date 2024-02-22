@@ -130,7 +130,7 @@ echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
 arr=()
 res=()
 arrr=()
-arrr=($("${_f2e}" ${PLT_PATH}/.d/.lst/aE_/all_arb_a.lst))
+arrr=($("${_f2e}" ${PD_PATH}/.d/.lst/aE_/all_arb_a.nl.lst))
 
 for item2 in ${arrr[@]}; do
 

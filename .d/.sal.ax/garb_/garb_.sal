@@ -137,7 +137,7 @@ fi
 #! ARGS0 = if 0 - full mm
 
 #! HARDCORE dir_lst_arb
-local dir_lst_arb=${REPO_PATH}/plt/.d/.lst/garb_/set_arb
+local dir_lst_arb=${PD_PATH}/.d/.lst/garb_/set_arb
 
 #! start ZZZ_mmdir flow ---------------------------
 #! define root_dir
@@ -157,18 +157,29 @@ arr_name_file=($(d2e_ -n -ff ${root_dir}))
 #! full path for result
 res_path_file=($(d2e_ 0 -ff ${root_dir}))
 
+file ${root_dir}
+
 local num_res
 local name_file
 local result_file
 # arr_name_file+=("aaaaaaaaa")
 # res_path_file+=("bbbbbbbbb")
+arr_name_file+=("edit_ arb lists")
+res_path_file+=("edit_ ${root_dir}")
 arr_name_file+=("exit_menu return 0")
 res_path_file+=("return 0")
 
 if [[ ${ARGS0} -gt 0 ]]; then
     if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr_name_file[@]} ]; then
         num_res=$((${ARGS0} - 1))
-        if [[ "${res_path_file[${num_res}]}" == "return 0" ]]; then
+        if [[ "${arr_name_file[${num_res}]}" == "exit_menu return 0" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[${num_res}]} ---${NORMAL}" #start files
+            ${res_path_file[${num_res}]}
+            return 0
+        fi
+        if [[ "${arr_name_file[${num_res}]}" == "edit_ arb lists" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[${num_res}]} ---${NORMAL}" #start files
+            ${res_path_file[${num_res}]}
             return 0
         fi
         result_file=${res_path_file[${num_res}]}
@@ -181,9 +192,16 @@ if [[ ${ARGS0} -eq 0 ]]; then
     select name_file in "${arr_name_file[@]}"; do
         for ((i = 0; i < 1000; i++)); do
             if [[ ${name_file} == ${arr_name_file[$i]} ]]; then
-                if [[ "${res_path_file[$i]}" == "return_0" ]]; then
-                    return 0
-                fi
+        if [[ "${arr_name_file[$i]}" == "exit_menu return 0" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+            ${res_path_file[$i]}
+            return 0
+        fi
+        if [[ "${arr_name_file[$i]}" == "edit_ arb lists" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+            ${res_path_file[$i]}
+            return 0
+        fi
                 result_file=${res_path_file[$i]}
                 echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
             fi
@@ -193,7 +211,6 @@ if [[ ${ARGS0} -eq 0 ]]; then
 fi
 #! RESULT select => result_file
 #! end ZZZ_mmdir flow ---------------------------
-
 
 #! start bash select -----------------------------------
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
@@ -213,22 +230,21 @@ local item_arr
 arr+=("exit menu")
 res+=("return 0")
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-num_res=$(($1 - 1))
-${res[${num_res}]}
-return 0
+    num_res=$(($1 - 1))
+    ${res[${num_res}]}
+    return 0
 fi
 PS3="eligendi actiones: "
 select item_arr in "${arr[@]}"; do
-for ((i = 0; i < 1000; i++)); do
-if [[ ${item_arr} == ${arr[$i]} ]]; then
-${res[$i]}
-${FNN} $@
-fi
-done
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item_arr} == ${arr[$i]} ]]; then
+            ${res[$i]}
+            ${FNN} $@
+        fi
+    done
 done
 #! end bash select -----------------------------------
 #[[b_sel]]
-
 
 read -p "debug 3"
 
