@@ -1,8 +1,8 @@
 #!/bin/bash
 
-root_dir="${PLT_PATH}"/.d/.mul
+root_dir="${REPO_PATH}"/.d/.mul
 
-fol_dir="${PLT_PATH}"/.d/.mul/nm_opi_/singl_fn
+fol_dir="${REPO_PATH}"/.d/.mul/nm_opi_/singl_fn
 
 # name_fn="05_TOSHIBA_EXT"
 
