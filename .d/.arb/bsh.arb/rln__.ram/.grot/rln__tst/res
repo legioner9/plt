@@ -1,0 +1,4 @@
+readlink dir_root/dist_copy.d/001_result.rnl
+../src.d/src.file
+dir_root/dist_copy.d/_001_result.rsym
+../src.d/src.file

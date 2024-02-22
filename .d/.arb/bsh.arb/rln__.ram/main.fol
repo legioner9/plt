@@ -1,0 +1,1 @@
+cr ln -s --relativ \$1< file> to \$2 <dir> - result <dir>/<file>.rnl, <dir>/<file>.rsym with relpath
