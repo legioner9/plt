@@ -128,7 +128,7 @@ echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"     #print variable
 
 #{main_body_fn}
 
-local root_arb_path=${REPO_PATH}/plt/.d/.arb/osh.arb
+# local root_arb_path=${REPO_PATH}/plt/.d/.arb/osh.arb
 
 if isn_from__ ${NARGS} 4 5 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
     return 1
@@ -306,7 +306,6 @@ c_up "${dir_sil_infn_garg}" >/dev/null
 # ${RED}MAIN: ${main_str}${NORMAL}
 # ${CYAN}TAGS: ${tags_str}${NORMAL}"
 #! ${ARGS0} -> ${ARGS3} ${ARGS1} -> ${ARGS4}
-read -p "debug 5"
 
 local arr_default_cntl=("-E" "-n" "-an" "-t" "-at" "-t" "-m" "-c")
 

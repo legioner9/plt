@@ -73,12 +73,9 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    plt_info "garb_ 0 0 0 -t rub : \
-    menu arb_list, \
-    menu arb, \
-    menu proc_in_arb"
+    plt_info "garb_ 1 5 0 -t rub"
 
-    garb_ 0 0 0 -t "rub"
+    garb_ 1 5 0 -t "rub"
 
     #{body_fn}
 }

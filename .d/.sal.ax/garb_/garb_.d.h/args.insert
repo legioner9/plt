@@ -1,13 +1,25 @@
 ARGS:
-    \$1 arb
+    \$1 file lst arb
+        0 - choice from menu => <file_list_arb> -> menu <list_arb> => list_arb
+    \$2 arb
         0 - choice from menu => <list_arb> -> menu <arb> => arb
         <num> - num from menu => <arb>
         all - treat all arb from <list_arb>
-    \$2 <proc>
+    \$3 <proc> 
         0 choce <proc> from menu from files in <path_to_arb>/_proc/_in_fn
         <num> num from menu => <proc>
-    \$3 ram
-        (cntl (-n -an -t -at -t -m -c) [, \$4 mach_to_grep]) or \$3 ram_name
+    \$4 
+        if $4:0:1 == '-' :
+            if "-E" exec catalog arb
+            if "-n" grep for :
+                \$5 mach_to_grep name (name.ram) -> mm -> exec 
+            if "-t" grep for :
+                \$5 mach_to_grep tags (tags.fol) -> mm -> exec 
+            if "-c" grep for :
+                \$5 mach_to_grep cont (cont.fol) -> mm -> exec 
+            if "-m" grep for :
+                \$5 mach_to_grep main (main.fol) -> mm -> exec 
+     \$4 ram_name
 
 CNTLS:
         --_arb_path path_to_arb for grep

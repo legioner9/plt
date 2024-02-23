@@ -73,9 +73,9 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    plt_info "garb_ -t rub --_arb_path \${REPO_PATH}/plt/.d/.arb/osh.arb"
+    plt_info "garb_ 0 0 0 -at"
 
-    garb_ -t "rub" --_arb_path ${REPO_PATH}/plt/.d/.arb/osh.arb
+    garb_ 0 0 0 -at
 
     #{body_fn}
 }

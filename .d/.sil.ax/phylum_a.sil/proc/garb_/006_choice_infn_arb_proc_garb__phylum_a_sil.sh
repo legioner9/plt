@@ -51,10 +51,13 @@
     # arr+=("aaaaaaaaa")
     # res+=("bbbbbbbbb")
 
+    echo -e "${HLIGHT}--- d2e_ 0 -ff ${SIL_A}/phylum_a.sil/proc/infn_arb_garb_ ---${NORMAL}" #start files
+    d2e_ 0 -ff ${SIL_A}/proc/infn_arb_garb_
+
     #! name in_fn
-    arr=$(d2e_ -n -ff ${arb_path}/_proc/infn)
+    arr=($(d2e_ -n -ff ${arb_path}/_proc/infn) $(d2e_ -n -ff ${SIL_A}/proc/infn_arb_garb_))
     #! full path to in_fn.sh
-    res=$(d2e_ 0 -ff ${arb_path}/_proc/infn)
+    res=($(d2e_ 0 -ff ${arb_path}/_proc/infn) $(d2e_ 0 -ff ${SIL_A}/proc/infn_arb_garb_))
 
     arr+=("exit_menu")
     res+=("return 0")
