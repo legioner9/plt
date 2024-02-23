@@ -40,7 +40,7 @@
         fi
         # echo -e "${HLIGHT}--- osh_ ${item_arr_name_ram} ---${NORMAL}" #start files
         # osh_ "${item_arr_name_ram}"
-        006_choice_infn_arb_proc_garb__phylum_a_sil
+        006_choice_infn_arb_proc_garb__phylum_a_sil "${item_arr_name_ram}"
         return 0
     done
     return 0

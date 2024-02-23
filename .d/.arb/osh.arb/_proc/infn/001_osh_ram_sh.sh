@@ -33,12 +33,12 @@ read -p "2 enter"
     path_sh="${arb_path}"/"${ram_name}".ram/.grot/"${ram_name}".sh
 
     if ! [[ -f "${path_sh}" ]]; then
-        plt_exit "in ${FNN} : NOT_FILE : '${path_sh}' : return 1"
+        plt_exit "in ${FNN} : NOT_FILE : 'file://${path_sh}' : return 1"
         return 1
     fi
 
     if . "${path_sh}"; then
-        plt_exit "in ${FNN} : EXEC_FAIL : '. ${path_sh}' : return 1"
+        plt_exit "in ${FNN} : EXEC_FAIL : '. file://${path_sh}' : return 1"
         return 1
     fi
 
