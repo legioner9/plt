@@ -51,8 +51,12 @@
     # arr+=("aaaaaaaaa")
     # res+=("bbbbbbbbb")
 
-    echo -e "${HLIGHT}--- d2e_ 0 -ff ${SIL_A}/phylum_a.sil/proc/infn_arb_garb_ ---${NORMAL}" #start files
-    d2e_ 0 -ff ${SIL_A}/proc/infn_arb_garb_
+    # echo -e "${HLIGHT}--- d2e_ 0 -ff ${SIL_A}/phylum_a.sil/proc/infn_arb_garb_ ---${NORMAL}" #start files
+    # d2e_ 0 -ff ${SIL_A}/proc/infn_arb_garb_
+
+    if ! [[ -d ${arb_path}/_proc/infn ]]; then
+        cp -rv ${PLT_PATH}/.d/.fs_standarts.ax/garb_/_proc/infn ${arb_path}/_proc/infn
+    fi
 
     #! name in_fn
     arr=($(d2e_ -n -ff ${arb_path}/_proc/infn) $(d2e_ -n -ff ${SIL_A}/proc/infn_arb_garb_))
