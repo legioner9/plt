@@ -18,8 +18,8 @@
         return 1
     fi
 
-    if [ -z "${arb_osh_dir}" ]; then
-        plt_info "in 001_grep_name_proc_garb__phylum_a_sil() : NOT_DEFINE : '${arb_osh_dir}' : return 1"
+    if [ -z "${arb_path}" ]; then
+        plt_info "in 001_grep_name_proc_garb__phylum_a_sil() : NOT_DEFINE : '${arb_path}' : return 1"
         return 1
     fi
     #! -------------- END check env -------------------
@@ -34,10 +34,10 @@
 
     arr_name_ram=()
 
-    for name_ram in $(d2e_ -n -dd ${arb_osh_dir} "ram "); do
+    for name_ram in $(d2e_ -n -dd ${arb_path} "ram "); do
 
         # echo -e "${GREEN}\$name_ram = $name_ram${NORMAL}" #print variable
-        local path_to_ram=${arb_osh_dir}/${name_ram}.ram
+        local path_to_ram=${arb_path}/${name_ram}.ram
 
         mach_grep=$(echo ${name_ram} | grep "${str_to_grep}")
 

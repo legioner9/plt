@@ -26,8 +26,8 @@
         return 1
     fi
 
-    if [ -z "${arb_osh_dir}" ]; then
-        plt_info "in 006_choice_infn_arb_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${arb_osh_dir}' : return 1"
+    if [ -z "${arb_path}" ]; then
+        plt_info "in 006_choice_infn_arb_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${arb_path}' : return 1"
         return 1
     fi
 
@@ -52,9 +52,9 @@
     # res+=("bbbbbbbbb")
 
     #! name in_fn
-    arr=$(d2e_ -n -ff ${arb_osh_dir}/_proc/infn)
+    arr=$(d2e_ -n -ff ${arb_path}/_proc/infn)
     #! full path to in_fn.sh
-    res=$(d2e_ 0 -ff ${arb_osh_dir}/_proc/infn)
+    res=$(d2e_ 0 -ff ${arb_path}/_proc/infn)
 
     arr+=("exit_menu")
     res+=("return 0")
@@ -77,6 +77,7 @@
                     echo -e "${HLIGHT}--- . ${res[$i]} ---${NORMAL}" #start files
                     if ! . "${res[$i]}"; then
                         plt_exit "in ${FNN} : EXEC_FAIL : '. ${res[$i]}' : return 1"
+                        break
                         return 1
                     fi
                     # ${FNN} $@

@@ -285,7 +285,7 @@ arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
 
 echo -e "${GREEN}\$arb_path = $arb_path${NORMAL}" #print variable
 
-#! define invariable : in_ram_name
+#! define invariable : ram_name
 
 local dir_sil_infn_garg=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_
 
@@ -307,18 +307,12 @@ c_up "${dir_sil_infn_garg}" >/dev/null
 # ${CYAN}TAGS: ${tags_str}${NORMAL}"
 #! ${ARGS0} -> ${ARGS3} ${ARGS1} -> ${ARGS4}
 read -p "debug 5"
-if [[ -z "${ARGS3}" ]]; then
-    plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS3} NOT_DEFINE : return 1"
-    return 1
-fi
-
-# echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
 
 local arr_default_cntl=("-E" "-n" "-an" "-t" "-at" "-t" "-m" "-c")
 
 local flag_fail_cntl=0
 local str_to_grep
-local arb_osh_dir
+local arb_path
 local type_fol_to_grep
 
 #! define num_menu_arb_proc for env 006_choice_infn_arb_proc_garb__phylum_a_sil
@@ -340,7 +334,14 @@ if [[ ${flag_fail_cntl} -eq 1 ]]; then
     return 1
 fi
 
-arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
+if [[ "${ARGS3:0:1}" != "-" ]]; then
+    local ram_name="${ARGS3}"
+    echo -e "${GREEN}\$arb_path = $arb_path${NORMAL}" #print variable
+    echo -e "${GREEN}\$ram_name = $ram_name${NORMAL}" #print variable
+    006_choice_infn_arb_proc_garb__phylum_a_sil
+fi
+
+# arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
 
 if [[ "${ARGS3}" == "-E" ]]; then
 

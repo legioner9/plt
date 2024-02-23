@@ -13,15 +13,15 @@
     #     return 1
     # fi
     #! -------------- START check env -------------------
-    if [ -z "${arb_osh_dir}" ]; then
-        plt_info "in 003_E_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${arb_osh_dir}' : return 1"
+    if [ -z "${arb_path}" ]; then
+        plt_info "in 003_E_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${arb_path}' : return 1"
         return 1
     fi
     #! -------------- END check env -------------------
     #{body}
 
-    dir_sil=${SIL_A}
-    dir_arb=${arb_osh_dir}
+    local dir_sil=${SIL_A}
+    local dir_arb=${arb_path}
 
     echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
 

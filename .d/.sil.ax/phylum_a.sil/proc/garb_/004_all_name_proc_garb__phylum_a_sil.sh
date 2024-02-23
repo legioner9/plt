@@ -12,8 +12,8 @@
     #     plt_info "004_all_name_proc_garb__phylum_a_sil() : $1 : args NOT_DEFINE : return 1"
     #     return 1
     #! -------------- START check env -------------------
-    if [ -z "${arb_osh_dir}" ]; then
-        plt_info "in 002_grep_type__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${arb_osh_dir}' : return 1"
+    if [ -z "${arb_path}" ]; then
+        plt_info "in 002_grep_type__d_ax__osh___fn_dir_osh_() : NOT_DEFINE : '\${arb_path}' : return 1"
         return 1
     fi
     #! -------------- END check env -------------------
@@ -23,7 +23,7 @@
 
     arr_name_ram=()
 
-    for name_ram in $(d2e_ -n -dd ${arb_osh_dir} "ram "); do
+    for name_ram in $(d2e_ -n -dd ${arb_path} "ram "); do
         arr_name_ram+=("${name_ram}")
     done
 

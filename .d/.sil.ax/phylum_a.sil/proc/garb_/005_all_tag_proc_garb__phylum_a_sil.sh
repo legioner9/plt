@@ -21,7 +21,7 @@
     #{body}
     # -_utag
     dir_sil=${SIL_A}
-    dir_arb=${PLT_PATH}/.d/.arb/osh.arb
+    dir_arb=${arb_path}
 
     echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
 
@@ -44,8 +44,8 @@
     done
     echo -e "${GREEN}\$str_to_grep = $str_to_grep${NORMAL}" #print variable
     # read -p "debug 1: enter"
-    #! arb_osh_dir : env to 002_grep_type_proc_garb__phylum_a_sil
-    arb_osh_dir=${dir_arb}
+    #! arb_path : env to 002_grep_type_proc_garb__phylum_a_sil
+    arb_path=${dir_arb}
     #! type_fol_to_grep : env to 002_grep_type_proc_garb__phylum_a_si
     type_fol_to_grep="tags"
 
