@@ -4,18 +4,16 @@
 
 001_osh_ram_sh() {
 
-echo -e "${CYAN}--- 001_osh_ram_sh() file://${PLT_PATH}/.d/.arb/osh.arb/_proc/infn/001_osh_ram_sh.sh ---${NORMAL}" #sistem info mesage
-echo -e "${CYAN}--- MAIN: ---${NORMAL}"                         #sistem info mesage
+    echo -e "${CYAN}--- 001_osh_ram_sh() file://${PLT_PATH}/.d/.arb/osh.arb/_proc/infn/001_osh_ram_sh.sh ---${NORMAL}" #sistem info mesage
+    echo -e "${CYAN}--- MAIN: ---${NORMAL}"                                                                            #sistem info mesage
 
-read -p "2 enter"
-
-# local first_arg=
-# first_arg=$1
-# if [ -z "${first_arg}" ]; then
-#     plt_info "001_infn() : $1 : args NOT_DEFINE : return 1"
-#     return 1
-# fi
-#! -------------- START check env -------------------
+    # local first_arg=
+    # first_arg=$1
+    # if [ -z "${first_arg}" ]; then
+    #     plt_info "001_infn() : $1 : args NOT_DEFINE : return 1"
+    #     return 1
+    # fi
+    #! -------------- START check env -------------------
     if [ -z "${arb_path}" ]; then
         plt_info "in garb__infn() : NOT_DEFINE : '\${arb_path}' : return 1"
         return 1
@@ -37,11 +35,13 @@ read -p "2 enter"
         return 1
     fi
 
-    if . "${path_sh}"; then
+    if ! . "${path_sh}"; then
         plt_exit "in ${FNN} : EXEC_FAIL : '. file://${path_sh}' : return 1"
         return 1
     fi
 
     "${ram_name}"
 
-} 
+}
+
+001_osh_ram_sh

@@ -14,6 +14,18 @@
     # fi
     #! -------------- START check env -------------------
 
+    #! env for  ${ram_name} arb _proc/infn
+
+    if [ -z "${ram_name}" ]; then
+        plt_info "in 006_choice_infn_arb_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${ram_name}' : return 1"
+        return 1
+    fi
+
+    if [ -z "${num_menu_arb_proc}" ]; then
+        plt_info "in 006_choice_infn_arb_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${num_menu_arb_proc}' : return 1"
+        return 1
+    fi
+
     if [ -z "${arb_osh_dir}" ]; then
         plt_info "in 006_choice_infn_arb_proc_garb__phylum_a_sil() : NOT_DEFINE : '\${arb_osh_dir}' : return 1"
         return 1
@@ -46,28 +58,32 @@
 
     arr+=("exit_menu")
     res+=("return 0")
-    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-        num_res=$(($1 - 1))
-        echo -e "${HLIGHT}--- . ${res[${num_res}]} ---${NORMAL}" #start files
-        if . "${res[${num_res}]}"; then
-            plt_exit "in ${FNN} : EXEC_FAIL : '. ${res[${num_res}]}' : return 1"
-            return 1
+    if [[ "${num_menu_arb_proc}" -gt 0 ]]; then
+        if [ $(num_01 ${num_menu_arb_proc}) -eq 1 ] && [ ${num_menu_arb_proc} -le ${#arr[@]} ]; then
+            num_res=$((${num_menu_arb_proc} - 1))
+            echo -e "${HLIGHT}--- . ${res[${num_res}]} ---${NORMAL}" #start files
+            if ! . "${res[${num_res}]}"; then
+                plt_exit "in ${FNN} : EXEC_FAIL : '. ${res[${num_res}]}' : return 1"
+                return 1
+            fi
+            return 0
         fi
-        return 0
     fi
     PS3="eligendi actiones: "
-    select item_arr in "${arr[@]}"; do
-        for ((i = 0; i < 1000; i++)); do
-            if [[ ${item_arr} == ${arr[$i]} ]]; then
-                echo -e "${HLIGHT}--- . ${res[$i]} ---${NORMAL}" #start files
-                if . "${res[$i]}"; then
-                    plt_exit "in ${FNN} : EXEC_FAIL : '. ${res[$i]}' : return 1"
-                    return 1
+    if [[ "${num_menu_arb_proc}" -eq 0 ]]; then
+        select item_arr in "${arr[@]}"; do
+            for ((i = 0; i < 1000; i++)); do
+                if [[ ${item_arr} == ${arr[$i]} ]]; then
+                    echo -e "${HLIGHT}--- . ${res[$i]} ---${NORMAL}" #start files
+                    if ! . "${res[$i]}"; then
+                        plt_exit "in ${FNN} : EXEC_FAIL : '. ${res[$i]}' : return 1"
+                        return 1
+                    fi
+                    # ${FNN} $@
                 fi
-                # ${FNN} $@
-            fi
+            done
         done
-    done
+    fi
     #[[b_sel]]
 
     #! -------------- END check env -------------------

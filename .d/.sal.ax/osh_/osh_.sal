@@ -144,7 +144,7 @@ fi
 
 # echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
 
-arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
+arr_default_cntl=("-E" "-n" "-an" "-t" "-at" "-t" "-m" "-c")
 
 flag_fail_cntl=0
 

@@ -136,15 +136,26 @@ fi
 
 #! ARGS0 = if 0 - full mm
 
-#! HARDCORE dir_lst_arb
+#! HARDCORDE dir_lst_arb
 local dir_lst_arb=${PD_PATH}/.d/.lst/garb_/set_arb
+
+echo -e "${BLUE}--- \${ARGS0}=${ARGS0} (if '0' exec choce from menu) num menu file with list of arb in \${dir_lst_arb}=file://${dir_lst_arb}: ---${NORMAL}" #sistem info mesage
 
 if [[ $(num_01 ${ARGS0}) -eq 0 ]]; then
     plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS0}=${ARGS0}' : return 1"
     return 1
 fi
 
+echo -e "${BLUE}--- \${ARGS1}=${ARGS1} (if '0' exec choce from menu) num menu list of arb ---${NORMAL}" #sistem info mesage
+
 if [[ $(num_01 ${ARGS1}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+
+echo -e "${BLUE}--- \${ARGS2}=${ARGS2} (if '0' exec choce from menu) num menu list of in_fn in arb arb ---${NORMAL}" #sistem info mesage
+
+if [[ $(num_01 ${ARGS2}) -eq 0 ]]; then
     plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS1}=${ARGS1}' : return 1"
     return 1
 fi
@@ -262,9 +273,9 @@ fi
 #! end bash select -----------------------------------
 #[[b_sel]]
 
-if [[ "${arb_path}" == "${REPO_PATH}/plt/.d/.arb/osh.arb" ]]; then
-    osh_ ${ARGS2} ${ARGS3}
-fi
+# if [[ "${arb_path}" == "${REPO_PATH}/plt/.d/.arb/osh.arb" ]]; then
+#     osh_ ${ARGS2} ${ARGS3}
+# fi
 
 #! start bash select -----------------------------------
 #! use arb_path as env ---------------------------------
@@ -294,27 +305,30 @@ c_up "${dir_sil_infn_garg}" >/dev/null
 # ${GREEN}NAME: ${ram_name}${NORMAL}
 # ${RED}MAIN: ${main_str}${NORMAL}
 # ${CYAN}TAGS: ${tags_str}${NORMAL}"
-#! ${ARGS0} -> ${ARGS2} ${ARGS1} -> ${ARGS3}
+#! ${ARGS0} -> ${ARGS3} ${ARGS1} -> ${ARGS4}
 read -p "debug 5"
-if [[ -z "${ARGS2}" ]]; then
-    plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS2} NOT_DEFINE : return 1"
+if [[ -z "${ARGS3}" ]]; then
+    plt_exit "in ${FNN} : ERR_AMOUNT_ARGS : \${ARGS3} NOT_DEFINE : return 1"
     return 1
 fi
 
 # echo -e "${GREEN}\${ARGS0:0:1} = ${ARGS0:0:1}${NORMAL}" #print variable
 
-local arr_default_cntl=("-n" "-an" "-t" "-at" "-t" "-m" "-c")
+local arr_default_cntl=("-E" "-n" "-an" "-t" "-at" "-t" "-m" "-c")
 
 local flag_fail_cntl=0
 local str_to_grep
 local arb_osh_dir
 local type_fol_to_grep
 
-if [[ "${ARGS0:0:1}" == "-" ]]; then
+#! define num_menu_arb_proc for env 006_choice_infn_arb_proc_garb__phylum_a_sil
+local num_menu_arb_proc="${ARGS2}"
+
+if [[ "${ARGS3:0:1}" == "-" ]]; then
     flag_fail_cntl=1
     for default_cntl in ${arr_default_cntl[@]}; do
 
-        if [[ "${default_cntl}" == "${ARGS2}" ]]; then
+        if [[ "${default_cntl}" == "${ARGS3}" ]]; then
             flag_fail_cntl=0
         fi
 
@@ -322,13 +336,13 @@ if [[ "${ARGS0:0:1}" == "-" ]]; then
 fi
 
 if [[ ${flag_fail_cntl} -eq 1 ]]; then
-    plt_exit "in ${FNN} : NOT_IN_CONDITION : '\${ARGS2}=${ARGS2}' not in (-n -an -t -at -t -m -c) : return 1"
+    plt_exit "in ${FNN} : NOT_IN_CONDITION : '\${ARGS2}=${ARGS2}' not in (-E -n -an -t -at -t -m -c) : return 1"
     return 1
 fi
 
 arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
 
-if [[ "${ARGS2}" == "-E" ]]; then
+if [[ "${ARGS3}" == "-E" ]]; then
 
     # dir_sil=${SIL_A}
     # dir_arb=${PLT_PATH}/.d/.arb/osh.arb
@@ -346,16 +360,16 @@ if [[ "${ARGS2}" == "-E" ]]; then
 
 fi
 
-if [[ "${ARGS2}" == "-t" ]]; then
+if [[ "${ARGS3}" == "-t" ]]; then
 
-    if [[ -z "${ARGS3}" ]]; then
+    if [[ -z "${ARGS4}" ]]; then
 
-        plt_exit "in ${FNN} : NOT_DEFINE : '\$${ARGS3} arg to gerp tag' : return 1"
+        plt_exit "in ${FNN} : NOT_DEFINE : '\$${ARGS4} arg to gerp tag' : return 1"
         return 1
     fi
 
     #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
-    str_to_grep=${ARGS3}
+    str_to_grep=${ARGS4}
 
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="tags"
@@ -365,16 +379,16 @@ if [[ "${ARGS2}" == "-t" ]]; then
     return 0
 fi
 
-if [[ "${ARGS2}" == "-m" ]]; then
+if [[ "${ARGS3}" == "-m" ]]; then
 
     if [[ -z "${ARGS3}" ]]; then
 
-        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS3} arg to gerp tag' : return 1"
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
         return 1
     fi
 
     #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
-    str_to_grep=${ARGS3}
+    str_to_grep=${ARGS4}
 
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="main"
@@ -384,16 +398,16 @@ if [[ "${ARGS2}" == "-m" ]]; then
     return 0
 fi
 
-if [[ "${ARGS2}" == "-c" ]]; then
+if [[ "${ARGS3}" == "-c" ]]; then
 
-    if [[ -z "${ARGS3}" ]]; then
+    if [[ -z "${ARGS4}" ]]; then
 
-        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS3} arg to gerp tag' : return 1"
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
         return 1
     fi
 
     #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
-    str_to_grep=${ARGS3}
+    str_to_grep=${ARGS4}
 
     #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
     type_fol_to_grep="cont"
@@ -403,30 +417,30 @@ if [[ "${ARGS2}" == "-c" ]]; then
     return 0
 fi
 
-if [[ "${ARGS2}" == "-n" ]]; then
+if [[ "${ARGS3}" == "-n" ]]; then
 
-    if [[ -z "${ARGS3}" ]]; then
+    if [[ -z "${ARGS4}" ]]; then
 
-        plt_exit "in ${FNN} : NOT_DEFINE : '\$${ARGS3} arg to gerp tag' : return 1"
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
         return 1
     fi
 
     #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
-    str_to_grep=${ARGS3}
+    str_to_grep=${ARGS4}
 
     001_grep_name_proc_garb__phylum_a_sil
 
     return 0
 fi
 
-if [[ "${ARGS2}" == "-an" ]]; then
+if [[ "${ARGS3}" == "-an" ]]; then
 
     004_all_name_proc_garb__phylum_a_sil
 
     return 0
 fi
 
-if [[ "${ARGS2}" == "-at" ]]; then
+if [[ "${ARGS3}" == "-at" ]]; then
 
     005_all_tag_proc_garb__phylum_a_sil
 
@@ -435,8 +449,8 @@ fi
 
 read -p "do menu proc in arb"
 
-# . "${arb_path}"/_proc/infn/garb__infn.sh
-. "${arb_path}"/_proc/infn/001_infn.sh
+006_choice_infn_arb_proc_garb__phylum_a_sil
+#? . "${arb_path}"/_proc/infn/001_infn.sh
 
 # fn_file=${arb_osh_dir}/${ARGS0}.ram/.grot/${ARGS0}.sh
 

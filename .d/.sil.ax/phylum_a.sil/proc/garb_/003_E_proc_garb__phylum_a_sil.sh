@@ -20,29 +20,15 @@
     #! -------------- END check env -------------------
     #{body}
 
-    local arr_name_ram
+    dir_sil=${SIL_A}
+    dir_arb=${arb_osh_dir}
 
-    arr_name_ram=()
+    echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
 
-    for name_ram in $(d2e_ -n -dd ${arb_osh_dir} "ram "); do
-        arr_name_ram+=("${name_ram}")
-    done
-
-    arr_name_ram+=("exit")
-
-    PS3="eligendi actiones to exec or exit: "
-
-    select item_arr_name_ram in ${arr_name_ram[@]}; do
-
-        if [[ "${item_arr_name_ram}" == "exit" ]]; then
-            plt_info "return 0"
-            return 0
-        fi
-        # echo -e "${HLIGHT}--- osh_ ${item_arr_name_ram} ---${NORMAL}" #start files
-        # osh_ "${item_arr_name_ram}"
-        006_choice_infn_arb_proc_garb__phylum_a_sil "${item_arr_name_ram}"
-        return 0
-    done
+    fol_ \
+        --_sil "${dir_sil}" \
+        --_arb "${dir_arb}" \
+        -_E
     return 0
 
 }
