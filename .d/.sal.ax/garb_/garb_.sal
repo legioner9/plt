@@ -139,13 +139,18 @@ fi
 #! HARDCORE dir_lst_arb
 local dir_lst_arb=${PD_PATH}/.d/.lst/garb_/set_arb
 
-#! start ZZZ_mmdir flow ---------------------------
-#! define root_dir
-
 if [[ $(num_01 ${ARGS0}) -eq 0 ]]; then
     plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS0}=${ARGS0}' : return 1"
     return 1
 fi
+
+if [[ $(num_01 ${ARGS1}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+
+#! start ZZZ_mmdir flow ---------------------------
+#! define root_dir
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 local root_dir="${dir_lst_arb}"
@@ -184,24 +189,25 @@ if [[ ${ARGS0} -gt 0 ]]; then
         fi
         result_file=${res_path_file[${num_res}]}
         echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
+
     fi
 fi
 
 if [[ ${ARGS0} -eq 0 ]]; then
-    PS3="eligendi actiones: "
+    PS3="eligendi actiones file list of arb: "
     select name_file in "${arr_name_file[@]}"; do
         for ((i = 0; i < 1000; i++)); do
             if [[ ${name_file} == ${arr_name_file[$i]} ]]; then
-        if [[ "${arr_name_file[$i]}" == "exit_menu return 0" ]]; then
-            echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
-            ${res_path_file[$i]}
-            return 0
-        fi
-        if [[ "${arr_name_file[$i]}" == "edit_ arb lists" ]]; then
-            echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
-            ${res_path_file[$i]}
-            return 0
-        fi
+                if [[ "${arr_name_file[$i]}" == "exit_menu return 0" ]]; then
+                    echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+                    ${res_path_file[$i]}
+                    return 0
+                fi
+                if [[ "${arr_name_file[$i]}" == "edit_ arb lists" ]]; then
+                    echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+                    ${res_path_file[$i]}
+                    return 0
+                fi
                 result_file=${res_path_file[$i]}
                 echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
             fi
@@ -213,10 +219,12 @@ fi
 #! end ZZZ_mmdir flow ---------------------------
 
 #! start bash select -----------------------------------
+#! use result_file as env ------------------------------
+
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
-local arr=()
-local res=()
-local num_res
+local arr_arb_path_lst=()
+arr_arb_path_lst=($(f2e ${result_file}))
+
 local item_arr
 #{arr_res}
 # arr+=("aaaaaaaaa")
@@ -227,29 +235,45 @@ local item_arr
 # res+=("bbbbbbbbb")
 # arr+=("aaaaaaaaa")
 # res+=("bbbbbbbbb")
-arr+=("exit menu")
-res+=("return 0")
-if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
-    num_res=$(($1 - 1))
-    ${res[${num_res}]}
-    return 0
-fi
-PS3="eligendi actiones: "
-select item_arr in "${arr[@]}"; do
-    for ((i = 0; i < 1000; i++)); do
-        if [[ ${item_arr} == ${arr[$i]} ]]; then
-            ${res[$i]}
-            ${FNN} $@
+arr_arb_path_lst+=("exit menu")
+# res+=("return 0")
+if [[ ${ARGS1} -gt 0 ]]; then
+    if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
+        num_res=$((${ARGS1} - 1))
+        if [[ "${arr_arb_path_lst[${num_res}]}" == "exit menu" ]]; then
+            return 0
         fi
+        arb_path=${arr_arb_path_lst[${num_res}]}
+        arr_arb_path_lst_done=1
+    fi
+fi
+
+local arb_path_lst
+
+if [[ ${ARGS1} -eq 0 ]]; then
+    PS3="eligendi actiones arb from list: "
+    select arb_path_lst in "${arr_arb_path_lst[@]}"; do
+        if [[ "${arb_path_lst}" == "exit menu" ]]; then
+            return 0
+        fi
+        arb_path=${arb_path_lst}
+        break
     done
-done
+
+fi
+#! result - arb_path
 #! end bash select -----------------------------------
 #[[b_sel]]
 
-read -p "debug 3"
+#! start bash select -----------------------------------
+#! use arb_path as env ---------------------------------
 
-local arb_path=${arb_path_}
-local arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
+# local arb_path=${arb_path_}
+arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
+
+echo -e "${GREEN}\$arb_path = $arb_path${NORMAL}" #print variable
+
+read -p "debug 4"
 
 #! define invariable : in_ram_name
 
