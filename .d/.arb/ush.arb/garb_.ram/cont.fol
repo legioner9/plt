@@ -1,0 +1,475 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS4} = ${ARGS4}${NORMAL}"     #print variable
+echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#! cr fs cr_f_
+# cr_f_ \
+#     "$filename" \
+#     --tml "${PATH_TML_DIR}/cr_shf_/shf.tml" \
+#     --fi0 "${header}" --fr0 "{header}" \
+#     --vi0 "$filename" --vr0 "{filename}"
+
+#! cr fs standart
+# "${_obs_quis_}" "$filename"
+# "${_upg_path}" "$filename"
+
+#! cr fs cr_f_dir_insert_
+# ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
+
+#! innerfns
+# if [ -d "${sil_}/proc/fol_" ]; then
+
+#     c_up "${sil_}/proc/fol_"
+
+#     inner_fn_arr=()
+#     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+# else
+#     plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+#     return 1
+# fi
+
+# for item6 in ${inner_fn_arr[@]}; do
+#     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+#     ${item6}
+
+#     ret_nom=$?
+#     if [ ${ret_nom} -eq 2 ]; then
+#         return 0
+#     fi
+#     if [ ${ret_nom} -eq 3 ]; then
+#         return 1
+#     fi
+#     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+# done
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+#{main_body_fn}
+
+# local root_arb_path=${REPO_PATH}/plt/.d/.arb/osh.arb
+
+if isn_from__ ${NARGS} 4 5 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+    return 1
+fi
+
+#! ARGS0 = if 0 - full mm
+
+#! HARDCORDE dir_lst_arb
+local dir_lst_arb=${PD_PATH}/.d/.lst/garb_/set_arb
+
+echo -e "${BLUE}--- \${ARGS0}=${ARGS0} (if '0' exec choce from menu) num menu file with list of arb in \${dir_lst_arb}=file://${dir_lst_arb}: ---${NORMAL}" #sistem info mesage
+
+if [[ $(num_01 ${ARGS0}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS0}=${ARGS0}' : return 1"
+    return 1
+fi
+
+echo -e "${BLUE}--- \${ARGS1}=${ARGS1} (if '0' exec choce from menu) num menu list of arb ---${NORMAL}" #sistem info mesage
+
+if [[ $(num_01 ${ARGS1}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+
+echo -e "${BLUE}--- \${ARGS2}=${ARGS2} (if '0' exec choce from menu) num menu list of in_fn in arb arb ---${NORMAL}" #sistem info mesage
+
+if [[ $(num_01 ${ARGS2}) -eq 0 ]]; then
+    plt_exit "in ${FNN} : NOT_NUMBER : '\${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+
+#! start ZZZ_mmdir flow ---------------------------
+#! define root_dir
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+local root_dir="${dir_lst_arb}"
+local arr_name_file=()
+local res_path_file=()
+#! name file for menu
+
+arr_name_file=($(d2e_ -n -ff ${root_dir}))
+#! full path for result
+res_path_file=($(d2e_ 0 -ff ${root_dir}))
+
+local num_res
+local name_file
+local result_file
+# arr_name_file+=("aaaaaaaaa")
+# res_path_file+=("bbbbbbbbb")
+arr_name_file+=("edit_ arb lists")
+res_path_file+=("edit_ ${root_dir}")
+arr_name_file+=("exit_menu return 0")
+res_path_file+=("return 0")
+
+if [[ ${ARGS0} -gt 0 ]]; then
+    if [ $(num_01 ${ARGS0}) -eq 1 ] && [ ${ARGS0} -le ${#arr_name_file[@]} ]; then
+        num_res=$((${ARGS0} - 1))
+        if [[ "${arr_name_file[${num_res}]}" == "exit_menu return 0" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[${num_res}]} ---${NORMAL}" #start files
+            ${res_path_file[${num_res}]}
+            return 0
+        fi
+        if [[ "${arr_name_file[${num_res}]}" == "edit_ arb lists" ]]; then
+            echo -e "${HLIGHT}--- ${res_path_file[${num_res}]} ---${NORMAL}" #start files
+            ${res_path_file[${num_res}]}
+            return 0
+        fi
+        result_file=${res_path_file[${num_res}]}
+        echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
+
+    fi
+fi
+
+if [[ ${ARGS0} -eq 0 ]]; then
+    PS3="eligendi actiones file list of arb: "
+    select name_file in "${arr_name_file[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${name_file} == ${arr_name_file[$i]} ]]; then
+                if [[ "${arr_name_file[$i]}" == "exit_menu return 0" ]]; then
+                    echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+                    ${res_path_file[$i]}
+                    return 0
+                fi
+                if [[ "${arr_name_file[$i]}" == "edit_ arb lists" ]]; then
+                    echo -e "${HLIGHT}--- ${res_path_file[$i]} ---${NORMAL}" #start files
+                    ${res_path_file[$i]}
+                    return 0
+                fi
+                result_file=${res_path_file[$i]}
+                echo -e "${GREEN}\$result_file = $result_file${NORMAL}" #print variable
+            fi
+        done
+        break
+    done
+fi
+#! RESULT select => result_file
+#! end ZZZ_mmdir flow ---------------------------
+
+#! start bash select -----------------------------------
+#! use result_file as env ------------------------------
+
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+local arr_arb_path_lst=()
+arr_arb_path_lst=($(f2e ${result_file}))
+
+local item_arr
+#{arr_res}
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+# arr+=("aaaaaaaaa")
+# res+=("bbbbbbbbb")
+arr_arb_path_lst+=("exit menu")
+# res+=("return 0")
+if [[ "${ARGS1}" -gt 0 ]]; then
+    if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr_arb_path_lst[@]} ]; then
+        num_res=$((${ARGS1} - 1))
+        if [[ "${arr_arb_path_lst[${num_res}]}" == "exit menu" ]]; then
+            return 0
+        fi
+        arb_path=${arr_arb_path_lst[${num_res}]}
+    fi
+fi
+
+local arb_path_lst
+
+if [[ "${ARGS1}" -eq 0 ]]; then
+    PS3="eligendi actiones arb from list: "
+    select arb_path_lst in "${arr_arb_path_lst[@]}"; do
+        if [[ "${arb_path_lst}" == "exit menu" ]]; then
+            return 0
+        fi
+        arb_path=${arb_path_lst}
+        break
+    done
+
+fi
+#! result - arb_path
+#! end bash select -----------------------------------
+#[[b_sel]]
+
+# if [[ "${arb_path}" == "${REPO_PATH}/plt/.d/.arb/osh.arb" ]]; then
+#     osh_ ${ARGS2} ${ARGS3}
+# fi
+
+#! start bash select -----------------------------------
+#! use arb_path as env ---------------------------------
+
+# local arb_path=${arb_path_}
+arb_path=$(${_abs_path} $PPWD "arb_path") #ptr args
+
+echo -e "${GREEN}\$arb_path = $arb_path${NORMAL}" #print variable
+
+#! define invariable : ram_name
+
+local dir_sil_infn_garg=${PLT_PATH}/.d/.sil.ax/phylum_a.sil/proc/garb_
+
+echo -e "${GREEN}\$dir_sil_infn_garg = file://$dir_sil_infn_garg${NORMAL}" #print variable
+
+c_up "${dir_sil_infn_garg}" >/dev/null
+
+# read -p "TODO: cr infns like $dir_sil_infn_garg/_arh"
+
+# 001_grep_name_proc_garb__phylum_a_sil.sh
+# 002_grep_type_proc_garb__phylum_a_sil.sh
+# 003_E_proc_garb__phylum_a_sil.sh
+# 004_all_name_proc_garb__phylum_a_sil.sh
+# 005_all_tag_proc_garb__phylum_a_sil.sh
+
+# ${BLUE}PATH: file://${ram_dir}${NORMAL}
+# ${GREEN}NAME: ${ram_name}${NORMAL}
+# ${RED}MAIN: ${main_str}${NORMAL}
+# ${CYAN}TAGS: ${tags_str}${NORMAL}"
+#! ${ARGS0} -> ${ARGS3} ${ARGS1} -> ${ARGS4}
+
+local arr_default_cntl=("-E" "-n" "-an" "-t" "-at" "-t" "-m" "-c")
+
+local flag_fail_cntl=0
+local str_to_grep
+local arb_path
+local type_fol_to_grep
+
+#! define num_menu_arb_proc for env 006_choice_infn_arb_proc_garb__phylum_a_sil
+local num_menu_arb_proc="${ARGS2}"
+
+if [[ "${ARGS3:0:1}" == "-" ]]; then
+    flag_fail_cntl=1
+    for default_cntl in ${arr_default_cntl[@]}; do
+
+        if [[ "${default_cntl}" == "${ARGS3}" ]]; then
+            flag_fail_cntl=0
+        fi
+
+    done
+fi
+
+if [[ ${flag_fail_cntl} -eq 1 ]]; then
+    plt_exit "in ${FNN} : NOT_IN_CONDITION : '\${ARGS2}=${ARGS2}' not in (-E -n -an -t -at -t -m -c) : return 1"
+    return 1
+fi
+
+if [[ "${ARGS3:0:1}" != "-" ]]; then
+    local ram_name="${ARGS3}"
+    echo -e "${GREEN}\$arb_path = $arb_path${NORMAL}" #print variable
+    echo -e "${GREEN}\$ram_name = $ram_name${NORMAL}" #print variable
+    006_choice_infn_arb_proc_garb__phylum_a_sil
+fi
+
+# arb_osh_dir=${PLT_PATH}/.d/.arb/osh.arb
+
+if [[ "${ARGS3}" == "-E" ]]; then
+
+    # dir_sil=${SIL_A}
+    # dir_arb=${PLT_PATH}/.d/.arb/osh.arb
+
+    # echo -e "${HLIGHT}--- fol_ --_sil ${dir_sil} --_arb ${dir_arb} -_E ---${NORMAL}" #start files
+
+    # fol_ \
+    #     --_sil "${dir_sil}" \
+    #     --_arb "${dir_arb}" \
+    #     -_E
+
+    003_E_proc_garb__phylum_a_sil
+
+    return 0
+
+fi
+
+if [[ "${ARGS3}" == "-t" ]]; then
+
+    if [[ -z "${ARGS4}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\$${ARGS4} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS4}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="tags"
+
+    002_grep_type_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+if [[ "${ARGS3}" == "-m" ]]; then
+
+    if [[ -z "${ARGS3}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS4}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="main"
+
+    002_grep_type_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+if [[ "${ARGS3}" == "-c" ]]; then
+
+    if [[ -z "${ARGS4}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS4}
+
+    #! type_fol_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ as tags.fol
+    type_fol_to_grep="cont"
+
+    002_grep_type_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+if [[ "${ARGS3}" == "-n" ]]; then
+
+    if [[ -z "${ARGS4}" ]]; then
+
+        plt_exit "in ${FNN} : NOT_DEFINE : '\${ARGS4} arg to gerp tag' : return 1"
+        return 1
+    fi
+
+    #! define str_to_grep for infn 002_grep_type__d_ax__osh___fn_dir_osh_ :
+    str_to_grep=${ARGS4}
+
+    001_grep_name_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+if [[ "${ARGS3}" == "-an" ]]; then
+
+    004_all_name_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+if [[ "${ARGS3}" == "-at" ]]; then
+
+    005_all_tag_proc_garb__phylum_a_sil
+
+    return 0
+fi
+
+read -p "do menu proc in arb"
+
+006_choice_infn_arb_proc_garb__phylum_a_sil
+#? . "${arb_path}"/_proc/infn/001_infn.sh
+
+# fn_file=${arb_osh_dir}/${ARGS0}.ram/.grot/${ARGS0}.sh
+
+# if ! [[ -f "${fn_file}" ]]; then
+#     plt_exit "in ${FNN} : NOT_FILE : ${fn_file} return 1"
+#     return 1
+# fi
+
+# if ! . "${fn_file}"; then
+#     plt_exit "in ${FNN} : FAIL_EXEC : . ${fn_file}  return 1"
+#     return 1
+# fi
+
+# echo -e "${HLIGHT}--- exec : ${ARGS[*]} ---${NORMAL}" #start files
+
+# "${ARGS[@]}"
+
+unset "${ARGS0}"
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------

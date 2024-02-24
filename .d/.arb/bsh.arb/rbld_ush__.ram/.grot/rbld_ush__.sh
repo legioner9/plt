@@ -73,7 +73,8 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    ush_path=${PLT_PATH}/.d/.arb/ush.arb
+    local ush_path=${PLT_PATH}/.d/.arb/ush.arb
+    local sal_path=${PLT_PATH}/.d/.sal.ax
 
     if ! [[ -d ${ush_path} ]]; then
         plt_exit "in ${FNN} : NOT_DIR : 'ush.arb=${ush_path}' : return 1"
@@ -82,15 +83,31 @@ ${NORMAL}"
 
     local ram_path
 
-    for ram_path in $(d2e_ -n -dd ${ush_path} ram); do
+    for ram_path in $(d2e_ 0 -dd ${ush_path} ram); do
         echo -e "${GREEN}\$ram_path = $ram_path${NORMAL}" #print variable
         rm -rv "${ram_path}"
     done
 
-    local ram_sal
+    local ram_sal_name
 
-    for ram_sal in $(d2e_ -n -dd ${PLT_PATH}/.d/.sal.ax); do
-        echo -e "${GREEN}\$ram_sal = $ram_sal${NORMAL}" #print variable
+    for ram_sal_name in $(d2e_ -n -dd ${sal_path}); do
+        echo -e "${GREEN}\$ram_sal_name = ${ram_sal_name}${NORMAL}" #print variable
+
+        local ram_dir=${ush_path}/${ram_sal_name}.ram
+
+        mkdir -v ${ram_dir}
+
+        # cp ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/tags.insert ${ram_dir}/tsgs.fol
+
+        cat ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/tags.insert | grep "@" >${ram_dir}/tsgs.fol
+
+        # cp ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/main.insert ${ram_dir}/main.fol
+
+        local main_fol=$(cat ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/main.insert)
+        echo ${main_fol:5} >${ram_dir}/main.fol
+
+        cp ${sal_path}/${ram_sal_name}/${ram_sal_name}.sal ${ram_dir}/cont.fol
+
     done
 
     #{body_fn}

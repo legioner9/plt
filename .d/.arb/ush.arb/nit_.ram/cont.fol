@@ -1,0 +1,215 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#! cr fs cr_f_
+# cr_f_ \
+#     "$filename" \
+#     --tml "${PATH_TML_DIR}/cr_shf_/shf.tml" \
+#     --fi0 "${header}" --fr0 "{header}" \
+#     --vi0 "$filename" --vr0 "{filename}"
+
+#! cr fs standart
+# "${_obs_quis_}" "$filename"
+# "${_upg_path}" "$filename"
+
+#! cr fs cr_f_dir_insert_
+# ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
+
+#! innerfns
+# if [ -d "${sil_}/proc/fol_" ]; then
+
+#     c_up "${sil_}/proc/fol_"
+
+#     inner_fn_arr=()
+#     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+# else
+#     plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+#     return 1
+# fi
+
+# for item6 in ${inner_fn_arr[@]}; do
+#     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+#     ${item6}
+
+#     ret_nom=$?
+#     if [ ${ret_nom} -eq 2 ]; then
+#         return 0
+#     fi
+#     if [ ${ret_nom} -eq 3 ]; then
+#         return 1
+#     fi
+#     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+# done
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+nit_infn="${PLT_PATH}/.d/.infn/nit_"
+
+if [ -d "${nit_infn}" ]; then
+
+    # "${_c_up}" "${nit_infn}" >/dev/null
+    c_up "${nit_infn}"
+
+    inner_fn_arr=()
+    echo -e "${HLIGHT}--- ${_dre2parr_} inner_fn_arr 3 file://${nit_infn} ---${NORMAL}" #start files
+    "${_dre2parr_}" inner_fn_arr 3 "sh" "${nit_infn}"
+
+else
+    plt_exit "in ${FNN} : NOT_DIR : file://'${PLT_PATH}/.d/.infn/nit_' return 1"
+    return 1
+fi
+
+parr3e_ inner_fn_arr
+
+arr_all_tst_files=()
+
+for item6 in ${inner_fn_arr[@]}; do
+    # echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+    echo -e "${HLIGHT}--- f2e file://${nit_infn}/${item6}.lst ---${NORMAL}" #start files
+    for dir_for_treat in $(f2e ${nit_infn}/${item6}.lst); do
+
+        echo -e "${GREEN}\$dir_for_treat = file://$dir_for_treat${NORMAL}" #print variable
+        echo -e "${GREEN}\$item6 = $item6${NORMAL}"                 #print variable
+        arr_all_tst_files+=("$("${item6}")")
+
+        ret_nom=$?
+        if [ ${ret_nom} -eq 2 ]; then
+            return 0
+        fi
+        if [ ${ret_nom} -eq 3 ]; then
+            return 1
+        fi
+ 
+    done
+    # echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+done
+
+# parr3e_ arr_all_tst_files
+
+flag=1
+
+for file_tst in ${arr_all_tst_files[@]}; do
+
+    if ! [ -f "$file_tst" ]; then
+        plt_exit "in ${FNN} : NOT_FILE : 'file://$file_tst' return 1"
+        return 1
+    fi
+
+    echo -e "${CYAN}--- from file://$("${_prs_f}" -d $file_tst) ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- . file://$file_tst ---${NORMAL}" #start files
+
+    if ! [ "$(. "$file_tst")" ] >/dev/null; then
+        flag=0
+    fi
+
+done
+
+if [ 1 -eq ${flag:-10} ]; then
+    echo "<<< nit_() tst TRUE :: from file://${PLT_PATH}/.d/.infn/nit_ >>>" #sistem info mesage
+fi
+
+if [ 0 -eq ${flag:-10} ]; then
+    echo "<<< nit_() tst FAIL :: from file://${PLT_PATH}/.d/.infn/nit_ >>>" >&2 #sistem info mesage
+fi
+
+# c_up ${PLT_PATH}/.d/.infn/nit_
+
+# for item_nit_dir in $(d2e_ 0 -dd ${PLT_PATH}/.d/.mul/nit_); do
+
+#     ppath="${item_nit_dir}"/$(prs_f -n "${item_nit_dir}")
+
+#     for dir_for_treat in $(f2e ${ppath}.lst); do
+
+#         . ${ppath}.sh
+
+#     done
+
+# done
+
+#{main_body_fn}
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------

@@ -1,0 +1,175 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_info "${_is_amount_arg}:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+list_strong_cntls=(list_ dlm_ dir_tar_)
+
+for item in "${list_strong_cntls[@]}"; do
+    if [ -z "$(eval echo \$"$item")" ]; then
+        plt_info "from ${FNN}() $item is empty :: be return 1"
+        return 1
+    fi
+done
+
+sum_1=$((${dpl_:-0} + ${bcp_:-0} + ${rst_:-0}))
+echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+if [ "${sum_1:-0}" -ne 1 ]; then
+    plt_info "from ${FNN}() once dpl_ or bcp_ or rst_ mast be able :: be return 1"
+    return 1
+fi
+
+sum_2=$((${soft_:-0} + ${hard_:-0}))
+echo -e "${GREEN}\$sum_2 = $sum${NORMAL}"
+
+if [ "${sum_2:-0}" -ne 1 ]; then
+    plt_info "from ${FNN}() once soft_ or hard_ mast be able :: be return 1"
+    return 1
+fi
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+if [ "${bcp_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? BACKUP to file://${dir_tar_} list: file://${list_} dlm: ${dlm_} -_soft"
+fi
+
+if [ "${dpl_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? DEPLOY from file://${dir_tar_} list: file://${list_} dlm: ${dlm_} -_soft"
+fi
+
+if [ "${rst_:-0}" -eq 1 ]; then
+    "${_plt_pause}" "DO? RESTORE accoding list: file://${list_} dlm: ${dlm_} -_soft"
+fi
+
+is_fn="${FNN}()[ file://${list_} ] [ file://${dir_tar_} ]"
+
+for item in $(f2e "${list_}"); do
+
+    echo -e "${BLUE}\$item = file://$item${NORMAL}"
+    p_arr=()
+    s3parr_ --_str "${item}" --_del "${dlm_}" --_parr p_arr 1>/dev/null
+
+    path_src="${p_arr[0]}"
+    dir_src=$(dirname "${path_src}")
+    node_src=$(basename "${path_src}")
+
+    echo -e "${GREEN}\$dir_src = file://$dir_src${NORMAL}"
+    echo -e "${GREEN}\$node_src = file://$node_src${NORMAL}"
+
+    path_tar="${dir_tar_}"/"${p_arr[1]}".tar.gz
+    # dir_tar=$(dirname "${path_tar}")
+    file_tar=$(basename "${path_tar}")
+
+    echo -e "${GREEN}\$dir_tar_ = file://${dir_tar_}${NORMAL}"
+    echo -e "${GREEN}\$file_tar = file://$file_tar${NORMAL}"
+
+    [ -n "${p_arr[1]}" ] || {
+        plt_info "from ${is_fn} ISEMPTY : \${p_arr[1]} :: be return 1"
+        return 1
+    }
+
+    [ -d "${dir_tar_}" ] || {
+        plt_info "from ${is_fn} :: NOTDIR : \${dir_tar_}=file://${dir_tar_} :: be return 1"
+        return 1
+    }
+
+    #! comment start
+    # echo -e "${BLUE}--- [ -f ${path_src} ] || [ -d ${path_src} ] ---${NORMAL}" #sistem info mesage
+    # [ -f "${path_src}" ] || [ -d "${path_src}" ] || {
+    #     plt_info "from ${is_fn}  NOTFILE or NOTDIR : \${path_src}= file://${path_src} :: be return 1"
+    #     return 1
+    # }
+    #! comment end
+    
+    # cd "${dir_src}"
+    # tar -czvf f1._tmp_ f1
+    # mv -vf f1.tmp "${dir_tar}"/f1.tar.gz
+
+    # cd "${dir_tar}"
+    # tar -xzvf f1.tar.gz -C "${dir_src}"
+
+    if [ "${bcp_:-0}" -eq 1 ]; then
+
+        cd "${dir_src}" || {
+            plt_info "from ${is_fn} :: DOFAIL : cd ${dir_src} :: be return 1"
+            return 1
+        }
+
+        echo -e "${HLIGHT}--- tar -czvf ${node_src}._tmp_ ${node_src} ---${NORMAL}"
+        tar -czvf "${node_src}"._tmp_ "${node_src}"
+
+        echo -e "${HLIGHT}---  mv -vf ${node_src}._tmp_ ${path_tar} ---${NORMAL}"
+        mv -vf "${node_src}"._tmp_ "${path_tar}"
+
+    fi
+
+    if [ "${dpl_:-0}" -eq 1 ]; then
+
+        cd "${dir_src}" || {
+            plt_info "from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be return 1"
+            return 1
+        }
+
+        echo -e "${HLIGHT}--- tar -czvf ${node_src}.bcp.tar.gz ${node_src} ---${NORMAL}"
+        tar -czvf "${node_src}".bcp.tar.gz "${node_src}"
+
+        cd "${dir_tar_}" || {
+            plt_info "from ${is_fn} :: DOFAIL : cd ${dir_tar_} :: be return 1"
+            return 1
+        }
+
+        echo -e "${HLIGHT}--- tar -xzvf ${file_tar} -C ${dir_src} ---${NORMAL}"
+        tar -xzvf "${file_tar}" -C "${dir_src}"
+
+    fi
+
+    if [ "${rst_:-0}" -eq 1 ]; then
+
+        cd "${dir_src}" || {
+            plt_info "from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be return 1"
+            return 1
+        }
+
+        echo -e "${HLIGHT}--- tar -xzvf ${node_src}.bcp.tar.gz ---${NORMAL}"
+        tar -xzvf "${node_src}".bcp.tar.gz
+
+    fi
+
+done
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------

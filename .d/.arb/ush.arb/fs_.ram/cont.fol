@@ -1,0 +1,158 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+# echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}"         #print variable
+# echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}"         #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${local_var_wrap_arr[@]} = ${local_var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${local_var_fn_arr[@]} = ${local_var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+fs_fEm_() {
+    echo -e "${GREEN}\$1 = $1${NORMAL}" #print variable
+    ptr_path_fEm_=$1
+    ptr_path_fEm_=$(${_abs_path} "${PPWD}" "ptr_path") #ptr args
+    dir_ptr_path_fEm_="$(dirname "${ptr_path}")"
+
+    if ! [ -f "${ptr_path_fEm_}" ]; then
+        plt_exit "in fs_fEm_() : ERR_ARG -> NOT_FILE : ! [ -f ${ptr_path_fEm_} ] return 1"
+        return 1
+    fi
+
+    arr_fs_fEm_=()
+    res_fs_fEm_=()
+
+    arr_fs_fEm_+=("to fs_")
+    res_fs_fEm_+=("fs_c_ ${dir_ptr_path_fEm_}")
+
+    arr_fs_fEm_+=("cat")
+    res_fs_fEm_+=("cat ${ptr_path_fEm_}")
+
+    arr_fs_fEm_+=("edit_")
+    res_fs_fEm_+=("${_edit_} ${ptr_path_fEm_}")
+
+    arr_fs_fEm_+=("exec_")
+    res_fs_fEm_+=(". ${ptr_path_fEm_}")
+
+    PS3="eligendi actiones: "
+    select item in "${arr_fs_fEm_[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+
+            if [[ "${item}" == "${arr_fs_fEm_[0]}" ]]; then
+                # echo -e "${GREEN}\$item = $item${NORMAL}"           #print variable
+                echo -e "${GREEN}\${res_fs_fEm_[0]} = ${res_fs_fEm_[0]}${NORMAL}" #print variable
+                ${res_fs_fEm_[0]}
+            fi
+
+            if [[ "${item}" == "${arr_fs_fEm_[$i]}" ]]; then
+                echo -e "${GREEN}\$item = $item${NORMAL}"                           #print variable
+                echo -e "${GREEN}\${res_fs_fEm_[$i]} = ${res_fs_fEm_[$i]}${NORMAL}" #print variable
+                ${res_fs_fEm_[$i]}
+                fs_fEm_
+            fi
+
+        done
+    done
+}
+
+ptr_path=${ARGS[0]}
+ptr_path=$(${_abs_path} "${PPWD}" "ptr_path") #ptr args
+
+echo -e "${GREEN}\$ptr_path = $ptr_path${NORMAL}" #print variable
+
+dir_ptr_path="$(dirname "${ptr_path}")"
+
+if ! [ -f "${ptr_path}" ] && ! [ -d "${ptr_path}" ]; then
+    plt_exit "in fs_() : ERR_ARG -> NOT_FILE && NOT_DIR : ! [ -f ${ptr_path} ] && ! [ -d ${ptr_path} ]"
+    return 1
+fi
+
+if [ -f "${ptr_path}" ]; then
+    fs_fEm_ "${ptr_path}"
+fi
+
+if [ -d "${ptr_path}" ]; then
+
+    arr_fs=($(ls -a "${ptr_path}"))
+
+    PS3="eligendi actiones: "
+    select item in "${arr_fs[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+
+            if [ -f "${ptr_path}/${item}" ]; then
+                echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+                fs_fEm_ "${ptr_path}/${item}"
+            fi
+
+            if [ -d "${ptr_path}/${item}" ]; then
+             
+                if [[ "${item}" == "${arr_fs[$i]}" ]]; then
+                    echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+                    # ${res[$i]}
+                    ${FNN}
+                fi
+
+                if [[ ${item} == ${arr_fs[0]} ]]; then
+                    ls
+                    # ${res[$i]}
+                fi
+
+            fi
+        done
+    done
+fi
+#{zzz20}
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------
