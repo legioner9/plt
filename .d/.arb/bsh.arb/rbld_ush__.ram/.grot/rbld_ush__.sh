@@ -99,7 +99,7 @@ ${NORMAL}"
 
         # cp ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/tags.insert ${ram_dir}/tsgs.fol
 
-        cat ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/tags.insert | grep "@" >${ram_dir}/tsgs.fol
+        cat ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/tags.insert | grep "@" >${ram_dir}/tags.fol
 
         # cp ${sal_path}/${ram_sal_name}/${ram_sal_name}.d.h/main.insert ${ram_dir}/main.fol
 
