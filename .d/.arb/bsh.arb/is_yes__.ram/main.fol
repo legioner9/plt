@@ -1,0 +1,1 @@
+ques mess \$1 if 'y' return 0 - any case return 1

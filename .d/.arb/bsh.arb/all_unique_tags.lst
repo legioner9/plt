@@ -4,7 +4,6 @@
 @arb
 @attach
 @cpan
-@cr
 @digit
 @dir
 @echo
@@ -37,6 +36,7 @@
 @ps
 @ques
 @rand
+@rbld
 @read
 @red
 @relative

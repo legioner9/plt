@@ -25,8 +25,11 @@ NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
-[ ,$2 num_menu ]
+\$1  if 0 menu dir
+    if n number of menu dir
+
+[ ,\$2 args for exec files from menu ]
+
 CNTLS:
 required
 optional 
@@ -60,26 +63,72 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(garg2e_ "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(garg2e_ "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        echo "$strex"
-        eval local $strex
-    done
-    #{default_cntl_fn}
+    # if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(garg2e_ "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(garg2e_ "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     echo "$strex"
+    #     eval local $strex
+    # done
+    # #{default_cntl_fn}
     # amount_arg $# 1 1
 
     echo -e "${GREEN}\${ARGS[0]} = ${ARGS[0]}${NORMAL}" #print variable
     echo -e "${GREEN}\${ARGS[1]} = ${ARGS[1]}${NORMAL}" #print variable
+    echo -e "${GREEN}\${ARGS[2]} = ${ARGS[2]}${NORMAL}" #print variable
+    echo -e "${GREEN}\${ARGS[3]} = ${ARGS[3]}${NORMAL}" #print variable
 
-    #{body_fn}
+    #? ${PLT_PATH}/.d/.mm.d/tm_sm__
+
+    if isn_from__ ${NARGS} 1 5 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+        return 1
+    fi
+
+    if [ $(num_01 ${ARGS[0]}) -ne 1 ]; then
+        plt_exit "in ${FNN} : NOT_NUMBER : (num menu) '\${ARGS[0]}=${ARGS[0]}' : return 1"
+        return 1
+    fi
+
+    local arr=()
+    arr=($(d2e_ 0 -ff ${PLT_PATH}/.d/.mm.d/tm_sm__))
+
+    local do_tm_file
+    local num_res
+
+    already_define=0
+
+    if ! [ ${ARGS[0]} -eq 0 ]; then
+        if [ ${ARGS[0]} -le ${#arr[@]} ]; then
+            num_res=$((${ARGS[0]} - 1))
+            start_tm_file=${arr[${num_res}]}
+            already_define=1
+        fi
+    fi
+    if [ ${ARGS[0]} -eq 0 ]; then
+        if [ ${already_define} -eq 0 ]; then
+            select do_tm_file in ${arr[@]}; do
+                # echo -e "${GREEN}\$do_tm_file = $do_tm_file${NORMAL}" #print variable
+                start_tm_file=$do_tm_file
+                break
+            done
+        fi
+    fi
+
+    #[[b_sel]]
+
+    echo -e "${HLIGHT}--- cat file://${start_tm_file} ---${NORMAL}" #start files
+
+    cat ${start_tm_file}
+
+    if is_yes__ "tst flow env: \$1='$1', \$2='$2' dir mm.d=${PLT_PATH}/.d/.mm.d/tm_sm__"; then
+        . ${start_tm_file} "${ARGS[@]}"
+        #{body_fn}
+    fi
 }
-
 cd "${idir}"
 unset filename
 #{post_fn}

@@ -1,26 +1,26 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/isn_yes__.ram/.grot/isn_yes__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/is_yes__.ram/.grot/is_yes__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-isn_yes__() {
+is_yes__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
-    local ARGS=($@)
+    local ARGS=("$@")
     local NARGS=$#
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/isn_yes__.ram/.grot/isn_yes__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/is_yes__.ram/.grot/is_yes__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: neg ques mess \$1 if 'y' return 1 - any case return 0
+MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
@@ -72,16 +72,15 @@ ${NORMAL}"
     # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    plt_info "message: '$1' be return 1"
+    plt_info "message: '$1' be return 0"
     local yes
     read -p "CONFIRM enter only 'y'" yes
 
     if [[ ${yes} == "y" ]]; then
-        return 1
+        return 0
     fi
 
-    return 0
-
+    return 1
     #{body_fn}
 }
 
