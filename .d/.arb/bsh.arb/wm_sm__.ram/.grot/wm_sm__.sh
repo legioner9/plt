@@ -1,21 +1,21 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/wm_l__.ram/.grot/wm_l__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/wm_sm__.ram/.grot/wm_sm__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-wm_l__() {
+wm_sm__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
-    local ARGS=($@)
+    local ARGS=("$@")
     local NARGS=$#
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/wm_l__.ram/.grot/wm_l__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/wm_sm__.ram/.grot/wm_sm__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -70,15 +70,72 @@ ${NORMAL}"
     #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     #     eval local $strex
     # done
-    # #{default_cntl_fn}
-    # # amount_arg $# 1 1
 
     # VBoxManage controlvm "v1" acpipowerbutton
     # VBoxManage startvm v1
     # VBoxManage list vms
     # VBoxManage list runningvms
-    echo -e "${HLIGHT}--- VBoxManage list vms ---${NORMAL}" #start files
-    VBoxManage list vms
+
+    echo -e "${GREEN}\${ARGS[0]} = ${ARGS[0]}${NORMAL}" #print variable
+
+    if isn_from__ ${NARGS} 1 1 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+        return 1
+    fi
+
+    if ! is_num ${ARGS[0]}; then
+        plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'\${ARGS[0]}=${ARGS[0]}' : return 1"
+        return 1
+    fi
+
+    arr_vm=($(VBoxManage list vms))
+
+    if [[ -z "${arr_vm[0]}" ]]; then
+        plt_info "vms not present in sys : return 0"
+        return 0
+    fi
+
+    if [ ${ARGS[0]} -le ${#arr[@]} ]; then
+        num_res=$((${ARGS[0]} - 1))
+        ${res[${num_res}]}
+        return 0
+    fi
+
+    #! start bash select -----------------------------------
+    echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+    local arr=()
+    local res=()
+    local num_res
+    local item_arr
+    #{arr_res}
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    # arr+=("aaaaaaaaa")
+    # res+=("bbbbbbbbb")
+    arr+=("exit menu")
+    res+=("return 0")
+    if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
+        num_res=$(($1 - 1))
+        ${res[${num_res}]}
+        return 0
+    fi
+    PS3="eligendi actiones: "
+    select item_arr in "${arr[@]}"; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr[$i]} ]]; then
+                ${res[$i]}
+                ${FNN} $@
+            fi
+        done
+    done
+    #! end bash select -----------------------------------
+    #[[b_sel]]
+
+    #{default_cntl_fn}
+    # amount_arg $# 1 1
     #{body_fn}
 }
 

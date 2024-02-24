@@ -20,6 +20,7 @@
 @isn
 @kill
 @letter
+@list
 @ls
 @lsof
 @menu
@@ -55,5 +56,6 @@
 @tst
 @ush
 @utime
+@vm
 @wget
 @yes
