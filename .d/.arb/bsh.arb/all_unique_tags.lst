@@ -1,8 +1,10 @@
 @alias
 @all
 @alt
+@arb
 @attach
 @cpan
+@cr
 @digit
 @dir
 @echo
@@ -37,6 +39,7 @@
 @rand
 @read
 @red
+@relative
 @repeat
 @repo
 @rpm
@@ -46,9 +49,11 @@
 @stderr
 @stdout
 @string
+@symlink
 @tic
 @tmux
 @tst
+@ush
 @utime
 @wget
 @yes
