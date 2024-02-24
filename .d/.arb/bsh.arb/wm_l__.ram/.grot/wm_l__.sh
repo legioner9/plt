@@ -77,8 +77,14 @@ ${NORMAL}"
     # VBoxManage startvm v1
     # VBoxManage list vms
     # VBoxManage list runningvms
+    # VBoxManage controlvm "VM name" savestate
+
+    plt_info "STANDART: vm=v1 host_name=stun pswd=123"
+
     echo -e "${HLIGHT}--- VBoxManage list vms ---${NORMAL}" #start files
+
     VBoxManage list vms
+
     #{body_fn}
 }
 

@@ -79,6 +79,8 @@ ${NORMAL}"
     # VBoxManage list runningvms
     # VBoxManage controlvm "VM name" savestate
 
+    plt_info "STANDART: vm=v1 host_name=stun pswd=123"
+
     echo -e "${GREEN}\${ARGS[0]} = ${ARGS[0]}${NORMAL}" #print variable
 
     if isn_from__ ${NARGS} 1 1 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
