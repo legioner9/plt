@@ -13,10 +13,13 @@ cd "${idir}" || {
 : >res
 ush_path=${PLT_PATH}/.d/.arb/ush.arb
 
-cp -vr ${ush_path}/_.ram  ${ush_path}/tst.ram
+rm -rf ${ush_path}/tst.ram
+
+cp -r ${ush_path}/_.ram/.  ${ush_path}/tst.ram
 
 rbld_ush__ 
 
+echo -e "${HLIGHT}--- ls -h ${ush_path} ---${NORMAL}" #start files
 ls -h ${ush_path}
 
 # cr_tst_dir_ <dat &>>res
