@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/wm_sm__.ram/.grot/wm_sm__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/wm_km__.ram/.grot/wm_km__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-wm_sm__() {
+wm_km__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -15,7 +15,7 @@ wm_sm__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/wm_sm__.ram/.grot/wm_sm__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/wm_km__.ram/.grot/wm_km__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -70,6 +70,8 @@ ${NORMAL}"
     #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     #     eval local $strex
     # done
+    #{default_cntl_fn}
+    # amount_arg $# 1 1
 
     # VBoxManage controlvm "v1" acpipowerbutton
     # VBoxManage startvm v1
@@ -84,7 +86,7 @@ ${NORMAL}"
     fi
 
     #! start b_sel_ar --------------------------------------
-    #! enter env menu <- ARGS[0] , VBoxManage list vms
+    #! enter env menu <- ARGS[0] , VBoxManage list runningvms
 
     if ! is_num ${ARGS[0]}; then
         plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'\${ARGS[0]}=${ARGS[0]}' : return 1"
@@ -95,7 +97,7 @@ ${NORMAL}"
     local tmp_arr_gen=()
 
     IFS=$'\n'
-    tmp_arr_gen=("$(VBoxManage list vms)")
+    tmp_arr_gen=("$(VBoxManage list runningvms)")
     IFS=$' \t\n'
 
     local tmp_item
@@ -111,7 +113,7 @@ ${NORMAL}"
     echo -e "${GREEN}\${arr_gen[@]} = ${arr_gen[*]}${NORMAL}" #print variable
 
     if [[ -z "${arr_gen[0]}" ]]; then
-        plt_info "generator return null : VBoxManage list vms : return 0"
+        plt_info "generator return null : VBoxManage list runningvms : return 0"
         return 0
     fi
 
@@ -143,13 +145,9 @@ ${NORMAL}"
     #! result menu -> capta
     #! end b_sel_ar --------------------------------------
 
-    echo -e "${HLIGHT}--- VBoxManage startvm ${capta} ---${NORMAL}" #start files
-    eval VBoxManage startvm ${capta}
+    echo -e "${HLIGHT}--- VBoxManage controlvm ${capta} acpipowerbutton ---${NORMAL}" #start files
+    eval VBoxManage controlvm ${capta} acpipowerbutton
 
-    #[[b_sel]]
-
-    #{default_cntl_fn}
-    # amount_arg $# 1 1
     #{body_fn}
 }
 

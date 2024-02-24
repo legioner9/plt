@@ -24,6 +24,7 @@
 @ls
 @lsof
 @menu
+@mm
 @modify
 @module
 @nav_nod
@@ -47,6 +48,7 @@
 @session
 @site
 @space
+@start
 @stderr
 @stdout
 @string
@@ -56,6 +58,7 @@
 @tst
 @ush
 @utime
+@vboxmanage
 @vm
 @wget
 @yes

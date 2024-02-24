@@ -146,7 +146,7 @@ for item3 in ${arrr[@]}; do
 done
 
 arr+=("allarb.lst.edit")
-res+=("${_edit_} ${PD_PATH}/.d/.lst/aE_/all_arb_a.lst")
+res+=("${_edit_} ${PD_PATH}/.d/.lst/aE_/all_arb_a.lst.rnl")
 
 arr+=("menu.exit")
 res+=("return 0")

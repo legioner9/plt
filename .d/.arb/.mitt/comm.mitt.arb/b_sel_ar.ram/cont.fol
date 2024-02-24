@@ -1,0 +1,44 @@
+#! start b_sel_ar --------------------------------------
+    #! enter env menu <- ARGS0 , Command_Generator
+
+    if ! is_num ${ARGS0}; then
+        plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'\${ARGS0}=${ARGS0}' : return 1"
+        return 1
+    fi
+
+    local arr_gen=()
+
+    arr_gen=("$(Command_Generator)")
+
+    if [[ -z "${arr_gen0}" ]]; then
+        plt_info "generator return null : Command_Generator : return 0"
+        return 0
+    fi
+
+    local num_res=
+    local already_define=0
+    local capta=
+
+    if ! [ ${ARGS0} -eq 0 ]; then
+        if [ ${ARGS0} -le ${#arr_gen[@]} ]; then
+            num_res=$((${ARGS0} - 1))
+            capta=${arr_gen[${num_res}]}
+            already_define=1
+        fi
+    fi
+
+    local item_gen=
+
+    if [ ${ARGS0} -eq 0 ]; then
+        if [ ${already_define} -eq 0 ]; then
+            PS3="eligendi actiones: "
+            select item_gen in ${arr_gen[@]}; do
+                # echo -e "${GREEN}\$do_tm_file = $do_tm_file${NORMAL}" #print variable
+                capta=$item_gen
+                break
+            done
+        fi
+    fi
+
+    #! result menu -> capta
+    #! end b_sel_ar --------------------------------------
