@@ -140,6 +140,14 @@ if ! is_num ${ARGS0}; then
     plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'${ARGS0}=${ARGS0}' : return 1"
     return 1
 fi
+if ! is_num ${ARGS1}; then
+    plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+if ! is_num ${ARGS2}; then
+    plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'${ARGS2}=${ARGS2}' : return 1"
+    return 1
+fi
 local arr_gen=()
 
 arr_gen=($(d2e_ 0 -ff ${dir_lst} lst))
@@ -216,6 +224,8 @@ fi
 
 echo -e "${GREEN}\$capta_util_name = $capta_util_name${NORMAL}" #print variable
 
+#! start grep for \$capta_util_name --------------------------------------
+
 dir_proc_arb=${PLT_PATH}/.d/.arb/proc.arb
 
 local ram_path=
@@ -237,18 +247,49 @@ for ram_path in $(d2e_ 0 -dd ${dir_proc_arb} ram); do
         echo -e "
 ${GREEN}------------ START CONT ${RED}\${ram_name}: '${ram_name}' ${GREEN}------------${NORMAL}
 ${cont_str}  
-${GREEN}}------------ END CONT ${RED}\${ram_name}: '${ram_name}' ${GREEN}------------${NORMAL} 
+${GREEN}------------ END CONT ${RED}\${ram_name}: '${ram_name}' ${GREEN}------------${NORMAL} 
 ${BLUE}PATH: file://${ram_path}${NORMAL}
 ${GREEN}NAME: ${ram_name}${NORMAL} 
 ${RED}MAIN: ${main_str}${NORMAL}
 ${CYAN}TAGS: ${tags_str}${NORMAL}"
 
-        arr_ram_util_path+=("$ram_path")
+        arr_ram_util_path+=("${ram_path}")
+        arr_main_str+=("${main_str}")
     fi
 
 done
-
+#! end grep for \$capta_util_name --------------------------------------
+#! result this : arr_main_str as main dimention , arr_ram_util_path as using to do
 #[[b_sel_ar]]
+
+#! start bash select -----------------------------------
+#! enter env menu: ${ARGS2} sa number menu, arr_main_str as name of points , arr_ram_util_path as using stinr
+echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
+
+local arr_main_str=()
+local arr_ram_util_path=()
+num_res=
+local item_arr=
+
+# arr_main_str+=("aaaaaaaaa")
+# arr_ram_util_path+=("bbbbbbbbb")
+
+if [ $(num_01 ${ARGS2}) -eq 1 ] && [ ${ARGS2} -le ${#arr_main_str[@]} ]; then
+    num_res=$((${ARGS2} - 1))
+    ${arr_ram_util_path[${num_res}]}
+    return 0
+fi
+PS3="eligendi actiones: "
+select item_arr in "${arr_main_str[@]}"; do
+    for ((i = 0; i < 1000; i++)); do
+        if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
+            ${arr_ram_util_path[$i]}
+            ${FNN} $@
+        fi
+    done
+done
+#! end bash select -----------------------------------
+#[[b_sel]]
 
 #?---------------------------------------
 #?---------------------------------------------

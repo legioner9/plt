@@ -1,10 +1,11 @@
 #! start bash select -----------------------------------
+#! enter env menu: $1 as nomber menu, arr as name of points, res as using stinr
 
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 local arr=()
 local res=()
-local num_res
-local item_arr
+local num_res=
+local item_arr=
 
 #{arr_res}
 # arr+=("aaaaaaaaa")
