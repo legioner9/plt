@@ -1,0 +1,217 @@
+#!/bin/bash
+
+#! amount args
+# ${_is_amount_arg} ${NARGS} min_equ max_equ
+# if [ $? -ne 0 ]; then
+#     plt_pause "from ${FNN}() :: ${_is_amount_arg} ${NARGS} min_equ:: be return 1"
+#     return 1
+# fi
+#! normalize ptr_path -> absolut path
+# ptr_path=$1
+# ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
+#! variables for cr_f_dir_insert_
+# fn_name=$(${_prs_f} -n ${arg_path})
+# root_path=$(${_prs_f} -d ${arg_path})
+#! search in array
+# [[ " ${arr[*]} " =~ " $1 " ]] && echo "true" || echo "false"
+#! ${array[@]:1} all from 1 member arr
+
+# echo -e "${GREEN}\${g_args[@]} = ${g_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${e_args[@]} = ${e_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${f_args[@]} = ${f_args[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${ARGS[@]} = ${ARGS[*]}${NORMAL}"     #print variable
+echo -e "${GREEN}\${NARGS} = ${NARGS}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS0} = ${ARGS0}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS1} = ${ARGS1}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS3} = ${ARGS3}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS4} = ${ARGS4}${NORMAL}" #print variable
+echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}" #print variable
+# echo -e "${GREEN}\${PPWD} = ${PPWD}${NORMAL}"           #print variable
+
+# echo -e "${GREEN}\${dir_fns_} = ${dir_fns_}${NORMAL}" #print variable
+
+# echo -e "${GREEN}\${var_wrap_arr[@]} = ${var_wrap_arr[*]}${NORMAL}" #print variable
+# echo -e "${GREEN}\${var_fn_arr[@]} = ${var_fn_arr[*]}${NORMAL}"     #print variable
+
+# echo -e "${GREEN}\${arg_fn_arr[@]} = ${arg_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${env_fn_arr[@]} = ${env_fn_arr[*]}${NORMAL}"
+# echo -e "${GREEN}\${pts_fn_arr[@]} = ${pts_fn_arr[*]}${NORMAL}"
+
+# echo -e "${GREEN}\$val_ppr = $val_ppr${NORMAL}" #print variable
+
+# echo -e "${GREEN}\$ratis = $ratis${NORMAL}" #print variable
+
+# echo "that ${FNN}.sal"
+
+#! every from list_strong_cntls by able
+# list_strong_cntls=(?str_ ?del_ ?parr_)
+# for item in "${list_strong_cntls[@]}"; do
+#     echo -e "${GREEN}\$item = $item${NORMAL}" #print variable
+#     echo "$(eval echo \$"$item")"
+#     if [ -z "$(eval echo \$"$item")" ]; then
+#         plt_info "from ${FNN}() :: $item is empty :: be return 1"
+#         return 1
+#     fi
+# done
+
+#! once dpl_ or bcp_ mast be able (0 1)
+# sum_1=$((${dpl_:-0} + ${bcp_:-0}))
+# echo -e "${GREEN}\$sum_1 = $sum_1${NORMAL}"
+
+# if [ "${sum_1:-0}" -ne 1 ]; then
+#     plt_info "from ${FNN}() once dpl_ or bcp_ mast be able :: be return 1"
+#     return 1
+# fi
+
+#! see ${PATH_CURR_REPO}/NBash/_man/ptr/flow_1.sh
+#? in nid allready be reseiving value from ppr_
+#   eval val_ppr=\$"${ppr_}" # reseiving value from ppr_
+#? use and assign new value to ppr_
+#   eval ${ppr_}=$(any_fn ${val_ppr}) # use old value of ppr_ and assign new value to ppr_
+
+#! in pts_fn_arr contane external idetificators (pointers)
+# num=
+# echo num>pts.list
+# any_fn(){num=10}
+# any_fn --_pts pts.list
+# any_fn
+# echo ${num}
+# 10
+
+#! cr fs cr_f_
+# cr_f_ \
+#     "$filename" \
+#     --tml "${PATH_TML_DIR}/cr_shf_/shf.tml" \
+#     --fi0 "${header}" --fr0 "{header}" \
+#     --vi0 "$filename" --vr0 "{filename}"
+
+#! cr fs standart
+# "${_obs_quis_}" "$filename"
+# "${_upg_path}" "$filename"
+
+#! cr fs cr_f_dir_insert_
+# ${_cr_f_dir_insert_} --name ${filename} --dir_insert ${PATH_INSERT_DIR}/obs_quis_
+
+#! innerfns
+# if [ -d "${sil_}/proc/fol_" ]; then
+
+#     c_up "${sil_}/proc/fol_"
+
+#     inner_fn_arr=()
+#     dr2parr_ inner_fn_arr 3 "${sil_}/proc/fol_"
+
+# else
+#     plt_exit "in ${FNN} : NOT_DIR : '${sil_}/proc/fol_' return 1"
+#     return 1
+# fi
+
+# for item6 in ${inner_fn_arr[@]}; do
+#     echo -e "${GREEN}\$item6 = $item6${NORMAL}" #print variable
+
+#     ${item6}
+
+#     ret_nom=$?
+#     if [ ${ret_nom} -eq 2 ]; then
+#         return 0
+#     fi
+#     if [ ${ret_nom} -eq 3 ]; then
+#         return 1
+#     fi
+#     echo -e "${GREEN}\$ret_nom = $ret_nom${NORMAL}" #print variable
+
+# done
+
+#?--------------------------------------------------------
+#?---------------------------------------------
+#?---------------------------------------
+
+plt_info "dir with .lst sys_utils : file://${PLT_PATH}/.d/.lst/arb2mm_"
+
+local dir_lst=${PLT_PATH}/.d/.lst/arb2mm_
+
+if isn_from__ ${NARGS} 2 10 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+    return 1
+fi
+
+#! start b_sel_ar --------------------------------------
+#! enter env menu <- ARGS0 , 'd2e_ 0 -ff ${PLT_PATH}/.d/.lst/arb2mm_ lst'
+if ! is_num ${ARGS0}; then
+    plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'${ARGS0}=${ARGS0}' : return 1"
+    return 1
+fi
+local arr_gen=()
+arr_gen=("$(d2e_ 0 -ff ${PLT_PATH}/.d/.lst/arb2mm_ lst)")
+if [[ -z "${arr_gen[0]}" ]]; then
+    plt_info "generator return null : d2e_ 0 -ff file://${PLT_PATH}/.d/.lst/arb2mm_ lst : return 0"
+    return 0
+fi
+local num_res=
+local already_define=0
+local capta_lst=
+if ! [ ${ARGS0} -eq 0 ]; then
+    if [ ${ARGS0} -le ${#arr_gen[@]} ]; then
+        num_res=$((${ARGS0} - 1))
+        capta_lst=${arr_gen[${num_res}]}
+        already_define=1
+    fi
+fi
+local item_gen=
+if [ ${ARGS0} -eq 0 ]; then
+    if [ ${already_define} -eq 0 ]; then
+        PS3="eligendi actiones: "
+        select item_gen in ${arr_gen[@]}; do
+            # echo -e "${GREEN}$do_tm_file = $do_tm_file${NORMAL}" #print variable
+            capta_lst=$item_gen
+            break
+        done
+    fi
+fi
+#! result menu -> capta_lst
+#! end b_sel_ar --------------------------------------
+#[[b_sel_ar]]
+echo -e "${GREEN}\$capta_lst = $capta_lst${NORMAL}" #print variable
+#{main_body_fn}
+
+#! start b_sel_ar --------------------------------------
+#! enter env menu <- ARGS1 , f2e_ $capta_lst
+if ! is_num ${ARGS1}; then
+    plt_exit "in ${FNN} : NOT_NUMBER : (num_menu)'${ARGS1}=${ARGS1}' : return 1"
+    return 1
+fi
+arr_gen=()
+arr_gen=("$(f2e_ $capta_lst)")
+if [[ -z "${arr_gen[0]}" ]]; then
+    plt_info "generator return null : f2e_ $capta_lst : return 0"
+    return 0
+fi
+num_res=
+already_define=0
+capta_util_name=
+if ! [ ${ARGS1} -eq 0 ]; then
+    if [ ${ARGS1} -le ${#arr_gen[@]} ]; then
+        num_res=$((${ARGS1} - 1))
+        capta_util_name=${arr_gen[${num_res}]}
+        already_define=1
+    fi
+fi
+item_gen=
+if [ ${ARGS1} -eq 0 ]; then
+    if [ ${already_define} -eq 0 ]; then
+        PS3="eligendi actiones: "
+        select item_gen in ${arr_gen[@]}; do
+            # echo -e "${GREEN}$do_tm_file = $do_tm_file${NORMAL}" #print variable
+            capta_util_name=$item_gen
+            break
+        done
+    fi
+fi
+#! result menu -> capta_util_name
+#! end b_sel_ar --------------------------------------
+
+echo -e "${GREEN}\$capta_util_name = $capta_util_name${NORMAL}" #print variable
+#[[b_sel_ar]]
+
+#?---------------------------------------
+#?---------------------------------------------
+#?--------------------------------------------------------

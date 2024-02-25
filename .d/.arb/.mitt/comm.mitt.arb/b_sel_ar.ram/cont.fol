@@ -10,7 +10,7 @@
 
     arr_gen=("$(Command_Generator)")
 
-    if [[ -z "${arr_gen0}" ]]; then
+    if [[ -z "${arr_gen[0]}" ]]; then
         plt_info "generator return null : Command_Generator : return 0"
         return 0
     fi

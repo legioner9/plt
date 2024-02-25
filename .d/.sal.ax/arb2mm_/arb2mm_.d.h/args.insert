@@ -1,0 +1,25 @@
+ARGS:
+    \$1 mm files <lst_sys_utils> from ${PLT_PATH}/.d/.lst/arb2mm_
+            if 0 full menu file with <lst_sys_utils>
+            if n>0 num pint of menu <lst_sys_utils>
+    \$2 mm <sys_utils> from <lst_sys_utils>
+            if 0 full menu with <sys_util>
+            if n>0 num pint of menu <sys_util>
+
+CNTLS:
+        --_
+        -_
+
+LOGIC ARGS:
+    !()
+    ?()
+
+* !( a && b || c ) strong 
+* ?() optional
+* .() once
+* {n,m}() regexp notam
+exa:
+    !( --_sil && --_arb )
+    ( --_{sub}_{obs} && --_ram )
+    ( --_{sub}_{obs} || -_crtag || -_addtag )
+    ?( --_ram ) && (-_crtag || -_addtag )
