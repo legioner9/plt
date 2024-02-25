@@ -126,6 +126,8 @@ echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}" #print variable
 #?---------------------------------------------
 #?---------------------------------------
 
+echo -e "${GREEN}\${ARGS[@]:3} = ${ARGS[@]:3}${NORMAL}" #print variable
+
 plt_info "dir with .lst sys_utils : file://${PLT_PATH}/.d/.lst/arb2mm_"
 
 local dir_lst=${PLT_PATH}/.d/.lst/arb2mm_
@@ -258,37 +260,51 @@ ${CYAN}TAGS: ${tags_str}${NORMAL}"
     fi
 
 done
+
 #! end grep for \$capta_util_name --------------------------------------
 #! result this : arr_main_str as main dimention , arr_ram_util_path as using to do
 #[[b_sel_ar]]
+
+echo -e "${GREEN}\${arr_ram_util_path[@]} = ${arr_ram_util_path[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${arr_main_str[@]} = ${arr_main_str[*]}${NORMAL}" #print variable
 
 #! start bash select -----------------------------------
 #! enter env menu: ${ARGS2} sa number menu, arr_main_str as name of points , arr_ram_util_path as using stinr
 echo -e "${BLUE}--- exec ${FNN}() (num_menu) ---${NORMAL}" #started functions
 
-local arr_main_str=()
-local arr_ram_util_path=()
 num_res=
 local item_arr=
+local file_util_path=
 
 # arr_main_str+=("aaaaaaaaa")
 # arr_ram_util_path+=("bbbbbbbbb")
-
-if [ $(num_01 ${ARGS2}) -eq 1 ] && [ ${ARGS2} -le ${#arr_main_str[@]} ]; then
-    num_res=$((${ARGS2} - 1))
-    ${arr_ram_util_path[${num_res}]}
-    return 0
+if ! [ ${ARGS2} -eq 0 ]; then
+    if [ ${ARGS2} -le ${#arr_main_str[@]} ]; then
+        num_res=$((${ARGS2} - 1))
+        file_util_path=${arr_ram_util_path[${num_res}]}
+    fi
 fi
-PS3="eligendi actiones: "
-select item_arr in "${arr_main_str[@]}"; do
-    for ((i = 0; i < 1000; i++)); do
-        if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
-            ${arr_ram_util_path[$i]}
-            ${FNN} $@
-        fi
+if [ ${ARGS2} -eq 0 ]; then
+    PS3="eligendi actiones: "
+    IFS=$'\n'
+    select item_arr in ${arr_main_str[@]}; do
+        for ((i = 0; i < 1000; i++)); do
+            if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
+                file_util_path=${arr_ram_util_path[$i]}
+                
+            fi
+        done
+        break
     done
-done
+fi
 #! end bash select -----------------------------------
+#! result this : ${file_util_path}
+echo -e "${GREEN}\$file_util_path = $file_util_path${NORMAL}" #print variable
+
+echo -e "${GREEN}\${ARGS[@]:3} = ${ARGS[@]:3}${NORMAL}" #print variable
+
+. ${file_util_path}/cont.fol "${ARGS[@]:3}"
+
 #[[b_sel]]
 
 #?---------------------------------------
