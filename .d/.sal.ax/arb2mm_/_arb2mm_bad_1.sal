@@ -126,11 +126,30 @@ echo -e "${GREEN}\${ARGS5} = ${ARGS5}${NORMAL}" #print variable
 #?---------------------------------------------
 #?---------------------------------------
 
-echo -e "${GREEN}\${ARGS[@]:3} = ${ARGS[@]:3}${NORMAL}" #print variable
-
 plt_info "dir with .lst sys_utils : file://${PLT_PATH}/.d/.lst/arb2mm_"
 
 local dir_lst=${PLT_PATH}/.d/.lst/arb2mm_
+
+#! START create ${dir_lst}/001_main_all.gn.lst (.gn create from generate)
+
+# local arb_path=
+# arb_path=${PLT_PATH}/.d/.arb/proc.arb
+
+# local arr_main_tag_tmp=()
+# arr_main_tag_tmp=($(d2e_ -n -dd ${arb_path} gran))
+# # parr3e_ arr_main_tag_tmp
+
+# local main_tag=
+
+# true >${dir_lst}/001_main_all.gn.lst
+# for main_tag in ${arr_main_tag_tmp[@]}; do
+#    echo "${main_tag:2}" >>${dir_lst}/001_main_all.gn.lst
+# done
+
+# echo -e "${HLIGHT}--- cat file://${dir_lst}/001_main_all.gn.lst ---${NORMAL}" #start files
+# cat ${dir_lst}/001_main_all.gn.lst
+
+#! END create ${PLT_PATH}/.d/.lst/arb2mm_/001_main_all.gn.lst
 
 if isn_from__ ${NARGS} 2 10 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
     return 1
@@ -266,7 +285,7 @@ done
 #[[b_sel_ar]]
 
 echo -e "${GREEN}\${arr_ram_util_path[@]} = ${arr_ram_util_path[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${arr_main_str[@]} = ${arr_main_str[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${arr_main_str[@]} = ${arr_main_str[*]}${NORMAL}"           #print variable
 
 #! start bash select -----------------------------------
 #! enter env menu: ${ARGS2} sa number menu, arr_main_str as name of points , arr_ram_util_path as using stinr
@@ -291,7 +310,7 @@ if [ ${ARGS2} -eq 0 ]; then
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
                 file_util_path=${arr_ram_util_path[$i]}
-                
+
             fi
         done
         break
@@ -303,7 +322,6 @@ echo -e "${GREEN}\$file_util_path = $file_util_path${NORMAL}" #print variable
 
 echo -e "${GREEN}\${ARGS[@]:3} = ${ARGS[@]:3}${NORMAL}" #print variable
 
-echo -e "${HLIGHT}--- . ${file_util_path}/cont.fol ${ARGS[@]:3} ---${NORMAL}" #start files
 . ${file_util_path}/cont.fol "${ARGS[@]:3}"
 
 #[[b_sel]]
