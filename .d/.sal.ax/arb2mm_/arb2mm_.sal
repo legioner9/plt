@@ -132,6 +132,27 @@ plt_info "dir with .lst sys_utils : file://${PLT_PATH}/.d/.lst/arb2mm_"
 
 local dir_lst=${PLT_PATH}/.d/.lst/arb2mm_
 
+#! START create ${dir_lst}/001_main_all.gn.lst (.gn create from generate)
+
+local arb_path=
+arb_path=${PLT_PATH}/.d/.arb/proc.arb
+
+local arr_main_tag_tmp=()
+arr_main_tag_tmp=($(d2e_ -n -dd ${arb_path} gran))
+# parr3e_ arr_main_tag_tmp
+
+local main_tag=
+
+true >${dir_lst}/001_main_all.gn.lst
+for main_tag in ${arr_main_tag_tmp[@]}; do
+    echo "${main_tag:2}" >>${dir_lst}/001_main_all.gn.lst
+done
+
+echo -e "${HLIGHT}--- cat file://${dir_lst}/001_main_all.gn.lst ---${NORMAL}" #start files
+cat ${dir_lst}/001_main_all.gn.lst
+
+#! END create ${PLT_PATH}/.d/.lst/arb2mm_/001_main_all.gn.lst
+
 if isn_from__ ${NARGS} 2 10 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
     return 1
 fi
@@ -153,6 +174,9 @@ fi
 local arr_gen=()
 
 arr_gen=($(d2e_ 0 -ff ${dir_lst} lst))
+arr_gen+=("edit_ file://${dir_lst}")
+
+# parr3e_ arr_gen
 
 if [[ -z "${arr_gen[0]}" ]]; then
     plt_info "generator return null : d2e_ 0 -ff file://${dir_lst} lst : return 0"
@@ -166,6 +190,10 @@ local capta_lst=
 if ! [ ${ARGS0} -eq 0 ]; then
     if [ ${ARGS0} -le ${#arr_gen[@]} ]; then
         num_res=$((${ARGS0} - 1))
+        if [[ "edit_ file://${dir_lst}}" == "${arr_gen[${num_res}]}" ]]; then
+            edit_ ${dir_lst}
+            return 0
+        fi
         capta_lst=${arr_gen[${num_res}]}
         already_define=1
     fi
@@ -174,8 +202,11 @@ local item_gen
 if [ ${ARGS0} -eq 0 ]; then
     if [ ${already_define} -eq 0 ]; then
         PS3="eligendi actiones: "
-        select item_gen in ${arr_gen[@]}; do
-            # echo -e "${GREEN}$do_tm_file = $do_tm_file${NORMAL}" #print variable
+        select item_gen in "${arr_gen[@]}"; do
+            if [[ "edit_ file://${dir_lst}" == "${item_gen}" ]]; then
+                edit_ ${dir_lst}
+                return 0
+            fi
             capta_lst=$item_gen
             echo -e "${GREEN}\$capta_lst = $capta_lst${NORMAL}" #print variable
             break
@@ -214,7 +245,7 @@ item_gen=
 if [ ${ARGS1} -eq 0 ]; then
     if [ ${already_define} -eq 0 ]; then
         PS3="eligendi actiones: "
-        select item_gen in ${arr_gen[@]}; do
+        select item_gen in "${arr_gen[@]}"; do
             # echo -e "${GREEN}$do_tm_file = $do_tm_file${NORMAL}" #print variable
             capta_util_name=$item_gen
             break
@@ -266,7 +297,7 @@ done
 #[[b_sel_ar]]
 
 echo -e "${GREEN}\${arr_ram_util_path[@]} = ${arr_ram_util_path[*]}${NORMAL}" #print variable
-echo -e "${GREEN}\${arr_main_str[@]} = ${arr_main_str[*]}${NORMAL}" #print variable
+echo -e "${GREEN}\${arr_main_str[@]} = ${arr_main_str[*]}${NORMAL}"           #print variable
 
 #! start bash select -----------------------------------
 #! enter env menu: ${ARGS2} sa number menu, arr_main_str as name of points , arr_ram_util_path as using stinr
@@ -291,7 +322,7 @@ if [ ${ARGS2} -eq 0 ]; then
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
                 file_util_path=${arr_ram_util_path[$i]}
-                
+
             fi
         done
         break

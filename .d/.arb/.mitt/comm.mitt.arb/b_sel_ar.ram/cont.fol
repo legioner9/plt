@@ -32,7 +32,7 @@
     if [ ${ARGS0} -eq 0 ]; then
         if [ ${already_define} -eq 0 ]; then
             PS3="eligendi actiones: "
-            select item_gen in ${arr_gen[@]}; do
+            select item_gen in "${arr_gen[@]}"; do
                 # echo -e "${GREEN}\$do_tm_file = $do_tm_file${NORMAL}" #print variable
                 capta=$item_gen
                 break
