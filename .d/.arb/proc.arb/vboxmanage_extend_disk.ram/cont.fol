@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "\$1 - path to vm_disk_vdi"
+path_to_vm_disk_vdi="$1"
+new_size_mb="$2"
+read -p "DO? --- VBoxManage modifyhd file://$path_to_vm_disk_vdi $new_size_mb ---"
+
+VBoxManage modifyhd $path_to_vm_disk_vdi --resize $new_size_mb

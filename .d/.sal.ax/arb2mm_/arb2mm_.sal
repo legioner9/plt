@@ -141,14 +141,18 @@ if ! is_num ${ARGS0}; then
     return 1
 fi
 local arr_gen=()
-arr_gen=("$(d2e_ 0 -ff ${PLT_PATH}/.d/.lst/arb2mm_ lst)")
+
+arr_gen=($(d2e_ 0 -ff ${dir_lst} lst))
+
 if [[ -z "${arr_gen[0]}" ]]; then
-    plt_info "generator return null : d2e_ 0 -ff file://${PLT_PATH}/.d/.lst/arb2mm_ lst : return 0"
+    plt_info "generator return null : d2e_ 0 -ff file://${dir_lst} lst : return 0"
     return 0
 fi
+
 local num_res=
 local already_define=0
 local capta_lst=
+
 if ! [ ${ARGS0} -eq 0 ]; then
     if [ ${ARGS0} -le ${#arr_gen[@]} ]; then
         num_res=$((${ARGS0} - 1))
@@ -156,13 +160,14 @@ if ! [ ${ARGS0} -eq 0 ]; then
         already_define=1
     fi
 fi
-local item_gen=
+local item_gen
 if [ ${ARGS0} -eq 0 ]; then
     if [ ${already_define} -eq 0 ]; then
         PS3="eligendi actiones: "
         select item_gen in ${arr_gen[@]}; do
             # echo -e "${GREEN}$do_tm_file = $do_tm_file${NORMAL}" #print variable
             capta_lst=$item_gen
+            echo -e "${GREEN}\$capta_lst = $capta_lst${NORMAL}" #print variable
             break
         done
     fi
@@ -180,14 +185,14 @@ if ! is_num ${ARGS1}; then
     return 1
 fi
 arr_gen=()
-arr_gen=("$(f2e_ $capta_lst)")
+arr_gen=($(f2e_ $capta_lst))
 if [[ -z "${arr_gen[0]}" ]]; then
     plt_info "generator return null : f2e_ $capta_lst : return 0"
     return 0
 fi
 num_res=
 already_define=0
-capta_util_name=
+local capta_util_name=
 if ! [ ${ARGS1} -eq 0 ]; then
     if [ ${ARGS1} -le ${#arr_gen[@]} ]; then
         num_res=$((${ARGS1} - 1))
@@ -210,6 +215,39 @@ fi
 #! end b_sel_ar --------------------------------------
 
 echo -e "${GREEN}\$capta_util_name = $capta_util_name${NORMAL}" #print variable
+
+dir_proc_arb=${PLT_PATH}/.d/.arb/proc.arb
+
+local ram_path=
+local tag_file=
+local arr_ram_util_path=()
+local arr_main_str=()
+
+for ram_path in $(d2e_ 0 -dd ${dir_proc_arb} ram); do
+
+    tag_file=${ram_path}/tags.fol
+
+    if cat ${tag_file} | grep @${capta_util_name}; then
+        # echo -e "${GREEN}\$ram_path = $ram_path${NORMAL}" #print variable
+        ram_name=$(prs_f -n ${ram_path})
+        main_str=$(cat ${ram_path}/main.fol)
+        tags_str="$("${_f2str_}" "${ram_path}"/tags.fol)"
+        cont_str=$(cat "${ram_path}"/cont.fol)
+
+        echo -e "
+${GREEN}------------ START CONT ${RED}\${ram_name}: '${ram_name}' ${GREEN}------------${NORMAL}
+${cont_str}  
+${GREEN}}------------ END CONT ${RED}\${ram_name}: '${ram_name}' ${GREEN}------------${NORMAL} 
+${BLUE}PATH: file://${ram_path}${NORMAL}
+${GREEN}NAME: ${ram_name}${NORMAL} 
+${RED}MAIN: ${main_str}${NORMAL}
+${CYAN}TAGS: ${tags_str}${NORMAL}"
+
+        arr_ram_util_path+=("$ram_path")
+    fi
+
+done
+
 #[[b_sel_ar]]
 
 #?---------------------------------------
