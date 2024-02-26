@@ -192,7 +192,7 @@ for item_i in "${ARGS[@]}"; do
 
         if [ "${item_i:0:1}" == "-" ]; then # param is flow_symbol - not a value
             # plt_exit "$item_i not value - that flow_symbol"
-            plt_err "garg2e_: return 1 $item_i not value - that flow_symbol"
+            plt_err "garg2e_v2_: return 1 $item_i not value - that flow_symbol"
             return 1
         fi
         if [ -n "$name_i" ]; then
@@ -224,7 +224,7 @@ for item_i in "${ARGS[@]}"; do
     fi
 done
 if [ $flag -eq 1 ]; then
-    plt_err "garg2e_: return 1 $item_i flow_symbol withut value"
+    plt_err "garg2e_v2_: return 1 $item_i flow_symbol withut value"
     return 1
 fi
 

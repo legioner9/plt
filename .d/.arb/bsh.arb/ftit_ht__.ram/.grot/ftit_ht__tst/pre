@@ -1,4 +1,4 @@
-[0;31m--------plt_exit: in ftit_t__ : ERR_AMOUNT_ARGS : '{NARGS}=0' demand: 1 : return 1--------[0m
+[0;31m--------plt_exit: in ftit_t__ : ERR_AMOUNT_ARGS : '{NARGS}=0' demand: 1  : return 1--------[0m
 [0;31mbe return 1[0m
 [0;31m^C - exit, ENTER - return to process 
 after usually return 1 from parent thread[0m

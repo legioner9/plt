@@ -5,14 +5,14 @@ af=aff
 bf=bff
 garg2e_v2_ -rr --csa
 rr=1
-[0;31m--------plt_err (>stderr): garg2e_: return 1 --csa flow_symbol withut value --------[0m
+[0;31m--------plt_err (>stderr): garg2e_v2_: return 1 --csa flow_symbol withut value --------[0m
 [0;31m--------plt_exit: fail: . /home/st/REPOBARE/_repo/plt/actio/mall/dir_garg2e_v2_/.d.ax/.sal.ax/garg2e_v2_.body.sh--------[0m
 [0;31mbe return 1[0m
 [0;31m^C - exit, ENTER - return to process 
 after usually return 1 from parent thread[0m
 garg2e_v2_ -rr --csa --ergre
 rr=1
-[0;31m--------plt_err (>stderr): garg2e_: return 1 --ergre not value - that flow_symbol --------[0m
+[0;31m--------plt_err (>stderr): garg2e_v2_: return 1 --ergre not value - that flow_symbol --------[0m
 [0;31m--------plt_exit: fail: . /home/st/REPOBARE/_repo/plt/actio/mall/dir_garg2e_v2_/.d.ax/.sal.ax/garg2e_v2_.body.sh--------[0m
 [0;31mbe return 1[0m
 [0;31m^C - exit, ENTER - return to process 
