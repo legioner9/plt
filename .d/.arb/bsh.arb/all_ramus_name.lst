@@ -24,6 +24,7 @@ is_yes__
 kill_port__
 lsof__
 lsof_t__
+lu__
 NBash
 parr2f__
 plt2tst__

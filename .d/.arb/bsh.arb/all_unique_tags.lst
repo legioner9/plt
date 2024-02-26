@@ -45,10 +45,12 @@
 @repeat
 @repo
 @rpm
+@save
 @session
 @site
 @space
 @start
+@state
 @stderr
 @stdout
 @string

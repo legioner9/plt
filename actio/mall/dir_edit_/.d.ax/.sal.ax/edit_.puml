@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> edit_ 
+farg2e2_ -> edit_
+echo_deb_ -> edit_
+edit_ -> edit_:is_num
+edit_ -> edit_:exit_err_edit_
+edit_ -> edit_:exit_reg_edit_
+edit_ -> edit_:unset_autoargs_edit_
+' {wrap_fn}
+' fnn o-> edit_
+' {body_fn}
+@enduml
