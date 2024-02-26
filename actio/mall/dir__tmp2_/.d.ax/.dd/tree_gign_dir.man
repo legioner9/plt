@@ -1,0 +1,48 @@
+tree -a -L 2 in /home/st/REPOBARE/_repo/plt/actio/mall/dir__tmp2_/.d.ax
+.
+├── .cir
+│   └── p1.cir
+├── .dd
+│   ├── causa.man
+│   ├── cr_tree_gign_dir.sh
+│   ├── sruct.man
+│   ├── textus.man
+│   └── tree_gign_dir.man
+├── .mdeb
+│   ├── a001_fp_f_mdeb_zx.sh
+│   ├── .cntl
+│   ├── .store
+│   └── .tmp
+├── .sal.ax
+│   ├── _tmp2_.body.nsc.sh -> /home/st/REPOBARE/_repo/plt/.d/.sal.ax/_tmp2_/_tmp2_.sal
+│   ├── _tmp2_.d.h -> /home/st/REPOBARE/_repo/plt/.d/.sal.ax/_tmp2_/_tmp2_.d.h
+│   ├── _tmp2_.d.repo -> /home/st/REPOBARE/_repo/plt/.d/.sal.ax/_tmp2_/_tmp2_.d.repo
+│   ├── _tmp2_.h -> /home/st/REPOBARE/_repo/plt/.d/.sal.ax/_tmp2_/_tmp2_.h
+│   ├── _tmp2_.local.list -> /home/st/REPOBARE/_repo/plt/.d/.sal.ax/_tmp2_/_tmp2_.local
+│   ├── _tmp2_.lst
+│   ├── _tmp2_.man
+│   └── _tmp2_.puml
+├── .self_tst
+│   ├── 0
+│   ├── dir_1
+│   ├── generate_self_tst_1.sh
+│   ├── howuse.man
+│   └── whatshappenig.man
+└── ._tmp2_
+    ├── _config
+    ├── _debug
+    ├── _default
+    ├── _exec
+    ├── _exl
+    ├── _fn
+    ├── _insert
+    ├── _list
+    ├── _log
+    ├── _man
+    ├── _menu
+    ├── _sh
+    ├── _tml
+    ├── _tmp
+    └── _var
+
+27 directories, 17 files
