@@ -11,6 +11,10 @@ MAIN: osh_ <name_fn> - exec : <name_fn> after up to mem : . ${PLT_PATH}/.d/.arb/
 ARGS:
 $1 once name_fn
 if "-E" exec catalog osh.arb
+if "-n" grep for $2 name (name.ram) -> mm -> exec 
+if "-t" grep for $2 tags (tags.fol) -> mm -> exec 
+if "-c" grep for $2 cont (cont.fol) -> mm -> exec 
+if "-m" grep for $2 cont (main.fol) -> mm -> exec 
 $2 ... args for name_fn
 CNTLS:
 --_

@@ -63,7 +63,7 @@ ${NORMAL}"
         echo "a3_fp_f_mdeb_1_main_to_store_tmp: try fp_f_ 1 to _fp_f_/_mdeb/.store/FNAA_1/tmp"
         return 0
     fi
-    if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+    if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
         plt_exit " ${FNN} return 1: ${FNLOCK}"
         return 1
     fi

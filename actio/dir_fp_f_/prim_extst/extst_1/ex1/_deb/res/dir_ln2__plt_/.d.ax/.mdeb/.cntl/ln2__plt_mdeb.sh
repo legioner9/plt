@@ -313,7 +313,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -339,7 +339,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -365,7 +365,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -391,7 +391,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -417,7 +417,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -443,7 +443,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
@@ -469,7 +469,7 @@ if [ "_head" == "$1" ]; then
 echo "_head fn: ${d_name}/${FNN}"
 return 0
 fi
-if ! garg2e_ "${ARGS[@]}" 1>/dev/null; then
+if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
