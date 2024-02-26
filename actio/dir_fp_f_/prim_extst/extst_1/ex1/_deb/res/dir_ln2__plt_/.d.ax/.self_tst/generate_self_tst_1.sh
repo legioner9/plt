@@ -13,9 +13,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -36,9 +36,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -59,9 +59,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -82,9 +82,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -105,9 +105,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -128,9 +128,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done
@@ -151,9 +151,9 @@ idir=$(pwd)
 rdir="$(prs_f -d $filename)"
 gname="$(prs_f -n $filename)" # name without .ext
 wrp_fifs1_ cd  "$(prs_f -d $filename)" -d1
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval $strex
 done

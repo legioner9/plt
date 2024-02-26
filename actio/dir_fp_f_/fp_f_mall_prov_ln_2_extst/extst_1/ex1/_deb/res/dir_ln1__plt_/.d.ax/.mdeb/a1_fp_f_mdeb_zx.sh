@@ -187,9 +187,9 @@ if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done
@@ -213,9 +213,9 @@ if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done
@@ -239,9 +239,9 @@ if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done
@@ -265,9 +265,9 @@ if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
 plt_exit " ${FNN} return 1: ${FNLOCK}"
 return 1
 fi
-g_args=($(garg2e_ "${ARGS[@]}"))
+g_args=($(${_garg2e_} "${ARGS[@]}"))
 [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(garg2e_ "${ARGS[@]}"); do
+for strex in $(${_garg2e_} "${ARGS[@]}"); do
 [[ 1 -eq ${verbose} ]] || echo "local $strex"
 eval local $strex
 done

@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> garg2e_v2_ 
+farg2e2_ -> garg2e_v2_
+echo_deb_ -> garg2e_v2_
+garg2e_v2_ -> garg2e_v2_:is_num
+garg2e_v2_ -> garg2e_v2_:exit_err_garg2e_v2_
+garg2e_v2_ -> garg2e_v2_:exit_reg_garg2e_v2_
+garg2e_v2_ -> garg2e_v2_:unset_autoargs_garg2e_v2_
+' {wrap_fn}
+' fnn o-> garg2e_v2_
+' {body_fn}
+@enduml
