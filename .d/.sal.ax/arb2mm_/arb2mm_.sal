@@ -145,7 +145,7 @@ local main_tag=
 
 true >${dir_lst}/001_main_all.gn.lst
 for main_tag in ${arr_main_tag_tmp[@]}; do
-    echo "${main_tag:2}" >>${dir_lst}/001_main_all.gn.lst
+    echo "${main_tag:4}" >>${dir_lst}/001_main_all.gn.lst
 done
 
 echo -e "${HLIGHT}--- cat file://${dir_lst}/001_main_all.gn.lst ---${NORMAL}" #start files
