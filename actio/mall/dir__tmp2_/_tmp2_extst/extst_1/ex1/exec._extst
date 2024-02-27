@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#. "${HOME}/.bashrc"
+#. "/home/st/.bashrc"
 
 filename=${PLT_PATH}/actio/mall/dir__tmp2_/_tmp2_extst/extst_1/ex1/exec._extst 
 
