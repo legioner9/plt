@@ -135,7 +135,7 @@ local dir_lst=${PLT_PATH}/.d/.lst/arb2mm_
 #! START create ${dir_lst}/001_main_all.gn.lst (.gn create from generate)
 
 local arb_path=
-arb_path=${PLT_PATH}/.d/.arb/proc.arb
+arb_path=${PD_PATH}/.d/.arb/proc.arb
 
 local arr_main_tag_tmp=()
 arr_main_tag_tmp=($(d2e_ -n -dd ${arb_path} gran))
@@ -259,7 +259,7 @@ echo -e "${GREEN}\$capta_util_name = $capta_util_name${NORMAL}" #print variable
 
 #! start grep for \$capta_util_name --------------------------------------
 
-dir_proc_arb=${PLT_PATH}/.d/.arb/proc.arb
+dir_proc_arb=${arb_path}
 
 local ram_path=
 local tag_file=
