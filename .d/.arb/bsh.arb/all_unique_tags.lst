@@ -15,6 +15,7 @@
 @find
 @from
 @human
+@id
 @indicator
 @install
 @is
@@ -34,11 +35,13 @@
 @num
 @old
 @only
+@pc
 @perl
 @plt
 @port
 @ps
 @ques
+@quiet
 @rand
 @rbld
 @read
@@ -46,7 +49,9 @@
 @relative
 @repeat
 @repo
+@rm
 @rpm
+@running
 @save
 @session
 @singlefn

@@ -156,7 +156,9 @@ ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 
 # if type "codium"; then
 #     echo -e "${ULINE} codium $ptr_path${NORMAL}" #repit commands
-#     codium $2 "$ptr_path"
+#     codium $2 "$ptr_path"0
+
+
 
 # elif type "code"; then
 #     echo -e "${ULINE} code $ptr_path${NORMAL}" #repit commands

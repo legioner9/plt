@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/tm_sm__.ram/.grot/tm_sm__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/prsti_nt__.ram/.grot/prsti_nt__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-tm_sm__() {
+prsti_nt__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -15,7 +15,7 @@ tm_sm__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/tm_sm__.ram/.grot/tm_sm__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/prsti_nt__.ram/.grot/prsti_nt__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -25,11 +25,8 @@ NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-\$1  if 0 menu dir
-    if n number of menu dir
-
-[ ,\$2 args for exec files from menu ]
-
+$1
+[ ,$2 num_menu ]
 CNTLS:
 required
 optional 
@@ -71,65 +68,44 @@ ${NORMAL}"
     # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
     # for strex in $(${_garg2e_} "${ARGS[@]}"); do
     #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    #     echo "$strex"
     #     eval local $strex
     # done
-    # #{default_cntl_fn}
+    #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    echo -e "${GREEN}\${ARGS[0]} = ${ARGS[0]}${NORMAL}" #print variable
-    echo -e "${GREEN}\${ARGS[1]} = ${ARGS[1]}${NORMAL}" #print variable
-    echo -e "${GREEN}\${ARGS[2]} = ${ARGS[2]}${NORMAL}" #print variable
-    echo -e "${GREEN}\${ARGS[3]} = ${ARGS[3]}${NORMAL}" #print variable
-
-    #? ${PLT_PATH}/.d/.mm.d/tm_sm__
-
-    if isn_from__ ${NARGS} 1 5 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
-        return 1
-    fi
-    
-
-    if [ $(num_01 ${ARGS[0]}) -ne 1 ]; then
-        plt_exit "in ${FNN} : NOT_NUMBER : (num menu) '\${ARGS[0]}=${ARGS[0]}' : return 1"
+    if [[ -n "$1" ]] && ! is_num "$1"; then
+        plt_exit "in ${FNN} : NOT_NUMBER : '$1' : return 1"
         return 1
     fi
 
-    local arr=()
-    arr=($(d2e_ 0 -ff ${PLT_PATH}/.d/.mm.d/tm_sm__))
-
-    local do_tm_file
-    local num_res
-
-    already_define=0
-
-    if ! [ ${ARGS[0]} -eq 0 ]; then
-        if [ ${ARGS[0]} -le ${#arr[@]} ]; then
-            num_res=$((${ARGS[0]} - 1))
-            start_tm_file=${arr[${num_res}]}
-            already_define=1
+    local n=0
+    while IFS=$'\n' read -r line; do
+        if [[ "${n}" -eq 0 ]]; then
+            n=1
+            continue
         fi
-    fi
-    if [ ${ARGS[0]} -eq 0 ]; then
-        if [ ${already_define} -eq 0 ]; then
-            select do_tm_file in ${arr[@]}; do
-                # echo -e "${GREEN}\$do_tm_file = $do_tm_file${NORMAL}" #print variable
-                start_tm_file=$do_tm_file
-                break
-            done
+        if [[ -z "${line}" ]]; then continue; fi
+        if [[ -n "$1" ]]; then
+            if [[ -n "$2" ]]; then
+
+                if grep "$2" <<<"${line}" >/dev/null; then
+                    echo "$line" | eval perl -lane \'print \$F\["$1"\]\'
+                    continue
+                fi
+
+            else
+                echo "$line" | eval perl -lane \'print \$F\["$1"\]\'
+                continue
+            fi
+
+        else
+            echo "$line"
+            continue
         fi
-    fi
-
-    #[[b_sel]]
-
-    echo -e "${HLIGHT}--- cat file://${start_tm_file} ---${NORMAL}" #start files
-
-    cat ${start_tm_file}
-
-    if is_yes__ "tst flow env: \$1='$1', \$2='$2' dir mm.d=${PLT_PATH}/.d/.mm.d/tm_sm__"; then
-        . ${start_tm_file} "${ARGS[@]}"
-        #{body_fn}
-    fi
+    done </dev/stdin
+    #{body_fn}
 }
+
 cd "${idir}"
 unset filename
 #{post_fn}
