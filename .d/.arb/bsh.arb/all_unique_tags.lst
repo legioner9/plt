@@ -37,6 +37,7 @@
 @only
 @pc
 @perl
+phs__.sh
 @plt
 @port
 @ps

@@ -1,1 +1,1 @@
-echo column (without space) with number = \$1
+echo transparent [, echo column (without space) with number = \$1 [, string grep \$2 ] ]
