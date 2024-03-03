@@ -8,10 +8,12 @@ idir=$(pwd)
 #{pre_fn}
 
 wgetf_to__() {
+
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
     local NARGS=$#
+    echo -e "${BLUE}--- wgetf_to__ ${ARGS[*]} ---${NORMAL}" #sistem info mesage
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
@@ -19,14 +21,19 @@ wgetf_to__() {
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
+
         echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
-[ ,$2 num_menu ]
+\$1 url file
+[ ,\$2 
+    if <null> : ptr_path_2=\$(pwd)$(basename "\$1") 
+    if <dir>  : ptr_path_2=\$2/$(basename \$1) 
+    if <null> : ptr_path_2=\$2
+]
 CNTLS:
 required
 optional 
@@ -81,12 +88,31 @@ ${NORMAL}"
         return 1
     fi
 
+    local ptr_path_2
+
     #! ptr_path
-    local ptr_path_2="$2"
+    if [[ -z "$2" ]]; then
+        ptr_path_2=$(basename "$1")
+    else
+        if [[ -d "$2" ]]; then
+            ptr_path_2="$2"/$(basename "$1")
+
+        else
+            if [[ -d "$(dirname "$2")" ]]; then
+                ptr_path_2="$2"
+            else
+                plt_exit "in ${FNN} : NOT_DIR : '$(dirname "$2")' : return 1"
+                return 1
+            fi
+        fi
+    fi
+
     ptr_path_2="$("${_abs_path}" "${PPWD}" "ptr_path_2")"
+
     #[[ptr_path]]
 
     #* --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36"
+
     #* wget -P ~/Downloads/ -O name.file
     #* С помощью опций --http-user=username, –http-password=password и --ftp-user=username, --ftp-password=password вы можете задать имя пользователя и пароль для HTTP или FTP ресурсов.
     #* Если опции -O не передать аргументов, то скачанный файл будет выведен в стандартный вывод, затем мы его можем перенаправить интерпретатору bash, как показано выше.
@@ -96,7 +122,9 @@ ${NORMAL}"
     #* --spider проверить работоспособность URL
     #* -e http_proxy=xx.xx.xx.xx:8080
 
-    wget -O "$2" -E -H -K -p -nd "$1" 
+    echo -e "${HLIGHT}--- wget -O ${ptr_path_2} -E -c -nd --user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36 $1  ---${NORMAL}" #start files
+
+    wget -O "${ptr_path_2}" -E -c -nd --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "$1"
 
     # amount_arg $# 1 1
     #{body_fn}

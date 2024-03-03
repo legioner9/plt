@@ -19,7 +19,11 @@ mkdir res_dir
 
 cd tst_dir || plt_exit
 
-wgetf_to__ https://example.com/ ${idir_refw53425}/res_dir/that.html
+wgetf_to__ https://github.com/metarhia/impress/archive/refs/heads/master.zip "${idir_refw53425}"/res_dir/that_result.zip
+wgetf_to__ https://github.com/metarhia/impress/archive/refs/heads/master.zip 
+
+wgetf_to__ https://github.com/metarhia/impress/archive/refs/heads/master.zip "${idir_refw53425}"x/res_dir/that_result.zip
+wgetf_to__ https://github.com/metarhia/impressx/archive/refs/heads/master.zip 
 
 # cr_tst_dir_ <dat &>>res
 

@@ -1,1 +1,1 @@
-wget \$1 as \$2
+url file \$1 to file [, \$2 if \$2=null => \$2=$(pwd)/$(basename \$1) , if \$2=dir \$2=\$2/$(basename \$1)]
