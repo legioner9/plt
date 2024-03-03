@@ -108,7 +108,7 @@ ${NORMAL}"
 
             plt_pause "DO? :  wget -r ${deep} -k -p -E ${parr} --user-agent=Mozilla/5.0 \(X11\; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36 --include-directories=$incl $1"
 
-            wget -r "${deep}" -k -p -E "${parr}" --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" ---include-directories="$incl" "$1"
+            wget -r "${deep}" -k -p -E "${parr}" --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" --include-directories="$incl" "$1"
 
             return 0
 

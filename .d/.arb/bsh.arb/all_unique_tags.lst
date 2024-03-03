@@ -3,6 +3,8 @@
 @alt
 @arb
 @attach
+@availability
+@built-in
 @cpan
 @digit
 @dir
@@ -14,6 +16,7 @@
 @ext
 @find
 @from
+@html
 @human
 @id
 @indicator
@@ -36,8 +39,9 @@
 @old
 @only
 @pc
+@pdf
 @perl
-phs__.sh
+@php
 @plt
 @port
 @ps
@@ -54,6 +58,7 @@ phs__.sh
 @rpm
 @running
 @save
+@server
 @session
 @singlefn
 @site
@@ -73,4 +78,5 @@ phs__.sh
 @vboxmanage
 @vm
 @wget
+wgetd_to__.sh
 @yes
