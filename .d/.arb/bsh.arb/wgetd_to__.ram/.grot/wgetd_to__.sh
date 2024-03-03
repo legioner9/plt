@@ -133,9 +133,9 @@ ${NORMAL}"
     fi
     echo "url=$1"
     echo "dir_dest=$ptr_path_2"
-    echo -e "${BLUE}--- wget -P $ptr_path_2 -r -N -k -l ${depth} -p -E -np --user-agent=Mozilla/5.0 \(X11\; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36 $1 ---${NORMAL}" #sistem info mesage
+    echo -e "${BLUE}--- wget -P $ptr_path_2 -r -np -nc -N -k -l ${depth} -p -E --user-agent=Mozilla/5.0 \(X11\; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36 $1 ---${NORMAL}" #sistem info mesage
 
-    wget -P "$ptr_path_2" -r -N -k -l "${depth}" -p -E -np --user-agent="Mozilla/5.0 \(X11\; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "$1"
+    wget -P "$ptr_path_2" -r -np -nc -N -k -l "${depth}" -p -E  --user-agent="Mozilla/5.0 \(X11\; Linux x86_64\) AppleWebKit/537.36 \(KHTML, like Gecko\) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "$1"
 
     # amount_arg $# 1 1
     #{body_fn}
