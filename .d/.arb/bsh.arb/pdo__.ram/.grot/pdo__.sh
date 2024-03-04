@@ -20,12 +20,12 @@ pdo__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: cr \$1.php.html.ram in php_doc.arb
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-\$1 name_html without .php.
+\$1 name_html without .php.html
 [ ,$2 num_menu ]
 CNTLS:
 required

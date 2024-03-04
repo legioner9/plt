@@ -31,14 +31,14 @@
                         return 3
                     fi
 
-                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 25 ] && "${_is_eng_var_p}" "${ram_}"; then
+                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 25 ] && "${_is_eng_var_dot}" "${ram_}"; then
 
-                        plt_pause "in : DO? : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                        plt_pause "in : DO? : cp -r ${arb_}/_.ram/. ${arb_}/${ram_}.ram"
 
                         if ! [ -d "${arb_}/${ram_}.ram" ]; then
 
-                            if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${arb_}/${ram_}.ram"; then
-                                plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                            if ! cp -r ${arb_}/_.ram/. ${arb_}/${ram_}.ram; then
+                                plt_pause "in in fol_() : EXEC_FAIL : ${arb_}/_.ram/. ${arb_}/${ram_}.ram"
                             fi
                             echo -e "${CYAN}--- in in fol_() : CREATE ${ram_}.ram : for (arb_='${arb_}') create ram_ file://${arb_}/${ram_}.ram ---${NORMAL}" #sistem info mesage
 
@@ -75,7 +75,7 @@
             
         else
 
-            if ! [ -n "${ram_}" ] && [ "${#ram_}" -le 10 ] && "${_is_eng_var}" "${ram_}"; then
+            if ! [ -n "${ram_}" ] && [ "${#ram_}" -le 10 ] && "${_is_eng_var_dot}" "${ram_}"; then
                 plt_exit "in fol_() : NOT_IN_CONDITION : '${ram_}' : return 1"
                 return 3
             fi
@@ -91,8 +91,8 @@
 
             if ! [ -d "${ram_to_create}" ]; then
 
-                if ! cp -r "${sil_}"/arb/name_ramus.ram/. "${ram_to_create}"; then
-                    plt_pause "in in fol_() : EXEC_FAIL : cp -r ${sil_}/arb/name_ramus.ram/. ${arb_}"
+                if ! cp -r cp -r ${arb_}/_.ram/. ${arb_}/${ram_}.ram; then
+                    plt_pause "in in fol_() : EXEC_FAIL : cp -r ${arb_}/_.ram/. ${arb_}/${ram_}.ram"
                     return 3
                 fi
                 echo -e "${CYAN}--- in in fol_() : CREATE ${ram_}.ram : for (arb_='${arb_}') create ram_ file://${ram_to_create} ---${NORMAL}" #sistem info mesage

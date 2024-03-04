@@ -31,6 +31,7 @@ _prs_f="prs_f"
 _ins_last_s="ins_last_s"
 _is_eng_var="is_eng_var"
 _is_eng_var_p="is_eng_var_p"
+_is_eng_var_dot="is_eng_var_dot"
 _sort_tags_s="sort_tags_s"
 
 #? ${_cr_sh_} ${_cr_f_} ${_cr_f_dir_insert_} ${_cr_shfn_} ${_cr_shgnr_} ${_cr_tst_dir_}
