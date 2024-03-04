@@ -1,1 +1,1 @@
-convert \$1 html to \$2 pdf
+path file \$1 html to pdf file [, \$2 if \$2=null => \$2=$(pwd)/$(basename \$1) , if \$2=dir \$2=\$2/$(basename \$1)]

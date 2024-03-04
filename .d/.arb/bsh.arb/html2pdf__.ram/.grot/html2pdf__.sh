@@ -20,13 +20,17 @@ html2pdf__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: convert \$1 html to \$2 pdf
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
-[ ,$2 num_menu ]
+\$1 path file
+[ ,\$2 
+    if <null> : ptr_path_2=\$(pwd)$(basename "\$1") 
+    if <dir>  : ptr_path_2=\$2/$(basename \$1) 
+    if <null> : ptr_path_2=\$2
+]
 CNTLS:
 required
 optional 
@@ -60,33 +64,38 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    # if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
-    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
-    #     return 1
-    # fi
-    # g_args=($(${_garg2e_} "${ARGS[@]}"))
-    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    # for strex in $(${_garg2e_} "${ARGS[@]}"); do
-    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    #     eval local $strex
-    # done
 
-    # Need to install wkhtmltopdf use following command
-    # sudo apt install wkhtmltopdf
-
-    if command -v wkhtmltopdf > /dev/null; then
-        bold=$(tput bold)
-        normal=$(tput sgr0)
-        echo "Enter HTML file name ${bold}without extension${normal}. (example.html --> example)"
-        echo "If file is ${bold}not in same folder ${normal}then specify full path. (/home/user/html/example)"
-        read filename
-        file="${filename}.html"
-        out="${filename}.pdf"
-        wkhtmltopdf $file $out
-    else
-        echo "wkhtmltopdf not installed. Use following command."
-        echo "sudo apt install wkhtmltopdf"
+    if isn_from__ ${NARGS} 1 2 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : return 1"; then
+        return 1
     fi
+
+    local ptr_path_1=$1
+    ptr_path_1="$("${_abs_path}" "${PPWD}" "ptr_path_1")"
+
+    local ptr_path_2
+
+    #! ptr_path
+    if [[ -z "$2" ]]; then
+        ptr_path_2=$(basename "$1").pdf
+    else
+        if [[ -d "$2" ]]; then
+            ptr_path_2="$2"/$(basename "$1").pdf
+
+        else
+            if [[ -d "$(dirname "$2")" ]]; then
+                ptr_path_2="$2"
+            else
+                plt_exit "in ${FNN} : NOT_DIR : '$(dirname "$2")' : return 1"
+                return 1
+            fi
+        fi
+    fi
+
+    ptr_path_2="$("${_abs_path}" "${PPWD}" "ptr_path_2")"
+
+    echo -e "${HLIGHT}--- wkhtmltopdf ${ptr_path_1} ${ptr_path_2} ---${NORMAL}"
+    wkhtmltopdf -q "${ptr_path_1}" "${ptr_path_2}"
+
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}

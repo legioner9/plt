@@ -1,0 +1,11 @@
+tst_dir
+├── dir_dist
+│   ├── 0
+│   ├── about.formats.php.html.pdf
+│   └── that2.pdf
+└── dir_src
+    ├── about.formats.php.html
+    ├── about.formats.php.html.pdf
+    └── that.pdf
+
+2 directories, 6 files
