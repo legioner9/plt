@@ -59,7 +59,7 @@ is_eng_var_dot() {
     #   echo "That URL is allowed"
     # fi
 
-    if [[ "$1" = *[!A-Za-z0-9_\.]* ]]; then
+    if [[ "$1" = *[!A-Za-z0-9_-\.]* ]]; then
         return 1
     else
         return 0

@@ -94,15 +94,15 @@ ${NORMAL}"
         return 0
     fi
 
-    echo -e "${HLIGHT}--- mkdir ${path_ram_dir} ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- mkdir file://${path_ram_dir} ---${NORMAL}" #start files
     mkdir "${path_ram_dir}"
-    echo -e "${HLIGHT}--- cp ${dir_arb}/_.ram/. ${path_ram_dir} ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- cp file://${dir_arb}/_.ram/. file://${path_ram_dir} ---${NORMAL}" #start files
     cp -r ${dir_arb}/_.ram/. "${path_ram_dir}"
-    echo -e "${HLIGHT}--- cp ${path_php_html} ${path_ram_dir}/.grot/.html ---${NORMAL}" #start files
+    echo -e "${HLIGHT}--- cp file://${path_php_html} file://${path_ram_dir}/.grot/.html ---${NORMAL}" #start files
     cp "${path_php_html}" ${path_ram_dir}/.grot/.html
 
-    echo -e "${HLIGHT}--- html2pdf__ ${path_ram_dir}/.grot/.html/"${name_php_html}" ${path_ram_dir}/.grot/.pdf ---${NORMAL}" #start files
-    html2pdf__ ${path_ram_dir}/.grot/.html/"${name_php_html}" ${path_ram_dir}/.grot/.pdf &>/dev/null
+    echo -e "${HLIGHT}--- html2pdf__ file://${path_ram_dir}/.grot/.html/${name_php_html} file://${path_ram_dir}/.grot/.pdf ---${NORMAL}" #start files
+    html2pdf__ ${path_ram_dir}/.grot/.html/${name_php_html} ${path_ram_dir}/.grot/.pdf &>/dev/null
 
     edit_ "${path_ram_dir}"
 
