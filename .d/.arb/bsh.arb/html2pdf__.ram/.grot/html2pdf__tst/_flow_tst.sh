@@ -33,6 +33,8 @@ cd "${idir_fw543}"
 
 tree tst_dir >"${idir_fw543}"/res
 
+rm -rf tst_dir
+
 # cr_tst_dir_ <dat &>>res
 
 #{body_sh}

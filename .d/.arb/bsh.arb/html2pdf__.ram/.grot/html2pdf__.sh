@@ -93,8 +93,11 @@ ${NORMAL}"
 
     ptr_path_2="$("${_abs_path}" "${PPWD}" "ptr_path_2")"
 
+    
+
     echo -e "${HLIGHT}--- wkhtmltopdf ${ptr_path_1} ${ptr_path_2} ---${NORMAL}"
-    wkhtmltopdf -q "${ptr_path_1}" "${ptr_path_2}"
+    # wkhtmltopdf -l -g "${ptr_path_1}" "${ptr_path_2}" >/dev/null
+    wkhtmltopdf  "${ptr_path_1}" "${ptr_path_2}" >/dev/null
 
     #{default_cntl_fn}
     # amount_arg $# 1 1
