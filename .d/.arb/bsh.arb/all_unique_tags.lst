@@ -6,8 +6,10 @@
 @availability
 @built-in
 @cpan
+@cr
 @digit
 @dir
+@doc
 @docker
 @echo
 @edit
@@ -41,9 +43,9 @@
 @only
 @pc
 @pdf
-pdo__.sh
 @perl
 @php
+pht__.sh
 @plt
 @port
 @ps

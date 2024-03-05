@@ -41,7 +41,7 @@ ${NORMAL}"
     fi
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    edit_ ${d_name}
+    edit_ ${REPO_PATH}/plt/.d/.sh/lu
     #{body_fn}
 }
 
