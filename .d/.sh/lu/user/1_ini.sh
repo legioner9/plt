@@ -189,11 +189,11 @@ rr() {
 
 export rr
 
-pause() {
-    read -p "Press enter to continue or ^C for interrapt"
-}
+# pause() {
+#     read -p "Press enter to continue or ^C for interrapt"
+# }
 
-export pause
+# export pause
 
 f2a_all() { # $1=$HOME/.gitrepo
     

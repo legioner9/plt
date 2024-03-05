@@ -158,8 +158,6 @@ ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 #     echo -e "${ULINE} codium $ptr_path${NORMAL}" #repit commands
 #     codium $2 "$ptr_path"0
 
-
-
 # elif type "code"; then
 #     echo -e "${ULINE} code $ptr_path${NORMAL}" #repit commands
 #     code $2 "$ptr_path"
@@ -175,6 +173,10 @@ ptr_path=$(${_abs_path} $PPWD "ptr_path") #ptr args
 if type "code"; then
     echo -e "${ULINE} code $ptr_path${NORMAL}" #repit commands
     code $2 "$ptr_path"
+
+elif type "codium"; then
+    echo -e "${ULINE} codium $ptr_path${NORMAL}" #repit commands
+    codium $2 "$ptr_path"
 
 elif type "gvim"; then
     echo -e "${ULINE}gvim -v +$2 $ptr_path${NORMAL}" #repit commands

@@ -307,6 +307,8 @@ num_res=
 local item_arr=
 local file_util_path=
 
+echo -e "${GREEN}\${ARGS2} = ${ARGS2}${NORMAL}" #print variable
+
 # arr_main_str+=("aaaaaaaaa")
 # arr_ram_util_path+=("bbbbbbbbb")
 if ! [ ${ARGS2} -eq 0 ]; then
@@ -319,6 +321,7 @@ if [ ${ARGS2} -eq 0 ]; then
     PS3="eligendi actiones: "
     IFS=$'\n'
     select item_arr in ${arr_main_str[@]}; do
+
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr_main_str[$i]} ]]; then
                 file_util_path=${arr_ram_util_path[$i]}
