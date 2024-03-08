@@ -28,6 +28,7 @@
 @isn
 @kill
 @letter
+@links2
 @list
 @ls
 @lsof
@@ -35,6 +36,7 @@
 @mm
 @modify
 @module
+mtt_com__.sh
 @nav_nod
 @new
 @nod
@@ -45,7 +47,6 @@
 @pdf
 @perl
 @php
-pht__.sh
 @plt
 @port
 @ps
