@@ -5,6 +5,7 @@
 @attach
 @availability
 @built-in
+@command
 @cpan
 @cr
 @digit
@@ -32,11 +33,11 @@
 @list
 @ls
 @lsof
+@mate-terminal
 @menu
 @mm
 @modify
 @module
-mtt_com__.sh
 @nav_nod
 @new
 @nod
@@ -47,6 +48,7 @@ mtt_com__.sh
 @pdf
 @perl
 @php
+pht_nt__.sh
 @plt
 @port
 @ps

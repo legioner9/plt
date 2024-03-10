@@ -1,0 +1,1 @@
+in new mate-terminal : tmax flow : $1=delta+8000 port : $2 = path to file .php : 0:0 start php -S .php:port, 0:1 start links2 localhost:port
