@@ -76,8 +76,28 @@ ${NORMAL}"
 
     local dir_php_html=${REPO_PATH}/NPhp/.d/.ref.ax/www.php.net/manual/ru
 
-    path_php_html=${dir_php_html}/"$1".php.html
-    name_php_html="$1".php.html
+    local arg1=$(basename "$1")
+    echo -e "${GREEN}\$arg1 = $arg1${NORMAL}" #print variable
+
+    local ext1=$(prs_f -e ${arg1})
+    local ext2=$(prs_f -e $(prs_f -n ${arg1}))
+    # echo -e "${GREEN}\$ext1 = $ext1${NORMAL}" #print variable
+    # echo -e "${GREEN}\$ext2 = $ext2${NORMAL}" #print variable
+    # echo $(prs_f -n $(prs_f -n $arg1))
+    # echo $(prs_f -n $arg1)
+
+    if [[ "${ext1}" == "html" ]] && [[ "${ext2}" == "php" ]]; then
+        arg1=$(prs_f -n $(prs_f -n $arg1))
+    elif [[ ${ext1} == "php" ]]; then
+        arg1=$(prs_f -n $arg1)
+    else
+        plt_info "'$1' NOT_LIKE : path.php.html or path.php"
+    fi
+
+    # echo -e "${GREEN}\$arg1 = $arg1${NORMAL}" #print variable
+
+    path_php_html=${dir_php_html}/"$arg1".php.html
+    name_php_html="$arg1".php.html
 
     if ! [[ -f "${path_php_html}" ]]; then
         plt_exit "in ${FNN} : NOT_FILE : '${dir_php_html}.php.html' : return 1"
@@ -86,7 +106,7 @@ ${NORMAL}"
 
     local dir_arb=${REPO_PATH}/NPhp/.d/.arb/php_doc.arb
 
-    local path_ram_dir=${dir_arb}/"$1".php.html.ram
+    local path_ram_dir=${dir_arb}/"$arg1".php.html.ram
 
     if [[ -d "${path_ram_dir}" ]]; then
         plt_info "EXIST_FILE : file://${path_ram_dir} : edit_ ${path_ram_dir}"
