@@ -64,15 +64,32 @@ ${NORMAL}"
     #     plt_exit " ${FNN} return 1: ${FNLOCK}"
     #     return 1
     # fi
-    # g_args=($(${_garg2e_} "${ARGS[@]}"))
+    # g_args=($(${_garg2e_} "${ARGS[@$1]}"))
     # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
     # for strex in $(${_garg2e_} "${ARGS[@]}"); do
     #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
     #     eval local $strex
     # done
+    hint="\$1: path to treat: local or net"
+    if isn_from__ ${NARGS} 1 1 "in ${FNN}() : ERR_AMOUNT_ARGS entered :'${NARGS}' args : ${hint} : return 1"; then
+        return 1
+    fi
 
+    local arg_1="$1"
 
-    
+    # local match_1="file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/"
+    # local match_2="https://docs.docker.com/compose/"
+
+    local arr_match=$(f2e ${PLT_PATH}/.d/.lst/dkdo__/match_pre.lst)
+
+    # local arr_match=($match_1 $match_2)
+    local match
+    for match in ${arr_match[@]}; do
+        if grep $match <<<"$arg_1"; then
+            echo -e "${GREEN}\$match = $match${NORMAL}" #print variable
+        fi
+    done
+
     #{default_cntl_fn}
     # amount_arg $# 1 1
     #{body_fn}
