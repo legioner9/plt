@@ -12,9 +12,8 @@ cd "${idir}" || {
 
 # : >res
 
-# dkdo__ file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/index.html
-# dkdo__ file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/compose/history/index.html
-rm -rf ${REPO_PATH}/NDocker/.d/.arb/off.arb/compose_intro_history.ram
+dkdo__ file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/index.html
+dkdo__ file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/compose/history/index.html
 dkdo__ https://docs.docker.com/compose/intro/history/
 # dkdo__ https://docs.docker.com/compose/intro/historyx/
 

@@ -76,51 +76,40 @@ ${NORMAL}"
     fi
 
     local arg_1="$1"
-    local anc_local
 
     echo -e "${GREEN}\$arg_1 = $arg_1${NORMAL}" #print variable
 
     # local match_1="file:///home/st/REPOBARE/_repo/NDocker/_doc/docs.docker.com/"
     # local match_2="https://docs.docker.com/compose/"
 
-    local match_local=$(f2e ${PLT_PATH}/.d/.lst/dkdo__/match_local.lst)
-    local match_net=$(f2e ${PLT_PATH}/.d/.lst/dkdo__/match_net.lst)
+    local arr_match=$(f2e ${PLT_PATH}/.d/.lst/dkdo__/match_pre.lst)
 
-    if grep ${match_net} <<<${arg_1} >/dev/null; then
-        res=${arg_1/"${match_net}"/"${match_local}"}index.html
-    else
-        res=${arg_1}
-    fi
+    # local arr_match=($match_1 $match_2)
+    local match
+    local res
+    for match in ${arr_match[@]}; do
+        if grep $match <<<"$arg_1" >/dev/null; then
 
-    anc_local=${res}
-    # echo -e "${GREEN}\$anc_local = $anc_local${NORMAL}" #print variable
+            res=${arg_1/$match/}
 
-    path_html=${res/file\:\/\//}
-
-    # echo ${res}
-
-    if ! [[ -f ${path_html} ]]; then
-        hint="\$1: $arg_1"
-        plt_exit "in ${FNN} : NOT_FILE : 'file://${path_html}' : ${hint} : return 1"
-        return 1
-    fi
-
-    local name_ram
-
-    name_ram=${res/"${match_local}"/}
-    name_ram=${name_ram/\/index.html/}
-
-    local anc_net=${match_net}${name_ram}/
-
-    # echo -e "${GREEN}\$anc_net = $anc_net${NORMAL}" #print variable
-
-    name_ram=${name_ram//\//_}
-
-    echo ${name_ram}
+            if grep "/index.html" <<<$res >/dev/null; then
+                if ! [[ -f ${arg_1} ]]; then
+                    hint="\$1: local file doc"
+                    plt_exit "in ${FNN} : NOT_FILE : 'file://${arg_1}' : ${hint} : return 1"
+                    return 1
+                fi
+                res=${res/\/index.html/}
+            else
+                res=${res/%\//}
+            fi
+            res=${res//\//_}
+            echo ${res}
+        fi
+    done
 
     local dir_arb=${REPO_PATH}/NDocker/.d/.arb/off.arb
 
-    local path_ram_dir=${dir_arb}/${name_ram}.ram
+    local path_ram_dir=${dir_arb}/${res}.ram
 
     if [[ -d "${path_ram_dir}" ]]; then
         plt_info "EXIST_FILE : file://${path_ram_dir} : edit_ ${path_ram_dir}"
@@ -132,24 +121,11 @@ ${NORMAL}"
     mkdir "${path_ram_dir}"
     echo -e "${HLIGHT}--- cp file://${dir_arb}/_.ram/. file://${path_ram_dir} ---${NORMAL}" #start files
     cp -r ${dir_arb}/_.ram/. "${path_ram_dir}"
-    echo -e "${HLIGHT}--- cp file://${path_html} file://${path_ram_dir}/.grot/.html ---${NORMAL}" #start files
-    cp "${path_html}" ${path_ram_dir}/.grot/.html
+    echo -e "${HLIGHT}--- cp file://${path_php_html} file://${path_ram_dir}/.grot/.html ---${NORMAL}" #start files
+    cp "${path_php_html}" ${path_ram_dir}/.grot/.html
 
-    echo -e "${HLIGHT}--- html2pdf__ file://${path_ram_dir}/.grot/.html/$(basename ${path_html}) file://${path_ram_dir}/.grot/.pdf ---${NORMAL}" #start files
-    # html2pdf__ ${path_ram_dir}/.grot/.html/$(basename ${path_html}) ${path_ram_dir}/.grot/.pdf &>/dev/null
-    html2pdf__ ${path_html} ${path_ram_dir}/.grot/.pdf
-
-    pdf_path=${path_ram_dir}/.grot/.pdf/$(basename ${path_html}).pdf
-    # echo -e "${GREEN}\$pdf_path = $pdf_path${NORMAL}" #print variable
-
-    if ! [[ -f ${pdf_path} ]]; then
-        hint="\$1: pdf_path"
-        plt_exit "in ${FNN} : NOT_FILE : 'file://${pdf_path}' : ${hint} : return 1"
-        return 1
-    fi
-
-    echo ${anc_local} >${path_ram_dir}/.grot/.anc/anc_local.anc
-    echo ${anc_net} >${path_ram_dir}/.grot/.anc/anc_net.anc
+    echo -e "${HLIGHT}--- html2pdf__ file://${path_ram_dir}/.grot/.html/${name_php_html} file://${path_ram_dir}/.grot/.pdf ---${NORMAL}" #start files
+    html2pdf__ ${path_ram_dir}/.grot/.html/${name_php_html} ${path_ram_dir}/.grot/.pdf &>/dev/null
 
     edit_ "${path_ram_dir}"
 
