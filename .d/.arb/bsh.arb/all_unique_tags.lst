@@ -10,7 +10,6 @@
 @cr
 @digit
 @dir
-dkdo__.sh
 @doc
 @docker
 @echo
@@ -45,6 +44,7 @@ dkdo__.sh
 @num
 @old
 @only
+parr2mm__.sh
 @pc
 @pdf
 @perl
@@ -52,6 +52,7 @@ dkdo__.sh
 @plt
 @port
 @ps
+@pull
 @ques
 @quiet
 @rand
