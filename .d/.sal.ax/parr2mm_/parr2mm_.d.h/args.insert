@@ -2,6 +2,7 @@ ARGS:
     \$1 parr names menu
     \$2 parr result menu
     \$3 ptr to result
+    [, \$4 define num menu ]
 
 CNTLS:
         --_
