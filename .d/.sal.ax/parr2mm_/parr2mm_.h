@@ -198,9 +198,9 @@ EXAM:
 local a1=(1 2)
 local a2=(11 22)
 local res
-echo -e "${GREEN}$res = $res${NORMAL}" #print variable
-parr2mm_ a1 a2 res 1
-echo -e "${GREEN}$res = $res${NORMAL}" #print variable
+echo $res # print EMPTY
+parr2mm_ a1 a2 res 2
+echo $res # print 22
 {exam}
 .
 MANF:

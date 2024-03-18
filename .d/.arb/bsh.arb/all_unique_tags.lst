@@ -10,6 +10,7 @@
 @cr
 @digit
 @dir
+dk_alli__.sh
 @doc
 @docker
 @echo
@@ -44,7 +45,6 @@
 @num
 @old
 @only
-parr2mm__.sh
 @pc
 @pdf
 @perl
