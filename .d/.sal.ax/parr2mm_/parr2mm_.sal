@@ -191,7 +191,7 @@ local item_arr=
 arr_name+=("exit menu")
 arr_res+=("return 0")
 
-if [[ -n "$ARGS3" ]] && [[ $(num_01 $ARGS3) -eq 1 ]] && [[ $ARGS3 -le ${#arr_name[@]} ]]; then
+if [[ -n "$ARGS3" ]] && [[ $ARGS3 -ne 0 ]] && [[ $(num_01 $ARGS3) -eq 1 ]] && [[ $ARGS3 -le ${#arr_name[@]} ]]; then
     num_res=$(($ARGS3 - 1))
     if [[ "${arr_name[${num_res}]}" == "exit menu" ]]; then
         return 0

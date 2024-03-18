@@ -1,0 +1,2 @@
+"linux term bash"<>"-it {} /bin/bash"
+"linux echo Hello"<>"echo 'hello from {}!'"

@@ -80,8 +80,12 @@ ${NORMAL}"
     echo -e "${GREEN}\$res = $res${NORMAL}" #print variable
 
     parr2mm_ a1 a2 res 1
-
     echo -e "${GREEN}\$res = $res${NORMAL}" #print variable
+
+    parr2mm_ a1 a2 res 0
+    echo -e "${GREEN}\$res = $res${NORMAL}" #print variable
+
+    
     # amount_arg $# 1 1
     #{body_fn}
 }
