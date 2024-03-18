@@ -6,11 +6,13 @@
 @availability
 @built-in
 @command
+@cont
 @cpan
 @cr
 @digit
 @dir
-dk_alli__.sh
+@dk
+dk_rm_al_cont__.sh
 @doc
 @docker
 @echo
@@ -24,6 +26,7 @@ dk_alli__.sh
 @html
 @human
 @id
+@image
 @indicator
 @install
 @is
@@ -64,6 +67,7 @@ dk_alli__.sh
 @repo
 @rm
 @rpm
+@run
 @running
 @save
 @server
