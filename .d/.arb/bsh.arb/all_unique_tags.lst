@@ -13,7 +13,6 @@
 @digit
 @dir
 @dk
-dk_pull_mmimg__.sh
 @doc
 @docker
 @echo
@@ -26,7 +25,6 @@ dk_pull_mmimg__.sh
 @from
 @html
 @human
-@id
 @img
 @indicator
 @install
@@ -49,7 +47,6 @@ dk_pull_mmimg__.sh
 @num
 @old
 @only
-@pc
 @pdf
 @perl
 @php
@@ -58,7 +55,6 @@ dk_pull_mmimg__.sh
 @ps
 @pull
 @ques
-@quiet
 @rand
 @rbld
 @read

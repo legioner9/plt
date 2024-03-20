@@ -1,0 +1,6 @@
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE} 
+    GENERATOR_INFO :
+        name   from :: -
+        result from :: -
+${RED}---${NORMAL}"

@@ -55,7 +55,7 @@ VARIANT 1:
             0     - eligendi mm img 
         arg_2 
             <not_num> : string with {resiver_img_name} (as "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]")
-            
+
         EXEC : docker run "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]"
 
 VARIANT 2:
@@ -63,6 +63,8 @@ VARIANT 2:
         arg_1
             <num> - num img
             0     - eligendi mm img 
+                menu_name [docker images]
+                menu_result [docker images | awk '{print \$3}']
     mm_2 eligendi arg_resiver with insert inserter_img
         arg_2 file.args from \${PLT_PATH}/.d/.args
             <num> - num file.args
