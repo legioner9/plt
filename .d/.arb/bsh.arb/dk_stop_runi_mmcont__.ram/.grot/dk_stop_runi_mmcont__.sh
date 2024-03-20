@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_runi_mmcont__.ram/.grot/dk_stop_runi_mmcont__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-dk_run_mmimg_mmarg__(){
+dk_stop_runi_mmcont__(){
 local FNN=${FUNCNAME[0]}
 local PPWD=$PWD
 local ARGS=("$@")
@@ -15,7 +15,7 @@ local NARGS=$#
 local verbose=0
 [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
 [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh)
+local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_runi_mmcont__.ram/.grot/dk_stop_runi_mmcont__.sh)
 # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
 if [ "-h" == "$1" ]; then
@@ -37,45 +37,6 @@ FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpr
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
 WARN: 
-FLOW:  
-VARIANT 0:
-    mm_1 eligendi <img_name> 
-    arg_1 
-        <num> - num img
-        0     - eligendi mm img 
-    arg_2 
-        EMPTY
-
-    EXEC : docer run <img_name>
-
-VARIANT 1: 
-    mm_1 eligendi <img_name> as {inserter_img_name}
-        arg_1  
-            <num> - num pulling  img 
-            0     - eligendi mm img 
-        arg_2 
-            <not_num> : string with {resiver_img_name} (as "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]")
-
-        EXEC : docker run "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]"
-
-VARIANT 2:
-    mm_1 eligendi <img_name> as {inserter_img_name}
-        arg_1
-            <num> - num img
-            0     - eligendi mm img 
-                menu_name [docker images]
-                menu_result [docker images | awk '{print \$3}']
-    mm_2 eligendi arg_resiver with insert inserter_img
-        arg_2 file.args from \${PLT_PATH}/.d/.args
-            <num> - num file.args
-            0     - eligendi mm file.args
-            <not_num> - EXEC VARIANT 1
-        arg_3 mm from string file.args :: name_menu<>args_with_resiver
-            insert :: img -> string
-            <num> - num strimng
-            0     - eligendi mm strimng
-
-        EXEC : docker run "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]"
 DEBUG:
 EXAMP:
 ${FNN} -<>

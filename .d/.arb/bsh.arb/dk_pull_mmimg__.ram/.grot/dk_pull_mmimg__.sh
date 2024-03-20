@@ -117,6 +117,8 @@ ${RED}---${NORMAL}"
 
     plt_pause "DO? : docker pull $result"
 
+    echo -e "${HLIGHT}--- exec: docker pull $result ---${NORMAL}" #start files
+
     docker pull $result
 
 }
