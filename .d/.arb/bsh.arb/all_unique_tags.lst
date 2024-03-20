@@ -2,6 +2,7 @@
 @all
 @alt
 @arb
+@arg
 @attach
 @availability
 @built-in
@@ -12,7 +13,7 @@
 @digit
 @dir
 @dk
-dk_run_mm__.sh
+dk_pull_mmimg__.sh
 @doc
 @docker
 @echo
@@ -26,7 +27,7 @@ dk_run_mm__.sh
 @html
 @human
 @id
-@image
+@img
 @indicator
 @install
 @is
@@ -68,7 +69,6 @@ dk_run_mm__.sh
 @rm
 @rpm
 @run
-@running
 @save
 @server
 @session

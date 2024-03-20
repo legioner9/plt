@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_rm_al_cont__.ram/.grot/dk_rm_al_cont__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_ls_al_img__.ram/.grot/dk_ls_al_img__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-dk_rm_al_cont__() {
+dk_ls_al_img__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -15,12 +15,12 @@ dk_rm_al_cont__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_rm_al_cont__.ram/.grot/dk_rm_al_cont__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_ls_al_img__.ram/.grot/dk_ls_al_img__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: rm all docker contaners
+MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
@@ -73,17 +73,11 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
 
-    local arr_ps_a_q=("$(docker ps -a -q)")
-
-    if [[ -n ${arr_ps_a_q[0]} ]]; then
-        docker rm $(docker ps -a -q)
-    else
-        plt_info "EMPTY :: docker ps -a -q"
-    fi
-
+    docker images
+    
     #{body_fn}
 }
 
 cd "${idir}"
 unset filename
-#{post_fn} 
+#{post_fn}
