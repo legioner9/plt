@@ -124,14 +124,14 @@ for item in $(f2e "${list_}"); do
     if [ "${bcp_:-0}" -eq 1 ]; then
 
         cd "${dir_src}" || {
-            plt_info "from ${is_fn} :: DOFAIL : cd ${dir_src} :: be return 1"
-            return 1
+            plt_pause "that ERROR?: from ${is_fn} :: DOFAIL : cd ${dir_src} ::  be continue"
+            continue
         }
 
         echo -e "${HLIGHT}--- tar -czvf ${node_src}._tmp_ ${node_src} ---${NORMAL}"
         tar -czvf "${node_src}"._tmp_ "${node_src}"
 
-        echo -e "${HLIGHT}---  mv -vf ${node_src}._tmp_ ${path_tar} ---${NORMAL}"
+        echo -e "${HLIGHT}---  mv -vf ${node_src}._tmp_ ${path_tar} ---${NORMAL}" 
         mv -vf "${node_src}"._tmp_ "${path_tar}"
 
     fi
@@ -139,7 +139,7 @@ for item in $(f2e "${list_}"); do
     if [ "${dpl_:-0}" -eq 1 ]; then
 
         cd "${dir_src}" || {
-            plt_info "from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be continue"
+            plt_pause "that ERROR?: from ${is_fn}  :: DOFAIL : cd ${dir_src} :: be continue"
             continue
         }
 
