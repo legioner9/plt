@@ -198,7 +198,20 @@ ${RED}---${NORMAL}"
 
     parr2mm_ arr_arg_name arr_arg_name result ${ARGS[3]}
 
-    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+    echo -e "${GREEN}\$result = $result${NORMAL}"           #print variable
+    echo -e "${GREEN}\$eligend_img = $eligend_img${NORMAL}" #print variable
+
+    local str_dk_arg
+    str_dk_arg=$(echo $result | sed 's|{}|'"$eligend_img"'|g')
+    # echo "str_dk_arg=\${result/{}/$eligend_img}"
+    # eval "str_dk_arg=\${result/{}/$eligend_img}"
+
+    echo -e "${GREEN}\$str_dk_arg = $str_dk_arg${NORMAL}" #print variable
+
+    plt_pause "DO? : docker run $str_dk_arg"
+    
+    echo -e "${HLIGHT}--- exec: docker run $str_dk_arg ---${NORMAL}" #start files
+    docker run $str_dk_arg
 
     #{body_fn}
 }
