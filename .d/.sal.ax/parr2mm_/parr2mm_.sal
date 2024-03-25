@@ -147,7 +147,7 @@ fi
 
 for ((i = 0; i < ${num}; i++)); do
 
-    eval arr_name+=\("\${${ARGS0}[$i]}"\)
+    eval arr_name+=\(\"\${${ARGS0}[$i]}\"\)
 
 done
 
@@ -166,7 +166,7 @@ if [[ "${num}" -eq 0 ]]; then
 fi
 
 for ((i = 0; i < ${num}; i++)); do
-    eval arr_res+=\("\${${ARGS1}[$i]}"\)
+    eval arr_res+=\(\"\${${ARGS1}[$i]}\"\)
 done
 
 # parr3e_ arr_res
@@ -196,7 +196,7 @@ if [[ -n "$ARGS3" ]] && [[ $ARGS3 -ne 0 ]] && [[ $(num_01 $ARGS3) -eq 1 ]] && [[
     if [[ "${arr_name[${num_res}]}" == "exit menu" ]]; then
         return 0
     fi
-    eval $result=${arr_res[${num_res}]}
+    eval $result=\"${arr_res[${num_res}]}\"
     return 0
 fi
 PS3="eligendi actiones: "
@@ -206,7 +206,7 @@ select item_arr in "${arr_name[@]}"; do
             if [[ "${arr_name[$i]}" == "exit menu" ]]; then
                 return 0
             fi
-            eval $result=${arr_res[$i]}
+            eval $result=\"${arr_res[$i]}\"
             return 0
         fi
     done
