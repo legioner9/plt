@@ -7,19 +7,19 @@ idir=$(pwd)
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-dk_run_mmimg_mmarg__(){
-local FNN=${FUNCNAME[0]}
-local PPWD=$PWD
-local ARGS=("$@")
-local NARGS=$#
-local verbose=0
-[[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
-[[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh)
-# wrp_fifs1_ cd ${d_name} -d
+dk_run_mmimg_mmarg__() {
+    local FNN=${FUNCNAME[0]}
+    local PPWD=$PWD
+    local ARGS=("$@")
+    local NARGS=$#
+    local verbose=0
+    [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
+    [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh)
+    # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
-if [ "-h" == "$1" ]; then
-echo -e "${CYAN} ${FNN}() help: 
+    if [ "-h" == "$1" ]; then
+        echo -e "${CYAN} ${FNN}() help: 
 MAIN: 
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
@@ -80,37 +80,126 @@ DEBUG:
 EXAMP:
 ${FNN} -<>
 ${NORMAL}"
-return 0
-fi
+        return 0
+    fi
     #{help_cntl_fn}
-if [ "_man" == "$1" ]; then
-edit_ "${d_name}/${FNN}".man
-return 0
-fi
-if [ "_go" == "$1" ]; then
-edit_ "${d_name}/${FNN}".sh
-return 0
-fi
-if [ "_lst" == "$1" ]; then
-edit_ "${d_name}/${FNN}".lst
-return 0
-fi
-if [ "_head" == "$1" ]; then
-echo "_head fn: ${d_name}/${FNN}"
-return 0
-fi
-if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
-plt_exit " ${FNN} return 1: ${FNLOCK}"
-return 1
-fi
-g_args=($(${_garg2e_} "${ARGS[@]}"))
-[[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-for strex in $(${_garg2e_} "${ARGS[@]}"); do
-[[ 1 -eq ${verbose} ]] || echo "local $strex"
-eval local $strex
-done
+    if [ "_man" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".man
+        return 0
+    fi
+    if [ "_go" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".sh
+        return 0
+    fi
+    if [ "_lst" == "$1" ]; then
+        edit_ "${d_name}/${FNN}".lst
+        return 0
+    fi
+    if [ "_head" == "$1" ]; then
+        echo "_head fn: ${d_name}/${FNN}"
+        return 0
+    fi
+    # if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(${_garg2e_} "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(${_garg2e_} "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
-# amount_arg $# 1 1
+    # amount_arg $# 1 1
+    local dir_file_lst=${PD_PATH}/.d/.lst/dk_pull_mmimg__
+    local file_lst=
+
+    local arr_file_name=()
+    local arr_file_result=()
+    local result=
+
+    arr_file_name=($(d2e_ -n -ff ${dir_file_lst}))
+    # parr3e_ arr_file_name
+
+    arr_file_result=($(d2e_ 0 -ff ${dir_file_lst}))
+    # parr3e_ arr_file_result
+
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE} 
+GENERATOR_INFO :
+name   from :: d2e_ -n -ff file://${dir_file_lst}
+result from :: d2e_ 0 -ff file://${dir_file_lst}
+${RED}---${NORMAL}"
+    #[[fn_info_dk_pull_mmimg__]]
+
+    parr2mm_ arr_file_name arr_file_result result ${ARGS[0]}
+
+    # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+
+    arr_img_name=($(f2e_ $result))
+
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE} 
+GENERATOR_INFO :
+name   from :: f2e_ file://${result}
+result from :: f2e_ file://${result}
+${RED}---${NORMAL}"
+    #[[fn_info_dk_pull_mmimg__]]
+
+    result=
+
+    parr2mm_ arr_img_name arr_img_name result ${ARGS[1]}
+
+    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+
+    #!-----------------------------------------------------------------------------------------
+
+    local eligend_img=$result
+    echo -e "${GREEN}\$eligend_img = $eligend_img${NORMAL}" #print variable
+
+    #!-----------------------------------------------------------------------------------------
+
+    local dir_file_arg=${PD_PATH}/.d/.lst/dk_run_mmimg_mmarg__/args
+    local file_arg=
+
+    arr_file_name=()
+    arr_file_result=()
+    result=
+    echo -e "${HLIGHT}--- arr_file_name=(\$(d2e_ -n -ff ${dir_file_arg})) ---${NORMAL}" #start files
+    arr_file_name=($(d2e_ -n -ff ${dir_file_arg}))
+    # parr3e_ arr_file_name
+
+    arr_file_result=($(d2e_ 0 -ff ${dir_file_arg}))
+    # parr3e_ arr_file_result
+
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE} 
+GENERATOR_INFO :
+name   from :: d2e_ -n -ff file://${dir_file_arg}
+result from :: d2e_ 0 -ff file://${dir_file_arg}
+${RED}---${NORMAL}"
+    #[[fn_info_dk_pull_mmimg__]]
+
+    parr2mm_ arr_file_name arr_file_result result ${ARGS[2]}
+
+    # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+    IFS=$'\n'
+    arr_arg_name=($(f2e_ $result))
+    IFS=$' \t\n'
+    echo -e "
+${RED}--- parr2mm_ message :${BLUE} 
+GENERATOR_INFO :
+name   from :: f2e_ file://${result}
+result from :: f2e_ file://${result}
+${RED}---${NORMAL}"
+    #[[fn_info_dk_pull_mmimg__]]
+
+    result=
+
+    parr2mm_ arr_arg_name arr_arg_name result ${ARGS[3]}
+
+    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+
     #{body_fn}
 }
 
