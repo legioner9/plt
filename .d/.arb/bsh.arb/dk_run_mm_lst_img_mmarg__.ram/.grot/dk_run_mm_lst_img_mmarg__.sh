@@ -25,8 +25,13 @@ NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
 ARGS: 
-$1
-[ ,$2 num_menu ]
+\$1 \$2 \$3 \$4
+       in \$4 menu inserter to {} in arg_string reciver 
+    if 0 full menu
+    if Num (natural) num menu
+    \$5 inserter to {1} in arg_string reciver
+    \$6 inserter to {2} in arg_string reciver
+[
 CNTLS:
 required
 optional 
@@ -162,9 +167,23 @@ ${RED}---${NORMAL}"
     echo -e "${GREEN}\$eligend_img = $eligend_img${NORMAL}" #print variable
 
     local str_dk_arg
-    str_dk_arg=$(echo $result | sed 's|{}|'"$eligend_img"'|g')
+    # result=$(echo $result | sed 's|{}|'"$eligend_img"'|g')
     # echo "str_dk_arg=\${result/{}/$eligend_img}"
     # eval "str_dk_arg=\${result/{}/$eligend_img}"
+
+    if echo $result | grep '{}' ; then
+        result=$(echo $result | sed 's|{}|'"$eligend_img"'|g')
+    fi
+
+    if echo $result | grep '{1}'; then
+        result=$(echo $result | sed 's|{1}|'"${ARGS[4]}"'|g')
+    fi
+
+    if echo $result | grep '{2}'; then
+        result=$(echo $result | sed 's|{2}|'"${ARGS[5]}"'|g')
+    fi
+
+    str_dk_arg=$result
 
     echo -e "${GREEN}\$str_dk_arg = $str_dk_arg${NORMAL}" #print variable
 
