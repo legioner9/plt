@@ -13,7 +13,7 @@
 @digit
 @dir
 @dk
-dk_rm_al_runi_cont__.sh
+dk_run_mm_lst_img_mmarg__.sh
 @doc
 @docker
 @echo
@@ -63,7 +63,6 @@ dk_rm_al_runi_cont__.sh
 @relative
 @repeat
 @repo
-@rm
 @rpm
 @run
 @runi
