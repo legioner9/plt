@@ -20,7 +20,7 @@
 
                     plt_pause "in fol_() : DO?: create ram on file://${arb_}"
 
-                    read -p "Enter name ram_ (25<#, only w d _) " ram_
+                    read -p "Enter name ram_ (35<#, only w d _) " ram_
 
                     echo -e "${GREEN}\$ram_ = $ram_${NORMAL}" #print variable
 
@@ -31,7 +31,7 @@
                         return 3
                     fi
 
-                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 25 ] && "${_is_eng_var_dot}" "${ram_}"; then
+                    if [ -n "${ram_}" ] && [ "${#ram_}" -le 35 ] && "${_is_eng_var_dot}" "${ram_}"; then
 
                         plt_pause "in : DO? : cp -r ${arb_}/_.ram/. ${arb_}/${ram_}.ram"
 

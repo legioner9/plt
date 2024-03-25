@@ -2,7 +2,6 @@
 @all
 @alt
 @arb
-@arg
 @attach
 @availability
 @built-in
@@ -13,7 +12,7 @@
 @digit
 @dir
 @dk
-dk_run_mm_lst_img_mmarg__.sh
+dk_run_mm_puli_img_mmarg__.sh
 @doc
 @docker
 @echo
@@ -64,7 +63,6 @@ dk_run_mm_lst_img_mmarg__.sh
 @repeat
 @repo
 @rpm
-@run
 @runi
 @save
 @server

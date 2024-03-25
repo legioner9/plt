@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mm_puli_img_mmarg__.ram/.grot/dk_run_mm_puli_img_mmarg__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-dk_run_mmimg_mmarg__() {
+dk_run_mm_puli_img_mmarg__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -15,12 +15,12 @@ dk_run_mmimg_mmarg__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mm_puli_img_mmarg__.ram/.grot/dk_run_mm_puli_img_mmarg__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: docker run img from \$(docker images)->id with arg from ${PD_PATH}/.d/.lst/dk_run_mmimg_mmarg__/args
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
@@ -37,45 +37,6 @@ FLOW: (process | subprocess (no read pause only plt_err return $errno) | interpr
 RETURN: ( result>stdout, return 0 | data | change to ptr |  fs_structure | ...)
 ERROR: ( (plt_err | plt_pause | plt_exit) errmes return 1 | ... )
 WARN: 
-FLOW:  
-VARIANT 0:
-    mm_1 eligendi <img_name> 
-    arg_1 
-        <num> - num img
-        0     - eligendi mm img 
-    arg_2 
-        EMPTY
-
-    EXEC : docer run <img_name>
-
-VARIANT 1: 
-    mm_1 eligendi <img_name> as {inserter_img_name}
-        arg_1  
-            <num> - num pulling  img 
-            0     - eligendi mm img 
-        arg_2 
-            <not_num> : string with {resiver_img_name} (as "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]")
-
-        EXEC : docker run "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]"
-
-VARIANT 2:
-    mm_1 eligendi <img_name> as {inserter_img_name}
-        arg_1
-            <num> - num img
-            0     - eligendi mm img 
-                menu_name [docker images]
-                menu_result [docker images | awk '{print \$3}']
-    mm_2 eligendi arg_resiver with insert inserter_img
-        arg_2 file.args from \${PLT_PATH}/.d/.args
-            <num> - num file.args
-            0     - eligendi mm file.args
-            <not_num> - EXEC VARIANT 1
-        arg_3 mm from string file.args :: name_menu<>args_with_resiver
-            insert :: img -> string
-            <num> - num strimng
-            0     - eligendi mm strimng
-
-        EXEC : docker run "[OPTIONS] {resiver_img_name} [COMMAND] [ARG...]"
 DEBUG:
 EXAMP:
 ${FNN} -<>
@@ -99,56 +60,46 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    # if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
-    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
-    #     return 1
-    # fi
-    # g_args=($(${_garg2e_} "${ARGS[@]}"))
-    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    # for strex in $(${_garg2e_} "${ARGS[@]}"); do
-    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
-    #     eval local $strex
-    # done
+    if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
+        plt_exit " ${FNN} return 1: ${FNLOCK}"
+        return 1
+    fi
+    g_args=($(${_garg2e_} "${ARGS[@]}"))
+    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    for strex in $(${_garg2e_} "${ARGS[@]}"); do
+        [[ 1 -eq ${verbose} ]] || echo "local $strex"
+        eval local $strex
+    done
     #{default_cntl_fn}
     # amount_arg $# 1 1
-    local dir_file_lst=${PD_PATH}/.d/.lst/dk_pull_mmimg__
-    local file_lst=
 
     local arr_file_name=()
     local arr_file_result=()
     local result=
+    local item=
+    local item_id=
 
-    arr_file_name=($(d2e_ -n -ff ${dir_file_lst}))
+    IFS=$'\n'
+
+    arr_file_name=($(docker images))
+    arr_file_name=("${arr_file_name[@]:1}")
     # parr3e_ arr_file_name
 
-    arr_file_result=($(d2e_ 0 -ff ${dir_file_lst}))
-    # parr3e_ arr_file_result
+    IFS=$'\n'
+    for item in ${arr_file_name[@]}; do
+        arr_file_result+=("$(echo $item | awk '{print $3}')")
+    done
+
+    IFS=$' \t\n'
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
 GENERATOR_INFO :
-name   from :: d2e_ -n -ff file://${dir_file_lst}
-result from :: d2e_ 0 -ff file://${dir_file_lst}
+name   from :: \$(docker images) -> arr_file_name=(\${arr_file_name[@]:1})
+result from :: \${arr_file_name[@]} | awk '{print \$3}'
 ${RED}---${NORMAL}"
-    #[[fn_info_dk_pull_mmimg__]]
 
     parr2mm_ arr_file_name arr_file_result result ${ARGS[0]}
-
-    # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
-
-    arr_img_name=($(f2e_ $result))
-
-    echo -e "
-${RED}--- parr2mm_ message :${BLUE} 
-GENERATOR_INFO :
-name   from :: f2e_ file://${result}
-result from :: f2e_ file://${result}
-${RED}---${NORMAL}"
-    #[[fn_info_dk_pull_mmimg__]]
-
-    result=
-
-    parr2mm_ arr_img_name arr_img_name result ${ARGS[1]}
 
     echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
 
@@ -180,7 +131,7 @@ result from :: d2e_ 0 -ff file://${dir_file_arg}
 ${RED}---${NORMAL}"
     #[[fn_info_dk_pull_mmimg__]]
 
-    parr2mm_ arr_file_name arr_file_result result ${ARGS[2]}
+    parr2mm_ arr_file_name arr_file_result result ${ARGS[1]}
 
     # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
     IFS=$'\n'
@@ -196,7 +147,7 @@ ${RED}---${NORMAL}"
 
     result=
 
-    parr2mm_ arr_arg_name arr_arg_name result ${ARGS[3]}
+    parr2mm_ arr_arg_name arr_arg_name result ${ARGS[2]}
 
     echo -e "${GREEN}\$result = $result${NORMAL}"           #print variable
     echo -e "${GREEN}\$eligend_img = $eligend_img${NORMAL}" #print variable
@@ -209,10 +160,12 @@ ${RED}---${NORMAL}"
     echo -e "${GREEN}\$str_dk_arg = $str_dk_arg${NORMAL}" #print variable
 
     plt_pause "DO? : docker run $str_dk_arg"
-    
+
     echo -e "${HLIGHT}--- exec: docker run $str_dk_arg ---${NORMAL}" #start files
     docker run $str_dk_arg
 
+    #[[fn_info_dk_pull_mmimg__]]
+    # parr3e_ arr_file_result
     #{body_fn}
 }
 

@@ -2,7 +2,7 @@
 
 #. "${HOME}/.bashrc"
 
-filename=${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mmimg_mmarg__.ram/.grot/dk_run_mmimg_mmarg__extst/extst_1/ex1/exec._extst 
+filename=${PLT_PATH}/.d/.arb/bsh.arb/dk_run_mm_puli_img_mmarg__.ram/.grot/dk_run_mm_puli_img_mmarg__tst/exec._tst 
 
 # echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 

@@ -1,1 +1,1 @@
-
+docker run img from ${PD_PATH}/.d/.lst/dk_pull_mmimg__ with arg from ${PD_PATH}/.d/.lst/dk_run_mmimg_mmarg__/args

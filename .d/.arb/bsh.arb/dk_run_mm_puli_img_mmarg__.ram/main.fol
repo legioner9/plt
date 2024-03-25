@@ -1,0 +1,1 @@
+docker run img from $(docker images)->id with arg from ${PD_PATH}/.d/.lst/dk_run_mmimg_mmarg__/args
