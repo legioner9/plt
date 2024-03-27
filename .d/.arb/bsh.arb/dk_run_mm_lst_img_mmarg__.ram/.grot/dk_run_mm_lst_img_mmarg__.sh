@@ -101,7 +101,7 @@ ${RED}---${NORMAL}"
 
     # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
 
-    arr_img_name=($(f2e_ $result))
+    arr_img_name=($(_f2e $result))
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
@@ -134,8 +134,12 @@ ${RED}---${NORMAL}"
     arr_file_name=($(d2e_ -n -ff ${dir_file_arg}))
     # parr3e_ arr_file_name
 
+    arr_file_name+=("edit_ dir_file_arg")
+
     arr_file_result=($(d2e_ 0 -ff ${dir_file_arg}))
     # parr3e_ arr_file_result
+
+    arr_file_result+=("edit_ dir_file_arg")
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
@@ -146,22 +150,37 @@ ${RED}---${NORMAL}"
     #[[fn_info_dk_pull_mmimg__]]
 
     parr2mm_ arr_file_name arr_file_result result ${ARGS[2]}
+    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+    
+    if [[ $result == "edit_ dir_file_arg" ]]; then
+        edit_ $dir_file_arg
+        return 0
+    fi
 
-    # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
+    local file_arg=$result
+
     IFS=$'\n'
-    arr_arg_name=($(f2e_ $result))
+    arr_arg_name=($(_f2e $file_arg))
     IFS=$' \t\n'
+
+    arr_arg_name+=("edit_ file_arg")
+
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
 GENERATOR_INFO :
-name   from :: f2e_ file://${result}
-result from :: f2e_ file://${result}
+name   from ::_f2e file://${file_arg}
+result from ::_f2e file://${file_arg}
 ${RED}---${NORMAL}"
     #[[fn_info_dk_pull_mmimg__]]
 
     result=
 
     parr2mm_ arr_arg_name arr_arg_name result ${ARGS[3]}
+
+    if [[ ${result} == "edit_ file_arg" ]]; then
+        edit_ $file_arg
+        return 0
+    fi
 
     echo -e "${GREEN}\$result = $result${NORMAL}"           #print variable
     echo -e "${GREEN}\$eligend_img = $eligend_img${NORMAL}" #print variable
@@ -171,7 +190,7 @@ ${RED}---${NORMAL}"
     # echo "str_dk_arg=\${result/{}/$eligend_img}"
     # eval "str_dk_arg=\${result/{}/$eligend_img}"
 
-    if echo $result | grep '{}' ; then
+    if echo $result | grep '{}'; then
         result=$(echo $result | sed 's|{}|'"$eligend_img"'|g')
     fi
 
