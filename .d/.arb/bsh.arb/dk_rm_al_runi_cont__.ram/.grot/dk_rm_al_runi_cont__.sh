@@ -20,7 +20,7 @@ dk_rm_al_runi_cont__() {
     #{intro_fn}
     if [ "-h" == "$1" ]; then
         echo -e "${CYAN} ${FNN}() help: 
-MAIN: 
+MAIN: docker rm all runed contaner
 NAME: ${FNN}()
 WHERE?:(only in root dir)Y/N
 WHAT?:(only abs path | only name file | any stile path )
@@ -60,16 +60,16 @@ ${NORMAL}"
         echo "_head fn: ${d_name}/${FNN}"
         return 0
     fi
-    if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
-        plt_exit " ${FNN} return 1: ${FNLOCK}"
-        return 1
-    fi
-    g_args=($(${_garg2e_} "${ARGS[@]}"))
-    [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
-    for strex in $(${_garg2e_} "${ARGS[@]}"); do
-        [[ 1 -eq ${verbose} ]] || echo "local $strex"
-        eval local $strex
-    done
+    # if ! ${_garg2e_} "${ARGS[@]}" 1>/dev/null; then
+    #     plt_exit " ${FNN} return 1: ${FNLOCK}"
+    #     return 1
+    # fi
+    # g_args=($(${_garg2e_} "${ARGS[@]}"))
+    # [[ 1 -eq ${verbose} ]] || echo -e "${GREEN}\${g_args[@]}: ${g_args[*]}${NORMAL}" #print variable
+    # for strex in $(${_garg2e_} "${ARGS[@]}"); do
+    #     [[ 1 -eq ${verbose} ]] || echo "local $strex"
+    #     eval local $strex
+    # done
     #{default_cntl_fn}
     # amount_arg $# 1 1
     local arr_ps_a_q=("$(docker ps -a -q)")

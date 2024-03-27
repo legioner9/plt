@@ -1,13 +1,13 @@
 #!/bin/bash
 #. "${HOME}/.bashrc"
-filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_runi_mmcont__.ram/.grot/dk_stop_runi_mmcont__.sh"
+filename="${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_al_cont__.ram/.grot/dk_stop_al_cont__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
 idir=$(pwd)
 # cd "$(prs_f -d $filename)" || qq_exit "$(prs_f -d $filename) not found"
 # garg_ $(prs_f -n $filename) $@ 1>/dev/null
 #{pre_fn}
 
-dk_stop_runi_mmcont__() {
+dk_stop_al_cont__() {
     local FNN=${FUNCNAME[0]}
     local PPWD=$PWD
     local ARGS=("$@")
@@ -15,7 +15,7 @@ dk_stop_runi_mmcont__() {
     local verbose=0
     [[ " ${ARGS[*]} " =~ " -verbose " ]] || verbose=1
     [[ 1 -eq ${verbose} ]] || echo -e "${CYAN}---$FNN() $* ---${NORMAL}" #started functions
-    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_runi_mmcont__.ram/.grot/dk_stop_runi_mmcont__.sh)
+    local d_name=$(dirname ${PLT_PATH}/.d/.arb/bsh.arb/dk_stop_al_cont__.ram/.grot/dk_stop_al_cont__.sh)
     # wrp_fifs1_ cd ${d_name} -d
     #{intro_fn}
     if [ "-h" == "$1" ]; then
@@ -71,38 +71,16 @@ ${NORMAL}"
     #     eval local $strex
     # done
     #{default_cntl_fn}
-
-    #* --- START parr2mm_from_second_num_column ---
-    local arr_file_name=()
-    local arr_file_result=()
-    local result=
-    local item=
-    local item_id=
-    IFS=$'\n'
-    arr_file_name=($(docker ps))
-    arr_file_name=("${arr_file_name[@]:1}")
-    IFS=$'\n'
-    for item in ${arr_file_name[@]}; do
-        arr_file_result+=("$(echo $item | awk '{print $1}')")
-    done
-    echo -e "
-${RED}--- parr2mm_ message :${BLUE}
-GENERATOR_INFO :
-name   from :: \$(GEN_WITH_FIRST_NAMED_ROW) -> arr_file_name=(\${arr_file_name[@]:1})
-result from :: \${arr_file_name[@]} | awk '{print \$$1}'
-${RED}---${NORMAL}"
-    parr2mm_ arr_file_name arr_file_result result ${ARGS[NUM_ARG_FOR_DEFINE_NUM_INNER_MM]}
-    echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
-    #* --- END parr2mm_from_second_num_column ---
-    #[[parr2mm_from_second_num_column]]
-
-    cont_id=$result
-
-    plt_pause "DO? : docker stop $cont_id"
-    echo -e "${HLIGHT}--- exec: docker stop $cont_id ---${NORMAL}" #start files
-    docker stop $cont_id
-
     # amount_arg $# 1 1
+
+    local arr_ps_a_q=("$(docker ps -a -q)")
+
+    if [[ -n ${arr_ps_a_q[0]} ]]; then
+        docker rm $(docker ps -a -q)
+    else
+        plt_info "EMPTY :: docker ps -a -q"
+    fi
+    
     #{body_fn}
 }
 

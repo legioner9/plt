@@ -1,0 +1,30 @@
+#* --- START parr2mm_from_second_num_column ---
+
+    local arr_file_name=()
+    local arr_file_result=()
+    local result=
+    local item=
+    local item_id=
+
+    IFS=$'\\n'
+
+    arr_file_name=($(GEN_WITH_FIRST_NAMED_ROW))
+    arr_file_name=("${arr_file_name[@]:1}")
+
+    IFS=$'\\n'
+    for item in ${arr_file_name[@]}; do
+        arr_file_result+=("$(echo $item | awk '{print \$NUM_COLUMN}')")
+    done
+
+        echo -e "
+${RED}--- parr2mm_ message :${BLUE}
+GENERATOR_INFO :
+name   from :: \\$(GEN_WITH_FIRST_NAMED_ROW) -> arr_file_name=(\\${arr_file_name[@]:1})
+result from :: \\${arr_file_name[@]} | awk '{print \\$$NUM_COLUMN}'
+${RED}---${NORMAL}"
+
+    parr2mm_ arr_file_name arr_file_result result ${ARGS[NUM_ARG_FOR_DEFINE_NUM_INNER_MM]}
+
+    echo -e "${GREEN}\\$result = $result${NORMAL}" #print variable
+
+#* --- END parr2mm_from_second_num_column ---

@@ -1,6 +1,10 @@
+#* --- START parr2mm_before_info ---
+
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
     GENERATOR_INFO :
         name   from :: -
         result from :: -
 ${RED}---${NORMAL}"
+
+#* --- END parr2mm_before_info ---

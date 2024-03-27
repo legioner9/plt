@@ -1,11 +1,12 @@
 @arg
 @bash
+@column_num
 @dir
-@dk_pull_mmimg__
 @edu
 @file
 @fn
 @fn_info
+@from_second
 @gen
 @html
 @if
@@ -14,6 +15,7 @@
 @old
 @page
 @parr
+@parr2mm_
 @ptr
 @select
 @time
