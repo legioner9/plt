@@ -86,8 +86,12 @@ ${NORMAL}"
     arr_file_name=($(d2e_ -n -ff ${dir_file_lst}))
     # parr3e_ arr_file_name
 
+    arr_file_name+=("_edit dir_file_lst")
+
     arr_file_result=($(d2e_ 0 -ff ${dir_file_lst}))
     # parr3e_ arr_file_result
+
+    arr_file_result+=("_edit dir_file_lst")
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
@@ -101,19 +105,33 @@ ${RED}---${NORMAL}"
 
     # echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
 
-    arr_img_name=($(_f2e $result))
+    if [[ ${result} == "_edit dir_file_lst" ]]; then
+        _edit $dir_file_lst
+        return 0
+    fi
+
+    file_lst=$result
+
+    arr_img_name=($(_f2e $file_lst "in line=${LINENO}, pwd=${PWD} fn=${FUNCNAME}()"))
+
+    arr_img_name+=("_edit file_lst")
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
 GENERATOR_INFO :
-name   from :: f2e_ file://${result}
-result from :: f2e_ file://${result}
+name   from :: f2e_ file://${file_lst}
+result from :: f2e_ file://${file_lst}
 ${RED}---${NORMAL}"
     #[[fn_info_dk_pull_mmimg__]]
 
     result=
 
     parr2mm_ arr_img_name arr_img_name result ${ARGS[1]}
+
+    if [[ ${result} == "_edit file_lst" ]]; then
+        _edit $file_lst
+        return 0
+    fi
 
     echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
 
@@ -134,12 +152,12 @@ ${RED}---${NORMAL}"
     arr_file_name=($(d2e_ -n -ff ${dir_file_arg}))
     # parr3e_ arr_file_name
 
-    arr_file_name+=("edit_ dir_file_arg")
+    arr_file_name+=("_edit dir_file_arg")
 
     arr_file_result=($(d2e_ 0 -ff ${dir_file_arg}))
     # parr3e_ arr_file_result
 
-    arr_file_result+=("edit_ dir_file_arg")
+    arr_file_result+=("_edit dir_file_arg")
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
@@ -151,19 +169,19 @@ ${RED}---${NORMAL}"
 
     parr2mm_ arr_file_name arr_file_result result ${ARGS[2]}
     echo -e "${GREEN}\$result = $result${NORMAL}" #print variable
-    
-    if [[ $result == "edit_ dir_file_arg" ]]; then
-        edit_ $dir_file_arg
+
+    if [[ $result == "_edit dir_file_arg" ]]; then
+        _edit $dir_file_arg
         return 0
     fi
 
     local file_arg=$result
 
     IFS=$'\n'
-    arr_arg_name=($(_f2e $file_arg))
+    arr_arg_name=($(_f2e $file_arg "in line=${LINENO}, pwd=${PWD} fn=${FUNCNAME}()"))
     IFS=$' \t\n'
 
-    arr_arg_name+=("edit_ file_arg")
+    arr_arg_name+=("_edit file_arg")
 
     echo -e "
 ${RED}--- parr2mm_ message :${BLUE} 
@@ -177,8 +195,8 @@ ${RED}---${NORMAL}"
 
     parr2mm_ arr_arg_name arr_arg_name result ${ARGS[3]}
 
-    if [[ ${result} == "edit_ file_arg" ]]; then
-        edit_ $file_arg
+    if [[ ${result} == "_edit file_arg" ]]; then
+        _edit $file_arg
         return 0
     fi
 
