@@ -135,15 +135,17 @@ arrr=($("${_f2e}" ${PD_PATH}/.d/.lst/aE_/all_arb_a.lst.rnl))
 
 for item2 in ${arrr[@]}; do
 
-    arr+=("$("${_f2e}" "${item2}"/main.arb)")
-
+    if [[ -f ${item2}/main.arb ]]; then
+        arr+=("$("${_f2e}" "${item2}"/main.arb)")
+        res+=("mm_arb_ ${item2}")
+    fi
 done
 
-for item3 in ${arrr[@]}; do
+# for item3 in ${arrr[@]}; do
 
-    res+=("mm_arb_ ${item3}") 
+#     res+=("mm_arb_ ${item3}")
 
-done
+# done
 
 arr+=("allarb.lst.edit")
 res+=("${_edit_} ${PD_PATH}/.d/.lst/aE_/all_arb_a.lst.rnl")
@@ -152,7 +154,6 @@ arr+=("menu.exit")
 res+=("return 0")
 
 echo -e "${BLUE}--- exec ${FNN} (num_menu) ---${NORMAL}" #started functions
-
 
 if [ $(num_01 $1) -eq 1 ] && [ $1 -le ${#arr[@]} ]; then
     num_res=$(($1 - 1))
