@@ -180,7 +180,7 @@ fi
 
 path_src="${ARGS2}"
 path_src=$(${_abs_path} $PPWD "path_src") #ptr args
-
+ 
 dir_src=$(dirname "${path_src}")
 file_src=$(basename "${path_src}")
 
@@ -201,7 +201,7 @@ char_type_src=$(t2c__ "${path_src}")
 
 #! FILE flow
 
-if [ ${char_type_src} == "-" ]; then
+if [ ${char_type_src} == "-" ]; then 
 
     cd "${dir_src}" || {
         plt_exit "in pzip_to_() : NOT_DIR : '${dir_src}' : path_file return 1"
@@ -225,7 +225,7 @@ if [ ${char_type_src} == "-" ]; then
         zip "${file_dist}" "${file_src}"
     fi
 
-    mv "${file_dist}" "${path_dist}"
+    mv "${file_dist}" "${path_dist}" 
 
     if [[ ${no_check} -eq 0 ]]; then
         echo -e "${CYAN}--- mkdir "${tmp_dir}" ---${NORMAL}" #sistem info mesage
