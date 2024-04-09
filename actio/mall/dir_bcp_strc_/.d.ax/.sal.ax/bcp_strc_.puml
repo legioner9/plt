@@ -1,0 +1,12 @@
+@startuml rete
+garg2e2_ -> bcp_strc_ 
+farg2e2_ -> bcp_strc_
+echo_deb_ -> bcp_strc_
+bcp_strc_ -> bcp_strc_:is_num
+bcp_strc_ -> bcp_strc_:exit_err_bcp_strc_
+bcp_strc_ -> bcp_strc_:exit_reg_bcp_strc_
+bcp_strc_ -> bcp_strc_:unset_autoargs_bcp_strc_
+' {wrap_fn}
+' fnn o-> bcp_strc_
+' {body_fn}
+@enduml

@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 #. "${HOME}/.bashrc"
 filename="${PLT_PATH}/.d/.arb/bsh.arb/bcp_before_push__.ram/.grot/bcp_before_push__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
