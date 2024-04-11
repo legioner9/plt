@@ -21,7 +21,6 @@ push_nm_opi__singl_fn__mul() {
     if [[ -f ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham ]]; then
         if ! . ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham; then
             plt_exit "in fs= file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/push_nm_opi__singl_fn__mul.sh , line=${LINENO} : : EXEC_FAIL : '. ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham' : ${hint} : is_yes_ return 1"
-
             if ! is_yes__ "DO?: continue git push in ${dir_repo}/${name_repo}"; then
                 return 1
             fi
