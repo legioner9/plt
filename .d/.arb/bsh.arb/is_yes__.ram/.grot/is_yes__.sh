@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 #. "${HOME}/.bashrc"
 filename="${PLT_PATH}/.d/.arb/bsh.arb/is_yes__.ram/.grot/is_yes__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file

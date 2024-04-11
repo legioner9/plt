@@ -9,7 +9,7 @@ push_nm_opi__singl_fn__mul() {
     #{body}
 
     cd "${dir_repo}/${name_repo}" || {
-        plt_info "in push_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
+        plt_info "in clone_nm_opi__singl_fn__mul() : FAIL_EXEC : 'cd file://${dir_repo}/${name_repo}' : return 1"
         return 1
     }
 
@@ -17,16 +17,6 @@ push_nm_opi__singl_fn__mul() {
     # push_local_strong
     # push_net
     # push_local
-
-    if [[ -f ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham ]]; then
-        if ! . ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham; then
-            plt_exit "in fs= file://${PLT_PATH}/.d/.mul/nm_opi_/singl_fn/push_nm_opi__singl_fn__mul.sh , line=${LINENO} : : EXEC_FAIL : '. ${dir_repo}/${name_repo}/.d/.ham/ham/before_push_.ham' : ${hint} : is_yes_ return 1"
-
-            if ! is_yes__ "DO?: continue git push in ${dir_repo}/${name_repo}"; then
-                return 1
-            fi
-        fi
-    fi
 
     echo -e "${GREEN}\$push_net_strong = $push_net_strong${NORMAL}" #print variable
     arr_push_net_strong=()
