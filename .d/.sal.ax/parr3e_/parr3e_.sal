@@ -56,7 +56,7 @@ fi
 eval num=\$\{#"${ARGS0}"[@]\}
 
 for ((i = 0; i < ${num}; i++)); do
-    eval echo "\\\${\${ARGS0}[$i]} = \${${ARGS0}[$i]}"
+    eval echo "\\\${\${ARGS0}[$i]} = \${${ARGS0}[$i]}" 
 done
 
 # echo -e "${GREEN}\$num = $num${NORMAL}" #print variable
