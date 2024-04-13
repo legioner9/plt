@@ -6,8 +6,10 @@ b_sel_fdir
 fix_ax_0
 html_min_edu
 if_old
+nr2mm_before_info_s
 parr2arg
 parr2mm_before_info
 parr2mm_from_second_num_column
 ptr_path
 ptr_path_s
+str_to_arr

@@ -1,0 +1,10 @@
+#* --- START nr2mm_before_info_s ---
+
+    echo -e "
+${RED}--- _nr2mm message :${BLUE} 
+    GENERATOR_INFO :
+        name   from :: -
+        result from :: -
+${RED}---${NORMAL}"
+
+#* --- END nr2mm_before_info_s ---

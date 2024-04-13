@@ -1,8 +1,11 @@
 @arg
+@arr
 @bash
 @column_num
+@delim
 @dir
 @edu
+@examp
 @file
 @fn
 @fn_info
@@ -12,12 +15,14 @@
 @if
 @mask
 @not_delete
+@_nr@mm
 @old
 @page
 @parr
 @parr2mm_
 @ptr
 @select
+@str
 @strc
 @time
 @upath
