@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 #. "${HOME}/.bashrc"
 filename="${PLT_PATH}/.d/.arb/bsh.arb/bcp_before_push__.ram/.grot/bcp_before_push__.sh"
 echo -e "${HLIGHT}---start file://$filename ---${NORMAL}" # start file
@@ -71,6 +71,12 @@ ${NORMAL}"
     #     eval local $strex
     # done
     #{default_cntl_fn}
+
+    if [[ "$_W_CONST" == "w-" ]]; then
+        plt_info "\$_W_CONST=$_W_CONST bcp_before_push__ NOT WORK ; return 0"
+        return 0
+    fi
+
     echo -e "${HLIGHT}--- ${_bcp_sys_} -_bcp ---${NORMAL}"
     "${_bcp_sys_}" -_bcp
 

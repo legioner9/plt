@@ -151,6 +151,11 @@ ifs2def
 
 if [ ${bcp_:-0} -eq 1 ]; then
 
+    if [[ "$_W_CONST" == "w-" ]]; then
+        plt_info "\$_W_CONST=$_W_CONST bcp_strc_ -_bcp NOT WORK ; return 0"
+        return 0
+    fi
+
     "${_bcp_l2d_}" --_list "${list2}" --_dir_tar "${dirtar}" --_dlm @ -_bcp -_soft
 
 fi
