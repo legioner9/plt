@@ -4,7 +4,6 @@
 @arb
 @attach
 @availability
-bcp_strc__.sh
 @built-in
 @command
 @cont
@@ -23,6 +22,7 @@ bcp_strc__.sh
 @file
 @find
 @from
+git_reset__.sh
 @html
 @human
 @img

@@ -1,6 +1,5 @@
 alt1cpan__
 bcp_before_push__
-bcp_strc__
 cat_alt_perl_modules__
 d2parr_dstr__
 d2sz__
@@ -23,6 +22,7 @@ f2sz__
 find_ext__
 ftit_ht__
 ftit_t__
+git_reset__
 go_repo__
 html2pdf__
 isn_avl__
@@ -67,6 +67,7 @@ tm_km__
 tm_l__
 tm_n__
 tm_sm__
+w_declare__
 wgetd_to__
 wgetf_to__
 wm_fm__

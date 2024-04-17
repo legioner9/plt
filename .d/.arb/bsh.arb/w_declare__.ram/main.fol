@@ -1,0 +1,1 @@
+define preventer _W_CONST declare as w+- only read from ${HOME}/.w
