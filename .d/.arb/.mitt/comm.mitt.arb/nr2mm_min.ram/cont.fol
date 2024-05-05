@@ -1,0 +1,29 @@
+#* --- START _nr2mm_min ---
+
+    local arr_name=()
+    local arr_result=()
+    local result=
+    local item=
+
+    #IFS=$'\\n'
+    arr_name=($(GEN_NAME))
+    
+    #for item in ${arr_name[@]}; do
+    #    arr_result+=("$(GEN_NAME_TO_RESULT)")
+    #done
+
+    IFS=$'\\n'
+    arr_result=($(GEN_RESULT))
+
+        echo -e "
+${RED}--- parr2mm_ message :${BLUE}
+GENERATOR_INFO :
+name   from :: \\$(GEN_NAME)
+result from :: \\$(GEN_RESULT)
+${RED}---${NORMAL}"
+
+    _nm2mm arr_name arr_result result
+
+    echo -e "${GREEN}\\$result = $result${NORMAL}" #print variable
+
+#* --- END _nr2mm_min ---

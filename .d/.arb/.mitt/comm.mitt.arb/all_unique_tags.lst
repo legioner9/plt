@@ -15,7 +15,7 @@
 @if
 @mask
 @not_delete
-@_nr@mm
+@_nr2mm
 @old
 @page
 @parr
