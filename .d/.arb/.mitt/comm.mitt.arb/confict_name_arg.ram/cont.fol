@@ -1,0 +1,25 @@
+#! ------ START confict_name_arg ------
+    local coflict_name_arr=("AAA")
+    local item1=
+    local item2=
+    local i=
+    local conflict_flag=0
+    for item1 in ${coflict_name_arr[@]}; do
+        i=0
+        for item2 in ${ARGS[@]}; do
+            if [[ ${item1} = ${item2} ]]; then
+                hint="\\$1: "
+                _st_info "in fs= file:// , line=${LINENO}, ${FNN}() : CONFLICT_NAME : ARGS${i} not be equal '${item1}' : ${hint} : continue"
+                conflict_flag=1
+            fi
+            ((++i))
+        done
+    done
+
+    if [[ ${conflict_flag} -eq 1 ]]; then
+        echo -e "${GREEN}\\${coflict_name_arr[@]} = ${coflict_name_arr[*]}${NORMAL}" #print variable
+        _st_exit "in fs= file:// , line=${LINENO}, ${FNN}() : CONFLICT_NAME : 'see stack' : ${hint} : return 1"
+        return 1
+    fi
+
+#! ------ END confict_name_arg ------
