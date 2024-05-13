@@ -59,9 +59,9 @@ site2d() { #$1 string $2 delimer $3 num of sequence
         return 1
     fi
     plt_pause "download? : ${ar1} to dir ${PW}"
-    plt_pause "do? : wget -r -l3 -k -p -E -np ${ar1} ${ar2}"
+    plt_pause "do? : wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent=Mozilla/5.0 ${ar1} ${ar2}"
     # amount_arg $# min_args max_args
-    wget -r -l3 -k -p -E -np --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "${ar1}" "${ar2}"
+    wget -r -l3 -k -p -E -np --remote-encoding=UTF-8 --user-agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.5.717 Yowser/2.5 Safari/537.36" "${ar1}" "${ar2}"
 
 }
 
