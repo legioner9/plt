@@ -73,6 +73,13 @@ ${NORMAL}"
     #{default_cntl_fn}
     # amount_arg $# 1 1
     cd $PPWD
+
+    if ! git rev-parse --show-toplevel >/dev/null; then
+        hint="'file://${PPWD}' NOT_GIT_DIR"
+        _st_exit "in fs= file://${fn_sh_file} , line=${LINENO}, ${FNN}() : : EXEC_FAIL : 'git rev-parse --show-toplevel' : ${hint} : return 1"
+        return 1
+    fi
+
     echo -e "${RED}--- exec: git status -s ---${NORMAL}" #start files
     git status -s
     if [[ -z "$(git status -s)" ]]; then

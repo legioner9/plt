@@ -1,0 +1,10 @@
+#* --- START estat ---
+
+    estat="$?"
+
+    if [[ ${estat} -ne 0 ]]; then
+        cd ${PPWD}
+        return ${estat}
+    fi
+
+#* --- END estat ---
