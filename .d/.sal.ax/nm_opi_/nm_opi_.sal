@@ -215,6 +215,9 @@ res+=("bcp_before_push__")
 arr+=("DO! dpl_after_pull__")
 res+=("dpl_after_pull__")
 
+arr+=("DO! gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst")
+res+=("gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst")
+
 arr+=("exit menu")
 res+=("return 0")
 
