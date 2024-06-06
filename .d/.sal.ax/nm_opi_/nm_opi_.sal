@@ -340,8 +340,19 @@ res+=("return 0")
 
 elegendi_done=0
 
+nm_opi_run_change_repo() { # $1 num menu-1
+
+    if [[ $1 -eq 16 ]]; then
+        gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst
+    fi
+
+}
+
 if [ $(num_01 ${ARGS1}) -eq 1 ] && [ ${ARGS1} -le ${#arr[@]} ]; then
     num_res=$((${ARGS1} - 1))
+
+    nm_opi_run_change_repo $num_res
+
     file_lst=${dir_nm_opi_lst}/${res[${num_res}]}
     elegendi_done=1
 fi
@@ -351,6 +362,9 @@ if [ ${elegendi_done} -eq 0 ]; then
     select item_arr in "${arr[@]}"; do
         for ((i = 0; i < 1000; i++)); do
             if [[ ${item_arr} == ${arr[$i]} ]]; then
+
+                nm_opi_run_change_repo $i
+
                 file_lst=${dir_nm_opi_lst}/${res[$i]}
                 # ${FNN} $@
             fi
