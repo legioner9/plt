@@ -343,6 +343,7 @@ elegendi_done=0
 nm_opi_run_change_repo() { # $1 num menu-1
 
     if [[ $1 -eq 16 ]]; then
+        touch ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst
         gig_file_change_repo_smp0 ${REPO_PATH} ${PD_PATH}/.d/.mul/nm_opi_/lst/017_change_repo.ax.lst
     fi
 
