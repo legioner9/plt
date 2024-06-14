@@ -77,7 +77,7 @@ file_size_check_jpg_arg_mb_proc__ham__d() {
 
             for item in ${arr_err[@]}; do
                 echo -e "${HLIGHT}--- jpegoptim -o --size=$((check_size - 5))k ${item} ---${NORMAL}"
-                jpegoptim -o --size=$((check_size - 1))k ${item}
+                jpegoptim -o --size=$((check_size - 5))k ${item}
             done
 
             return 0
