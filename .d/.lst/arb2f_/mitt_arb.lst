@@ -1,2 +1,4 @@
 ${PLT_PATH}/.d/.arb/.mitt/comm.mitt.arb
 ${REPO_PATH}/Nodus/.d/.arb/nodus.comm.mitt.arb
+${REPO_PATH}/ocl/.d/.arb/bsl.mitt.arb
+${REPO_PATH}/ocl/.d/.arb/sdbl.mitt.arb
