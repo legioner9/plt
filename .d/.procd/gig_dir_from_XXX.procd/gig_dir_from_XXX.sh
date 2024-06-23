@@ -1,6 +1,7 @@
 #!/bin/bash
 
-path_file=${HOME}/PATH_TO_THAT_FILE
+# path_file=${HOME}/PATH_TO_THAT_FILE
+path_file=${REPO_PATH}/PATH_TO_THAT_FILE_FROM_REPO
 path_dir=$(dirname ${path_file})
 name_dir_with_XXX="YYY_XXX"
 analog="ANALOG"
