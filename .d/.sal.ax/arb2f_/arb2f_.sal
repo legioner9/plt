@@ -128,9 +128,10 @@ num_flow=${ARGS1}
 
 if [[ "${ARGS2}" == "-dpl" ]]; then
     plt_info "in -dpl mode"
-    lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb_dpl.lst
+    lst_mitt=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb_dpl.lst
+
 else
-    lst_mitt=${PLT_PATH}/.d/.lst/arb2f_/mitt_arb.lst
+    lst_mitt=${ST_RC_D_DATA_PATH}/.d/.st_rc_d.data.d/arb2f_stl0/mitt_arb.lst
 fi
 
 arr_arb=($(${_f2e} ${lst_mitt}))
