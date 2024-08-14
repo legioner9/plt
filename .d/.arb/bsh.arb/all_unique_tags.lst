@@ -22,7 +22,7 @@
 @file
 @find
 @from
-git_reset__.sh
+git_reset_force__.sh
 @html
 @human
 @img

@@ -23,6 +23,7 @@ find_ext__
 ftit_ht__
 ftit_t__
 git_reset__
+git_reset_force__
 go_repo__
 html2pdf__
 isn_avl__
