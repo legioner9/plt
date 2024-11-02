@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "${CYAN}--- rbld_readme_rnd7_3d6253b() $* in file://{path_to_repo}/.d/.mul/rbld_readme.mul/.prc/rbld_readme.sh---${NORMAL}" #started functions
+echo -e "${CYAN}--- rbld_readme_rnd7_3d6253b() $* in file://{{path_to_rbld_readme_mul}}/.prc/rbld_readme.sh---${NORMAL}" #started functions
 
 rbld_readme_rnd7_3d6253b() {
 
@@ -10,7 +10,7 @@ rbld_readme_rnd7_3d6253b() {
     local ARGS=("$@")
     local NARGS=$#
     local PPWD=$PWD
-    local path_file="{path_to_repo}/.d/.mul/rbld_readme.mul/.prc/rbld_readme.sh"
+    local path_file={{path_to_rbld_readme_mul}}/.prc/rbld_readme.sh
     local path_dir="$(dirname "$path_file")"
 
     # echo -e "${CYAN}--- $FNN() $* in file://${path_file}---${NORMAL}" #started functions
@@ -55,11 +55,22 @@ ${NORMAL}"
 
     echo "START BODY FN : ${FNN}() $*"
 
-    . README.md_ufl4
+    local cnx_in_sd={{path_to_rbld_readme_mul}}/.in_cnx
+    local ufl9_sh=
 
-    rm {path_to_repo}/README.md
-    cp README.md {path_to_repo}/README.md
-    _edit {path_to_repo}/README.md
+    for sd in $(_dd2e ${cnx_in_sd}); do
+        ufl9_sh=${cnx_in_sd}/${sd}/res.md_ufl9
+        [ -f "${ufl9_sh}" ] && {
+            echo -e "${HLIGHT}--- . ${ufl9_sh} ---${NORMAL}"
+            . "${ufl9_sh}"
+        }
+    done
+
+    . {{path_to_rbld_readme_mul}}/.prc/README.md_ufl9
+
+    # rm {path_to_repo}/README.md
+    # cp README.md {path_to_repo}/README.md
+    _edit {{path_to_rbld_readme_mul}}/.prc/README.md
 
     #{{body_fn}}
 
